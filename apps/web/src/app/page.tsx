@@ -32,12 +32,16 @@ async function WorksSection() {
     const works = await getPublishedWorks();
     return <WorksList works={works} />;
   } catch (error: unknown) {
-    const message =
-      error instanceof ApiError
-        ? error.status === 0
-          ? "Could not reach the API."
-          : `The API returned ${error.status}.`
-        : "Something went wrong while loading the catalog.";
+    // Surface the real failure so misconfig (missing env, Zod, network) is visible.
+    let message = "Something went wrong while loading the catalog.";
+    if (error instanceof ApiError) {
+      message =
+        error.status === 0
+          ? `Could not reach the API (${error.message}).`
+          : `The API returned ${error.status}.`;
+    } else if (error instanceof Error) {
+      message = error.message;
+    }
     return <WorksError message={message} />;
   }
 }
