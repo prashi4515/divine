@@ -1,0 +1,14 @@
+# pnpm-workspace.yaml
+# ------------------------------------------------------------------
+# Declares which folders pnpm should treat as workspace members.
+# Each glob below matches package.json files inside those folders.
+#
+# apps/*      -> deployable applications (web, api, future mobile)
+# packages/*  -> shared, reusable libraries (ui, config, types)
+#
+# Never add "docs" or "tooling" here — those are not npm packages.
+# ------------------------------------------------------------------
+
+packages:
+  - "apps/*"
+  - "packages/*"

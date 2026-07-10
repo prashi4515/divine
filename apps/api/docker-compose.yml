@@ -1,0 +1,45 @@
+# =========================================================================
+# Local dev stack: PostgreSQL + the Divine API.
+# Run from this folder:  docker compose up --build
+# The API image is built from the repo root context so the pnpm workspace
+# is available during the build.
+# =========================================================================
+
+services:
+  postgres:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: divine
+      POSTGRES_PASSWORD: divine
+      POSTGRES_DB: divine
+    ports:
+      - "5432:5432"
+    volumes:
+      - divine_pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U divine -d divine"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  api:
+    build:
+      # Build context is the repo root (two levels up) so the workspace is intact.
+      context: ../..
+      dockerfile: apps/api/Dockerfile
+    restart: unless-stopped
+    depends_on:
+      postgres:
+        condition: service_healthy
+    environment:
+      NODE_ENV: production
+      DIVINE_API_PORT: 8080
+      DIVINE_DATABASE_URL: postgresql://divine:divine@postgres:5432/divine?schema=public
+      DIVINE_WEB_ORIGIN: http://localhost:3000
+      DIVINE_LOG_LEVEL: info
+    ports:
+      - "8080:8080"
+
+volumes:
+  divine_pgdata:

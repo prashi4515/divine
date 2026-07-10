@@ -1,0 +1,239 @@
+// =========================================================================
+// Divine — Prisma schema (Phase P0 — content catalog only)
+//
+// Entities: Work, Chapter, Verse, Language, TranslationSource, Translation,
+//           Topic, VerseTopic, Emotion, VerseEmotion
+//
+// Explicitly OUT of scope: users, auth, bookmarks, notes, plans, audio, AI.
+// Do NOT run migrations until this schema is approved.
+// =========================================================================
+
+generator client {
+  provider      = "prisma-client-js"
+  binaryTargets = ["native", "linux-musl-openssl-3.0.x"]
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DIVINE_DATABASE_URL")
+  directUrl = env("DIVINE_DIRECT_URL")
+}
+
+// -------------------------------------------------------------------------
+// Work — a scripture / corpus (Bhagavad Gita first; more later)
+// Public identity: `code` (e.g. "bg")
+// -------------------------------------------------------------------------
+model Work {
+  id          String   @id @default(uuid()) @db.Uuid
+  code        String   @unique @db.VarChar(32)
+  slug        String   @unique @db.VarChar(64)
+  title       String   @db.VarChar(255)
+  description String?  @db.Text
+  sortOrder   Int      @default(0) @map("sort_order")
+  isPublished Boolean  @default(false) @map("is_published")
+  createdAt   DateTime @default(now()) @map("created_at") @db.Timestamptz(3)
+  updatedAt   DateTime @updatedAt @map("updated_at") @db.Timestamptz(3)
+
+  chapters Chapter[]
+
+  @@index([isPublished, sortOrder])
+  @@map("works")
+}
+
+// -------------------------------------------------------------------------
+// Chapter — structural unit within a work (locale-independent)
+// Public identity: `publicId` (e.g. "bg.2")
+// -------------------------------------------------------------------------
+model Chapter {
+  id          String   @id @default(uuid()) @db.Uuid
+  workId      String   @map("work_id") @db.Uuid
+  number      Int
+  publicId    String   @unique @map("public_id") @db.VarChar(64)
+  /// Optional English/editorial title for ops; localized titles come later.
+  title       String?  @db.VarChar(255)
+  verseCount  Int      @default(0) @map("verse_count")
+  sortOrder   Int      @default(0) @map("sort_order")
+  isPublished Boolean  @default(false) @map("is_published")
+  createdAt   DateTime @default(now()) @map("created_at") @db.Timestamptz(3)
+  updatedAt   DateTime @updatedAt @map("updated_at") @db.Timestamptz(3)
+
+  work   Work    @relation(fields: [workId], references: [id], onDelete: Cascade)
+  verses Verse[]
+
+  @@unique([workId, number])
+  @@index([workId, sortOrder])
+  @@index([isPublished])
+  @@map("chapters")
+}
+
+// -------------------------------------------------------------------------
+// Verse — atomic scripture unit
+// Public identity: `publicId` (e.g. "bg.2.47") — immutable once published
+// Sanskrit + transliteration live here; meaning lives in Translation
+// -------------------------------------------------------------------------
+model Verse {
+  id              String   @id @default(uuid()) @db.Uuid
+  chapterId       String   @map("chapter_id") @db.Uuid
+  number          Int
+  publicId        String   @unique @map("public_id") @db.VarChar(64)
+  sanskritText    String   @map("sanskrit_text") @db.Text
+  transliteration String?  @db.Text
+  sortOrder       Int      @default(0) @map("sort_order")
+  isPublished     Boolean  @default(false) @map("is_published")
+  createdAt       DateTime @default(now()) @map("created_at") @db.Timestamptz(3)
+  updatedAt       DateTime @updatedAt @map("updated_at") @db.Timestamptz(3)
+
+  chapter       Chapter        @relation(fields: [chapterId], references: [id], onDelete: Cascade)
+  translations  Translation[]
+  verseTopics   VerseTopic[]
+  verseEmotions VerseEmotion[]
+
+  @@unique([chapterId, number])
+  @@index([chapterId, sortOrder])
+  @@index([isPublished])
+  @@map("verses")
+}
+
+// -------------------------------------------------------------------------
+// Language — BCP-47 catalog (en, hi, ta, …)
+// Replaces free-form locale strings on content rows
+// -------------------------------------------------------------------------
+model Language {
+  id          String   @id @default(uuid()) @db.Uuid
+  code        String   @unique @db.VarChar(16)
+  name        String   @db.VarChar(128)
+  nativeName  String?  @map("native_name") @db.VarChar(128)
+  sortOrder   Int      @default(0) @map("sort_order")
+  isPublished Boolean  @default(true) @map("is_published")
+  createdAt   DateTime @default(now()) @map("created_at") @db.Timestamptz(3)
+  updatedAt   DateTime @updatedAt @map("updated_at") @db.Timestamptz(3)
+
+  translations Translation[]
+
+  @@index([isPublished, sortOrder])
+  @@map("languages")
+}
+
+// -------------------------------------------------------------------------
+// TranslationSource — which translator / edition (independent of language)
+// -------------------------------------------------------------------------
+model TranslationSource {
+  id          String   @id @default(uuid()) @db.Uuid
+  key         String   @unique @db.VarChar(64)
+  displayName String   @map("display_name") @db.VarChar(255)
+  author      String?  @db.VarChar(255)
+  license     String?  @db.VarChar(255)
+  isDefault   Boolean  @default(false) @map("is_default")
+  isPublished Boolean  @default(true) @map("is_published")
+  createdAt   DateTime @default(now()) @map("created_at") @db.Timestamptz(3)
+  updatedAt   DateTime @updatedAt @map("updated_at") @db.Timestamptz(3)
+
+  translations Translation[]
+
+  @@index([isPublished])
+  @@map("translation_sources")
+}
+
+// -------------------------------------------------------------------------
+// Translation — meaning of a verse in a language from a given source
+// -------------------------------------------------------------------------
+model Translation {
+  id                  String   @id @default(uuid()) @db.Uuid
+  verseId             String   @map("verse_id") @db.Uuid
+  languageId          String   @map("language_id") @db.Uuid
+  translationSourceId String   @map("translation_source_id") @db.Uuid
+  text                String   @db.Text
+  isPublished         Boolean  @default(false) @map("is_published")
+  createdAt           DateTime @default(now()) @map("created_at") @db.Timestamptz(3)
+  updatedAt           DateTime @updatedAt @map("updated_at") @db.Timestamptz(3)
+
+  verse             Verse             @relation(fields: [verseId], references: [id], onDelete: Cascade)
+  language          Language          @relation(fields: [languageId], references: [id], onDelete: Restrict)
+  translationSource TranslationSource @relation(fields: [translationSourceId], references: [id], onDelete: Restrict)
+
+  @@unique([verseId, languageId, translationSourceId])
+  @@index([languageId, translationSourceId])
+  @@index([verseId, isPublished])
+  @@map("translations")
+}
+
+// -------------------------------------------------------------------------
+// Topic — thematic taxonomy (duty, devotion, …); optional hierarchy
+// -------------------------------------------------------------------------
+model Topic {
+  id          String   @id @default(uuid()) @db.Uuid
+  slug        String   @unique @db.VarChar(64)
+  name        String   @db.VarChar(255)
+  description String?  @db.Text
+  parentId    String?  @map("parent_id") @db.Uuid
+  sortOrder   Int      @default(0) @map("sort_order")
+  isPublished Boolean  @default(false) @map("is_published")
+  createdAt   DateTime @default(now()) @map("created_at") @db.Timestamptz(3)
+  updatedAt   DateTime @updatedAt @map("updated_at") @db.Timestamptz(3)
+
+  parent   Topic?  @relation("TopicHierarchy", fields: [parentId], references: [id], onDelete: SetNull)
+  children Topic[] @relation("TopicHierarchy")
+
+  verseTopics VerseTopic[]
+
+  @@index([parentId])
+  @@index([isPublished, sortOrder])
+  @@map("topics")
+}
+
+// -------------------------------------------------------------------------
+// VerseTopic — many-to-many Verse ↔ Topic
+// -------------------------------------------------------------------------
+model VerseTopic {
+  id        String   @id @default(uuid()) @db.Uuid
+  verseId   String   @map("verse_id") @db.Uuid
+  topicId   String   @map("topic_id") @db.Uuid
+  weight    Int      @default(0)
+  createdAt DateTime @default(now()) @map("created_at") @db.Timestamptz(3)
+  updatedAt DateTime @updatedAt @map("updated_at") @db.Timestamptz(3)
+
+  verse Verse @relation(fields: [verseId], references: [id], onDelete: Cascade)
+  topic Topic @relation(fields: [topicId], references: [id], onDelete: Cascade)
+
+  @@unique([verseId, topicId])
+  @@index([topicId, verseId])
+  @@map("verse_topics")
+}
+
+// -------------------------------------------------------------------------
+// Emotion — emotion-based discovery catalog (anxiety, clarity, …)
+// -------------------------------------------------------------------------
+model Emotion {
+  id          String   @id @default(uuid()) @db.Uuid
+  slug        String   @unique @db.VarChar(64)
+  name        String   @db.VarChar(255)
+  description String?  @db.Text
+  sortOrder   Int      @default(0) @map("sort_order")
+  isPublished Boolean  @default(false) @map("is_published")
+  createdAt   DateTime @default(now()) @map("created_at") @db.Timestamptz(3)
+  updatedAt   DateTime @updatedAt @map("updated_at") @db.Timestamptz(3)
+
+  verseEmotions VerseEmotion[]
+
+  @@index([isPublished, sortOrder])
+  @@map("emotions")
+}
+
+// -------------------------------------------------------------------------
+// VerseEmotion — many-to-many Verse ↔ Emotion
+// -------------------------------------------------------------------------
+model VerseEmotion {
+  id        String   @id @default(uuid()) @db.Uuid
+  verseId   String   @map("verse_id") @db.Uuid
+  emotionId String   @map("emotion_id") @db.Uuid
+  weight    Int      @default(0)
+  createdAt DateTime @default(now()) @map("created_at") @db.Timestamptz(3)
+  updatedAt DateTime @updatedAt @map("updated_at") @db.Timestamptz(3)
+
+  verse   Verse   @relation(fields: [verseId], references: [id], onDelete: Cascade)
+  emotion Emotion @relation(fields: [emotionId], references: [id], onDelete: Cascade)
+
+  @@unique([verseId, emotionId])
+  @@index([emotionId, verseId])
+  @@map("verse_emotions")
+}

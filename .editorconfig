@@ -1,0 +1,24 @@
+# EditorConfig — uniform whitespace across all editors and OSes.
+# https://editorconfig.org
+#
+# This is the single source of truth for indentation and line endings.
+# Prettier and ESLint must agree with this file; if they conflict, update
+# them — not this one.
+
+root = true
+
+[*]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+indent_style = space
+indent_size = 2
+
+# Markdown allows trailing spaces (they render as line breaks).
+[*.md]
+trim_trailing_whitespace = false
+
+# Makefiles require real tabs.
+[Makefile]
+indent_style = tab

@@ -1,0 +1,84 @@
+---
+description: Enterprise engineering standards for the Divine platform. Every AI agent must follow these.
+alwaysApply: true
+---
+
+# Divine — Engineering Standards
+
+Non-negotiable standards for a monorepo maintained for 10+ years:
+Next.js 15 web + NestJS API + Prisma/Neon Postgres, pnpm workspaces
+(`apps/web`, `apps/api`, `packages/{ui,config,types}`). Read `docs/` before large changes.
+
+## Architecture (Clean + SOLID)
+
+- Dependency flow is one-way: `apps/* → packages/*`. `packages/*` NEVER imports from `apps/*`. `apps/web` and `apps/api` NEVER import each other — they talk over HTTP only.
+- Only `apps/api` touches the database, and only through `PrismaService`. No Prisma calls in controllers, Next.js, or `packages/*`.
+- NestJS: controllers stay thin (HTTP only); services own domain logic; one module per domain. Depend on abstractions (interfaces/tokens), not concrete classes (DIP). Keep modules single-responsibility (SRP) and extend via new providers, not by editing shared code (OCP).
+- Any cross-app payload MUST be typed in `packages/types` (Zod schema + inferred type) BEFORE use on either side. This is the contract.
+
+## DRY
+
+- Shared types → `packages/types`; shared UI → `packages/ui`; shared config → `packages/config`. Never copy a type/DTO between web and api — import it.
+- Rule of three: duplicated logic appearing a third time must be extracted. Do NOT over-abstract a single use.
+
+## TypeScript
+
+- `strict` is on everywhere. Never introduce `any` — use `unknown` and narrow. Never use `@ts-ignore` (use `@ts-expect-error` with a reason only when unavoidable).
+- Validate ALL external input (env, request bodies, third-party responses) with Zod at the boundary; trust types only inside the boundary.
+- Wire data (dates, IDs) crosses as ISO strings. Prefer union string literals over enums.
+
+## Naming
+
+- Files `kebab-case` (`verse-reader.tsx`, `auth.service.ts`); React components `PascalCase`; Nest classes `PascalCase` + suffix (`ContentService`, `JwtAuthGuard`); functions/vars `camelCase`; constants `SCREAMING_SNAKE`.
+- DB tables `snake_case` plural, columns `snake_case`, Prisma models `PascalCase` singular. Env vars `DIVINE_`-prefixed SCREAMING_SNAKE (except standard `NODE_ENV`).
+- Public content IDs are stable forever: `{work}.{chapter}.{verse}` (e.g. `bg.2.47`). Never expose auto-increment PKs; internal PK = UUID.
+
+## Folders
+
+- Web: routes in `src/app/[locale]/...`; product logic in `src/features/<domain>/`; reusable presentational pieces in `src/components/`; API client + helpers in `src/lib/`.
+- API: `src/modules/<domain>/` with `*.controller.ts`, `*.service.ts`, `*.dto.ts`; cross-cutting in `src/common/`; config in `src/config/`.
+
+## Error Handling
+
+- Never swallow errors (no empty `catch`). Catch, log with context, then rethrow a typed/domain error or a Nest `HttpException`.
+- All API errors exit through the global `AllExceptionsFilter` envelope (`statusCode`, `timestamp`, `path`, `method`, `message`, `error`). Never leak stack traces or internals in 5xx responses.
+- Fail fast on misconfiguration at boot (Zod env validation) rather than deferring to runtime.
+
+## Logging
+
+- Structured logging only (pino via `nestjs-pino`). No `console.log` in `apps/api`. Use levels: `error` (needs action), `warn`, `info` (lifecycle), `debug` (dev).
+- NEVER log secrets, tokens, passwords, full connection strings, or PII. Mask credentials (see `scripts/verify-db.mts`). Include correlation/request context, not raw payloads.
+
+## Testing
+
+- Vitest for unit (pure logic, Zod schemas, mappers) + Nest integration (controllers against a test DB). Playwright for critical web flows.
+- Test behavior and contracts, not implementation details. Every bug fix adds a regression test. New shared `packages/types` schema needs a fixture test.
+
+## Performance
+
+- Web: Server Components by default; `"use client"` only for interactivity. Fetch on the server; no `useEffect` data waterfalls. Prefer SSG/ISR for public content.
+- API: no N+1 queries — batch with Prisma includes/selects; select only needed columns. Cache hot content reads (Redis, when adopted). Never block the event loop with heavy sync work.
+
+## Responsive Design & Accessibility
+
+- Mobile-first, fluid layouts (Tailwind breakpoints). Every UI must work from 320px to desktop.
+- Semantic HTML first; ARIA only to fill gaps. All interactive elements keyboard-operable with visible focus. Meet WCAG AA contrast. Respect `prefers-reduced-motion`. Every image has meaningful `alt`; every input has a label.
+
+## SEO
+
+- All public routes are locale-first (`/[locale]/...`) with correct `hreflang` + canonical. No public content behind client-only rendering.
+- Every page sets the Next.js Metadata API (title, description, canonical, OG). Keep content in accessible, crawlable markup. Preserve stable URLs — treat verse URLs as permanent.
+
+## Security
+
+- Secrets only in gitignored `.env` (documented in `.env.example`). NEVER hardcode or commit secrets. `NEXT_PUBLIC_*` is for non-secrets only; the web app never receives `DIVINE_DATABASE_URL`.
+- Validate/authorize every request server-side; never trust the client (locale ≠ permission). Parameterized queries only (Prisma) — no string-built SQL. Restrict CORS to known origins. Rate-limit auth and AI endpoints.
+
+## Scalability
+
+- Modular monolith now; keep module boundaries clean so a service can be extracted later without a rewrite. Do NOT add microservices, queues, or new datastores speculatively.
+- Scale reads before writes: ISR/CDN → Redis → read replicas, before considering sharding. Design stateless API instances (JWT, no in-memory session) so they scale horizontally.
+
+## Change Discipline
+
+- A change is done only when: types added to `packages/types` (if cross-app), Prisma migration created (if schema changed), new env documented in `.env.example`, and relevant `docs/` updated. Run lint + typecheck before finishing.

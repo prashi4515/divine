@@ -1,0 +1,15 @@
+{
+  "name": "@divine/types",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Shared TypeScript types, DTOs, and Zod schemas for Divine.",
+  "sideEffects": false,
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "dependencies": {
+    "zod": "^3.24.1"
+  }
+}
