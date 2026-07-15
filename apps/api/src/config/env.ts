@@ -16,6 +16,19 @@ export const envSchema = z.object({
   DIVINE_LOG_LEVEL: z
     .enum(["fatal", "error", "warn", "info", "debug", "trace"])
     .default("info"),
+  DIVINE_JWT_ACCESS_SECRET: z
+    .string()
+    .min(32, "DIVINE_JWT_ACCESS_SECRET must be at least 32 characters"),
+  DIVINE_JWT_REFRESH_SECRET: z
+    .string()
+    .min(32, "DIVINE_JWT_REFRESH_SECRET must be at least 32 characters"),
+  DIVINE_JWT_ACCESS_TTL: z.string().default("15m"),
+  DIVINE_JWT_REFRESH_TTL: z.string().default("7d"),
+  DIVINE_JWT_REFRESH_TTL_REMEMBER: z.string().default("30d"),
+  DIVINE_COOKIE_SECURE: z
+    .enum(["true", "false"])
+    .default("false")
+    .transform((v) => v === "true"),
 });
 
 export type Env = z.infer<typeof envSchema>;

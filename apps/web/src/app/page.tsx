@@ -1,39 +1,51 @@
 import { Suspense } from "react";
-import { Sparkles } from "lucide-react";
-import { ThemeToggle } from "@/components/theme-toggle";
+import Link from "next/link";
+import type { Metadata } from "next";
+import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
-import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { ApiError } from "@/lib/api/client";
 import { getPublishedWorks } from "@/lib/api/works";
-import { WorksError, WorksList } from "@/features/works/works-list";
+import { FeaturedScripture, FeaturedScriptureEmpty } from "@/features/reading/featured-scripture";
+import { PublishedScriptures } from "@/features/reading/published-scriptures";
+import { ReadingError } from "@/features/reading/reading-error";
+import { SiteFooter } from "@/features/reading/site-footer";
+import { SiteHeader } from "@/features/reading/site-header";
+import { publicWorkPath } from "@/lib/reading/work-paths";
 
-function WorksSectionSkeleton() {
+export const metadata: Metadata = {
+  title: "Divine — Sacred texts for the modern seeker",
+  description:
+    "A calm, multilingual home for reading scripture — thoughtfully presented for the modern seeker.",
+};
+
+function FeaturedSkeleton() {
   return (
-    <div className="grid grid-cols-1 gap-4 sm:grid-cols-2" aria-hidden>
-      {Array.from({ length: 2 }).map((_, i) => (
-        <Card key={i}>
-          <CardHeader className="space-y-2">
-            <Skeleton className="h-6 w-40" />
-            <Skeleton className="h-3 w-28" />
-          </CardHeader>
-          <CardContent>
-            <Skeleton className="h-4 w-full" />
-            <Skeleton className="mt-2 h-4 w-3/4" />
-          </CardContent>
-        </Card>
-      ))}
+    <div className="mx-auto w-full max-w-3xl px-6 pb-28 pt-8" aria-hidden>
+      <div className="border-border rounded-xl border p-8 md:p-12">
+        <Skeleton className="h-3 w-32" />
+        <Skeleton className="mt-6 h-12 w-2/3" />
+        <Skeleton className="mt-4 h-4 w-full" />
+        <Skeleton className="mt-2 h-4 w-4/5 max-w-md" />
+        <Skeleton className="mt-8 h-11 w-40" />
+      </div>
     </div>
   );
 }
 
-async function WorksSection() {
+async function CatalogSection() {
   try {
     const works = await getPublishedWorks();
-    return <WorksList works={works} />;
+    const featured = works.find((work) => work.code === "bg") ?? works[0];
+    if (!featured) return <FeaturedScriptureEmpty />;
+    return (
+      <>
+        <FeaturedScripture work={featured} />
+        <PublishedScriptures works={works} />
+      </>
+    );
   } catch (error: unknown) {
-    // Surface the real failure so misconfig (missing env, Zod, network) is visible.
-    let message = "Something went wrong while loading the catalog.";
+    let message = "Something went wrong while loading the scripture catalog.";
     if (error instanceof ApiError) {
       message =
         error.status === 0
@@ -42,79 +54,84 @@ async function WorksSection() {
     } else if (error instanceof Error) {
       message = error.message;
     }
-    return <WorksError message={message} />;
+    return (
+      <div className="mx-auto w-full max-w-3xl px-6 pb-28 pt-8">
+        <ReadingError title="Unable to load scripture" message={message} />
+      </div>
+    );
   }
 }
 
-export default function Home() {
+async function HeroCta() {
+  try {
+    const works = await getPublishedWorks();
+    const featured = works.find((work) => work.code === "bg") ?? works[0];
+    if (!featured) return null;
+    return (
+      <Button asChild size="lg">
+        <Link href={publicWorkPath(featured)}>
+          Begin Reading
+          <ArrowRight className="h-4 w-4" aria-hidden />
+        </Link>
+      </Button>
+    );
+  } catch {
+    return (
+      <Button asChild size="lg">
+        <Link href="/bhagavad-gita">
+          Begin Reading
+          <ArrowRight className="h-4 w-4" aria-hidden />
+        </Link>
+      </Button>
+    );
+  }
+}
+
+export default function HomePage() {
   return (
-    <div className="relative min-h-svh">
-      <header className="mx-auto flex w-full max-w-content items-center justify-between px-6 py-6">
-        <div className="flex items-center gap-2.5">
-          <div className="border-border flex h-8 w-8 items-center justify-center rounded-md border">
-            <span className="font-serif text-sm">ॐ</span>
-          </div>
-          <span className="font-serif text-xl tracking-tight">Divine</span>
-        </div>
-        <div className="flex items-center gap-3">
-          <span className="text-muted-foreground hidden text-xs sm:inline">Catalog</span>
-          <ThemeToggle />
-        </div>
-      </header>
+    <div className="relative flex min-h-svh flex-col overflow-hidden">
+      <div
+        className="pointer-events-none absolute inset-0 -z-10"
+        aria-hidden
+        style={{
+          background: `
+            radial-gradient(ellipse 100% 70% at 50% -10%, hsl(var(--muted) / 0.85), transparent 55%),
+            radial-gradient(ellipse 60% 40% at 90% 20%, hsl(var(--foreground) / 0.03), transparent 50%),
+            hsl(var(--background))
+          `,
+        }}
+      />
 
-      <main className="mx-auto flex w-full max-w-content flex-col px-6 pb-24 pt-12 md:pt-16">
-        <div className="mx-auto max-w-2xl text-center">
-          <div className="border-border bg-muted/40 text-muted-foreground mb-6 inline-flex items-center gap-2 rounded-full border px-3 py-1 text-xs">
-            <Sparkles className="h-3.5 w-3.5" aria-hidden />
-            <span>Multilingual scripture, thoughtfully presented</span>
-          </div>
+      <SiteHeader />
 
-          <h1 className="font-serif text-5xl leading-[1.05] tracking-tight sm:text-6xl md:text-7xl">
-            The Gita,
-            <br />
-            <span className="text-muted-foreground">for the modern seeker.</span>
+      <main className="flex-1">
+        <section className="mx-auto flex w-full max-w-content flex-col items-center px-6 pb-6 pt-10 text-center md:pt-16">
+          <p className="font-serif text-6xl tracking-tight sm:text-7xl md:text-8xl">Divine</p>
+          <h1 className="text-muted-foreground mt-6 max-w-xl text-balance text-lg leading-relaxed sm:text-xl">
+            Read sacred texts with clarity, calm, and reverence.
           </h1>
-
-          <p className="text-muted-foreground mt-6 text-balance text-base sm:text-lg">
-            Read, reflect, and journey through timeless verses in your own language — calmly,
-            clearly, and with reverence.
-          </p>
-
-          <div className="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row">
-            <Button size="lg" disabled>
-              Explore the Gita
-            </Button>
-            <Button size="lg" variant="ghost" disabled>
-              Learn more
-            </Button>
+          <div className="mt-10">
+            <Suspense
+              fallback={
+                <Button asChild size="lg">
+                  <Link href="/bhagavad-gita">
+                    Begin Reading
+                    <ArrowRight className="h-4 w-4" aria-hidden />
+                  </Link>
+                </Button>
+              }
+            >
+              <HeroCta />
+            </Suspense>
           </div>
-        </div>
-
-        <section className="mx-auto mt-24 w-full max-w-3xl" aria-labelledby="works-heading">
-          <div className="mb-8 text-center">
-            <span className="text-muted-foreground text-xs uppercase tracking-widest">
-              Scripture
-            </span>
-            <h2 id="works-heading" className="mt-2 font-serif text-2xl sm:text-3xl">
-              Works in the catalog
-            </h2>
-            <p className="text-muted-foreground mt-2 text-sm">
-              Published corpora from the Divine API — live from your seeded database.
-            </p>
-          </div>
-
-          <Suspense fallback={<WorksSectionSkeleton />}>
-            <WorksSection />
-          </Suspense>
         </section>
+
+        <Suspense fallback={<FeaturedSkeleton />}>
+          <CatalogSection />
+        </Suspense>
       </main>
 
-      <footer className="border-border border-t">
-        <div className="text-muted-foreground mx-auto flex w-full max-w-content flex-col items-center justify-between gap-2 px-6 py-8 text-xs sm:flex-row">
-          <span>Built with reverence for seekers everywhere.</span>
-          <span>© {new Date().getFullYear()} Divine</span>
-        </div>
-      </footer>
+      <SiteFooter />
     </div>
   );
 }

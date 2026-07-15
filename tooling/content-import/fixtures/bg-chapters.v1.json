@@ -1,0 +1,166 @@
+{
+  "schemaVersion": "1.0.0",
+  "meta": {
+    "name": "bhagavad-gita-chapters",
+    "description": "Chapter structure only (18 chapters). No verses — verse import is a later milestone.",
+    "exportedAt": "2026-07-10T00:00:00.000Z"
+  },
+  "work": {
+    "code": "bg",
+    "slug": "bhagavad-gita",
+    "title": "Bhagavad Gita",
+    "description": "The Song of the Lord — 700 verses across 18 chapters of the Mahabharata.",
+    "sortOrder": 10,
+    "isPublished": true
+  },
+  "languages": [],
+  "translationSources": [],
+  "topics": [],
+  "emotions": [],
+  "chapters": [
+    {
+      "number": 1,
+      "publicId": "bg.1",
+      "title": "Arjuna Vishada Yoga",
+      "sortOrder": 1,
+      "isPublished": true,
+      "verses": []
+    },
+    {
+      "number": 2,
+      "publicId": "bg.2",
+      "title": "Sankhya Yoga",
+      "sortOrder": 2,
+      "isPublished": true,
+      "verses": []
+    },
+    {
+      "number": 3,
+      "publicId": "bg.3",
+      "title": "Karma Yoga",
+      "sortOrder": 3,
+      "isPublished": true,
+      "verses": []
+    },
+    {
+      "number": 4,
+      "publicId": "bg.4",
+      "title": "Jnana Karma Sanyasa Yoga",
+      "sortOrder": 4,
+      "isPublished": true,
+      "verses": []
+    },
+    {
+      "number": 5,
+      "publicId": "bg.5",
+      "title": "Karma Sanyasa Yoga",
+      "sortOrder": 5,
+      "isPublished": true,
+      "verses": []
+    },
+    {
+      "number": 6,
+      "publicId": "bg.6",
+      "title": "Dhyana Yoga",
+      "sortOrder": 6,
+      "isPublished": true,
+      "verses": []
+    },
+    {
+      "number": 7,
+      "publicId": "bg.7",
+      "title": "Jnana Vijnana Yoga",
+      "sortOrder": 7,
+      "isPublished": true,
+      "verses": []
+    },
+    {
+      "number": 8,
+      "publicId": "bg.8",
+      "title": "Akshara Brahma Yoga",
+      "sortOrder": 8,
+      "isPublished": true,
+      "verses": []
+    },
+    {
+      "number": 9,
+      "publicId": "bg.9",
+      "title": "Raja Vidya Raja Guhya Yoga",
+      "sortOrder": 9,
+      "isPublished": true,
+      "verses": []
+    },
+    {
+      "number": 10,
+      "publicId": "bg.10",
+      "title": "Vibhuti Yoga",
+      "sortOrder": 10,
+      "isPublished": true,
+      "verses": []
+    },
+    {
+      "number": 11,
+      "publicId": "bg.11",
+      "title": "Vishwarupa Darshana Yoga",
+      "sortOrder": 11,
+      "isPublished": true,
+      "verses": []
+    },
+    {
+      "number": 12,
+      "publicId": "bg.12",
+      "title": "Bhakti Yoga",
+      "sortOrder": 12,
+      "isPublished": true,
+      "verses": []
+    },
+    {
+      "number": 13,
+      "publicId": "bg.13",
+      "title": "Kshetra Kshetragna Vibhaga Yoga",
+      "sortOrder": 13,
+      "isPublished": true,
+      "verses": []
+    },
+    {
+      "number": 14,
+      "publicId": "bg.14",
+      "title": "Gunatraya Vibhaga Yoga",
+      "sortOrder": 14,
+      "isPublished": true,
+      "verses": []
+    },
+    {
+      "number": 15,
+      "publicId": "bg.15",
+      "title": "Purushottama Yoga",
+      "sortOrder": 15,
+      "isPublished": true,
+      "verses": []
+    },
+    {
+      "number": 16,
+      "publicId": "bg.16",
+      "title": "Daivasura Sampad Vibhaga Yoga",
+      "sortOrder": 16,
+      "isPublished": true,
+      "verses": []
+    },
+    {
+      "number": 17,
+      "publicId": "bg.17",
+      "title": "Shraddhatraya Vibhaga Yoga",
+      "sortOrder": 17,
+      "isPublished": true,
+      "verses": []
+    },
+    {
+      "number": 18,
+      "publicId": "bg.18",
+      "title": "Moksha Sanyasa Yoga",
+      "sortOrder": 18,
+      "isPublished": true,
+      "verses": []
+    }
+  ]
+}

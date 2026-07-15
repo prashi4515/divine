@@ -9,7 +9,7 @@ type Column = { key: string; label: string; className?: string };
 type AdminResourcePageProps = {
   title: string;
   description: string;
-  actionLabel: string;
+  actionLabel?: string;
   searchPlaceholder: string;
   filters: string[];
   columns: Column[];

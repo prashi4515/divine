@@ -1,0 +1,88 @@
+{
+  "schemaVersion": "1.0.0",
+  "meta": {
+    "name": "example-mini-work",
+    "description": "Tiny fictional catalog for pipeline dry-runs. NOT Bhagavad Gita.",
+    "exportedAt": "2026-07-10T00:00:00.000Z"
+  },
+  "work": {
+    "code": "ex",
+    "slug": "example-work",
+    "title": "Example Work",
+    "description": "A two-verse sample used only to exercise the import framework.",
+    "sortOrder": 999,
+    "isPublished": false
+  },
+  "languages": [
+    {
+      "code": "en",
+      "name": "English",
+      "nativeName": "English",
+      "sortOrder": 10
+    }
+  ],
+  "translationSources": [
+    {
+      "key": "example-source",
+      "displayName": "Example Source",
+      "license": "CC0",
+      "isDefault": true
+    }
+  ],
+  "topics": [
+    {
+      "slug": "example-topic",
+      "name": "Example Topic",
+      "sortOrder": 1
+    }
+  ],
+  "emotions": [
+    {
+      "slug": "example-emotion",
+      "name": "Example Emotion",
+      "sortOrder": 1
+    }
+  ],
+  "chapters": [
+    {
+      "number": 1,
+      "publicId": "ex.1",
+      "title": "Opening",
+      "isPublished": false,
+      "verses": [
+        {
+          "number": 1,
+          "publicId": "ex.1.1",
+          "sanskritText": "उदाहरणम् एकम्",
+          "transliteration": "udāharaṇam ekam",
+          "isPublished": false,
+          "translations": [
+            {
+              "languageCode": "en",
+              "sourceKey": "example-source",
+              "text": "This is example verse one.",
+              "isPublished": false
+            }
+          ],
+          "topicSlugs": ["example-topic"],
+          "emotionSlugs": ["example-emotion"]
+        },
+        {
+          "number": 2,
+          "publicId": "ex.1.2",
+          "sanskritText": "उदाहरणम् द्वे",
+          "transliteration": "udāharaṇam dve",
+          "translations": [
+            {
+              "languageCode": "en",
+              "sourceKey": "example-source",
+              "text": "This is example verse two."
+            }
+          ],
+          "topicSlugs": [],
+          "emotionSlugs": []
+        }
+      ]
+    }
+  ]
+}

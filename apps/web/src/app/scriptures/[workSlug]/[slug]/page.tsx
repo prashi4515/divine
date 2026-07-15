@@ -1,0 +1,160 @@
+import type { Metadata } from "next";
+import { notFound } from "next/navigation";
+import { ApiError } from "@/lib/api/client";
+import { getPublishedChapter, getPublishedChapters } from "@/lib/api/chapters";
+import { getPublishedVerses } from "@/lib/api/verses";
+import { getPublishedWorkBySlug } from "@/lib/api/works";
+import { ChapterHero } from "@/features/reading/chapter-hero";
+import { ChapterNavigation } from "@/features/reading/chapter-navigation";
+import { ChapterReaderHeader } from "@/features/reading/chapter-reader-header";
+import { chapterTitleDisplay } from "@/features/reading/chapter-reading";
+import { ChapterStats } from "@/features/reading/chapter-stats";
+import { VerseReader } from "@/features/reading/verse-reader";
+import { ReadingError } from "@/features/reading/reading-error";
+import { ReadingProgress } from "@/features/reading/reading-progress";
+import { SiteFooter } from "@/features/reading/site-footer";
+import { publicChapterPath, publicWorkPath } from "@/lib/reading/work-paths";
+
+type ChapterPageProps = {
+  params: Promise<{ workSlug: string; slug: string }>;
+};
+
+const CHAPTER_SLUG = /^chapter-(\d+)$/;
+
+function parseChapterNumber(slug: string): number | null {
+  const match = CHAPTER_SLUG.exec(slug);
+  if (!match) return null;
+  const n = Number.parseInt(match[1]!, 10);
+  if (!Number.isFinite(n) || n < 1) return null;
+  return n;
+}
+
+export async function generateMetadata({
+  params,
+}: ChapterPageProps): Promise<Metadata> {
+  const { workSlug, slug } = await params;
+  const n = parseChapterNumber(slug);
+  if (n === null) return { title: "Chapter" };
+
+  try {
+    const work = await getPublishedWorkBySlug(workSlug);
+    if (!work || work.code === "bg") return { title: "Chapter" };
+    const chapter = await getPublishedChapter(`${work.code}.${n}`);
+    const title = chapterTitleDisplay(chapter.number, chapter.title);
+    return {
+      title: `Chapter ${chapter.number} — ${title}`,
+      description: `Read Chapter ${chapter.number} of ${work.title}.`,
+      alternates: {
+        canonical: publicChapterPath(work, chapter.number),
+      },
+    };
+  } catch {
+    return { title: `Chapter ${n}` };
+  }
+}
+
+async function ChapterContent({
+  workSlug,
+  number,
+}: {
+  workSlug: string;
+  number: number;
+}) {
+  try {
+    const work = await getPublishedWorkBySlug(workSlug);
+    if (!work || work.code === "bg") notFound();
+
+    const chapter = await getPublishedChapter(`${work.code}.${number}`);
+    const allChapters = await getPublishedChapters();
+    const workChapters = allChapters.filter((c) => c.work.code === work.code);
+    const totalChapters = workChapters.length;
+    const { verses, languages } = await getPublishedVerses(chapter.publicId);
+    const listHref = publicWorkPath(work);
+
+    return (
+      <>
+        <ChapterHero
+          number={chapter.number}
+          title={chapter.title}
+          verseCount={chapter.verseCount || verses.length}
+          workTitle={chapter.work.title}
+          chaptersHref={listHref}
+        />
+
+        <div className="mx-auto mt-16 max-w-3xl space-y-12 md:mt-24 md:space-y-16">
+          <ChapterStats verseCount={chapter.verseCount || verses.length} />
+          <ReadingProgress percent={verses.length > 0 ? 1 : 0} />
+          <VerseReader
+            chapterNumber={chapter.number}
+            verses={verses}
+            languages={languages.length > 0 ? languages : [
+              { code: "en", name: "English", nativeName: "English" },
+            ]}
+            initialLanguage="en"
+          />
+          <ChapterNavigation
+            currentNumber={chapter.number}
+            totalChapters={totalChapters}
+            listHref={listHref}
+            chapterHref={(n) => publicChapterPath(work, n)}
+          />
+        </div>
+      </>
+    );
+  } catch (error: unknown) {
+    if (error instanceof ApiError && error.status === 404) {
+      notFound();
+    }
+
+    let message = "Something went wrong while loading this chapter.";
+    if (error instanceof ApiError) {
+      message =
+        error.status === 0
+          ? `Could not reach the API (${error.message}).`
+          : `The API returned ${error.status}.`;
+    } else if (error instanceof Error) {
+      message = error.message;
+    }
+
+    return (
+      <div className="mx-auto max-w-lg pt-10">
+        <ReadingError title="Unable to load chapter" message={message} />
+      </div>
+    );
+  }
+}
+
+/**
+ * Public chapter reading page — `/scriptures/{workSlug}/chapter-{n}`.
+ */
+export default async function ScriptureChapterPage({ params }: ChapterPageProps) {
+  const { workSlug, slug } = await params;
+  const n = parseChapterNumber(slug);
+  if (n === null) notFound();
+
+  const work = await getPublishedWorkBySlug(workSlug);
+  if (!work || work.code === "bg") notFound();
+
+  return (
+    <div className="relative flex min-h-svh flex-col">
+      <div
+        className="pointer-events-none absolute inset-0 -z-10"
+        aria-hidden
+        style={{
+          background: `
+            radial-gradient(ellipse 90% 45% at 50% -8%, hsl(var(--muted) / 0.65), transparent 52%),
+            hsl(var(--background))
+          `,
+        }}
+      />
+
+      <ChapterReaderHeader backHref={publicWorkPath(work)} />
+
+      <main className="mx-auto w-full max-w-content flex-1 px-6 pb-24 pt-10 md:pt-16">
+        <ChapterContent workSlug={workSlug} number={n} />
+      </main>
+
+      <SiteFooter />
+    </div>
+  );
+}

@@ -2,6 +2,7 @@ import { ValidationPipe } from "@nestjs/common";
 import { ConfigService } from "@nestjs/config";
 import { NestFactory } from "@nestjs/core";
 import { DocumentBuilder, SwaggerModule } from "@nestjs/swagger";
+import cookieParser from "cookie-parser";
 import { Logger } from "nestjs-pino";
 import { AppModule } from "./app.module";
 import type { Env } from "./config/env";
@@ -18,8 +19,13 @@ async function bootstrap(): Promise<void> {
   // Graceful shutdown: triggers PrismaService.onModuleDestroy on SIGTERM/SIGINT.
   app.enableShutdownHooks();
 
+  app.use(cookieParser());
+
   // CORS limited to the known web origin.
-  app.enableCors({ origin: config.get("DIVINE_WEB_ORIGIN", { infer: true }), credentials: true });
+  app.enableCors({
+    origin: config.get("DIVINE_WEB_ORIGIN", { infer: true }),
+    credentials: true,
+  });
 
   // Global input validation: strip unknown props, reject extras, auto-transform
   // payloads into their DTO types. This is the single validation policy.
@@ -41,12 +47,15 @@ async function bootstrap(): Promise<void> {
   const swaggerConfig = new DocumentBuilder()
     .setTitle("Divine API")
     .setDescription("Foundation API for the Divine platform.")
-    .setVersion("0.0.1")
+    .setVersion("0.1.0")
+    .addBearerAuth()
+    .addCookieAuth("divine_access_token")
     .build();
   const document = SwaggerModule.createDocument(app, swaggerConfig);
   SwaggerModule.setup("docs", app, document);
 
-  const port = config.get("DIVINE_API_PORT", { infer: true });
+  // Render (and most PaaS) inject PORT; fall back to DIVINE_API_PORT for local/Docker.
+  const port = Number(process.env.PORT) || config.get("DIVINE_API_PORT", { infer: true });
   await app.listen(port);
 
   app.get(Logger).log(`Divine API listening on http://localhost:${port} (docs at /docs)`);

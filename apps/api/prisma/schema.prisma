@@ -1,11 +1,10 @@
 // =========================================================================
-// Divine — Prisma schema (Phase P0 — content catalog only)
+// Divine — Prisma schema
 //
-// Entities: Work, Chapter, Verse, Language, TranslationSource, Translation,
-//           Topic, VerseTopic, Emotion, VerseEmotion
-//
-// Explicitly OUT of scope: users, auth, bookmarks, notes, plans, audio, AI.
-// Do NOT run migrations until this schema is approved.
+// P0 content catalog: Work, Chapter, Verse, Language, TranslationSource,
+//                     Translation, Topic, VerseTopic, Emotion, VerseEmotion
+// P1 auth + CMS library: User, AuthIdentity, RefreshToken, PasswordResetToken,
+//                        Scripture, ScriptureNode, MediaAsset
 // =========================================================================
 
 generator client {
@@ -30,13 +29,17 @@ model Work {
   title       String   @db.VarChar(255)
   description String?  @db.Text
   sortOrder   Int      @default(0) @map("sort_order")
+  /// draft | review | published | archived
+  status      String   @default("draft") @db.VarChar(32)
   isPublished Boolean  @default(false) @map("is_published")
   createdAt   DateTime @default(now()) @map("created_at") @db.Timestamptz(3)
   updatedAt   DateTime @updatedAt @map("updated_at") @db.Timestamptz(3)
 
-  chapters Chapter[]
+  chapters   Chapter[]
+  scriptures Scripture[]
 
   @@index([isPublished, sortOrder])
+  @@index([status])
   @@map("works")
 }
 
@@ -76,22 +79,51 @@ model Verse {
   chapterId       String   @map("chapter_id") @db.Uuid
   number          Int
   publicId        String   @unique @map("public_id") @db.VarChar(64)
+  /// Original-language text (Sanskrit, Arabic, Hebrew, etc.)
   sanskritText    String   @map("sanskrit_text") @db.Text
   transliteration String?  @db.Text
+  /// Editorial meaning / short reflection (CMS-editable)
+  meaning         String?  @db.Text
+  /// Optional longer commentary
+  commentary      String?  @db.Text
+  seoTitle        String?  @map("seo_title") @db.VarChar(255)
+  seoDescription  String?  @map("seo_description") @db.Text
   sortOrder       Int      @default(0) @map("sort_order")
   isPublished     Boolean  @default(false) @map("is_published")
   createdAt       DateTime @default(now()) @map("created_at") @db.Timestamptz(3)
   updatedAt       DateTime @updatedAt @map("updated_at") @db.Timestamptz(3)
 
-  chapter       Chapter        @relation(fields: [chapterId], references: [id], onDelete: Cascade)
+  chapter       Chapter           @relation(fields: [chapterId], references: [id], onDelete: Cascade)
   translations  Translation[]
   verseTopics   VerseTopic[]
   verseEmotions VerseEmotion[]
+  revisions     ContentRevision[]
 
   @@unique([chapterId, number])
   @@index([chapterId, sortOrder])
   @@index([isPublished])
   @@map("verses")
+}
+
+// -------------------------------------------------------------------------
+// ContentRevision — simple version history snapshots for CMS edits
+// -------------------------------------------------------------------------
+model ContentRevision {
+  id         String   @id @default(uuid()) @db.Uuid
+  /// verse | translation | scripture
+  entityType String   @map("entity_type") @db.VarChar(32)
+  entityId   String   @map("entity_id") @db.Uuid
+  verseId    String?  @map("verse_id") @db.Uuid
+  snapshot   Json
+  note       String?  @db.VarChar(255)
+  createdBy  String?  @map("created_by") @db.Uuid
+  createdAt  DateTime @default(now()) @map("created_at") @db.Timestamptz(3)
+
+  verse Verse? @relation(fields: [verseId], references: [id], onDelete: Cascade)
+
+  @@index([entityType, entityId, createdAt])
+  @@index([verseId, createdAt])
+  @@map("content_revisions")
 }
 
 // -------------------------------------------------------------------------
@@ -236,4 +268,178 @@ model VerseEmotion {
   @@unique([verseId, emotionId])
   @@index([emotionId, verseId])
   @@map("verse_emotions")
+}
+
+// -------------------------------------------------------------------------
+// User — account root for admin CMS (and future public accounts)
+// -------------------------------------------------------------------------
+model User {
+  id                String    @id @default(uuid()) @db.Uuid
+  email             String    @unique @db.VarChar(320)
+  emailVerifiedAt   DateTime? @map("email_verified_at") @db.Timestamptz(3)
+  displayName       String    @map("display_name") @db.VarChar(255)
+  avatarUrl         String?   @map("avatar_url") @db.Text
+  /// Role slugs matching the web RBAC catalog (e.g. "super-admin").
+  roles             String[]  @default([])
+  /// active | invited | suspended | deactivated
+  status            String    @default("active") @db.VarChar(32)
+  preferredLanguage String?   @map("preferred_language") @db.VarChar(16)
+  timeZone          String?   @map("time_zone") @db.VarChar(64)
+  lastLoginAt       DateTime? @map("last_login_at") @db.Timestamptz(3)
+  createdAt         DateTime  @default(now()) @map("created_at") @db.Timestamptz(3)
+  updatedAt         DateTime  @updatedAt @map("updated_at") @db.Timestamptz(3)
+
+  identities          AuthIdentity[]
+  refreshTokens       RefreshToken[]
+  passwordResetTokens PasswordResetToken[]
+
+  @@index([status])
+  @@map("users")
+}
+
+model AuthIdentity {
+  id             String   @id @default(uuid()) @db.Uuid
+  userId         String   @map("user_id") @db.Uuid
+  /// password | google | apple
+  provider        String  @db.VarChar(32)
+  providerSubject String  @map("provider_subject") @db.VarChar(320)
+  passwordHash   String?  @map("password_hash") @db.Text
+  createdAt      DateTime @default(now()) @map("created_at") @db.Timestamptz(3)
+  updatedAt      DateTime @updatedAt @map("updated_at") @db.Timestamptz(3)
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([provider, providerSubject])
+  @@index([userId])
+  @@map("auth_identities")
+}
+
+model RefreshToken {
+  id         String    @id @default(uuid()) @db.Uuid
+  userId     String    @map("user_id") @db.Uuid
+  tokenHash  String    @map("token_hash") @db.VarChar(128)
+  expiresAt  DateTime  @map("expires_at") @db.Timestamptz(3)
+  revokedAt  DateTime? @map("revoked_at") @db.Timestamptz(3)
+  rememberMe Boolean   @default(false) @map("remember_me")
+  userAgent  String?   @map("user_agent") @db.Text
+  ip         String?   @db.VarChar(64)
+  createdAt  DateTime  @default(now()) @map("created_at") @db.Timestamptz(3)
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@index([tokenHash])
+  @@index([expiresAt])
+  @@map("refresh_tokens")
+}
+
+model PasswordResetToken {
+  id        String    @id @default(uuid()) @db.Uuid
+  userId    String    @map("user_id") @db.Uuid
+  tokenHash String    @map("token_hash") @db.VarChar(128)
+  expiresAt DateTime  @map("expires_at") @db.Timestamptz(3)
+  usedAt    DateTime? @map("used_at") @db.Timestamptz(3)
+  createdAt DateTime  @default(now()) @map("created_at") @db.Timestamptz(3)
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@index([tokenHash])
+  @@map("password_reset_tokens")
+}
+
+// -------------------------------------------------------------------------
+// Scripture — CMS library corpus linked 1:1 to public Work catalog.
+// Structure level *labels* are arbitrary (Chapter/Surah/Kanda); content
+// lives on Work → Chapter → Verse (single source of truth for the reader).
+// -------------------------------------------------------------------------
+model Scripture {
+  id                String   @id @default(uuid()) @db.Uuid
+  /// Linked public Work — CMS edits and public reader share this catalog.
+  workId            String?  @unique @map("work_id") @db.Uuid
+  name              String   @db.VarChar(255)
+  slug              String   @unique @db.VarChar(128)
+  shortName         String?  @map("short_name") @db.VarChar(64)
+  description       String?  @db.Text
+  religion          String?  @db.VarChar(128)
+  originalLanguage  String?  @map("original_language") @db.VarChar(64)
+  author            String?  @db.VarChar(255)
+  estimatedDate     String?  @map("estimated_date") @db.VarChar(128)
+  coverImageUrl     String?  @map("cover_image_url") @db.Text
+  bannerImageUrl    String?  @map("banner_image_url") @db.Text
+  themeColor        String?  @map("theme_color") @db.VarChar(32)
+  accentColor       String?  @map("accent_color") @db.VarChar(32)
+  seoTitle          String?  @map("seo_title") @db.VarChar(255)
+  seoDescription    String?  @map("seo_description") @db.Text
+  seoKeywords       String?  @map("seo_keywords") @db.Text
+  canonicalUrl      String?  @map("canonical_url") @db.Text
+  ogImageUrl        String?  @map("og_image_url") @db.Text
+  copyright         String?  @db.Text
+  license           String?  @db.VarChar(255)
+  website           String?  @db.Text
+  /// public | private | unlisted
+  visibility        String   @default("private") @db.VarChar(32)
+  defaultLanguage   String?  @map("default_language") @db.VarChar(16)
+  /// ltr | rtl
+  readingDirection  String   @default("ltr") @map("reading_direction") @db.VarChar(8)
+  /// Ordered level labels, e.g. ["Chapter","Verse"]
+  structureLevels   Json     @default("[]") @map("structure_levels")
+  /// draft | review | published | archived
+  status            String   @default("draft") @db.VarChar(32)
+  isPublished       Boolean  @default(false) @map("is_published")
+  sortOrder         Int      @default(0) @map("sort_order")
+  bookCount         Int      @default(0) @map("book_count")
+  chapterCount      Int      @default(0) @map("chapter_count")
+  verseCount        Int      @default(0) @map("verse_count")
+  translationCount  Int      @default(0) @map("translation_count")
+  createdAt         DateTime @default(now()) @map("created_at") @db.Timestamptz(3)
+  updatedAt         DateTime @updatedAt @map("updated_at") @db.Timestamptz(3)
+
+  work  Work?           @relation(fields: [workId], references: [id], onDelete: SetNull)
+  nodes ScriptureNode[]
+  media MediaAsset[]
+
+  @@index([isPublished, sortOrder])
+  @@index([status])
+  @@index([religion])
+  @@map("scriptures")
+}
+
+model ScriptureNode {
+  id          String   @id @default(uuid()) @db.Uuid
+  scriptureId String   @map("scripture_id") @db.Uuid
+  parentId    String?  @map("parent_id") @db.Uuid
+  /// Level label from structureLevels (e.g. "Chapter", "Surah")
+  label       String   @db.VarChar(64)
+  title       String   @db.VarChar(255)
+  sortOrder   Int      @default(0) @map("sort_order")
+  createdAt   DateTime @default(now()) @map("created_at") @db.Timestamptz(3)
+  updatedAt   DateTime @updatedAt @map("updated_at") @db.Timestamptz(3)
+
+  scripture Scripture       @relation(fields: [scriptureId], references: [id], onDelete: Cascade)
+  parent    ScriptureNode?  @relation("ScriptureNodeHierarchy", fields: [parentId], references: [id], onDelete: Cascade)
+  children  ScriptureNode[] @relation("ScriptureNodeHierarchy")
+
+  @@index([scriptureId, sortOrder])
+  @@index([parentId])
+  @@map("scripture_nodes")
+}
+
+model MediaAsset {
+  id          String   @id @default(uuid()) @db.Uuid
+  scriptureId String?  @map("scripture_id") @db.Uuid
+  /// cover | banner | icon | illustration | audio | pdf | video | other
+  kind        String   @db.VarChar(32)
+  fileName    String   @map("file_name") @db.VarChar(255)
+  mimeType    String   @map("mime_type") @db.VarChar(128)
+  sizeBytes   Int      @default(0) @map("size_bytes")
+  /// Storage URL or data placeholder until object storage is wired
+  url         String   @db.Text
+  createdAt   DateTime @default(now()) @map("created_at") @db.Timestamptz(3)
+  updatedAt   DateTime @updatedAt @map("updated_at") @db.Timestamptz(3)
+
+  scripture Scripture? @relation(fields: [scriptureId], references: [id], onDelete: SetNull)
+
+  @@index([scriptureId, kind])
+  @@map("media_assets")
 }

@@ -1,0 +1,23 @@
+{
+  "name": "@divine/content-import",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Production content import pipeline — parse, validate, import, report.",
+  "type": "module",
+  "bin": {
+    "divine-import": "./src/cli.mts"
+  },
+  "scripts": {
+    "load": "node --env-file=../../apps/api/.env ./src/cli.mts",
+    "test": "node --test ./src/schema/v1.test.mts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@prisma/client": "^6.2.1",
+    "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.5",
+    "typescript": "^5.7.2"
+  }
+}

@@ -20,6 +20,8 @@ years.
 | [AI](./AI.md) | AI Guru and emotion-based search design |
 | [Deployment](./Deployment.md) | Environments, env vars, Docker, CI/CD |
 | [Admin](./Admin.md) | Internal CMS UI (design-only milestone) |
+| [CMS Architecture Proposal](./CMS-Architecture-Proposal.md) | Multi-scripture CMS refactor (IA, sitemap, components, roadmap) |
+| [Content Import](./Content-Import.md) | Versioned JSON import pipeline (ops CLI) |
 
 ## Planned additions
 

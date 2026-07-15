@@ -16,13 +16,20 @@
 - ✅ Frontend initialized (Next.js 15, Tailwind, shadcn/ui, dark mode, landing placeholder).
 - ✅ Backend foundation (NestJS, Prisma, Swagger, health, logging, Docker).
 - ✅ Neon PostgreSQL connection verified.
+- ✅ P0 content catalog schema + seed (languages, work `bg`, sources, topics, emotions).
+- ✅ Works API + homepage fetch.
+- ✅ Content import framework (`tooling/content-import`) — no Gita verses yet.
+- ✅ Chapters API + admin read-only list (`GET /v1/chapters`, `GET /v1/chapters/:publicId`).
+- ✅ Public reading shell — home hero + `/bhagavad-gita` chapter explorer (verse reader deferred).
 - _TODO — update as milestones complete._
 
 ## Phase P0 — Foundation
 
 - ✅ Monorepo, web shell, API foundation, DB connection.
-- ⏳ Shared `packages/types` wired into web + api.
-- ⏳ First domain schema + migration.
+- ✅ Shared `packages/types` wired into web + api (works + chapters).
+- ✅ First domain schema + migration.
+- ✅ Content import pipeline (reusable; Gita load deferred).
+- ✅ Chapters read API + admin list.
 - ⏳ Locale-first routing scaffolding.
 
 ## Phase P1 — Accounts & Personalization

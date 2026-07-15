@@ -1,27 +1,28 @@
 # Admin CMS
 
 > Internal content management UI for Divine. **Not** the public website.
-> Current milestone: **design / layout only** — no API, database, or CRUD.
+> Most routes are still design placeholders. **Chapters** is read-only and
+> backed by the live API (`GET /v1/chapters`).
 
 ## Access
 
 - Base path: `/admin`
 - `robots: noindex` on the admin layout
-- Footer note in sidebar: “Design preview · no API”
+- Sidebar footer notes live Chapters wiring
 
 ## Information architecture
 
-| Route | Purpose |
-| ----- | ------- |
-| `/admin` | Dashboard — stats, activity, quick links |
-| `/admin/works` | Scripture corpora |
-| `/admin/chapters` | Chapter structure |
-| `/admin/verses` | Verse catalog |
-| `/admin/translations` | Language × source meanings |
-| `/admin/languages` | BCP-47 catalog |
-| `/admin/topics` | Thematic taxonomy |
-| `/admin/emotions` | Emotion tags |
-| `/admin/settings` | CMS preferences (placeholders) |
+| Route | Purpose | Status |
+| ----- | ------- | ------ |
+| `/admin` | Dashboard — stats, activity, quick links | Design |
+| `/admin/works` | Scripture corpora | Design |
+| `/admin/chapters` | Chapter structure | **Live read-only** |
+| `/admin/verses` | Verse catalog | Design |
+| `/admin/translations` | Language × source meanings | Design |
+| `/admin/languages` | BCP-47 catalog | Design |
+| `/admin/topics` | Thematic taxonomy | Design |
+| `/admin/emotions` | Emotion tags | Design |
+| `/admin/settings` | CMS preferences (placeholders) | Design |
 
 ## UX decisions
 

@@ -7,6 +7,12 @@ import { validateEnv, type Env } from "./config/env";
 import { HealthModule } from "./health/health.module";
 import { PrismaModule } from "./prisma/prisma.module";
 import { WorksModule } from "./modules/works/works.module";
+import { ChaptersModule } from "./modules/chapters/chapters.module";
+import { AuthModule } from "./modules/auth/auth.module";
+import { ScripturesModule } from "./modules/scriptures/scriptures.module";
+import { VersesModule } from "./modules/verses/verses.module";
+import { SearchModule } from "./modules/search/search.module";
+import { MediaModule } from "./modules/media/media.module";
 
 @Module({
   imports: [
@@ -35,7 +41,13 @@ import { WorksModule } from "./modules/works/works.module";
 
     PrismaModule,
     HealthModule,
+    AuthModule,
     WorksModule,
+    ChaptersModule,
+    ScripturesModule,
+    VersesModule,
+    SearchModule,
+    MediaModule,
   ],
   providers: [
     // Global catch-all exception filter (consistent error envelope + logging).

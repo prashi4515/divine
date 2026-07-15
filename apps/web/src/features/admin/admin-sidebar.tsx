@@ -15,7 +15,7 @@ function Brand() {
       </div>
       <div className="min-w-0">
         <div className="truncate text-sm font-medium tracking-tight">Divine</div>
-        <div className="text-muted-foreground truncate text-[11px]">Admin CMS</div>
+        <div className="text-muted-foreground truncate text-[11px]">Scripture CMS</div>
       </div>
     </Link>
   );
@@ -28,7 +28,7 @@ export function AdminSidebar() {
       <Separator />
       <AdminSidebarNav />
       <div className="text-muted-foreground mt-auto border-t px-4 py-3 text-[11px]">
-        Design preview · no API
+        Foundation · v0
       </div>
     </aside>
   );
@@ -58,7 +58,7 @@ export function AdminMobileNav() {
             aria-label="Close menu"
             onClick={() => setOpen(false)}
           />
-          <div className="border-border bg-background absolute inset-y-0 left-0 flex w-[min(100%,16rem)] flex-col border-r shadow-sm">
+          <div className="border-border bg-background absolute inset-y-0 left-0 flex w-[min(100%,17rem)] flex-col border-r shadow-sm">
             <div className="flex items-center justify-between pr-2">
               <Brand />
               <Button

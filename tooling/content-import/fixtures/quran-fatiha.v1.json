@@ -1,0 +1,146 @@
+{
+  "schemaVersion": "1.0.0",
+  "meta": {
+    "name": "quran-sample-fatiha",
+    "description": "Sample Quran corpus with Surah Al-Fatiha (1) for CMS demonstration.",
+    "exportedAt": "2026-07-14T00:00:00.000Z"
+  },
+  "work": {
+    "code": "quran",
+    "slug": "quran",
+    "title": "Quran",
+    "description": "The central religious text of Islam. Sample includes Surah Al-Fatiha.",
+    "sortOrder": 20,
+    "isPublished": true
+  },
+  "languages": [
+    { "code": "en", "name": "English", "nativeName": "English", "sortOrder": 10 },
+    { "code": "ar", "name": "Arabic", "nativeName": "العربية", "sortOrder": 5 }
+  ],
+  "translationSources": [
+    {
+      "key": "sahih-international",
+      "displayName": "Sahih International",
+      "author": "Sahih International",
+      "license": "Public domain / widely circulated English rendering for demo",
+      "isDefault": true
+    }
+  ],
+  "topics": [],
+  "emotions": [],
+  "chapters": [
+    {
+      "number": 1,
+      "publicId": "quran.1",
+      "title": "Al-Fatiha (The Opening)",
+      "isPublished": true,
+      "verses": [
+        {
+          "number": 1,
+          "publicId": "quran.1.1",
+          "sanskritText": "بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ",
+          "transliteration": "Bismillāhi r-raḥmāni r-raḥīm",
+          "isPublished": true,
+          "translations": [
+            {
+              "languageCode": "en",
+              "sourceKey": "sahih-international",
+              "text": "In the name of Allah, the Entirely Merciful, the Especially Merciful.",
+              "isPublished": true
+            }
+          ]
+        },
+        {
+          "number": 2,
+          "publicId": "quran.1.2",
+          "sanskritText": "ٱلْحَمْدُ لِلَّهِ رَبِّ ٱلْعَٰلَمِينَ",
+          "transliteration": "Al-ḥamdu lillāhi rabbi l-ʿālamīn",
+          "isPublished": true,
+          "translations": [
+            {
+              "languageCode": "en",
+              "sourceKey": "sahih-international",
+              "text": "All praise is due to Allah, Lord of the worlds.",
+              "isPublished": true
+            }
+          ]
+        },
+        {
+          "number": 3,
+          "publicId": "quran.1.3",
+          "sanskritText": "ٱلرَّحْمَٰنِ ٱلرَّحِيمِ",
+          "transliteration": "Ar-raḥmāni r-raḥīm",
+          "isPublished": true,
+          "translations": [
+            {
+              "languageCode": "en",
+              "sourceKey": "sahih-international",
+              "text": "The Entirely Merciful, the Especially Merciful.",
+              "isPublished": true
+            }
+          ]
+        },
+        {
+          "number": 4,
+          "publicId": "quran.1.4",
+          "sanskritText": "مَٰلِكِ يَوْمِ ٱلدِّينِ",
+          "transliteration": "Māliki yawmi d-dīn",
+          "isPublished": true,
+          "translations": [
+            {
+              "languageCode": "en",
+              "sourceKey": "sahih-international",
+              "text": "Sovereign of the Day of Recompense.",
+              "isPublished": true
+            }
+          ]
+        },
+        {
+          "number": 5,
+          "publicId": "quran.1.5",
+          "sanskritText": "إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ",
+          "transliteration": "Iyyāka naʿbudu wa-iyyāka nastaʿīn",
+          "isPublished": true,
+          "translations": [
+            {
+              "languageCode": "en",
+              "sourceKey": "sahih-international",
+              "text": "It is You we worship and You we ask for help.",
+              "isPublished": true
+            }
+          ]
+        },
+        {
+          "number": 6,
+          "publicId": "quran.1.6",
+          "sanskritText": "ٱهْدِنَا ٱلصِّرَٰطَ ٱلْمُسْتَقِيمَ",
+          "transliteration": "Ihdinā ṣ-ṣirāṭa l-mustaqīm",
+          "isPublished": true,
+          "translations": [
+            {
+              "languageCode": "en",
+              "sourceKey": "sahih-international",
+              "text": "Guide us to the straight path.",
+              "isPublished": true
+            }
+          ]
+        },
+        {
+          "number": 7,
+          "publicId": "quran.1.7",
+          "sanskritText": "صِرَٰطَ ٱلَّذِينَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ ٱلْمَغْضُوبِ عَلَيْهِمْ وَلَا ٱلضَّآلِّينَ",
+          "transliteration": "Ṣirāṭa lladhīna anʿamta ʿalayhim ghayri l-maghḍūbi ʿalayhim wa-lā ḍ-ḍāllīn",
+          "isPublished": true,
+          "translations": [
+            {
+              "languageCode": "en",
+              "sourceKey": "sahih-international",
+              "text": "The path of those upon whom You have bestowed favor, not of those who have earned wrath or of those who are astray.",
+              "isPublished": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -7,7 +7,7 @@
 | Component | Host | Notes |
 | --------- | ---- | ----- |
 | Web (`apps/web`) | Vercel | Next.js native hosting, ISR/edge |
-| API (`apps/api`) | Railway or VPS | Long-running NestJS |
+| API (`apps/api`) | Render | NestJS Web Service (Docker) |
 | Database | Neon | Managed PostgreSQL |
 
 - _TODO — confirm final hosting choices and regions._
@@ -66,9 +66,42 @@ pnpm --filter @divine/api start:dev  # api on :8080
 - Merge to `main` → production; PRs → preview deployments.
 - _TODO — preview DB strategy (Neon branching)._
 
-## 9. API Deployment (Railway / VPS)
+## 9. API Deployment (Render)
 
-- Build image, run migrations, deploy, health-check `/health`.
+Preferred host for NestJS API: [Render](https://render.com) Web Service.
+
+### Docker (recommended)
+
+1. New **Web Service** → connect GitHub repo `divine`.
+2. **Runtime:** Docker.
+3. **Dockerfile path:** `apps/api/Dockerfile`
+4. **Docker context:** repo root (`.`)
+5. **Health check path:** `/health`
+6. Set env vars from `apps/api/.env.example` (see table below).
+7. After first deploy, run migrations once (Render Shell or local against prod DB):
+
+```bash
+pnpm --filter @divine/api prisma:deploy
+pnpm --filter @divine/api prisma:seed   # optional
+```
+
+### Env vars (API on Render)
+
+| Variable | Notes |
+| -------- | ----- |
+| `NODE_ENV` | `production` |
+| `DIVINE_DATABASE_URL` | Neon pooled URL |
+| `DIVINE_DIRECT_URL` | Neon direct URL (migrations) |
+| `DIVINE_WEB_ORIGIN` | Vercel URL, e.g. `https://your-app.vercel.app` |
+| `DIVINE_JWT_ACCESS_SECRET` | `openssl rand -base64 48` |
+| `DIVINE_JWT_REFRESH_SECRET` | separate secret, same length |
+| `DIVINE_COOKIE_SECURE` | `true` |
+| `DIVINE_LOG_LEVEL` | `info` |
+
+Render injects `PORT`; the API listens on `process.env.PORT` when set. Do not hardcode `DIVINE_API_PORT` unless needed.
+
+Point Vercel web env `DIVINE_API_URL` / `NEXT_PUBLIC_DIVINE_API_URL` at the Render URL (e.g. `https://divine-api.onrender.com`).
+
 - _TODO — rollout/rollback procedure._
 
 ## 10. Rollback & Incident Response

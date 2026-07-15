@@ -8,9 +8,14 @@ export async function getPublishedWorks(): Promise<Work[]> {
   const result = await apiFetch(
     {
       path: "/v1/works",
-      next: { revalidate: 60 },
+      next: { revalidate: 30 },
     },
     (json) => worksListResponseSchema.parse(json),
   );
   return result.data;
+}
+
+export async function getPublishedWorkBySlug(slug: string): Promise<Work | null> {
+  const works = await getPublishedWorks();
+  return works.find((work) => work.slug === slug) ?? null;
 }

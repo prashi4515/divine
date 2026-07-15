@@ -24,7 +24,8 @@
 
 ## 4. Standard Response Shapes
 
-- **Success:** _TODO — define envelope or raw resource policy._
+- **Success (lists):** `{ "data": [ ... ] }`
+- **Success (detail):** `{ "data": { ... } }`
 - **Error envelope (current):**
 
 ```json
@@ -52,6 +53,8 @@
 ### Content
 
 - `GET /v1/works` — list published works (ordered by `sortOrder`). Public, no auth.
+- `GET /v1/chapters` — list published chapters (ordered by `sortOrder`), each with nested `work` summary (`code`, `slug`, `title`). Public, no auth.
+- `GET /v1/chapters/:publicId` — one published chapter by public ID (e.g. `bg.1`). 404 if missing or unpublished.
 
 ### User _(planned)_
 

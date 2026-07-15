@@ -18,11 +18,13 @@ WORKDIR /app
 # Copy the workspace manifests first for better layer caching.
 COPY pnpm-workspace.yaml package.json pnpm-lock.yaml* ./
 COPY apps/api/package.json apps/api/package.json
+COPY packages/types/package.json packages/types/package.json
 
 # Install only the API workspace and its dependencies.
 RUN pnpm install --filter @divine/api...
 
-# Copy the API source and build it (prisma generate runs inside build).
+# Copy sources and build (prisma generate runs inside build).
+COPY packages/types packages/types
 COPY apps/api apps/api
 WORKDIR /app/apps/api
 RUN pnpm build

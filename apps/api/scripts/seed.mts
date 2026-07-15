@@ -11,6 +11,7 @@
  *   or: pnpm --filter @divine/api exec prisma db seed
  */
 import { PrismaClient } from "@prisma/client";
+import * as bcrypt from "bcryptjs";
 
 const prisma = new PrismaClient();
 
@@ -189,13 +190,88 @@ async function seedEmotions(): Promise<void> {
   console.log(`[seed] emotions: ${emotions.length} upserted`);
 }
 
+async function seedAdminUser(): Promise<void> {
+  const email = "admin@divine.local";
+  const passwordHash = await bcrypt.hash("DivineAdmin123!", 12);
+
+  const user = await prisma.user.upsert({
+    where: { email },
+    create: {
+      email,
+      displayName: "Divine Admin",
+      roles: ["super-admin"],
+      status: "active",
+      preferredLanguage: "en",
+      timeZone: "UTC",
+      emailVerifiedAt: new Date(),
+    },
+    update: {
+      displayName: "Divine Admin",
+      roles: ["super-admin"],
+      status: "active",
+    },
+  });
+
+  await prisma.authIdentity.upsert({
+    where: {
+      provider_providerSubject: { provider: "password", providerSubject: email },
+    },
+    create: {
+      userId: user.id,
+      provider: "password",
+      providerSubject: email,
+      passwordHash,
+    },
+    update: { passwordHash },
+  });
+
+  console.log(`[seed] admin user: ${email} (password: DivineAdmin123!)`);
+}
+
+async function seedDemoScripture(): Promise<void> {
+  const work = await prisma.work.findUnique({ where: { code: "bg" } });
+  await prisma.scripture.upsert({
+    where: { slug: "bhagavad-gita" },
+    create: {
+      workId: work?.id,
+      name: "Bhagavad Gita",
+      slug: "bhagavad-gita",
+      shortName: "Gita",
+      description:
+        "The Song of the Lord — 700 verses across 18 chapters of the Mahabharata.",
+      religion: "Hinduism",
+      originalLanguage: "sa",
+      author: "Vyasa",
+      structureLevels: ["Chapter", "Verse"],
+      status: work?.isPublished ? "published" : "draft",
+      isPublished: work?.isPublished ?? false,
+      visibility: work?.isPublished ? "public" : "private",
+      defaultLanguage: "en",
+      readingDirection: "ltr",
+      sortOrder: 10,
+    },
+    update: {
+      workId: work?.id,
+      name: "Bhagavad Gita",
+      description:
+        "The Song of the Lord — 700 verses across 18 chapters of the Mahabharata.",
+      religion: "Hinduism",
+      originalLanguage: "sa",
+      structureLevels: ["Chapter", "Verse"],
+    },
+  });
+  console.log("[seed] scriptures: bhagavad-gita upserted (linked to work bg when present)");
+}
+
 async function main(): Promise<void> {
-  console.log("[seed] starting P0 catalog seed…");
+  console.log("[seed] starting catalog + auth seed…");
   await seedLanguages();
   await seedWorks();
   await seedTranslationSources();
   await seedTopics();
   await seedEmotions();
+  await seedAdminUser();
+  await seedDemoScripture();
   console.log("[seed] done.");
 }
 

@@ -14,7 +14,9 @@
     "lint": "pnpm -r lint",
     "typecheck": "pnpm -r typecheck",
     "format": "prettier --write .",
-    "format:check": "prettier --check ."
+    "format:check": "prettier --check .",
+    "content:import": "pnpm --filter @divine/content-import load",
+    "content:import:dry": "pnpm --filter @divine/content-import load -- --dry-run"
   },
   "devDependencies": {
     "prettier": "^3.4.2",
