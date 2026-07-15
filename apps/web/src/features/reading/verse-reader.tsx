@@ -199,7 +199,8 @@ export function VerseReader({
                 </p>
               ) : (
                 <p className="text-muted-foreground text-sm">
-                  No {language} translation for this verse yet.
+                  No {language === "sa" ? "Sanskrit text" : "translation"} for this
+                  verse yet.
                 </p>
               )}
             </div>

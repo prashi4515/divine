@@ -34,6 +34,30 @@ const languages = [
     nativeName: "తెలుగు",
     sortOrder: 30,
   },
+  {
+    code: "kn",
+    name: "Kannada",
+    nativeName: "ಕನ್ನಡ",
+    sortOrder: 40,
+  },
+  {
+    code: "ta",
+    name: "Tamil",
+    nativeName: "தமிழ்",
+    sortOrder: 50,
+  },
+  {
+    code: "ml",
+    name: "Malayalam",
+    nativeName: "മലയാളം",
+    sortOrder: 60,
+  },
+  {
+    code: "or",
+    name: "Odia",
+    nativeName: "ଓଡ଼ିଆ",
+    sortOrder: 70,
+  },
 ] as const;
 
 const works = [

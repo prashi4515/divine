@@ -12,6 +12,7 @@
     "verify:db": "node --env-file=.env scripts/verify-db.mts",
     "prisma:seed": "node --env-file=.env scripts/seed.mts",
     "cms:sync": "node --env-file=.env scripts/sync-cms-from-works.mts",
+    "indic:import": "node --env-file=.env scripts/import-indic-translations.mts",
     "build": "prisma generate && nest build",
     "start": "node dist/main.js",
     "start:dev": "nest start --watch",
@@ -23,6 +24,7 @@
   },
   "dependencies": {
     "@divine/types": "workspace:*",
+    "@indic-transliteration/sanscript": "^1.3.3",
     "@nestjs/common": "^11.0.1",
     "@nestjs/config": "^4.0.0",
     "@nestjs/core": "^11.0.1",

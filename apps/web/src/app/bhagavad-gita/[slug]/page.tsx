@@ -52,22 +52,28 @@ export async function generateMetadata({
   }
 }
 
-const READER_LANGUAGES = [
-  { code: "en", name: "English", nativeName: "English" },
-  { code: "sa", name: "Sanskrit", nativeName: "संस्कृतम्" },
-  { code: "hi", name: "Hindi", nativeName: "हिन्दी" },
-  { code: "te", name: "Telugu", nativeName: "తెలుగు" },
-] as const;
+const LANGUAGE_ORDER = ["en", "sa", "hi", "te", "kn", "ta", "ml", "or"] as const;
+
+function orderLanguages(
+  languages: Array<{ code: string; name: string; nativeName: string | null }>,
+) {
+  const byCode = new Map(languages.map((l) => [l.code, l]));
+  const ordered = LANGUAGE_ORDER.map((code) => byCode.get(code)).filter(
+    (l): l is { code: string; name: string; nativeName: string | null } => Boolean(l),
+  );
+  for (const lang of languages) {
+    if (!LANGUAGE_ORDER.includes(lang.code as (typeof LANGUAGE_ORDER)[number])) {
+      ordered.push(lang);
+    }
+  }
+  return ordered;
+}
 
 async function ChapterContent({ number }: { number: number }) {
   try {
     const chapter = await getPublishedChapter(`bg.${number}`);
     const { verses, languages } = await getPublishedVerses(chapter.publicId);
-
-    const languageMap = new Map(languages.map((l) => [l.code, l]));
-    const mergedLanguages = READER_LANGUAGES.map(
-      (base) => languageMap.get(base.code) ?? base,
-    );
+    const readerLanguages = orderLanguages(languages);
 
     return (
       <>
@@ -84,7 +90,7 @@ async function ChapterContent({ number }: { number: number }) {
           <VerseReader
             chapterNumber={chapter.number}
             verses={verses}
-            languages={mergedLanguages}
+            languages={readerLanguages}
             initialLanguage="en"
           />
           <ChapterNavigation
