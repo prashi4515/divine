@@ -63,7 +63,12 @@ pnpm --filter @divine/api start:dev  # api on :8080
 
 ## 8. Web Deployment (Vercel)
 
-- Merge to `main` → production; PRs → preview deployments.
+- Merge to `develop`/`main` → production; PRs → preview deployments.
+- **Root Directory:** `apps/web`
+- **Framework Preset:** Next.js (required — do **not** leave as Other)
+- **Output Directory:** leave **empty** (Next.js uses `.next`; setting `public` causes the build to fail after success)
+- `apps/web/vercel.json` sets framework + pnpm install/build for the monorepo
+- Env: `DIVINE_API_URL`, `NEXT_PUBLIC_DIVINE_API_URL`, `NEXT_PUBLIC_DIVINE_ADMIN_AUTH_ENABLED`
 - _TODO — preview DB strategy (Neon branching)._
 
 ## 9. API Deployment (Render)
