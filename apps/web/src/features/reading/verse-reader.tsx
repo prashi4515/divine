@@ -2,6 +2,7 @@
 
 import * as React from "react";
 import type { Verse } from "@divine/types";
+import { versesListResponseSchema } from "@divine/types";
 import {
   Bookmark,
   ChevronLeft,
@@ -19,6 +20,7 @@ import {
   shlokaInLanguage,
 } from "@/lib/reading/shloka-script";
 import { useReadingStore } from "@/lib/stores/reading-store";
+import { getPublicApiBaseUrl } from "@/lib/api/http";
 
 type LanguageOption = {
   code: string;
@@ -28,6 +30,8 @@ type LanguageOption = {
 
 type VerseReaderProps = {
   chapterNumber: number;
+  /** When set, commentaries and word-meanings load in the background after first paint. */
+  chapterPublicId?: string;
   verses: Verse[];
   languages: LanguageOption[];
   initialLanguage?: string;
@@ -114,17 +118,45 @@ function resolveLanguage(
  */
 export function VerseReader({
   chapterNumber,
-  verses,
+  chapterPublicId,
+  verses: initialVerses,
   languages,
   initialLanguage = "en",
 }: VerseReaderProps) {
   const t = useMessages();
   const preferredLanguage = useReadingStore((s) => s.preferredLanguage);
+  const [verses, setVerses] = React.useState(initialVerses);
   const [mounted, setMounted] = React.useState(false);
   const [index, setIndex] = React.useState(0);
   const [bookmark, setBookmark] = React.useState(false);
   const [copied, setCopied] = React.useState(false);
   const articleRef = React.useRef<HTMLElement>(null);
+
+  React.useEffect(() => {
+    setVerses(initialVerses);
+  }, [initialVerses]);
+
+  React.useEffect(() => {
+    if (!chapterPublicId) return;
+    let cancelled = false;
+    const url = `${getPublicApiBaseUrl()}/v1/verses?chapterPublicId=${encodeURIComponent(chapterPublicId)}&include=full`;
+    void fetch(url, { headers: { Accept: "application/json" } })
+      .then((response) => {
+        if (!response.ok) return null;
+        return response.json() as Promise<unknown>;
+      })
+      .then((json) => {
+        if (cancelled || json == null) return;
+        const parsed = versesListResponseSchema.parse(json);
+        setVerses(parsed.data);
+      })
+      .catch(() => {
+        /* keep fast reader payload */
+      });
+    return () => {
+      cancelled = true;
+    };
+  }, [chapterPublicId]);
 
   React.useEffect(() => setMounted(true), []);
 

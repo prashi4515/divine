@@ -1,19 +1,30 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { ApiError } from "@/lib/api/client";
-import { getPublishedChapter } from "@/lib/api/chapters";
-import { getPublishedVerses } from "@/lib/api/verses";
+import {
+  getPublishedChapterCached,
+  getPublishedVersesCached,
+} from "@/lib/api/cached-content";
 import { ChapterHero } from "@/features/reading/chapter-hero";
 import { ChapterNavigation } from "@/features/reading/chapter-navigation";
 import { ChapterReaderHeader } from "@/features/reading/chapter-reader-header";
-import { chapterTitleDisplay } from "@/features/reading/chapter-reading";
 import { VerseReader } from "@/features/reading/verse-reader";
 import { ReadingError } from "@/features/reading/reading-error";
 import { SiteFooter } from "@/features/reading/site-footer";
+import { gitaChapterTitle } from "@/lib/i18n/gita-chapters";
 
 type ChapterPageProps = {
   params: Promise<{ slug: string }>;
 };
+
+/** Pre-render all 18 Gita chapters at build time (ISR refreshes daily). */
+export const revalidate = 86_400;
+
+export function generateStaticParams() {
+  return Array.from({ length: 18 }, (_, index) => ({
+    slug: `chapter-${index + 1}`,
+  }));
+}
 
 const CHAPTER_SLUG = /^chapter-(\d+)$/;
 
@@ -32,22 +43,14 @@ export async function generateMetadata({
   const n = parseChapterNumber(slug);
   if (n === null) return { title: "Chapter" };
 
-  try {
-    const chapter = await getPublishedChapter(`bg.${n}`);
-    const title = chapterTitleDisplay(chapter.number, chapter.title);
-    return {
-      title: `Chapter ${chapter.number} — ${title}`,
-      description: `Read Chapter ${chapter.number} of the Bhagavad Gita — ${title}. A calm, typography-first reading experience.`,
-      alternates: {
-        canonical: `/bhagavad-gita/chapter-${chapter.number}`,
-      },
-    };
-  } catch {
-    return {
-      title: `Chapter ${n}`,
-      description: `Bhagavad Gita chapter ${n}.`,
-    };
-  }
+  const title = gitaChapterTitle("en", n);
+  return {
+    title: `Chapter ${n} — ${title}`,
+    description: `Read Chapter ${n} of the Bhagavad Gita — ${title}. A calm, typography-first reading experience.`,
+    alternates: {
+      canonical: `/bhagavad-gita/chapter-${n}`,
+    },
+  };
 }
 
 const LANGUAGE_ORDER = ["en", "sa", "hi", "te", "kn", "ta", "ml", "or"] as const;
@@ -69,8 +72,11 @@ function orderLanguages(
 
 async function ChapterContent({ number }: { number: number }) {
   try {
-    const chapter = await getPublishedChapter(`bg.${number}`);
-    const { verses, languages } = await getPublishedVerses(chapter.publicId);
+    const chapterPublicId = `bg.${number}`;
+    const [chapter, { verses, languages }] = await Promise.all([
+      getPublishedChapterCached(chapterPublicId),
+      getPublishedVersesCached(chapterPublicId, "reader"),
+    ]);
     const readerLanguages = orderLanguages(languages);
 
     return (
@@ -86,6 +92,7 @@ async function ChapterContent({ number }: { number: number }) {
         <div className="mt-10 w-full space-y-10 md:mt-12 md:space-y-12">
           <VerseReader
             chapterNumber={chapter.number}
+            chapterPublicId={chapter.publicId}
             verses={verses}
             languages={readerLanguages}
             initialLanguage="en"

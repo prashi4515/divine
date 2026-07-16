@@ -38,6 +38,7 @@ export function ChapterCard({ chapter, basePath }: ChapterCardProps) {
     <li>
       <Link
         href={href}
+        prefetch={true}
         className={cn(
           "group border-border bg-card relative flex h-full flex-col rounded-xl border p-4 shadow-xs sm:p-5",
           "transition-divine hover:-translate-y-0.5 hover:border-foreground/15 hover:shadow-md",

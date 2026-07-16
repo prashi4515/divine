@@ -17,25 +17,110 @@ type VerseWithRelations = Prisma.VerseGetPayload<{
   include: {
     chapter: { include: { work: true } };
     translations: {
-      include: { language: true, translationSource: true };
+      include: { language: true; translationSource: true };
     };
   };
 }>;
 
+export type VerseIncludeMode = "full" | "reader";
+
+const EXTRA_TRANSLATION_SOURCES = new Set([
+  "ramsukhdas-vyakhya",
+  "ramsukhdas-vyakhya-kn",
+  "ramsukhdas-vyakhya-ta",
+  "ramsukhdas-vyakhya-ml",
+  "ramsukhdas-vyakhya-or",
+  "holy-bg-telugu-vyakhya",
+  "holy-bg-telugu-w2w",
+]);
+
+type PublishedChapterCacheEntry = {
+  expiresAt: number;
+  data: VerseResponseDto[];
+  languages: Array<{ code: string; name: string; nativeName: string | null }>;
+};
+
 @Injectable()
 export class VersesService {
   private readonly logger = new Logger(VersesService.name);
+  private readonly publishedChapterCache = new Map<string, PublishedChapterCacheEntry>();
+  private readonly cacheTtlMs =
+    process.env.NODE_ENV === "production" ? 300_000 : 60_000;
+  private catalogLanguagesCache:
+    | Array<{ code: string; name: string; nativeName: string | null }>
+    | null = null;
+  private catalogLanguagesExpiresAt = 0;
 
   constructor(private readonly prisma: PrismaService) {}
 
+  private cacheKey(chapterPublicId: string, include: VerseIncludeMode): string {
+    return `${chapterPublicId}:${include}`;
+  }
+
+  private clearPublishedChapterCache(chapterPublicId?: string): void {
+    if (!chapterPublicId) {
+      this.publishedChapterCache.clear();
+      return;
+    }
+    for (const key of this.publishedChapterCache.keys()) {
+      if (key.startsWith(`${chapterPublicId}:`)) {
+        this.publishedChapterCache.delete(key);
+      }
+    }
+  }
+
+  private applyIncludeMode(
+    dto: VerseResponseDto,
+    include: VerseIncludeMode,
+  ): VerseResponseDto {
+    if (include === "full") return dto;
+    return {
+      ...dto,
+      meaning: null,
+      commentary: null,
+      translations: dto.translations.filter(
+        (t) => !EXTRA_TRANSLATION_SOURCES.has(t.sourceKey),
+      ),
+    };
+  }
+
+  private async getCatalogLanguages(): Promise<
+    Array<{ code: string; name: string; nativeName: string | null }>
+  > {
+    const now = Date.now();
+    if (this.catalogLanguagesCache && now < this.catalogLanguagesExpiresAt) {
+      return this.catalogLanguagesCache;
+    }
+    const rows = await this.prisma.language.findMany({
+      where: { isPublished: true },
+      orderBy: { sortOrder: "asc" },
+    });
+    this.catalogLanguagesCache = rows.map((lang) => ({
+      code: lang.code,
+      name: lang.name,
+      nativeName: lang.nativeName,
+    }));
+    this.catalogLanguagesExpiresAt = now + this.cacheTtlMs;
+    return this.catalogLanguagesCache;
+  }
+
   async listByChapterPublicId(
     chapterPublicId: string,
-    opts: { publishedOnly: boolean },
+    opts: { publishedOnly: boolean; include?: VerseIncludeMode },
   ): Promise<{ data: VerseResponseDto[]; languages: Array<{
     code: string;
     name: string;
     nativeName: string | null;
   }> }> {
+    const include = opts.include ?? "reader";
+    if (opts.publishedOnly) {
+      const cached = this.publishedChapterCache.get(
+        this.cacheKey(chapterPublicId, include),
+      );
+      if (cached && Date.now() < cached.expiresAt) {
+        return { data: cached.data, languages: cached.languages };
+      }
+    }
     const chapter = await this.prisma.chapter.findFirst({
       where: {
         publicId: chapterPublicId,
@@ -55,7 +140,18 @@ export class VersesService {
       include: {
         chapter: { include: { work: true } },
         translations: {
-          where: opts.publishedOnly ? { isPublished: true } : undefined,
+          where: opts.publishedOnly
+            ? {
+                isPublished: true,
+                ...(include === "reader"
+                  ? {
+                      translationSource: {
+                        key: { notIn: [...EXTRA_TRANSLATION_SOURCES] },
+                      },
+                    }
+                  : {}),
+              }
+            : undefined,
           include: { language: true, translationSource: true },
           orderBy: [{ language: { sortOrder: "asc" } }],
         },
@@ -76,10 +172,7 @@ export class VersesService {
     }
 
     // Always expose catalog languages that exist for this work's translations
-    const catalog = await this.prisma.language.findMany({
-      where: { isPublished: true },
-      orderBy: { sortOrder: "asc" },
-    });
+    const catalog = await this.getCatalogLanguages();
     for (const lang of catalog) {
       if (!languageMap.has(lang.code)) {
         // include only if at least one translation exists in this chapter
@@ -96,10 +189,20 @@ export class VersesService {
       }
     }
 
-    return {
-      data: rows.map((row) => this.toDto(row)),
-      languages: Array.from(languageMap.values()),
-    };
+    const data = rows.map((row) =>
+      this.applyIncludeMode(this.toDto(row), include),
+    );
+    const languages = Array.from(languageMap.values());
+
+    if (opts.publishedOnly) {
+      this.publishedChapterCache.set(this.cacheKey(chapterPublicId, include), {
+        expiresAt: Date.now() + this.cacheTtlMs,
+        data,
+        languages,
+      });
+    }
+
+    return { data, languages };
   }
 
   async findPublishedByPublicId(publicId: string): Promise<VerseResponseDto> {
@@ -213,6 +316,7 @@ export class VersesService {
       });
 
       await this.syncChapterVerseCount(existing.chapterId);
+      this.clearPublishedChapterCache(existing.chapter.publicId);
       return this.getById(id);
     } catch (error: unknown) {
       this.logger.error(
@@ -256,8 +360,13 @@ export class VersesService {
 
     const updated = await this.prisma.translation.findUniqueOrThrow({
       where: { id: translationId },
-      include: { language: true, translationSource: true },
+      include: {
+        language: true,
+        translationSource: true,
+        verse: { include: { chapter: true } },
+      },
     });
+    this.clearPublishedChapterCache(updated.verse.chapter.publicId);
     return this.toTranslationDto(updated);
   }
 

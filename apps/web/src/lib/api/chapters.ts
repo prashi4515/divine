@@ -12,7 +12,7 @@ export async function getPublishedChapters(): Promise<Chapter[]> {
   const result = await apiFetch(
     {
       path: "/v1/chapters",
-      next: { revalidate: 60 },
+      next: { revalidate: 86_400 },
     },
     (json) => chaptersListResponseSchema.parse(json),
   );
@@ -27,7 +27,7 @@ export async function getPublishedChapter(publicId: string): Promise<Chapter> {
   const result = await apiFetch(
     {
       path: `/v1/chapters/${encoded}`,
-      next: { revalidate: 60 },
+      next: { revalidate: 86_400 },
     },
     (json) => chapterDetailResponseSchema.parse(json),
   );

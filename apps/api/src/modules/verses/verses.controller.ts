@@ -2,6 +2,7 @@ import {
   Body,
   Controller,
   Get,
+  Header,
   Param,
   ParseUUIDPipe,
   Patch,
@@ -24,7 +25,7 @@ import {
   VerseResponseDto,
   VerseTranslationDto,
 } from "./verses.dto";
-import { VersesService } from "./verses.service";
+import { VersesService, type VerseIncludeMode } from "./verses.service";
 
 @ApiTags("verses")
 @Controller("verses")
@@ -32,9 +33,14 @@ export class VersesController {
   constructor(private readonly versesService: VersesService) {}
 
   @Get()
+  @Header(
+    "Cache-Control",
+    "public, max-age=60, s-maxage=3600, stale-while-revalidate=86400",
+  )
   @ApiOperation({ summary: "List verses for a chapter (published)" })
   async list(
     @Query("chapterPublicId") chapterPublicId: string,
+    @Query("include") include: VerseIncludeMode = "reader",
   ): Promise<{
     data: VerseResponseDto[];
     meta: {
@@ -43,6 +49,7 @@ export class VersesController {
   }> {
     const result = await this.versesService.listByChapterPublicId(chapterPublicId, {
       publishedOnly: true,
+      include,
     });
     return { data: result.data, meta: { languages: result.languages } };
   }
