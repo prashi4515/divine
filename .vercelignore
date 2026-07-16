@@ -1,0 +1,10 @@
+# Exclude packages not needed for the Next.js web build (smaller upload, faster installs).
+apps/api
+tooling
+docs
+.cursor
+playwright-report
+test-results
+coverage
+**/*.md
+!apps/web/**/*.md
