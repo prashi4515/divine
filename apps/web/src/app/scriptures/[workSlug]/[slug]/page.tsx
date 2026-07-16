@@ -66,7 +66,7 @@ async function ChapterContent({
     const [chapter, allChapters, { verses, languages }] = await Promise.all([
       getPublishedChapter(chapterPublicId),
       getPublishedChapters(),
-      getPublishedVerses(chapterPublicId, "reader"),
+      getPublishedVerses(chapterPublicId, "full"),
     ]);
     const workChapters = allChapters.filter((c) => c.work.code === work.code);
     const totalChapters = workChapters.length;
@@ -85,7 +85,6 @@ async function ChapterContent({
         <div className="mt-10 w-full space-y-10 md:mt-12 md:space-y-12">
           <VerseReader
             chapterNumber={chapter.number}
-            chapterPublicId={chapter.publicId}
             verses={verses}
             languages={languages.length > 0 ? languages : [
               { code: "en", name: "English", nativeName: "English" },

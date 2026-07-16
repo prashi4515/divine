@@ -75,7 +75,7 @@ async function ChapterContent({ number }: { number: number }) {
     const chapterPublicId = `bg.${number}`;
     const [chapter, { verses, languages }] = await Promise.all([
       getPublishedChapterCached(chapterPublicId),
-      getPublishedVersesCached(chapterPublicId, "reader"),
+      getPublishedVersesCached(chapterPublicId, "full"),
     ]);
     const readerLanguages = orderLanguages(languages);
 
@@ -92,7 +92,6 @@ async function ChapterContent({ number }: { number: number }) {
         <div className="mt-10 w-full space-y-10 md:mt-12 md:space-y-12">
           <VerseReader
             chapterNumber={chapter.number}
-            chapterPublicId={chapter.publicId}
             verses={verses}
             languages={readerLanguages}
             initialLanguage="en"
