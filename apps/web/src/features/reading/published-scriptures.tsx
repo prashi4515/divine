@@ -1,6 +1,13 @@
+"use client";
+
 import Link from "next/link";
 import type { Work } from "@divine/types";
 import { ArrowRight } from "lucide-react";
+import {
+  localizeWorkDescription,
+  localizeWorkTitle,
+  useMessages,
+} from "@/lib/i18n/use-messages";
 import { publicWorkPath } from "@/lib/reading/work-paths";
 
 type PublishedScripturesProps = {
@@ -11,6 +18,7 @@ type PublishedScripturesProps = {
  * Public catalog of every published work — CMS publish status drives this list.
  */
 export function PublishedScriptures({ works }: PublishedScripturesProps) {
+  const t = useMessages();
   if (works.length === 0) return null;
 
   return (
@@ -22,10 +30,10 @@ export function PublishedScriptures({ works }: PublishedScripturesProps) {
         id="published-scriptures-heading"
         className="font-serif text-2xl tracking-tight sm:text-3xl"
       >
-        Scriptures
+        {t.scriptures}
       </h2>
       <p className="text-muted-foreground mt-2 text-sm leading-relaxed">
-        Everything published in the library appears here.
+        {t.scripturesHint}
       </p>
       <ul className="mt-8 divide-y divide-border border-y border-border">
         {works.map((work) => (
@@ -36,11 +44,11 @@ export function PublishedScriptures({ works }: PublishedScripturesProps) {
             >
               <div className="min-w-0">
                 <p className="font-serif text-xl tracking-tight group-hover:underline">
-                  {work.title}
+                  {localizeWorkTitle(t, work)}
                 </p>
-                {work.description ? (
+                {localizeWorkDescription(t, work) ? (
                   <p className="text-muted-foreground mt-1 line-clamp-2 text-sm leading-relaxed">
-                    {work.description}
+                    {localizeWorkDescription(t, work)}
                   </p>
                 ) : null}
               </div>

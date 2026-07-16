@@ -1,12 +1,10 @@
 import { Suspense } from "react";
-import Link from "next/link";
 import type { Metadata } from "next";
-import { ArrowRight } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
 import { ApiError } from "@/lib/api/client";
 import { getPublishedWorks } from "@/lib/api/works";
 import { FeaturedScripture, FeaturedScriptureEmpty } from "@/features/reading/featured-scripture";
+import { HomeHero } from "@/features/reading/home-hero";
 import { PublishedScriptures } from "@/features/reading/published-scriptures";
 import { ReadingError } from "@/features/reading/reading-error";
 import { SiteFooter } from "@/features/reading/site-footer";
@@ -62,32 +60,20 @@ async function CatalogSection() {
   }
 }
 
-async function HeroCta() {
+async function resolveCtaHref(): Promise<string> {
   try {
     const works = await getPublishedWorks();
     const featured = works.find((work) => work.code === "bg") ?? works[0];
-    if (!featured) return null;
-    return (
-      <Button asChild size="lg">
-        <Link href={publicWorkPath(featured)}>
-          Begin Reading
-          <ArrowRight className="h-4 w-4" aria-hidden />
-        </Link>
-      </Button>
-    );
+    if (featured) return publicWorkPath(featured);
   } catch {
-    return (
-      <Button asChild size="lg">
-        <Link href="/bhagavad-gita">
-          Begin Reading
-          <ArrowRight className="h-4 w-4" aria-hidden />
-        </Link>
-      </Button>
-    );
+    // fall through
   }
+  return "/bhagavad-gita";
 }
 
-export default function HomePage() {
+export default async function HomePage() {
+  const ctaHref = await resolveCtaHref();
+
   return (
     <div className="relative flex min-h-svh flex-col overflow-hidden">
       <div
@@ -105,26 +91,7 @@ export default function HomePage() {
       <SiteHeader />
 
       <main className="flex-1">
-        <section className="mx-auto flex w-full max-w-content flex-col items-center px-6 pb-6 pt-10 text-center md:pt-16">
-          <p className="font-serif text-6xl tracking-tight sm:text-7xl md:text-8xl">Divine</p>
-          <h1 className="text-muted-foreground mt-6 max-w-xl text-balance text-lg leading-relaxed sm:text-xl">
-            Read sacred texts with clarity, calm, and reverence.
-          </h1>
-          <div className="mt-10">
-            <Suspense
-              fallback={
-                <Button asChild size="lg">
-                  <Link href="/bhagavad-gita">
-                    Begin Reading
-                    <ArrowRight className="h-4 w-4" aria-hidden />
-                  </Link>
-                </Button>
-              }
-            >
-              <HeroCta />
-            </Suspense>
-          </div>
-        </section>
+        <HomeHero ctaHref={ctaHref} />
 
         <Suspense fallback={<FeaturedSkeleton />}>
           <CatalogSection />

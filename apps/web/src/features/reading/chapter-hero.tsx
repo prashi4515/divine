@@ -1,6 +1,5 @@
-import Link from "next/link";
-import { ArrowRight } from "lucide-react";
-import { Button } from "@/components/ui/button";
+"use client";
+
 import { Separator } from "@/components/ui/separator";
 import {
   chapterIntro,
@@ -8,44 +7,54 @@ import {
   displayVerseCount,
   estimateReadingMinutes,
 } from "@/features/reading/chapter-reading";
+import { useMessages } from "@/lib/i18n/use-messages";
 
 type ChapterHeroProps = {
   number: number;
   title: string | null;
   verseCount: number;
   workTitle: string;
-  chaptersHref?: string;
+  workCode?: string;
 };
 
 /**
- * Typography-led chapter opening — number, title, meta, intro, CTAs.
+ * Typography-led chapter opening — number, title, meta, intro.
  */
 export function ChapterHero({
   number,
   title,
   verseCount,
   workTitle,
-  chaptersHref = "/bhagavad-gita",
+  workCode,
 }: ChapterHeroProps) {
-  const displayTitle = chapterTitleDisplay(number, title);
+  const t = useMessages();
+  const displayTitle =
+    workCode === "bg"
+      ? t.chapterTitle(number, title)
+      : chapterTitleDisplay(number, title);
   const verses = displayVerseCount(number, verseCount);
   const minutes = estimateReadingMinutes(verses);
-  const intro = chapterIntro(number);
-  const verseLabel = verses === 1 ? "1 verse" : `${verses} verses`;
-  const readLabel = minutes === null ? "Reading time TBD" : `~${minutes} min read`;
+  const intro = workCode === "bg" ? t.chapterIntro(number) : chapterIntro(number);
+  const verseLabel =
+    verses === 1 ? `1 ${t.verseSingular}` : `${verses} ${t.verses}`;
+  const readLabel = minutes === null ? "—" : t.minutes(minutes);
+  const localizedWork =
+    workCode != null
+      ? (t.workTitles[workCode] ?? workTitle)
+      : workTitle;
 
   return (
-    <header className="animate-fade-up mx-auto max-w-2xl text-center">
-      <p className="text-muted-foreground font-serif text-4xl tracking-tight sm:text-5xl md:text-6xl">
-        Chapter {number}
+    <header className="animate-fade-up w-full text-center">
+      <p className="text-muted-foreground font-serif text-3xl tracking-tight sm:text-4xl md:text-5xl">
+        {t.chapterFallback(number)}
       </p>
 
-      <h1 className="mt-4 font-serif text-4xl tracking-tight sm:text-5xl md:text-[3.25rem]">
+      <h1 className="mt-2 font-serif text-3xl tracking-tight sm:text-4xl md:text-5xl">
         {displayTitle}
       </h1>
 
       <ul
-        className="text-muted-foreground mt-6 flex flex-wrap items-center justify-center gap-x-3 gap-y-1 text-sm"
+        className="text-muted-foreground mt-4 flex flex-wrap items-center justify-center gap-x-3 gap-y-1 text-sm"
         aria-label="Chapter details"
       >
         <li>{verseLabel}</li>
@@ -56,28 +65,16 @@ export function ChapterHero({
         <li aria-hidden className="text-border">
           ·
         </li>
-        <li>{workTitle}</li>
+        <li>{localizedWork}</li>
       </ul>
 
-      <div className="mx-auto mt-10 max-w-[12rem]">
+      <div className="mx-auto mt-6 max-w-[12rem]">
         <Separator className="bg-border/80" />
       </div>
 
-      <p className="text-muted-foreground mx-auto mt-10 max-w-xl text-pretty text-base leading-relaxed sm:text-lg">
+      <p className="text-muted-foreground mx-auto mt-6 max-w-4xl text-pretty text-base leading-relaxed sm:text-lg">
         {intro}
       </p>
-
-      <div className="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row sm:gap-4">
-        <Button asChild size="lg" className="min-w-[10.5rem]">
-          <a href="#reader-preview">
-            Begin Reading
-            <ArrowRight className="h-4 w-4" aria-hidden />
-          </a>
-        </Button>
-        <Button asChild variant="outline" size="lg" className="min-w-[10.5rem]">
-          <Link href={chaptersHref}>Back to Chapters</Link>
-        </Button>
-      </div>
     </header>
   );
 }

@@ -13,6 +13,8 @@
     "prisma:seed": "node --env-file=.env scripts/seed.mts",
     "cms:sync": "node --env-file=.env scripts/sync-cms-from-works.mts",
     "indic:import": "node --env-file=.env scripts/import-indic-translations.mts",
+    "commentary:import": "node --env-file=.env scripts/import-commentaries.mts",
+    "commentary:multilang": "node --env-file=.env scripts/import-multilang-commentaries.mts",
     "build": "prisma generate && nest build",
     "start": "node dist/main.js",
     "start:dev": "nest start --watch",

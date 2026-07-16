@@ -1,6 +1,9 @@
+"use client";
+
 import type { ReactNode } from "react";
 import { BookOpen, Clock, Sparkles } from "lucide-react";
 import { estimateReadingMinutes } from "@/features/reading/chapter-reading";
+import { useMessages } from "@/lib/i18n/use-messages";
 import { cn } from "@/lib/utils";
 
 type ChapterStatsProps = {
@@ -38,29 +41,30 @@ function StatCard({ label, value, icon }: StatCardProps) {
  * Three quiet metrics — verses from the API, estimated time, theme.
  */
 export function ChapterStats({ verseCount }: ChapterStatsProps) {
+  const t = useMessages();
   const minutes = estimateReadingMinutes(verseCount);
   const verseValue =
     verseCount === 1 ? "1" : verseCount > 0 ? String(verseCount) : "0";
-  const timeValue = minutes === null ? "Unknown" : `${minutes} min`;
+  const timeValue = minutes === null ? "—" : t.minutes(minutes);
 
   return (
     <section aria-labelledby="chapter-stats-heading" className="animate-fade-in">
       <h2 id="chapter-stats-heading" className="sr-only">
-        Chapter statistics
+        {t.verses}
       </h2>
       <div className="grid gap-4 sm:grid-cols-3">
         <StatCard
-          label="Verses"
+          label={t.verses}
           value={verseValue}
           icon={<BookOpen className="h-3.5 w-3.5" aria-hidden />}
         />
         <StatCard
-          label="Reading Time"
+          label={t.readingTime}
           value={timeValue}
           icon={<Clock className="h-3.5 w-3.5" aria-hidden />}
         />
         <StatCard
-          label="Theme"
+          label={t.theme}
           value="Yoga"
           icon={<Sparkles className="h-3.5 w-3.5" aria-hidden />}
         />

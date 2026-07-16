@@ -1,36 +1,47 @@
-import Link from "next/link";
+"use client";
+
+import { localizeWorkTitle, useMessages } from "@/lib/i18n/use-messages";
+import { LanguageSwitcher } from "@/features/reading/language-switcher";
 import { ThemeToggle } from "@/components/theme-toggle";
+import Link from "next/link";
 
 type SiteHeaderProps = {
-  /** Optional trailing nav label (e.g. "Chapters"). */
+  /** Optional work code for localized eyebrow (e.g. "bg"). */
+  workCode?: string;
+  /** Fallback eyebrow when workCode is absent. */
   eyebrow?: string;
 };
 
 /**
- * Public site chrome — brand wordmark + theme toggle.
- * Server Component; ThemeToggle is the only client island.
+ * Public site chrome — brand, translation language, theme toggle.
  */
-export function SiteHeader({ eyebrow }: SiteHeaderProps) {
+export function SiteHeader({ workCode, eyebrow }: SiteHeaderProps) {
+  const t = useMessages();
+  const label = workCode
+    ? localizeWorkTitle(t, { code: workCode, title: eyebrow ?? workCode })
+    : eyebrow;
+
   return (
-    <header className="relative z-10 mx-auto flex w-full max-w-content items-center justify-between px-6 py-6 md:py-8">
+    <header className="relative z-10 mx-auto flex w-full max-w-content items-center justify-between px-6 py-3 md:py-3.5">
       <Link
         href="/"
-        className="group flex items-center gap-2.5 rounded-md focus-visible:outline-none"
+        className="group flex items-center gap-2 rounded-md focus-visible:outline-none"
       >
         <span
-          className="border-border bg-background/80 flex h-9 w-9 items-center justify-center rounded-lg border shadow-xs transition-divine group-hover:shadow-sm"
+          className="border-border bg-background/80 flex h-7 w-7 items-center justify-center rounded-md border shadow-xs transition-divine group-hover:shadow-sm"
           aria-hidden
         >
-          <span className="font-serif text-base leading-none">ॐ</span>
+          <span className="font-serif text-sm leading-none">ॐ</span>
         </span>
-        <span className="font-serif text-2xl tracking-tight">Divine</span>
+        <span className="font-serif text-lg tracking-tight md:text-xl">Divine</span>
       </Link>
-      <div className="flex items-center gap-3">
-        {eyebrow ? (
-          <span className="text-muted-foreground hidden text-xs tracking-wide sm:inline">
-            {eyebrow}
+      <div className="flex items-center gap-2 sm:gap-2.5">
+        {label ? (
+          <span className="text-muted-foreground hidden text-xs tracking-wide md:inline">
+            {label}
           </span>
         ) : null}
+        <LanguageSwitcher />
         <ThemeToggle />
       </div>
     </header>

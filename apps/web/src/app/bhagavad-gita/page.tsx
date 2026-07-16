@@ -1,10 +1,10 @@
 import { Suspense } from "react";
-import Link from "next/link";
 import type { Metadata } from "next";
 import { ApiError } from "@/lib/api/client";
 import { getPublishedChapters } from "@/lib/api/chapters";
 import { ChapterGrid } from "@/features/reading/chapter-grid";
 import { ChapterGridSkeleton } from "@/features/reading/chapter-grid-skeleton";
+import { GitaIndexHeader } from "@/features/reading/gita-index-header";
 import { ReadingError } from "@/features/reading/reading-error";
 import { SiteFooter } from "@/features/reading/site-footer";
 import { SiteHeader } from "@/features/reading/site-header";
@@ -53,34 +53,12 @@ export default function BhagavadGitaPage() {
         }}
       />
 
-      <SiteHeader eyebrow="Bhagavad Gita" />
+      <SiteHeader workCode="bg" eyebrow="Bhagavad Gita" />
 
-      <main className="mx-auto w-full max-w-content flex-1 px-6 pb-24 pt-4 md:pt-8">
-        <nav aria-label="Breadcrumb" className="mb-10">
-          <ol className="text-muted-foreground flex flex-wrap items-center gap-2 text-sm">
-            <li>
-              <Link href="/" className="hover:text-foreground transition-divine">
-                Home
-              </Link>
-            </li>
-            <li aria-hidden>/</li>
-            <li className="text-foreground">Bhagavad Gita</li>
-          </ol>
-        </nav>
+      <main className="mx-auto w-full max-w-content flex-1 px-6 pb-16 pt-2 md:pb-20 md:pt-3">
+        <GitaIndexHeader />
 
-        <header className="mx-auto max-w-2xl text-center">
-          <p className="text-muted-foreground text-xs uppercase tracking-[0.2em]">
-            Scripture
-          </p>
-          <h1 className="mt-4 font-serif text-4xl tracking-tight sm:text-5xl md:text-6xl">
-            Bhagavad Gita
-          </h1>
-          <p className="text-muted-foreground mt-5 text-pretty text-base leading-relaxed sm:text-lg">
-            Eighteen chapters. Choose a chapter and begin — quietly, at your own pace.
-          </p>
-        </header>
-
-        <section className="mt-14 md:mt-20" aria-label="Chapters">
+        <section className="mt-8 md:mt-10" aria-label="Chapters">
           <Suspense fallback={<ChapterGridSkeleton />}>
             <ChaptersSection />
           </Suspense>

@@ -7,10 +7,8 @@ import { ChapterHero } from "@/features/reading/chapter-hero";
 import { ChapterNavigation } from "@/features/reading/chapter-navigation";
 import { ChapterReaderHeader } from "@/features/reading/chapter-reader-header";
 import { chapterTitleDisplay } from "@/features/reading/chapter-reading";
-import { ChapterStats } from "@/features/reading/chapter-stats";
 import { VerseReader } from "@/features/reading/verse-reader";
 import { ReadingError } from "@/features/reading/reading-error";
-import { ReadingProgress } from "@/features/reading/reading-progress";
 import { SiteFooter } from "@/features/reading/site-footer";
 
 type ChapterPageProps = {
@@ -82,11 +80,10 @@ async function ChapterContent({ number }: { number: number }) {
           title={chapter.title}
           verseCount={chapter.verseCount || verses.length}
           workTitle={chapter.work.title}
+          workCode={chapter.work.code}
         />
 
-        <div className="mx-auto mt-16 max-w-3xl space-y-12 md:mt-24 md:space-y-16">
-          <ChapterStats verseCount={chapter.verseCount || verses.length} />
-          <ReadingProgress percent={verses.length > 0 ? 1 : 0} />
+        <div className="mt-10 w-full space-y-10 md:mt-12 md:space-y-12">
           <VerseReader
             chapterNumber={chapter.number}
             verses={verses}
@@ -97,7 +94,16 @@ async function ChapterContent({ number }: { number: number }) {
             currentNumber={chapter.number}
             totalChapters={18}
             listHref="/bhagavad-gita"
-            chapterHref={(n) => `/bhagavad-gita/chapter-${n}`}
+            prevHref={
+              chapter.number > 1
+                ? `/bhagavad-gita/chapter-${chapter.number - 1}`
+                : null
+            }
+            nextHref={
+              chapter.number < 18
+                ? `/bhagavad-gita/chapter-${chapter.number + 1}`
+                : null
+            }
           />
         </div>
       </>
@@ -148,7 +154,7 @@ export default async function ChapterPage({ params }: ChapterPageProps) {
 
       <ChapterReaderHeader />
 
-      <main className="mx-auto w-full max-w-content flex-1 px-6 pb-24 pt-10 md:pt-16">
+      <main className="mx-auto w-full max-w-none flex-1 px-6 pb-16 pt-6 sm:px-8 md:pb-20 md:pt-8 lg:px-[1in]">
         <ChapterContent number={n} />
       </main>
 

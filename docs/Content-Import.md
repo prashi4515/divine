@@ -21,6 +21,8 @@ pnpm --filter @divine/content-import load -- --file ./fixtures/quran-fatiha.v1.j
 pnpm --filter @divine/content-import load -- --file ./fixtures/bible-genesis-1.v1.json
 pnpm --filter @divine/api cms:sync
 pnpm --filter @divine/api indic:import   # Telugu/Odia meanings + kn/ta/ml script forms
+pnpm --filter @divine/api commentary:import  # Sivananda EN + Ramsukhdas HI vyakhya
+pnpm --filter @divine/api commentary:multilang  # Telugu commentary + kn/ta/ml/or script forms
 ```
 
 Requires `DIVINE_DATABASE_URL` (loaded from `apps/api/.env` via the package script).
@@ -34,6 +36,15 @@ Requires `DIVINE_DATABASE_URL` (loaded from `apps/api/.env` via the package scri
 | `te` | Holy Bhagavad Gita Telugu meaning (Unlicense corpus) — 701 verses |
 | `or` | Community Odia meaning corpus — 591 verses (source numbering gaps) |
 | `kn` / `ta` / `ml` | Hindi Ramsukhdas meaning rendered in Kannada/Tamil/Malayalam script via Sanscript (interim until dedicated meaning texts are licensed) |
+
+### Commentaries
+
+Open corpora only — **ISKCON / BBT “Bhagavad Gita As It Is” cannot be imported** (copyrighted). Use licensed content via CMS if you obtain BBT permission.
+
+| Command | What it loads |
+| ------- | ------------- |
+| `commentary:import` | Sivananda EN word-meanings + commentary; Ramsukhdas Hindi vyakhya |
+| `commentary:multilang` | Telugu detailed commentary + word meanings (Unlicense HF corpus); Ramsukhdas vyakhya in kn/ta/ml/or scripts |
 
 The Gita reader only lists languages that actually have translations for the chapter (no empty Telugu stubs).
 

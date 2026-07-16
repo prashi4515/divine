@@ -14,7 +14,7 @@ export async function getPublishedVerses(chapterPublicId: string): Promise<{
   const result = await apiFetch(
     {
       path: `/v1/verses?chapterPublicId=${encodeURIComponent(chapterPublicId)}`,
-      next: { revalidate: 30 },
+      next: { revalidate: 0 },
     },
     (json) => versesListResponseSchema.parse(json),
   );
