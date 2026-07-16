@@ -33,6 +33,11 @@ RUN pnpm build
 WORKDIR /app
 RUN pnpm --filter @divine/api deploy --prod /app/deploy
 
+# `pnpm deploy` installs @prisma/client but does not run `prisma generate`.
+WORKDIR /app/deploy
+RUN cp -r /app/apps/api/prisma ./prisma \
+    && npx --yes prisma@6.19.3 generate --schema=./prisma/schema.prisma
+
 # ---- Stage 2: runner ----------------------------------------------------
 FROM node:20-alpine AS runner
 RUN apk add --no-cache openssl
