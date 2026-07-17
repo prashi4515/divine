@@ -1,4 +1,5 @@
 export { AutocompleteDropdown } from "./autocomplete-dropdown";
+export { HeaderSearch } from "./header-search";
 export { HighlightText } from "./highlight-text";
 export { MatchExplanation } from "./match-explanation";
 export { RecentSearches } from "./recent-searches";

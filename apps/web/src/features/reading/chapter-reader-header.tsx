@@ -5,6 +5,7 @@ import { ArrowLeft } from "lucide-react";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { AccountLink } from "@/features/reading/account-link";
 import { LanguageSwitcher } from "@/features/reading/language-switcher";
+import { HeaderSearch } from "@/features/search/header-search";
 import { localizeWorkTitle, useMessages } from "@/lib/i18n/use-messages";
 
 type ChapterReaderHeaderProps = {
@@ -15,7 +16,7 @@ type ChapterReaderHeaderProps = {
 };
 
 /**
- * Quiet reader chrome: back to scripture, language, theme toggle.
+ * Quiet reader chrome: back, global search, language, theme.
  */
 export function ChapterReaderHeader({
   backHref = "/bhagavad-gita",
@@ -26,21 +27,26 @@ export function ChapterReaderHeader({
   const label = localizeWorkTitle(t, { code: workCode, title: backLabel });
 
   return (
-    <header className="border-border/60 relative z-10 border-b">
-      <div className="mx-auto flex w-full max-w-none items-center justify-between gap-4 px-6 py-2.5 sm:px-8 md:py-3 lg:px-[1in]">
+    <header className="border-border/60 relative z-40 border-b">
+      <div className="mx-auto flex w-full max-w-none flex-wrap items-center gap-3 px-6 py-2.5 sm:px-8 md:flex-nowrap md:gap-4 md:py-3 lg:px-[1in]">
         <Link
           href={backHref}
-          className="text-muted-foreground hover:text-foreground group inline-flex min-h-9 items-center gap-2 rounded-md text-sm transition-divine focus-visible:outline-none"
+          className="text-muted-foreground hover:text-foreground group inline-flex min-h-9 shrink-0 items-center gap-2 rounded-md text-sm transition-divine focus-visible:outline-none"
         >
           <ArrowLeft
             className="h-4 w-4 transition-divine group-hover:-translate-x-0.5"
             aria-hidden
           />
-          <span>{label}</span>
+          <span className="hidden sm:inline">{label}</span>
+          <span className="sm:hidden">Back</span>
         </Link>
 
-        <div className="flex items-center gap-2 sm:gap-2.5">
-          <span className="text-muted-foreground hidden text-xs tracking-wide sm:inline">
+        <div className="order-3 w-full md:order-none md:min-w-0 md:flex-1">
+          <HeaderSearch />
+        </div>
+
+        <div className="ml-auto flex shrink-0 items-center gap-2 sm:gap-2.5">
+          <span className="text-muted-foreground hidden text-xs tracking-wide lg:inline">
             {t.reader}
           </span>
           <AccountLink />
