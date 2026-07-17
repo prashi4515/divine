@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { ApiError } from "@/lib/api/client";
@@ -12,6 +13,7 @@ import { VerseReader } from "@/features/reading/verse-reader";
 import { ReadingError } from "@/features/reading/reading-error";
 import { SiteFooter } from "@/features/reading/site-footer";
 import { gitaChapterTitle } from "@/lib/i18n/gita-chapters";
+import ChapterLoading from "./loading";
 
 type ChapterPageProps = {
   params: Promise<{ slug: string }>;
@@ -53,14 +55,15 @@ export async function generateMetadata({
   };
 }
 
-const LANGUAGE_ORDER = ["en", "sa", "hi", "te", "kn", "ta", "ml", "or"] as const;
+const LANGUAGE_ORDER = ["en", "sa", "hi", "te"] as const;
 
 function orderLanguages(
   languages: Array<{ code: string; name: string; nativeName: string | null }>,
 ) {
   const byCode = new Map(languages.map((l) => [l.code, l]));
   const ordered = LANGUAGE_ORDER.map((code) => byCode.get(code)).filter(
-    (l): l is { code: string; name: string; nativeName: string | null } => Boolean(l),
+    (l): l is { code: string; name: string; nativeName: string | null } =>
+      Boolean(l),
   );
   for (const lang of languages) {
     if (!LANGUAGE_ORDER.includes(lang.code as (typeof LANGUAGE_ORDER)[number])) {
@@ -75,7 +78,6 @@ async function ChapterContent({ number }: { number: number }) {
     const chapterPublicId = `bg.${number}`;
     const [chapter, { verses, languages }] = await Promise.all([
       getPublishedChapterCached(chapterPublicId),
-      // `reader` omits bulky commentary/word-meaning rows for faster first paint
       getPublishedVersesCached(chapterPublicId, "reader"),
     ]);
     const readerLanguages = orderLanguages(languages);
@@ -140,6 +142,7 @@ async function ChapterContent({ number }: { number: number }) {
 
 /**
  * Public chapter reading page — `/bhagavad-gita/chapter-{n}`.
+ * Shell (header/footer) streams immediately; verse payload loads in Suspense.
  */
 export default async function ChapterPage({ params }: ChapterPageProps) {
   const { slug } = await params;
@@ -162,7 +165,9 @@ export default async function ChapterPage({ params }: ChapterPageProps) {
       <ChapterReaderHeader />
 
       <main className="mx-auto w-full max-w-none flex-1 px-6 pb-16 pt-6 sm:px-8 md:pb-20 md:pt-8 lg:px-[1in]">
-        <ChapterContent number={n} />
+        <Suspense fallback={<ChapterLoading />}>
+          <ChapterContent number={n} />
+        </Suspense>
       </main>
 
       <SiteFooter />

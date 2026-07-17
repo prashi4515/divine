@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { ApiError } from "@/lib/api/client";
@@ -159,7 +160,22 @@ export default async function ScriptureChapterPage({ params }: ChapterPageProps)
       <ChapterReaderHeader backHref={publicWorkPath(work)} />
 
       <main className="mx-auto w-full max-w-none flex-1 px-6 pb-16 pt-6 sm:px-8 md:pb-20 md:pt-8 lg:px-[1in]">
-        <ChapterContent workSlug={workSlug} number={n} />
+        <Suspense
+          fallback={
+            <div className="animate-pulse space-y-8 pt-4">
+              <div className="mx-auto h-8 w-48 rounded-md bg-muted" />
+              <div className="border-border bg-card rounded-xl border p-8">
+                <div className="mx-auto h-4 w-20 rounded bg-muted" />
+                <div className="mt-8 space-y-3">
+                  <div className="h-6 rounded bg-muted" />
+                  <div className="h-6 w-5/6 rounded bg-muted" />
+                </div>
+              </div>
+            </div>
+          }
+        >
+          <ChapterContent workSlug={workSlug} number={n} />
+        </Suspense>
       </main>
 
       <SiteFooter />

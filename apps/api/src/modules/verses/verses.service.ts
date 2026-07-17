@@ -2,6 +2,7 @@ import {
   Injectable,
   Logger,
   NotFoundException,
+  OnModuleInit,
 } from "@nestjs/common";
 import type { Prisma } from "@prisma/client";
 import { PrismaService } from "../../prisma/prisma.service";
@@ -34,6 +35,9 @@ const EXTRA_TRANSLATION_SOURCES = new Set([
   "holy-bg-telugu-w2w",
 ]);
 
+/** Languages loaded for public reader first paint (keeps Neon payloads small). */
+const READER_LANGUAGE_CODES = ["en", "hi", "te"] as const;
+
 type PublishedChapterCacheEntry = {
   expiresAt: number;
   data: VerseResponseDto[];
@@ -41,17 +45,44 @@ type PublishedChapterCacheEntry = {
 };
 
 @Injectable()
-export class VersesService {
+export class VersesService implements OnModuleInit {
   private readonly logger = new Logger(VersesService.name);
   private readonly publishedChapterCache = new Map<string, PublishedChapterCacheEntry>();
   private readonly cacheTtlMs =
-    process.env.NODE_ENV === "production" ? 300_000 : 60_000;
+    process.env.NODE_ENV === "production" ? 600_000 : 120_000;
   private catalogLanguagesCache:
     | Array<{ code: string; name: string; nativeName: string | null }>
     | null = null;
   private catalogLanguagesExpiresAt = 0;
 
   constructor(private readonly prisma: PrismaService) {}
+
+  /**
+   * Warm reader caches for all Gita chapters after boot so the first
+   * visitor doesn't pay Neon cold-start + full chapter query latency.
+   */
+  onModuleInit(): void {
+    void this.prewarmGitaReaderCache();
+  }
+
+  private async prewarmGitaReaderCache(): Promise<void> {
+    const started = Date.now();
+    try {
+      for (let n = 1; n <= 18; n++) {
+        await this.listByChapterPublicId(`bg.${n}`, {
+          publishedOnly: true,
+          include: "reader",
+        });
+      }
+      this.logger.log(
+        `Prewarmed Gita reader cache (18 chapters) in ${Date.now() - started}ms`,
+      );
+    } catch (error: unknown) {
+      this.logger.warn(
+        `Gita reader prewarm skipped: ${error instanceof Error ? error.message : String(error)}`,
+      );
+    }
+  }
 
   private cacheKey(chapterPublicId: string, include: VerseIncludeMode): string {
     return `${chapterPublicId}:${include}`;
@@ -138,13 +169,13 @@ export class VersesService {
         ...(opts.publishedOnly ? { isPublished: true } : {}),
       },
       include: {
-        chapter: { include: { work: true } },
         translations: {
           where: opts.publishedOnly
             ? {
                 isPublished: true,
                 ...(include === "reader"
                   ? {
+                      language: { code: { in: [...READER_LANGUAGE_CODES] } },
                       translationSource: {
                         key: { notIn: [...EXTRA_TRANSLATION_SOURCES] },
                       },
@@ -159,8 +190,15 @@ export class VersesService {
       orderBy: [{ sortOrder: "asc" }, { number: "asc" }],
     });
 
-    const languageMap = new Map<string, { code: string; name: string; nativeName: string | null }>();
-    languageMap.set("sa", { code: "sa", name: "Sanskrit", nativeName: "संस्कृतम्" });
+    const languageMap = new Map<
+      string,
+      { code: string; name: string; nativeName: string | null }
+    >();
+    languageMap.set("sa", {
+      code: "sa",
+      name: "Sanskrit",
+      nativeName: "संस्कृतम्",
+    });
     for (const row of rows) {
       for (const t of row.translations) {
         languageMap.set(t.language.code, {
@@ -171,26 +209,48 @@ export class VersesService {
       }
     }
 
-    // Always expose catalog languages that exist for this work's translations
-    const catalog = await this.getCatalogLanguages();
-    for (const lang of catalog) {
-      if (!languageMap.has(lang.code)) {
-        // include only if at least one translation exists in this chapter
-        const has = rows.some((r) =>
-          r.translations.some((t) => t.language.code === lang.code),
-        );
-        if (has || lang.code === "sa") {
-          languageMap.set(lang.code, {
-            code: lang.code,
-            name: lang.name,
-            nativeName: lang.nativeName,
-          });
+    // Reader mode: skip scanning the full language catalog (extra round-trip).
+    if (include === "full") {
+      const catalog = await this.getCatalogLanguages();
+      for (const lang of catalog) {
+        if (!languageMap.has(lang.code)) {
+          const has = rows.some((r) =>
+            r.translations.some((t) => t.language.code === lang.code),
+          );
+          if (has || lang.code === "sa") {
+            languageMap.set(lang.code, {
+              code: lang.code,
+              name: lang.name,
+              nativeName: lang.nativeName,
+            });
+          }
         }
       }
     }
 
     const data = rows.map((row) =>
-      this.applyIncludeMode(this.toDto(row), include),
+      this.applyIncludeMode(
+        {
+          id: row.id,
+          publicId: row.publicId,
+          number: row.number,
+          sanskritText: row.sanskritText,
+          transliteration: row.transliteration,
+          meaning: row.meaning,
+          commentary: row.commentary,
+          seoTitle: row.seoTitle,
+          seoDescription: row.seoDescription,
+          sortOrder: row.sortOrder,
+          isPublished: row.isPublished,
+          chapterPublicId: chapter.publicId,
+          chapterNumber: chapter.number,
+          workCode: chapter.work.code,
+          translations: row.translations.map((t) => this.toTranslationDto(t)),
+          createdAt: row.createdAt.toISOString(),
+          updatedAt: row.updatedAt.toISOString(),
+        },
+        include,
+      ),
     );
     const languages = Array.from(languageMap.values());
 
