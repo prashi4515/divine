@@ -25,16 +25,6 @@ type VerseWithRelations = Prisma.VerseGetPayload<{
 
 export type VerseIncludeMode = "full" | "reader";
 
-const EXTRA_TRANSLATION_SOURCES = new Set([
-  "ramsukhdas-vyakhya",
-  "ramsukhdas-vyakhya-kn",
-  "ramsukhdas-vyakhya-ta",
-  "ramsukhdas-vyakhya-ml",
-  "ramsukhdas-vyakhya-or",
-  "holy-bg-telugu-vyakhya",
-  "holy-bg-telugu-w2w",
-]);
-
 /** Languages loaded for public reader first paint (keeps Neon payloads small). */
 const READER_LANGUAGE_CODES = ["en", "hi", "te"] as const;
 
@@ -85,7 +75,8 @@ export class VersesService implements OnModuleInit {
   }
 
   private cacheKey(chapterPublicId: string, include: VerseIncludeMode): string {
-    return `${chapterPublicId}:${include}`;
+    // v2: reader keeps commentary + vyakhya (invalidates older slim caches).
+    return `${chapterPublicId}:${include}:v2`;
   }
 
   private clearPublishedChapterCache(chapterPublicId?: string): void {
@@ -98,21 +89,6 @@ export class VersesService implements OnModuleInit {
         this.publishedChapterCache.delete(key);
       }
     }
-  }
-
-  private applyIncludeMode(
-    dto: VerseResponseDto,
-    include: VerseIncludeMode,
-  ): VerseResponseDto {
-    if (include === "full") return dto;
-    return {
-      ...dto,
-      meaning: null,
-      commentary: null,
-      translations: dto.translations.filter(
-        (t) => !EXTRA_TRANSLATION_SOURCES.has(t.sourceKey),
-      ),
-    };
   }
 
   private async getCatalogLanguages(): Promise<
@@ -175,10 +151,9 @@ export class VersesService implements OnModuleInit {
                 isPublished: true,
                 ...(include === "reader"
                   ? {
+                      // Limit languages; keep all source types (translation,
+                      // vyakhya/commentary, word-meanings) for those languages.
                       language: { code: { in: [...READER_LANGUAGE_CODES] } },
-                      translationSource: {
-                        key: { notIn: [...EXTRA_TRANSLATION_SOURCES] },
-                      },
                     }
                   : {}),
               }
@@ -228,30 +203,25 @@ export class VersesService implements OnModuleInit {
       }
     }
 
-    const data = rows.map((row) =>
-      this.applyIncludeMode(
-        {
-          id: row.id,
-          publicId: row.publicId,
-          number: row.number,
-          sanskritText: row.sanskritText,
-          transliteration: row.transliteration,
-          meaning: row.meaning,
-          commentary: row.commentary,
-          seoTitle: row.seoTitle,
-          seoDescription: row.seoDescription,
-          sortOrder: row.sortOrder,
-          isPublished: row.isPublished,
-          chapterPublicId: chapter.publicId,
-          chapterNumber: chapter.number,
-          workCode: chapter.work.code,
-          translations: row.translations.map((t) => this.toTranslationDto(t)),
-          createdAt: row.createdAt.toISOString(),
-          updatedAt: row.updatedAt.toISOString(),
-        },
-        include,
-      ),
-    );
+    const data = rows.map((row) => ({
+      id: row.id,
+      publicId: row.publicId,
+      number: row.number,
+      sanskritText: row.sanskritText,
+      transliteration: row.transliteration,
+      meaning: row.meaning,
+      commentary: row.commentary,
+      seoTitle: row.seoTitle,
+      seoDescription: row.seoDescription,
+      sortOrder: row.sortOrder,
+      isPublished: row.isPublished,
+      chapterPublicId: chapter.publicId,
+      chapterNumber: chapter.number,
+      workCode: chapter.work.code,
+      translations: row.translations.map((t) => this.toTranslationDto(t)),
+      createdAt: row.createdAt.toISOString(),
+      updatedAt: row.updatedAt.toISOString(),
+    }));
     const languages = Array.from(languageMap.values());
 
     if (opts.publishedOnly) {

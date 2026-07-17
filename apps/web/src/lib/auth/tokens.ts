@@ -63,3 +63,24 @@ export function clearTokens(): void {
   }
   document.cookie = `${SESSION_COOKIE}=; path=/; max-age=0; SameSite=Lax`;
 }
+
+/** Readable session presence cookie set by the API (non-httpOnly). */
+export function hasSessionCookie(): boolean {
+  if (!isBrowser()) return false;
+  return document.cookie
+    .split(";")
+    .some((part) => part.trim().startsWith(`${SESSION_COOKIE}=`));
+}
+
+/**
+ * True when the browser likely has an auth session.
+ * Used to skip refresh + /me on anonymous public page loads.
+ */
+export function hasAuthSessionHint(): boolean {
+  if (!isBrowser()) return false;
+  return (
+    hasSessionCookie() ||
+    Boolean(getAccessToken()) ||
+    Boolean(getRefreshToken())
+  );
+}

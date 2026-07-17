@@ -2,6 +2,7 @@
 
 import * as React from "react";
 import Link from "next/link";
+import { useSearchParams } from "next/navigation";
 import { Eye, EyeOff, Loader2 } from "lucide-react";
 import { useAuth } from "./auth-provider";
 import { AUTH_ROUTES } from "@/lib/auth/config";
@@ -12,6 +13,7 @@ import { Label } from "@/components/ui/label";
 
 export function LoginForm() {
   const { login } = useAuth();
+  const searchParams = useSearchParams();
   const [email, setEmail] = React.useState("");
   const [password, setPassword] = React.useState("");
   const [remember, setRemember] = React.useState(true);
@@ -24,7 +26,10 @@ export function LoginForm() {
     setPending(true);
     setError(null);
     try {
-      await login({ email, password, rememberMe: remember });
+      await login(
+        { email, password, rememberMe: remember },
+        { next: searchParams.get("next") },
+      );
     } catch (err: unknown) {
       setError(
         err instanceof ApiError && err.status === 0

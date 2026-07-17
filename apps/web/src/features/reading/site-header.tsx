@@ -1,11 +1,22 @@
-"use client";
-
-import { useMessages } from "@/lib/i18n/use-messages";
-import { AccountLink } from "@/features/reading/account-link";
-import { LanguageSwitcher } from "@/features/reading/language-switcher";
-import { HeaderSearch } from "@/features/search/header-search";
-import { ThemeToggle } from "@/components/theme-toggle";
+import dynamic from "next/dynamic";
 import Link from "next/link";
+import { AccountLink } from "@/features/reading/account-link";
+import { HeaderGitaLink } from "@/features/reading/header-gita-link";
+import { LanguageSwitcher } from "@/features/reading/language-switcher";
+import { ThemeToggle } from "@/components/theme-toggle";
+
+const HeaderSearch = dynamic(
+  () =>
+    import("@/features/search/header-search").then((m) => m.HeaderSearch),
+  {
+    loading: () => (
+      <span
+        className="inline-flex h-8 w-8 shrink-0"
+        aria-hidden
+      />
+    ),
+  },
+);
 
 type SiteHeaderProps = {
   workCode?: string;
@@ -14,10 +25,9 @@ type SiteHeaderProps = {
 
 /**
  * Public site chrome — brand left; search icon + actions right; hairline rule below.
+ * Server Component shell; interactive islands hydrate independently of auth.
  */
 export function SiteHeader(_props: SiteHeaderProps) {
-  const t = useMessages();
-
   return (
     <header className="border-border bg-background/90 sticky top-0 z-40 border-b backdrop-blur-sm">
       <div className="mx-auto flex w-full items-center justify-between gap-3 px-6 py-2.5 lg:px-[1in] lg:py-3">
@@ -37,12 +47,7 @@ export function SiteHeader(_props: SiteHeaderProps) {
         </Link>
 
         <div className="flex min-w-0 shrink-0 items-center gap-1 sm:gap-1.5">
-          <Link
-            href="/bhagavad-gita"
-            className="text-muted-foreground hover:text-foreground hidden px-2 text-xs tracking-wide transition-divine md:inline"
-          >
-            {t.gitaTitle}
-          </Link>
+          <HeaderGitaLink />
           <HeaderSearch />
           <AccountLink />
           <LanguageSwitcher />

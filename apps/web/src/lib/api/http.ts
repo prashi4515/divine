@@ -5,6 +5,7 @@ import {
   setTokens,
   clearTokens,
   isRemembered,
+  hasAuthSessionHint,
 } from "@/lib/auth/tokens";
 import { loginResponseSchema } from "@/lib/auth/types";
 
@@ -142,9 +143,13 @@ export async function http<T>(
     path !== "/v1/auth/refresh" &&
     path !== "/v1/auth/login"
   ) {
-    const ok = await refreshAccessToken();
-    if (ok) {
-      return http(path, parse, { ...options, skipRefresh: true });
+    if (!hasAuthSessionHint()) {
+      clearTokens();
+    } else {
+      const ok = await refreshAccessToken();
+      if (ok) {
+        return http(path, parse, { ...options, skipRefresh: true });
+      }
     }
   }
 

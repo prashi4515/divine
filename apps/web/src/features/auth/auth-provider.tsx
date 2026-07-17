@@ -1,10 +1,14 @@
 "use client";
 
 import * as React from "react";
-import { useRouter, useSearchParams } from "next/navigation";
-import { AUTH_ENABLED, AUTH_ROUTES } from "@/lib/auth/config";
-import { clearTokens, setTokens } from "@/lib/auth/tokens";
-import { authService } from "@/lib/api/services";
+import { useRouter } from "next/navigation";
+import { AUTH_ROUTES } from "@/lib/auth/config";
+import {
+  clearTokens,
+  hasAuthSessionHint,
+  setTokens,
+} from "@/lib/auth/tokens";
+import * as authService from "@/lib/api/services/auth";
 import type { AuthUser, LoginInput } from "@/lib/auth/types";
 import { useReadingStore } from "@/lib/stores/reading-store";
 import { isReadingLanguageCode } from "@/lib/reading/languages";
@@ -15,7 +19,10 @@ type AuthStatus = "loading" | "authenticated" | "unauthenticated";
 type AuthContextValue = {
   user: AuthUser | null;
   status: AuthStatus;
-  login: (input: LoginInput) => Promise<void>;
+  login: (
+    input: LoginInput,
+    options?: { next?: string | null },
+  ) => Promise<void>;
   logout: () => Promise<void>;
   refresh: () => Promise<void>;
   /** Apply tokens + user after register / external auth. */
@@ -29,11 +36,22 @@ type AuthContextValue = {
 
 const AuthContext = React.createContext<AuthContextValue | null>(null);
 
-export function AuthProvider({ children }: { children: React.ReactNode }) {
+type AuthProviderProps = {
+  children: React.ReactNode;
+  /** Server-read session cookie presence — never blocks first paint. */
+  hasSessionHint?: boolean;
+};
+
+export function AuthProvider({
+  children,
+  hasSessionHint = false,
+}: AuthProviderProps) {
   const router = useRouter();
-  const searchParams = useSearchParams();
+  // Public pages paint immediately; navbar hydrates after background /me.
   const [user, setUser] = React.useState<AuthUser | null>(null);
-  const [status, setStatus] = React.useState<AuthStatus>("loading");
+  const [status, setStatus] = React.useState<AuthStatus>(() =>
+    hasSessionHint ? "loading" : "unauthenticated",
+  );
   const setPreferredLanguage = useReadingStore((s) => s.setPreferredLanguage);
 
   const syncReadingPrefs = React.useCallback(
@@ -58,44 +76,26 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
 
   React.useEffect(() => {
     let active = true;
-    async function bootstrap() {
-      if (!AUTH_ENABLED) {
-        try {
-          const me = await authService.fetchMe();
-          if (active) {
-            setUser(me);
-            setStatus("authenticated");
-            void syncReadingPrefs(me);
-          }
-          return;
-        } catch {
-          if (active) {
-            setUser(null);
-            setStatus("unauthenticated");
-          }
-          return;
-        }
-      }
+
+    async function hydrateAuthenticated() {
       try {
         const me = await authService.fetchMe();
-        if (active) {
-          setUser(me);
-          setStatus("authenticated");
-          void syncReadingPrefs(me);
-        }
+        if (!active) return;
+        setUser(me);
+        setStatus("authenticated");
+        void syncReadingPrefs(me);
       } catch {
         try {
           const refreshed = await authService.refreshSession();
+          if (!active) return;
           setTokens(
             refreshed.data.accessToken,
             refreshed.data.refreshToken,
             true,
           );
-          if (active) {
-            setUser(refreshed.data.user);
-            setStatus("authenticated");
-            void syncReadingPrefs(refreshed.data.user);
-          }
+          setUser(refreshed.data.user);
+          setStatus("authenticated");
+          void syncReadingPrefs(refreshed.data.user);
         } catch {
           clearTokens();
           if (active) {
@@ -105,20 +105,37 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
         }
       }
     }
-    void bootstrap();
+
+    // Anonymous public traffic: never call /me or refresh.
+    if (!hasSessionHint && !hasAuthSessionHint()) {
+      setUser(null);
+      setStatus("unauthenticated");
+      return () => {
+        active = false;
+      };
+    }
+
+    // Session hint present: refresh + /me in the background; chrome stays interactive.
+    setStatus((prev) => (prev === "authenticated" ? prev : "loading"));
+    void hydrateAuthenticated();
+
     return () => {
       active = false;
     };
-  }, [syncReadingPrefs]);
+  }, [hasSessionHint, syncReadingPrefs]);
 
   const login = React.useCallback(
-    async (input: LoginInput) => {
+    async (input: LoginInput, options?: { next?: string | null }) => {
       const res = await authService.login(input);
-      setTokens(res.data.accessToken, res.data.refreshToken, input.rememberMe ?? false);
+      setTokens(
+        res.data.accessToken,
+        res.data.refreshToken,
+        input.rememberMe ?? false,
+      );
       setUser(res.data.user);
       setStatus("authenticated");
       void syncReadingPrefs(res.data.user);
-      const next = searchParams.get("next");
+      const next = options?.next;
       if (next && next.startsWith("/")) {
         router.push(next);
       } else if (asCmsRoles(res.data.user.roles).length > 0) {
@@ -128,7 +145,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       }
       router.refresh();
     },
-    [router, searchParams, syncReadingPrefs],
+    [router, syncReadingPrefs],
   );
 
   const logout = React.useCallback(async () => {
@@ -145,6 +162,11 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   }, [router]);
 
   const refresh = React.useCallback(async () => {
+    if (!hasAuthSessionHint()) {
+      setUser(null);
+      setStatus("unauthenticated");
+      return;
+    }
     const res = await authService.refreshSession();
     setTokens(res.data.accessToken, res.data.refreshToken, true);
     setUser(res.data.user);

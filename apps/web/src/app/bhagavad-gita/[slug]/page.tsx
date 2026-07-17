@@ -19,8 +19,8 @@ type ChapterPageProps = {
   params: Promise<{ slug: string }>;
 };
 
-/** Pre-render all 18 Gita chapters at build time (ISR refreshes daily). */
-export const revalidate = 86_400;
+/** Pre-render all 18 Gita chapters at build time (ISR refreshes hourly). */
+export const revalidate = 3_600;
 
 export function generateStaticParams() {
   return Array.from({ length: 18 }, (_, index) => ({

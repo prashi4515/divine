@@ -2,7 +2,7 @@
 
 import * as React from "react";
 import { useRouter } from "next/navigation";
-import { authService } from "@/lib/api/services";
+import * as authService from "@/lib/api/services/auth";
 import { ApiError } from "@/lib/api/client";
 import { useAuth } from "@/features/auth/auth-provider";
 import { SignupSuccessDialog } from "@/features/auth/signup-success-dialog";

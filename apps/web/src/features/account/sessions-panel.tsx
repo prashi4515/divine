@@ -2,7 +2,7 @@
 
 import * as React from "react";
 import Link from "next/link";
-import { authService } from "@/lib/api/services";
+import * as authService from "@/lib/api/services/auth";
 import type { DeviceSession } from "@/lib/auth/types";
 import { useAuth } from "@/features/auth/auth-provider";
 import { Button } from "@/components/ui/button";

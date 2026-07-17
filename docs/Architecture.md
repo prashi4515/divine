@@ -55,6 +55,8 @@ divine/
 - App Router, Server Components by default.
 - Locale-first routing (`/[locale]/...`) — _planned_.
 - Data fetched from the API over HTTP; no direct DB access.
+- Public pages never block on auth: no `/me` or refresh without a session cookie; navbar hydrates asynchronously. See [Client-Bundle-Auth](./Client-Bundle-Auth.md).
+- Admin chrome is scoped to `app/admin/layout.tsx` only.
 - _TODO — document feature-folder conventions._
 
 ## 7. Data Flow
@@ -87,4 +89,4 @@ divine/
 
 ## References
 
-- See [Roadmap](./Roadmap.md), [API](./API.md), [Database](./Database.md).
+- See [Roadmap](./Roadmap.md), [API](./API.md), [Database](./Database.md), [Client-Bundle-Auth](./Client-Bundle-Auth.md).

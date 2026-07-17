@@ -1,6 +1,8 @@
 import type { Metadata, Viewport } from "next";
+import { cookies } from "next/headers";
 import { Inter, Instrument_Serif } from "next/font/google";
 import { Providers } from "@/components/providers";
+import { SESSION_COOKIE } from "@/lib/auth/config";
 import "@divine/ui/styles/tokens.css";
 import "./globals.css";
 
@@ -33,13 +35,20 @@ export const viewport: Viewport = {
   ],
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default async function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  const cookieStore = await cookies();
+  const hasSessionHint = cookieStore.has(SESSION_COOKIE);
+
   return (
     <html lang="en" suppressHydrationWarning>
       <body
         className={`${inter.variable} ${instrumentSerif.variable} bg-background text-foreground min-h-svh font-sans antialiased`}
       >
-        <Providers>{children}</Providers>
+        <Providers hasSessionHint={hasSessionHint}>{children}</Providers>
       </body>
     </html>
   );

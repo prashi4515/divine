@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import Link from "next/link";
 import type { Metadata } from "next";
 import { AuthCard, LoginForm } from "@/features/auth";
@@ -21,7 +22,9 @@ export default function LoginPage() {
         </>
       }
     >
-      <LoginForm />
+      <Suspense fallback={null}>
+        <LoginForm />
+      </Suspense>
     </AuthCard>
   );
 }

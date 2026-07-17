@@ -3,7 +3,7 @@
 import * as React from "react";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
-import { authService } from "@/lib/api/services";
+import * as authService from "@/lib/api/services/auth";
 import { ApiError } from "@/lib/api/client";
 import { useAuth } from "@/features/auth/auth-provider";
 import { Button } from "@/components/ui/button";
