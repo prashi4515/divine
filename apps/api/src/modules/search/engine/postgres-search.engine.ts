@@ -391,7 +391,7 @@ export class PostgresSearchEngine implements SearchEngine {
   ): Promise<ScoredId[]> {
     const searchTerms = terms
       .filter((t) => t.length >= 2 || /[\u0900-\u097f\u0c00-\u0c7f]/.test(t))
-      .slice(0, 30);
+      .slice(0, 8);
 
     if (searchTerms.length === 0 && !topicSlug) return [];
 
@@ -407,65 +407,67 @@ export class PostgresSearchEngine implements SearchEngine {
       }
     };
 
-    for (const term of searchTerms) {
-      const verses = await this.prisma.verse.findMany({
-        where: {
-          isPublished: true,
-          chapter: { work: { code: workCode } },
-          ...(topicSlug
-            ? { verseTopics: { some: { topic: { slug: topicSlug } } } }
-            : {}),
-          OR: [
-            { publicId: { contains: term, mode: "insensitive" } },
-            { sanskritText: { contains: term, mode: "insensitive" } },
-            { transliteration: { contains: term, mode: "insensitive" } },
-            { meaning: { contains: term, mode: "insensitive" } },
-            { commentary: { contains: term, mode: "insensitive" } },
-            {
-              translations: {
-                some: {
-                  isPublished: true,
-                  text: { contains: term, mode: "insensitive" },
-                },
-              },
-            },
-            {
-              searchKeywords: {
-                some: { keyword: { contains: term, mode: "insensitive" } },
-              },
-            },
-            {
-              verseTopics: {
-                some: {
-                  topic: {
-                    OR: [
-                      { name: { contains: term, mode: "insensitive" } },
-                      { slug: { contains: term, mode: "insensitive" } },
-                    ],
+    const termResults = await Promise.all(
+      searchTerms.map(async (term) => {
+        const verses = await this.prisma.verse.findMany({
+          where: {
+            isPublished: true,
+            chapter: { work: { code: workCode } },
+            ...(topicSlug
+              ? { verseTopics: { some: { topic: { slug: topicSlug } } } }
+              : {}),
+            OR: [
+              { publicId: { contains: term, mode: "insensitive" } },
+              { sanskritText: { contains: term, mode: "insensitive" } },
+              { transliteration: { contains: term, mode: "insensitive" } },
+              { meaning: { contains: term, mode: "insensitive" } },
+              {
+                translations: {
+                  some: {
+                    isPublished: true,
+                    text: { contains: term, mode: "insensitive" },
                   },
                 },
               },
-            },
-          ],
-        },
-        select: {
-          id: true,
-          publicId: true,
-          meaning: true,
-          transliteration: true,
-          commentary: true,
-          sanskritText: true,
-        },
-        take: 200,
-      });
+              {
+                searchKeywords: {
+                  some: { keyword: { contains: term, mode: "insensitive" } },
+                },
+              },
+              {
+                verseTopics: {
+                  some: {
+                    topic: {
+                      OR: [
+                        { name: { contains: term, mode: "insensitive" } },
+                        { slug: { contains: term, mode: "insensitive" } },
+                      ],
+                    },
+                  },
+                },
+              },
+            ],
+          },
+          select: {
+            id: true,
+            publicId: true,
+            meaning: true,
+            transliteration: true,
+            sanskritText: true,
+          },
+          take: 80,
+        });
+        return { term, verses };
+      }),
+    );
 
+    for (const { term, verses } of termResults) {
       for (const v of verses) {
         let points = 4;
         const hay = [
           v.publicId,
           v.transliteration ?? "",
           v.meaning ?? "",
-          v.commentary ?? "",
           v.sanskritText,
         ]
           .join("\n")
@@ -537,7 +539,10 @@ export class PostgresSearchEngine implements SearchEngine {
         chapter: { include: { work: true } },
         verseTopics: { include: { topic: true } },
         translations: {
-          where: { isPublished: true },
+          where: {
+            isPublished: true,
+            language: { code: { in: [language, "en", "hi", "te", "sa"] } },
+          },
           include: { language: true, translationSource: true },
         },
       },

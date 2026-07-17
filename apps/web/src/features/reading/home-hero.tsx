@@ -10,7 +10,7 @@ export function HomeHero() {
   const t = useMessages();
 
   return (
-    <section className="mx-auto flex w-full max-w-content flex-col items-center px-6 pb-16 pt-10 text-center md:pb-24 md:pt-20">
+    <section className="mx-auto flex w-full flex-col items-center px-6 pb-16 pt-10 text-center md:pb-24 md:pt-20 lg:px-[1in]">
       <p className="font-serif text-6xl tracking-tight sm:text-7xl md:text-8xl">
         Divine
       </p>

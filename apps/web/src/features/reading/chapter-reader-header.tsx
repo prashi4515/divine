@@ -9,15 +9,11 @@ import { HeaderSearch } from "@/features/search/header-search";
 import { localizeWorkTitle, useMessages } from "@/lib/i18n/use-messages";
 
 type ChapterReaderHeaderProps = {
-  /** Back destination — typically the scripture chapter list. */
   backHref?: string;
   backLabel?: string;
   workCode?: string;
 };
 
-/**
- * Quiet reader chrome: back, global search, language, theme.
- */
 export function ChapterReaderHeader({
   backHref = "/bhagavad-gita",
   backLabel = "Bhagavad Gita",
@@ -27,8 +23,8 @@ export function ChapterReaderHeader({
   const label = localizeWorkTitle(t, { code: workCode, title: backLabel });
 
   return (
-    <header className="border-border/60 relative z-40 border-b">
-      <div className="mx-auto flex w-full max-w-none flex-wrap items-center gap-3 px-6 py-2.5 sm:px-8 md:flex-nowrap md:gap-4 md:py-3 lg:px-[1in]">
+    <header className="border-border/60 bg-background/90 sticky top-0 z-40 border-b backdrop-blur-sm">
+      <div className="mx-auto flex w-full items-center justify-between gap-3 px-6 py-2 sm:px-8 lg:px-[1in]">
         <Link
           href={backHref}
           className="text-muted-foreground hover:text-foreground group inline-flex min-h-9 shrink-0 items-center gap-2 rounded-md text-sm transition-divine focus-visible:outline-none"
@@ -38,17 +34,10 @@ export function ChapterReaderHeader({
             aria-hidden
           />
           <span className="hidden sm:inline">{label}</span>
-          <span className="sm:hidden">Back</span>
         </Link>
 
-        <div className="order-3 w-full md:order-none md:min-w-0 md:flex-1">
+        <div className="flex min-w-0 shrink-0 items-center gap-1 sm:gap-1.5">
           <HeaderSearch />
-        </div>
-
-        <div className="ml-auto flex shrink-0 items-center gap-2 sm:gap-2.5">
-          <span className="text-muted-foreground hidden text-xs tracking-wide lg:inline">
-            {t.reader}
-          </span>
           <AccountLink />
           <LanguageSwitcher />
           <ThemeToggle />

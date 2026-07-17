@@ -8,10 +8,8 @@ import {
   verseSearchService,
 } from "@/lib/api/services/verse-search";
 import { RecentSearches } from "./recent-searches";
-import { SearchBar } from "./search-bar";
 import { SearchFilters } from "./search-filters";
 import { SearchResults } from "./search-results";
-import { TrendingSearches } from "./trending-searches";
 
 type SearchPageClientProps = {
   initialQuery: string;
@@ -22,7 +20,7 @@ type SearchPageClientProps = {
   initialExpanded: string[];
   initialPage: number;
   initialTotalPages: number;
-  initialTrending: Array<{ query: string; hitCount: number }>;
+  initialTrending?: Array<{ query: string; hitCount: number }>;
 };
 
 export function SearchPageClient({
@@ -34,7 +32,6 @@ export function SearchPageClient({
   initialExpanded,
   initialPage,
   initialTotalPages,
-  initialTrending,
 }: SearchPageClientProps) {
   const router = useRouter();
   const searchParams = useSearchParams();
@@ -45,12 +42,10 @@ export function SearchPageClient({
   const [totalPages, setTotalPages] = React.useState(initialTotalPages);
   const [loading, setLoading] = React.useState(false);
   const [recent, setRecent] = React.useState<string[]>([]);
-  const [trending, setTrending] = React.useState(initialTrending);
 
   const query = searchParams.get("q") ?? initialQuery;
   const topic = searchParams.get("topic") ?? initialTopic;
   const lang = searchParams.get("lang") ?? initialLang;
-  const pageFromUrl = Number(searchParams.get("page") || "1") || 1;
 
   React.useEffect(() => {
     setResults(initialResults);
@@ -67,18 +62,8 @@ export function SearchPageClient({
   ]);
 
   React.useEffect(() => {
-    setRecent(readLocalRecentSearches(8));
-    void verseSearchService
-      .recent(8)
-      .then((rows) => {
-        if (rows.length > 0) setRecent(rows.map((r) => r.query));
-      })
-      .catch(() => undefined);
-    void verseSearchService
-      .trending(8)
-      .then(setTrending)
-      .catch(() => undefined);
-  }, []);
+    setRecent(readLocalRecentSearches(6));
+  }, [initialQuery]);
 
   function buildHref(next: {
     q?: string;
@@ -100,7 +85,7 @@ export function SearchPageClient({
     return qs ? `/search?${qs}` : "/search";
   }
 
-  async function runSearch(opts: {
+  function runSearch(opts: {
     q?: string;
     topic?: string | null;
     lang?: string;
@@ -136,89 +121,62 @@ export function SearchPageClient({
     }
 
     setLoading(true);
-    try {
-      const res = await verseSearchService.search({
+    void verseSearchService
+      .search({
         q: q || undefined,
         topic: t,
         lang: l,
         page: p,
         pageSize: 20,
-      });
-      setResults(res.data);
-      setTotal(res.meta.total);
-      setExpanded(res.meta.expandedTerms);
-      setPage(res.meta.page);
-      setTotalPages(res.meta.totalPages);
-      if (opts.record !== false && q) {
-        void verseSearchService.record(q, res.meta.total);
-        setRecent(readLocalRecentSearches(8));
-      }
-    } catch {
-      setResults([]);
-      setTotal(0);
-    } finally {
-      setLoading(false);
-    }
+      })
+      .then((res) => {
+        setResults(res.data);
+        setTotal(res.meta.total);
+        setExpanded(res.meta.expandedTerms);
+        setPage(res.meta.page);
+        setTotalPages(res.meta.totalPages);
+        if (opts.record !== false && q) {
+          void verseSearchService.record(q, res.meta.total);
+          setRecent(readLocalRecentSearches(6));
+        }
+      })
+      .catch(() => {
+        setResults([]);
+        setTotal(0);
+      })
+      .finally(() => setLoading(false));
   }
 
-  // Keep results in sync when URL page/topic/lang change via browser back/forward
-  React.useEffect(() => {
-    if (
-      pageFromUrl === initialPage &&
-      (searchParams.get("q") ?? "") === initialQuery &&
-      (searchParams.get("topic") ?? undefined) === initialTopic &&
-      (searchParams.get("lang") ?? "en") === initialLang
-    ) {
-      return;
-    }
-    // Soft sync from SSR when available; otherwise client fetch fills gaps
-  }, [
-    pageFromUrl,
-    initialPage,
-    initialQuery,
-    initialTopic,
-    initialLang,
-    searchParams,
-  ]);
-
   return (
-    <div className="mx-auto grid w-full max-w-content gap-10 lg:grid-cols-[minmax(0,1fr)_240px]">
+    <div className="mx-auto grid w-full gap-8 lg:grid-cols-[minmax(0,1fr)_200px] lg:gap-12">
       <div className="min-w-0">
-        <header className="mb-6 md:mb-8">
-          <p className="text-muted-foreground text-[11px] uppercase tracking-[0.18em]">
+        <header className="mb-5">
+          <h1 className="font-serif text-2xl tracking-tight md:text-3xl">
             Search
-          </p>
-          <h1 className="mt-2 font-serif text-3xl tracking-tight md:text-4xl">
-            Bhagavad Gita
           </h1>
-          <p className="text-muted-foreground mt-2 max-w-xl text-sm leading-relaxed">
-            Find verses by meaning, transliteration, commentary, or theme —
-            tolerant of spelling variants and synonyms.
-          </p>
+          {query ? (
+            <p className="text-muted-foreground mt-1 text-sm">
+              Results for “{query}”
+            </p>
+          ) : null}
         </header>
 
-        <SearchBar
-          initialQuery={query}
-          onSubmit={(q) => void runSearch({ q, page: 1, record: true })}
-          autoFocus
-        />
-
-        <div className="mt-6 lg:hidden">
+        <div className="mb-5 lg:hidden">
           <SearchFilters
             topic={topic}
             lang={lang}
             onTopicChange={(t) =>
-              void runSearch({ topic: t ?? null, page: 1, record: false })
+              runSearch({ topic: t ?? null, page: 1, record: false })
             }
             onLangChange={(l) =>
-              void runSearch({ lang: l, page: 1, record: false })
+              runSearch({ lang: l, page: 1, record: false })
             }
           />
         </div>
 
-        <div className="mt-8" aria-busy={loading}>
+        <div aria-busy={loading}>
           {loading ? (
-            <p className="text-muted-foreground mb-3 text-xs">Updating…</p>
+            <p className="text-muted-foreground mb-2 text-xs">Updating…</p>
           ) : null}
           <SearchResults
             results={results}
@@ -226,7 +184,7 @@ export function SearchPageClient({
             total={total}
             expandedTerms={expanded}
             onTermClick={(term) =>
-              void runSearch({ q: term, page: 1, record: true })
+              runSearch({ q: term, page: 1, record: true })
             }
           />
         </div>
@@ -240,7 +198,7 @@ export function SearchPageClient({
               type="button"
               disabled={page <= 1 || loading}
               className="text-muted-foreground hover:text-foreground disabled:opacity-40"
-              onClick={() => void runSearch({ page: page - 1, record: false })}
+              onClick={() => runSearch({ page: page - 1, record: false })}
             >
               Previous
             </button>
@@ -251,7 +209,7 @@ export function SearchPageClient({
               type="button"
               disabled={page >= totalPages || loading}
               className="text-muted-foreground hover:text-foreground disabled:opacity-40"
-              onClick={() => void runSearch({ page: page + 1, record: false })}
+              onClick={() => runSearch({ page: page + 1, record: false })}
             >
               Next
             </button>
@@ -259,26 +217,18 @@ export function SearchPageClient({
         ) : null}
       </div>
 
-      <aside className="space-y-8 lg:pt-28">
-        <div className="hidden lg:block">
-          <SearchFilters
-            topic={topic}
-            lang={lang}
-            onTopicChange={(t) =>
-              void runSearch({ topic: t ?? null, page: 1, record: false })
-            }
-            onLangChange={(l) =>
-              void runSearch({ lang: l, page: 1, record: false })
-            }
-          />
-        </div>
+      <aside className="hidden space-y-6 lg:block">
+        <SearchFilters
+          topic={topic}
+          lang={lang}
+          onTopicChange={(t) =>
+            runSearch({ topic: t ?? null, page: 1, record: false })
+          }
+          onLangChange={(l) => runSearch({ lang: l, page: 1, record: false })}
+        />
         <RecentSearches
           items={recent}
-          onSelect={(q) => void runSearch({ q, page: 1, record: true })}
-        />
-        <TrendingSearches
-          items={trending}
-          onSelect={(q) => void runSearch({ q, page: 1, record: true })}
+          onSelect={(q) => runSearch({ q, page: 1, record: true })}
         />
       </aside>
     </div>

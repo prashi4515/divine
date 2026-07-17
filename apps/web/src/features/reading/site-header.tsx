@@ -8,59 +8,46 @@ import { ThemeToggle } from "@/components/theme-toggle";
 import Link from "next/link";
 
 type SiteHeaderProps = {
-  /** Optional work code for localized eyebrow (e.g. "bg"). */
   workCode?: string;
-  /** Fallback eyebrow when workCode is absent. */
   eyebrow?: string;
 };
 
 /**
- * Public site chrome — brand, global search, account, language, theme.
+ * Public site chrome — brand left; search icon + actions right; hairline rule below.
  */
-export function SiteHeader({ workCode, eyebrow }: SiteHeaderProps) {
+export function SiteHeader(_props: SiteHeaderProps) {
   const t = useMessages();
-  const label = workCode
-    ? eyebrow ?? workCode
-    : eyebrow;
 
   return (
-    <header className="relative z-40 mx-auto flex w-full max-w-content flex-wrap items-center gap-3 px-6 py-3 md:flex-nowrap md:gap-4 md:py-3.5">
-      <Link
-        href="/"
-        className="group flex shrink-0 items-center gap-2 rounded-md focus-visible:outline-none"
-      >
-        <span
-          className="border-border bg-background/80 flex h-7 w-7 items-center justify-center rounded-md border shadow-xs transition-divine group-hover:shadow-sm"
-          aria-hidden
+    <header className="border-border bg-background/90 sticky top-0 z-40 border-b backdrop-blur-sm">
+      <div className="mx-auto flex w-full items-center justify-between gap-3 px-6 py-2.5 lg:px-[1in] lg:py-3">
+        <Link
+          href="/"
+          className="group flex shrink-0 items-center gap-2 rounded-md focus-visible:outline-none"
         >
-          <span className="font-serif text-sm leading-none">ॐ</span>
-        </span>
-        <span className="font-serif text-lg tracking-tight md:text-xl">Divine</span>
-      </Link>
+          <span
+            className="border-border bg-background flex h-7 w-7 items-center justify-center rounded-md border shadow-xs transition-divine group-hover:shadow-sm"
+            aria-hidden
+          >
+            <span className="font-serif text-sm leading-none">ॐ</span>
+          </span>
+          <span className="font-serif text-lg tracking-tight md:text-xl">
+            Divine
+          </span>
+        </Link>
 
-      <div className="order-3 w-full md:order-none md:mx-2 md:w-auto md:min-w-0 md:flex-1">
-        <HeaderSearch />
-      </div>
-
-      <div className="ml-auto flex shrink-0 items-center gap-2 sm:gap-2.5">
-        {label ? (
+        <div className="flex min-w-0 shrink-0 items-center gap-1 sm:gap-1.5">
           <Link
             href="/bhagavad-gita"
-            className="text-muted-foreground hover:text-foreground hidden text-xs tracking-wide transition-divine lg:inline"
+            className="text-muted-foreground hover:text-foreground hidden px-2 text-xs tracking-wide transition-divine md:inline"
           >
             {t.gitaTitle}
           </Link>
-        ) : (
-          <Link
-            href="/bhagavad-gita"
-            className="text-muted-foreground hover:text-foreground hidden text-xs tracking-wide transition-divine sm:inline"
-          >
-            {t.gitaTitle}
-          </Link>
-        )}
-        <AccountLink />
-        <LanguageSwitcher />
-        <ThemeToggle />
+          <HeaderSearch />
+          <AccountLink />
+          <LanguageSwitcher />
+          <ThemeToggle />
+        </div>
       </div>
     </header>
   );

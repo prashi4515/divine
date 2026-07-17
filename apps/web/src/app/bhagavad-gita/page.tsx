@@ -55,7 +55,7 @@ export default function BhagavadGitaPage() {
 
       <SiteHeader workCode="bg" eyebrow="Bhagavad Gita" />
 
-      <main className="mx-auto w-full max-w-content flex-1 px-6 pb-16 pt-2 md:pb-20 md:pt-3">
+      <main className="mx-auto w-full flex-1 px-6 pb-16 pt-2 md:pb-20 md:pt-3 lg:px-[1in]">
         <GitaIndexHeader />
 
         <section className="mt-8 md:mt-10" aria-label="Chapters">

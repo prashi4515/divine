@@ -24,7 +24,7 @@ export function ChapterGrid({ chapters, basePath }: ChapterGridProps) {
   }
 
   return (
-    <ul className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 lg:gap-5">
+    <ul className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 lg:gap-5">
       {chapters.map((chapter) => (
         <ChapterCard key={chapter.id} chapter={chapter} basePath={basePath} />
       ))}

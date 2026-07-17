@@ -75,7 +75,8 @@ async function ChapterContent({ number }: { number: number }) {
     const chapterPublicId = `bg.${number}`;
     const [chapter, { verses, languages }] = await Promise.all([
       getPublishedChapterCached(chapterPublicId),
-      getPublishedVersesCached(chapterPublicId, "full"),
+      // `reader` omits bulky commentary/word-meaning rows for faster first paint
+      getPublishedVersesCached(chapterPublicId, "reader"),
     ]);
     const readerLanguages = orderLanguages(languages);
 

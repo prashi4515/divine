@@ -105,8 +105,9 @@
 
   /* Layout */
   --container-prose: 42rem;
-  --container-content: 72rem;
-  --container-wide: 80rem;
+  /* Near full-bleed with ~1in side gutters on large screens */
+  --container-content: 96rem;
+  --container-wide: 96rem;
 
   /* ------------------------------------------------------------------ */
   /* Radius — restrained (Linear/Apple), not pill-heavy                 */

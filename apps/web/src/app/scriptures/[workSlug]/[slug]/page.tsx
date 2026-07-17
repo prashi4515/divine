@@ -66,7 +66,7 @@ async function ChapterContent({
     const [chapter, allChapters, { verses, languages }] = await Promise.all([
       getPublishedChapter(chapterPublicId),
       getPublishedChapters(),
-      getPublishedVerses(chapterPublicId, "full"),
+      getPublishedVerses(chapterPublicId, "reader"),
     ]);
     const workChapters = allChapters.filter((c) => c.work.code === work.code);
     const totalChapters = workChapters.length;

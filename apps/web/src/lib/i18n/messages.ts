@@ -76,7 +76,7 @@ const en = build("en", {
   home: "Home",
   scripture: "Scripture",
   gitaTitle: "Bhagavad Gita",
-  gitaBlurb: "Eighteen chapters. Choose a chapter and begin — quietly, at your own pace.",
+  gitaBlurb: "Eighteen chapters — read at your own pace.",
   read: "Read",
   verses: "verses",
   verseSingular: "verse",

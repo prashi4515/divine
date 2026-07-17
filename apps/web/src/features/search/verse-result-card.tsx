@@ -45,6 +45,7 @@ export function VerseResultCard({
       <div className="flex flex-wrap items-baseline justify-between gap-2">
         <Link
           href={result.href}
+          prefetch
           className="font-serif text-lg tracking-tight underline-offset-4 hover:underline"
         >
           {result.publicId}

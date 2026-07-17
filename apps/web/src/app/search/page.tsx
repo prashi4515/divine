@@ -1,7 +1,7 @@
 import { Suspense } from "react";
 import type { Metadata } from "next";
 import { ApiError } from "@/lib/api/client";
-import { getTrendingSearches, searchVerses } from "@/lib/api/search";
+import { searchVerses } from "@/lib/api/search";
 import { SearchPageClient } from "@/features/search";
 import { SiteFooter } from "@/features/reading/site-footer";
 import { SiteHeader } from "@/features/reading/site-header";
@@ -40,17 +40,11 @@ async function SearchBody({ searchParams }: SearchPageProps) {
       totalPages: 0,
     },
   };
-  let trending: Array<{ query: string; hitCount: number }> = [];
 
   try {
-    const [search, trend] = await Promise.all([
-      q || topic
-        ? searchVerses({ q, topic, lang, page, pageSize: 20 })
-        : Promise.resolve(results),
-      getTrendingSearches(8).catch(() => []),
-    ]);
-    results = search;
-    trending = trend;
+    if (q || topic) {
+      results = await searchVerses({ q, topic, lang, page, pageSize: 20 });
+    }
   } catch (error: unknown) {
     if (!(error instanceof ApiError)) throw error;
   }
@@ -65,7 +59,6 @@ async function SearchBody({ searchParams }: SearchPageProps) {
       initialExpanded={results.meta.expandedTerms}
       initialPage={results.meta.page}
       initialTotalPages={results.meta.totalPages}
-      initialTrending={trending}
     />
   );
 }
@@ -83,12 +76,12 @@ export default function SearchPage(props: SearchPageProps) {
           `,
         }}
       />
-      <SiteHeader workCode="bg" eyebrow="Search" />
-      <main className="mx-auto w-full flex-1 px-6 pb-16 pt-4 md:pb-20 md:pt-6">
+      <SiteHeader />
+      <main className="mx-auto w-full flex-1 px-6 pb-16 pt-4 md:pb-20 md:pt-6 lg:px-[1in]">
         <Suspense
           fallback={
-            <p className="text-muted-foreground py-16 text-center text-sm">
-              Loading search…
+            <p className="text-muted-foreground py-12 text-center text-sm">
+              Loading…
             </p>
           }
         >
