@@ -62,9 +62,20 @@
 - `CRUD /v1/me/notes` — _TODO._
 - `CRUD /v1/me/plans` — _TODO._
 
-### Search _(planned)_
+### Search
 
-- `GET /v1/search` — _TODO._
+Public intelligent verse search (Postgres engine; Meilisearch-swappable via `SearchEngine`):
+
+- `GET /v1/search/verses?q=&page=&pageSize=&topic=&lang=` — fuzzy + synonym verse search with pagination.
+- `GET /v1/search/suggest?q=` — autocomplete.
+- `GET /v1/search/trending` — popular queries.
+- `GET /v1/search/recent` — recent for user/session (`X-Search-Session` optional).
+- `POST /v1/search/history` — record a search (`{ query, resultCount }`).
+- `GET /v1/search/related/:publicId` — related verses, topics, people also read.
+
+Admin CMS palette (JWT):
+
+- `GET /v1/search?q=` — entity search across scriptures/works/chapters/verses/topics.
 
 ## 7. Errors & Status Codes
 

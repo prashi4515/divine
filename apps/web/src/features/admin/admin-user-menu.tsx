@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { LogOut, Settings, User as UserIcon } from "lucide-react";
 import { useAuth } from "@/features/auth";
-import { ROLE_LABELS } from "@/lib/rbac";
+import { asCmsRoles, ROLE_LABELS } from "@/lib/rbac";
 import { Avatar } from "@/components/ui/avatar";
 import {
   DropdownMenu,
@@ -18,7 +18,7 @@ export function AdminUserMenu() {
   const { user } = useAuth();
   if (!user) return null;
 
-  const primaryRole = user.roles[0];
+  const primaryRole = asCmsRoles(user.roles)[0];
 
   return (
     <DropdownMenu>
@@ -26,7 +26,11 @@ export function AdminUserMenu() {
         className="focus-visible:ring-ring rounded-full focus-visible:outline-none focus-visible:ring-1"
         aria-label="Account menu"
       >
-        <Avatar name={user.displayName} src={user.avatarUrl} size="sm" />
+        <Avatar
+          name={user.displayName}
+          src={user.avatarUrl ?? undefined}
+          size="sm"
+        />
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
         <DropdownMenuLabel>

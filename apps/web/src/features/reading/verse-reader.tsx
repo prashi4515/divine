@@ -13,6 +13,7 @@ import { Button } from "@/components/ui/button";
 import { SectionHeading } from "@/features/reading/section-heading";
 import { VerseNumberGrid } from "@/features/reading/verse-number-grid";
 import { WordMeaningList } from "@/features/reading/word-meaning-list";
+import { RelatedReading } from "@/features/search/related-reading";
 import { useMessages } from "@/lib/i18n/use-messages";
 import {
   isIndicScriptLanguage,
@@ -400,6 +401,8 @@ export function VerseReader({
               </div>
             </article>
           ) : null}
+
+          {verse ? <RelatedReading versePublicId={verse.publicId} /> : null}
 
           {/* Mobile / tablet: grid below content */}
           <div className="lg:hidden">{grid}</div>

@@ -35,6 +35,8 @@ export type HttpOptions = {
   /** Set false for unauthenticated endpoints (login, forgot-password). */
   auth?: boolean;
   query?: Record<string, string | number | boolean | undefined>;
+  /** Extra request headers (e.g. X-Search-Session). */
+  headers?: Record<string, string>;
   /** Skip the 401→refresh→retry path (used by refresh itself). */
   skipRefresh?: boolean;
 };
@@ -102,10 +104,14 @@ export async function http<T>(
     signal,
     auth = true,
     query,
+    headers: extraHeaders,
     skipRefresh = false,
   } = options;
 
-  const headers: Record<string, string> = { Accept: "application/json" };
+  const headers: Record<string, string> = {
+    Accept: "application/json",
+    ...extraHeaders,
+  };
   if (body !== undefined) headers["Content-Type"] = "application/json";
   if (auth) {
     const token = getAccessToken();

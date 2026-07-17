@@ -29,6 +29,10 @@ export const envSchema = z.object({
     .enum(["true", "false"])
     .default("false")
     .transform((v) => v === "true"),
+  /** Resend API key. Optional in development (emails are logged instead). */
+  DIVINE_RESEND_API_KEY: z.string().optional(),
+  /** From address, e.g. "Divine <noreply@yourdomain.com>" */
+  DIVINE_EMAIL_FROM: z.string().optional(),
 });
 
 export type Env = z.infer<typeof envSchema>;

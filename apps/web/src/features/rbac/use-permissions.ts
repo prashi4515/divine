@@ -2,7 +2,7 @@
 
 import * as React from "react";
 import { useAuth } from "@/features/auth";
-import { can, canAll, canAny, type Permission } from "@/lib/rbac";
+import { asCmsRoles, can, canAll, canAny, type Permission } from "@/lib/rbac";
 
 /**
  * Permission checks bound to the current session's roles. Components ask for
@@ -13,7 +13,7 @@ export function usePermissions() {
   const userRoles = user?.roles;
 
   return React.useMemo(() => {
-    const roles = userRoles ?? [];
+    const roles = asCmsRoles(userRoles ?? []);
     return {
       roles,
       can: (permission: Permission) => can(roles, permission),

@@ -1,57 +1,71 @@
 "use client";
 
 import * as React from "react";
+import { useRouter } from "next/navigation";
 import { authService } from "@/lib/api/services";
 import { ApiError } from "@/lib/api/client";
+import { useAuth } from "@/features/auth/auth-provider";
+import { SignupSuccessDialog } from "@/features/auth/signup-success-dialog";
+import { AUTH_ROUTES } from "@/lib/auth/config";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 
 /**
- * Public account sign-up. Social providers are placeholders until OAuth is wired.
+ * Public account sign-up with success modal (My Account entry).
  */
 export function SignupForm() {
+  const router = useRouter();
+  const { applySession } = useAuth();
   const [displayName, setDisplayName] = React.useState("");
   const [email, setEmail] = React.useState("");
   const [password, setPassword] = React.useState("");
   const [pending, setPending] = React.useState(false);
   const [error, setError] = React.useState<string | null>(null);
+  const [successOpen, setSuccessOpen] = React.useState(false);
+  const [welcomeName, setWelcomeName] = React.useState("");
 
   async function onSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
     setPending(true);
     setError(null);
     try {
-      await authService.register({ email, password, displayName });
+      const result = await authService.register({
+        email,
+        password,
+        displayName,
+      });
+      applySession({
+        accessToken: result.data.accessToken,
+        refreshToken: result.data.refreshToken,
+        user: result.data.user,
+      });
+      setWelcomeName(result.data.user.displayName);
+      setSuccessOpen(true);
     } catch (err: unknown) {
-      setError(
-        err instanceof ApiError && err.status === 0
-          ? "Cannot reach the server. Please try again."
-          : "Could not create your account. Please try again.",
-      );
+      if (err instanceof ApiError && err.status === 409) {
+        setError("An account with this email already exists. Try signing in.");
+      } else if (err instanceof ApiError && err.status === 0) {
+        setError(
+          "Cannot reach the server. Make sure the API is running on port 8080.",
+        );
+      } else {
+        setError("Could not create your account. Please try again.");
+      }
     } finally {
       setPending(false);
     }
   }
 
+  function goToAccount() {
+    setSuccessOpen(false);
+    router.push(AUTH_ROUTES.account);
+    router.refresh();
+  }
+
   return (
-    <div className="space-y-4">
-      <div className="grid gap-2">
-        <Button variant="outline" className="w-full" disabled>
-          Continue with Google
-        </Button>
-        <Button variant="outline" className="w-full" disabled>
-          Continue with Apple
-        </Button>
-      </div>
-
-      <div className="flex items-center gap-3">
-        <span className="bg-border h-px flex-1" aria-hidden />
-        <span className="text-muted-foreground text-xs">or</span>
-        <span className="bg-border h-px flex-1" aria-hidden />
-      </div>
-
-      <form onSubmit={onSubmit} className="space-y-4" noValidate>
+    <>
+      <form onSubmit={(e) => void onSubmit(e)} className="space-y-4" noValidate>
         {error ? (
           <p
             role="alert"
@@ -93,6 +107,7 @@ export function SignupForm() {
             type="password"
             autoComplete="new-password"
             required
+            minLength={8}
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             placeholder="At least 8 characters"
@@ -103,6 +118,12 @@ export function SignupForm() {
           {pending ? "Creating account…" : "Create account"}
         </Button>
       </form>
-    </div>
+
+      <SignupSuccessDialog
+        open={successOpen}
+        displayName={welcomeName}
+        onDismiss={goToAccount}
+      />
+    </>
   );
 }

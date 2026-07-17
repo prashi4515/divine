@@ -62,14 +62,13 @@ pnpm --filter @divine/api prisma:deploy    # apply committed migrations (CI/prod
 
 ```bash
 pnpm --filter @divine/api prisma:seed
-# or
-pnpm --filter @divine/api exec prisma db seed
+pnpm --filter @divine/api search:seed   # topics, synonyms, verse↔topic, keywords
 ```
 
 - Script: `apps/api/scripts/seed.mts` (Prisma Client upserts — no raw SQL).
+- Search index: `apps/api/scripts/seed-search.mts` — synonyms/spellings, topic tags from real verse text, denormalized keywords.
 - P0 seeds: languages (en/hi/te), work `bg`, translation sources, topics, emotions.
 - Idempotent on natural keys (`code`, `slug`, `key`).
-- Does **not** seed chapters, verses, users, or junctions.
 
 ## 8. Indexing & Performance
 

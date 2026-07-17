@@ -6,6 +6,7 @@ import { cn } from "@/lib/utils";
 
 const ITEMS = [
   { label: "Profile", href: "/profile" },
+  { label: "Sessions", href: "/settings/sessions" },
   { label: "Bookmarks", href: "/bookmarks" },
   { label: "Reading History", href: "/history" },
 ] as const;

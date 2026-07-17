@@ -1,4 +1,4 @@
-import { ROLE_PERMISSIONS, type Role } from "./roles";
+import { ROLE_PERMISSIONS, ROLES, type Role } from "./roles";
 import type { Permission } from "./permissions";
 
 export { PERMISSIONS, PERMISSION_GROUPS, type Permission } from "./permissions";
@@ -9,6 +9,12 @@ export {
   ROLE_PERMISSIONS,
   type Role,
 } from "./roles";
+
+/** Narrow API role strings to known CMS roles (ignores public `reader`, etc.). */
+export function asCmsRoles(roles: readonly string[]): Role[] {
+  const known = new Set<string>(ROLES);
+  return roles.filter((role): role is Role => known.has(role));
+}
 
 /** Does a single role grant the permission? */
 export function roleCan(role: Role, permission: Permission): boolean {
@@ -21,12 +27,18 @@ export function can(roles: readonly Role[], permission: Permission): boolean {
 }
 
 /** Does the user hold every one of the given permissions? */
-export function canAll(roles: readonly Role[], permissions: readonly Permission[]): boolean {
+export function canAll(
+  roles: readonly Role[],
+  permissions: readonly Permission[],
+): boolean {
   return permissions.every((permission) => can(roles, permission));
 }
 
 /** Does the user hold at least one of the given permissions? */
-export function canAny(roles: readonly Role[], permissions: readonly Permission[]): boolean {
+export function canAny(
+  roles: readonly Role[],
+  permissions: readonly Permission[],
+): boolean {
   return permissions.some((permission) => can(roles, permission));
 }
 

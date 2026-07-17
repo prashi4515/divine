@@ -11,6 +11,7 @@
     "prisma:studio": "prisma studio",
     "verify:db": "node --env-file=.env scripts/verify-db.mts",
     "prisma:seed": "node --env-file=.env scripts/seed.mts",
+    "search:seed": "node --env-file=.env scripts/seed-search.mts",
     "cms:sync": "node --env-file=.env scripts/sync-cms-from-works.mts",
     "indic:import": "node --env-file=.env scripts/import-indic-translations.mts",
     "commentary:import": "node --env-file=.env scripts/import-commentaries.mts",
@@ -35,6 +36,7 @@
     "@nestjs/platform-express": "^11.0.1",
     "@nestjs/swagger": "^11.0.0",
     "@nestjs/terminus": "^11.0.0",
+    "@nestjs/throttler": "^6.5.0",
     "@prisma/client": "^6.2.1",
     "bcryptjs": "^3.0.3",
     "class-transformer": "^0.5.1",
@@ -46,6 +48,7 @@
     "pino": "^9.6.0",
     "pino-http": "^10.3.0",
     "reflect-metadata": "^0.2.2",
+    "resend": "^6.17.2",
     "rxjs": "^7.8.1",
     "zod": "^3.24.1"
   },

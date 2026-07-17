@@ -32,20 +32,27 @@
 - ✅ Chapters read API + admin list.
 - ⏳ Locale-first routing scaffolding.
 
-## Phase P1 — Accounts & Personalization
+## Phase P1 / 1.5 — Accounts & session foundation
 
-- ⏳ JWT authentication.
-- ⏳ Bookmarks.
-- ⏳ Notes.
-- ⏳ Reading plans.
-- _TODO — acceptance criteria per feature._
+- ✅ JWT access + refresh tokens, HttpOnly cookies, remember-me.
+- ✅ Email signup, login, logout, forgot/reset password.
+- ✅ Email verification via Resend (`DIVINE_RESEND_API_KEY`).
+- ✅ Device sessions list + revoke + logout-all.
+- ✅ User profile + reading preferences (persisted, restored after login).
+- ✅ Shared auth contracts in `packages/types`.
+- ✅ Rate limiting (Throttler) + audit logs for auth events.
+- ⏳ Bookmarks / notes / highlights (Phase 2 engagement).
+- ⏳ Reading plans, Verse of the Day, push notifications.
+
+**Next after search:** engagement (bookmarks/notes) + Meilisearch migration when scale needs it.
 
 ## Phase P2 — Enrichment
 
 - ⏳ Audio playback + CDN.
 - ⏳ Google OAuth.
 - ⏳ Redis caching.
-- ⏳ Meilisearch + emotion-based search.
+- ✅ Intelligent multilingual Gita search (Postgres `SearchEngine`, synonyms/fuzzy/topics/UI at `/search`).
+- ⏳ Optional Meilisearch/Typesense adapter behind the same `SearchEngine` contract.
 
 ## Phase P3 — Intelligence & Mobile
 

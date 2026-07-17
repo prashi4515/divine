@@ -27,6 +27,10 @@ pnpm --filter @divine/api commentary:multilang  # Telugu commentary + kn/ta/ml/o
 
 Requires `DIVINE_DATABASE_URL` (loaded from `apps/api/.env` via the package script).
 
+### Auth email (Resend)
+
+Set `DIVINE_RESEND_API_KEY` and `DIVINE_EMAIL_FROM` in `apps/api/.env` for verification and password-reset emails. Without the API key, the API logs a skip message (and in development may log tokens) so local signup still works.
+
 ### Indic reader languages
 
 `indic:import` fills public reader languages beyond English/Hindi:

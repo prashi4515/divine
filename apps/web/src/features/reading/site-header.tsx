@@ -1,6 +1,7 @@
 "use client";
 
 import { localizeWorkTitle, useMessages } from "@/lib/i18n/use-messages";
+import { AccountLink } from "@/features/reading/account-link";
 import { LanguageSwitcher } from "@/features/reading/language-switcher";
 import { ThemeToggle } from "@/components/theme-toggle";
 import Link from "next/link";
@@ -41,6 +42,13 @@ export function SiteHeader({ workCode, eyebrow }: SiteHeaderProps) {
             {label}
           </span>
         ) : null}
+        <Link
+          href="/search"
+          className="text-muted-foreground hover:text-foreground text-xs tracking-wide transition-divine"
+        >
+          Search
+        </Link>
+        <AccountLink />
         <LanguageSwitcher />
         <ThemeToggle />
       </div>

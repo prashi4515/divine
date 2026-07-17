@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 import { ThemeToggle } from "@/components/theme-toggle";
+import { AccountLink } from "@/features/reading/account-link";
 import { LanguageSwitcher } from "@/features/reading/language-switcher";
 import { localizeWorkTitle, useMessages } from "@/lib/i18n/use-messages";
 
@@ -42,6 +43,7 @@ export function ChapterReaderHeader({
           <span className="text-muted-foreground hidden text-xs tracking-wide sm:inline">
             {t.reader}
           </span>
+          <AccountLink />
           <LanguageSwitcher />
           <ThemeToggle />
         </div>

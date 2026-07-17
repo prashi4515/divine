@@ -20,8 +20,13 @@ export const REFRESH_SKEW_SECONDS = 60;
 
 export const AUTH_ROUTES = {
   login: "/login",
+  signup: "/signup",
   forgotPassword: "/forgot-password",
   resetPassword: "/reset-password",
-  afterLogin: "/admin",
+  /** Default for public readers after sign-in. */
+  afterLogin: "/account",
+  /** CMS console for staff roles. */
+  afterAdminLogin: "/admin",
   logout: "/logout",
+  account: "/account",
 } as const;

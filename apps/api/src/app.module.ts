@@ -1,6 +1,7 @@
 import { Module } from "@nestjs/common";
 import { ConfigModule, ConfigService } from "@nestjs/config";
-import { APP_FILTER } from "@nestjs/core";
+import { APP_FILTER, APP_GUARD } from "@nestjs/core";
+import { ThrottlerGuard, ThrottlerModule } from "@nestjs/throttler";
 import { LoggerModule } from "nestjs-pino";
 import { AllExceptionsFilter } from "./common/filters/all-exceptions.filter";
 import { validateEnv, type Env } from "./config/env";
@@ -9,6 +10,9 @@ import { PrismaModule } from "./prisma/prisma.module";
 import { WorksModule } from "./modules/works/works.module";
 import { ChaptersModule } from "./modules/chapters/chapters.module";
 import { AuthModule } from "./modules/auth/auth.module";
+import { AccountModule } from "./modules/account/account.module";
+import { AuditModule } from "./modules/audit/audit.module";
+import { EmailModule } from "./modules/email/email.module";
 import { ScripturesModule } from "./modules/scriptures/scriptures.module";
 import { VersesModule } from "./modules/verses/verses.module";
 import { SearchModule } from "./modules/search/search.module";
@@ -16,15 +20,20 @@ import { MediaModule } from "./modules/media/media.module";
 
 @Module({
   imports: [
-    // Global env config, validated once at boot with Zod.
     ConfigModule.forRoot({
       isGlobal: true,
       cache: true,
       validate: validateEnv,
     }),
 
-    // Structured JSON logging (pino). Pretty-printed in dev, raw JSON in prod
-    // so log drains / aggregators can parse it. Redacts auth headers.
+    ThrottlerModule.forRoot([
+      {
+        name: "default",
+        ttl: 60_000,
+        limit: 120,
+      },
+    ]),
+
     LoggerModule.forRootAsync({
       inject: [ConfigService],
       useFactory: (config: ConfigService<Env, true>) => ({
@@ -40,8 +49,11 @@ import { MediaModule } from "./modules/media/media.module";
     }),
 
     PrismaModule,
+    EmailModule,
+    AuditModule,
     HealthModule,
     AuthModule,
+    AccountModule,
     WorksModule,
     ChaptersModule,
     ScripturesModule,
@@ -50,10 +62,13 @@ import { MediaModule } from "./modules/media/media.module";
     MediaModule,
   ],
   providers: [
-    // Global catch-all exception filter (consistent error envelope + logging).
     {
       provide: APP_FILTER,
       useClass: AllExceptionsFilter,
+    },
+    {
+      provide: APP_GUARD,
+      useClass: ThrottlerGuard,
     },
   ],
 })

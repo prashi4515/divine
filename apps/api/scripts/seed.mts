@@ -91,9 +91,17 @@ const translationSources = [
 const topics = [
   { slug: "duty", name: "Duty", sortOrder: 10 },
   { slug: "karma", name: "Karma", sortOrder: 20 },
+  { slug: "bhakti", name: "Bhakti", sortOrder: 25 },
+  { slug: "jnana", name: "Jnana", sortOrder: 28 },
   { slug: "meditation", name: "Meditation", sortOrder: 30 },
+  { slug: "mind", name: "Mind", sortOrder: 35 },
   { slug: "wisdom", name: "Wisdom", sortOrder: 40 },
+  { slug: "soul", name: "Soul", sortOrder: 45 },
+  { slug: "death", name: "Death", sortOrder: 48 },
   { slug: "detachment", name: "Detachment", sortOrder: 50 },
+  { slug: "peace", name: "Peace", sortOrder: 55 },
+  { slug: "yoga", name: "Yoga", sortOrder: 60 },
+  { slug: "dharma", name: "Dharma", sortOrder: 65 },
 ] as const;
 
 const emotions = [

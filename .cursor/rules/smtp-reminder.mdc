@@ -1,0 +1,15 @@
+---
+description: Reminder — wire SMTP/Resend transactional email (deferred from Phase 1.5)
+globs:
+alwaysApply: true
+---
+
+# Reminder (due 2026-07-17)
+
+User deferred email delivery. When working on Divine tomorrow or next session:
+
+1. Wire **Resend** fully for signup verification + password reset (env already documented: `DIVINE_RESEND_API_KEY`, `DIVINE_EMAIL_FROM`).
+2. Optionally add SMTP later as an alternate `EmailProvider` behind `EmailService`.
+3. Remove this rule once email is production-ready.
+
+Do not block other features on SMTP.

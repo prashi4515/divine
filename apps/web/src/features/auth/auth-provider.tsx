@@ -6,6 +6,9 @@ import { AUTH_ENABLED, AUTH_ROUTES } from "@/lib/auth/config";
 import { clearTokens, setTokens } from "@/lib/auth/tokens";
 import { authService } from "@/lib/api/services";
 import type { AuthUser, LoginInput } from "@/lib/auth/types";
+import { useReadingStore } from "@/lib/stores/reading-store";
+import { isReadingLanguageCode } from "@/lib/reading/languages";
+import { asCmsRoles } from "@/lib/rbac";
 
 type AuthStatus = "loading" | "authenticated" | "unauthenticated";
 
@@ -15,6 +18,13 @@ type AuthContextValue = {
   login: (input: LoginInput) => Promise<void>;
   logout: () => Promise<void>;
   refresh: () => Promise<void>;
+  /** Apply tokens + user after register / external auth. */
+  applySession: (session: {
+    accessToken: string;
+    refreshToken: string;
+    user: AuthUser;
+    rememberMe?: boolean;
+  }) => void;
 };
 
 const AuthContext = React.createContext<AuthContextValue | null>(null);
@@ -24,17 +34,38 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   const searchParams = useSearchParams();
   const [user, setUser] = React.useState<AuthUser | null>(null);
   const [status, setStatus] = React.useState<AuthStatus>("loading");
+  const setPreferredLanguage = useReadingStore((s) => s.setPreferredLanguage);
+
+  const syncReadingPrefs = React.useCallback(
+    async (nextUser: AuthUser) => {
+      if (
+        nextUser.preferredLanguage &&
+        isReadingLanguageCode(nextUser.preferredLanguage)
+      ) {
+        setPreferredLanguage(nextUser.preferredLanguage);
+      }
+      try {
+        const prefs = await authService.getPreferences();
+        if (isReadingLanguageCode(prefs.language)) {
+          setPreferredLanguage(prefs.language);
+        }
+      } catch {
+        /* prefs optional on bootstrap */
+      }
+    },
+    [setPreferredLanguage],
+  );
 
   React.useEffect(() => {
     let active = true;
     async function bootstrap() {
       if (!AUTH_ENABLED) {
-        // Soft mode only — prefer real session when API is available.
         try {
           const me = await authService.fetchMe();
           if (active) {
             setUser(me);
             setStatus("authenticated");
+            void syncReadingPrefs(me);
           }
           return;
         } catch {
@@ -50,6 +81,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
         if (active) {
           setUser(me);
           setStatus("authenticated");
+          void syncReadingPrefs(me);
         }
       } catch {
         try {
@@ -62,6 +94,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
           if (active) {
             setUser(refreshed.data.user);
             setStatus("authenticated");
+            void syncReadingPrefs(refreshed.data.user);
           }
         } catch {
           clearTokens();
@@ -76,7 +109,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     return () => {
       active = false;
     };
-  }, []);
+  }, [syncReadingPrefs]);
 
   const login = React.useCallback(
     async (input: LoginInput) => {
@@ -84,11 +117,18 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       setTokens(res.data.accessToken, res.data.refreshToken, input.rememberMe ?? false);
       setUser(res.data.user);
       setStatus("authenticated");
+      void syncReadingPrefs(res.data.user);
       const next = searchParams.get("next");
-      router.push(next && next.startsWith("/") ? next : AUTH_ROUTES.afterLogin);
+      if (next && next.startsWith("/")) {
+        router.push(next);
+      } else if (asCmsRoles(res.data.user.roles).length > 0) {
+        router.push(AUTH_ROUTES.afterAdminLogin);
+      } else {
+        router.push(AUTH_ROUTES.afterLogin);
+      }
       router.refresh();
     },
-    [router, searchParams],
+    [router, searchParams, syncReadingPrefs],
   );
 
   const logout = React.useCallback(async () => {
@@ -111,9 +151,27 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     setStatus("authenticated");
   }, []);
 
+  const applySession = React.useCallback(
+    (session: {
+      accessToken: string;
+      refreshToken: string;
+      user: AuthUser;
+      rememberMe?: boolean;
+    }) => {
+      setTokens(
+        session.accessToken,
+        session.refreshToken,
+        session.rememberMe ?? false,
+      );
+      setUser(session.user);
+      setStatus("authenticated");
+    },
+    [],
+  );
+
   const value = React.useMemo<AuthContextValue>(
-    () => ({ user, status, login, logout, refresh }),
-    [user, status, login, logout, refresh],
+    () => ({ user, status, login, logout, refresh, applySession }),
+    [user, status, login, logout, refresh, applySession],
   );
 
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
@@ -125,4 +183,9 @@ export function useAuth(): AuthContextValue {
     throw new Error("useAuth must be used within an <AuthProvider>.");
   }
   return ctx;
+}
+
+/** Safe for chrome that may render outside an AuthProvider. */
+export function useOptionalAuth(): AuthContextValue | null {
+  return React.useContext(AuthContext);
 }
