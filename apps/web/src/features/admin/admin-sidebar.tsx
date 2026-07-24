@@ -10,12 +10,16 @@ import { AdminSidebarNav } from "@/features/admin/admin-sidebar-nav";
 function Brand() {
   return (
     <Link href="/admin" className="flex items-center gap-2.5 px-4 py-4">
-      <div className="border-border flex h-7 w-7 items-center justify-center rounded-md border">
-        <span className="font-serif text-xs">ॐ</span>
+      <div className="cta-saffron flex h-7 w-7 items-center justify-center rounded-md">
+        <span className="font-serif text-xs text-white">ॐ</span>
       </div>
       <div className="min-w-0">
-        <div className="truncate text-sm font-medium tracking-tight">Divine</div>
-        <div className="text-muted-foreground truncate text-[11px]">Scripture CMS</div>
+        <div className="truncate text-sm font-medium tracking-tight">
+          Bhagavad Gita
+        </div>
+        <div className="text-muted-foreground truncate text-[11px]">
+          Scripture CMS
+        </div>
       </div>
     </Link>
   );

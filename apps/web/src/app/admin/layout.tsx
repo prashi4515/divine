@@ -6,9 +6,9 @@ import { AdminSidebar } from "@/features/admin/admin-sidebar";
 export const metadata: Metadata = {
   title: {
     default: "Admin",
-    template: "%s · Divine Admin",
+    template: "%s · Bhagavad Gita Admin",
   },
-  description: "Internal content management for the Divine platform.",
+  description: "Internal content management for the Bhagavad Gita platform.",
   robots: {
     index: false,
     follow: false,

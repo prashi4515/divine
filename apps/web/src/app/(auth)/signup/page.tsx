@@ -4,7 +4,7 @@ import { AuthCard, SignupForm } from "@/features/auth";
 
 export const metadata: Metadata = {
   title: "Create account",
-  description: "Create your Divine account.",
+  description: "Create your Bhagavad Gita account.",
 };
 
 export default function SignupPage() {

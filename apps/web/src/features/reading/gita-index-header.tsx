@@ -26,13 +26,35 @@ export function GitaIndexHeader({ workCode = "bg" }: GitaIndexHeaderProps) {
       </nav>
 
       <header className="mx-auto max-w-2xl text-center">
-        <p className="text-muted-foreground text-[11px] uppercase tracking-[0.18em]">
+        <p className="text-saffron text-[11px] font-medium uppercase tracking-[0.18em]">
           {t.scripture}
         </p>
-        <h1 className="mt-2 font-serif text-3xl tracking-tight sm:text-4xl md:text-5xl">
+        <h1 className="indic-display mt-2 font-serif text-3xl sm:text-4xl md:text-5xl">
           {title}
         </h1>
-        <p className="text-muted-foreground mt-3 text-pretty text-sm leading-relaxed sm:text-base">
+
+        <div
+          className="mx-auto mt-4 flex items-center justify-center gap-3"
+          aria-hidden
+        >
+          <span
+            className="h-px w-10"
+            style={{
+              background:
+                "linear-gradient(90deg, transparent, hsl(var(--saffron) / 0.6))",
+            }}
+          />
+          <span className="text-saffron font-serif text-sm leading-none">ॐ</span>
+          <span
+            className="h-px w-10"
+            style={{
+              background:
+                "linear-gradient(90deg, hsl(var(--saffron) / 0.6), transparent)",
+            }}
+          />
+        </div>
+
+        <p className="text-muted-foreground mt-4 text-pretty text-sm leading-relaxed sm:text-base">
           {t.gitaBlurb}
         </p>
       </header>

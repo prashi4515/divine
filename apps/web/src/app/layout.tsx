@@ -21,8 +21,8 @@ const instrumentSerif = Instrument_Serif({
 
 export const metadata: Metadata = {
   title: {
-    default: "Divine — Bhagavad Gita for the modern seeker",
-    template: "%s · Divine",
+    default: "Bhagavad Gita — The Song of God",
+    template: "%s · Bhagavad Gita",
   },
   description:
     "A production-grade multilingual Bhagavad Gita platform. Read, reflect, and journey through the timeless verses in your language.",

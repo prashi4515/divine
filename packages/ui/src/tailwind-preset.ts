@@ -65,6 +65,10 @@ const divinePreset = {
           muted: "hsl(var(--verse-muted))",
         },
         sanskrit: "hsl(var(--sanskrit))",
+        /* Devotional marketing accents (public surfaces only). */
+        saffron: "hsl(var(--saffron) / <alpha-value>)",
+        gold: "hsl(var(--gold) / <alpha-value>)",
+        maroon: "hsl(var(--maroon) / <alpha-value>)",
       },
       borderRadius: {
         sm: "var(--radius-sm)",
@@ -76,6 +80,14 @@ const divinePreset = {
         sans: ["var(--font-sans)", "system-ui", "sans-serif"],
         serif: ["var(--font-serif)", "Georgia", "serif"],
         mono: ["var(--font-mono)"],
+        "reader-en": ["var(--font-reader-en)", "Georgia", "serif"],
+        "reader-deva": ["var(--font-reader-deva)", "serif"],
+        "reader-kn": ["var(--font-reader-kn)", "serif"],
+        "reader-te": ["var(--font-reader-te)", "serif"],
+        "reader-ta": ["var(--font-reader-ta)", "serif"],
+        "reader-ml": ["var(--font-reader-ml)", "serif"],
+        "reader-gu": ["var(--font-reader-gu)", "serif"],
+        "reader-or": ["var(--font-reader-or)", "serif"],
       },
       fontSize: {
         xs: ["var(--text-xs)", { lineHeight: "var(--leading-normal)" }] as [

@@ -8,7 +8,7 @@ export type VerseIncludeMode = "reader" | "full";
 
 /**
  * GET /v1/verses?chapterPublicId= — published verses for a chapter (RSC).
- * `reader` scopes languages to en/hi/te but keeps commentary + vyakhya/w2w.
+ * `reader` scopes to en/hi/te/or native sources (kn/ta/ml derived client-side).
  * `full` returns every published language/source.
  */
 export async function getPublishedVerses(

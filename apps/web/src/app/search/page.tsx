@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { ApiError } from "@/lib/api/client";
 import { searchVerses } from "@/lib/api/search";
 import { SearchPageClient } from "@/features/search";
+import { SearchSkeleton } from "@/features/search/search-skeleton";
 import { SiteFooter } from "@/features/reading/site-footer";
 import { SiteHeader } from "@/features/reading/site-header";
 
@@ -77,14 +78,8 @@ export default function SearchPage(props: SearchPageProps) {
         }}
       />
       <SiteHeader />
-      <main className="mx-auto w-full flex-1 px-6 pb-16 pt-4 md:pb-20 md:pt-6 lg:px-[1in]">
-        <Suspense
-          fallback={
-            <p className="text-muted-foreground py-12 text-center text-sm">
-              Loading…
-            </p>
-          }
-        >
+      <main className="page-gutter w-full flex-1 pb-14 pt-4 sm:pb-16 md:pb-20 md:pt-6">
+        <Suspense fallback={<SearchSkeleton />}>
           <SearchBody searchParams={props.searchParams} />
         </Suspense>
       </main>

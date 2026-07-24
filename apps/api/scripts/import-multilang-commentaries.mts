@@ -25,6 +25,28 @@ const INDIC_SCRIPTS = [
   { code: "or", scheme: "oriya", name: "Odia", nativeName: "ଓଡ଼ିଆ", sortOrder: 70 },
 ] as const;
 
+function normalizeDevanagariForRescript(text: string): string {
+  return text
+    .replace(/\u093C/g, "")
+    .replace(/\u0901/g, "\u0902")
+    .replace(/\u0964/g, ".")
+    .replace(/\u0965/g, "..");
+}
+
+function stripForeignIndicMarks(text: string): string {
+  return text
+    .replace(/\u093C/g, "")
+    .replace(/[\u0900-\u097F]/gu, "")
+    .replace(/\s{2,}/g, " ")
+    .trim();
+}
+
+function hindiToScript(text: string, scheme: string): string {
+  return stripForeignIndicMarks(
+    Sanscript.t(normalizeDevanagariForRescript(text), "devanagari", scheme),
+  );
+}
+
 function cleanText(text: string): string {
   return text
     .replace(/\r\n/g, "\n")
@@ -200,7 +222,7 @@ async function main() {
       const chunk = hiVyakhya.slice(i, i + BATCH);
       await prisma.$transaction(
         chunk.map((row) => {
-          const text = Sanscript.t(row.text, "devanagari", lang.scheme);
+          const text = hindiToScript(row.text, lang.scheme);
           return prisma.translation.upsert({
             where: {
               verseId_languageId_translationSourceId: {

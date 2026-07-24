@@ -4,7 +4,7 @@ import { AuthCard, ForgotPasswordForm } from "@/features/auth";
 
 export const metadata: Metadata = {
   title: "Forgot password",
-  description: "Reset your Divine console password.",
+  description: "Reset your Bhagavad Gita account password.",
 };
 
 export default function ForgotPasswordPage() {

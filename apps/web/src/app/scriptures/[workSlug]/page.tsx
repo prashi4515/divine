@@ -22,7 +22,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   if (!work) return { title: "Scripture" };
   return {
     title: work.title,
-    description: work.description ?? `Read ${work.title} on Divine.`,
+    description: work.description ?? `Read ${work.title} on Bhagavad Gita.`,
     alternates: { canonical: publicWorkPath(work) },
   };
 }
@@ -81,7 +81,7 @@ export default async function ScriptureWorkPage({ params }: PageProps) {
 
       <SiteHeader workCode={work.code} eyebrow={work.title} />
 
-      <main className="mx-auto w-full max-w-content flex-1 px-6 pb-16 pt-2 md:pb-20 md:pt-3">
+      <main className="page-gutter w-full max-w-content flex-1 pb-14 pt-2 sm:pb-16 md:pb-20 md:pt-3">
         <ScriptureIndexHeader work={work} />
 
         <section className="mt-8 md:mt-10" aria-label="Chapters">

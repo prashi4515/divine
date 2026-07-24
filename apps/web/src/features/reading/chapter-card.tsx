@@ -40,19 +40,28 @@ export function ChapterCard({ chapter, basePath }: ChapterCardProps) {
         href={href}
         prefetch={true}
         className={cn(
-          "group border-border bg-card relative flex h-full flex-col rounded-xl border p-4 shadow-xs sm:p-5",
-          "transition-divine hover:-translate-y-0.5 hover:border-foreground/15 hover:shadow-md",
+          "group border-border bg-card hover:border-saffron/30 relative flex h-full flex-col overflow-hidden rounded-xl border p-4 shadow-xs sm:p-5",
+          "transition-divine hover:-translate-y-0.5 hover:shadow-md",
           "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2",
         )}
       >
-        <div className="flex items-start justify-between gap-3">
+        <span
+          className="absolute inset-x-0 top-0 h-0.5 origin-left scale-x-0 transition-transform duration-300 group-hover:scale-x-100"
+          style={{
+            background:
+              "linear-gradient(90deg, hsl(var(--saffron)), hsl(var(--gold)))",
+          }}
+          aria-hidden
+        />
+
+        <div className="flex items-baseline justify-between gap-3">
           <p
-            className="text-muted-foreground/80 font-serif text-4xl leading-none tracking-tight tabular-nums sm:text-5xl"
+            className="text-muted-foreground/60 group-hover:text-saffron transition-divine font-serif text-4xl leading-none tracking-tight tabular-nums sm:text-5xl"
             aria-hidden
           >
             {String(chapter.number).padStart(2, "0")}
           </p>
-          <span className="text-muted-foreground font-mono text-[11px] tracking-wide">
+          <span className="text-muted-foreground/70 font-mono text-[11px] tracking-wide">
             {chapter.publicId}
           </span>
         </div>
@@ -64,7 +73,7 @@ export function ChapterCard({ chapter, basePath }: ChapterCardProps) {
         <p className="text-muted-foreground mt-1.5 text-sm">{verseLabel}</p>
 
         <div className="mt-auto flex items-center justify-between pt-5">
-          <span className="text-foreground inline-flex items-center gap-1.5 text-sm font-medium group-hover:underline">
+          <span className="text-maroon inline-flex items-center gap-1.5 text-sm font-medium group-hover:underline">
             {t.read}
             <ArrowRight
               className="h-3.5 w-3.5 transition-divine group-hover:translate-x-0.5"

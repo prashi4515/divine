@@ -16,6 +16,29 @@ import Sanscript from "@indic-transliteration/sanscript";
 const prisma = new PrismaClient();
 const BATCH = 40;
 
+/** Strip nukta / normalize punctuation before Sanscript → kn/ta/ml. */
+function normalizeDevanagariForRescript(text: string): string {
+  return text
+    .replace(/\u093C/g, "")
+    .replace(/\u0901/g, "\u0902")
+    .replace(/\u0964/g, ".")
+    .replace(/\u0965/g, "..");
+}
+
+function stripForeignIndicMarks(text: string): string {
+  return text
+    .replace(/\u093C/g, "")
+    .replace(/[\u0900-\u097F]/gu, "")
+    .replace(/\s{2,}/g, " ")
+    .trim();
+}
+
+function hindiToScript(text: string, scheme: string): string {
+  return stripForeignIndicMarks(
+    Sanscript.t(normalizeDevanagariForRescript(text), "devanagari", scheme),
+  );
+}
+
 const TE_URL =
   "https://huggingface.co/datasets/ajaysadhu02/bhagavath-gita-telugu/resolve/main/gita-in-telugu.json";
 const OR_CHAPTER_URL = (n: number) =>
@@ -224,7 +247,7 @@ async function importScriptFromHindi(
       verseId: row.verseId,
       languageId,
       translationSourceId: sourceId,
-      text: Sanscript.t(row.text, "devanagari", target.scheme),
+      text: hindiToScript(row.text, target.scheme),
     }));
     counts[target.code] = await writeAll(pending, target.code);
   }

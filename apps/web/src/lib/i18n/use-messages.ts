@@ -1,6 +1,7 @@
 "use client";
 
 import * as React from "react";
+import { getHomeMessages, type HomeMessages } from "@/lib/i18n/home-messages";
 import { getMessages, type Messages } from "@/lib/i18n/messages";
 import { useReadingStore } from "@/lib/stores/reading-store";
 
@@ -19,6 +20,18 @@ export function useMessages(): Messages {
   }, [mounted, preferredLanguage]);
 
   return getMessages(mounted ? preferredLanguage : "en");
+}
+
+/**
+ * Landing-page copy for the active reading language (English until hydrated).
+ */
+export function useHomeMessages(): HomeMessages {
+  const preferredLanguage = useReadingStore((s) => s.preferredLanguage);
+  const [mounted, setMounted] = React.useState(false);
+
+  React.useEffect(() => setMounted(true), []);
+
+  return getHomeMessages(mounted ? preferredLanguage : "en");
 }
 
 export function localizeWorkTitle(

@@ -8,6 +8,9 @@ import {
   estimateReadingMinutes,
 } from "@/features/reading/chapter-reading";
 import { useMessages } from "@/lib/i18n/use-messages";
+import { readerFontClass } from "@/lib/reading/reader-fonts";
+import { useReadingStore } from "@/lib/stores/reading-store";
+import { cn } from "@/lib/utils";
 
 type ChapterHeroProps = {
   number: number;
@@ -19,6 +22,7 @@ type ChapterHeroProps = {
 
 /**
  * Typography-led chapter opening — number, title, meta, intro.
+ * Uses the active reading-language Noto / Cormorant face.
  */
 export function ChapterHero({
   number,
@@ -28,6 +32,8 @@ export function ChapterHero({
   workCode,
 }: ChapterHeroProps) {
   const t = useMessages();
+  const preferredLanguage = useReadingStore((s) => s.preferredLanguage);
+  const bodyFont = readerFontClass(preferredLanguage);
   const displayTitle =
     workCode === "bg"
       ? t.chapterTitle(number, title)
@@ -44,12 +50,16 @@ export function ChapterHero({
       : workTitle;
 
   return (
-    <header className="animate-fade-up w-full text-center">
-      <p className="text-muted-foreground font-serif text-3xl tracking-tight sm:text-4xl md:text-5xl">
+    <header className={cn("animate-fade-up w-full text-center", bodyFont)}>
+      <p className="text-saffron text-[11px] font-medium uppercase tracking-[0.2em]">
+        {localizedWork}
+      </p>
+
+      <p className="text-muted-foreground indic-display mt-3 text-2xl sm:text-3xl md:text-4xl">
         {t.chapterFallback(number)}
       </p>
 
-      <h1 className="mt-2 font-serif text-3xl tracking-tight sm:text-4xl md:text-5xl">
+      <h1 className="text-brand-display indic-display mt-2 text-3xl sm:text-4xl md:text-5xl">
         {displayTitle}
       </h1>
 
@@ -62,19 +72,35 @@ export function ChapterHero({
           ·
         </li>
         <li>{readLabel}</li>
-        <li aria-hidden className="text-border">
-          ·
-        </li>
-        <li>{localizedWork}</li>
       </ul>
 
-      <div className="mx-auto mt-6 max-w-[12rem]">
-        <Separator className="bg-border/80" />
+      <div className="mx-auto mt-6 flex max-w-[12rem] items-center gap-3">
+        <span
+          className="h-px flex-1"
+          style={{
+            background:
+              "linear-gradient(90deg, transparent, hsl(var(--saffron) / 0.55))",
+          }}
+        />
+        <span className="text-saffron font-serif text-sm leading-none" aria-hidden>
+          ॐ
+        </span>
+        <span
+          className="h-px flex-1"
+          style={{
+            background:
+              "linear-gradient(90deg, hsl(var(--saffron) / 0.55), transparent)",
+          }}
+        />
       </div>
 
       <p className="text-muted-foreground mx-auto mt-6 max-w-4xl text-pretty text-base leading-relaxed sm:text-lg">
         {intro}
       </p>
+
+      <div className="mx-auto mt-8 max-w-xs">
+        <Separator className="bg-border/60" />
+      </div>
     </header>
   );
 }

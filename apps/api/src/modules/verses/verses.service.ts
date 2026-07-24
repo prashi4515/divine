@@ -25,8 +25,40 @@ type VerseWithRelations = Prisma.VerseGetPayload<{
 
 export type VerseIncludeMode = "full" | "reader";
 
-/** Languages loaded for public reader first paint (keeps Neon payloads small). */
-const READER_LANGUAGE_CODES = ["en", "hi", "te"] as const;
+/**
+ * Native-content languages for the public reader payload.
+ * kn/ta/ml meanings are derived client-side from Hindi — do NOT ship their
+ * script-proxy rows (they were bloating chapter responses past 2MB and
+ * defeating Next.js data cache).
+ */
+const READER_LANGUAGE_CODES = ["en", "hi", "te", "or"] as const;
+
+/**
+ * Script-proxy / heavy commentary — excluded from bulk reader payloads.
+ * Commentary is lazy-loaded per verse on the client so chapter pages stay
+ * under ~250KB and paint quickly (vyakhya alone was ~270KB of text on ch.2).
+ */
+const READER_EXCLUDED_SOURCE_KEYS = [
+  "ramsukhdas-indic-script",
+  "ramsukhdas-vyakhya",
+  "ramsukhdas-vyakhya-kn",
+  "ramsukhdas-vyakhya-ta",
+  "ramsukhdas-vyakhya-ml",
+  "ramsukhdas-vyakhya-or",
+  "holy-bg-telugu-vyakhya",
+] as const;
+
+/** Languages exposed in the header switcher even when not in the payload. */
+const READER_UI_LANGUAGES: Array<{
+  code: string;
+  name: string;
+  nativeName: string | null;
+}> = [
+  { code: "sa", name: "Sanskrit", nativeName: "संस्कृतम्" },
+  { code: "kn", name: "Kannada", nativeName: "ಕನ್ನಡ" },
+  { code: "ta", name: "Tamil", nativeName: "தமிழ்" },
+  { code: "ml", name: "Malayalam", nativeName: "മലയാളം" },
+];
 
 type PublishedChapterCacheEntry = {
   expiresAt: number;
@@ -75,8 +107,8 @@ export class VersesService implements OnModuleInit {
   }
 
   private cacheKey(chapterPublicId: string, include: VerseIncludeMode): string {
-    // v2: reader keeps commentary + vyakhya (invalidates older slim caches).
-    return `${chapterPublicId}:${include}:v2`;
+    // v5: reader drops all vyakhya (lazy-loaded per verse on the web).
+    return `${chapterPublicId}:${include}:v5`;
   }
 
   private clearPublishedChapterCache(chapterPublicId?: string): void {
@@ -151,9 +183,10 @@ export class VersesService implements OnModuleInit {
                 isPublished: true,
                 ...(include === "reader"
                   ? {
-                      // Limit languages; keep all source types (translation,
-                      // vyakhya/commentary, word-meanings) for those languages.
                       language: { code: { in: [...READER_LANGUAGE_CODES] } },
+                      translationSource: {
+                        key: { notIn: [...READER_EXCLUDED_SOURCE_KEYS] },
+                      },
                     }
                   : {}),
               }
@@ -181,6 +214,16 @@ export class VersesService implements OnModuleInit {
           name: t.language.name,
           nativeName: t.language.nativeName,
         });
+      }
+    }
+
+    // Reader: expose kn/ta/ml in the switcher even though their text is
+    // derived client-side from Hindi (keeps payload under Next.js 2MB cache).
+    if (include === "reader") {
+      for (const lang of READER_UI_LANGUAGES) {
+        if (!languageMap.has(lang.code)) {
+          languageMap.set(lang.code, lang);
+        }
       }
     }
 

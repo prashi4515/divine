@@ -159,7 +159,7 @@ export default async function ScriptureChapterPage({ params }: ChapterPageProps)
 
       <ChapterReaderHeader backHref={publicWorkPath(work)} />
 
-      <main className="mx-auto w-full max-w-none flex-1 px-6 pb-16 pt-6 sm:px-8 md:pb-20 md:pt-8 lg:px-[1in]">
+      <main className="page-gutter w-full max-w-none flex-1 pb-14 pt-6 sm:pb-16 md:pb-20 md:pt-8">
         <Suspense
           fallback={
             <div className="animate-pulse space-y-8 pt-4">

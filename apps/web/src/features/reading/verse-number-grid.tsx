@@ -47,8 +47,8 @@ export function VerseNumberGrid({
                   "flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-xs tabular-nums transition-divine sm:text-sm",
                   "focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring",
                   active
-                    ? "bg-foreground text-background shadow-xs"
-                    : "bg-muted/50 text-foreground hover:bg-muted hover:text-foreground",
+                    ? "cta-saffron text-white shadow-xs"
+                    : "bg-muted/50 text-foreground hover:bg-saffron/10 hover:text-maroon",
                 )}
               >
                 {n}

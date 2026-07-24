@@ -47,7 +47,8 @@ export default function BhagavadGitaPage() {
         aria-hidden
         style={{
           background: `
-            radial-gradient(ellipse 90% 50% at 50% -5%, hsl(var(--muted) / 0.7), transparent 50%),
+            radial-gradient(ellipse 90% 45% at 50% -5%, hsl(var(--saffron) / 0.12), transparent 55%),
+            radial-gradient(ellipse 60% 35% at 85% 8%, hsl(var(--gold) / 0.08), transparent 55%),
             hsl(var(--background))
           `,
         }}
@@ -55,7 +56,7 @@ export default function BhagavadGitaPage() {
 
       <SiteHeader workCode="bg" eyebrow="Bhagavad Gita" />
 
-      <main className="mx-auto w-full flex-1 px-6 pb-16 pt-2 md:pb-20 md:pt-3 lg:px-[1in]">
+      <main className="page-gutter w-full flex-1 pb-14 pt-2 sm:pb-16 md:pb-20 md:pt-3">
         <GitaIndexHeader />
 
         <section className="mt-8 md:mt-10" aria-label="Chapters">

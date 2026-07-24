@@ -24,7 +24,9 @@ export function AuthCard({ title, subtitle, children, footer }: AuthCardProps) {
           >
             <span className="font-serif text-base leading-none">ॐ</span>
           </span>
-          <span className="font-serif text-2xl tracking-tight">Divine</span>
+          <span className="font-serif text-2xl tracking-tight">
+            Bhagavad Gita
+          </span>
         </Link>
       </div>
 

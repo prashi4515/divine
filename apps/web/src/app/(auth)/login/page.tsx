@@ -5,7 +5,7 @@ import { AuthCard, LoginForm } from "@/features/auth";
 
 export const metadata: Metadata = {
   title: "Sign in",
-  description: "Sign in to your Divine account.",
+  description: "Sign in to your Bhagavad Gita account.",
 };
 
 export default function LoginPage() {

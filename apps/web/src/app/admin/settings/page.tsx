@@ -18,7 +18,11 @@ export default function GeneralSettingsPage() {
         <CardContent className="space-y-4">
           <div className="space-y-2">
             <Label htmlFor="display-name">Display name</Label>
-            <Input id="display-name" readOnly defaultValue="Divine Editorial" />
+            <Input
+              id="display-name"
+              readOnly
+              defaultValue="Bhagavad Gita Editorial"
+            />
           </div>
           <div className="space-y-2">
             <Label htmlFor="default-language">Default language</Label>

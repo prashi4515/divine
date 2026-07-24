@@ -33,13 +33,16 @@ Set `DIVINE_RESEND_API_KEY` and `DIVINE_EMAIL_FROM` in `apps/api/.env` for verif
 
 ### Indic reader languages
 
-`indic:import` fills public reader languages beyond English/Hindi:
+| Code | Native meaning? | Source |
+| ---- | --------------- | ------ |
+| `en` | Yes | Sivananda (Unlicense / open corpus) |
+| `hi` | Yes | Ramsukhdas meaning + vyakhya |
+| `te` | Yes | Holy Bhagavad Gita Telugu (Unlicense HF) — translation, w2w, vyakhya |
+| `or` | Yes (meaning) | Community Odia meaning corpus; vyakhya still interim |
+| `sa` | Shloka | Sanskrit text on the verse |
+| `kn` / `ta` / `ml` | **No** (script only) | Interim: Hindi Ramsukhdas re-lettered into kn/ta/ml script for on-screen presence — **not** literary Kannada/Tamil/Malayalam. **ISKCON/BBT (including Prabhupada Kannada PDFs) cannot be imported** without written BBT license. |
 
-| Code | Source |
-| ---- | ------ |
-| `te` | Holy Bhagavad Gita Telugu meaning (Unlicense corpus) — 701 verses |
-| `or` | Community Odia meaning corpus — 591 verses (source numbering gaps) |
-| `kn` / `ta` / `ml` | Hindi Ramsukhdas meaning rendered in Kannada/Tamil/Malayalam script via Sanscript (interim until dedicated meaning texts are licensed) |
+**ISKCON / BBT “Bhagavad Gita As It Is” cannot be imported** (copyrighted), including Kannada editions such as community-hosted Prabhupada PDFs. If you obtain a BBT license or another licensed open Kannada meaning corpus, add it via `indic:import` / CMS like Telugu.
 
 ### Commentaries
 

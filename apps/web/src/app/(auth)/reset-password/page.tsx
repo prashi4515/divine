@@ -3,7 +3,7 @@ import { AuthCard, ResetPasswordForm } from "@/features/auth";
 
 export const metadata: Metadata = {
   title: "Reset password",
-  description: "Choose a new password for your Divine account.",
+  description: "Choose a new password for your Bhagavad Gita account.",
 };
 
 type ResetPasswordPageProps = {
