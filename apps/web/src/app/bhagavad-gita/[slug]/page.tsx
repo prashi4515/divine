@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import { ChapterHero } from "@/features/reading/chapter-hero";
 import { ChapterNavigation } from "@/features/reading/chapter-navigation";
 import { ChapterReaderHeader } from "@/features/reading/chapter-reader-header";
-import { VerseReader } from "@/features/reading/verse-reader";
+import { VerseReaderClient } from "@/features/reading/verse-reader-client";
 import { SiteFooter } from "@/features/reading/site-footer";
 import { gitaChapterTitle } from "@/lib/i18n/gita-chapters";
 import { getStaticGitaChapter } from "@/lib/reading/gita-static";
@@ -119,7 +119,7 @@ export default async function ChapterPage({ params }: ChapterPageProps) {
         />
 
         <div className="mt-10 w-full space-y-10 md:mt-12 md:space-y-12">
-          <VerseReader
+          <VerseReaderClient
             chapterNumber={snapshot.chapter.number}
             verses={snapshot.verses}
             languages={readerLanguages}
