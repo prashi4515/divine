@@ -6,6 +6,7 @@ import { HomeValues } from "@/features/reading/home-values";
 import { SiteFooter } from "@/features/reading/site-footer";
 import { SiteHeader } from "@/features/reading/site-header";
 import { readerFontVariableClass } from "@/lib/reading/reader-font-vars";
+import { getVerseOfTheDay } from "@/lib/reading/verse-of-the-day";
 
 export const metadata: Metadata = {
   title: "Bhagavad Gita — The Song of God",
@@ -14,7 +15,12 @@ export const metadata: Metadata = {
   alternates: { canonical: "/" },
 };
 
+/** Refresh periodically so “verse of the day” advances with the IST calendar. */
+export const revalidate = 3_600;
+
 export default function HomePage() {
+  const verseOfTheDay = getVerseOfTheDay();
+
   return (
     <div
       className={`relative flex min-h-svh flex-col ${readerFontVariableClass}`}
@@ -36,7 +42,7 @@ export default function HomePage() {
 
       <main className="flex-1">
         <HomeHero />
-        <FeaturedVerse />
+        <FeaturedVerse verse={verseOfTheDay} />
         <HomeValues />
         <HomeBrowseCta />
       </main>

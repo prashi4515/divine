@@ -8,6 +8,12 @@ const nextConfig: NextConfig = {
   reactStrictMode: true,
   // Monorepo: trace shared packages from repo root (packages/types, packages/ui).
   outputFileTracingRoot: path.join(__dirname, "../.."),
+  // Keep on-disk Gita snapshots in the Vercel serverless bundle (commentary API).
+  outputFileTracingIncludes: {
+    "/api/gita/commentary/[publicId]": ["./content/gita/commentary/**/*"],
+    "/bhagavad-gita": ["./content/gita/**/*"],
+    "/bhagavad-gita/[slug]": ["./content/gita/**/*"],
+  },
   async redirects() {
     return [
       {

@@ -1,13 +1,10 @@
-import { Suspense } from "react";
 import type { Metadata } from "next";
-import { ApiError } from "@/lib/api/client";
-import { getPublishedChapters } from "@/lib/api/chapters";
 import { ChapterGrid } from "@/features/reading/chapter-grid";
-import { ChapterGridSkeleton } from "@/features/reading/chapter-grid-skeleton";
 import { GitaIndexHeader } from "@/features/reading/gita-index-header";
 import { ReadingError } from "@/features/reading/reading-error";
 import { SiteFooter } from "@/features/reading/site-footer";
 import { SiteHeader } from "@/features/reading/site-header";
+import { getStaticGitaChaptersIndex } from "@/lib/reading/gita-static";
 
 export const metadata: Metadata = {
   title: "Bhagavad Gita",
@@ -18,28 +15,28 @@ export const metadata: Metadata = {
   },
 };
 
-async function ChaptersSection() {
-  try {
-    const chapters = await getPublishedChapters();
-    const gitaChapters = chapters
-      .filter((chapter) => chapter.work.code === "bg")
-      .sort((a, b) => a.sortOrder - b.sortOrder);
-    return <ChapterGrid chapters={gitaChapters} basePath="/bhagavad-gita" />;
-  } catch (error: unknown) {
-    let message = "Something went wrong while loading chapters.";
-    if (error instanceof ApiError) {
-      message =
-        error.status === 0
-          ? `Could not reach the API (${error.message}).`
-          : `The API returned ${error.status}.`;
-    } else if (error instanceof Error) {
-      message = error.message;
-    }
-    return <ReadingError title="Unable to load chapters" message={message} />;
-  }
-}
+/** Static index — no API round-trip. */
+export const dynamic = "force-static";
+export const revalidate = false;
 
-export default function BhagavadGitaPage() {
+export default async function BhagavadGitaPage() {
+  let chapters;
+  try {
+    chapters = await getStaticGitaChaptersIndex();
+  } catch (error: unknown) {
+    const message =
+      error instanceof Error ? error.message : "Static chapter index missing.";
+    return (
+      <div className="relative flex min-h-svh flex-col">
+        <SiteHeader workCode="bg" eyebrow="Bhagavad Gita" />
+        <main className="page-gutter w-full flex-1 py-10">
+          <ReadingError title="Unable to load chapters" message={message} />
+        </main>
+        <SiteFooter />
+      </div>
+    );
+  }
+
   return (
     <div className="relative flex min-h-svh flex-col">
       <div
@@ -60,9 +57,7 @@ export default function BhagavadGitaPage() {
         <GitaIndexHeader />
 
         <section className="mt-8 md:mt-10" aria-label="Chapters">
-          <Suspense fallback={<ChapterGridSkeleton />}>
-            <ChaptersSection />
-          </Suspense>
+          <ChapterGrid chapters={chapters} basePath="/bhagavad-gita" />
         </section>
       </main>
 

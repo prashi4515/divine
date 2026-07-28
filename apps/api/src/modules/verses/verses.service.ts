@@ -48,6 +48,15 @@ const READER_EXCLUDED_SOURCE_KEYS = [
   "holy-bg-telugu-vyakhya",
 ] as const;
 
+/** Commentary-only rows for client hydrate after the slim chapter list paints.
+ * kn/ta/ml/or vyakhya are re-scripted from Hindi on the client — do not ship them. */
+const HYDRATE_SOURCE_KEYS = [
+  "ramsukhdas-vyakhya",
+  "holy-bg-telugu-vyakhya",
+] as const;
+
+export type VerseDetailIncludeMode = "full" | "hydrate";
+
 /** Languages exposed in the header switcher even when not in the payload. */
 const READER_UI_LANGUAGES: Array<{
   code: string;
@@ -66,10 +75,16 @@ type PublishedChapterCacheEntry = {
   languages: Array<{ code: string; name: string; nativeName: string | null }>;
 };
 
+type PublishedVerseCacheEntry = {
+  expiresAt: number;
+  data: VerseResponseDto;
+};
+
 @Injectable()
 export class VersesService implements OnModuleInit {
   private readonly logger = new Logger(VersesService.name);
   private readonly publishedChapterCache = new Map<string, PublishedChapterCacheEntry>();
+  private readonly publishedVerseCache = new Map<string, PublishedVerseCacheEntry>();
   private readonly cacheTtlMs =
     process.env.NODE_ENV === "production" ? 600_000 : 120_000;
   private catalogLanguagesCache:
@@ -107,18 +122,32 @@ export class VersesService implements OnModuleInit {
   }
 
   private cacheKey(chapterPublicId: string, include: VerseIncludeMode): string {
-    // v5: reader drops all vyakhya (lazy-loaded per verse on the web).
-    return `${chapterPublicId}:${include}:v5`;
+    // v6: reader also drops English commentary column (lazy via hydrate).
+    return `${chapterPublicId}:${include}:v6`;
+  }
+
+  private verseCacheKey(
+    publicId: string,
+    include: VerseDetailIncludeMode,
+  ): string {
+    return `${publicId}:${include}:v2`;
   }
 
   private clearPublishedChapterCache(chapterPublicId?: string): void {
     if (!chapterPublicId) {
       this.publishedChapterCache.clear();
+      this.publishedVerseCache.clear();
       return;
     }
     for (const key of this.publishedChapterCache.keys()) {
       if (key.startsWith(`${chapterPublicId}:`)) {
         this.publishedChapterCache.delete(key);
+      }
+    }
+    for (const key of this.publishedVerseCache.keys()) {
+      // Keys look like `bg.18.1:hydrate:v1` — clear all verses in this chapter.
+      if (key.startsWith(`${chapterPublicId}.`)) {
+        this.publishedVerseCache.delete(key);
       }
     }
   }
@@ -253,9 +282,10 @@ export class VersesService implements OnModuleInit {
       sanskritText: row.sanskritText,
       transliteration: row.transliteration,
       meaning: row.meaning,
-      commentary: row.commentary,
-      seoTitle: row.seoTitle,
-      seoDescription: row.seoDescription,
+      // Reader: commentary ships via per-verse hydrate (~80KB saved on ch.18).
+      commentary: include === "reader" ? null : row.commentary,
+      seoTitle: include === "reader" ? null : row.seoTitle,
+      seoDescription: include === "reader" ? null : row.seoDescription,
       sortOrder: row.sortOrder,
       isPublished: row.isPublished,
       chapterPublicId: chapter.publicId,
@@ -278,19 +308,43 @@ export class VersesService implements OnModuleInit {
     return { data, languages };
   }
 
-  async findPublishedByPublicId(publicId: string): Promise<VerseResponseDto> {
+  async findPublishedByPublicId(
+    publicId: string,
+    include: VerseDetailIncludeMode = "full",
+  ): Promise<VerseResponseDto> {
+    const cached = this.publishedVerseCache.get(
+      this.verseCacheKey(publicId, include),
+    );
+    if (cached && Date.now() < cached.expiresAt) {
+      return cached.data;
+    }
+
     const row = await this.prisma.verse.findFirst({
       where: { publicId, isPublished: true },
       include: {
         chapter: { include: { work: true } },
         translations: {
-          where: { isPublished: true },
+          where: {
+            isPublished: true,
+            ...(include === "hydrate"
+              ? {
+                  translationSource: {
+                    key: { in: [...HYDRATE_SOURCE_KEYS] },
+                  },
+                }
+              : {}),
+          },
           include: { language: true, translationSource: true },
         },
       },
     });
     if (!row) throw new NotFoundException(`Verse "${publicId}" not found`);
-    return this.toDto(row);
+    const data = this.toDto(row);
+    this.publishedVerseCache.set(this.verseCacheKey(publicId, include), {
+      expiresAt: Date.now() + this.cacheTtlMs,
+      data,
+    });
+    return data;
   }
 
   async getById(id: string): Promise<VerseResponseDto> {

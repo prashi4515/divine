@@ -313,12 +313,22 @@ export function VerseReader({
   }, [verse]);
 
   /**
-   * Slim chapter payloads omit vyakhya. Hydrate the active verse (and
-   * prefetch neighbours) so commentary appears without blocking first paint.
+   * Commentaries are stripped from the chapter list (keeps HTML small).
+   * Hydrate the active verse from the local static API — disk-fast, no Neon.
    */
   React.useEffect(() => {
     const active = localVerses[index];
     if (!active) return;
+
+    const hasBundledCommentary =
+      Boolean(active.commentary?.trim()) ||
+      active.translations.some((t) => VYAKHYA_SOURCES.has(t.sourceKey));
+
+    if (hasBundledCommentary) {
+      hydratedRef.current.add(active.publicId);
+      setCommentaryStatus("ready");
+      // Still prefetch neighbours from the local static route.
+    }
 
     const neighborIds = [
       localVerses[index - 1]?.publicId,
@@ -350,7 +360,9 @@ export function VerseReader({
       if (isActive) setCommentaryStatus("ready");
     }
 
-    void hydrate(active.publicId, true);
+    if (!hasBundledCommentary) {
+      void hydrate(active.publicId, true);
+    }
     for (const id of neighborIds) void hydrate(id, false);
 
     return () => {
@@ -662,15 +674,20 @@ export function VerseReader({
                       >
                         {commentary.text}
                       </p>
-                    ) : commentaryStatus === "loading" ? (
-                      <p
-                        className={cn(
-                          "text-muted-foreground animate-pulse text-sm",
-                          bodyFont,
-                        )}
-                      >
-                        …
-                      </p>
+                    ) : !mounted ||
+                      commentaryStatus === "idle" ||
+                      commentaryStatus === "loading" ? (
+                      mounted ? (
+                        <div
+                          className="animate-pulse space-y-2.5"
+                          aria-busy="true"
+                          aria-label={t.commentary}
+                        >
+                          <div className="bg-muted h-3.5 w-full rounded" />
+                          <div className="bg-muted h-3.5 w-[92%] rounded" />
+                          <div className="bg-muted h-3.5 w-[78%] rounded" />
+                        </div>
+                      ) : null
                     ) : (
                       <p
                         className={cn(

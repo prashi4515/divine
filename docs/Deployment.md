@@ -69,6 +69,7 @@ pnpm --filter @divine/api start:dev  # api on :8080
 - **Output Directory:** leave **empty** (Next.js uses `.next`; setting `public` causes the build to fail after success)
 - `apps/web/vercel.json` sets framework + pnpm install/build for the monorepo
 - Env: `DIVINE_API_URL`, `NEXT_PUBLIC_DIVINE_API_URL`, `NEXT_PUBLIC_DIVINE_ADMIN_AUTH_ENABLED`
+- **Gita reader pages are static:** HTML is built from `apps/web/content/gita/` (no Neon on the request path). After content imports, run `pnpm --filter @divine/web generate:gita-static` and commit the snapshots before deploying the web app.
 - _TODO — preview DB strategy (Neon branching)._
 
 ## 9. API Deployment (Render)

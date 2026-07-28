@@ -11,7 +11,6 @@ export type HomeMessages = {
   todaysVerse: string;
   searchVerses: string;
   verseForReflection: string;
-  featuredMeaning: string;
   readInContext: string;
   valuesHeading: string;
   valuesSubheading: string;
@@ -34,8 +33,6 @@ const en: HomeMessages = {
   todaysVerse: "Today's verse",
   searchVerses: "Search verses",
   verseForReflection: "Verse for reflection",
-  featuredMeaning:
-    "You have a right to your actions alone, never to their fruits.",
   readInContext: "Read in context",
   valuesHeading: "A quiet place to read scripture",
   valuesSubheading:
@@ -63,8 +60,6 @@ const hi: HomeMessages = {
   todaysVerse: "आज का श्लोक",
   searchVerses: "श्लोक खोजें",
   verseForReflection: "मनन के लिए श्लोक",
-  featuredMeaning:
-    "तुम्हारा अधिकार केवल कर्म में है, उसके फलों में कभी नहीं।",
   readInContext: "संदर्भ में पढ़ें",
   valuesHeading: "शास्त्र पढ़ने का एक शांत स्थान",
   valuesSubheading:
@@ -92,8 +87,6 @@ const te: HomeMessages = {
   todaysVerse: "నేటి శ్లోకం",
   searchVerses: "శ్లోకాలను వెతకండి",
   verseForReflection: "మననం కోసం శ్లోకం",
-  featuredMeaning:
-    "నీకు కర్మలో మాత్రమే అధికారం, వాటి ఫలాలపై ఎన్నడూ కాదు.",
   readInContext: "సందర్భంలో చదవండి",
   valuesHeading: "శాస్త్రం చదవడానికి ఒక ప్రశాంత స్థలం",
   valuesSubheading:
@@ -121,8 +114,6 @@ const kn: HomeMessages = {
   todaysVerse: "ಇಂದಿನ ಶ್ಲೋಕ",
   searchVerses: "ಶ್ಲೋಕಗಳನ್ನು ಹುಡುಕಿ",
   verseForReflection: "ಮನನಕ್ಕಾಗಿ ಶ್ಲೋಕ",
-  featuredMeaning:
-    "ನಿನಗೆ ಕರ್ಮದಲ್ಲಿ ಮಾತ್ರ ಅಧಿಕಾರ, ಅದರ ಫಲಗಳಲ್ಲಿ ಎಂದಿಗೂ ಇಲ್ಲ.",
   readInContext: "ಸಂದರ್ಭದಲ್ಲಿ ಓದಿ",
   valuesHeading: "ಶಾಸ್ತ್ರ ಓದಲು ಒಂದು ಶಾಂತ ಸ್ಥಳ",
   valuesSubheading:
@@ -150,8 +141,6 @@ const ta: HomeMessages = {
   todaysVerse: "இன்றைய சுலோகம்",
   searchVerses: "சுலோகங்களைத் தேடு",
   verseForReflection: "சிந்தனைக்கான சுலோகம்",
-  featuredMeaning:
-    "செயலில் மட்டுமே உனக்கு உரிமை, அதன் பலன்களில் ஒருபோதும் இல்லை.",
   readInContext: "சூழலில் படிக்க",
   valuesHeading: "மறைநூல் படிக்க ஓர் அமைதியான இடம்",
   valuesSubheading:
@@ -179,8 +168,6 @@ const ml: HomeMessages = {
   todaysVerse: "ഇന്നത്തെ ശ്ലോകം",
   searchVerses: "ശ്ലോകങ്ങൾ തിരയുക",
   verseForReflection: "ധ്യാനത്തിനുള്ള ശ്ലോകം",
-  featuredMeaning:
-    "പ്രവൃത്തിയിൽ മാത്രമേ നിനക്ക് അവകാശമുള്ളൂ, അതിന്റെ ഫലങ്ങളിൽ ഒരിക്കലുമില്ല.",
   readInContext: "സന്ദർഭത്തിൽ വായിക്കുക",
   valuesHeading: "വേദഗ്രന്ഥം വായിക്കാൻ ഒരു ശാന്ത ഇടം",
   valuesSubheading:
@@ -208,8 +195,6 @@ const or: HomeMessages = {
   todaysVerse: "ଆଜିର ଶ୍ଲୋକ",
   searchVerses: "ଶ୍ଲୋକ ଖୋଜନ୍ତୁ",
   verseForReflection: "ମନନ ପାଇଁ ଶ୍ଲୋକ",
-  featuredMeaning:
-    "ତୁମର ଅଧିକାର କେବଳ କର୍ମରେ, ଏହାର ଫଳରେ କେବେ ନୁହେଁ।",
   readInContext: "ପ୍ରସଙ୍ଗରେ ପଢ଼ନ୍ତୁ",
   valuesHeading: "ଶାସ୍ତ୍ର ପଢ଼ିବା ପାଇଁ ଏକ ଶାନ୍ତ ସ୍ଥାନ",
   valuesSubheading:
@@ -237,8 +222,6 @@ const sa: HomeMessages = {
   todaysVerse: "अद्यतनः श्लोकः",
   searchVerses: "श्लोकान् अन्विष्यताम्",
   verseForReflection: "मननाय श्लोकः",
-  featuredMeaning:
-    "कर्मणि एव अधिकारः ते, मा फलेषु कदाचन।",
   readInContext: "प्रसङ्गे पठ्यताम्",
   valuesHeading: "शास्त्रपठनाय शान्तं स्थानम्",
   valuesSubheading:

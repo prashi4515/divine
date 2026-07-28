@@ -31,24 +31,28 @@ export function RelatedReading({ versePublicId }: RelatedReadingProps) {
     const base = process.env.NEXT_PUBLIC_DIVINE_API_URL?.replace(/\/$/, "");
     if (!base) return;
 
-    void fetch(
-      `${base}/v1/search/related/${encodeURIComponent(versePublicId)}`,
-      { headers: { Accept: "application/json" } },
-    )
-      .then(async (res) => {
-        if (!res.ok) return null;
-        const json: unknown = await res.json();
-        return relatedContentResponseSchema.parse(json).data;
-      })
-      .then((parsed) => {
-        if (!cancelled && parsed) setData(parsed);
-      })
-      .catch(() => {
-        if (!cancelled) setData(null);
-      });
+    // Defer so commentary hydrate gets the Neon connection first.
+    const timer = window.setTimeout(() => {
+      void fetch(
+        `${base}/v1/search/related/${encodeURIComponent(versePublicId)}`,
+        { headers: { Accept: "application/json" } },
+      )
+        .then(async (res) => {
+          if (!res.ok) return null;
+          const json: unknown = await res.json();
+          return relatedContentResponseSchema.parse(json).data;
+        })
+        .then((parsed) => {
+          if (!cancelled && parsed) setData(parsed);
+        })
+        .catch(() => {
+          if (!cancelled) setData(null);
+        });
+    }, 1_200);
 
     return () => {
       cancelled = true;
+      window.clearTimeout(timer);
     };
   }, [versePublicId]);
 

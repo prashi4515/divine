@@ -25,7 +25,11 @@ import {
   VerseResponseDto,
   VerseTranslationDto,
 } from "./verses.dto";
-import { VersesService, type VerseIncludeMode } from "./verses.service";
+import {
+  VersesService,
+  type VerseDetailIncludeMode,
+  type VerseIncludeMode,
+} from "./verses.service";
 
 @ApiTags("verses")
 @Controller("verses")
@@ -107,12 +111,26 @@ export class VersesController {
   }
 
   @Get(":publicId")
-  @ApiOperation({ summary: "Get a published verse by publicId" })
+  @Header(
+    "Cache-Control",
+    "public, max-age=60, s-maxage=3600, stale-while-revalidate=86400",
+  )
+  @ApiOperation({
+    summary: "Get a published verse by publicId",
+    description:
+      "`include=hydrate` returns commentary rows only (for client-side chapter hydrate).",
+  })
   @ApiOkResponse({ type: VerseResponseDto })
   async getByPublicId(
     @Param("publicId") publicId: string,
+    @Query("include") include: VerseDetailIncludeMode = "full",
   ): Promise<{ data: VerseResponseDto }> {
-    const data = await this.versesService.findPublishedByPublicId(publicId);
+    const mode: VerseDetailIncludeMode =
+      include === "hydrate" ? "hydrate" : "full";
+    const data = await this.versesService.findPublishedByPublicId(
+      publicId,
+      mode,
+    );
     return { data };
   }
 }

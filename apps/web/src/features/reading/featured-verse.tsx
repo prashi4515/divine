@@ -3,14 +3,32 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { useHomeMessages } from "@/lib/i18n/use-messages";
+import { useReadingStore } from "@/lib/stores/reading-store";
+import {
+  dailyVerseMeaning,
+  getVerseOfTheDay,
+  type DailyVerse,
+} from "@/lib/reading/verse-of-the-day";
+import { isReadingLanguageCode } from "@/lib/reading/languages";
+
+type FeaturedVerseProps = {
+  /** Server-computed verse for the current IST calendar day. */
+  verse?: DailyVerse;
+};
 
 /**
- * A single, curated highlight verse (BG 2.47) rendered statically — no API call,
- * so the landing page stays instant. Sanskrit + transliteration are constant;
- * only the short gloss + labels localize.
+ * Home “verse of the day” — rotates by Asia/Kolkata calendar day from a
+ * curated catalog (no API call, so the landing page stays instant).
  */
-export function FeaturedVerse() {
+export function FeaturedVerse({ verse: verseProp }: FeaturedVerseProps) {
   const h = useHomeMessages();
+  const preferredLanguage = useReadingStore((s) => s.preferredLanguage);
+  const verse = verseProp ?? getVerseOfTheDay();
+  const language = isReadingLanguageCode(preferredLanguage)
+    ? preferredLanguage
+    : "en";
+  const meaning = dailyVerseMeaning(verse, language);
+  const href = `/bhagavad-gita/chapter-${verse.chapter}#verse-${verse.verse}`;
 
   return (
     <section
@@ -38,26 +56,24 @@ export function FeaturedVerse() {
         <blockquote className="mt-5 sm:mt-6">
           <p
             lang="sa"
-            className="font-serif text-xl leading-relaxed tracking-tight sm:text-2xl sm:leading-[1.9] md:text-[1.75rem]"
+            className="font-serif text-xl leading-relaxed tracking-tight whitespace-pre-line sm:text-2xl sm:leading-[1.9] md:text-[1.75rem]"
           >
-            कर्मण्येवाधिकारस्ते मा फलेषु कदाचन।
-            <br />
-            मा कर्मफलहेतुर्भूर्मा ते सङ्गोऽस्त्वकर्मणि॥
+            {verse.sanskrit}
           </p>
-          <p className="text-muted-foreground mt-4 text-sm italic leading-relaxed sm:mt-5 sm:text-base">
-            karmaṇy-evādhikāras te mā phaleṣu kadācana
+          <p className="text-muted-foreground mt-4 text-sm italic leading-relaxed whitespace-pre-line sm:mt-5 sm:text-base">
+            {verse.transliteration}
           </p>
           <p className="mx-auto mt-4 max-w-2xl text-pretty text-base leading-relaxed sm:mt-5 sm:text-lg">
-            {h.featuredMeaning}
+            {meaning}
           </p>
         </blockquote>
 
         <figcaption className="mt-7 flex flex-col items-center gap-3 sm:mt-8 sm:gap-4">
           <cite className="text-maroon font-mono text-xs not-italic tracking-wide">
-            bg.2.47
+            {verse.publicId}
           </cite>
           <Link
-            href="/bhagavad-gita/chapter-2#verse-47"
+            href={href}
             className="text-maroon group inline-flex items-center gap-1.5 text-sm font-medium underline-offset-4 hover:underline"
           >
             {h.readInContext}
