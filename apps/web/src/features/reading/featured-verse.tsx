@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, BookOpen } from "lucide-react";
 import { useHomeMessages } from "@/lib/i18n/use-messages";
 import { useReadingStore } from "@/lib/stores/reading-store";
 import {
@@ -10,6 +10,9 @@ import {
   type DailyVerse,
 } from "@/lib/reading/verse-of-the-day";
 import { isReadingLanguageCode } from "@/lib/reading/languages";
+import { shlokaFontClass } from "@/lib/reading/reader-fonts";
+import { formatGitaVerseLabel } from "@/lib/reading/verse-label";
+import { cn } from "@/lib/utils";
 
 type FeaturedVerseProps = {
   /** Server-computed verse for the current IST calendar day. */
@@ -33,56 +36,81 @@ export function FeaturedVerse({ verse: verseProp }: FeaturedVerseProps) {
   return (
     <section
       id="verse-of-the-day"
-      className="page-gutter w-full scroll-mt-24 py-8 sm:py-12"
+      className="page-gutter w-full scroll-mt-24 py-14 sm:py-20 md:py-24"
     >
       <figure
-        className="border-border/80 relative mx-auto w-full max-w-5xl overflow-hidden rounded-2xl border px-5 py-9 text-center shadow-sm sm:px-10 sm:py-12 md:px-16"
+        className="border-border/70 relative mx-auto w-full max-w-5xl overflow-hidden rounded-3xl border px-5 py-10 text-center shadow-sm sm:px-12 sm:py-16 md:px-16 md:py-20"
         style={{
           background:
-            "linear-gradient(180deg, hsl(var(--saffron) / 0.06), hsl(var(--card)))",
+            "linear-gradient(180deg, hsl(var(--saffron) / 0.07), hsl(var(--card)) 55%, hsl(var(--gold) / 0.05))",
         }}
       >
+        {/* Corner ornaments */}
         <span
-          className="text-saffron/25 pointer-events-none absolute -left-1 top-2 select-none font-serif text-6xl leading-none sm:text-7xl"
+          className="text-saffron/25 pointer-events-none absolute left-3 top-1 select-none font-serif text-6xl leading-none sm:left-5 sm:top-3 sm:text-8xl"
           aria-hidden
         >
           &ldquo;
         </span>
+        <span
+          className="text-saffron/25 pointer-events-none absolute bottom-1 right-3 select-none font-serif text-6xl leading-none sm:bottom-3 sm:right-5 sm:text-8xl"
+          aria-hidden
+        >
+          &rdquo;
+        </span>
+        <span
+          className="text-saffron/10 pointer-events-none absolute inset-x-0 top-1/2 select-none text-center font-serif text-[16rem] leading-none -translate-y-1/2 sm:text-[22rem]"
+          aria-hidden
+        >
+          ॐ
+        </span>
 
-        <p className="text-saffron text-[11px] font-medium uppercase tracking-[0.2em]">
-          {h.verseForReflection}
-        </p>
+        <div className="relative">
+          <p className="text-saffron inline-flex items-center gap-2 text-[10px] font-semibold uppercase tracking-[0.28em] sm:text-xs">
+            <span className="bg-saffron/70 h-px w-6" aria-hidden />
+            {h.verseForReflection}
+            <span className="bg-saffron/70 h-px w-6" aria-hidden />
+          </p>
 
-        <blockquote className="mt-5 sm:mt-6">
-          <p
-            lang="sa"
-            className="font-serif text-xl leading-relaxed tracking-tight whitespace-pre-line sm:text-2xl sm:leading-[1.9] md:text-[1.75rem]"
-          >
-            {verse.sanskrit}
-          </p>
-          <p className="text-muted-foreground mt-4 text-sm italic leading-relaxed whitespace-pre-line sm:mt-5 sm:text-base">
-            {verse.transliteration}
-          </p>
-          <p className="mx-auto mt-4 max-w-2xl text-pretty text-base leading-relaxed sm:mt-5 sm:text-lg">
-            {meaning}
-          </p>
-        </blockquote>
-
-        <figcaption className="mt-7 flex flex-col items-center gap-3 sm:mt-8 sm:gap-4">
-          <cite className="text-maroon font-mono text-xs not-italic tracking-wide">
-            {verse.publicId}
-          </cite>
-          <Link
-            href={href}
-            className="text-maroon group inline-flex items-center gap-1.5 text-sm font-medium underline-offset-4 hover:underline"
-          >
-            {h.readInContext}
-            <ArrowRight
-              className="h-3.5 w-3.5 transition-divine group-hover:translate-x-0.5"
+          <blockquote className="mt-6 sm:mt-8">
+            <p
+              lang="sa"
+              className={cn(
+                "text-shloka whitespace-pre-line",
+                shlokaFontClass("sa"),
+              )}
+            >
+              {verse.sanskrit}
+            </p>
+            <p className="text-muted-foreground mt-5 whitespace-pre-line text-sm italic leading-relaxed sm:mt-6 sm:text-base">
+              {verse.transliteration}
+            </p>
+            <div
+              className="bg-border/70 mx-auto mt-6 h-px w-16 sm:mt-8"
               aria-hidden
             />
-          </Link>
-        </figcaption>
+            <p className="text-foreground/90 mx-auto mt-6 max-w-2xl text-pretty text-lg leading-relaxed sm:mt-8 sm:text-xl">
+              {meaning}
+            </p>
+          </blockquote>
+
+          <figcaption className="mt-8 flex flex-col items-center gap-4 sm:mt-10">
+            <cite className="border-maroon/25 bg-background/70 text-maroon inline-flex items-center gap-1.5 rounded-full border px-3 py-1 text-[11px] not-italic tracking-wide sm:text-xs">
+              <BookOpen className="h-3 w-3" aria-hidden />
+              {formatGitaVerseLabel(verse.chapter, verse.verse)}
+            </cite>
+            <Link
+              href={href}
+              className="cta-saffron transition-divine group inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-medium shadow-sm hover:shadow-md"
+            >
+              {h.readInContext}
+              <ArrowRight
+                className="h-4 w-4 transition-divine group-hover:translate-x-0.5"
+                aria-hidden
+              />
+            </Link>
+          </figcaption>
+        </div>
       </figure>
     </section>
   );

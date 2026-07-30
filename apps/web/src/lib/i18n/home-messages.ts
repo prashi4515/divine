@@ -25,6 +25,35 @@ export type HomeMessages = {
   chaptersLabel: string;
   versesLabel: string;
   languagesLabel: string;
+  /**
+   * Optional new landing-page keys. Non-English variants inherit from `en`
+   * when they omit these — safe to translate incrementally.
+   */
+  yearsLabel?: string;
+  heroSubtitle?: string;
+  heroKicker?: string;
+  journeyEyebrow?: string;
+  journeyHeading?: string;
+  journeySubheading?: string;
+  pathChapterTitle?: string;
+  pathChapterBody?: string;
+  pathDailyTitle?: string;
+  pathDailyBody?: string;
+  pathSearchTitle?: string;
+  pathSearchBody?: string;
+  chaptersEyebrow?: string;
+  chaptersHeading?: string;
+  chaptersSubheading?: string;
+  viewAllChapters?: string;
+  wisdomEyebrow?: string;
+  wisdomHeading?: string;
+  wisdomSubheading?: string;
+  languagesEyebrow?: string;
+  languagesHeading?: string;
+  languagesSubheading?: string;
+  valuesEyebrow?: string;
+  browseEyebrow?: string;
+  browseSecondaryCta?: string;
 };
 
 const en: HomeMessages = {
@@ -52,6 +81,39 @@ const en: HomeMessages = {
   chaptersLabel: "Chapters",
   versesLabel: "Verses",
   languagesLabel: "Languages",
+  yearsLabel: "Years timeless",
+  heroKicker: "The Song of God",
+  heroSubtitle:
+    "Seven hundred verses of counsel from Sri Krishna to Arjuna — presented for quiet, unhurried reading in the language of your heart.",
+  journeyEyebrow: "Three ways to begin",
+  journeyHeading: "Choose your path in",
+  journeySubheading:
+    "There is no wrong way to read the Gita. Start where the moment takes you.",
+  pathChapterTitle: "Read chapter by chapter",
+  pathChapterBody:
+    "Eighteen chapters, each a complete teaching. Move at your own pace, revisit any verse.",
+  pathDailyTitle: "One verse a day",
+  pathDailyBody:
+    "A single shloka to sit with — arrives with the sunrise in Kolkata.",
+  pathSearchTitle: "Search a theme",
+  pathSearchBody:
+    "Duty, devotion, dispassion, doubt — find verses that meet the question you are asking.",
+  chaptersEyebrow: "The eighteen chapters",
+  chaptersHeading: "A map of the whole journey",
+  chaptersSubheading:
+    "From Arjuna’s despair to the final teaching of surrender — every chapter is one step of the path.",
+  viewAllChapters: "Explore all chapters",
+  wisdomEyebrow: "Read across the ages",
+  wisdomHeading: "What great minds have said about the Gita",
+  wisdomSubheading:
+    "For two and a half millennia the Gita has quietly shaped the lives of seekers, scientists and statespeople across the world.",
+  languagesEyebrow: "Eight languages",
+  languagesHeading: "Read in the language you think in",
+  languagesSubheading:
+    "Every verse comes with Sanskrit, translations, word-by-word meanings and commentary — in eight scripts.",
+  valuesEyebrow: "Built for calm reading",
+  browseEyebrow: "Begin now",
+  browseSecondaryCta: "Read today’s verse",
 };
 
 const hi: HomeMessages = {
@@ -255,8 +317,8 @@ const HOME_CATALOG: Record<ReadingLanguageCode, HomeMessages> = {
 };
 
 export function getHomeMessages(code: string): HomeMessages {
-  if (code in HOME_CATALOG) {
-    return HOME_CATALOG[code as ReadingLanguageCode];
-  }
-  return en;
+  const override = HOME_CATALOG[code as ReadingLanguageCode];
+  // Non-English variants inherit any new landing keys from English until
+  // translations are added — no missing UI strings, no stale copy either.
+  return override ? { ...en, ...override } : en;
 }

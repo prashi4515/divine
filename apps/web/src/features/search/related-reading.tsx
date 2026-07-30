@@ -7,6 +7,7 @@ import {
   type SearchTopicChip,
   type RelatedVerse,
 } from "@divine/types";
+import { formatPublicIdLabel } from "@/lib/reading/verse-label";
 import { TopicChip } from "./topic-chip";
 
 type RelatedReadingProps = {
@@ -92,7 +93,7 @@ export function RelatedReading({ versePublicId }: RelatedReadingProps) {
                   className="hover:text-foreground text-muted-foreground block text-sm leading-relaxed transition-divine"
                 >
                   <span className="text-foreground font-medium">
-                    {v.publicId}
+                    {formatPublicIdLabel(v.publicId)}
                   </span>
                   <span className="mt-0.5 block">{v.preview}</span>
                 </Link>
@@ -113,7 +114,7 @@ export function RelatedReading({ versePublicId }: RelatedReadingProps) {
                   className="hover:text-foreground text-muted-foreground block text-sm leading-relaxed transition-divine"
                 >
                   <span className="text-foreground font-medium">
-                    {v.publicId}
+                    {formatPublicIdLabel(v.publicId)}
                   </span>
                   <span className="mt-0.5 block">{v.preview}</span>
                 </Link>

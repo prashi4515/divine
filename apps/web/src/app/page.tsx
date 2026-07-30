@@ -1,18 +1,27 @@
 import type { Metadata } from "next";
 import { FeaturedVerse } from "@/features/reading/featured-verse";
 import { HomeBrowseCta } from "@/features/reading/home-browse-cta";
+import { HomeChaptersPreview } from "@/features/reading/home-chapters-preview";
 import { HomeHero } from "@/features/reading/home-hero";
+import { HomeJourney } from "@/features/reading/home-journey";
+import { HomeLanguages } from "@/features/reading/home-languages";
 import { HomeValues } from "@/features/reading/home-values";
+import { HomeWisdom } from "@/features/reading/home-wisdom";
 import { SiteFooter } from "@/features/reading/site-footer";
 import { SiteHeader } from "@/features/reading/site-header";
-import { readerFontVariableClass } from "@/lib/reading/reader-font-vars";
 import { getVerseOfTheDay } from "@/lib/reading/verse-of-the-day";
 
 export const metadata: Metadata = {
   title: "Bhagavad Gita — The Song of God",
   description:
-    "A calm, multilingual home for reading scripture — thoughtfully presented for the modern seeker.",
+    "A calm, multilingual home for reading the Bhagavad Gita. Sanskrit shlokas, word-by-word meanings, translations and commentary in eight languages — presented for slow, unhurried reading.",
   alternates: { canonical: "/" },
+  openGraph: {
+    title: "Bhagavad Gita — The Song of God",
+    description:
+      "Sanskrit shlokas, word-by-word meanings, translations and commentary — in eight Indian languages.",
+    type: "website",
+  },
 };
 
 /** Refresh periodically so “verse of the day” advances with the IST calendar. */
@@ -22,9 +31,9 @@ export default function HomePage() {
   const verseOfTheDay = getVerseOfTheDay();
 
   return (
-    <div
-      className={`relative flex min-h-svh flex-col ${readerFontVariableClass}`}
-    >
+    <div className="relative flex min-h-svh flex-col">
+      {/* Page-level warm wash sitting behind every section. Individual
+          sections layer their own gradients on top for depth. */}
       <div
         className="pointer-events-none absolute inset-0 -z-10"
         aria-hidden
@@ -43,7 +52,11 @@ export default function HomePage() {
       <main className="flex-1">
         <HomeHero />
         <FeaturedVerse verse={verseOfTheDay} />
+        <HomeChaptersPreview />
+        <HomeLanguages />
+        <HomeWisdom />
         <HomeValues />
+        <HomeJourney />
         <HomeBrowseCta />
       </main>
 

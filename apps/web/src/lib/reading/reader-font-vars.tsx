@@ -1,36 +1,31 @@
 import {
-  Cormorant_Garamond,
-  Noto_Serif_Devanagari,
   Noto_Serif_Gujarati,
-  Noto_Serif_Kannada,
   Noto_Serif_Malayalam,
   Noto_Serif_Oriya,
-  Noto_Serif_Tamil,
   Noto_Serif_Telugu,
+  Tiro_Devanagari_Sanskrit,
+  Tiro_Kannada,
+  Tiro_Tamil,
 } from "next/font/google";
 
 /**
- * Reader fonts — weights kept to 400+700 so chapter pages don't download
- * four faces per script (was a major contributor to slow first paint).
+ * Indic scripture faces — paired with Fredoka (--font-sans) on the document
+ * root. Latin UI uses Fredoka; these cover Telugu / Devanagari / etc.
+ *
+ * Telugu uses Noto Serif Telugu (holy-bhagavad-gita–like readability) rather
+ * than a heavy display face that warps conjuncts like సంజయ.
  */
-const cormorant = Cormorant_Garamond({
-  subsets: ["latin", "latin-ext"],
-  weight: ["400", "700"],
-  variable: "--font-reader-en",
-  display: "swap",
-});
-
-const notoDeva = Noto_Serif_Devanagari({
+const tiroDeva = Tiro_Devanagari_Sanskrit({
   subsets: ["devanagari", "latin"],
-  weight: ["400", "700"],
+  weight: "400",
   variable: "--font-reader-deva",
   display: "swap",
   preload: false,
 });
 
-const notoKn = Noto_Serif_Kannada({
+const tiroKn = Tiro_Kannada({
   subsets: ["kannada", "latin"],
-  weight: ["400", "700"],
+  weight: "400",
   variable: "--font-reader-kn",
   display: "swap",
   preload: false,
@@ -44,9 +39,9 @@ const notoTe = Noto_Serif_Telugu({
   preload: false,
 });
 
-const notoTa = Noto_Serif_Tamil({
+const tiroTa = Tiro_Tamil({
   subsets: ["tamil", "latin"],
-  weight: ["400", "700"],
+  weight: "400",
   variable: "--font-reader-ta",
   display: "swap",
   preload: false,
@@ -76,13 +71,12 @@ const notoOr = Noto_Serif_Oriya({
   preload: false,
 });
 
-/** Class string that defines all reader font CSS variables on a layout root. */
+/** Class string that defines Indic reader font CSS variables on a layout root. */
 export const readerFontVariableClass = [
-  cormorant.variable,
-  notoDeva.variable,
-  notoKn.variable,
+  tiroDeva.variable,
+  tiroKn.variable,
   notoTe.variable,
-  notoTa.variable,
+  tiroTa.variable,
   notoMl.variable,
   notoGu.variable,
   notoOr.variable,

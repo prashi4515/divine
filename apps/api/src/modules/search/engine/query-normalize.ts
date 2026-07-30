@@ -26,9 +26,11 @@ export function compactLatin(value: string): string {
 }
 
 export function normalizeSearchQuery(raw: string): string {
+  // NFKD + strip Latin combining marks only (U+0300–036F). Do NOT strip
+  // Indic virama/matras (e.g. U+094D) — that used to turn कर्म into करम.
   return raw
     .normalize("NFKD")
-    .replace(/\p{M}/gu, "")
+    .replace(/[\u0300-\u036f]/g, "")
     .toLowerCase()
     .replace(/[^a-z0-9\u0900-\u097f\u0c00-\u0c7f\s.-]/gu, " ")
     .replace(/\s+/g, " ")
@@ -98,9 +100,31 @@ export const BUILTIN_TERM_GROUPS: ReadonlyArray<{
     terms: ["peace", "shanti", "tranquility", "शान्ति", "శాంతి"],
   },
   {
+    canonical: "dharma",
+    kind: "synonym",
+    terms: [
+      "dharma",
+      "righteousness",
+      "duty",
+      "justice",
+      "fairness",
+      "virtue",
+      "धर्म",
+      "ధర్మం",
+    ],
+  },
+  {
     canonical: "karma",
     kind: "synonym",
-    terms: ["work", "karma", "action", "duty", "कर्म", "కర్మ"],
+    terms: [
+      "work",
+      "karma",
+      "action",
+      "duty",
+      "deed",
+      "कर्म",
+      "కర్మ",
+    ],
   },
   {
     canonical: "jnana",
@@ -121,11 +145,6 @@ export const BUILTIN_TERM_GROUPS: ReadonlyArray<{
     canonical: "yoga",
     kind: "synonym",
     terms: ["yoga", "union", "discipline", "योग"],
-  },
-  {
-    canonical: "dharma",
-    kind: "synonym",
-    terms: ["dharma", "righteousness", "धर्म", "ధర్మం"],
   },
   {
     canonical: "moksha",

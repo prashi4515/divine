@@ -2,6 +2,11 @@ import { access, readFile } from "node:fs/promises";
 import path from "node:path";
 import { cache } from "react";
 import type { Chapter, Verse } from "@divine/types";
+import {
+  applyTranslationCorrections,
+  loadContentCorrections,
+} from "@/lib/reading/apply-content-corrections";
+import { repairIndicOrthography } from "@/lib/reading/repair-indic-orthography";
 import type { GitaChapterSnapshot } from "@/lib/reading/gita-static-schema";
 
 export type GitaCommentaryEntry = {
@@ -64,10 +69,8 @@ export const getStaticGitaChapter = cache(
       throw new Error(`Invalid Gita chapter number: ${chapterNumber}`);
     }
 
-    if (process.env.NODE_ENV === "production") {
-      const cached = chapterMemo.get(chapterNumber);
-      if (cached) return cached;
-    }
+    const cached = chapterMemo.get(chapterNumber);
+    if (cached) return cached;
 
     const dir = await gitaContentDir();
     const filePath = path.join(dir, "reader", `bg.${chapterNumber}.json`);
@@ -75,10 +78,35 @@ export const getStaticGitaChapter = cache(
     if (!json?.chapter || !Array.isArray(json.verses)) {
       throw new Error(`Corrupt Gita snapshot: bg.${chapterNumber}.json`);
     }
-    if (process.env.NODE_ENV === "production") {
-      chapterMemo.set(chapterNumber, json);
-    }
-    return json;
+
+    const corrections = await loadContentCorrections(dir);
+    const withFixes: GitaChapterSnapshot = {
+      ...json,
+      verses: json.verses.map((verse) => ({
+        ...verse,
+        sanskritText: repairIndicOrthography(verse.sanskritText),
+        transliteration: verse.transliteration
+          ? repairIndicOrthography(verse.transliteration)
+          : verse.transliteration,
+        meaning: verse.meaning
+          ? repairIndicOrthography(verse.meaning)
+          : verse.meaning,
+        commentary: verse.commentary
+          ? repairIndicOrthography(verse.commentary)
+          : verse.commentary,
+        translations: applyTranslationCorrections(
+          verse.publicId,
+          verse.translations.map((row) => ({
+            ...row,
+            text: repairIndicOrthography(row.text),
+          })),
+          corrections,
+        ),
+      })),
+    };
+
+    chapterMemo.set(chapterNumber, withFixes);
+    return withFixes;
   },
 );
 
@@ -95,10 +123,31 @@ export const getStaticGitaCommentary = cache(
     if (!json?.byNumber) {
       throw new Error(`Corrupt Gita commentary: bg.${chapterNumber}.json`);
     }
-    if (process.env.NODE_ENV === "production") {
-      commentaryMemo.set(chapterNumber, json);
+
+    const corrections = await loadContentCorrections(dir);
+    const byNumber: GitaCommentaryFile["byNumber"] = {};
+    for (const [num, entry] of Object.entries(json.byNumber)) {
+      byNumber[num] = {
+        ...entry,
+        commentary: entry.commentary
+          ? repairIndicOrthography(entry.commentary)
+          : entry.commentary,
+        translations: applyTranslationCorrections(
+          entry.publicId,
+          entry.translations.map((row) => ({
+            ...row,
+            text: repairIndicOrthography(row.text),
+          })),
+          corrections,
+        ),
+      };
     }
-    return json;
+    const withFixes: GitaCommentaryFile = { ...json, byNumber };
+
+    if (process.env.NODE_ENV === "production") {
+      commentaryMemo.set(chapterNumber, withFixes);
+    }
+    return withFixes;
   },
 );
 
@@ -111,16 +160,18 @@ export async function getStaticGitaVerseCommentary(
   return file.byNumber[String(verseNumber)] ?? null;
 }
 
-export const getStaticGitaChaptersIndex = cache(async (): Promise<Chapter[]> => {
-  if (process.env.NODE_ENV === "production" && indexMemo) return indexMemo;
-  const dir = await gitaContentDir();
-  const filePath = path.join(dir, "chapters.json");
-  const json = (await readJsonFile(filePath)) as { chapters?: Chapter[] };
-  if (!Array.isArray(json.chapters)) {
-    throw new Error("Corrupt Gita snapshot: chapters.json");
-  }
-  if (process.env.NODE_ENV === "production") {
-    indexMemo = json.chapters;
-  }
-  return json.chapters;
-});
+export const getStaticGitaChaptersIndex = cache(
+  async (): Promise<Chapter[]> => {
+    if (process.env.NODE_ENV === "production" && indexMemo) return indexMemo;
+    const dir = await gitaContentDir();
+    const filePath = path.join(dir, "chapters.json");
+    const json = (await readJsonFile(filePath)) as { chapters?: Chapter[] };
+    if (!Array.isArray(json.chapters)) {
+      throw new Error("Corrupt Gita snapshot: chapters.json");
+    }
+    if (process.env.NODE_ENV === "production") {
+      indexMemo = json.chapters;
+    }
+    return json.chapters;
+  },
+);

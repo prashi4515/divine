@@ -1,6 +1,7 @@
 "use client";
 
 import type { SearchSuggestion } from "@divine/types";
+import { formatPublicIdLabel, isGitaPublicId } from "@/lib/reading/verse-label";
 
 type AutocompleteDropdownProps = {
   query: string;
@@ -18,19 +19,24 @@ const KIND_LABEL: Record<SearchSuggestion["kind"], string> = {
   synonym: "Related",
 };
 
-function renderMatchedLabel(text: string, query: string) {
-  const q = query.trim();
-  if (!q) return <span className="truncate text-sm">{text}</span>;
+function displaySuggestionText(text: string): string {
+  return isGitaPublicId(text) ? formatPublicIdLabel(text) : text;
+}
 
-  const lower = text.toLowerCase();
+function renderMatchedLabel(text: string, query: string) {
+  const label = displaySuggestionText(text);
+  const q = query.trim();
+  if (!q) return <span className="truncate text-sm">{label}</span>;
+
+  const lower = label.toLowerCase();
   const qi = lower.indexOf(q.toLowerCase());
   if (qi < 0) {
-    return <span className="truncate text-sm">{text}</span>;
+    return <span className="truncate text-sm">{label}</span>;
   }
 
-  const before = text.slice(0, qi);
-  const match = text.slice(qi, qi + q.length);
-  const after = text.slice(qi + q.length);
+  const before = label.slice(0, qi);
+  const match = label.slice(qi, qi + q.length);
+  const after = label.slice(qi + q.length);
 
   return (
     <span className="truncate text-sm">

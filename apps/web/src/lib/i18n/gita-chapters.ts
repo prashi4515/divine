@@ -231,28 +231,22 @@ const INTRO_HI: Record<number, string> = {
   18: "समापन। संन्यास, धर्म, ज्ञान और शरणागति स्वतंत्रता व भक्ति के अंतिम उपदेश में मिलते हैं।",
 };
 
-function fillIntros(
-  base: Record<number, string>,
-): Record<number, string> {
-  const out: Record<number, string> = {};
-  for (let i = 1; i <= 18; i += 1) {
-    out[i] = base[i] ?? INTRO_EN[i]!;
-  }
-  return out;
-}
-
-export const GITA_CHAPTER_INTROS: Record<
-  ReadingLanguageCode,
-  Record<number, string>
+/**
+ * Only include languages we have hand-written intros for. Do NOT fall a
+ * language's intro back to a *different* Indic language (e.g. Tamil → Telugu)
+ * — different scripts, mostly mutually unintelligible, and a Tamil reader
+ * seeing Telugu text is worse than seeing the English original.
+ *
+ * `gitaChapterIntro` below does the sensible fallback:
+ *   - Sanskrit → Hindi (both Devanagari, ~40% shared vocabulary) → English
+ *   - anything else without a translation → English (universal fallback)
+ */
+export const GITA_CHAPTER_INTROS: Partial<
+  Record<ReadingLanguageCode, Record<number, string>>
 > = {
   en: INTRO_EN,
-  sa: fillIntros(INTRO_HI),
   hi: INTRO_HI,
   te: INTRO_TE,
-  kn: fillIntros(INTRO_TE),
-  ta: fillIntros(INTRO_TE),
-  ml: fillIntros(INTRO_TE),
-  or: fillIntros(INTRO_HI),
 };
 
 export function gitaChapterTitle(
@@ -272,9 +266,13 @@ export function gitaChapterIntro(
   lang: ReadingLanguageCode,
   number: number,
 ): string {
-  return (
-    GITA_CHAPTER_INTROS[lang][number] ??
-    GITA_CHAPTER_INTROS.en[number] ??
-    ""
-  );
+  const primary = GITA_CHAPTER_INTROS[lang]?.[number];
+  if (primary) return primary;
+  // Sanskrit readers can navigate Hindi (shared Devanagari script), so let
+  // Sanskrit fall through to the Hindi text before English.
+  if (lang === "sa") {
+    const hi = GITA_CHAPTER_INTROS.hi?.[number];
+    if (hi) return hi;
+  }
+  return GITA_CHAPTER_INTROS.en?.[number] ?? "";
 }

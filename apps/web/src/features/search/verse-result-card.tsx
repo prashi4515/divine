@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import type { VerseSearchResult } from "@divine/types";
+import { formatGitaVerseLabel } from "@/lib/reading/verse-label";
 import { HighlightText, textContainsAny } from "./highlight-text";
 import { MatchExplanation } from "./match-explanation";
 import { TopicChip } from "./topic-chip";
@@ -39,6 +40,10 @@ export function VerseResultCard({
   const foundInVerse = result.matchedKeywords.filter((k) =>
     textContainsAny(corpus, [k]),
   );
+  const title = formatGitaVerseLabel(
+    result.chapterNumber,
+    result.verseNumber,
+  );
 
   return (
     <article className="border-border/60 group border-b py-5 last:border-b-0">
@@ -48,14 +53,8 @@ export function VerseResultCard({
           prefetch
           className="font-serif text-lg tracking-tight underline-offset-4 hover:underline"
         >
-          {result.publicId}
+          {title}
         </Link>
-        <span
-          className="text-muted-foreground text-[11px] tabular-nums tracking-wide"
-          title="Relevance score"
-        >
-          {result.score.toFixed(1)}
-        </span>
       </div>
 
       {sanskrit ? (

@@ -57,30 +57,34 @@
   /* Content-specific (verse reader) */
   --verse: 24 10% 10%;
   --verse-muted: 25 5% 40%;
-  --sanskrit: 24 12% 18%;
+  /* Warm burnt sienna — shloka display (classic Gita-site look) */
+  --sanskrit: 16 58% 36%;
 
   /* ------------------------------------------------------------------ */
   /* Typography                                                         */
-  /* Apps inject --font-sans / --font-serif via next/font.              */
+  /* Apps inject --font-sans (Fredoka) + --font-reader-* via next/font. */
   /* ------------------------------------------------------------------ */
   --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
 
-  --text-xs: 0.75rem; /* 12 */
-  --text-sm: 0.875rem; /* 14 */
-  --text-base: 1rem; /* 16 */
-  --text-lg: 1.125rem; /* 18 */
-  --text-xl: 1.25rem; /* 20 */
-  --text-2xl: 1.5rem; /* 24 */
-  --text-3xl: 1.875rem; /* 30 */
-  --text-4xl: 2.25rem; /* 36 */
+  --text-xs: 0.8125rem; /* 13 — slightly larger for older readers */
+  --text-sm: 0.9375rem; /* 15 */
+  --text-base: 1.125rem; /* 18 */
+  --text-lg: 1.25rem; /* 20 */
+  --text-xl: 1.375rem; /* 22 */
+  --text-2xl: 1.625rem; /* 26 */
+  --text-3xl: 2rem; /* 32 */
+  --text-4xl: 2.375rem; /* 38 */
   --text-5xl: 3rem; /* 48 */
   --text-6xl: 3.75rem; /* 60 */
 
-  --leading-tight: 1.2;
-  --leading-snug: 1.35;
-  --leading-normal: 1.5;
-  --leading-relaxed: 1.65;
-  --leading-verse: 1.95;
+  --leading-tight: 1.25;
+  --leading-snug: 1.45;
+  --leading-normal: 1.7;
+  --leading-relaxed: 1.85;
+  /* Body reading (translation / commentary) — airy for older eyes */
+  --leading-reading: 2.35;
+  /* Shloka pādas — compact like print Gita couplets */
+  --leading-verse: 1.35;
 
   --tracking-tight: -0.02em;
   --tracking-normal: 0;

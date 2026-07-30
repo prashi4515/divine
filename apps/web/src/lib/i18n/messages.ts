@@ -40,6 +40,10 @@ export type Messages = {
   go: string;
   readIn: string;
   jumpToVerse: string;
+  quickJump: string;
+  chooseChapter: string;
+  selectVerse: string;
+  startReading: string;
   meaning: string;
   commentary: string;
   copy: string;
@@ -99,6 +103,10 @@ const en = build("en", {
   go: "Go",
   readIn: "Read in",
   jumpToVerse: "Jump to any verse",
+  quickJump: "Quick Jump to Any Verse",
+  chooseChapter: "Choose Chapter",
+  selectVerse: "Select Verse",
+  startReading: "Start Reading",
   meaning: "Word meanings",
   commentary: "Commentary",
   copy: "Copy",
@@ -150,6 +158,10 @@ const hi = build("hi", {
   go: "जाएँ",
   readIn: "इस भाषा में पढ़ें",
   jumpToVerse: "किसी भी श्लोक पर जाएँ",
+  quickJump: "किसी भी श्लोक पर जाएँ",
+  chooseChapter: "अध्याय चुनें",
+  selectVerse: "श्लोक चुनें",
+  startReading: "पढ़ना शुरू करें",
   meaning: "पदार्थ",
   commentary: "टीका",
   copy: "कॉपी",
@@ -201,6 +213,10 @@ const te = build("te", {
   go: "వెళ్లు",
   readIn: "ఈ భాషలో చదవండి",
   jumpToVerse: "ఏ శ్లోకానికైనా వెళ్లండి",
+  quickJump: "ఏ శ్లోకానికైనా వెంటనే వెళ్లండి",
+  chooseChapter: "అధ్యాయాన్ని ఎంచుకోండి",
+  selectVerse: "శ్లోకం ఎంచుకోండి",
+  startReading: "చదవడం ప్రారంభించండి",
   meaning: "పదార్థాలు",
   commentary: "వ్యాఖ్యానం",
   copy: "కాపీ",
@@ -252,6 +268,10 @@ const kn = build("kn", {
   go: "ಹೋಗಿ",
   readIn: "ಈ ಭಾಷೆಯಲ್ಲಿ ಓದಿ",
   jumpToVerse: "ಯಾವುದೇ ಶ್ಲೋಕಕ್ಕೆ ಹೋಗಿ",
+  quickJump: "ಯಾವುದೇ ಶ್ಲೋಕಕ್ಕೆ ತ್ವರಿತವಾಗಿ ಹೋಗಿ",
+  chooseChapter: "ಅಧ್ಯಾಯವನ್ನು ಆಯ್ಕೆಮಾಡಿ",
+  selectVerse: "ಶ್ಲೋಕವನ್ನು ಆಯ್ಕೆಮಾಡಿ",
+  startReading: "ಓದಲು ಪ್ರಾರಂಭಿಸಿ",
   meaning: "ಪದಾರ್ಥಗಳು",
   commentary: "ವ್ಯಾಖ್ಯಾನ",
   copy: "ನಕಲು",
@@ -303,6 +323,10 @@ const ta = build("ta", {
   go: "செல்",
   readIn: "இந்த மொழியில் வாசிக்க",
   jumpToVerse: "எந்த சுலோகத்திற்கும் செல்லுங்கள்",
+  quickJump: "எந்த சுலோகத்திற்கும் விரைவாக செல்லுங்கள்",
+  chooseChapter: "அத்தியாயத்தைத் தேர்ந்தெடுக்கவும்",
+  selectVerse: "சுலோகத்தைத் தேர்ந்தெடுக்கவும்",
+  startReading: "படிக்கத் தொடங்குங்கள்",
   meaning: "சொற்பொருள்",
   commentary: "விளக்கம்",
   copy: "நகலெடு",
@@ -354,6 +378,10 @@ const ml = build("ml", {
   go: "പോകുക",
   readIn: "ഈ ഭാഷയിൽ വായിക്കുക",
   jumpToVerse: "ഏത് ശ്ലോകത്തിലേക്കും പോകുക",
+  quickJump: "ഏത് ശ്ലോകത്തിലേക്കും പെട്ടെന്ന് പോകുക",
+  chooseChapter: "അധ്യായം തിരഞ്ഞെടുക്കുക",
+  selectVerse: "ശ്ലോകം തിരഞ്ഞെടുക്കുക",
+  startReading: "വായന ആരംഭിക്കുക",
   meaning: "പദാർത്ഥങ്ങൾ",
   commentary: "വ്യാഖ്യാനം",
   copy: "പകർത്തുക",
@@ -405,6 +433,10 @@ const or = build("or", {
   go: "ଯାଆନ୍ତୁ",
   readIn: "ଏହି ଭାଷାରେ ପଢ଼ନ୍ତୁ",
   jumpToVerse: "ଯେକୌଣସି ଶ୍ଲୋକକୁ ଯାଆନ୍ତୁ",
+  quickJump: "ଯେକୌଣସି ଶ୍ଲୋକକୁ ଶୀଘ୍ର ଯାଆନ୍ତୁ",
+  chooseChapter: "ଅଧ୍ୟାୟ ବାଛନ୍ତୁ",
+  selectVerse: "ଶ୍ଲୋକ ବାଛନ୍ତୁ",
+  startReading: "ପଢ଼ିବା ଆରମ୍ଭ କରନ୍ତୁ",
   meaning: "ପଦାର୍ଥ",
   commentary: "ଟୀକା",
   copy: "କପି",
@@ -451,6 +483,10 @@ const sa = build("sa", {
   go: "गच्छतु",
   readIn: "अस्यां भाषायां पठतु",
   jumpToVerse: "यस्मिन् कस्मिन् अपि श्लोके गच्छतु",
+  quickJump: "शीघ्रं श्लोकं गच्छतु",
+  chooseChapter: "अध्यायं वृणु",
+  selectVerse: "श्लोकं वृणु",
+  startReading: "पठनम् आरभस्व",
   meaning: "पदार्थाः",
   commentary: "टीका",
   copy: "प्रतिलिपिः",

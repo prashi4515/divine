@@ -43,7 +43,9 @@ export function HeaderSearch() {
           if (cancelled) return;
           setSuggestions(rows);
           setListOpen(rows.length > 0);
-          setActiveIndex(rows.length > 0 ? 0 : -1);
+          // Do not auto-highlight — Enter must submit the typed query to /search
+          // (a highlighted verse used to deep-link past the results page).
+          setActiveIndex(-1);
         })
         .catch(() => {
           if (!cancelled) {
@@ -85,17 +87,14 @@ export function HeaderSearch() {
   }
 
   function selectSuggestion(item: SearchSuggestion) {
-    if (item.kind === "verse" && item.href) {
-      collapse();
-      router.push(item.href);
-      return;
-    }
+    // Always open the search results page — never jump straight to one verse.
+    // The same query string often matches many chapters.
     if (item.kind === "topic" && item.href) {
       collapse();
       router.push(item.href);
       return;
     }
-    go(item.text);
+    go(value.trim() || item.text);
   }
 
   if (!expanded) {
@@ -149,7 +148,11 @@ export function HeaderSearch() {
             }
             if (e.key === "Enter") {
               e.preventDefault();
-              if (listOpen && activeIndex >= 0 && suggestions[activeIndex]) {
+              if (
+                listOpen &&
+                activeIndex >= 0 &&
+                suggestions[activeIndex]?.kind === "topic"
+              ) {
                 selectSuggestion(suggestions[activeIndex]!);
               } else {
                 go(value);

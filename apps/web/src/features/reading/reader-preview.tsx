@@ -36,11 +36,8 @@ export function ReaderPreview({ chapterNumber }: ReaderPreviewProps) {
         className="border-border bg-card animate-fade-up rounded-xl border p-6 shadow-xs sm:p-10"
         aria-label={`Preview of verse 1 in chapter ${chapterNumber}`}
       >
-        <p className="text-muted-foreground font-mono text-[11px] tracking-wide">
-          bg.{chapterNumber}.1
-        </p>
-        <p className="text-muted-foreground mt-3 text-xs uppercase tracking-[0.18em]">
-          Verse 1
+        <p className="text-muted-foreground text-[11px] font-medium tracking-wide">
+          Chapter {chapterNumber}, Verse 1
         </p>
 
         <div className="mt-8 space-y-8">

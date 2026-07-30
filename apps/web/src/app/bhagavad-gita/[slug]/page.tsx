@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { ChapterHero } from "@/features/reading/chapter-hero";
-import { ChapterNavigation } from "@/features/reading/chapter-navigation";
 import { ChapterReaderHeader } from "@/features/reading/chapter-reader-header";
 import { VerseReaderClient } from "@/features/reading/verse-reader-client";
 import { SiteFooter } from "@/features/reading/site-footer";
@@ -110,37 +109,22 @@ export default async function ChapterPage({ params }: ChapterPageProps) {
       <ChapterReaderHeader />
 
       <main className="page-gutter w-full max-w-none flex-1 pb-14 pt-6 sm:pb-16 md:pb-20 md:pt-8">
-        <ChapterHero
-          number={snapshot.chapter.number}
-          title={snapshot.chapter.title}
-          verseCount={snapshot.chapter.verseCount}
-          workTitle={snapshot.chapter.work.title}
-          workCode={snapshot.chapter.work.code}
+        <VerseReaderClient
+          chapterNumber={snapshot.chapter.number}
+          verses={snapshot.verses}
+          languages={readerLanguages}
+          initialLanguage="en"
+          hero={
+            <ChapterHero
+              number={snapshot.chapter.number}
+              title={snapshot.chapter.title}
+              verseCount={snapshot.chapter.verseCount}
+              workTitle={snapshot.chapter.work.title}
+              workCode={snapshot.chapter.work.code}
+              align="center"
+            />
+          }
         />
-
-        <div className="mt-10 w-full space-y-10 md:mt-12 md:space-y-12">
-          <VerseReaderClient
-            chapterNumber={snapshot.chapter.number}
-            verses={snapshot.verses}
-            languages={readerLanguages}
-            initialLanguage="en"
-          />
-          <ChapterNavigation
-            currentNumber={snapshot.chapter.number}
-            totalChapters={18}
-            listHref="/bhagavad-gita"
-            prevHref={
-              snapshot.chapter.number > 1
-                ? `/bhagavad-gita/chapter-${snapshot.chapter.number - 1}`
-                : null
-            }
-            nextHref={
-              snapshot.chapter.number < 18
-                ? `/bhagavad-gita/chapter-${snapshot.chapter.number + 1}`
-                : null
-            }
-          />
-        </div>
       </main>
 
       <SiteFooter />

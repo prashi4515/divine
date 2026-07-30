@@ -1,13 +1,10 @@
-import { readerFontVariableClass } from "@/lib/reading/reader-font-vars";
-
 /**
- * Chapter reading layout — loads Noto / Cormorant reader fonts.
- * Scoped here so the rest of the app stays on the lighter Inter stack.
+ * Chapter reading layout — fonts load on the root layout (Fredoka + Indic).
  */
 export default function ChapterReaderLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  return <div className={readerFontVariableClass}>{children}</div>;
+  return children;
 }

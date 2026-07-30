@@ -63,24 +63,33 @@ export const verseSearchService = {
     topic?: string;
     lang?: string;
   }): Promise<VerseSearchResponse> {
-    return http("/v1/search/verses", (json) => verseSearchResponseSchema.parse(json), {
-      auth: false,
-      query: {
-        q: params.q,
-        page: params.page,
-        pageSize: params.pageSize,
-        topic: params.topic,
-        lang: params.lang,
-      },
+    // Prefer the Next.js static index (ms) over Nest/Neon (multi-second).
+    const qs = new URLSearchParams();
+    if (params.q) qs.set("q", params.q);
+    if (params.page) qs.set("page", String(params.page));
+    if (params.pageSize) qs.set("pageSize", String(params.pageSize));
+    if (params.topic) qs.set("topic", params.topic);
+    if (params.lang) qs.set("lang", params.lang);
+    return fetch(`/api/search/verses?${qs.toString()}`, {
+      headers: { Accept: "application/json" },
+    }).then(async (res) => {
+      if (!res.ok) {
+        throw new Error(`Search failed (${res.status})`);
+      }
+      const json: unknown = await res.json();
+      return verseSearchResponseSchema.parse(json);
     });
   },
 
   suggest(q: string, limit = 8): Promise<SearchSuggestion[]> {
-    return http(
-      "/v1/search/suggest",
-      (json) => searchSuggestResponseSchema.parse(json).data,
-      { auth: false, query: { q, limit } },
-    );
+    const qs = new URLSearchParams({ q, limit: String(limit) });
+    return fetch(`/api/search/suggest?${qs.toString()}`, {
+      headers: { Accept: "application/json" },
+    }).then(async (res) => {
+      if (!res.ok) return [];
+      const json: unknown = await res.json();
+      return searchSuggestResponseSchema.parse(json).data;
+    });
   },
 
   trending(limit = 8) {
@@ -88,7 +97,7 @@ export const verseSearchService = {
       "/v1/search/trending",
       (json) => trendingSearchesResponseSchema.parse(json).data,
       { auth: false, query: { limit } },
-    );
+    ).catch(() => []);
   },
 
   recent(limit = 8) {
@@ -100,7 +109,7 @@ export const verseSearchService = {
         query: { limit },
         headers: sessionHeaders(),
       },
-    );
+    ).catch(() => []);
   },
 
   record(query: string, resultCount: number): Promise<void> {
@@ -110,6 +119,8 @@ export const verseSearchService = {
       auth: true,
       headers: sessionHeaders(),
       body: { query, resultCount },
-    }).then(() => undefined);
+    })
+      .then(() => undefined)
+      .catch(() => undefined);
   },
 };

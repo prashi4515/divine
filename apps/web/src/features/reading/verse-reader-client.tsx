@@ -1,6 +1,7 @@
 "use client";
 
 import dynamic from "next/dynamic";
+import type { ReactNode } from "react";
 import type { Verse } from "@divine/types";
 
 type LanguageOption = {
@@ -14,6 +15,9 @@ type VerseReaderClientProps = {
   verses: Verse[];
   languages: LanguageOption[];
   initialLanguage?: string;
+  chapterHref?: (chapterNumber: number) => string;
+  totalChapters?: number;
+  hero?: ReactNode;
 };
 
 /**

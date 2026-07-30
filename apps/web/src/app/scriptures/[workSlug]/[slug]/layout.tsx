@@ -1,9 +1,10 @@
-import { readerFontVariableClass } from "@/lib/reading/reader-font-vars";
-
+/**
+ * Scripture chapter layout — fonts load on the root layout (Fredoka + Indic).
+ */
 export default function ScriptureChapterLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  return <div className={readerFontVariableClass}>{children}</div>;
+  return children;
 }

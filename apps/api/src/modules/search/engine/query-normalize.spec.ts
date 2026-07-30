@@ -34,6 +34,8 @@ describe("spelling tolerance", () => {
     expect(expandWithBuiltins(normalizeSearchQuery("work"))).toContain("karma");
     expect(expandWithBuiltins(normalizeSearchQuery("knowledge"))).toContain("jnana");
     expect(expandWithBuiltins(normalizeSearchQuery("devotion"))).toContain("bhakti");
+    expect(expandWithBuiltins(normalizeSearchQuery("justice"))).toContain("dharma");
+    expect(expandWithBuiltins(normalizeSearchQuery("fairness"))).toContain("dharma");
   });
 });
 

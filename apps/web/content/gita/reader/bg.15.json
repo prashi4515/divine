@@ -1,1 +1,1345 @@
-{"generatedAt":"2026-07-27T08:06:39.019Z","chapter":{"id":"0678ecb7-0e64-4786-b02f-98c9fb3c9cd9","publicId":"bg.15","number":15,"title":"Purushottama Yoga","verseCount":20,"sortOrder":15,"isPublished":true,"work":{"code":"bg","slug":"bhagavad-gita","title":"Bhagavad Gita"},"createdAt":"2026-07-10T08:56:33.628Z","updatedAt":"2026-07-14T08:55:20.730Z"},"verses":[{"id":"ec300540-1e6d-41c2-aa4c-02396d774262","publicId":"bg.15.1","number":1,"sanskritText":"श्री भगवानुवाचऊर्ध्वमूलमधःशाखमश्वत्थं प्राहुरव्ययम्।छन्दांसि यस्य पर्णानि यस्तं वेद स वेदवित्।।15.1।।","transliteration":"śhrī-bhagavān uvācha\nūrdhva-mūlam adhaḥ-śhākham aśhvatthaṁ prāhur avyayam\nchhandānsi yasya parṇāni yas taṁ veda sa veda-vit","meaning":"ऊर्ध्वमूलम् rooted above; अधःशाखम् branches below; अश्वत्थम् the Asvattha; प्राहुः they speak of; अव्ययम् indestructible; छन्दांसि metres or hymns; यस्य of which; पर्णानि leaves; यः who; तम् that; वेद knows; सः he; वेदवित् is the knower of the Vedas","commentary":null,"seoTitle":null,"seoDescription":null,"sortOrder":1,"isPublished":true,"chapterPublicId":"bg.15","chapterNumber":15,"workCode":"bg","translations":[{"id":"108eb0a1-7b0f-4360-9e77-1858049b70e4","languageCode":"en","languageName":"English","sourceKey":"sivananda","sourceDisplayName":"Swami Sivananda","text":"The Blessed Lord said: They (the wise) speak of the indestructible peepul tree, with its roots above and branches below, whose leaves are the meters or hymns; he who knows it is a knower of the Vedas.","isPublished":true},{"id":"b0d5688e-dad7-4365-9632-47b7e63f21c4","languageCode":"hi","languageName":"Hindi","sourceKey":"ramsukhdas","sourceDisplayName":"Swami Ramsukhdas","text":"।।15.1।। श्रीभगवान् बोले -- ऊपरकी ओर मूलवाले तथा नीचेकी ओर शाखावाले जिस संसाररूप अश्वत्थवृक्षको अव्यय कहते हैं और वेद जिसके पत्ते हैं, उस संसारवृक्षको जो जानता है, वह सम्पूर्ण वेदोंको जाननेवाला है।","isPublished":true},{"id":"f417f00e-7843-452a-86d1-5da9864b404a","languageCode":"te","languageName":"Telugu","sourceKey":"holy-bg-telugu","sourceDisplayName":"Holy Bhagavad Gita (Telugu)","text":"శ్రీ భగవానుడు పలికెను : వేర్లు పైకి మరియు కొమ్మలు క్రిందికి ఉన్న సనాతనమైన అశ్వత్థ వృక్షము గురించి చెప్తుంటారు. దాని యొక్క ఆకులు వేద మంత్రములు, మరియు ఈ చెట్టు యొక్క రహస్యం తెలిసిన వారు వేదములను తెలుసుకున్నట్టు.","isPublished":true},{"id":"190a5580-9dc6-461f-9a79-c5c0aab1d5e1","languageCode":"te","languageName":"Telugu","sourceKey":"holy-bg-telugu-w2w","sourceDisplayName":"Holy Bhagavad Gita (Telugu word meanings)","text":"శ్రీ భగవానువాచ — శ్రీ భగవానుడు పలికెను; ఊర్ధ్వ-మూలం — వేర్లు పైకి; అధః — క్రిందికి; శాఖం — కొమ్మలు; అశ్వత్థం — రావి చెట్టు; ప్రాహుః — అని అంటారు; అవ్యయమ్ — సనాతనమైన; ఛందాంసి — వేద మంత్రములు; యస్య పర్ణాని — దేని ఆకులో; యః — ఎవరైతే; తం — అది; వేద — తెలుసుకుందురో; సః — అతను; వేదవిత్ — వేదములు ఎఱిగిన వాడు.","isPublished":true},{"id":"7cb3f6db-daad-47a8-baad-461c3db52254","languageCode":"or","languageName":"Odia","sourceKey":"holy-bg-odia","sourceDisplayName":"Holy Bhagavad Gita (Odia)","text":"ପରମ ପୁରୁଷ ଭଗବାନ କହିଲେ: ସେମାନେ ଏକ ଅନାଦି ଅଶ୍ୱତ୍‌ଥ ବୃକ୍ଷ ବିଷୟରେ କହିଛନ୍ତି, ଯାହାର ମୂଳ ଉପରକୁ ଏବଂ ଶାଖାସବୁ ତଳକୁ ରହିଛି । ଏହାର ପତ୍ରଗୁଡ଼ିକ ବେଦର ମନ୍ତ୍ର ସବୁ ଅଟନ୍ତି । ଯେଉଁ ବ୍ୟକ୍ତି ଏହି ରହସ୍ୟକୁ ଜାଣେ ସେ ବେଦର ଜ୍ଞାତା ଅଟେ ।","isPublished":true}],"createdAt":"2026-07-14T08:55:21.241Z","updatedAt":"2026-07-16T06:19:48.410Z"},{"id":"ed1cc083-d2b8-4377-8de4-ec6b885aabbd","publicId":"bg.15.2","number":2,"sanskritText":"अधश्चोर्ध्वं प्रसृतास्तस्य शाखा     गुणप्रवृद्धा विषयप्रवालाः।अधश्च मूलान्यनुसन्ततानि     कर्मानुबन्धीनि मनुष्यलोके।।15.2।।","transliteration":"adhaśh chordhvaṁ prasṛitās tasya śhākhā\nguṇa-pravṛiddhā viṣhaya-pravālāḥ\nadhaśh cha mūlāny anusantatāni\nkarmānubandhīni manuṣhya-loke","meaning":"अधः below; च and; ऊर्ध्वम् above; प्रसृताः spread; तस्य its; शाखाः branches; गुणप्रवृद्धाः nourished by the Gunas; विषयप्रवालाः senseobjects (are) its buds; अधः below; च and; मूलानि the roots; अनुसन्ततानि are stretched forth; कर्मानुबन्धीनि originating action; मनुष्यलोके in the world of men","commentary":null,"seoTitle":null,"seoDescription":null,"sortOrder":2,"isPublished":true,"chapterPublicId":"bg.15","chapterNumber":15,"workCode":"bg","translations":[{"id":"e329e463-06b7-404b-b0ed-bd717d3f52b5","languageCode":"en","languageName":"English","sourceKey":"sivananda","sourceDisplayName":"Swami Sivananda","text":"Its branches spread below and above, nourished by the Gunas; its buds are sense-objects, and its roots stretch forth below in the world of men, originating action.","isPublished":true},{"id":"b90616c5-fea4-458c-b64b-0956001453bc","languageCode":"hi","languageName":"Hindi","sourceKey":"ramsukhdas","sourceDisplayName":"Swami Ramsukhdas","text":"।।15.2।।उस संसारवृक्षकी गुणों-(सत्त्व, रज और तम-) के द्वारा बढ़ी हुई तथा विषयरूप कोंपलोंवाली शाखाएँ नीचे, मध्यमें और ऊपर सब जगह फैली हुई हैं। मनुष्यलोकमें कर्मोंके अनुसार बाँधनेवाले मूल भी नीचे और ऊपर (सभी लोकोंमें) व्याप्त हो रहे हैं।","isPublished":true},{"id":"d3a78d30-c189-4026-98f3-0dd8bd14bc4f","languageCode":"te","languageName":"Telugu","sourceKey":"holy-bg-telugu","sourceDisplayName":"Holy Bhagavad Gita (Telugu)","text":"త్రి-గుణములచే పోషించబడి, ఈ చెట్టు యొక్క శాఖలు, పైకి మరియు క్రిందికి విస్తరించి ఉంటాయి, ఇంద్రియ విషయములు వాటికి చిగుర్ల వలె ఉంటాయి. మానవ రూపంలో కర్మ ప్రవహించటానికి, చెట్టు యొక్క వేర్లు క్రిందికి వ్రేలాడుతూ ఉంటాయి. క్రిందిన, దాని యొక్క వేర్లు శాఖలుగా విస్తరించి, మనుష్య లోకములో కర్మలను కలుగచేస్తాయి.","isPublished":true},{"id":"f301bf11-1a75-4a80-aba8-bdfe7a52458d","languageCode":"te","languageName":"Telugu","sourceKey":"holy-bg-telugu-w2w","sourceDisplayName":"Holy Bhagavad Gita (Telugu word meanings)","text":"అధః — క్రిందికి; చ — మరియు; ఊర్ధ్వం — పైకి; ప్రసృతాః — విస్తరించి; తస్య — దాని యొక్క; శాఖా — కొమ్మలు; గుణ — ప్రకృతి గుణములు; ప్రవృద్ధాః — పోషించబడి; విషయ — ఇంద్రియ విషయములు; ప్రవాలాః — చిగుర్లు ; అధః — క్రిందికి; చ — మరియు; మూలాని — వేర్లు; అనుసంతతాని — పెరుగుతూనే ఉంటాయి; కర్మ — కర్మలు; అనుబంధీని — బంధించివేయును; మనుష్య-లోకే — మానవ లోకములో.","isPublished":true},{"id":"a67b8b6d-43f9-447d-a7d1-df4209f510e3","languageCode":"or","languageName":"Odia","sourceKey":"holy-bg-odia","sourceDisplayName":"Holy Bhagavad Gita (Odia)","text":"ବୃକ୍ଷର ଶାଖାଗୁଡ଼ିକ ଉପରକୁ ଓ ତଳକୁ ବିସ୍ତୃତ ହୋଇଛି, ତିନିଗୁଣ ଦ୍ୱାରା ତାହାର ପ୍ରତିପୋଷଣ ହେଉଛି ଏବଂ ଇନ୍ଦ୍ରିୟର ବିଷୟଗୁଡ଼ିକ ଏହାର କୋମଳ ଅଙ୍କୁର ସଦୃଶ ଅଟନ୍ତି । ଏହି କୋମଳ ମୂଳ ନିମ୍ନଦିଗକୁ ପ୍ରସାରିତ ହୋଇ, ମନୁଷ୍ୟ ସ୍ୱରୂପରେ କର୍ମର ପ୍ରବାହ ସୃଷ୍ଟି କରୁଛି । ନିମ୍ନଦେଶରେ ଏହାର ମୂଳ ସବୁ ଶାଖାଯୁକ୍ତ ହୋଇ ସଂସାରରେ ମନୁଷ୍ୟର କର୍ମବନ୍ଧନ ସୃଷ୍ଟି କରେ ।","isPublished":true}],"createdAt":"2026-07-14T08:55:22.186Z","updatedAt":"2026-07-16T06:19:48.663Z"},{"id":"03d03cd0-7e2c-4b1e-886d-113d8938a912","publicId":"bg.15.3","number":3,"sanskritText":"न रूपमस्येह तथोपलभ्यते    नान्तो न चादिर्न च संप्रतिष्ठा।अश्वत्थमेनं सुविरूढमूल    मसङ्गशस्त्रेण दृढेन छित्त्वा।।15.3।।","transliteration":"na rūpam asyeha tathopalabhyate\nnānto na chādir na cha sampratiṣhṭhā\naśhvattham enaṁ su-virūḍha-mūlam\nasaṅga-śhastreṇa dṛiḍhena chhittvā","meaning":"न not; रूपम् form; अस्य its; इह here; तथा as such; उपलभ्यते is perceived; न not; अन्तः (its) end; न not; च and; आदिः (its) origin; न not; च and; संप्रतिष्ठा foundation or resting place; अश्वत्थम् Asvattha; एनम् this; सुविरूढमूलम् firmrooted; असङ्गशस्त्रेण with the axe of nonattachment; दृढेन strong; छित्त्वा having cut asunder","commentary":null,"seoTitle":null,"seoDescription":null,"sortOrder":3,"isPublished":true,"chapterPublicId":"bg.15","chapterNumber":15,"workCode":"bg","translations":[{"id":"924b60f8-95b4-4c82-a7f0-bd83a9c78149","languageCode":"en","languageName":"English","sourceKey":"sivananda","sourceDisplayName":"Swami Sivananda","text":"Its form is not perceived here as such, nor its end, origin, foundation, or resting place; having cut asunder this firmly rooted peepul tree with the strong axe of non-attachment.","isPublished":true},{"id":"44198558-7be6-4bda-9763-8ce2d6f5f414","languageCode":"hi","languageName":"Hindi","sourceKey":"ramsukhdas","sourceDisplayName":"Swami Ramsukhdas","text":"।।15.3।।इस संसारवृक्षका जैसा रूप देखनेमें आता है, वैसा यहाँ (विचार करनेपर) मिलता नहीं; क्योंकि इसका न तो आदि है, न अन्त है और न स्थिति ही है। इसलिये इस दृढ़ मूलोंवाले संसाररूप अश्वत्थवृक्षको दृढ़ असङ्गतारूप शस्त्रके द्वारा काटकर --","isPublished":true},{"id":"47e01baf-de7f-40cc-bd47-1214da90153f","languageCode":"te","languageName":"Telugu","sourceKey":"holy-bg-telugu","sourceDisplayName":"Holy Bhagavad Gita (Telugu)","text":"BG 15.3-4:\n                            ఈ వృక్షము యొక్క నిజ స్వరూపము ఈ జగత్తులో గ్రహింపబడదు, దాని యొక్క మొదలు, చివర, లేదా సనాతన అస్తిత్వము కూడా అర్థం కావు. కానీ, ఈ యొక్క లోతైన వేర్లు కల అశ్వత్థ వృక్షమును అనాసక్తి/వైరాగ్యమనే బలమైన గొడ్డలిచే ఖండించివేయాలి. ఆ తరువాత ఆ వృక్షము యొక్క మొదలు వెతకాలి, అదియే ఆ భగవంతుడు, ఆయన నుండే ఈ జగత్తు యొక్క ఉత్పత్తి సనాతన కాలం క్రితం సంభవించినది. ఆయనను ఆశ్రయించిన తరువాత మళ్ళీ మనం ఈ జగత్తు లోనికి రాము.","isPublished":true},{"id":"1e101b20-0442-459e-8716-3845d3a30773","languageCode":"te","languageName":"Telugu","sourceKey":"holy-bg-telugu-w2w","sourceDisplayName":"Holy Bhagavad Gita (Telugu word meanings)","text":"న రూపమ్ — రూపము లేకుండా; అస్య — దీని యొక్క; ఇహ — ఈ లోకములో; తథా — ఆ విధముగా; ఉపలభ్యతే — కనిపించును; న అంతః — అంతము లేని; న చ ఆదిః — మొదలు లేకుండా; న చ సంప్రతిష్ఠా — మూలం లేకుండా; అశ్వత్థమ్ — రావి చెట్టు; ఏనం — ఇది; సు-విరూఢ-మూలం — లోతైన మూలములు గల; అసంగ-శస్త్రేణ — అనాసక్తి/వైరాగ్యము అనే గొడ్డలి చే; ధృడేన — బలమైన; ఛిత్త్వా — ఛిద్రం చేసి; తతః — ఆ తరువాత; పదం — ప్రదేశము; తత్ — అది; పరిమార్గితవ్యం — వెతకాలి; యస్మిన్ — ఎక్కడికైతే; గతాః — వెళ్లిన పిదప; న నివర్తంతి — తిరిగిరారు; భూయః — మరల; తమ్ — ఆయనకి; ఏవ — ఖఛ్చితముగా; చ — మరియు; ఆద్యం — మూలమైన; పురుషం — పరమేశ్వరుడు; ప్రపద్యే — ఆశ్రయించుము; యతః — ఎక్కడి నుండి అయితే; ప్రవృత్తిః — ఈ వ్యవహారము; ప్రసృతా — ఉద్భవించినదో; పురాణీ — అతి ప్రాచీనమైన.","isPublished":true}],"createdAt":"2026-07-14T08:55:22.983Z","updatedAt":"2026-07-16T06:19:49.096Z"},{"id":"ea845f3f-76cf-4f92-a1b4-283570fea93e","publicId":"bg.15.4","number":4,"sanskritText":"ततः पदं तत्परिमार्गितव्य    यस्मिन्गता न निवर्तन्ति भूयः।तमेव चाद्यं पुरुषं प्रपद्ये    यतः प्रवृत्तिः प्रसृता पुराणी।।15.4।।","transliteration":"tataḥ padaṁ tat parimārgitavyaṁ\nyasmin gatā na nivartanti bhūyaḥ\ntam eva chādyaṁ puruṣhaṁ prapadye\nyataḥ pravṛittiḥ prasṛitā purāṇī","meaning":"ततः then; पदम् goal; तत् That; परिमार्गितव्यम् should be sought for; यस्मिन् whither; गताः gone; न not; निवर्तन्ति return; भूयः again; तम् that; एव even; च and; आद्यम् primeval; पुरुषम् Purusha; प्रपद्ये I seek refuge; यतः whence; प्रवृत्तिः activity or energy; प्रसृता streamed forth; पुराणी ancient","commentary":null,"seoTitle":null,"seoDescription":null,"sortOrder":4,"isPublished":true,"chapterPublicId":"bg.15","chapterNumber":15,"workCode":"bg","translations":[{"id":"60284b14-0e7e-4be2-96d0-5773b76930d7","languageCode":"en","languageName":"English","sourceKey":"sivananda","sourceDisplayName":"Swami Sivananda","text":"Then, that goal should be sought for, to which, having gone, none returns again. I seek refuge in that Primeval Purusha, from whence streamed forth the ancient activity or energy.","isPublished":true},{"id":"a36064ba-7a7c-40e8-8667-ed4f1cf4c031","languageCode":"hi","languageName":"Hindi","sourceKey":"ramsukhdas","sourceDisplayName":"Swami Ramsukhdas","text":"।।15.4।।उसके बाद उस परमपद-(परमात्मा-) की खोज करनी चाहिये जिसको प्राप्त होनेपर मनुष्य फिर लौटकर संसारमें नहीं आते और जिससे अनादिकालसे चली आनेवाली यह सृष्टि विस्तारको प्राप्त हुई है, उस आदिपुरुष परमात्माके ही मैं शरण हूँ।","isPublished":true},{"id":"dd17554b-730a-49af-9617-8638d205d141","languageCode":"te","languageName":"Telugu","sourceKey":"holy-bg-telugu","sourceDisplayName":"Holy Bhagavad Gita (Telugu)","text":"BG 15.3-4:\n                            ఈ వృక్షము యొక్క నిజ స్వరూపము ఈ జగత్తులో గ్రహింపబడదు, దాని యొక్క మొదలు, చివర, లేదా సనాతన అస్తిత్వము కూడా అర్థం కావు. కానీ, ఈ యొక్క లోతైన వేర్లు కల అశ్వత్థ వృక్షమును అనాసక్తి/వైరాగ్యమనే బలమైన గొడ్డలిచే ఖండించివేయాలి. ఆ తరువాత ఆ వృక్షము యొక్క మొదలు వెతకాలి, అదియే ఆ భగవంతుడు, ఆయన నుండే ఈ జగత్తు యొక్క ఉత్పత్తి సనాతన కాలం క్రితం సంభవించినది. ఆయనను ఆశ్రయించిన తరువాత మళ్ళీ మనం ఈ జగత్తు లోనికి రాము.","isPublished":true},{"id":"94132181-3b6b-485e-96c9-7ec28ca136cf","languageCode":"te","languageName":"Telugu","sourceKey":"holy-bg-telugu-w2w","sourceDisplayName":"Holy Bhagavad Gita (Telugu word meanings)","text":"న రూపమ్ — రూపము లేకుండా; అస్య — దీని యొక్క; ఇహ — ఈ లోకములో; తథా — ఆ విధముగా; ఉపలభ్యతే — కనిపించును; న అంతః — అంతము లేని; న చ ఆదిః — మొదలు లేకుండా; న చ సంప్రతిష్ఠా — మూలం లేకుండా; అశ్వత్థమ్ — రావి చెట్టు; ఏనం — ఇది; సు-విరూఢ-మూలం — లోతైన మూలములు గల; అసంగ-శస్త్రేణ — అనాసక్తి/వైరాగ్యము అనే గొడ్డలి చే; ధృడేన — బలమైన; ఛిత్త్వా — ఛిద్రం చేసి; తతః — ఆ తరువాత; పదం — ప్రదేశము; తత్ — అది; పరిమార్గితవ్యం — వెతకాలి; యస్మిన్ — ఎక్కడికైతే; గతాః — వెళ్లిన పిదప; న నివర్తంతి — తిరిగిరారు; భూయః — మరల; తమ్ — ఆయనకి; ఏవ — ఖఛ్చితముగా; చ — మరియు; ఆద్యం — మూలమైన; పురుషం — పరమేశ్వరుడు; ప్రపద్యే — ఆశ్రయించుము; యతః — ఎక్కడి నుండి అయితే; ప్రవృత్తిః — ఈ వ్యవహారము; ప్రసృతా — ఉద్భవించినదో; పురాణీ — అతి ప్రాచీనమైన.","isPublished":true}],"createdAt":"2026-07-14T08:55:23.987Z","updatedAt":"2026-07-16T06:19:49.332Z"},{"id":"246ce58f-16a2-477a-851a-184da6eb6c53","publicId":"bg.15.5","number":5,"sanskritText":"निर्मानमोहा जितसङ्गदोषा    अध्यात्मनित्या विनिवृत्तकामाः।द्वन्द्वैर्विमुक्ताः सुखदुःखसंज्ञै    र्गच्छन्त्यमूढाः पदमव्ययं तत्।।15.5।।","transliteration":"nirmāna-mohā jita-saṅga-doṣhā\nadhyātma-nityā vinivṛitta-kāmāḥ\ndvandvair vimuktāḥ sukha-duḥkha-sanjñair\ngachchhanty amūḍhāḥ padam avyayaṁ tat","meaning":"निर्मानमोहाः free from pride and delusion; जितसङ्गदोषाः victorious over the evil of attachment; अध्यात्मनित्याः dwelling constantly in the Self; विनिवृत्तकामाः (their) desires having completely turned away; द्वन्द्वैः from the pairs of opposites; विमुक्ताः freed; सुखदुःखसंज्ञैः known as pleasure and pain; गच्छन्ति reach; अमूढाः the undeluded; पदम् goal; अव्ययम् eternal; तत् That","commentary":null,"seoTitle":null,"seoDescription":null,"sortOrder":5,"isPublished":true,"chapterPublicId":"bg.15","chapterNumber":15,"workCode":"bg","translations":[{"id":"9d45bef7-db92-4ecf-877f-115fee15ead6","languageCode":"en","languageName":"English","sourceKey":"sivananda","sourceDisplayName":"Swami Sivananda","text":"Free from pride and delusion, victorious over the evil of attachment, dwelling constantly in the Self, their desires having completely turned away, freed from the pairs of opposites known as pleasure and pain, they, the undeluded, reach the eternal goal.","isPublished":true},{"id":"b5763b10-57a0-463c-bf89-91acc37e8ee3","languageCode":"hi","languageName":"Hindi","sourceKey":"ramsukhdas","sourceDisplayName":"Swami Ramsukhdas","text":"।।15.5।।जो मान और मोहसे रहित हो गये हैं, जिन्होंने आसक्तिसे होनेवाले दोषोंको जीत लिया है, जो नित्य-निरन्तर परमात्मामें ही लगे हुए हैं, जो (अपनी दृष्टिसे) सम्पूर्ण कामनाओंसे रहित हो गये हैं, जो सुख-दुःखरूप द्वन्द्वोंसे मुक्त हो गये हैं, ऐसे (ऊँची स्थितिवाले) मोहरहित साधक भक्त उस अविनाशी परमपद-(परमात्मा-) को प्राप्त होते हैं।","isPublished":true},{"id":"8fa5ddb3-912f-410f-9a51-539e76f52d5f","languageCode":"te","languageName":"Telugu","sourceKey":"holy-bg-telugu","sourceDisplayName":"Holy Bhagavad Gita (Telugu)","text":"దురభిమానము మరియు మోహము లేకుండా ఉన్నవారు, మమకారాసక్తియనే అరిష్టాన్ని జయించినవారు, సతతమూ ఆత్మ, భగవంతుని చింతనలోనే ఉన్నవారు, ఇంద్రియ భోగములను అనుభవించాలని కోరికలు లేని వారు, సుఖదుఃఖములనెడి ద్వంద్వములకు అతీతులై ఉన్నవారు,  ఇటువంటి ముక్తజీవులు నా పరమపదమును చేరుకుంటారు.","isPublished":true},{"id":"b05c8b4c-d101-4a53-8d2a-6d0ae161a23e","languageCode":"te","languageName":"Telugu","sourceKey":"holy-bg-telugu-w2w","sourceDisplayName":"Holy Bhagavad Gita (Telugu word meanings)","text":"నిః — లేకుండా; మాన — అహంకారం/గర్వము; మోహాః — మోహము; జిత — జయించి; సంగ — సంగము (మమకారాసక్తి); దోషాః — దోషములు; అధ్యాత్మ-నిత్యాః — నిరంతరం ఆత్మ, భగవంతుని యందే స్థితమై ఉండి; వినివృత్త కామాః — ఇంద్రియ భోగ కోరికల నుండి పూర్తిగా స్వేచ్ఛ పొందినవారు; ద్వంద్వైః విముక్తాః — ద్వంద్వముల నుండి విముక్తులైనవారు; సుఖ-దుఃఖ సంజ్ఞైః — సుఖదుఃఖములు అనబడే; గచ్ఛంతి — పొందెదరు; అమూఢాః — వివేకవంతులు; పదం — ధామము; అవ్యయం — నిత్య సనాతనమైన; తత్ — అది.","isPublished":true},{"id":"d124ba7c-b0a9-466b-8787-3836a40d58fd","languageCode":"or","languageName":"Odia","sourceKey":"holy-bg-odia","sourceDisplayName":"Holy Bhagavad Gita (Odia)","text":"ଯେଉଁମାନେ ମଦ ଏବଂ ମୋହରୁ ମୁକ୍ତ, ଯିଏ ଆସକ୍ତିରୂପକ ଶତ୍ରୁକୁ ଜୟ କରିଛି, ଯିଏ ସର୍ବଦା ଆତ୍ମା ଏବଂ ଭଗବାନଙ୍କ ଠାରେ ସ୍ଥିତ ରହନ୍ତି, ଯେଉଁମାନେ ଇନ୍ଦ୍ରିୟ ଉପଭୋଗର କାମନା ଠାରୁ ମୁକ୍ତ ହୋଇଛନ୍ତି, ଯିଏ ସୁଖ ଓ ଦୁଃଖର ଦ୍ୱୈତରୁ ଊର୍ଦ୍ଧ୍ୱରେ, ସେହିପରି ମୁକ୍ତ ବ୍ୟକ୍ତିଗଣ ମୋର ଦିବ୍ୟ ଲୋକ ପ୍ରାପ୍ତ କରନ୍ତି ।","isPublished":true}],"createdAt":"2026-07-14T08:55:25.078Z","updatedAt":"2026-07-16T06:19:49.566Z"},{"id":"6537b010-ebc5-438b-ad7e-118ef2fce9bb","publicId":"bg.15.6","number":6,"sanskritText":"न तद्भासयते सूर्यो न शशाङ्को न पावकः।यद्गत्वा न निवर्तन्ते तद्धाम परमं मम।।15.6।।","transliteration":"na tad bhāsayate sūryo na śhaśhāṅko na pāvakaḥ\nyad gatvā na nivartante tad dhāma paramaṁ mama","meaning":"न not; तत् that; भासयते illumines; सूर्यः the sun; न not; शशाङ्कः the moon; न not; पावकः fire; यत् to which; गत्वा having gone; न not; निवर्तन्ते (they) return; तत् that; धाम Abode; परमम् Supreme; मम My","commentary":null,"seoTitle":null,"seoDescription":null,"sortOrder":6,"isPublished":true,"chapterPublicId":"bg.15","chapterNumber":15,"workCode":"bg","translations":[{"id":"2d6ff105-0ea4-4d87-9ac7-9baadfa73d5b","languageCode":"en","languageName":"English","sourceKey":"sivananda","sourceDisplayName":"Swami Sivananda","text":"Neither does the sun illuminate there, nor the moon, nor the fire; having gone there, they do not return; that is My supreme abode.","isPublished":true},{"id":"cccafb7a-3d39-4b7e-b7b1-8a82e8933cbf","languageCode":"hi","languageName":"Hindi","sourceKey":"ramsukhdas","sourceDisplayName":"Swami Ramsukhdas","text":"।।15.6।।उस-(परमपद-) को न सूर्य, न चन्द्र और न अग्नि ही प्रकाशित कर सकती है; और जिसको प्राप्त होकर जीव लौटकर (संसारमें) नहीं आते, वही मेरा परमधाम है।","isPublished":true},{"id":"4bb1a4e8-6366-4a1f-9997-b9622ba4ab60","languageCode":"te","languageName":"Telugu","sourceKey":"holy-bg-telugu","sourceDisplayName":"Holy Bhagavad Gita (Telugu)","text":"సూర్యుడు కానీ, చంద్రుడు కానీ, అగ్ని కానీ ఇవేవీ నా పరం ధామమును ప్రకాశింపచేయలేవు. అక్కడికి వెళ్లిన పిదప, జనులు మరల ఈ భౌతిక లోకానికి తిరిగిరారు.","isPublished":true},{"id":"1b931a6d-e036-4159-9c53-7d9e1a966ced","languageCode":"te","languageName":"Telugu","sourceKey":"holy-bg-telugu-w2w","sourceDisplayName":"Holy Bhagavad Gita (Telugu word meanings)","text":"న — కాదు; తత్ — అది; భాసయతే — ప్రకాశింపచేయును; సూర్యో — సూర్యుడు; న శశాంకో — చంద్రుడు కూడా కాదు; న పావకః — అగ్ని కూడా కాదు; యత్ — ఎక్కడికైతే; గత్వా — వెళ్లిన పిదప; న నివర్తంతే — తిరిగి రారో; తత్-ధామ — ఆ ధామము; పరమం — సర్వోన్నతమైనది; మమ — నాది.","isPublished":true},{"id":"280acb04-a036-47c2-95e4-923bd70b8f4e","languageCode":"or","languageName":"Odia","sourceKey":"holy-bg-odia","sourceDisplayName":"Holy Bhagavad Gita (Odia)","text":"ସୂର୍ଯ୍ୟ, ଚନ୍ଦ୍ର କିମ୍ବା ଅଗ୍ନି, କେହି ବି ମୋର ପରମ ଧାମକୁ ପ୍ରକାଶିତ କରିପାରିବେ ନାହିଁ । ସେହି ପରମ ଦିବ୍ୟ ଧାମକୁ ଗଲା ପରେ କୌଣସି ବ୍ୟକ୍ତି ଏହି ସଂସାରକୁ ପ୍ରତ୍ୟାବର୍ତ୍ତନ କରନ୍ତି ନାହିଁ ।","isPublished":true}],"createdAt":"2026-07-14T08:55:25.901Z","updatedAt":"2026-07-16T06:19:49.802Z"},{"id":"b95785eb-7e4e-4a54-b27f-b9f1d741811e","publicId":"bg.15.7","number":7,"sanskritText":"ममैवांशो जीवलोके जीवभूतः सनातनः।मनःषष्ठानीन्द्रियाणि प्रकृतिस्थानि कर्षति।।15.7।।","transliteration":"mamaivānśho jīva-loke jīva-bhūtaḥ sanātanaḥ\nmanaḥ-ṣhaṣhṭhānīndriyāṇi prakṛiti-sthāni karṣhati","meaning":"मम My; एव even; अंशः portion; जीवलोके in the world of life; जीवभूतः having become a soul; सनातनः eternal; मनःषष्ठानि with mind as the sixth; इन्द्रियाणि the (five) Indriyas; प्रकृतिस्थानि abiding in Prakriti; कर्षति draws (to itself)","commentary":null,"seoTitle":null,"seoDescription":null,"sortOrder":7,"isPublished":true,"chapterPublicId":"bg.15","chapterNumber":15,"workCode":"bg","translations":[{"id":"b7e55ebd-ad0a-4544-98c5-b8d8cd6a27eb","languageCode":"en","languageName":"English","sourceKey":"sivananda","sourceDisplayName":"Swami Sivananda","text":"An eternal portion of Myself having become a living soul in the world of life, draws to itself the five senses, with the mind as the sixth, abiding in Nature.","isPublished":true},{"id":"4f1287a9-a11f-4f2c-8c04-33cdf69a582f","languageCode":"hi","languageName":"Hindi","sourceKey":"ramsukhdas","sourceDisplayName":"Swami Ramsukhdas","text":"।।15.7।।इस संसारमें जीव बना हुआ आत्मा मेरा ही सनातन अंश है; परन्तु वह प्रकृतिमें स्थित मन और पाँचों इन्द्रियोंको आकर्षित करता है (अपना मान लेता है)।","isPublished":true},{"id":"e4c19a5d-6a83-4fdf-94c7-24d9e582f337","languageCode":"te","languageName":"Telugu","sourceKey":"holy-bg-telugu","sourceDisplayName":"Holy Bhagavad Gita (Telugu)","text":"భౌతిక జగత్తులో ఉన్న జీవాత్మలు నా యొక్క సనాతనమైన అంశములు. కానీ, భౌతిక శక్తిచే కట్టివేయబడి, వారు మనస్సుతో కలిపి ఉన్న ఆరు ఇంద్రియములతో ప్రయాస పడుతున్నారు.","isPublished":true},{"id":"113e01cd-accb-4988-9d08-a7ec2ed96d8c","languageCode":"te","languageName":"Telugu","sourceKey":"holy-bg-telugu-w2w","sourceDisplayName":"Holy Bhagavad Gita (Telugu word meanings)","text":"మమ — నా యొక్క; ఏవ — మాత్రమే; అంశా — అంశములు; జీవ-లోకే — భౌతిక ప్రపంచములో; జీవ-భూతః — జీవాత్మలు; సనాతనః — సనాతనమైన; మనః — మనస్సు; షష్ఠాని — ఆరు; ఇంద్రియాణి — ఇంద్రియములు; ప్రకృతి-స్థాని — ప్రకృతి స్వభావముచే బంధించివేయబడి; కర్షతి — శ్రమ పడుతున్నారు.","isPublished":true},{"id":"bf181fdf-face-4866-9e5c-1fed448770b6","languageCode":"or","languageName":"Odia","sourceKey":"holy-bg-odia","sourceDisplayName":"Holy Bhagavad Gita (Odia)","text":"ଏହି ମାୟିକ ଜଗତର ଦେହଧାରୀ ଆତ୍ମା ମୋର ଚିରନ୍ତନ କ୍ଷୁଦ୍ର ଅଂଶ ଅଟନ୍ତି, କିନ୍ତୁ ଭୌତିକ ପ୍ରକୃତିର କବଳିତ ହୋଇ, ସେମାନେ ମନ ସହିତ ଛଅଟି ଇନ୍ଦ୍ରିୟଙ୍କୁ ନେଇ ସଂଘର୍ଷରତ ରହିଛନ୍ତି ।","isPublished":true}],"createdAt":"2026-07-14T08:55:26.588Z","updatedAt":"2026-07-16T06:19:50.042Z"},{"id":"98b8a3d4-9a87-49fb-b7f8-f0ea374d6fa0","publicId":"bg.15.8","number":8,"sanskritText":"शरीरं यदवाप्नोति यच्चाप्युत्क्रामतीश्वरः।गृहीत्वैतानि संयाति वायुर्गन्धानिवाशयात्।।15.8।।","transliteration":"śharīraṁ yad avāpnoti yach chāpy utkrāmatīśhvaraḥ\ngṛihītvaitāni sanyāti vāyur gandhān ivāśhayāt","meaning":"शरीरम् a body; यत् when; अवाप्नोति obtains; यत् when; च and; अपि also; उत्क्रामति leaves; ईश्वरः the Lord; गृहीत्वा taking; एतानि these; संयाति goes; वायुः the wind; गन्धान् the scents; इव as; आशयात् from (their) seats (the flowers)","commentary":null,"seoTitle":null,"seoDescription":null,"sortOrder":8,"isPublished":true,"chapterPublicId":"bg.15","chapterNumber":15,"workCode":"bg","translations":[{"id":"271a8cce-762b-42e4-90a4-ffe8981e58ae","languageCode":"en","languageName":"English","sourceKey":"sivananda","sourceDisplayName":"Swami Sivananda","text":"When the Lord, as the individual soul, obtains a body and when He leaves it, He takes these with Him, just as the wind takes the scents from their seats (flowers, etc.).","isPublished":true},{"id":"f957a3ff-0e01-434b-bcc1-76d3216e65f0","languageCode":"hi","languageName":"Hindi","sourceKey":"ramsukhdas","sourceDisplayName":"Swami Ramsukhdas","text":"।।15.8।।जैसे वायु गन्धके स्थानसे गन्धको ग्रहण करके ले जाती है, ऐसे ही शरीरादिका स्वामी बना हुआ जीवात्मा भी जिस शरीरको छोड़ता है, वहाँसे मनसहित इन्द्रियोंको ग्रहण करके फिर जिस शरीरको प्राप्त होता है, उसमें चला जाता है।","isPublished":true},{"id":"a1c124a1-fc9b-4659-9ebb-f3a42af475dd","languageCode":"te","languageName":"Telugu","sourceKey":"holy-bg-telugu-w2w","sourceDisplayName":"Holy Bhagavad Gita (Telugu word meanings)","text":"శరీరం — శరీరము; యత్ — ఎలాగైతే; అవాప్నోతి — తీసుకువెళుతుందో; యత్ — అలాగే; చ అపి — కూడా; ఉత్క్రామతి — విడిచివెళ్లును; ఈశ్వరః — జీవాత్మ, భౌతిక శరీరము యొక్క ప్రభువు; గృహీత్వా — తీసుకుని; ఏతాని — వీటిని; సంయాతి — వెళ్ళును; వాయుః — గాలి; గంధాన్ — సువాసనను; ఇవ — అలాగే; ఆశయాత్ — స్థానము నుండి.","isPublished":true},{"id":"7090e2fa-9182-4f77-bad3-2fc011a0ff15","languageCode":"te","languageName":"Telugu","sourceKey":"holy-bg-telugu","sourceDisplayName":"Holy Bhagavad Gita (Telugu)","text":"ఎలాగైతే గాలి, సుగంధమును ఒకచోటి నుండి ఇంకొక చోటికి తీస్కువెళుతుందో, జీవాత్మ కూడా, పాత శరీరమును విడిచి, కొత్త శరీరంలోనికి ప్రవేశిస్తున్నప్పుడు, మనస్సు మరియు ఇంద్రియములను తనతో పాటుగా తీసుకెళుతుంది.","isPublished":true},{"id":"a9a38a11-bc69-42cc-8422-3400d2188a8e","languageCode":"or","languageName":"Odia","sourceKey":"holy-bg-odia","sourceDisplayName":"Holy Bhagavad Gita (Odia)","text":"ବାୟୁ ଯେପରି ସୁଗନ୍ଧକୁ ଗୋଟିଏ ଜାଗାରୁ ଅନ୍ୟତ୍ର ବହନ କରି ନେଇଥାଏ, ସେହିପରି ଦେହଧାରୀ ଆତ୍ମା ଯେତେବେଳେ ଗୋଟିଏ ଶରୀର ତ୍ୟାଗ କରି ଅନ୍ୟ ଗୋଟିଏକୁ ପ୍ରବେଶ କରେ, ମନ ଏବଂ ଇନ୍ଦ୍ରିୟ ଗୁଡ଼ିକୁ ନିଜ ସହିତ ବହନ କରିଥାଏ ।","isPublished":true}],"createdAt":"2026-07-14T08:55:27.448Z","updatedAt":"2026-07-16T06:19:50.286Z"},{"id":"5e7fa06b-81ac-43c0-b2c4-97fc04e2425b","publicId":"bg.15.9","number":9,"sanskritText":"श्रोत्रं चक्षुः स्पर्शनं च रसनं घ्राणमेव च।अधिष्ठाय मनश्चायं विषयानुपसेवते।।15.9।।","transliteration":"śhrotraṁ chakṣhuḥ sparśhanaṁ cha rasanaṁ ghrāṇam eva cha\nadhiṣhṭhāya manaśh chāyaṁ viṣhayān upasevate","meaning":"श्रोत्रम् the ear; चक्षुः the eye; स्पर्शनम् the (organ of) touch; च and; रसनम् the (organ of) taste; घ्राणम् the (organ of) smell; एव even; च and; अधिष्ठाय presiding over; मनः the mind; च and; अयम् this (soul); विषयान् objects of the senses; उपसेवते enjoys","commentary":null,"seoTitle":null,"seoDescription":null,"sortOrder":9,"isPublished":true,"chapterPublicId":"bg.15","chapterNumber":15,"workCode":"bg","translations":[{"id":"ffc950e1-995e-493e-90ab-08987060b7e2","languageCode":"en","languageName":"English","sourceKey":"sivananda","sourceDisplayName":"Swami Sivananda","text":"Presiding over the ears, eyes, touch, taste, smell, and mind, it enjoys the objects of the senses.","isPublished":true},{"id":"2ef1b768-b723-4f22-abbc-136ed21a1296","languageCode":"hi","languageName":"Hindi","sourceKey":"ramsukhdas","sourceDisplayName":"Swami Ramsukhdas","text":"।।15.9।।यह जीवात्मा मनका आश्रय लेकर श्रोत्र, नेत्र, त्वचा, रसना और घ्राण -- इन पाँचों इन्द्रियोंके द्वारा विषयोंका सेवन करता है।","isPublished":true},{"id":"bcebf0dc-2b9d-44da-b2bc-542f56731d86","languageCode":"te","languageName":"Telugu","sourceKey":"holy-bg-telugu","sourceDisplayName":"Holy Bhagavad Gita (Telugu)","text":"మనస్సును ఆశ్రయించి ఉన్న ఇంద్రియములు - చెవులు, కన్నులు, చర్మము, నాలుక మరియు ముక్కు - వీటి యొక్క గ్రహణశక్తితో, జీవాత్మ ఇంద్రియ వస్తువిషయములను ఆస్వాదిస్తుంటుంది.","isPublished":true},{"id":"0e1a95e4-cdc0-4e81-92f5-bec6f160b2eb","languageCode":"te","languageName":"Telugu","sourceKey":"holy-bg-telugu-w2w","sourceDisplayName":"Holy Bhagavad Gita (Telugu word meanings)","text":"శ్రోత్రం — చెవులు; చక్షుః — కన్నులు; స్పర్శనం — స్పర్శ; చ — మరియు; రసనం — నాలుక; ఘ్రాణమ్ — ముక్కు; ఏవ — కూడా; చ — మరియు; అధిష్ఠాయ — చుట్టూ ఉండి; మనః — మనస్సు; చ — మరియు; అయం — అవి; విషయాన్ — ఇంద్రియ విషయములు; ఉపసేవతే — ఆస్వాదించును.","isPublished":true},{"id":"23e8330e-db63-4978-ab15-f8fd132d68b9","languageCode":"or","languageName":"Odia","sourceKey":"holy-bg-odia","sourceDisplayName":"Holy Bhagavad Gita (Odia)","text":"ମନର ଚତୁଃପାଶ୍ୱର୍ରେ ବେଷ୍ଟିତ କର୍ଣ୍ଣ, ଚକ୍ଷୁ, ଚର୍ମ, ଜିହ୍ୱା ଏବଂ ନାସିକା ଆଦିର ଇନ୍ଦ୍ରିୟାନୁଭୂତିକୁ ଉପଯୋଗ କରି, ଦେହଧାରୀ ଆତ୍ମା ଇନ୍ଦ୍ରିୟ ବିଷୟଗୁଡ଼ିକର ଆସ୍ୱାଦନ କରେ ।","isPublished":true}],"createdAt":"2026-07-14T08:55:28.134Z","updatedAt":"2026-07-16T06:19:50.551Z"},{"id":"8bb26820-9592-42df-bc20-69bc9b99a2a1","publicId":"bg.15.10","number":10,"sanskritText":"उत्क्रामन्तं स्थितं वापि भुञ्जानं वा गुणान्वितम्।विमूढा नानुपश्यन्ति पश्यन्ति ज्ञानचक्षुषः।।15.10।।","transliteration":"utkrāmantaṁ sthitaṁ vāpi bhuñjānaṁ vā guṇānvitam\nvimūḍhā nānupaśhyanti paśhyanti jñāna-chakṣhuṣhaḥ","meaning":"उत्क्रामन्तम् departing; स्थितम् staying; वा or; अपि also; भुञ्जानम् enjoying; वा or; गुणान्वितम् united with the Gunas; विमूढाः the deluded; न not; अनुपश्यन्ति do see (Him); पश्यन्ति behold (Him); ज्ञानचक्षुषः those who possess the eye of knowledge","commentary":null,"seoTitle":null,"seoDescription":null,"sortOrder":10,"isPublished":true,"chapterPublicId":"bg.15","chapterNumber":15,"workCode":"bg","translations":[{"id":"570e9201-3dc2-4dbb-9f0a-2e192063b589","languageCode":"en","languageName":"English","sourceKey":"sivananda","sourceDisplayName":"Swami Sivananda","text":"The deluded do not see Him who departs, stays, and enjoys; but those who possess the eye of knowledge behold Him.","isPublished":true},{"id":"d095e6ca-248c-478d-b751-23a600b02a17","languageCode":"hi","languageName":"Hindi","sourceKey":"ramsukhdas","sourceDisplayName":"Swami Ramsukhdas","text":"।।15.10।।शरीरको छोड़कर जाते हुए या दूसरे शरीरमें स्थित हुए अथवा विषयोंको भोगते हुए भी गुणोंसे युक्त जीवात्माके स्वरूपको मूढ़ मनुष्य नहीं जानते, ज्ञानरूपी नेत्रोंवाले ज्ञानी मनुष्य ही जानते हैं।","isPublished":true},{"id":"8c6636c2-4e26-4e39-9ae6-f8e7d93db7b9","languageCode":"te","languageName":"Telugu","sourceKey":"holy-bg-telugu","sourceDisplayName":"Holy Bhagavad Gita (Telugu)","text":"అది ఇంద్రియ వస్తువిషములను ఆనందిస్తూ దేహములోనే ఉన్నప్పుడు కానీ లేదా అది దేహమును విడిచివెళ్లినప్పుడు కానీ, జీవాత్మను అజ్ఞానులు గమనించరు. కానీ జ్ఞాన నేత్రములు కలవారు దానిని దర్శించగలరు.","isPublished":true},{"id":"48f189bd-417f-4dd7-ac36-bc8089034d3a","languageCode":"te","languageName":"Telugu","sourceKey":"holy-bg-telugu-w2w","sourceDisplayName":"Holy Bhagavad Gita (Telugu word meanings)","text":"ఉత్క్రామంతం — వెళ్ళిపోతున్నప్పుడు; స్థితం — ఉన్నప్పుడు; వా అపి — అయినా కానీ; భుంజానం — భోగమును ఆనందిస్తూ; వా — లేదా; గుణ-అన్వితమ్ — భౌతిక ప్రకృతి యొక్క గుణములచే లోబడిపోయి; విమూఢాః — అజ్ఞానులు; న అనుపశ్యంతి — గమనించరు; పశ్యంతి — దర్శిస్తారు; జ్ఞాన చక్షుషః — జ్ఞాన నేత్రములు కలవారు","isPublished":true},{"id":"bd8fbddc-93ac-442e-bb0c-8238a5a0b835","languageCode":"or","languageName":"Odia","sourceKey":"holy-bg-odia","sourceDisplayName":"Holy Bhagavad Gita (Odia)","text":"ଅଜ୍ଞାନୀମାନେ ଆତ୍ମା ଶରୀରରେ ନିବାସ କରିଥିବା ବେଳେ କିମ୍ବା ଇନ୍ଦ୍ରିୟ ବସ୍ତୁକୁ ଉପଭୋଗ କରୁଥିବା ବେଳେ କିମ୍ବା ଶରୀର ତ୍ୟାଗ କଲାବେଳେ ମଧ୍ୟ, ତାହାକୁ ଉପଲବ୍‌ଧି କରିପାରନ୍ତି ନାହିଁ । କିନ୍ତୁ ଯେଉଁମାନଙ୍କର ଚକ୍ଷୁ ଜ୍ଞାନଯୁକ୍ତ, ସେମାନେ ତାହାକୁ ଲକ୍ଷ୍ୟ କରିପାରନ୍ତି ।","isPublished":true}],"createdAt":"2026-07-14T08:55:29.151Z","updatedAt":"2026-07-16T06:19:50.829Z"},{"id":"930b77fb-be06-40d1-abb3-4508e6f71662","publicId":"bg.15.11","number":11,"sanskritText":"यतन्तो योगिनश्चैनं पश्यन्त्यात्मन्यवस्थितम्।यतन्तोऽप्यकृतात्मानो नैनं पश्यन्त्यचेतसः।।15.11।।","transliteration":"yatanto yoginaśh chainaṁ paśhyanty ātmany avasthitam\nyatanto ‘py akṛitātmāno nainaṁ paśhyanty achetasaḥ","meaning":"यतन्तः striving (for perfection); योगिनः the Yogins; च and; एनम् this; पश्यन्ति see; आत्मनि in the Self; अवस्थितम् dwelling; यतन्तः striving; अपि also; अकृतात्मानः the unrefined; न not; एनम् this; पश्यन्ति see; अचेतसः unintelligent","commentary":null,"seoTitle":null,"seoDescription":null,"sortOrder":11,"isPublished":true,"chapterPublicId":"bg.15","chapterNumber":15,"workCode":"bg","translations":[{"id":"3bc8877c-9c3f-4d76-931e-262599042d88","languageCode":"en","languageName":"English","sourceKey":"sivananda","sourceDisplayName":"Swami Sivananda","text":"The yogis striving for perfection behold Him dwelling in the Self; but, the unrefined and unintelligent, even though striving, do not see Him.","isPublished":true},{"id":"e30f0e9d-fc5f-4bda-8095-0ed99e757e38","languageCode":"hi","languageName":"Hindi","sourceKey":"ramsukhdas","sourceDisplayName":"Swami Ramsukhdas","text":"।।15.11।।यत्न करनेवाले योगीलोग अपने-आपमें स्थित इस परमात्मतत्त्वका अनुभव करते हैं। परन्तु जिन्होंने अपना अन्तःकरण शुद्ध नहीं किया है, ऐसे अविवेकी मनुष्य यत्न करनेपर भी इस तत्त्वका अनुभव नहीं करते।","isPublished":true},{"id":"bdf58544-9bc7-47e4-b592-faf365fe3112","languageCode":"te","languageName":"Telugu","sourceKey":"holy-bg-telugu","sourceDisplayName":"Holy Bhagavad Gita (Telugu)","text":"గట్టిగా పరిశ్రమించే యోగులు కూడా దేహములోనే స్థితమై ఉన్న ఆత్మను తెలుసుకోగలుగుతారు. కానీ, ఎంత ప్రయత్నించినా, అంతఃకరణ శుద్ధి లేని వారు మాత్రం దానిని తెలుసుకొనలేరు.","isPublished":true},{"id":"978194c0-b021-41b8-81ec-1acdade2c1fc","languageCode":"te","languageName":"Telugu","sourceKey":"holy-bg-telugu-w2w","sourceDisplayName":"Holy Bhagavad Gita (Telugu word meanings)","text":"యతంతః — గట్టిగా ప్రయత్నించే; యోగినః — యోగులు; చ — కూడా; ఏనం — దీనిని (ఆత్మ); పశ్యంతి — చూచెదరు; ఆత్మని — శరీరములో; అవస్థితం — స్థితమై ఉన్న; యతంతః — పరిశ్రమిస్తూ; అపి — కూడా; అకృత-ఆత్మనః — అంతఃకరణ శుద్ధి లేని వారు; న ఏనం పశ్యతి — దీనిని గమనించలేరు; అచేతసః — అజ్ఞానులు.","isPublished":true},{"id":"7482c0bf-8e68-4ab0-b376-f28b0b317e11","languageCode":"or","languageName":"Odia","sourceKey":"holy-bg-odia","sourceDisplayName":"Holy Bhagavad Gita (Odia)","text":"ଶରୀର ମଧ୍ୟରେ ଆତ୍ମା ପ୍ରତିଷ୍ଠାପିତ, ଏହା ଚେଷ୍ଟାରତ ଯୋଗୀମାନେ ଜାଣିପାରନ୍ତି । କିନ୍ତୁ ଯେଉଁମାନଙ୍କର ଅନ୍ତଃକରଣ ଶୁଦ୍ଧ ନୁହେଁ, ସେମାନେ ଚେଷ୍ଟା କରି ମଧ୍ୟ ଏହା ଜାଣିପାରନ୍ତି ନାହିଁ ।","isPublished":true}],"createdAt":"2026-07-14T08:55:29.980Z","updatedAt":"2026-07-16T06:19:51.145Z"},{"id":"c177524b-1470-400c-91e3-0bf6556fdcf8","publicId":"bg.15.12","number":12,"sanskritText":"यदादित्यगतं तेजो जगद्भासयतेऽखिलम्।यच्चन्द्रमसि यच्चाग्नौ तत्तेजो विद्धि मामकम्।।15.12।।","transliteration":"yad āditya-gataṁ tejo jagad bhāsayate ’khilam\nyach chandramasi yach chāgnau tat tejo viddhi māmakam","meaning":"यत् which; आदित्यगतम् residing in the sun; तेजः light; जगत् the world; भासयते illumines; अखिलम् whole; यत् which; चन्द्रमसि in the moon; यत् which; च and; अग्नौ in the fire; तत् that; तेजः light; विद्धि know; मामकम् Mine","commentary":null,"seoTitle":null,"seoDescription":null,"sortOrder":12,"isPublished":true,"chapterPublicId":"bg.15","chapterNumber":15,"workCode":"bg","translations":[{"id":"f98cb975-00bc-4bc5-9222-d0599912b0ad","languageCode":"en","languageName":"English","sourceKey":"sivananda","sourceDisplayName":"Swami Sivananda","text":"That light which resides in the sun, illuminating the whole world; that which is in the moon and in the fire—know that light to be Mine.","isPublished":true},{"id":"1c909e32-5f57-4fdd-b67f-4a3b94cf13ba","languageCode":"hi","languageName":"Hindi","sourceKey":"ramsukhdas","sourceDisplayName":"Swami Ramsukhdas","text":"।।15.12।।सूर्यमें आया हुआ जो तेज सम्पूर्ण जगत् को प्रकाशित करता है और जो तेज चन्द्रमामें है तथा जो तेज अग्निमें है, उस तेजको मेरा ही जान।","isPublished":true},{"id":"03de4eda-bd34-470b-9bb0-54aa65b92582","languageCode":"te","languageName":"Telugu","sourceKey":"holy-bg-telugu","sourceDisplayName":"Holy Bhagavad Gita (Telugu)","text":"సమస్త సౌర మండలమును ప్రకాశింపచేసే సూర్యుని తేజస్సుని నేనే అని తెలుసుకొనుము. చంద్రుని యొక్క ప్రకాశము మరియు అగ్ని యొక్క కాంతి నానుండే ఉద్భవిస్తున్నాయని తెలుసుకొనుము.","isPublished":true},{"id":"eb53eebc-a4ee-4833-86b8-cdb0b712207e","languageCode":"te","languageName":"Telugu","sourceKey":"holy-bg-telugu-w2w","sourceDisplayName":"Holy Bhagavad Gita (Telugu word meanings)","text":"యత్ — ఏదైతే; ఆదిత్య-గతం — సూర్యునిలో; తేజః — తేజస్సు; జగత్ — సౌర కుటుంబము; భాసయతే — ప్రకాశింపచేయునో; అఖిలమ్ — సమస్త; యత్ — ఏదైతే; చంద్రమసి — చంద్రునిలో; యత్ — ఏదైతే; చ — మరియు; అగ్నౌ — అగ్నిలో; తత్ — అది; తేజః — తేజస్సు; విద్ధి — తెలుసుకొనుము; మామకమ్ — నా యొక్క.","isPublished":true},{"id":"61d96bd1-9d4a-4721-bddc-bd3907e4a91f","languageCode":"or","languageName":"Odia","sourceKey":"holy-bg-odia","sourceDisplayName":"Holy Bhagavad Gita (Odia)","text":"ଏହା ଜାଣ ଯେ ମୁଁ ସୌରମଣ୍ଡଳକୁ ଉଦ୍‌ଭାସିତ କରୁଥିବା ସୂର୍ଯ୍ୟଙ୍କ ପ୍ରକାଶ ପରି ଅଟେ । ଚନ୍ଦ୍ରର କିରଣ ଏବଂ ଅଗ୍ନିର ଉଜ୍ଜ୍ୱଳତା ମଧ୍ୟ ମୋ ଠାରୁ ଆସିଥାଏ ।","isPublished":true}],"createdAt":"2026-07-14T08:55:31.004Z","updatedAt":"2026-07-16T06:19:51.382Z"},{"id":"95004d1f-db23-4b13-86ad-b9e2c20f0f1c","publicId":"bg.15.13","number":13,"sanskritText":"गामाविश्य च भूतानि धारयाम्यहमोजसा।पुष्णामि चौषधीः सर्वाः सोमो भूत्वा रसात्मकः।।15.13।।","transliteration":"gām āviśhya cha bhūtāni dhārayāmy aham ojasā\npuṣhṇāmi chauṣhadhīḥ sarvāḥ somo bhūtvā rasātmakaḥ","meaning":"गाम the earth; आविश्य permeating; च and; भूतानि all beings; धारयामि support; अहम् I; ओजसा by (My) energy; पुष्णामि (I) nourish; च and; औषधीः the herbs; सर्वाः all; सोमः moon; भूत्वा having become रसात्मकः watery","commentary":null,"seoTitle":null,"seoDescription":null,"sortOrder":13,"isPublished":true,"chapterPublicId":"bg.15","chapterNumber":15,"workCode":"bg","translations":[{"id":"7645be89-cbef-443c-a047-3c058aa8e697","languageCode":"en","languageName":"English","sourceKey":"sivananda","sourceDisplayName":"Swami Sivananda","text":"Permeating the earth, I support all beings with My energy; and having become the watery moon, I nourish all herbs.","isPublished":true},{"id":"883bcfd9-4130-4cb7-aa57-6ecb3c496e50","languageCode":"hi","languageName":"Hindi","sourceKey":"ramsukhdas","sourceDisplayName":"Swami Ramsukhdas","text":"।।15.13।।मैं ही पृथ्वीमें प्रविष्ट होकर अपनी शक्तिसे समस्त प्राणियोंको धारण करता हूँ; और मैं ही रसमय चन्द्रमाके रूपमें समस्त ओषधियों-(वनस्पतियों-) को पुष्ट करता हूँ।","isPublished":true},{"id":"65ebdd1d-8da8-4b27-972e-b7d2fe80bedc","languageCode":"te","languageName":"Telugu","sourceKey":"holy-bg-telugu","sourceDisplayName":"Holy Bhagavad Gita (Telugu)","text":"పృథ్వి యందు అంతటా ప్రవేశించి వ్యాపించి ఉండి, నేను సమస్త ప్రాణులను నా శక్తి చే పోషిస్తుంటాను. చంద్రుడిగా ఉండి, సమస్త వృక్షజాతికి పుష్టిని చేకూరుస్తుంటాను.","isPublished":true},{"id":"aa31f6b5-b7c9-4ff5-98e2-43502a10f78a","languageCode":"te","languageName":"Telugu","sourceKey":"holy-bg-telugu-w2w","sourceDisplayName":"Holy Bhagavad Gita (Telugu word meanings)","text":"గాం — భూమి; ఆవిశ్య — వ్యాపించి; చ — మరియు; భూతాని — జీవ రాశులు; ధారయామి — పోషిస్తూ; అహం — నేను; ఓజసా — శక్తి; పుష్ణామి — పోషిస్తూ; చ — మరియు; ఔషధీ — మొక్కలు; సర్వాః — సమస్త; సోమః — చంద్రుడు; భూత్వా — ఉంటూ; రస-ఆత్మకః — జీవ రసములను అందిస్తూ.","isPublished":true},{"id":"159b391e-af6c-49f2-93c8-26e5eaf7e0a4","languageCode":"or","languageName":"Odia","sourceKey":"holy-bg-odia","sourceDisplayName":"Holy Bhagavad Gita (Odia)","text":"ମୁଁ ସଂସାରରେ ବ୍ୟାପ୍ତ ହୋଇ, ମୋ ଶକ୍ତି ଦ୍ୱାରା ସମସ୍ତ ପ୍ରାଣୀଙ୍କର ପୋଷଣ କରିଥାଏ । ମୁଁ ଚନ୍ଦ୍ର ହୋଇ, ସମସ୍ତ ବୃକ୍ଷଙ୍କ ମଧ୍ୟରେ ଜୀବନ ରସ ସଞ୍ଚାର କରେ ।","isPublished":true}],"createdAt":"2026-07-14T08:55:31.995Z","updatedAt":"2026-07-16T06:19:51.619Z"},{"id":"33f16d58-1d30-473b-9dc5-ce48e1d58bf7","publicId":"bg.15.14","number":14,"sanskritText":"अहं वैश्वानरो भूत्वा प्राणिनां देहमाश्रितः।प्राणापानसमायुक्तः पचाम्यन्नं चतुर्विधम्।।15.14।।","transliteration":"ahaṁ vaiśhvānaro bhūtvā prāṇināṁ deham āśhritaḥ\nprāṇāpāna-samāyuktaḥ pachāmy annaṁ chatur-vidham","meaning":"अहम् I; वैश्वानरः (the fire) Vaisvanara; भूत्वा having become; प्राणिनाम् of living beings; देहम् the body; आश्रितः abiding; प्राणापानसमायुक्तः associated with Prana and Apana; पचामि (I) digest; अन्नम् food; चतुर्विधम् fourfold","commentary":null,"seoTitle":null,"seoDescription":null,"sortOrder":14,"isPublished":true,"chapterPublicId":"bg.15","chapterNumber":15,"workCode":"bg","translations":[{"id":"b7935e70-b66a-47a4-a52f-e327a9315e7c","languageCode":"en","languageName":"English","sourceKey":"sivananda","sourceDisplayName":"Swami Sivananda","text":"Having become the fire Vaisvanara, I abide in the bodies of living beings and, associated with the Prana and the Apana, digest the fourfold food.","isPublished":true},{"id":"7fe997bd-3afc-4cfe-8a08-9ae30c6c42c0","languageCode":"hi","languageName":"Hindi","sourceKey":"ramsukhdas","sourceDisplayName":"Swami Ramsukhdas","text":"।।15.14।।प्राणियोंके शरीरमें रहनेवाला मैं प्राण-अपानसे युक्त वैश्वानर होकर चार प्रकारके अन्नको पचाता हूँ।","isPublished":true},{"id":"92a423c8-c912-4f39-aecd-63dd01bdb5ba","languageCode":"te","languageName":"Telugu","sourceKey":"holy-bg-telugu","sourceDisplayName":"Holy Bhagavad Gita (Telugu)","text":"నాలుగు రకాల ఆహారమును జీర్ణము చేసుకుని మరియు ఒంటబట్టించుకొనటానికి, సమస్త జీవుల ఉదరములలో ప్రాణాపానసంయుక్తమైన జఠరాగ్ని రూపమును నేనే స్వీకరిస్తాను.","isPublished":true},{"id":"e33e90a7-c727-493a-9e50-574e2effbc98","languageCode":"te","languageName":"Telugu","sourceKey":"holy-bg-telugu-w2w","sourceDisplayName":"Holy Bhagavad Gita (Telugu word meanings)","text":"అహం — నేను; వైశ్వానరః — భోజనము జీర్ణించు/అరిగించు అగ్ని (జఠరాగ్ని); భూత్వా — అయిఉండి; ప్రాణినాం — సర్వ ప్రాణులలో; దేహం — శరీరము; ఆశ్రితః — ఉన్నవాడినై; ప్రాణ-అపాన — ప్రాణ-అపానములు (బయటకువెళ్ళే మరియు లోనికి వచ్చే శ్వాస); సమాయుక్తః — సమముగా ఉంచుతూ; పచామి — జీర్ణము చేయుదును; అన్నం — ఆహారములు; చతుః-విధం — నాలుగు రకముల.","isPublished":true},{"id":"0f2062ec-c14d-4132-9c7b-0e20ace8bf80","languageCode":"or","languageName":"Odia","sourceKey":"holy-bg-odia","sourceDisplayName":"Holy Bhagavad Gita (Odia)","text":"ମୁଁ ସମସ୍ତ ପ୍ରାଣୀଙ୍କର ଉଦରରେ ଜଠରାଗ୍ନିର ରୂପ ଧାରଣ କରିଥାଏ ଏବଂ ନିଶ୍ୱାସ ଓ ପ୍ରଶ୍ୱାସ ଦ୍ୱାରା ମିଳିତ ହୋଇ, ଚାରି ପ୍ରକାରର ଖାଦ୍ୟକୁ ହଜମ କରିଥାଏ ଏବଂ ଆତ୍ମସାତ କରିଥାଏ ।","isPublished":true}],"createdAt":"2026-07-14T08:55:32.860Z","updatedAt":"2026-07-16T06:19:51.853Z"},{"id":"c58cdbbf-13f0-4b27-b01d-36f42b4536f9","publicId":"bg.15.15","number":15,"sanskritText":"सर्वस्य चाहं हृदि सन्निविष्टो    मत्तः स्मृतिर्ज्ञानमपोहनं च।वेदैश्च सर्वैरहमेव वेद्यो    वेदान्तकृद्वेदविदेव चाहम्।।15.15।।","transliteration":"sarvasya chāhaṁ hṛidi sanniviṣhṭo\nmattaḥ smṛitir jñānam apohanaṁ cha\nvedaiśh cha sarvair aham eva vedyo\nvedānta-kṛid veda-vid eva chāham","meaning":"सर्वस्य of all; च and; अहम् I; हृदि in the heart; सन्निविष्टः seated; मत्तः from Me; स्मृतिः memory; ज्ञानम् knowledge; अपोहनम् (their) absence; च and; वेदैः by the Vedas; च and; सर्वैः (by) all; अहम् I; एव even; वेद्यः to be known; वेदान्तकृत् the author of the Vedanta; वेदवित् the knower of Vedas; एव even; च and; अहम् I","commentary":null,"seoTitle":null,"seoDescription":null,"sortOrder":15,"isPublished":true,"chapterPublicId":"bg.15","chapterNumber":15,"workCode":"bg","translations":[{"id":"63b166d2-bc35-493d-8cdc-df6388402f75","languageCode":"en","languageName":"English","sourceKey":"sivananda","sourceDisplayName":"Swami Sivananda","text":"And I am seated in the hearts of all; from Me come memory and knowledge, as well as their absence. I am verily That which has to be known by all the Vedas; I am indeed the author of the Vedanta and the knower of the Vedas.","isPublished":true},{"id":"75f8675f-f69b-4b99-93d6-9d4e869edba1","languageCode":"hi","languageName":"Hindi","sourceKey":"ramsukhdas","sourceDisplayName":"Swami Ramsukhdas","text":"।।15.15।।मैं सम्पूर्ण प्राणियोंके हृदयमें स्थित हूँ। मेरेसे ही स्मृति, ज्ञान और अपोहन (संशय आदि दोषोंका नाश) होता है। सम्पूर्ण वेदोंके द्वारा मैं ही जाननेयोग्य हूँ। वेदोंके तत्त्वका निर्णय करनेवाला और वेदोंको जाननेवाला भी मैं ही हूँ।","isPublished":true},{"id":"f53881f0-2d4f-4f61-804c-15bfa6b66ef4","languageCode":"te","languageName":"Telugu","sourceKey":"holy-bg-telugu","sourceDisplayName":"Holy Bhagavad Gita (Telugu)","text":"నేను సమస్త ప్రాణుల హృదయములలో స్థితమై ఉన్నాను, నా నుండే జ్ఞాపకశక్తి, జ్ఞానము, మరియు విస్మృతి (మర్చిపోవుట) కలుగుతాయి. అన్ని వేదముల ద్వారా తెలుసుకోబడవలసిన వాడను నేను మాత్రమే, వేదాంత రచయితను నేనే, మరియు వేదముల అర్థమును తెలిసినవాడను నేనే.","isPublished":true},{"id":"435750ae-5360-499f-a332-fa64e7d4eb51","languageCode":"te","languageName":"Telugu","sourceKey":"holy-bg-telugu-w2w","sourceDisplayName":"Holy Bhagavad Gita (Telugu word meanings)","text":"సర్వస్య — సమస్త ప్రాణులలో; చ — మరియు; అహం — నేను; హృది — హృదయములో; సన్నివిష్టః — స్థితమై ఉండి; మత్తః — నానుండి; స్మృతిర్ — స్మృతి; జ్ఞానమ్ — జ్ఞానము; అపోహనం — విస్మృతి (మతిమరుపు); చ — మరియు; వేదైః — వేదముల చే; చ — మరియు; సర్వైః — అన్ని; అహం — నేను; ఏవ — మాత్రమే; వేద్యః — తెలుసుకొనబడవలసిన వాడను; వేదాంత-కృత్ — వేదాంతములను రచించినవాడను; వేద-విత్ — వేదార్ధములను తెలిసినవాడను; ఏవ — ఒక్కడినే (మాత్రమే); చ — మరియు; అహం — నేను.","isPublished":true},{"id":"df94893d-90e2-431d-9880-e1ff1ce5d54e","languageCode":"or","languageName":"Odia","sourceKey":"holy-bg-odia","sourceDisplayName":"Holy Bhagavad Gita (Odia)","text":"ମୁଁ ସମସ୍ତ ପ୍ରାଣୀଙ୍କ ହୃଦୟରେ ବାସ କରେ । ମୋ ଠାରୁ ସ୍ମରଣଶକ୍ତି, ଜ୍ଞାନ ତଥା ବିସ୍ମରଣର ଉତ୍ପତ୍ତି ହୋଇଥାଏ । ଏକମାତ୍ର ମୁଁ ହିଁ ବେଦ ଦ୍ୱାରା ଜ୍ଞାତବ୍ୟ, ବେଦାନ୍ତର ପ୍ରଣେତା ତଥା ବେଦର ଅର୍ଥକୁ ଜାଣିଥିବା ବ୍ୟକ୍ତିତ୍ୱ ଅଟେ ।","isPublished":true}],"createdAt":"2026-07-14T08:55:33.666Z","updatedAt":"2026-07-16T06:19:52.167Z"},{"id":"379834ee-dc3b-4e87-86a3-d171989b27d3","publicId":"bg.15.16","number":16,"sanskritText":"द्वाविमौ पुरुषौ लोके क्षरश्चाक्षर एव च।क्षरः सर्वाणि भूतानि कूटस्थोऽक्षर उच्यते।।15.16।।","transliteration":"dvāv imau puruṣhau loke kṣharaśh chākṣhara eva cha\nkṣharaḥ sarvāṇi bhūtāni kūṭa-stho ’kṣhara uchyate","meaning":"द्वौ two; इमौ these; पुरुषौ Purushas (beings); लोके in the world; क्षरः the perishable; च and; अक्षरः the imperishable; एव even; च and; क्षरः the perishable; सर्वाणि all; भूतानि beings; कूटस्थः the immutable (unchanging); अक्षरः the imperishable; उच्यते is called","commentary":null,"seoTitle":null,"seoDescription":null,"sortOrder":16,"isPublished":true,"chapterPublicId":"bg.15","chapterNumber":15,"workCode":"bg","translations":[{"id":"154938fd-88bb-4963-8cf7-04d259898547","languageCode":"en","languageName":"English","sourceKey":"sivananda","sourceDisplayName":"Swami Sivananda","text":"Two Purushas there are in this world: the perishable and the imperishable. All beings are perishable, and the Kutastha—the unchanging—is called the imperishable.","isPublished":true},{"id":"819335dd-bfd3-4410-9882-1e361f763312","languageCode":"hi","languageName":"Hindi","sourceKey":"ramsukhdas","sourceDisplayName":"Swami Ramsukhdas","text":"।।15.16।।इस संसारमें क्षर (नाशवान्) और अक्षर (अविनाशी) -- ये दो प्रकारके पुरुष हैं। सम्पूर्ण प्राणियोंके शरीर नाशवान् और कूटस्थ (जीवात्मा) अविनाशी कहा जाता है।","isPublished":true},{"id":"abbe94ed-b458-474a-bcc0-ecf722e98f55","languageCode":"te","languageName":"Telugu","sourceKey":"holy-bg-telugu","sourceDisplayName":"Holy Bhagavad Gita (Telugu)","text":"సృష్టిలో రెండు రకాల ప్రాణులు ఉన్నాయి, క్షరములు (నశించేవి) మరియు అక్షరములు (నశించనివి). భౌతిక జగత్తులో ఉన్నవి క్షరములు. అక్షరములు అంటే మోక్షము పొందిన జీవులు.","isPublished":true},{"id":"918b93ee-1f89-42cb-a1bf-96b0b374def6","languageCode":"te","languageName":"Telugu","sourceKey":"holy-bg-telugu-w2w","sourceDisplayName":"Holy Bhagavad Gita (Telugu word meanings)","text":"ద్వౌ — రెండు; ఇమౌ — ఇవి; పురుషౌ — ప్రాణులు; లోకే — సృష్టిలో; క్షరః — క్షరములు (నశించిపోయేవి); చ — మరియు; అక్షరః — అనశ్వరమైనవి; ఏవ — అయినా; చ — మరియు; క్షరః — క్షరములు; సర్వాణి — సమస్త; భూతాని — భూతములు; కూట-స్థః — విముక్తి నొందిన; అక్షరః — నాశనం కానివి; ఉచ్యతే — చెప్పబడుతున్నవి.","isPublished":true},{"id":"dd33adfe-c944-44dd-9e26-3e875b729a77","languageCode":"or","languageName":"Odia","sourceKey":"holy-bg-odia","sourceDisplayName":"Holy Bhagavad Gita (Odia)","text":"ସୃଷ୍ଟିରେ ଦୁଇ ପ୍ରକାରର ଜୀବ ଅଛନ୍ତି: କ୍ଷର (ନଶ୍ୱର) ଏବଂ ଅକ୍ଷର (ଅବିନଶ୍ୱର) । ଭୌତିକ ଜଗତର ସମସ୍ତ ଜୀବ ନଶ୍ୱର ଅଟନ୍ତି । ମୁକ୍ତ ଜୀବମାନେ ଅବିନଶ୍ୱର ଅଟନ୍ତି ।","isPublished":true}],"createdAt":"2026-07-14T08:55:34.356Z","updatedAt":"2026-07-16T06:19:52.402Z"},{"id":"a188f7e4-d318-45f0-ab15-97b224ccd3c2","publicId":"bg.15.17","number":17,"sanskritText":"उत्तमः पुरुषस्त्वन्यः परमात्मेत्युदाहृतः।यो लोकत्रयमाविश्य बिभर्त्यव्यय ईश्वरः।।15.17।।","transliteration":"uttamaḥ puruṣhas tv anyaḥ paramātmety udāhṛitaḥ\nyo loka-trayam āviśhya bibharty avyaya īśhvaraḥ","meaning":"उत्तमः the Supreme; पुरुषः Purusha; तु but; अन्यः another; परमात्मा the highest; Self; इति thus; उदाहृतः called; यः who; लोकत्रयम् the three worlds; आविश्य pervading; बिभर्ति sustains; अव्ययः the indestructible; ईश्वरः Lord","commentary":null,"seoTitle":null,"seoDescription":null,"sortOrder":17,"isPublished":true,"chapterPublicId":"bg.15","chapterNumber":15,"workCode":"bg","translations":[{"id":"cb974dce-a861-4f62-ab6b-b79111916faf","languageCode":"en","languageName":"English","sourceKey":"sivananda","sourceDisplayName":"Swami Sivananda","text":"But distinct is the Supreme Purusha, called the highest Self, indestructible and Lord, who pervades the three worlds and sustains them.","isPublished":true},{"id":"e2c5c30a-f125-4390-b699-9f49b744de8b","languageCode":"hi","languageName":"Hindi","sourceKey":"ramsukhdas","sourceDisplayName":"Swami Ramsukhdas","text":"।।15.17।।उत्तम पुरुष तो अन्य ही है, जो परमात्मा नामसे कहा गया है। वही अविनाशी ईश्वर तीनों लोकोंमें प्रविष्ट होकर सबका भरण-पोषण करता है।","isPublished":true},{"id":"ed7463de-ec9e-44f2-b622-d2d731f74d80","languageCode":"te","languageName":"Telugu","sourceKey":"holy-bg-telugu","sourceDisplayName":"Holy Bhagavad Gita (Telugu)","text":"ఇవే కాక, నాశరహితమైన పరమాత్మయైన ఆ సర్వోత్కృష్ట దివ్య పురుషుడు ఉన్నాడు. ఆయన అవ్యయమైన ఈశ్వరునిగా ముల్లోకములలో ప్రవేశించి, సమస్త ప్రాణులను పోషిస్తూ ఉంటాడు.","isPublished":true},{"id":"c2cf33df-5bb0-4f1b-a1e6-3a011beefe2a","languageCode":"te","languageName":"Telugu","sourceKey":"holy-bg-telugu-w2w","sourceDisplayName":"Holy Bhagavad Gita (Telugu word meanings)","text":"ఉత్తమః — సర్వోత్కృష్ట; పురుషః — దివ్య పురుషుడు; తు — కానీ; అన్యః — వేరొక; పరమ-ఆత్మా — పరమాత్మ; ఇతి — ఈ విధముగా; ఉదాహృతః — చెప్పబడెను; యః — ఎవరైతే; లోక త్రయమ్ — మూడు లోకములు; ఆవిశ్య — ప్రవేశించి; బిభర్తి — పోషించును; అవ్యయః — నాశనరహితమైన; ఈశ్వరః — నియామకుడు.","isPublished":true},{"id":"61ef0222-374f-4935-9b96-1209f415a8e1","languageCode":"or","languageName":"Odia","sourceKey":"holy-bg-odia","sourceDisplayName":"Holy Bhagavad Gita (Odia)","text":"ଏତଦ୍‌ବ୍ୟତୀତ, ଜଣେ ପରମ ଦିବ୍ୟ ପୁରୁଷ ଅଛନ୍ତି, ସେ ଅବିନାଶୀ ପରମାତ୍ମା ଅଟନ୍ତି । ଯିଏ କି ଅପରିବର୍ତ୍ତନୀୟ ନିୟାମକ ଭାବରେ ତ୍ରିଲୋକରେ ବ୍ୟାପ୍ତ ରହନ୍ତି ଏବଂ ସମସ୍ତ ପ୍ରାଣୀଙ୍କୁ ପାଳନ କରନ୍ତି ।","isPublished":true}],"createdAt":"2026-07-14T08:55:35.036Z","updatedAt":"2026-07-16T06:19:52.640Z"},{"id":"114923c6-dd8b-446e-a1e3-bcccf722302f","publicId":"bg.15.18","number":18,"sanskritText":"यस्मात्क्षरमतीतोऽहमक्षरादपि चोत्तमः।अतोऽस्मि लोके वेदे च प्रथितः पुरुषोत्तमः।।15.18।।","transliteration":"yasmāt kṣharam atīto ’ham akṣharād api chottamaḥ\nato ’smi loke vede cha prathitaḥ puruṣhottamaḥ","meaning":"यस्मात् as; क्षरम् the perishable; अतीतः transcend; अहम् I; अक्षरात् than the imperishable; अपि also; च and; उत्तमः best; अतः therefore; अस्मि (I) am; लोके in the world; वेदे in the Vedas; च and; प्रथितः declared; पुरुषोत्तमः the Highest Purusha","commentary":null,"seoTitle":null,"seoDescription":null,"sortOrder":18,"isPublished":true,"chapterPublicId":"bg.15","chapterNumber":15,"workCode":"bg","translations":[{"id":"a4a8f032-1d34-46ac-8daa-736a1ec7a2b4","languageCode":"en","languageName":"English","sourceKey":"sivananda","sourceDisplayName":"Swami Sivananda","text":"As I transcend the perishable and am even higher than the imperishable, I am declared to be the highest Purusha in the world and in the Vedas.","isPublished":true},{"id":"acbf620d-4802-42ab-86a9-ee242dcc9050","languageCode":"hi","languageName":"Hindi","sourceKey":"ramsukhdas","sourceDisplayName":"Swami Ramsukhdas","text":"।।15.18।।मैं क्षरसे अतीत हूँ और अक्षरसे भी उत्तम हूँ, इसलिये लोकमें और वेदमें पुरुषोत्तम नामसे प्रसिद्ध हूँ।","isPublished":true},{"id":"7fd79a20-515a-4db0-9508-7da213d09f3f","languageCode":"te","languageName":"Telugu","sourceKey":"holy-bg-telugu","sourceDisplayName":"Holy Bhagavad Gita (Telugu)","text":"నేను నశ్వరమైన ఈ భౌతిక పదార్థముకంటెనూ, మరియు నాశరహితమైన జీవాత్మ కంటెనూ కూడా అతీతమైనవాడను. కాబట్టి వేదములలో మరియు స్మృతులలో నేనే సర్వోత్కృష్ట దివ్య పురుషుడిగా కీర్తింపబడ్డాను.","isPublished":true},{"id":"a5f497e2-1580-4de6-b917-4ad2d228fe32","languageCode":"te","languageName":"Telugu","sourceKey":"holy-bg-telugu-w2w","sourceDisplayName":"Holy Bhagavad Gita (Telugu word meanings)","text":"యస్మాత్ — కాబట్టి; క్షరం — నశ్వరమైన దాని కంటే; అతీతః — అతీతుడను; అహం — నేను; అక్షరాత్ — నాశరహితుడైన వాటి కంటే; అపి — కూడా; చ — మరియు; ఉత్తమః — అతీతుడను (ఉన్నతుడను); అతః — కాబట్టి; అస్మి — నేను; లోకే — ఈ జగత్తులో; వేదే — వేదములలో; చ — మరియు; ప్రథితః — ప్రసిద్ధుడను; పురుష-ఉత్తమః — సర్వోత్కృష్ట దివ్య పురుషుడిగా.","isPublished":true},{"id":"ebf41ef8-72ec-4789-9a78-b179e9a8bc66","languageCode":"or","languageName":"Odia","sourceKey":"holy-bg-odia","sourceDisplayName":"Holy Bhagavad Gita (Odia)","text":"ମୁଁ, ଏହି ନଶ୍ୱର ଜଗତ ଏପରି କି ଅବିନଶ୍ୱର ଆତ୍ମାମାନଙ୍କର ମଧ୍ୟ ଅନୁଭବାତୀତ ଅଟେ; ତେଣୁ ବେଦ ଏବଂ ସ୍ମୃତି ଆଦିରେ ମୁଁ ପରମ ଦିବ୍ୟ ପୁରୁଷ ଭାବରେ ଖ୍ୟାତ ।","isPublished":true}],"createdAt":"2026-07-14T08:55:35.763Z","updatedAt":"2026-07-16T06:19:52.878Z"},{"id":"6d8a8183-637b-4be7-8b54-ca17b4287f03","publicId":"bg.15.19","number":19,"sanskritText":"यो मामेवमसम्मूढो जानाति पुरुषोत्तमम्।स सर्वविद्भजति मां सर्वभावेन भारत।।15.19।।","transliteration":"yo mām evam asammūḍho jānāti puruṣhottamam\nsa sarva-vid bhajati māṁ sarva-bhāvena bhārata","meaning":"यः who; माम् Me; एवम् thus; असम्मूढः undeluded; जानाति knows; पुरुषोत्तमम् the Supreme Purusha; सः he; सर्ववित् allknowing; भजति worships; माम् Me; सर्वभावेन with his whole being (heart); भारत O Bharata","commentary":null,"seoTitle":null,"seoDescription":null,"sortOrder":19,"isPublished":true,"chapterPublicId":"bg.15","chapterNumber":15,"workCode":"bg","translations":[{"id":"ba079f50-da21-4658-a403-8f17f3e8c58f","languageCode":"en","languageName":"English","sourceKey":"sivananda","sourceDisplayName":"Swami Sivananda","text":"He who, undeluded, knows Me as the highest Purusha, he, knowing all, worships Me with his whole being (heart), O Arjuna.","isPublished":true},{"id":"ea43922d-e320-43d9-8390-a447fe20ad67","languageCode":"hi","languageName":"Hindi","sourceKey":"ramsukhdas","sourceDisplayName":"Swami Ramsukhdas","text":"।।15.19।।हे भरतवंशी अर्जुन ! इस प्रकार जो मोहरहित मनुष्य मुझे पुरुषोत्तम जानता है, वह सर्वज्ञ सब प्रकारसे मेरा ही भजन करता है।","isPublished":true},{"id":"ba63cd57-ce69-4cef-9afc-04126fb8aa53","languageCode":"te","languageName":"Telugu","sourceKey":"holy-bg-telugu","sourceDisplayName":"Holy Bhagavad Gita (Telugu)","text":"ఎవరైతే సంశయము లేకుండా నన్ను సర్వోత్కృష్ట పురుషోత్తమునిగా తెలుసుకుంటారో, వారికి సంపూర్ణ జ్ఞానము ఉన్నట్టు. ఓ అర్జునా, వారు హృదయపూర్వకముగా నన్నే భజింతురు.","isPublished":true},{"id":"5b4a73f4-7816-407a-a51b-ced4fdf15ac3","languageCode":"te","languageName":"Telugu","sourceKey":"holy-bg-telugu-w2w","sourceDisplayName":"Holy Bhagavad Gita (Telugu word meanings)","text":"యః — ఎవరైతే; మాం — నన్ను; ఏవం — ఈ విధముగా; అసమ్మూఢః — సంశయము లేకుండా; జానాతి — తెలుసుకుని; పురుష-ఉత్తమమ్ — సర్వోత్కృష్ట దివ్య పురుషుడు; సః — వారు; సర్వ-విత్ — సంపూర్ణ జ్ఞానము కలవారు; భజతి — పూజిస్తారు; మాం — నన్ను; సర్వ-భావేన — సంపూర్ణముగా/మనఃస్ఫూర్తిగా; భారత — అర్జునా, భరత వంశీయుడా.","isPublished":true},{"id":"7bdbfbe0-77b9-4acc-b45e-d6a7c0e10759","languageCode":"or","languageName":"Odia","sourceKey":"holy-bg-odia","sourceDisplayName":"Holy Bhagavad Gita (Odia)","text":"ଯେଉଁମାନେ ନିଃସନ୍ଦେହ ଭାବରେ ମୋତେ ପରମ ଦିବ୍ୟ ପୁରୁଷ ରୂପରେ ଜାଣନ୍ତି, ସେମାନଙ୍କର ବାସ୍ତବିକ ପୂର୍ଣ୍ଣ ଜ୍ଞାନ ଅଛି । ହେ ଅର୍ଜୁନ! ସେମାନେ ପୂର୍ଣ୍ଣ ସମର୍ପିତ ହୋଇ ମୋର ଉପାସନା କରନ୍ତି ।","isPublished":true}],"createdAt":"2026-07-14T08:55:36.444Z","updatedAt":"2026-07-16T06:19:53.193Z"},{"id":"82442f3d-83e3-4b35-b555-e6608a983a42","publicId":"bg.15.20","number":20,"sanskritText":"इति गुह्यतमं शास्त्रमिदमुक्तं मयाऽनघ।एतद्बुद्ध्वा बुद्धिमान्स्यात्कृतकृत्यश्च भारत।।15.20।।","transliteration":"iti guhyatamaṁ śhāstram idam uktaṁ mayānagha\netad buddhvā buddhimān syāt kṛita-kṛityaśh cha bhārata","meaning":"इति thus; गुह्यतमम् most secret; शास्त्रम् science (teaching); इदम् this; उक्तम् has been taught; मया by Me; अनघ O sinless one; एतत् बुद्ध्वा knowing this; बुद्धिमान् wise; स्यात् will become; कृतकृत्यः (who has) accomplished all the duties; च and; भारत O Bharata","commentary":null,"seoTitle":null,"seoDescription":null,"sortOrder":20,"isPublished":true,"chapterPublicId":"bg.15","chapterNumber":15,"workCode":"bg","translations":[{"id":"7f74a68c-28b7-40e2-a2e8-205f8b85b6cc","languageCode":"en","languageName":"English","sourceKey":"sivananda","sourceDisplayName":"Swami Sivananda","text":"Thus, I have imparted to you this most secret science, O sinless one; by knowing this, one becomes wise, and all their duties are accomplished, O Arjuna.","isPublished":true},{"id":"6b3091c1-e496-4092-85ee-97e84f688090","languageCode":"hi","languageName":"Hindi","sourceKey":"ramsukhdas","sourceDisplayName":"Swami Ramsukhdas","text":"।।15.20।।हे निष्पाप अर्जुन ! इस प्रकार यह अत्यन्त गोपनीय शास्त्र मेरे द्वारा कहा गया है। हे भरतवंशी अर्जुन ! इसको जानकर मनुष्य ज्ञानवान् (तथा प्राप्त-प्राप्तव्य) और कृतकृत्य हो जाता है।","isPublished":true},{"id":"a1552e72-b2ac-4278-9212-87bf0c92b331","languageCode":"te","languageName":"Telugu","sourceKey":"holy-bg-telugu","sourceDisplayName":"Holy Bhagavad Gita (Telugu)","text":"ఓ పాపరహితుడా, అర్జునా, అత్యంత రహస్యమైన వేద శాస్త్ర మూలతత్త్వమును నేను నీకు తెలియచేసాను. దీనిని అర్థం చేసుకున్న వ్యక్తి జ్ఞాని అవుతాడు, మరియు సాధించవలసినది అంతా నెరవేర్చినవాడు అవుతాడు.","isPublished":true},{"id":"6a4230f3-e1e9-4822-bbcd-29cbd182afa2","languageCode":"te","languageName":"Telugu","sourceKey":"holy-bg-telugu-w2w","sourceDisplayName":"Holy Bhagavad Gita (Telugu word meanings)","text":"ఇతి — ఇవి; గుహ్య-తమం — అత్యంత రహస్యమైన; శాస్త్రం — వైదిక శాస్త్రము; ఇదం — ఇది; ఉక్తం — చెప్పబడినది; మయా — నా చేత; అనఘ — అర్జునా, పాప రహితుడా; ఏతత్ — ఇది; బుద్ధ్వా — అర్థంచేసుకుని; బుద్ధిమాన్ — జ్ఞాని; స్యాత్ — అగును; కృత-కృత్యః — సాధించవలసినది పూర్తి చేసినవాడు; చ — మరియు; భారత — అర్జునా, భరత వంశజుడా.","isPublished":true},{"id":"17afbc1f-96e8-478a-83ef-fe5debe500d0","languageCode":"or","languageName":"Odia","sourceKey":"holy-bg-odia","sourceDisplayName":"Holy Bhagavad Gita (Odia)","text":"ହେ ନିଷ୍ପାପ ଅର୍ଜୁନ! ବେଦଶାସ୍ତ୍ରମାନଙ୍କର ଏହି ଗୂଢ଼ତମ ସିଦ୍ଧାନ୍ତ ମୁଁ ତୁମ ସମ୍ମୁଖରେ ପ୍ରକାଶ କଲି । ଏହାକୁ ହୃଦୟଙ୍ଗମ କରି ଜଣେ ବ୍ୟକ୍ତି ଜ୍ଞାନଦୀପ୍ତ ହୋଇ କୃତକୃତ୍ୟ ହୋଇଯିବ ।","isPublished":true}],"createdAt":"2026-07-14T08:55:37.131Z","updatedAt":"2026-07-16T06:19:53.431Z"}],"languages":[{"code":"sa","name":"Sanskrit","nativeName":"संस्कृतम्"},{"code":"en","name":"English","nativeName":"English"},{"code":"hi","name":"Hindi","nativeName":"हिन्दी"},{"code":"te","name":"Telugu","nativeName":"తెలుగు"},{"code":"or","name":"Odia","nativeName":"ଓଡ଼ିଆ"},{"code":"kn","name":"Kannada","nativeName":"ಕನ್ನಡ"},{"code":"ta","name":"Tamil","nativeName":"தமிழ்"},{"code":"ml","name":"Malayalam","nativeName":"മലയാളം"}]}
+{
+  "generatedAt": "2026-07-27T08:06:39.019Z",
+  "chapter": {
+    "id": "0678ecb7-0e64-4786-b02f-98c9fb3c9cd9",
+    "publicId": "bg.15",
+    "number": 15,
+    "title": "Purushottama Yoga",
+    "verseCount": 20,
+    "sortOrder": 15,
+    "isPublished": true,
+    "work": {
+      "code": "bg",
+      "slug": "bhagavad-gita",
+      "title": "Bhagavad Gita"
+    },
+    "createdAt": "2026-07-10T08:56:33.628Z",
+    "updatedAt": "2026-07-14T08:55:20.730Z"
+  },
+  "verses": [
+    {
+      "id": "ec300540-1e6d-41c2-aa4c-02396d774262",
+      "publicId": "bg.15.1",
+      "number": 1,
+      "sanskritText": "श्री भगवानुवाचऊर्ध्वमूलमधःशाखमश्वत्थं प्राहुरव्ययम्।छन्दांसि यस्य पर्णानि यस्तं वेद स वेदवित्।।15.1।।",
+      "transliteration": "śhrī-bhagavān uvācha\nūrdhva-mūlam adhaḥ-śhākham aśhvatthaṁ prāhur avyayam\nchhandānsi yasya parṇāni yas taṁ veda sa veda-vit",
+      "meaning": "ऊर्ध्वमूलम् rooted above; अधःशाखम् branches below; अश्वत्थम् the Asvattha; प्राहुः they speak of; अव्ययम् indestructible; छन्दांसि metres or hymns; यस्य of which; पर्णानि leaves; यः who; तम् that; वेद knows; सः he; वेदवित् is the knower of the Vedas",
+      "commentary": null,
+      "seoTitle": null,
+      "seoDescription": null,
+      "sortOrder": 1,
+      "isPublished": true,
+      "chapterPublicId": "bg.15",
+      "chapterNumber": 15,
+      "workCode": "bg",
+      "translations": [
+        {
+          "id": "108eb0a1-7b0f-4360-9e77-1858049b70e4",
+          "languageCode": "en",
+          "languageName": "English",
+          "sourceKey": "sivananda",
+          "sourceDisplayName": "Swami Sivananda",
+          "text": "The Blessed Lord said: They (the wise) speak of the indestructible peepul tree, with its roots above and branches below, whose leaves are the meters or hymns; he who knows it is a knower of the Vedas.",
+          "isPublished": true
+        },
+        {
+          "id": "b0d5688e-dad7-4365-9632-47b7e63f21c4",
+          "languageCode": "hi",
+          "languageName": "Hindi",
+          "sourceKey": "ramsukhdas",
+          "sourceDisplayName": "Swami Ramsukhdas",
+          "text": "।।15.1।। श्रीभगवान् बोले -- ऊपरकी ओर मूलवाले तथा नीचेकी ओर शाखावाले जिस संसाररूप अश्वत्थवृक्षको अव्यय कहते हैं और वेद जिसके पत्ते हैं, उस संसारवृक्षको जो जानता है, वह सम्पूर्ण वेदोंको जाननेवाला है।",
+          "isPublished": true
+        },
+        {
+          "id": "f417f00e-7843-452a-86d1-5da9864b404a",
+          "languageCode": "te",
+          "languageName": "Telugu",
+          "sourceKey": "holy-bg-telugu",
+          "sourceDisplayName": "Holy Bhagavad Gita (Telugu)",
+          "text": "శ్రీ భగవానుడు పలికెను : వేర్లు పైకి మరియు కొమ్మలు క్రిందికి ఉన్న సనాతనమైన అశ్వత్థ వృక్షము గురించి చెప్తుంటారు. దాని యొక్క ఆకులు వేద మంత్రములు, మరియు ఈ చెట్టు యొక్క రహస్యం తెలిసిన వారు వేదములను తెలుసుకున్నట్టు.",
+          "isPublished": true
+        },
+        {
+          "id": "190a5580-9dc6-461f-9a79-c5c0aab1d5e1",
+          "languageCode": "te",
+          "languageName": "Telugu",
+          "sourceKey": "holy-bg-telugu-w2w",
+          "sourceDisplayName": "Holy Bhagavad Gita (Telugu word meanings)",
+          "text": "శ్రీ భగవానువాచ — శ్రీ భగవానుడు పలికెను; ఊర్ధ్వ-మూలం — వేర్లు పైకి; అధః — క్రిందికి; శాఖం — కొమ్మలు; అశ్వత్థం — రావి చెట్టు; ప్రాహుః — అని అంటారు; అవ్యయమ్ — సనాతనమైన; ఛందాంసి — వేద మంత్రములు; యస్య పర్ణాని — దేని ఆకులో; యః — ఎవరైతే; తం — అది; వేద — తెలుసుకుందురో; సః — అతను; వేదవిత్ — వేదములు ఎఱిగిన వాడు.",
+          "isPublished": true
+        },
+        {
+          "id": "7cb3f6db-daad-47a8-baad-461c3db52254",
+          "languageCode": "or",
+          "languageName": "Odia",
+          "sourceKey": "holy-bg-odia",
+          "sourceDisplayName": "Holy Bhagavad Gita (Odia)",
+          "text": "ପରମ ପୁରୁଷ ଭଗବାନ କହିଲେ: ସେମାନେ ଏକ ଅନାଦି ଅଶ୍ୱତ୍‌ଥ ବୃକ୍ଷ ବିଷୟରେ କହିଛନ୍ତି, ଯାହାର ମୂଳ ଉପରକୁ ଏବଂ ଶାଖାସବୁ ତଳକୁ ରହିଛି । ଏହାର ପତ୍ରଗୁଡ଼ିକ ବେଦର ମନ୍ତ୍ର ସବୁ ଅଟନ୍ତି । ଯେଉଁ ବ୍ୟକ୍ତି ଏହି ରହସ୍ୟକୁ ଜାଣେ ସେ ବେଦର ଜ୍ଞାତା ଅଟେ ।",
+          "isPublished": true
+        }
+      ],
+      "createdAt": "2026-07-14T08:55:21.241Z",
+      "updatedAt": "2026-07-16T06:19:48.410Z"
+    },
+    {
+      "id": "ed1cc083-d2b8-4377-8de4-ec6b885aabbd",
+      "publicId": "bg.15.2",
+      "number": 2,
+      "sanskritText": "अधश्चोर्ध्वं प्रसृतास्तस्य शाखा     गुणप्रवृद्धा विषयप्रवालाः।अधश्च मूलान्यनुसन्ततानि     कर्मानुबन्धीनि मनुष्यलोके।।15.2।।",
+      "transliteration": "adhaśh chordhvaṁ prasṛitās tasya śhākhā\nguṇa-pravṛiddhā viṣhaya-pravālāḥ\nadhaśh cha mūlāny anusantatāni\nkarmānubandhīni manuṣhya-loke",
+      "meaning": "अधः below; च and; ऊर्ध्वम् above; प्रसृताः spread; तस्य its; शाखाः branches; गुणप्रवृद्धाः nourished by the Gunas; विषयप्रवालाः senseobjects (are) its buds; अधः below; च and; मूलानि the roots; अनुसन्ततानि are stretched forth; कर्मानुबन्धीनि originating action; मनुष्यलोके in the world of men",
+      "commentary": null,
+      "seoTitle": null,
+      "seoDescription": null,
+      "sortOrder": 2,
+      "isPublished": true,
+      "chapterPublicId": "bg.15",
+      "chapterNumber": 15,
+      "workCode": "bg",
+      "translations": [
+        {
+          "id": "e329e463-06b7-404b-b0ed-bd717d3f52b5",
+          "languageCode": "en",
+          "languageName": "English",
+          "sourceKey": "sivananda",
+          "sourceDisplayName": "Swami Sivananda",
+          "text": "Its branches spread below and above, nourished by the Gunas; its buds are sense-objects, and its roots stretch forth below in the world of men, originating action.",
+          "isPublished": true
+        },
+        {
+          "id": "b90616c5-fea4-458c-b64b-0956001453bc",
+          "languageCode": "hi",
+          "languageName": "Hindi",
+          "sourceKey": "ramsukhdas",
+          "sourceDisplayName": "Swami Ramsukhdas",
+          "text": "।।15.2।।उस संसारवृक्षकी गुणों-(सत्त्व, रज और तम-) के द्वारा बढ़ी हुई तथा विषयरूप कोंपलोंवाली शाखाएँ नीचे, मध्यमें और ऊपर सब जगह फैली हुई हैं। मनुष्यलोकमें कर्मोंके अनुसार बाँधनेवाले मूल भी नीचे और ऊपर (सभी लोकोंमें) व्याप्त हो रहे हैं।",
+          "isPublished": true
+        },
+        {
+          "id": "d3a78d30-c189-4026-98f3-0dd8bd14bc4f",
+          "languageCode": "te",
+          "languageName": "Telugu",
+          "sourceKey": "holy-bg-telugu",
+          "sourceDisplayName": "Holy Bhagavad Gita (Telugu)",
+          "text": "త్రి-గుణములచే పోషించబడి, ఈ చెట్టు యొక్క శాఖలు, పైకి మరియు క్రిందికి విస్తరించి ఉంటాయి, ఇంద్రియ విషయములు వాటికి చిగుర్ల వలె ఉంటాయి. మానవ రూపంలో కర్మ ప్రవహించటానికి, చెట్టు యొక్క వేర్లు క్రిందికి వ్రేలాడుతూ ఉంటాయి. క్రిందిన, దాని యొక్క వేర్లు శాఖలుగా విస్తరించి, మనుష్య లోకములో కర్మలను కలుగచేస్తాయి.",
+          "isPublished": true
+        },
+        {
+          "id": "f301bf11-1a75-4a80-aba8-bdfe7a52458d",
+          "languageCode": "te",
+          "languageName": "Telugu",
+          "sourceKey": "holy-bg-telugu-w2w",
+          "sourceDisplayName": "Holy Bhagavad Gita (Telugu word meanings)",
+          "text": "అధః — క్రిందికి; చ — మరియు; ఊర్ధ్వం — పైకి; ప్రసృతాః — విస్తరించి; తస్య — దాని యొక్క; శాఖా — కొమ్మలు; గుణ — ప్రకృతి గుణములు; ప్రవృద్ధాః — పోషించబడి; విషయ — ఇంద్రియ విషయములు; ప్రవాలాః — చిగుర్లు ; అధః — క్రిందికి; చ — మరియు; మూలాని — వేర్లు; అనుసంతతాని — పెరుగుతూనే ఉంటాయి; కర్మ — కర్మలు; అనుబంధీని — బంధించివేయును; మనుష్య-లోకే — మానవ లోకములో.",
+          "isPublished": true
+        },
+        {
+          "id": "a67b8b6d-43f9-447d-a7d1-df4209f510e3",
+          "languageCode": "or",
+          "languageName": "Odia",
+          "sourceKey": "holy-bg-odia",
+          "sourceDisplayName": "Holy Bhagavad Gita (Odia)",
+          "text": "ବୃକ୍ଷର ଶାଖାଗୁଡ଼ିକ ଉପରକୁ ଓ ତଳକୁ ବିସ୍ତୃତ ହୋଇଛି, ତିନିଗୁଣ ଦ୍ୱାରା ତାହାର ପ୍ରତିପୋଷଣ ହେଉଛି ଏବଂ ଇନ୍ଦ୍ରିୟର ବିଷୟଗୁଡ଼ିକ ଏହାର କୋମଳ ଅଙ୍କୁର ସଦୃଶ ଅଟନ୍ତି । ଏହି କୋମଳ ମୂଳ ନିମ୍ନଦିଗକୁ ପ୍ରସାରିତ ହୋଇ, ମନୁଷ୍ୟ ସ୍ୱରୂପରେ କର୍ମର ପ୍ରବାହ ସୃଷ୍ଟି କରୁଛି । ନିମ୍ନଦେଶରେ ଏହାର ମୂଳ ସବୁ ଶାଖାଯୁକ୍ତ ହୋଇ ସଂସାରରେ ମନୁଷ୍ୟର କର୍ମବନ୍ଧନ ସୃଷ୍ଟି କରେ ।",
+          "isPublished": true
+        }
+      ],
+      "createdAt": "2026-07-14T08:55:22.186Z",
+      "updatedAt": "2026-07-16T06:19:48.663Z"
+    },
+    {
+      "id": "03d03cd0-7e2c-4b1e-886d-113d8938a912",
+      "publicId": "bg.15.3",
+      "number": 3,
+      "sanskritText": "न रूपमस्येह तथोपलभ्यते    नान्तो न चादिर्न च संप्रतिष्ठा।अश्वत्थमेनं सुविरूढमूल    मसङ्गशस्त्रेण दृढेन छित्त्वा।।15.3।।",
+      "transliteration": "na rūpam asyeha tathopalabhyate\nnānto na chādir na cha sampratiṣhṭhā\naśhvattham enaṁ su-virūḍha-mūlam\nasaṅga-śhastreṇa dṛiḍhena chhittvā",
+      "meaning": "न not; रूपम् form; अस्य its; इह here; तथा as such; उपलभ्यते is perceived; न not; अन्तः (its) end; न not; च and; आदिः (its) origin; न not; च and; संप्रतिष्ठा foundation or resting place; अश्वत्थम् Asvattha; एनम् this; सुविरूढमूलम् firmrooted; असङ्गशस्त्रेण with the axe of nonattachment; दृढेन strong; छित्त्वा having cut asunder",
+      "commentary": null,
+      "seoTitle": null,
+      "seoDescription": null,
+      "sortOrder": 3,
+      "isPublished": true,
+      "chapterPublicId": "bg.15",
+      "chapterNumber": 15,
+      "workCode": "bg",
+      "translations": [
+        {
+          "id": "924b60f8-95b4-4c82-a7f0-bd83a9c78149",
+          "languageCode": "en",
+          "languageName": "English",
+          "sourceKey": "sivananda",
+          "sourceDisplayName": "Swami Sivananda",
+          "text": "Its form is not perceived here as such, nor its end, origin, foundation, or resting place; having cut asunder this firmly rooted peepul tree with the strong axe of non-attachment.",
+          "isPublished": true
+        },
+        {
+          "id": "44198558-7be6-4bda-9763-8ce2d6f5f414",
+          "languageCode": "hi",
+          "languageName": "Hindi",
+          "sourceKey": "ramsukhdas",
+          "sourceDisplayName": "Swami Ramsukhdas",
+          "text": "।।15.3।।इस संसारवृक्षका जैसा रूप देखनेमें आता है, वैसा यहाँ (विचार करनेपर) मिलता नहीं; क्योंकि इसका न तो आदि है, न अन्त है और न स्थिति ही है। इसलिये इस दृढ़ मूलोंवाले संसाररूप अश्वत्थवृक्षको दृढ़ असङ्गतारूप शस्त्रके द्वारा काटकर --",
+          "isPublished": true
+        },
+        {
+          "id": "47e01baf-de7f-40cc-bd47-1214da90153f",
+          "languageCode": "te",
+          "languageName": "Telugu",
+          "sourceKey": "holy-bg-telugu",
+          "sourceDisplayName": "Holy Bhagavad Gita (Telugu)",
+          "text": "BG 15.3-4:\n                            ఈ వృక్షము యొక్క నిజ స్వరూపము ఈ జగత్తులో గ్రహింపబడదు, దాని యొక్క మొదలు, చివర, లేదా సనాతన అస్తిత్వము కూడా అర్థం కావు. కానీ, ఈ యొక్క లోతైన వేర్లు కల అశ్వత్థ వృక్షమును అనాసక్తి/వైరాగ్యమనే బలమైన గొడ్డలిచే ఖండించివేయాలి. ఆ తరువాత ఆ వృక్షము యొక్క మొదలు వెతకాలి, అదియే ఆ భగవంతుడు, ఆయన నుండే ఈ జగత్తు యొక్క ఉత్పత్తి సనాతన కాలం క్రితం సంభవించినది. ఆయనను ఆశ్రయించిన తరువాత మళ్ళీ మనం ఈ జగత్తు లోనికి రాము.",
+          "isPublished": true
+        },
+        {
+          "id": "1e101b20-0442-459e-8716-3845d3a30773",
+          "languageCode": "te",
+          "languageName": "Telugu",
+          "sourceKey": "holy-bg-telugu-w2w",
+          "sourceDisplayName": "Holy Bhagavad Gita (Telugu word meanings)",
+          "text": "న రూపమ్ — రూపము లేకుండా; అస్య — దీని యొక్క; ఇహ — ఈ లోకములో; తథా — ఆ విధముగా; ఉపలభ్యతే — కనిపించును; న అంతః — అంతము లేని; న చ ఆదిః — మొదలు లేకుండా; న చ సంప్రతిష్ఠా — మూలం లేకుండా; అశ్వత్థమ్ — రావి చెట్టు; ఏనం — ఇది; సు-విరూఢ-మూలం — లోతైన మూలములు గల; అసంగ-శస్త్రేణ — అనాసక్తి/వైరాగ్యము అనే గొడ్డలి చే; ధృడేన — బలమైన; ఛిత్త్వా — ఛిద్రం చేసి; తతః — ఆ తరువాత; పదం — ప్రదేశము; తత్ — అది; పరిమార్గితవ్యం — వెతకాలి; యస్మిన్ — ఎక్కడికైతే; గతాః — వెళ్లిన పిదప; న నివర్తంతి — తిరిగిరారు; భూయః — మరల; తమ్ — ఆయనకి; ఏవ — ఖఛ్చితముగా; చ — మరియు; ఆద్యం — మూలమైన; పురుషం — పరమేశ్వరుడు; ప్రపద్యే — ఆశ్రయించుము; యతః — ఎక్కడి నుండి అయితే; ప్రవృత్తిః — ఈ వ్యవహారము; ప్రసృతా — ఉద్భవించినదో; పురాణీ — అతి ప్రాచీనమైన.",
+          "isPublished": true
+        }
+      ],
+      "createdAt": "2026-07-14T08:55:22.983Z",
+      "updatedAt": "2026-07-16T06:19:49.096Z"
+    },
+    {
+      "id": "ea845f3f-76cf-4f92-a1b4-283570fea93e",
+      "publicId": "bg.15.4",
+      "number": 4,
+      "sanskritText": "ततः पदं तत्परिमार्गितव्य    यस्मिन्गता न निवर्तन्ति भूयः।तमेव चाद्यं पुरुषं प्रपद्ये    यतः प्रवृत्तिः प्रसृता पुराणी।।15.4।।",
+      "transliteration": "tataḥ padaṁ tat parimārgitavyaṁ\nyasmin gatā na nivartanti bhūyaḥ\ntam eva chādyaṁ puruṣhaṁ prapadye\nyataḥ pravṛittiḥ prasṛitā purāṇī",
+      "meaning": "ततः then; पदम् goal; तत् That; परिमार्गितव्यम् should be sought for; यस्मिन् whither; गताः gone; न not; निवर्तन्ति return; भूयः again; तम् that; एव even; च and; आद्यम् primeval; पुरुषम् Purusha; प्रपद्ये I seek refuge; यतः whence; प्रवृत्तिः activity or energy; प्रसृता streamed forth; पुराणी ancient",
+      "commentary": null,
+      "seoTitle": null,
+      "seoDescription": null,
+      "sortOrder": 4,
+      "isPublished": true,
+      "chapterPublicId": "bg.15",
+      "chapterNumber": 15,
+      "workCode": "bg",
+      "translations": [
+        {
+          "id": "60284b14-0e7e-4be2-96d0-5773b76930d7",
+          "languageCode": "en",
+          "languageName": "English",
+          "sourceKey": "sivananda",
+          "sourceDisplayName": "Swami Sivananda",
+          "text": "Then, that goal should be sought for, to which, having gone, none returns again. I seek refuge in that Primeval Purusha, from whence streamed forth the ancient activity or energy.",
+          "isPublished": true
+        },
+        {
+          "id": "a36064ba-7a7c-40e8-8667-ed4f1cf4c031",
+          "languageCode": "hi",
+          "languageName": "Hindi",
+          "sourceKey": "ramsukhdas",
+          "sourceDisplayName": "Swami Ramsukhdas",
+          "text": "।।15.4।।उसके बाद उस परमपद-(परमात्मा-) की खोज करनी चाहिये जिसको प्राप्त होनेपर मनुष्य फिर लौटकर संसारमें नहीं आते और जिससे अनादिकालसे चली आनेवाली यह सृष्टि विस्तारको प्राप्त हुई है, उस आदिपुरुष परमात्माके ही मैं शरण हूँ।",
+          "isPublished": true
+        },
+        {
+          "id": "dd17554b-730a-49af-9617-8638d205d141",
+          "languageCode": "te",
+          "languageName": "Telugu",
+          "sourceKey": "holy-bg-telugu",
+          "sourceDisplayName": "Holy Bhagavad Gita (Telugu)",
+          "text": "BG 15.3-4:\n                            ఈ వృక్షము యొక్క నిజ స్వరూపము ఈ జగత్తులో గ్రహింపబడదు, దాని యొక్క మొదలు, చివర, లేదా సనాతన అస్తిత్వము కూడా అర్థం కావు. కానీ, ఈ యొక్క లోతైన వేర్లు కల అశ్వత్థ వృక్షమును అనాసక్తి/వైరాగ్యమనే బలమైన గొడ్డలిచే ఖండించివేయాలి. ఆ తరువాత ఆ వృక్షము యొక్క మొదలు వెతకాలి, అదియే ఆ భగవంతుడు, ఆయన నుండే ఈ జగత్తు యొక్క ఉత్పత్తి సనాతన కాలం క్రితం సంభవించినది. ఆయనను ఆశ్రయించిన తరువాత మళ్ళీ మనం ఈ జగత్తు లోనికి రాము.",
+          "isPublished": true
+        },
+        {
+          "id": "94132181-3b6b-485e-96c9-7ec28ca136cf",
+          "languageCode": "te",
+          "languageName": "Telugu",
+          "sourceKey": "holy-bg-telugu-w2w",
+          "sourceDisplayName": "Holy Bhagavad Gita (Telugu word meanings)",
+          "text": "న రూపమ్ — రూపము లేకుండా; అస్య — దీని యొక్క; ఇహ — ఈ లోకములో; తథా — ఆ విధముగా; ఉపలభ్యతే — కనిపించును; న అంతః — అంతము లేని; న చ ఆదిః — మొదలు లేకుండా; న చ సంప్రతిష్ఠా — మూలం లేకుండా; అశ్వత్థమ్ — రావి చెట్టు; ఏనం — ఇది; సు-విరూఢ-మూలం — లోతైన మూలములు గల; అసంగ-శస్త్రేణ — అనాసక్తి/వైరాగ్యము అనే గొడ్డలి చే; ధృడేన — బలమైన; ఛిత్త్వా — ఛిద్రం చేసి; తతః — ఆ తరువాత; పదం — ప్రదేశము; తత్ — అది; పరిమార్గితవ్యం — వెతకాలి; యస్మిన్ — ఎక్కడికైతే; గతాః — వెళ్లిన పిదప; న నివర్తంతి — తిరిగిరారు; భూయః — మరల; తమ్ — ఆయనకి; ఏవ — ఖఛ్చితముగా; చ — మరియు; ఆద్యం — మూలమైన; పురుషం — పరమేశ్వరుడు; ప్రపద్యే — ఆశ్రయించుము; యతః — ఎక్కడి నుండి అయితే; ప్రవృత్తిః — ఈ వ్యవహారము; ప్రసృతా — ఉద్భవించినదో; పురాణీ — అతి ప్రాచీనమైన.",
+          "isPublished": true
+        }
+      ],
+      "createdAt": "2026-07-14T08:55:23.987Z",
+      "updatedAt": "2026-07-16T06:19:49.332Z"
+    },
+    {
+      "id": "246ce58f-16a2-477a-851a-184da6eb6c53",
+      "publicId": "bg.15.5",
+      "number": 5,
+      "sanskritText": "निर्मानमोहा जितसङ्गदोषा    अध्यात्मनित्या विनिवृत्तकामाः।द्वन्द्वैर्विमुक्ताः सुखदुःखसंज्ञै    र्गच्छन्त्यमूढाः पदमव्ययं तत्।।15.5।।",
+      "transliteration": "nirmāna-mohā jita-saṅga-doṣhā\nadhyātma-nityā vinivṛitta-kāmāḥ\ndvandvair vimuktāḥ sukha-duḥkha-sanjñair\ngachchhanty amūḍhāḥ padam avyayaṁ tat",
+      "meaning": "निर्मानमोहाः free from pride and delusion; जितसङ्गदोषाः victorious over the evil of attachment; अध्यात्मनित्याः dwelling constantly in the Self; विनिवृत्तकामाः (their) desires having completely turned away; द्वन्द्वैः from the pairs of opposites; विमुक्ताः freed; सुखदुःखसंज्ञैः known as pleasure and pain; गच्छन्ति reach; अमूढाः the undeluded; पदम् goal; अव्ययम् eternal; तत् That",
+      "commentary": null,
+      "seoTitle": null,
+      "seoDescription": null,
+      "sortOrder": 5,
+      "isPublished": true,
+      "chapterPublicId": "bg.15",
+      "chapterNumber": 15,
+      "workCode": "bg",
+      "translations": [
+        {
+          "id": "9d45bef7-db92-4ecf-877f-115fee15ead6",
+          "languageCode": "en",
+          "languageName": "English",
+          "sourceKey": "sivananda",
+          "sourceDisplayName": "Swami Sivananda",
+          "text": "Free from pride and delusion, victorious over the evil of attachment, dwelling constantly in the Self, their desires having completely turned away, freed from the pairs of opposites known as pleasure and pain, they, the undeluded, reach the eternal goal.",
+          "isPublished": true
+        },
+        {
+          "id": "b5763b10-57a0-463c-bf89-91acc37e8ee3",
+          "languageCode": "hi",
+          "languageName": "Hindi",
+          "sourceKey": "ramsukhdas",
+          "sourceDisplayName": "Swami Ramsukhdas",
+          "text": "।।15.5।।जो मान और मोहसे रहित हो गये हैं, जिन्होंने आसक्तिसे होनेवाले दोषोंको जीत लिया है, जो नित्य-निरन्तर परमात्मामें ही लगे हुए हैं, जो (अपनी दृष्टिसे) सम्पूर्ण कामनाओंसे रहित हो गये हैं, जो सुख-दुःखरूप द्वन्द्वोंसे मुक्त हो गये हैं, ऐसे (ऊँची स्थितिवाले) मोहरहित साधक भक्त उस अविनाशी परमपद-(परमात्मा-) को प्राप्त होते हैं।",
+          "isPublished": true
+        },
+        {
+          "id": "8fa5ddb3-912f-410f-9a51-539e76f52d5f",
+          "languageCode": "te",
+          "languageName": "Telugu",
+          "sourceKey": "holy-bg-telugu",
+          "sourceDisplayName": "Holy Bhagavad Gita (Telugu)",
+          "text": "దురభిమానము మరియు మోహము లేకుండా ఉన్నవారు, మమకారాసక్తియనే అరిష్టాన్ని జయించినవారు, సతతమూ ఆత్మ, భగవంతుని చింతనలోనే ఉన్నవారు, ఇంద్రియ భోగములను అనుభవించాలని కోరికలు లేని వారు, సుఖదుఃఖములనెడి ద్వంద్వములకు అతీతులై ఉన్నవారు,  ఇటువంటి ముక్తజీవులు నా పరమపదమును చేరుకుంటారు.",
+          "isPublished": true
+        },
+        {
+          "id": "b05c8b4c-d101-4a53-8d2a-6d0ae161a23e",
+          "languageCode": "te",
+          "languageName": "Telugu",
+          "sourceKey": "holy-bg-telugu-w2w",
+          "sourceDisplayName": "Holy Bhagavad Gita (Telugu word meanings)",
+          "text": "నిః — లేకుండా; మాన — అహంకారం/గర్వము; మోహాః — మోహము; జిత — జయించి; సంగ — సంగము (మమకారాసక్తి); దోషాః — దోషములు; అధ్యాత్మ-నిత్యాః — నిరంతరం ఆత్మ, భగవంతుని యందే స్థితమై ఉండి; వినివృత్త కామాః — ఇంద్రియ భోగ కోరికల నుండి పూర్తిగా స్వేచ్ఛ పొందినవారు; ద్వంద్వైః విముక్తాః — ద్వంద్వముల నుండి విముక్తులైనవారు; సుఖ-దుఃఖ సంజ్ఞైః — సుఖదుఃఖములు అనబడే; గచ్ఛంతి — పొందెదరు; అమూఢాః — వివేకవంతులు; పదం — ధామము; అవ్యయం — నిత్య సనాతనమైన; తత్ — అది.",
+          "isPublished": true
+        },
+        {
+          "id": "d124ba7c-b0a9-466b-8787-3836a40d58fd",
+          "languageCode": "or",
+          "languageName": "Odia",
+          "sourceKey": "holy-bg-odia",
+          "sourceDisplayName": "Holy Bhagavad Gita (Odia)",
+          "text": "ଯେଉଁମାନେ ମଦ ଏବଂ ମୋହରୁ ମୁକ୍ତ, ଯିଏ ଆସକ୍ତିରୂପକ ଶତ୍ରୁକୁ ଜୟ କରିଛି, ଯିଏ ସର୍ବଦା ଆତ୍ମା ଏବଂ ଭଗବାନଙ୍କ ଠାରେ ସ୍ଥିତ ରହନ୍ତି, ଯେଉଁମାନେ ଇନ୍ଦ୍ରିୟ ଉପଭୋଗର କାମନା ଠାରୁ ମୁକ୍ତ ହୋଇଛନ୍ତି, ଯିଏ ସୁଖ ଓ ଦୁଃଖର ଦ୍ୱୈତରୁ ଊର୍ଦ୍ଧ୍ୱରେ, ସେହିପରି ମୁକ୍ତ ବ୍ୟକ୍ତିଗଣ ମୋର ଦିବ୍ୟ ଲୋକ ପ୍ରାପ୍ତ କରନ୍ତି ।",
+          "isPublished": true
+        }
+      ],
+      "createdAt": "2026-07-14T08:55:25.078Z",
+      "updatedAt": "2026-07-16T06:19:49.566Z"
+    },
+    {
+      "id": "6537b010-ebc5-438b-ad7e-118ef2fce9bb",
+      "publicId": "bg.15.6",
+      "number": 6,
+      "sanskritText": "न तद्भासयते सूर्यो न शशाङ्को न पावकः।यद्गत्वा न निवर्तन्ते तद्धाम परमं मम।।15.6।।",
+      "transliteration": "na tad bhāsayate sūryo na śhaśhāṅko na pāvakaḥ\nyad gatvā na nivartante tad dhāma paramaṁ mama",
+      "meaning": "न not; तत् that; भासयते illumines; सूर्यः the sun; न not; शशाङ्कः the moon; न not; पावकः fire; यत् to which; गत्वा having gone; न not; निवर्तन्ते (they) return; तत् that; धाम Abode; परमम् Supreme; मम My",
+      "commentary": null,
+      "seoTitle": null,
+      "seoDescription": null,
+      "sortOrder": 6,
+      "isPublished": true,
+      "chapterPublicId": "bg.15",
+      "chapterNumber": 15,
+      "workCode": "bg",
+      "translations": [
+        {
+          "id": "2d6ff105-0ea4-4d87-9ac7-9baadfa73d5b",
+          "languageCode": "en",
+          "languageName": "English",
+          "sourceKey": "sivananda",
+          "sourceDisplayName": "Swami Sivananda",
+          "text": "Neither does the sun illuminate there, nor the moon, nor the fire; having gone there, they do not return; that is My supreme abode.",
+          "isPublished": true
+        },
+        {
+          "id": "cccafb7a-3d39-4b7e-b7b1-8a82e8933cbf",
+          "languageCode": "hi",
+          "languageName": "Hindi",
+          "sourceKey": "ramsukhdas",
+          "sourceDisplayName": "Swami Ramsukhdas",
+          "text": "।।15.6।।उस-(परमपद-) को न सूर्य, न चन्द्र और न अग्नि ही प्रकाशित कर सकती है; और जिसको प्राप्त होकर जीव लौटकर (संसारमें) नहीं आते, वही मेरा परमधाम है।",
+          "isPublished": true
+        },
+        {
+          "id": "4bb1a4e8-6366-4a1f-9997-b9622ba4ab60",
+          "languageCode": "te",
+          "languageName": "Telugu",
+          "sourceKey": "holy-bg-telugu",
+          "sourceDisplayName": "Holy Bhagavad Gita (Telugu)",
+          "text": "సూర్యుడు కానీ, చంద్రుడు కానీ, అగ్ని కానీ ఇవేవీ నా పరం ధామమును ప్రకాశింపచేయలేవు. అక్కడికి వెళ్లిన పిదప, జనులు మరల ఈ భౌతిక లోకానికి తిరిగిరారు.",
+          "isPublished": true
+        },
+        {
+          "id": "1b931a6d-e036-4159-9c53-7d9e1a966ced",
+          "languageCode": "te",
+          "languageName": "Telugu",
+          "sourceKey": "holy-bg-telugu-w2w",
+          "sourceDisplayName": "Holy Bhagavad Gita (Telugu word meanings)",
+          "text": "న — కాదు; తత్ — అది; భాసయతే — ప్రకాశింపచేయును; సూర్యో — సూర్యుడు; న శశాంకో — చంద్రుడు కూడా కాదు; న పావకః — అగ్ని కూడా కాదు; యత్ — ఎక్కడికైతే; గత్వా — వెళ్లిన పిదప; న నివర్తంతే — తిరిగి రారో; తత్-ధామ — ఆ ధామము; పరమం — సర్వోన్నతమైనది; మమ — నాది.",
+          "isPublished": true
+        },
+        {
+          "id": "280acb04-a036-47c2-95e4-923bd70b8f4e",
+          "languageCode": "or",
+          "languageName": "Odia",
+          "sourceKey": "holy-bg-odia",
+          "sourceDisplayName": "Holy Bhagavad Gita (Odia)",
+          "text": "ସୂର୍ଯ୍ୟ, ଚନ୍ଦ୍ର କିମ୍ବା ଅଗ୍ନି, କେହି ବି ମୋର ପରମ ଧାମକୁ ପ୍ରକାଶିତ କରିପାରିବେ ନାହିଁ । ସେହି ପରମ ଦିବ୍ୟ ଧାମକୁ ଗଲା ପରେ କୌଣସି ବ୍ୟକ୍ତି ଏହି ସଂସାରକୁ ପ୍ରତ୍ୟାବର୍ତ୍ତନ କରନ୍ତି ନାହିଁ ।",
+          "isPublished": true
+        }
+      ],
+      "createdAt": "2026-07-14T08:55:25.901Z",
+      "updatedAt": "2026-07-16T06:19:49.802Z"
+    },
+    {
+      "id": "b95785eb-7e4e-4a54-b27f-b9f1d741811e",
+      "publicId": "bg.15.7",
+      "number": 7,
+      "sanskritText": "ममैवांशो जीवलोके जीवभूतः सनातनः।मनःषष्ठानीन्द्रियाणि प्रकृतिस्थानि कर्षति।।15.7।।",
+      "transliteration": "mamaivānśho jīva-loke jīva-bhūtaḥ sanātanaḥ\nmanaḥ-ṣhaṣhṭhānīndriyāṇi prakṛiti-sthāni karṣhati",
+      "meaning": "मम My; एव even; अंशः portion; जीवलोके in the world of life; जीवभूतः having become a soul; सनातनः eternal; मनःषष्ठानि with mind as the sixth; इन्द्रियाणि the (five) Indriyas; प्रकृतिस्थानि abiding in Prakriti; कर्षति draws (to itself)",
+      "commentary": null,
+      "seoTitle": null,
+      "seoDescription": null,
+      "sortOrder": 7,
+      "isPublished": true,
+      "chapterPublicId": "bg.15",
+      "chapterNumber": 15,
+      "workCode": "bg",
+      "translations": [
+        {
+          "id": "b7e55ebd-ad0a-4544-98c5-b8d8cd6a27eb",
+          "languageCode": "en",
+          "languageName": "English",
+          "sourceKey": "sivananda",
+          "sourceDisplayName": "Swami Sivananda",
+          "text": "An eternal portion of Myself having become a living soul in the world of life, draws to itself the five senses, with the mind as the sixth, abiding in Nature.",
+          "isPublished": true
+        },
+        {
+          "id": "4f1287a9-a11f-4f2c-8c04-33cdf69a582f",
+          "languageCode": "hi",
+          "languageName": "Hindi",
+          "sourceKey": "ramsukhdas",
+          "sourceDisplayName": "Swami Ramsukhdas",
+          "text": "।।15.7।।इस संसारमें जीव बना हुआ आत्मा मेरा ही सनातन अंश है; परन्तु वह प्रकृतिमें स्थित मन और पाँचों इन्द्रियोंको आकर्षित करता है (अपना मान लेता है)।",
+          "isPublished": true
+        },
+        {
+          "id": "e4c19a5d-6a83-4fdf-94c7-24d9e582f337",
+          "languageCode": "te",
+          "languageName": "Telugu",
+          "sourceKey": "holy-bg-telugu",
+          "sourceDisplayName": "Holy Bhagavad Gita (Telugu)",
+          "text": "భౌతిక జగత్తులో ఉన్న జీవాత్మలు నా యొక్క సనాతనమైన అంశములు. కానీ, భౌతిక శక్తిచే కట్టివేయబడి, వారు మనస్సుతో కలిపి ఉన్న ఆరు ఇంద్రియములతో ప్రయాస పడుతున్నారు.",
+          "isPublished": true
+        },
+        {
+          "id": "113e01cd-accb-4988-9d08-a7ec2ed96d8c",
+          "languageCode": "te",
+          "languageName": "Telugu",
+          "sourceKey": "holy-bg-telugu-w2w",
+          "sourceDisplayName": "Holy Bhagavad Gita (Telugu word meanings)",
+          "text": "మమ — నా యొక్క; ఏవ — మాత్రమే; అంశా — అంశములు; జీవ-లోకే — భౌతిక ప్రపంచములో; జీవ-భూతః — జీవాత్మలు; సనాతనః — సనాతనమైన; మనః — మనస్సు; షష్ఠాని — ఆరు; ఇంద్రియాణి — ఇంద్రియములు; ప్రకృతి-స్థాని — ప్రకృతి స్వభావముచే బంధించివేయబడి; కర్షతి — శ్రమ పడుతున్నారు.",
+          "isPublished": true
+        },
+        {
+          "id": "bf181fdf-face-4866-9e5c-1fed448770b6",
+          "languageCode": "or",
+          "languageName": "Odia",
+          "sourceKey": "holy-bg-odia",
+          "sourceDisplayName": "Holy Bhagavad Gita (Odia)",
+          "text": "ଏହି ମାୟିକ ଜଗତର ଦେହଧାରୀ ଆତ୍ମା ମୋର ଚିରନ୍ତନ କ୍ଷୁଦ୍ର ଅଂଶ ଅଟନ୍ତି, କିନ୍ତୁ ଭୌତିକ ପ୍ରକୃତିର କବଳିତ ହୋଇ, ସେମାନେ ମନ ସହିତ ଛଅଟି ଇନ୍ଦ୍ରିୟଙ୍କୁ ନେଇ ସଂଘର୍ଷରତ ରହିଛନ୍ତି ।",
+          "isPublished": true
+        }
+      ],
+      "createdAt": "2026-07-14T08:55:26.588Z",
+      "updatedAt": "2026-07-16T06:19:50.042Z"
+    },
+    {
+      "id": "98b8a3d4-9a87-49fb-b7f8-f0ea374d6fa0",
+      "publicId": "bg.15.8",
+      "number": 8,
+      "sanskritText": "शरीरं यदवाप्नोति यच्चाप्युत्क्रामतीश्वरः।गृहीत्वैतानि संयाति वायुर्गन्धानिवाशयात्।।15.8।।",
+      "transliteration": "śharīraṁ yad avāpnoti yach chāpy utkrāmatīśhvaraḥ\ngṛihītvaitāni sanyāti vāyur gandhān ivāśhayāt",
+      "meaning": "शरीरम् a body; यत् when; अवाप्नोति obtains; यत् when; च and; अपि also; उत्क्रामति leaves; ईश्वरः the Lord; गृहीत्वा taking; एतानि these; संयाति goes; वायुः the wind; गन्धान् the scents; इव as; आशयात् from (their) seats (the flowers)",
+      "commentary": null,
+      "seoTitle": null,
+      "seoDescription": null,
+      "sortOrder": 8,
+      "isPublished": true,
+      "chapterPublicId": "bg.15",
+      "chapterNumber": 15,
+      "workCode": "bg",
+      "translations": [
+        {
+          "id": "271a8cce-762b-42e4-90a4-ffe8981e58ae",
+          "languageCode": "en",
+          "languageName": "English",
+          "sourceKey": "sivananda",
+          "sourceDisplayName": "Swami Sivananda",
+          "text": "When the Lord, as the individual soul, obtains a body and when He leaves it, He takes these with Him, just as the wind takes the scents from their seats (flowers, etc.).",
+          "isPublished": true
+        },
+        {
+          "id": "f957a3ff-0e01-434b-bcc1-76d3216e65f0",
+          "languageCode": "hi",
+          "languageName": "Hindi",
+          "sourceKey": "ramsukhdas",
+          "sourceDisplayName": "Swami Ramsukhdas",
+          "text": "।।15.8।।जैसे वायु गन्धके स्थानसे गन्धको ग्रहण करके ले जाती है, ऐसे ही शरीरादिका स्वामी बना हुआ जीवात्मा भी जिस शरीरको छोड़ता है, वहाँसे मनसहित इन्द्रियोंको ग्रहण करके फिर जिस शरीरको प्राप्त होता है, उसमें चला जाता है।",
+          "isPublished": true
+        },
+        {
+          "id": "a1c124a1-fc9b-4659-9ebb-f3a42af475dd",
+          "languageCode": "te",
+          "languageName": "Telugu",
+          "sourceKey": "holy-bg-telugu-w2w",
+          "sourceDisplayName": "Holy Bhagavad Gita (Telugu word meanings)",
+          "text": "శరీరం — శరీరము; యత్ — ఎలాగైతే; అవాప్నోతి — తీసుకువెళుతుందో; యత్ — అలాగే; చ అపి — కూడా; ఉత్క్రామతి — విడిచివెళ్లును; ఈశ్వరః — జీవాత్మ, భౌతిక శరీరము యొక్క ప్రభువు; గృహీత్వా — తీసుకుని; ఏతాని — వీటిని; సంయాతి — వెళ్ళును; వాయుః — గాలి; గంధాన్ — సువాసనను; ఇవ — అలాగే; ఆశయాత్ — స్థానము నుండి.",
+          "isPublished": true
+        },
+        {
+          "id": "7090e2fa-9182-4f77-bad3-2fc011a0ff15",
+          "languageCode": "te",
+          "languageName": "Telugu",
+          "sourceKey": "holy-bg-telugu",
+          "sourceDisplayName": "Holy Bhagavad Gita (Telugu)",
+          "text": "ఎలాగైతే గాలి, సుగంధమును ఒకచోటి నుండి ఇంకొక చోటికి తీస్కువెళుతుందో, జీవాత్మ కూడా, పాత శరీరమును విడిచి, కొత్త శరీరంలోనికి ప్రవేశిస్తున్నప్పుడు, మనస్సు మరియు ఇంద్రియములను తనతో పాటుగా తీసుకెళుతుంది.",
+          "isPublished": true
+        },
+        {
+          "id": "a9a38a11-bc69-42cc-8422-3400d2188a8e",
+          "languageCode": "or",
+          "languageName": "Odia",
+          "sourceKey": "holy-bg-odia",
+          "sourceDisplayName": "Holy Bhagavad Gita (Odia)",
+          "text": "ବାୟୁ ଯେପରି ସୁଗନ୍ଧକୁ ଗୋଟିଏ ଜାଗାରୁ ଅନ୍ୟତ୍ର ବହନ କରି ନେଇଥାଏ, ସେହିପରି ଦେହଧାରୀ ଆତ୍ମା ଯେତେବେଳେ ଗୋଟିଏ ଶରୀର ତ୍ୟାଗ କରି ଅନ୍ୟ ଗୋଟିଏକୁ ପ୍ରବେଶ କରେ, ମନ ଏବଂ ଇନ୍ଦ୍ରିୟ ଗୁଡ଼ିକୁ ନିଜ ସହିତ ବହନ କରିଥାଏ ।",
+          "isPublished": true
+        }
+      ],
+      "createdAt": "2026-07-14T08:55:27.448Z",
+      "updatedAt": "2026-07-16T06:19:50.286Z"
+    },
+    {
+      "id": "5e7fa06b-81ac-43c0-b2c4-97fc04e2425b",
+      "publicId": "bg.15.9",
+      "number": 9,
+      "sanskritText": "श्रोत्रं चक्षुः स्पर्शनं च रसनं घ्राणमेव च।अधिष्ठाय मनश्चायं विषयानुपसेवते।।15.9।।",
+      "transliteration": "śhrotraṁ chakṣhuḥ sparśhanaṁ cha rasanaṁ ghrāṇam eva cha\nadhiṣhṭhāya manaśh chāyaṁ viṣhayān upasevate",
+      "meaning": "श्रोत्रम् the ear; चक्षुः the eye; स्पर्शनम् the (organ of) touch; च and; रसनम् the (organ of) taste; घ्राणम् the (organ of) smell; एव even; च and; अधिष्ठाय presiding over; मनः the mind; च and; अयम् this (soul); विषयान् objects of the senses; उपसेवते enjoys",
+      "commentary": null,
+      "seoTitle": null,
+      "seoDescription": null,
+      "sortOrder": 9,
+      "isPublished": true,
+      "chapterPublicId": "bg.15",
+      "chapterNumber": 15,
+      "workCode": "bg",
+      "translations": [
+        {
+          "id": "ffc950e1-995e-493e-90ab-08987060b7e2",
+          "languageCode": "en",
+          "languageName": "English",
+          "sourceKey": "sivananda",
+          "sourceDisplayName": "Swami Sivananda",
+          "text": "Presiding over the ears, eyes, touch, taste, smell, and mind, it enjoys the objects of the senses.",
+          "isPublished": true
+        },
+        {
+          "id": "2ef1b768-b723-4f22-abbc-136ed21a1296",
+          "languageCode": "hi",
+          "languageName": "Hindi",
+          "sourceKey": "ramsukhdas",
+          "sourceDisplayName": "Swami Ramsukhdas",
+          "text": "।।15.9।।यह जीवात्मा मनका आश्रय लेकर श्रोत्र, नेत्र, त्वचा, रसना और घ्राण -- इन पाँचों इन्द्रियोंके द्वारा विषयोंका सेवन करता है।",
+          "isPublished": true
+        },
+        {
+          "id": "bcebf0dc-2b9d-44da-b2bc-542f56731d86",
+          "languageCode": "te",
+          "languageName": "Telugu",
+          "sourceKey": "holy-bg-telugu",
+          "sourceDisplayName": "Holy Bhagavad Gita (Telugu)",
+          "text": "మనస్సును ఆశ్రయించి ఉన్న ఇంద్రియములు - చెవులు, కన్నులు, చర్మము, నాలుక మరియు ముక్కు - వీటి యొక్క గ్రహణశక్తితో, జీవాత్మ ఇంద్రియ వస్తువిషయములను ఆస్వాదిస్తుంటుంది.",
+          "isPublished": true
+        },
+        {
+          "id": "0e1a95e4-cdc0-4e81-92f5-bec6f160b2eb",
+          "languageCode": "te",
+          "languageName": "Telugu",
+          "sourceKey": "holy-bg-telugu-w2w",
+          "sourceDisplayName": "Holy Bhagavad Gita (Telugu word meanings)",
+          "text": "శ్రోత్రం — చెవులు; చక్షుః — కన్నులు; స్పర్శనం — స్పర్శ; చ — మరియు; రసనం — నాలుక; ఘ్రాణమ్ — ముక్కు; ఏవ — కూడా; చ — మరియు; అధిష్ఠాయ — చుట్టూ ఉండి; మనః — మనస్సు; చ — మరియు; అయం — అవి; విషయాన్ — ఇంద్రియ విషయములు; ఉపసేవతే — ఆస్వాదించును.",
+          "isPublished": true
+        },
+        {
+          "id": "23e8330e-db63-4978-ab15-f8fd132d68b9",
+          "languageCode": "or",
+          "languageName": "Odia",
+          "sourceKey": "holy-bg-odia",
+          "sourceDisplayName": "Holy Bhagavad Gita (Odia)",
+          "text": "ମନର ଚତୁଃପାଶ୍ୱର୍ରେ ବେଷ୍ଟିତ କର୍ଣ୍ଣ, ଚକ୍ଷୁ, ଚର୍ମ, ଜିହ୍ୱା ଏବଂ ନାସିକା ଆଦିର ଇନ୍ଦ୍ରିୟାନୁଭୂତିକୁ ଉପଯୋଗ କରି, ଦେହଧାରୀ ଆତ୍ମା ଇନ୍ଦ୍ରିୟ ବିଷୟଗୁଡ଼ିକର ଆସ୍ୱାଦନ କରେ ।",
+          "isPublished": true
+        }
+      ],
+      "createdAt": "2026-07-14T08:55:28.134Z",
+      "updatedAt": "2026-07-16T06:19:50.551Z"
+    },
+    {
+      "id": "8bb26820-9592-42df-bc20-69bc9b99a2a1",
+      "publicId": "bg.15.10",
+      "number": 10,
+      "sanskritText": "उत्क्रामन्तं स्थितं वापि भुञ्जानं वा गुणान्वितम्।विमूढा नानुपश्यन्ति पश्यन्ति ज्ञानचक्षुषः।।15.10।।",
+      "transliteration": "utkrāmantaṁ sthitaṁ vāpi bhuñjānaṁ vā guṇānvitam\nvimūḍhā nānupaśhyanti paśhyanti jñāna-chakṣhuṣhaḥ",
+      "meaning": "उत्क्रामन्तम् departing; स्थितम् staying; वा or; अपि also; भुञ्जानम् enjoying; वा or; गुणान्वितम् united with the Gunas; विमूढाः the deluded; न not; अनुपश्यन्ति do see (Him); पश्यन्ति behold (Him); ज्ञानचक्षुषः those who possess the eye of knowledge",
+      "commentary": null,
+      "seoTitle": null,
+      "seoDescription": null,
+      "sortOrder": 10,
+      "isPublished": true,
+      "chapterPublicId": "bg.15",
+      "chapterNumber": 15,
+      "workCode": "bg",
+      "translations": [
+        {
+          "id": "570e9201-3dc2-4dbb-9f0a-2e192063b589",
+          "languageCode": "en",
+          "languageName": "English",
+          "sourceKey": "sivananda",
+          "sourceDisplayName": "Swami Sivananda",
+          "text": "The deluded do not see Him who departs, stays, and enjoys; but those who possess the eye of knowledge behold Him.",
+          "isPublished": true
+        },
+        {
+          "id": "d095e6ca-248c-478d-b751-23a600b02a17",
+          "languageCode": "hi",
+          "languageName": "Hindi",
+          "sourceKey": "ramsukhdas",
+          "sourceDisplayName": "Swami Ramsukhdas",
+          "text": "।।15.10।।शरीरको छोड़कर जाते हुए या दूसरे शरीरमें स्थित हुए अथवा विषयोंको भोगते हुए भी गुणोंसे युक्त जीवात्माके स्वरूपको मूढ़ मनुष्य नहीं जानते, ज्ञानरूपी नेत्रोंवाले ज्ञानी मनुष्य ही जानते हैं।",
+          "isPublished": true
+        },
+        {
+          "id": "8c6636c2-4e26-4e39-9ae6-f8e7d93db7b9",
+          "languageCode": "te",
+          "languageName": "Telugu",
+          "sourceKey": "holy-bg-telugu",
+          "sourceDisplayName": "Holy Bhagavad Gita (Telugu)",
+          "text": "అది ఇంద్రియ వస్తువిషములను ఆనందిస్తూ దేహములోనే ఉన్నప్పుడు కానీ లేదా అది దేహమును విడిచివెళ్లినప్పుడు కానీ, జీవాత్మను అజ్ఞానులు గమనించరు. కానీ జ్ఞాన నేత్రములు కలవారు దానిని దర్శించగలరు.",
+          "isPublished": true
+        },
+        {
+          "id": "48f189bd-417f-4dd7-ac36-bc8089034d3a",
+          "languageCode": "te",
+          "languageName": "Telugu",
+          "sourceKey": "holy-bg-telugu-w2w",
+          "sourceDisplayName": "Holy Bhagavad Gita (Telugu word meanings)",
+          "text": "ఉత్క్రామంతం — వెళ్ళిపోతున్నప్పుడు; స్థితం — ఉన్నప్పుడు; వా అపి — అయినా కానీ; భుంజానం — భోగమును ఆనందిస్తూ; వా — లేదా; గుణ-అన్వితమ్ — భౌతిక ప్రకృతి యొక్క గుణములచే లోబడిపోయి; విమూఢాః — అజ్ఞానులు; న అనుపశ్యంతి — గమనించరు; పశ్యంతి — దర్శిస్తారు; జ్ఞాన చక్షుషః — జ్ఞాన నేత్రములు కలవారు",
+          "isPublished": true
+        },
+        {
+          "id": "bd8fbddc-93ac-442e-bb0c-8238a5a0b835",
+          "languageCode": "or",
+          "languageName": "Odia",
+          "sourceKey": "holy-bg-odia",
+          "sourceDisplayName": "Holy Bhagavad Gita (Odia)",
+          "text": "ଅଜ୍ଞାନୀମାନେ ଆତ୍ମା ଶରୀରରେ ନିବାସ କରିଥିବା ବେଳେ କିମ୍ବା ଇନ୍ଦ୍ରିୟ ବସ୍ତୁକୁ ଉପଭୋଗ କରୁଥିବା ବେଳେ କିମ୍ବା ଶରୀର ତ୍ୟାଗ କଲାବେଳେ ମଧ୍ୟ, ତାହାକୁ ଉପଲବ୍‌ଧି କରିପାରନ୍ତି ନାହିଁ । କିନ୍ତୁ ଯେଉଁମାନଙ୍କର ଚକ୍ଷୁ ଜ୍ଞାନଯୁକ୍ତ, ସେମାନେ ତାହାକୁ ଲକ୍ଷ୍ୟ କରିପାରନ୍ତି ।",
+          "isPublished": true
+        }
+      ],
+      "createdAt": "2026-07-14T08:55:29.151Z",
+      "updatedAt": "2026-07-16T06:19:50.829Z"
+    },
+    {
+      "id": "930b77fb-be06-40d1-abb3-4508e6f71662",
+      "publicId": "bg.15.11",
+      "number": 11,
+      "sanskritText": "यतन्तो योगिनश्चैनं पश्यन्त्यात्मन्यवस्थितम्।यतन्तोऽप्यकृतात्मानो नैनं पश्यन्त्यचेतसः।।15.11।।",
+      "transliteration": "yatanto yoginaśh chainaṁ paśhyanty ātmany avasthitam\nyatanto ‘py akṛitātmāno nainaṁ paśhyanty achetasaḥ",
+      "meaning": "यतन्तः striving (for perfection); योगिनः the Yogins; च and; एनम् this; पश्यन्ति see; आत्मनि in the Self; अवस्थितम् dwelling; यतन्तः striving; अपि also; अकृतात्मानः the unrefined; न not; एनम् this; पश्यन्ति see; अचेतसः unintelligent",
+      "commentary": null,
+      "seoTitle": null,
+      "seoDescription": null,
+      "sortOrder": 11,
+      "isPublished": true,
+      "chapterPublicId": "bg.15",
+      "chapterNumber": 15,
+      "workCode": "bg",
+      "translations": [
+        {
+          "id": "3bc8877c-9c3f-4d76-931e-262599042d88",
+          "languageCode": "en",
+          "languageName": "English",
+          "sourceKey": "sivananda",
+          "sourceDisplayName": "Swami Sivananda",
+          "text": "The yogis striving for perfection behold Him dwelling in the Self; but, the unrefined and unintelligent, even though striving, do not see Him.",
+          "isPublished": true
+        },
+        {
+          "id": "e30f0e9d-fc5f-4bda-8095-0ed99e757e38",
+          "languageCode": "hi",
+          "languageName": "Hindi",
+          "sourceKey": "ramsukhdas",
+          "sourceDisplayName": "Swami Ramsukhdas",
+          "text": "।।15.11।।यत्न करनेवाले योगीलोग अपने-आपमें स्थित इस परमात्मतत्त्वका अनुभव करते हैं। परन्तु जिन्होंने अपना अन्तःकरण शुद्ध नहीं किया है, ऐसे अविवेकी मनुष्य यत्न करनेपर भी इस तत्त्वका अनुभव नहीं करते।",
+          "isPublished": true
+        },
+        {
+          "id": "bdf58544-9bc7-47e4-b592-faf365fe3112",
+          "languageCode": "te",
+          "languageName": "Telugu",
+          "sourceKey": "holy-bg-telugu",
+          "sourceDisplayName": "Holy Bhagavad Gita (Telugu)",
+          "text": "గట్టిగా పరిశ్రమించే యోగులు కూడా దేహములోనే స్థితమై ఉన్న ఆత్మను తెలుసుకోగలుగుతారు. కానీ, ఎంత ప్రయత్నించినా, అంతఃకరణ శుద్ధి లేని వారు మాత్రం దానిని తెలుసుకొనలేరు.",
+          "isPublished": true
+        },
+        {
+          "id": "978194c0-b021-41b8-81ec-1acdade2c1fc",
+          "languageCode": "te",
+          "languageName": "Telugu",
+          "sourceKey": "holy-bg-telugu-w2w",
+          "sourceDisplayName": "Holy Bhagavad Gita (Telugu word meanings)",
+          "text": "యతంతః — గట్టిగా ప్రయత్నించే; యోగినః — యోగులు; చ — కూడా; ఏనం — దీనిని (ఆత్మ); పశ్యంతి — చూచెదరు; ఆత్మని — శరీరములో; అవస్థితం — స్థితమై ఉన్న; యతంతః — పరిశ్రమిస్తూ; అపి — కూడా; అకృత-ఆత్మనః — అంతఃకరణ శుద్ధి లేని వారు; న ఏనం పశ్యతి — దీనిని గమనించలేరు; అచేతసః — అజ్ఞానులు.",
+          "isPublished": true
+        },
+        {
+          "id": "7482c0bf-8e68-4ab0-b376-f28b0b317e11",
+          "languageCode": "or",
+          "languageName": "Odia",
+          "sourceKey": "holy-bg-odia",
+          "sourceDisplayName": "Holy Bhagavad Gita (Odia)",
+          "text": "ଶରୀର ମଧ୍ୟରେ ଆତ୍ମା ପ୍ରତିଷ୍ଠାପିତ, ଏହା ଚେଷ୍ଟାରତ ଯୋଗୀମାନେ ଜାଣିପାରନ୍ତି । କିନ୍ତୁ ଯେଉଁମାନଙ୍କର ଅନ୍ତଃକରଣ ଶୁଦ୍ଧ ନୁହେଁ, ସେମାନେ ଚେଷ୍ଟା କରି ମଧ୍ୟ ଏହା ଜାଣିପାରନ୍ତି ନାହିଁ ।",
+          "isPublished": true
+        }
+      ],
+      "createdAt": "2026-07-14T08:55:29.980Z",
+      "updatedAt": "2026-07-16T06:19:51.145Z"
+    },
+    {
+      "id": "c177524b-1470-400c-91e3-0bf6556fdcf8",
+      "publicId": "bg.15.12",
+      "number": 12,
+      "sanskritText": "यदादित्यगतं तेजो जगद्भासयतेऽखिलम्।यच्चन्द्रमसि यच्चाग्नौ तत्तेजो विद्धि मामकम्।।15.12।।",
+      "transliteration": "yad āditya-gataṁ tejo jagad bhāsayate ’khilam\nyach chandramasi yach chāgnau tat tejo viddhi māmakam",
+      "meaning": "यत् which; आदित्यगतम् residing in the sun; तेजः light; जगत् the world; भासयते illumines; अखिलम् whole; यत् which; चन्द्रमसि in the moon; यत् which; च and; अग्नौ in the fire; तत् that; तेजः light; विद्धि know; मामकम् Mine",
+      "commentary": null,
+      "seoTitle": null,
+      "seoDescription": null,
+      "sortOrder": 12,
+      "isPublished": true,
+      "chapterPublicId": "bg.15",
+      "chapterNumber": 15,
+      "workCode": "bg",
+      "translations": [
+        {
+          "id": "f98cb975-00bc-4bc5-9222-d0599912b0ad",
+          "languageCode": "en",
+          "languageName": "English",
+          "sourceKey": "sivananda",
+          "sourceDisplayName": "Swami Sivananda",
+          "text": "That light which resides in the sun, illuminating the whole world; that which is in the moon and in the fire—know that light to be Mine.",
+          "isPublished": true
+        },
+        {
+          "id": "1c909e32-5f57-4fdd-b67f-4a3b94cf13ba",
+          "languageCode": "hi",
+          "languageName": "Hindi",
+          "sourceKey": "ramsukhdas",
+          "sourceDisplayName": "Swami Ramsukhdas",
+          "text": "।।15.12।।सूर्यमें आया हुआ जो तेज सम्पूर्ण जगत् को प्रकाशित करता है और जो तेज चन्द्रमामें है तथा जो तेज अग्निमें है, उस तेजको मेरा ही जान।",
+          "isPublished": true
+        },
+        {
+          "id": "03de4eda-bd34-470b-9bb0-54aa65b92582",
+          "languageCode": "te",
+          "languageName": "Telugu",
+          "sourceKey": "holy-bg-telugu",
+          "sourceDisplayName": "Holy Bhagavad Gita (Telugu)",
+          "text": "సమస్త సౌర మండలమును ప్రకాశింపచేసే సూర్యుని తేజస్సుని నేనే అని తెలుసుకొనుము. చంద్రుని యొక్క ప్రకాశము మరియు అగ్ని యొక్క కాంతి నానుండే ఉద్భవిస్తున్నాయని తెలుసుకొనుము.",
+          "isPublished": true
+        },
+        {
+          "id": "eb53eebc-a4ee-4833-86b8-cdb0b712207e",
+          "languageCode": "te",
+          "languageName": "Telugu",
+          "sourceKey": "holy-bg-telugu-w2w",
+          "sourceDisplayName": "Holy Bhagavad Gita (Telugu word meanings)",
+          "text": "యత్ — ఏదైతే; ఆదిత్య-గతం — సూర్యునిలో; తేజః — తేజస్సు; జగత్ — సౌర కుటుంబము; భాసయతే — ప్రకాశింపచేయునో; అఖిలమ్ — సమస్త; యత్ — ఏదైతే; చంద్రమసి — చంద్రునిలో; యత్ — ఏదైతే; చ — మరియు; అగ్నౌ — అగ్నిలో; తత్ — అది; తేజః — తేజస్సు; విద్ధి — తెలుసుకొనుము; మామకమ్ — నా యొక్క.",
+          "isPublished": true
+        },
+        {
+          "id": "61d96bd1-9d4a-4721-bddc-bd3907e4a91f",
+          "languageCode": "or",
+          "languageName": "Odia",
+          "sourceKey": "holy-bg-odia",
+          "sourceDisplayName": "Holy Bhagavad Gita (Odia)",
+          "text": "ଏହା ଜାଣ ଯେ ମୁଁ ସୌରମଣ୍ଡଳକୁ ଉଦ୍‌ଭାସିତ କରୁଥିବା ସୂର୍ଯ୍ୟଙ୍କ ପ୍ରକାଶ ପରି ଅଟେ । ଚନ୍ଦ୍ରର କିରଣ ଏବଂ ଅଗ୍ନିର ଉଜ୍ଜ୍ୱଳତା ମଧ୍ୟ ମୋ ଠାରୁ ଆସିଥାଏ ।",
+          "isPublished": true
+        }
+      ],
+      "createdAt": "2026-07-14T08:55:31.004Z",
+      "updatedAt": "2026-07-16T06:19:51.382Z"
+    },
+    {
+      "id": "95004d1f-db23-4b13-86ad-b9e2c20f0f1c",
+      "publicId": "bg.15.13",
+      "number": 13,
+      "sanskritText": "गामाविश्य च भूतानि धारयाम्यहमोजसा।पुष्णामि चौषधीः सर्वाः सोमो भूत्वा रसात्मकः।।15.13।।",
+      "transliteration": "gām āviśhya cha bhūtāni dhārayāmy aham ojasā\npuṣhṇāmi chauṣhadhīḥ sarvāḥ somo bhūtvā rasātmakaḥ",
+      "meaning": "गाम the earth; आविश्य permeating; च and; भूतानि all beings; धारयामि support; अहम् I; ओजसा by (My) energy; पुष्णामि (I) nourish; च and; औषधीः the herbs; सर्वाः all; सोमः moon; भूत्वा having become रसात्मकः watery",
+      "commentary": null,
+      "seoTitle": null,
+      "seoDescription": null,
+      "sortOrder": 13,
+      "isPublished": true,
+      "chapterPublicId": "bg.15",
+      "chapterNumber": 15,
+      "workCode": "bg",
+      "translations": [
+        {
+          "id": "7645be89-cbef-443c-a047-3c058aa8e697",
+          "languageCode": "en",
+          "languageName": "English",
+          "sourceKey": "sivananda",
+          "sourceDisplayName": "Swami Sivananda",
+          "text": "Permeating the earth, I support all beings with My energy; and having become the watery moon, I nourish all herbs.",
+          "isPublished": true
+        },
+        {
+          "id": "883bcfd9-4130-4cb7-aa57-6ecb3c496e50",
+          "languageCode": "hi",
+          "languageName": "Hindi",
+          "sourceKey": "ramsukhdas",
+          "sourceDisplayName": "Swami Ramsukhdas",
+          "text": "।।15.13।।मैं ही पृथ्वीमें प्रविष्ट होकर अपनी शक्तिसे समस्त प्राणियोंको धारण करता हूँ; और मैं ही रसमय चन्द्रमाके रूपमें समस्त ओषधियों-(वनस्पतियों-) को पुष्ट करता हूँ।",
+          "isPublished": true
+        },
+        {
+          "id": "65ebdd1d-8da8-4b27-972e-b7d2fe80bedc",
+          "languageCode": "te",
+          "languageName": "Telugu",
+          "sourceKey": "holy-bg-telugu",
+          "sourceDisplayName": "Holy Bhagavad Gita (Telugu)",
+          "text": "పృథ్వి యందు అంతటా ప్రవేశించి వ్యాపించి ఉండి, నేను సమస్త ప్రాణులను నా శక్తి చే పోషిస్తుంటాను. చంద్రుడిగా ఉండి, సమస్త వృక్షజాతికి పుష్టిని చేకూరుస్తుంటాను.",
+          "isPublished": true
+        },
+        {
+          "id": "aa31f6b5-b7c9-4ff5-98e2-43502a10f78a",
+          "languageCode": "te",
+          "languageName": "Telugu",
+          "sourceKey": "holy-bg-telugu-w2w",
+          "sourceDisplayName": "Holy Bhagavad Gita (Telugu word meanings)",
+          "text": "గాం — భూమి; ఆవిశ్య — వ్యాపించి; చ — మరియు; భూతాని — జీవ రాశులు; ధారయామి — పోషిస్తూ; అహం — నేను; ఓజసా — శక్తి; పుష్ణామి — పోషిస్తూ; చ — మరియు; ఔషధీ — మొక్కలు; సర్వాః — సమస్త; సోమః — చంద్రుడు; భూత్వా — ఉంటూ; రస-ఆత్మకః — జీవ రసములను అందిస్తూ.",
+          "isPublished": true
+        },
+        {
+          "id": "159b391e-af6c-49f2-93c8-26e5eaf7e0a4",
+          "languageCode": "or",
+          "languageName": "Odia",
+          "sourceKey": "holy-bg-odia",
+          "sourceDisplayName": "Holy Bhagavad Gita (Odia)",
+          "text": "ମୁଁ ସଂସାରରେ ବ୍ୟାପ୍ତ ହୋଇ, ମୋ ଶକ୍ତି ଦ୍ୱାରା ସମସ୍ତ ପ୍ରାଣୀଙ୍କର ପୋଷଣ କରିଥାଏ । ମୁଁ ଚନ୍ଦ୍ର ହୋଇ, ସମସ୍ତ ବୃକ୍ଷଙ୍କ ମଧ୍ୟରେ ଜୀବନ ରସ ସଞ୍ଚାର କରେ ।",
+          "isPublished": true
+        }
+      ],
+      "createdAt": "2026-07-14T08:55:31.995Z",
+      "updatedAt": "2026-07-16T06:19:51.619Z"
+    },
+    {
+      "id": "33f16d58-1d30-473b-9dc5-ce48e1d58bf7",
+      "publicId": "bg.15.14",
+      "number": 14,
+      "sanskritText": "अहं वैश्वानरो भूत्वा प्राणिनां देहमाश्रितः।प्राणापानसमायुक्तः पचाम्यन्नं चतुर्विधम्।।15.14।।",
+      "transliteration": "ahaṁ vaiśhvānaro bhūtvā prāṇināṁ deham āśhritaḥ\nprāṇāpāna-samāyuktaḥ pachāmy annaṁ chatur-vidham",
+      "meaning": "अहम् I; वैश्वानरः (the fire) Vaisvanara; भूत्वा having become; प्राणिनाम् of living beings; देहम् the body; आश्रितः abiding; प्राणापानसमायुक्तः associated with Prana and Apana; पचामि (I) digest; अन्नम् food; चतुर्विधम् fourfold",
+      "commentary": null,
+      "seoTitle": null,
+      "seoDescription": null,
+      "sortOrder": 14,
+      "isPublished": true,
+      "chapterPublicId": "bg.15",
+      "chapterNumber": 15,
+      "workCode": "bg",
+      "translations": [
+        {
+          "id": "b7935e70-b66a-47a4-a52f-e327a9315e7c",
+          "languageCode": "en",
+          "languageName": "English",
+          "sourceKey": "sivananda",
+          "sourceDisplayName": "Swami Sivananda",
+          "text": "Having become the fire Vaisvanara, I abide in the bodies of living beings and, associated with the Prana and the Apana, digest the fourfold food.",
+          "isPublished": true
+        },
+        {
+          "id": "7fe997bd-3afc-4cfe-8a08-9ae30c6c42c0",
+          "languageCode": "hi",
+          "languageName": "Hindi",
+          "sourceKey": "ramsukhdas",
+          "sourceDisplayName": "Swami Ramsukhdas",
+          "text": "।।15.14।।प्राणियोंके शरीरमें रहनेवाला मैं प्राण-अपानसे युक्त वैश्वानर होकर चार प्रकारके अन्नको पचाता हूँ।",
+          "isPublished": true
+        },
+        {
+          "id": "92a423c8-c912-4f39-aecd-63dd01bdb5ba",
+          "languageCode": "te",
+          "languageName": "Telugu",
+          "sourceKey": "holy-bg-telugu",
+          "sourceDisplayName": "Holy Bhagavad Gita (Telugu)",
+          "text": "నాలుగు రకాల ఆహారమును జీర్ణము చేసుకుని మరియు ఒంటబట్టించుకొనటానికి, సమస్త జీవుల ఉదరములలో ప్రాణాపానసంయుక్తమైన జఠరాగ్ని రూపమును నేనే స్వీకరిస్తాను.",
+          "isPublished": true
+        },
+        {
+          "id": "e33e90a7-c727-493a-9e50-574e2effbc98",
+          "languageCode": "te",
+          "languageName": "Telugu",
+          "sourceKey": "holy-bg-telugu-w2w",
+          "sourceDisplayName": "Holy Bhagavad Gita (Telugu word meanings)",
+          "text": "అహం — నేను; వైశ్వానరః — భోజనము జీర్ణించు/అరిగించు అగ్ని (జఠరాగ్ని); భూత్వా — అయిఉండి; ప్రాణినాం — సర్వ ప్రాణులలో; దేహం — శరీరము; ఆశ్రితః — ఉన్నవాడినై; ప్రాణ-అపాన — ప్రాణ-అపానములు (బయటకువెళ్ళే మరియు లోనికి వచ్చే శ్వాస); సమాయుక్తః — సమముగా ఉంచుతూ; పచామి — జీర్ణము చేయుదును; అన్నం — ఆహారములు; చతుః-విధం — నాలుగు రకముల.",
+          "isPublished": true
+        },
+        {
+          "id": "0f2062ec-c14d-4132-9c7b-0e20ace8bf80",
+          "languageCode": "or",
+          "languageName": "Odia",
+          "sourceKey": "holy-bg-odia",
+          "sourceDisplayName": "Holy Bhagavad Gita (Odia)",
+          "text": "ମୁଁ ସମସ୍ତ ପ୍ରାଣୀଙ୍କର ଉଦରରେ ଜଠରାଗ୍ନିର ରୂପ ଧାରଣ କରିଥାଏ ଏବଂ ନିଶ୍ୱାସ ଓ ପ୍ରଶ୍ୱାସ ଦ୍ୱାରା ମିଳିତ ହୋଇ, ଚାରି ପ୍ରକାରର ଖାଦ୍ୟକୁ ହଜମ କରିଥାଏ ଏବଂ ଆତ୍ମସାତ କରିଥାଏ ।",
+          "isPublished": true
+        }
+      ],
+      "createdAt": "2026-07-14T08:55:32.860Z",
+      "updatedAt": "2026-07-16T06:19:51.853Z"
+    },
+    {
+      "id": "c58cdbbf-13f0-4b27-b01d-36f42b4536f9",
+      "publicId": "bg.15.15",
+      "number": 15,
+      "sanskritText": "सर्वस्य चाहं हृदि सन्निविष्टो    मत्तः स्मृतिर्ज्ञानमपोहनं च।वेदैश्च सर्वैरहमेव वेद्यो    वेदान्तकृद्वेदविदेव चाहम्।।15.15।।",
+      "transliteration": "sarvasya chāhaṁ hṛidi sanniviṣhṭo\nmattaḥ smṛitir jñānam apohanaṁ cha\nvedaiśh cha sarvair aham eva vedyo\nvedānta-kṛid veda-vid eva chāham",
+      "meaning": "सर्वस्य of all; च and; अहम् I; हृदि in the heart; सन्निविष्टः seated; मत्तः from Me; स्मृतिः memory; ज्ञानम् knowledge; अपोहनम् (their) absence; च and; वेदैः by the Vedas; च and; सर्वैः (by) all; अहम् I; एव even; वेद्यः to be known; वेदान्तकृत् the author of the Vedanta; वेदवित् the knower of Vedas; एव even; च and; अहम् I",
+      "commentary": null,
+      "seoTitle": null,
+      "seoDescription": null,
+      "sortOrder": 15,
+      "isPublished": true,
+      "chapterPublicId": "bg.15",
+      "chapterNumber": 15,
+      "workCode": "bg",
+      "translations": [
+        {
+          "id": "63b166d2-bc35-493d-8cdc-df6388402f75",
+          "languageCode": "en",
+          "languageName": "English",
+          "sourceKey": "sivananda",
+          "sourceDisplayName": "Swami Sivananda",
+          "text": "And I am seated in the hearts of all; from Me come memory and knowledge, as well as their absence. I am verily That which has to be known by all the Vedas; I am indeed the author of the Vedanta and the knower of the Vedas.",
+          "isPublished": true
+        },
+        {
+          "id": "75f8675f-f69b-4b99-93d6-9d4e869edba1",
+          "languageCode": "hi",
+          "languageName": "Hindi",
+          "sourceKey": "ramsukhdas",
+          "sourceDisplayName": "Swami Ramsukhdas",
+          "text": "।।15.15।।मैं सम्पूर्ण प्राणियोंके हृदयमें स्थित हूँ। मेरेसे ही स्मृति, ज्ञान और अपोहन (संशय आदि दोषोंका नाश) होता है। सम्पूर्ण वेदोंके द्वारा मैं ही जाननेयोग्य हूँ। वेदोंके तत्त्वका निर्णय करनेवाला और वेदोंको जाननेवाला भी मैं ही हूँ।",
+          "isPublished": true
+        },
+        {
+          "id": "f53881f0-2d4f-4f61-804c-15bfa6b66ef4",
+          "languageCode": "te",
+          "languageName": "Telugu",
+          "sourceKey": "holy-bg-telugu",
+          "sourceDisplayName": "Holy Bhagavad Gita (Telugu)",
+          "text": "నేను సమస్త ప్రాణుల హృదయములలో స్థితమై ఉన్నాను, నా నుండే జ్ఞాపకశక్తి, జ్ఞానము, మరియు విస్మృతి (మర్చిపోవుట) కలుగుతాయి. అన్ని వేదముల ద్వారా తెలుసుకోబడవలసిన వాడను నేను మాత్రమే, వేదాంత రచయితను నేనే, మరియు వేదముల అర్థమును తెలిసినవాడను నేనే.",
+          "isPublished": true
+        },
+        {
+          "id": "435750ae-5360-499f-a332-fa64e7d4eb51",
+          "languageCode": "te",
+          "languageName": "Telugu",
+          "sourceKey": "holy-bg-telugu-w2w",
+          "sourceDisplayName": "Holy Bhagavad Gita (Telugu word meanings)",
+          "text": "సర్వస్య — సమస్త ప్రాణులలో; చ — మరియు; అహం — నేను; హృది — హృదయములో; సన్నివిష్టః — స్థితమై ఉండి; మత్తః — నానుండి; స్మృతిర్ — స్మృతి; జ్ఞానమ్ — జ్ఞానము; అపోహనం — విస్మృతి (మతిమరుపు); చ — మరియు; వేదైః — వేదముల చే; చ — మరియు; సర్వైః — అన్ని; అహం — నేను; ఏవ — మాత్రమే; వేద్యః — తెలుసుకొనబడవలసిన వాడను; వేదాంత-కృత్ — వేదాంతములను రచించినవాడను; వేద-విత్ — వేదార్ధములను తెలిసినవాడను; ఏవ — ఒక్కడినే (మాత్రమే); చ — మరియు; అహం — నేను.",
+          "isPublished": true
+        },
+        {
+          "id": "df94893d-90e2-431d-9880-e1ff1ce5d54e",
+          "languageCode": "or",
+          "languageName": "Odia",
+          "sourceKey": "holy-bg-odia",
+          "sourceDisplayName": "Holy Bhagavad Gita (Odia)",
+          "text": "ମୁଁ ସମସ୍ତ ପ୍ରାଣୀଙ୍କ ହୃଦୟରେ ବାସ କରେ । ମୋ ଠାରୁ ସ୍ମରଣଶକ୍ତି, ଜ୍ଞାନ ତଥା ବିସ୍ମରଣର ଉତ୍ପତ୍ତି ହୋଇଥାଏ । ଏକମାତ୍ର ମୁଁ ହିଁ ବେଦ ଦ୍ୱାରା ଜ୍ଞାତବ୍ୟ, ବେଦାନ୍ତର ପ୍ରଣେତା ତଥା ବେଦର ଅର୍ଥକୁ ଜାଣିଥିବା ବ୍ୟକ୍ତିତ୍ୱ ଅଟେ ।",
+          "isPublished": true
+        }
+      ],
+      "createdAt": "2026-07-14T08:55:33.666Z",
+      "updatedAt": "2026-07-16T06:19:52.167Z"
+    },
+    {
+      "id": "379834ee-dc3b-4e87-86a3-d171989b27d3",
+      "publicId": "bg.15.16",
+      "number": 16,
+      "sanskritText": "द्वाविमौ पुरुषौ लोके क्षरश्चाक्षर एव च।क्षरः सर्वाणि भूतानि कूटस्थोऽक्षर उच्यते।।15.16।।",
+      "transliteration": "dvāv imau puruṣhau loke kṣharaśh chākṣhara eva cha\nkṣharaḥ sarvāṇi bhūtāni kūṭa-stho ’kṣhara uchyate",
+      "meaning": "द्वौ two; इमौ these; पुरुषौ Purushas (beings); लोके in the world; क्षरः the perishable; च and; अक्षरः the imperishable; एव even; च and; क्षरः the perishable; सर्वाणि all; भूतानि beings; कूटस्थः the immutable (unchanging); अक्षरः the imperishable; उच्यते is called",
+      "commentary": null,
+      "seoTitle": null,
+      "seoDescription": null,
+      "sortOrder": 16,
+      "isPublished": true,
+      "chapterPublicId": "bg.15",
+      "chapterNumber": 15,
+      "workCode": "bg",
+      "translations": [
+        {
+          "id": "154938fd-88bb-4963-8cf7-04d259898547",
+          "languageCode": "en",
+          "languageName": "English",
+          "sourceKey": "sivananda",
+          "sourceDisplayName": "Swami Sivananda",
+          "text": "Two Purushas there are in this world: the perishable and the imperishable. All beings are perishable, and the Kutastha—the unchanging—is called the imperishable.",
+          "isPublished": true
+        },
+        {
+          "id": "819335dd-bfd3-4410-9882-1e361f763312",
+          "languageCode": "hi",
+          "languageName": "Hindi",
+          "sourceKey": "ramsukhdas",
+          "sourceDisplayName": "Swami Ramsukhdas",
+          "text": "।।15.16।।इस संसारमें क्षर (नाशवान्) और अक्षर (अविनाशी) -- ये दो प्रकारके पुरुष हैं। सम्पूर्ण प्राणियोंके शरीर नाशवान् और कूटस्थ (जीवात्मा) अविनाशी कहा जाता है।",
+          "isPublished": true
+        },
+        {
+          "id": "abbe94ed-b458-474a-bcc0-ecf722e98f55",
+          "languageCode": "te",
+          "languageName": "Telugu",
+          "sourceKey": "holy-bg-telugu",
+          "sourceDisplayName": "Holy Bhagavad Gita (Telugu)",
+          "text": "సృష్టిలో రెండు రకాల ప్రాణులు ఉన్నాయి, క్షరములు (నశించేవి) మరియు అక్షరములు (నశించనివి). భౌతిక జగత్తులో ఉన్నవి క్షరములు. అక్షరములు అంటే మోక్షము పొందిన జీవులు.",
+          "isPublished": true
+        },
+        {
+          "id": "918b93ee-1f89-42cb-a1bf-96b0b374def6",
+          "languageCode": "te",
+          "languageName": "Telugu",
+          "sourceKey": "holy-bg-telugu-w2w",
+          "sourceDisplayName": "Holy Bhagavad Gita (Telugu word meanings)",
+          "text": "ద్వౌ — రెండు; ఇమౌ — ఇవి; పురుషౌ — ప్రాణులు; లోకే — సృష్టిలో; క్షరః — క్షరములు (నశించిపోయేవి); చ — మరియు; అక్షరః — అనశ్వరమైనవి; ఏవ — అయినా; చ — మరియు; క్షరః — క్షరములు; సర్వాణి — సమస్త; భూతాని — భూతములు; కూట-స్థః — విముక్తి నొందిన; అక్షరః — నాశనం కానివి; ఉచ్యతే — చెప్పబడుతున్నవి.",
+          "isPublished": true
+        },
+        {
+          "id": "dd33adfe-c944-44dd-9e26-3e875b729a77",
+          "languageCode": "or",
+          "languageName": "Odia",
+          "sourceKey": "holy-bg-odia",
+          "sourceDisplayName": "Holy Bhagavad Gita (Odia)",
+          "text": "ସୃଷ୍ଟିରେ ଦୁଇ ପ୍ରକାରର ଜୀବ ଅଛନ୍ତି: କ୍ଷର (ନଶ୍ୱର) ଏବଂ ଅକ୍ଷର (ଅବିନଶ୍ୱର) । ଭୌତିକ ଜଗତର ସମସ୍ତ ଜୀବ ନଶ୍ୱର ଅଟନ୍ତି । ମୁକ୍ତ ଜୀବମାନେ ଅବିନଶ୍ୱର ଅଟନ୍ତି ।",
+          "isPublished": true
+        }
+      ],
+      "createdAt": "2026-07-14T08:55:34.356Z",
+      "updatedAt": "2026-07-16T06:19:52.402Z"
+    },
+    {
+      "id": "a188f7e4-d318-45f0-ab15-97b224ccd3c2",
+      "publicId": "bg.15.17",
+      "number": 17,
+      "sanskritText": "उत्तमः पुरुषस्त्वन्यः परमात्मेत्युदाहृतः।यो लोकत्रयमाविश्य बिभर्त्यव्यय ईश्वरः।।15.17।।",
+      "transliteration": "uttamaḥ puruṣhas tv anyaḥ paramātmety udāhṛitaḥ\nyo loka-trayam āviśhya bibharty avyaya īśhvaraḥ",
+      "meaning": "उत्तमः the Supreme; पुरुषः Purusha; तु but; अन्यः another; परमात्मा the highest; Self; इति thus; उदाहृतः called; यः who; लोकत्रयम् the three worlds; आविश्य pervading; बिभर्ति sustains; अव्ययः the indestructible; ईश्वरः Lord",
+      "commentary": null,
+      "seoTitle": null,
+      "seoDescription": null,
+      "sortOrder": 17,
+      "isPublished": true,
+      "chapterPublicId": "bg.15",
+      "chapterNumber": 15,
+      "workCode": "bg",
+      "translations": [
+        {
+          "id": "cb974dce-a861-4f62-ab6b-b79111916faf",
+          "languageCode": "en",
+          "languageName": "English",
+          "sourceKey": "sivananda",
+          "sourceDisplayName": "Swami Sivananda",
+          "text": "But distinct is the Supreme Purusha, called the highest Self, indestructible and Lord, who pervades the three worlds and sustains them.",
+          "isPublished": true
+        },
+        {
+          "id": "e2c5c30a-f125-4390-b699-9f49b744de8b",
+          "languageCode": "hi",
+          "languageName": "Hindi",
+          "sourceKey": "ramsukhdas",
+          "sourceDisplayName": "Swami Ramsukhdas",
+          "text": "।।15.17।।उत्तम पुरुष तो अन्य ही है, जो परमात्मा नामसे कहा गया है। वही अविनाशी ईश्वर तीनों लोकोंमें प्रविष्ट होकर सबका भरण-पोषण करता है।",
+          "isPublished": true
+        },
+        {
+          "id": "ed7463de-ec9e-44f2-b622-d2d731f74d80",
+          "languageCode": "te",
+          "languageName": "Telugu",
+          "sourceKey": "holy-bg-telugu",
+          "sourceDisplayName": "Holy Bhagavad Gita (Telugu)",
+          "text": "ఇవే కాక, నాశరహితమైన పరమాత్మయైన ఆ సర్వోత్కృష్ట దివ్య పురుషుడు ఉన్నాడు. ఆయన అవ్యయమైన ఈశ్వరునిగా ముల్లోకములలో ప్రవేశించి, సమస్త ప్రాణులను పోషిస్తూ ఉంటాడు.",
+          "isPublished": true
+        },
+        {
+          "id": "c2cf33df-5bb0-4f1b-a1e6-3a011beefe2a",
+          "languageCode": "te",
+          "languageName": "Telugu",
+          "sourceKey": "holy-bg-telugu-w2w",
+          "sourceDisplayName": "Holy Bhagavad Gita (Telugu word meanings)",
+          "text": "ఉత్తమః — సర్వోత్కృష్ట; పురుషః — దివ్య పురుషుడు; తు — కానీ; అన్యః — వేరొక; పరమ-ఆత్మా — పరమాత్మ; ఇతి — ఈ విధముగా; ఉదాహృతః — చెప్పబడెను; యః — ఎవరైతే; లోక త్రయమ్ — మూడు లోకములు; ఆవిశ్య — ప్రవేశించి; బిభర్తి — పోషించును; అవ్యయః — నాశనరహితమైన; ఈశ్వరః — నియామకుడు.",
+          "isPublished": true
+        },
+        {
+          "id": "61ef0222-374f-4935-9b96-1209f415a8e1",
+          "languageCode": "or",
+          "languageName": "Odia",
+          "sourceKey": "holy-bg-odia",
+          "sourceDisplayName": "Holy Bhagavad Gita (Odia)",
+          "text": "ଏତଦ୍‌ବ୍ୟତୀତ, ଜଣେ ପରମ ଦିବ୍ୟ ପୁରୁଷ ଅଛନ୍ତି, ସେ ଅବିନାଶୀ ପରମାତ୍ମା ଅଟନ୍ତି । ଯିଏ କି ଅପରିବର୍ତ୍ତନୀୟ ନିୟାମକ ଭାବରେ ତ୍ରିଲୋକରେ ବ୍ୟାପ୍ତ ରହନ୍ତି ଏବଂ ସମସ୍ତ ପ୍ରାଣୀଙ୍କୁ ପାଳନ କରନ୍ତି ।",
+          "isPublished": true
+        }
+      ],
+      "createdAt": "2026-07-14T08:55:35.036Z",
+      "updatedAt": "2026-07-16T06:19:52.640Z"
+    },
+    {
+      "id": "114923c6-dd8b-446e-a1e3-bcccf722302f",
+      "publicId": "bg.15.18",
+      "number": 18,
+      "sanskritText": "यस्मात्क्षरमतीतोऽहमक्षरादपि चोत्तमः।अतोऽस्मि लोके वेदे च प्रथितः पुरुषोत्तमः।।15.18।।",
+      "transliteration": "yasmāt kṣharam atīto ’ham akṣharād api chottamaḥ\nato ’smi loke vede cha prathitaḥ puruṣhottamaḥ",
+      "meaning": "यस्मात् as; क्षरम् the perishable; अतीतः transcend; अहम् I; अक्षरात् than the imperishable; अपि also; च and; उत्तमः best; अतः therefore; अस्मि (I) am; लोके in the world; वेदे in the Vedas; च and; प्रथितः declared; पुरुषोत्तमः the Highest Purusha",
+      "commentary": null,
+      "seoTitle": null,
+      "seoDescription": null,
+      "sortOrder": 18,
+      "isPublished": true,
+      "chapterPublicId": "bg.15",
+      "chapterNumber": 15,
+      "workCode": "bg",
+      "translations": [
+        {
+          "id": "a4a8f032-1d34-46ac-8daa-736a1ec7a2b4",
+          "languageCode": "en",
+          "languageName": "English",
+          "sourceKey": "sivananda",
+          "sourceDisplayName": "Swami Sivananda",
+          "text": "As I transcend the perishable and am even higher than the imperishable, I am declared to be the highest Purusha in the world and in the Vedas.",
+          "isPublished": true
+        },
+        {
+          "id": "acbf620d-4802-42ab-86a9-ee242dcc9050",
+          "languageCode": "hi",
+          "languageName": "Hindi",
+          "sourceKey": "ramsukhdas",
+          "sourceDisplayName": "Swami Ramsukhdas",
+          "text": "।।15.18।।मैं क्षरसे अतीत हूँ और अक्षरसे भी उत्तम हूँ, इसलिये लोकमें और वेदमें पुरुषोत्तम नामसे प्रसिद्ध हूँ।",
+          "isPublished": true
+        },
+        {
+          "id": "7fd79a20-515a-4db0-9508-7da213d09f3f",
+          "languageCode": "te",
+          "languageName": "Telugu",
+          "sourceKey": "holy-bg-telugu",
+          "sourceDisplayName": "Holy Bhagavad Gita (Telugu)",
+          "text": "నేను నశ్వరమైన ఈ భౌతిక పదార్థముకంటెనూ, మరియు నాశరహితమైన జీవాత్మ కంటెనూ కూడా అతీతమైనవాడను. కాబట్టి వేదములలో మరియు స్మృతులలో నేనే సర్వోత్కృష్ట దివ్య పురుషుడిగా కీర్తింపబడ్డాను.",
+          "isPublished": true
+        },
+        {
+          "id": "a5f497e2-1580-4de6-b917-4ad2d228fe32",
+          "languageCode": "te",
+          "languageName": "Telugu",
+          "sourceKey": "holy-bg-telugu-w2w",
+          "sourceDisplayName": "Holy Bhagavad Gita (Telugu word meanings)",
+          "text": "యస్మాత్ — కాబట్టి; క్షరం — నశ్వరమైన దాని కంటే; అతీతః — అతీతుడను; అహం — నేను; అక్షరాత్ — నాశరహితుడైన వాటి కంటే; అపి — కూడా; చ — మరియు; ఉత్తమః — అతీతుడను (ఉన్నతుడను); అతః — కాబట్టి; అస్మి — నేను; లోకే — ఈ జగత్తులో; వేదే — వేదములలో; చ — మరియు; ప్రథితః — ప్రసిద్ధుడను; పురుష-ఉత్తమః — సర్వోత్కృష్ట దివ్య పురుషుడిగా.",
+          "isPublished": true
+        },
+        {
+          "id": "ebf41ef8-72ec-4789-9a78-b179e9a8bc66",
+          "languageCode": "or",
+          "languageName": "Odia",
+          "sourceKey": "holy-bg-odia",
+          "sourceDisplayName": "Holy Bhagavad Gita (Odia)",
+          "text": "ମୁଁ, ଏହି ନଶ୍ୱର ଜଗତ ଏପରି କି ଅବିନଶ୍ୱର ଆତ୍ମାମାନଙ୍କର ମଧ୍ୟ ଅନୁଭବାତୀତ ଅଟେ; ତେଣୁ ବେଦ ଏବଂ ସ୍ମୃତି ଆଦିରେ ମୁଁ ପରମ ଦିବ୍ୟ ପୁରୁଷ ଭାବରେ ଖ୍ୟାତ ।",
+          "isPublished": true
+        }
+      ],
+      "createdAt": "2026-07-14T08:55:35.763Z",
+      "updatedAt": "2026-07-16T06:19:52.878Z"
+    },
+    {
+      "id": "6d8a8183-637b-4be7-8b54-ca17b4287f03",
+      "publicId": "bg.15.19",
+      "number": 19,
+      "sanskritText": "यो मामेवमसम्मूढो जानाति पुरुषोत्तमम्।स सर्वविद्भजति मां सर्वभावेन भारत।।15.19।।",
+      "transliteration": "yo mām evam asammūḍho jānāti puruṣhottamam\nsa sarva-vid bhajati māṁ sarva-bhāvena bhārata",
+      "meaning": "यः who; माम् Me; एवम् thus; असम्मूढः undeluded; जानाति knows; पुरुषोत्तमम् the Supreme Purusha; सः he; सर्ववित् allknowing; भजति worships; माम् Me; सर्वभावेन with his whole being (heart); भारत O Bharata",
+      "commentary": null,
+      "seoTitle": null,
+      "seoDescription": null,
+      "sortOrder": 19,
+      "isPublished": true,
+      "chapterPublicId": "bg.15",
+      "chapterNumber": 15,
+      "workCode": "bg",
+      "translations": [
+        {
+          "id": "ba079f50-da21-4658-a403-8f17f3e8c58f",
+          "languageCode": "en",
+          "languageName": "English",
+          "sourceKey": "sivananda",
+          "sourceDisplayName": "Swami Sivananda",
+          "text": "He who, undeluded, knows Me as the highest Purusha, he, knowing all, worships Me with his whole being (heart), O Arjuna.",
+          "isPublished": true
+        },
+        {
+          "id": "ea43922d-e320-43d9-8390-a447fe20ad67",
+          "languageCode": "hi",
+          "languageName": "Hindi",
+          "sourceKey": "ramsukhdas",
+          "sourceDisplayName": "Swami Ramsukhdas",
+          "text": "।।15.19।।हे भरतवंशी अर्जुन ! इस प्रकार जो मोहरहित मनुष्य मुझे पुरुषोत्तम जानता है, वह सर्वज्ञ सब प्रकारसे मेरा ही भजन करता है।",
+          "isPublished": true
+        },
+        {
+          "id": "ba63cd57-ce69-4cef-9afc-04126fb8aa53",
+          "languageCode": "te",
+          "languageName": "Telugu",
+          "sourceKey": "holy-bg-telugu",
+          "sourceDisplayName": "Holy Bhagavad Gita (Telugu)",
+          "text": "ఎవరైతే సంశయము లేకుండా నన్ను సర్వోత్కృష్ట పురుషోత్తమునిగా తెలుసుకుంటారో, వారికి సంపూర్ణ జ్ఞానము ఉన్నట్టు. ఓ అర్జునా, వారు హృదయపూర్వకముగా నన్నే భజింతురు.",
+          "isPublished": true
+        },
+        {
+          "id": "5b4a73f4-7816-407a-a51b-ced4fdf15ac3",
+          "languageCode": "te",
+          "languageName": "Telugu",
+          "sourceKey": "holy-bg-telugu-w2w",
+          "sourceDisplayName": "Holy Bhagavad Gita (Telugu word meanings)",
+          "text": "యః — ఎవరైతే; మాం — నన్ను; ఏవం — ఈ విధముగా; అసమ్మూఢః — సంశయము లేకుండా; జానాతి — తెలుసుకుని; పురుష-ఉత్తమమ్ — సర్వోత్కృష్ట దివ్య పురుషుడు; సః — వారు; సర్వ-విత్ — సంపూర్ణ జ్ఞానము కలవారు; భజతి — పూజిస్తారు; మాం — నన్ను; సర్వ-భావేన — సంపూర్ణముగా/మనఃస్ఫూర్తిగా; భారత — అర్జునా, భరత వంశీయుడా.",
+          "isPublished": true
+        },
+        {
+          "id": "7bdbfbe0-77b9-4acc-b45e-d6a7c0e10759",
+          "languageCode": "or",
+          "languageName": "Odia",
+          "sourceKey": "holy-bg-odia",
+          "sourceDisplayName": "Holy Bhagavad Gita (Odia)",
+          "text": "ଯେଉଁମାନେ ନିଃସନ୍ଦେହ ଭାବରେ ମୋତେ ପରମ ଦିବ୍ୟ ପୁରୁଷ ରୂପରେ ଜାଣନ୍ତି, ସେମାନଙ୍କର ବାସ୍ତବିକ ପୂର୍ଣ୍ଣ ଜ୍ଞାନ ଅଛି । ହେ ଅର୍ଜୁନ! ସେମାନେ ପୂର୍ଣ୍ଣ ସମର୍ପିତ ହୋଇ ମୋର ଉପାସନା କରନ୍ତି ।",
+          "isPublished": true
+        }
+      ],
+      "createdAt": "2026-07-14T08:55:36.444Z",
+      "updatedAt": "2026-07-16T06:19:53.193Z"
+    },
+    {
+      "id": "82442f3d-83e3-4b35-b555-e6608a983a42",
+      "publicId": "bg.15.20",
+      "number": 20,
+      "sanskritText": "इति गुह्यतमं शास्त्रमिदमुक्तं मयाऽनघ।एतद्बुद्ध्वा बुद्धिमान्स्यात्कृतकृत्यश्च भारत।।15.20।।",
+      "transliteration": "iti guhyatamaṁ śhāstram idam uktaṁ mayānagha\netad buddhvā buddhimān syāt kṛita-kṛityaśh cha bhārata",
+      "meaning": "इति thus; गुह्यतमम् most secret; शास्त्रम् science (teaching); इदम् this; उक्तम् has been taught; मया by Me; अनघ O sinless one; एतत् बुद्ध्वा knowing this; बुद्धिमान् wise; स्यात् will become; कृतकृत्यः (who has) accomplished all the duties; च and; भारत O Bharata",
+      "commentary": null,
+      "seoTitle": null,
+      "seoDescription": null,
+      "sortOrder": 20,
+      "isPublished": true,
+      "chapterPublicId": "bg.15",
+      "chapterNumber": 15,
+      "workCode": "bg",
+      "translations": [
+        {
+          "id": "7f74a68c-28b7-40e2-a2e8-205f8b85b6cc",
+          "languageCode": "en",
+          "languageName": "English",
+          "sourceKey": "sivananda",
+          "sourceDisplayName": "Swami Sivananda",
+          "text": "Thus, I have imparted to you this most secret science, O sinless one; by knowing this, one becomes wise, and all their duties are accomplished, O Arjuna.",
+          "isPublished": true
+        },
+        {
+          "id": "6b3091c1-e496-4092-85ee-97e84f688090",
+          "languageCode": "hi",
+          "languageName": "Hindi",
+          "sourceKey": "ramsukhdas",
+          "sourceDisplayName": "Swami Ramsukhdas",
+          "text": "।।15.20।।हे निष्पाप अर्जुन ! इस प्रकार यह अत्यन्त गोपनीय शास्त्र मेरे द्वारा कहा गया है। हे भरतवंशी अर्जुन ! इसको जानकर मनुष्य ज्ञानवान् (तथा प्राप्त-प्राप्तव्य) और कृतकृत्य हो जाता है।",
+          "isPublished": true
+        },
+        {
+          "id": "a1552e72-b2ac-4278-9212-87bf0c92b331",
+          "languageCode": "te",
+          "languageName": "Telugu",
+          "sourceKey": "holy-bg-telugu",
+          "sourceDisplayName": "Holy Bhagavad Gita (Telugu)",
+          "text": "ఓ పాపరహితుడా, అర్జునా, అత్యంత రహస్యమైన వేద శాస్త్ర మూలతత్త్వమును నేను నీకు తెలియచేసాను. దీనిని అర్థం చేసుకున్న వ్యక్తి జ్ఞాని అవుతాడు, మరియు సాధించవలసినది అంతా నెరవేర్చినవాడు అవుతాడు.",
+          "isPublished": true
+        },
+        {
+          "id": "6a4230f3-e1e9-4822-bbcd-29cbd182afa2",
+          "languageCode": "te",
+          "languageName": "Telugu",
+          "sourceKey": "holy-bg-telugu-w2w",
+          "sourceDisplayName": "Holy Bhagavad Gita (Telugu word meanings)",
+          "text": "ఇతి — ఇవి; గుహ్య-తమం — అత్యంత రహస్యమైన; శాస్త్రం — వైదిక శాస్త్రము; ఇదం — ఇది; ఉక్తం — చెప్పబడినది; మయా — నా చేత; అనఘ — అర్జునా, పాప రహితుడా; ఏతత్ — ఇది; బుద్ధ్వా — అర్థంచేసుకుని; బుద్ధిమాన్ — జ్ఞాని; స్యాత్ — అగును; కృత-కృత్యః — సాధించవలసినది పూర్తి చేసినవాడు; చ — మరియు; భారత — అర్జునా, భరత వంశజుడా.",
+          "isPublished": true
+        },
+        {
+          "id": "17afbc1f-96e8-478a-83ef-fe5debe500d0",
+          "languageCode": "or",
+          "languageName": "Odia",
+          "sourceKey": "holy-bg-odia",
+          "sourceDisplayName": "Holy Bhagavad Gita (Odia)",
+          "text": "ହେ ନିଷ୍ପାପ ଅର୍ଜୁନ! ବେଦଶାସ୍ତ୍ରମାନଙ୍କର ଏହି ଗୂଢ଼ତମ ସିଦ୍ଧାନ୍ତ ମୁଁ ତୁମ ସମ୍ମୁଖରେ ପ୍ରକାଶ କଲି । ଏହାକୁ ହୃଦୟଙ୍ଗମ କରି ଜଣେ ବ୍ୟକ୍ତି ଜ୍ଞାନଦୀପ୍ତ ହୋଇ କୃତକୃତ୍ୟ ହୋଇଯିବ ।",
+          "isPublished": true
+        }
+      ],
+      "createdAt": "2026-07-14T08:55:37.131Z",
+      "updatedAt": "2026-07-16T06:19:53.431Z"
+    }
+  ],
+  "languages": [
+    {
+      "code": "sa",
+      "name": "Sanskrit",
+      "nativeName": "संस्कृतम्"
+    },
+    {
+      "code": "en",
+      "name": "English",
+      "nativeName": "English"
+    },
+    {
+      "code": "hi",
+      "name": "Hindi",
+      "nativeName": "हिन्दी"
+    },
+    {
+      "code": "te",
+      "name": "Telugu",
+      "nativeName": "తెలుగు"
+    },
+    {
+      "code": "or",
+      "name": "Odia",
+      "nativeName": "ଓଡ଼ିଆ"
+    },
+    {
+      "code": "kn",
+      "name": "Kannada",
+      "nativeName": "ಕನ್ನಡ"
+    },
+    {
+      "code": "ta",
+      "name": "Tamil",
+      "nativeName": "தமிழ்"
+    },
+    {
+      "code": "ml",
+      "name": "Malayalam",
+      "nativeName": "മലയാളം"
+    }
+  ]
+}

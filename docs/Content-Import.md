@@ -55,6 +55,18 @@ Open corpora only — **ISKCON / BBT “Bhagavad Gita As It Is” cannot be impo
 
 The Gita reader only lists languages that actually have translations for the chapter (no empty Telugu stubs).
 
+### Spelling / native-speaker QA
+
+Imported text is not perfect (HF scrapes, OCR, script conversion). Fix flow:
+
+1. Telugu (or any language) native finds a typo on a verse.
+2. Add the corrected full string under `apps/web/content/gita/corrections/overrides.json` keyed by `publicId` + `sourceKey` (see that folder’s README).
+3. Reload the site — static reader applies overrides at read time. For the API/DB copy, edit the translation row in Admin (or re-import after fixing the upstream corpus).
+
+Shloka lines in Telugu/Kannada/etc. are **Sanskrit re-lettered** (not free translation). Odd forms like `సఞ్జయ` were Sanscript artifacts; the reader now normalizes them to print orthography (`సంజయ`), matching holy-bhagavad-gita.org.
+
+Languages without a native reviewer (especially kn/ta/ml script proxies) should be treated as provisional.
+
 ## Schema
 
 - Current: `schemaVersion: "1.0.0"` — see `tooling/content-import/src/schema/v1.mts`.

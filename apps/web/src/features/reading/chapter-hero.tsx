@@ -18,6 +18,8 @@ type ChapterHeroProps = {
   verseCount: number;
   workTitle: string;
   workCode?: string;
+  /** Left-align on large screens so the sidebar Quick Jump can sit opposite. */
+  align?: "center" | "start";
 };
 
 /**
@@ -30,6 +32,7 @@ export function ChapterHero({
   verseCount,
   workTitle,
   workCode,
+  align = "center",
 }: ChapterHeroProps) {
   const t = useMessages();
   const preferredLanguage = useReadingStore((s) => s.preferredLanguage);
@@ -48,14 +51,25 @@ export function ChapterHero({
     workCode != null
       ? (t.workTitles[workCode] ?? workTitle)
       : workTitle;
+  const start = align === "start";
 
   return (
-    <header className={cn("animate-fade-up w-full text-center", bodyFont)}>
+    <header
+      className={cn(
+        "animate-fade-up w-full",
+        start ? "text-left lg:pr-4" : "text-center",
+        bodyFont,
+      )}
+    >
       <p className="text-saffron text-[11px] font-medium uppercase tracking-[0.2em]">
         {localizedWork}
       </p>
 
-      <p className="text-muted-foreground indic-display mt-3 text-2xl sm:text-3xl md:text-4xl">
+      <p
+        className={cn(
+          "text-muted-foreground indic-display mt-3 text-2xl sm:text-3xl md:text-4xl",
+        )}
+      >
         {t.chapterFallback(number)}
       </p>
 
@@ -64,7 +78,10 @@ export function ChapterHero({
       </h1>
 
       <ul
-        className="text-muted-foreground mt-4 flex flex-wrap items-center justify-center gap-x-3 gap-y-1 text-sm"
+        className={cn(
+          "text-muted-foreground mt-4 flex flex-wrap items-center gap-x-3 gap-y-1 text-sm",
+          start ? "justify-start" : "justify-center",
+        )}
         aria-label="Chapter details"
       >
         <li>{verseLabel}</li>
@@ -74,7 +91,12 @@ export function ChapterHero({
         <li>{readLabel}</li>
       </ul>
 
-      <div className="mx-auto mt-6 flex max-w-[12rem] items-center gap-3">
+      <div
+        className={cn(
+          "mt-6 flex max-w-[12rem] items-center gap-3",
+          start ? "mr-auto" : "mx-auto",
+        )}
+      >
         <span
           className="h-px flex-1"
           style={{
@@ -94,11 +116,18 @@ export function ChapterHero({
         />
       </div>
 
-      <p className="text-muted-foreground mx-auto mt-6 max-w-4xl text-pretty text-base leading-relaxed sm:text-lg">
+      <p
+        className={cn(
+          "text-muted-foreground mt-6 max-w-3xl text-pretty text-base leading-relaxed sm:text-lg",
+          !start && "mx-auto max-w-4xl",
+        )}
+      >
         {intro}
       </p>
 
-      <div className="mx-auto mt-8 max-w-xs">
+      <div
+        className={cn("mt-8 max-w-xs", start ? "mr-auto" : "mx-auto")}
+      >
         <Separator className="bg-border/60" />
       </div>
     </header>

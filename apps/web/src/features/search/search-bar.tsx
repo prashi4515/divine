@@ -10,12 +10,19 @@ type SearchBarProps = {
   initialQuery?: string;
   onSubmit: (query: string) => void;
   autoFocus?: boolean;
+  /**
+   * Notified on every keystroke — lets a parent (e.g. the search page's
+   * hero "Search" button) submit the current draft without waiting for
+   * Enter. Optional; existing callers don't need to change.
+   */
+  onDraftChange?: (value: string) => void;
 };
 
 export function SearchBar({
   initialQuery = "",
   onSubmit,
   autoFocus,
+  onDraftChange,
 }: SearchBarProps) {
   const [value, setValue] = React.useState(initialQuery);
   const [suggestions, setSuggestions] = React.useState<SearchSuggestion[]>([]);
@@ -48,7 +55,8 @@ export function SearchBar({
           if (cancelled) return;
           setSuggestions(rows);
           setOpen(rows.length > 0);
-          setActiveIndex(rows.length > 0 ? 0 : -1);
+          // Do not auto-highlight — Enter submits the typed query to /search.
+          setActiveIndex(-1);
         })
         .catch(() => {
           if (!cancelled) {
@@ -97,18 +105,14 @@ export function SearchBar({
   }
 
   function selectSuggestion(item: SearchSuggestion) {
-    if (item.kind === "verse" && item.href) {
-      setOpen(false);
-      window.location.href = item.href;
-      return;
-    }
+    // Always land on the search results page — never deep-link a single verse.
     if (item.kind === "topic" && item.href) {
       setOpen(false);
       window.location.href = item.href;
       return;
     }
-    setValue(item.text);
-    submit(item.text);
+    setValue(item.kind === "verse" ? value : item.text);
+    submit(item.kind === "verse" ? value.trim() || item.text : item.text);
   }
 
   return (
@@ -149,6 +153,7 @@ export function SearchBar({
             onChange={(e) => {
               setValue(e.target.value);
               setOpen(true);
+              onDraftChange?.(e.target.value);
             }}
             onFocus={() => {
               if (suggestions.length > 0) setOpen(true);
@@ -180,7 +185,18 @@ export function SearchBar({
               }
               if (e.key === "Enter") {
                 e.preventDefault();
-                if (open && activeIndex >= 0 && suggestions[activeIndex]) {
+                if (
+                  open &&
+                  activeIndex >= 0 &&
+                  suggestions[activeIndex]?.kind === "topic"
+                ) {
+                  selectSuggestion(suggestions[activeIndex]!);
+                } else if (
+                  open &&
+                  activeIndex >= 0 &&
+                  suggestions[activeIndex] &&
+                  suggestions[activeIndex]!.kind !== "verse"
+                ) {
                   selectSuggestion(suggestions[activeIndex]!);
                 } else {
                   submit();
@@ -210,6 +226,7 @@ export function SearchBar({
               setValue("");
               setSuggestions([]);
               setOpen(false);
+              onDraftChange?.("");
               inputRef.current?.focus();
             }}
           >

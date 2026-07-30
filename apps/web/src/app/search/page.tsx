@@ -1,11 +1,10 @@
 import { Suspense } from "react";
 import type { Metadata } from "next";
-import { ApiError } from "@/lib/api/client";
-import { searchVerses } from "@/lib/api/search";
 import { SearchPageClient } from "@/features/search";
 import { SearchSkeleton } from "@/features/search/search-skeleton";
 import { SiteFooter } from "@/features/reading/site-footer";
 import { SiteHeader } from "@/features/reading/site-header";
+import { warmStaticSearchIndex } from "@/lib/search/static-verse-search";
 
 export const metadata: Metadata = {
   title: "Search — Bhagavad Gita",
@@ -13,6 +12,9 @@ export const metadata: Metadata = {
     "Intelligent search across Sanskrit, English, Telugu, Hindi, transliteration, commentary, and topics.",
   alternates: { canonical: "/search" },
 };
+
+/** Prefetch the static verse index so the first API search is warm. */
+void warmStaticSearchIndex().catch(() => undefined);
 
 type SearchPageProps = {
   searchParams: Promise<{
@@ -23,6 +25,10 @@ type SearchPageProps = {
   }>;
 };
 
+/**
+ * Thin shell — does not await Nest/Neon. Results load from `/api/search/verses`
+ * (in-memory static index) so the page paints immediately.
+ */
 async function SearchBody({ searchParams }: SearchPageProps) {
   const sp = await searchParams;
   const q = sp.q?.trim() ?? "";
@@ -30,36 +36,16 @@ async function SearchBody({ searchParams }: SearchPageProps) {
   const lang = sp.lang?.trim() || "en";
   const page = Number(sp.page) || 1;
 
-  let results = {
-    data: [] as Awaited<ReturnType<typeof searchVerses>>["data"],
-    meta: {
-      query: q,
-      expandedTerms: [] as string[],
-      page,
-      pageSize: 20,
-      total: 0,
-      totalPages: 0,
-    },
-  };
-
-  try {
-    if (q || topic) {
-      results = await searchVerses({ q, topic, lang, page, pageSize: 20 });
-    }
-  } catch (error: unknown) {
-    if (!(error instanceof ApiError)) throw error;
-  }
-
   return (
     <SearchPageClient
       initialQuery={q}
       initialTopic={topic}
       initialLang={lang}
-      initialResults={results.data}
-      initialTotal={results.meta.total}
-      initialExpanded={results.meta.expandedTerms}
-      initialPage={results.meta.page}
-      initialTotalPages={results.meta.totalPages}
+      initialResults={[]}
+      initialTotal={0}
+      initialExpanded={[]}
+      initialPage={page}
+      initialTotalPages={0}
     />
   );
 }

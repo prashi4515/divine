@@ -6,7 +6,6 @@ import { getPublishedChapter, getPublishedChapters } from "@/lib/api/chapters";
 import { getPublishedVerses } from "@/lib/api/verses";
 import { getPublishedWorkBySlug } from "@/lib/api/works";
 import { ChapterHero } from "@/features/reading/chapter-hero";
-import { ChapterNavigation } from "@/features/reading/chapter-navigation";
 import { ChapterReaderHeader } from "@/features/reading/chapter-reader-header";
 import { chapterTitleDisplay } from "@/features/reading/chapter-reading";
 import { VerseReader } from "@/features/reading/verse-reader";
@@ -71,44 +70,30 @@ async function ChapterContent({
     ]);
     const workChapters = allChapters.filter((c) => c.work.code === work.code);
     const totalChapters = workChapters.length;
-    const listHref = publicWorkPath(work);
 
     return (
-      <>
-        <ChapterHero
-          number={chapter.number}
-          title={chapter.title}
-          verseCount={chapter.verseCount || verses.length}
-          workTitle={chapter.work.title}
-          workCode={chapter.work.code}
-        />
-
-        <div className="mt-10 w-full space-y-10 md:mt-12 md:space-y-12">
-          <VerseReader
-            chapterNumber={chapter.number}
-            verses={verses}
-            languages={languages.length > 0 ? languages : [
-              { code: "en", name: "English", nativeName: "English" },
-            ]}
-            initialLanguage="en"
+      <VerseReader
+        chapterNumber={chapter.number}
+        verses={verses}
+        languages={
+          languages.length > 0
+            ? languages
+            : [{ code: "en", name: "English", nativeName: "English" }]
+        }
+        initialLanguage="en"
+        totalChapters={totalChapters}
+        chapterHref={(n) => publicChapterPath(work, n)}
+        hero={
+          <ChapterHero
+            number={chapter.number}
+            title={chapter.title}
+            verseCount={chapter.verseCount || verses.length}
+            workTitle={chapter.work.title}
+            workCode={chapter.work.code}
+            align="center"
           />
-          <ChapterNavigation
-            currentNumber={chapter.number}
-            totalChapters={totalChapters}
-            listHref={listHref}
-            prevHref={
-              chapter.number > 1
-                ? publicChapterPath(work, chapter.number - 1)
-                : null
-            }
-            nextHref={
-              chapter.number < totalChapters
-                ? publicChapterPath(work, chapter.number + 1)
-                : null
-            }
-          />
-        </div>
-      </>
+        }
+      />
     );
   } catch (error: unknown) {
     if (error instanceof ApiError && error.status === 404) {

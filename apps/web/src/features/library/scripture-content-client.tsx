@@ -9,6 +9,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Badge } from "@/components/ui/badge";
 import { EmptyState } from "@/features/admin/empty-state";
+import { formatPublicIdLabel } from "@/lib/reading/verse-label";
 import { BookOpen } from "lucide-react";
 
 type CatalogChapter = {
@@ -197,7 +198,9 @@ export function ScriptureContentClient({ scriptureId }: { scriptureId: string })
                 }`}
                 onClick={() => setSelectedId(v.id)}
               >
-                <span className="font-mono text-xs">{v.publicId}</span>
+                <span className="text-xs">
+                  {formatPublicIdLabel(v.publicId)}
+                </span>
                 {!v.isPublished ? (
                   <Badge variant="outline" className="ml-2 text-[10px]">
                     draft
@@ -214,7 +217,9 @@ export function ScriptureContentClient({ scriptureId }: { scriptureId: string })
           <>
             <div className="flex flex-wrap items-center justify-between gap-2">
               <div>
-                <h2 className="font-medium">{selected.publicId}</h2>
+                <h2 className="font-medium">
+                  {formatPublicIdLabel(selected.publicId)}
+                </h2>
                 <p className="text-muted-foreground text-xs">
                   {status || "Edit and changes autosave"}
                   {saving ? " · saving…" : ""}

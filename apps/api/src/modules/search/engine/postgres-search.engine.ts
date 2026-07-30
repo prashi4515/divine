@@ -20,6 +20,34 @@ type ScoredId = { id: string; score: number; matched: string[] };
 
 const PREVIEW_LEN = 160;
 
+/**
+ * Keep the original query + short canonical concepts for DB fan-out.
+ * Drop long multi-word aliases and Indic duplicates when a Latin canonical
+ * already covers the concept (they're expensive ILIKE scans with little gain).
+ */
+function prioritizeSearchTerms(terms: string[]): string[] {
+  const filtered = terms.filter(
+    (t) => t.length >= 2 || /[\u0900-\u097f\u0c00-\u0c7f]/.test(t),
+  );
+  const scored = filtered.map((t) => {
+    let rank = 0;
+    if (!t.includes(" ")) rank += 3;
+    if (/^[a-z0-9]+$/i.test(t)) rank += 2;
+    if (t.length <= 12) rank += 1;
+    if (t.length > 24) rank -= 2;
+    return { t, rank };
+  });
+  scored.sort((a, b) => b.rank - a.rank || a.t.length - b.t.length);
+  const out: string[] = [];
+  const seen = new Set<string>();
+  for (const { t } of scored) {
+    if (seen.has(t)) continue;
+    seen.add(t);
+    out.push(t);
+  }
+  return out;
+}
+
 @Injectable()
 export class PostgresSearchEngine implements SearchEngine {
   private readonly logger = new Logger(PostgresSearchEngine.name);
@@ -315,9 +343,11 @@ export class PostgresSearchEngine implements SearchEngine {
   private async expandTerms(normalized: string): Promise<string[]> {
     const builtin = expandWithBuiltins(normalized);
     const tokens = tokenizeQuery(normalized);
-    const lookup = [...new Set([normalized, ...tokens, ...builtin])].filter(
-      (t) => t.length >= 2 || /[\u0900-\u097f\u0c00-\u0c7f]/.test(t),
-    );
+    // Prefer exact matches — `contains` on search_terms exploded into dozens of
+    // terms and made every query fan out into many slow ILIKE scans.
+    const lookup = [...new Set([normalized, ...tokens, ...builtin])]
+      .filter((t) => t.length >= 2 || /[\u0900-\u097f\u0c00-\u0c7f]/.test(t))
+      .slice(0, 12);
 
     if (lookup.length === 0) return builtin;
 
@@ -326,10 +356,9 @@ export class PostgresSearchEngine implements SearchEngine {
         OR: lookup.flatMap((t) => [
           { term: { equals: t, mode: "insensitive" as const } },
           { canonical: { equals: t, mode: "insensitive" as const } },
-          { term: { contains: t, mode: "insensitive" as const } },
         ]),
       },
-      take: 80,
+      take: 40,
     });
 
     const out = new Set(builtin);
@@ -338,24 +367,26 @@ export class PostgresSearchEngine implements SearchEngine {
       out.add(normalizeSearchQuery(row.canonical));
     }
 
-    // Fuzzy term match via pg_trgm when available
-    try {
-      const fuzzy = await this.prisma.$queryRaw<
-        Array<{ term: string; canonical: string }>
-      >`
-        SELECT term, canonical
-        FROM search_terms
-        WHERE similarity(term, ${normalized}) > 0.35
-           OR similarity(canonical, ${normalized}) > 0.35
-        ORDER BY GREATEST(similarity(term, ${normalized}), similarity(canonical, ${normalized})) DESC
-        LIMIT 20
-      `;
-      for (const row of fuzzy) {
-        out.add(normalizeSearchQuery(row.term));
-        out.add(normalizeSearchQuery(row.canonical));
+    // Fuzzy term match via pg_trgm when available (only for short queries)
+    if (normalized.length >= 3 && normalized.length <= 24) {
+      try {
+        const fuzzy = await this.prisma.$queryRaw<
+          Array<{ term: string; canonical: string }>
+        >`
+          SELECT term, canonical
+          FROM search_terms
+          WHERE similarity(term, ${normalized}) > 0.4
+             OR similarity(canonical, ${normalized}) > 0.4
+          ORDER BY GREATEST(similarity(term, ${normalized}), similarity(canonical, ${normalized})) DESC
+          LIMIT 8
+        `;
+        for (const row of fuzzy) {
+          out.add(normalizeSearchQuery(row.term));
+          out.add(normalizeSearchQuery(row.canonical));
+        }
+      } catch {
+        // Extension may be unavailable — ILIKE path still works
       }
-    } catch {
-      // Extension may be unavailable in some environments — ILIKE path still works
     }
 
     return [...out].filter(Boolean);
@@ -389,11 +420,9 @@ export class PostgresSearchEngine implements SearchEngine {
     topicSlug: string | undefined,
     language: string,
   ): Promise<ScoredId[]> {
-    const searchTerms = terms
-      .filter((t) => t.length >= 2 || /[\u0900-\u097f\u0c00-\u0c7f]/.test(t))
-      .slice(0, 8);
-
-    if (searchTerms.length === 0 && !topicSlug) return [];
+    // Cap fan-out: each ILIKE against translations is expensive on Neon.
+    const prioritized = prioritizeSearchTerms(terms).slice(0, 3);
+    if (prioritized.length === 0 && !topicSlug) return [];
 
     const scores = new Map<string, ScoredId>();
 
@@ -407,83 +436,132 @@ export class PostgresSearchEngine implements SearchEngine {
       }
     };
 
-    const termResults = await Promise.all(
-      searchTerms.map(async (term) => {
-        const verses = await this.prisma.verse.findMany({
-          where: {
-            isPublished: true,
-            chapter: { work: { code: workCode } },
-            ...(topicSlug
-              ? { verseTopics: { some: { topic: { slug: topicSlug } } } }
-              : {}),
-            OR: [
-              { publicId: { contains: term, mode: "insensitive" } },
-              { sanskritText: { contains: term, mode: "insensitive" } },
-              { transliteration: { contains: term, mode: "insensitive" } },
-              { meaning: { contains: term, mode: "insensitive" } },
-              {
-                translations: {
-                  some: {
-                    isPublished: true,
-                    text: { contains: term, mode: "insensitive" },
-                  },
-                },
-              },
-              {
-                searchKeywords: {
-                  some: { keyword: { contains: term, mode: "insensitive" } },
-                },
-              },
-              {
-                verseTopics: {
-                  some: {
-                    topic: {
-                      OR: [
-                        { name: { contains: term, mode: "insensitive" } },
-                        { slug: { contains: term, mode: "insensitive" } },
-                      ],
-                    },
-                  },
-                },
-              },
-            ],
-          },
-          select: {
-            id: true,
-            publicId: true,
-            meaning: true,
-            transliteration: true,
-            sanskritText: true,
-          },
-          take: 80,
-        });
-        return { term, verses };
-      }),
-    );
+    const baseWhere = {
+      isPublished: true as const,
+      chapter: { work: { code: workCode } },
+      ...(topicSlug
+        ? { verseTopics: { some: { topic: { slug: topicSlug } } } }
+        : {}),
+    };
 
-    for (const { term, verses } of termResults) {
-      for (const v of verses) {
+    // Phase 1 — fast columns only (no translation text scan).
+    const fastOr = prioritized.flatMap((term) => [
+      { publicId: { contains: term, mode: "insensitive" as const } },
+      { sanskritText: { contains: term, mode: "insensitive" as const } },
+      { transliteration: { contains: term, mode: "insensitive" as const } },
+      { meaning: { contains: term, mode: "insensitive" as const } },
+      {
+        searchKeywords: {
+          some: { keyword: { contains: term, mode: "insensitive" as const } },
+        },
+      },
+      {
+        verseTopics: {
+          some: {
+            topic: {
+              OR: [
+                { name: { contains: term, mode: "insensitive" as const } },
+                { slug: { contains: term, mode: "insensitive" as const } },
+              ],
+            },
+          },
+        },
+      },
+    ]);
+
+    const fastVerses = await this.prisma.verse.findMany({
+      where: { ...baseWhere, OR: fastOr },
+      select: {
+        id: true,
+        publicId: true,
+        meaning: true,
+        transliteration: true,
+        sanskritText: true,
+        searchKeywords: { select: { keyword: true }, take: 16 },
+        verseTopics: {
+          select: { topic: { select: { name: true, slug: true } } },
+        },
+      },
+      take: 100,
+    });
+
+    for (const v of fastVerses) {
+      const hay = [
+        v.publicId,
+        v.transliteration ?? "",
+        v.meaning ?? "",
+        v.sanskritText,
+        ...v.searchKeywords.map((k) => k.keyword),
+        ...v.verseTopics.map((vt) => `${vt.topic.name} ${vt.topic.slug}`),
+      ]
+        .join("\n")
+        .toLowerCase();
+
+      for (const term of prioritized) {
+        const needle = term.toLowerCase();
+        if (!hay.includes(needle)) continue;
         let points = 4;
-        const hay = [
-          v.publicId,
-          v.transliteration ?? "",
-          v.meaning ?? "",
-          v.sanskritText,
-        ]
-          .join("\n")
-          .toLowerCase();
-        if (v.publicId.toLowerCase().includes(term)) points += 12;
-        if ((v.transliteration ?? "").toLowerCase().includes(term)) points += 8;
-        if ((v.meaning ?? "").toLowerCase().includes(term)) points += 6;
-        if (hay.includes(term)) points += 2;
+        if (v.publicId.toLowerCase().includes(needle)) points += 12;
+        if ((v.transliteration ?? "").toLowerCase().includes(needle))
+          points += 8;
+        if ((v.meaning ?? "").toLowerCase().includes(needle)) points += 6;
+        if (
+          v.searchKeywords.some((k) => k.keyword.toLowerCase().includes(needle))
+        ) {
+          points += 5;
+        }
         bump(v.id, points, term);
       }
     }
 
-    // Trigram fuzzy pass for misspellings not caught by expansion
-    if (searchTerms.length > 0) {
+    // Phase 2 — translation scan only when the fast path is thin.
+    if (scores.size < 12) {
+      const translationOr = prioritized.map((term) => ({
+        translations: {
+          some: {
+            isPublished: true,
+            language: { code: { in: [language, "en"] } },
+            text: { contains: term, mode: "insensitive" as const },
+          },
+        },
+      }));
+
+      const translationVerses = await this.prisma.verse.findMany({
+        where: {
+          ...baseWhere,
+          OR: translationOr,
+          ...(scores.size > 0
+            ? { id: { notIn: [...scores.keys()] } }
+            : {}),
+        },
+        select: {
+          id: true,
+          publicId: true,
+          translations: {
+            where: {
+              isPublished: true,
+              language: { code: { in: [language, "en"] } },
+            },
+            select: { text: true },
+            take: 2,
+          },
+        },
+        take: 60,
+      });
+
+      for (const v of translationVerses) {
+        const hay = v.translations.map((t) => t.text).join("\n").toLowerCase();
+        for (const term of prioritized) {
+          if (!hay.includes(term.toLowerCase())) continue;
+          bump(v.id, 5, term);
+        }
+      }
+    }
+
+    // Trigram fuzzy pass only when exact path found nothing
+    if (scores.size === 0 && prioritized.length > 0) {
       try {
-        const primary = searchTerms[0]!;
+        const primary = prioritized[0]!;
         const fuzzyRows = await this.prisma.$queryRaw<Array<{ id: string }>>`
           SELECT v.id
           FROM verses v
@@ -520,7 +598,6 @@ export class PostgresSearchEngine implements SearchEngine {
       for (const v of topicVerses) bump(v.id, 3, topicSlug);
     }
 
-    void language;
     return [...scores.values()];
   }
 

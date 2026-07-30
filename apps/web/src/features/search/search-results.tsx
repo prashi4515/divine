@@ -35,7 +35,9 @@ export function SearchResults({
   }
 
   const related = (expandedTerms ?? []).filter(
-    (t) => t.trim().toLowerCase() !== query.trim().toLowerCase(),
+    (t) =>
+      t.trim().toLowerCase() !== query.trim().toLowerCase() &&
+      !/^(?:bg\.)?\d+\.\d+$/i.test(t.trim()),
   );
 
   return (

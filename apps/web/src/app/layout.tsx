@@ -1,21 +1,19 @@
 import type { Metadata, Viewport } from "next";
 import { cookies } from "next/headers";
-import { Inter, Instrument_Serif } from "next/font/google";
+import { Fredoka } from "next/font/google";
 import { Providers } from "@/components/providers";
 import { SESSION_COOKIE } from "@/lib/auth/config";
+import { readerFontVariableClass } from "@/lib/reading/reader-font-vars";
 import "@divine/ui/styles/tokens.css";
 import "./globals.css";
 
-const inter = Inter({
-  subsets: ["latin"],
+/**
+ * Site-wide UI face. Latin/Hebrew only — Indic glyphs fall through to the
+ * reader script fonts registered beside it on <body>.
+ */
+const fredoka = Fredoka({
+  subsets: ["latin", "latin-ext"],
   variable: "--font-sans",
-  display: "swap",
-});
-
-const instrumentSerif = Instrument_Serif({
-  weight: "400",
-  subsets: ["latin"],
-  variable: "--font-serif",
   display: "swap",
 });
 
@@ -46,7 +44,7 @@ export default async function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${inter.variable} ${instrumentSerif.variable} bg-background text-foreground min-h-svh font-sans antialiased`}
+        className={`${fredoka.variable} ${readerFontVariableClass} bg-background text-foreground min-h-svh font-sans antialiased`}
       >
         <Providers hasSessionHint={hasSessionHint}>{children}</Providers>
       </body>

@@ -3,10 +3,10 @@ import {
   relatedContentResponseSchema,
   searchSuggestResponseSchema,
   trendingSearchesResponseSchema,
-  verseSearchResponseSchema,
   type VerseSearchResponse,
 } from "@divine/types";
 import { apiFetch } from "./client";
+import { staticSearchVerses } from "@/lib/search/static-verse-search";
 
 export type SearchVersesParams = {
   q?: string;
@@ -16,19 +16,11 @@ export type SearchVersesParams = {
   lang?: string;
 };
 
+/** Server-side search — static index only (never blocks on Neon). */
 export async function searchVerses(
   params: SearchVersesParams,
 ): Promise<VerseSearchResponse> {
-  const qs = new URLSearchParams();
-  if (params.q) qs.set("q", params.q);
-  if (params.page) qs.set("page", String(params.page));
-  if (params.pageSize) qs.set("pageSize", String(params.pageSize));
-  if (params.topic) qs.set("topic", params.topic);
-  if (params.lang) qs.set("lang", params.lang);
-  const path = `/v1/search/verses?${qs.toString()}`;
-  return apiFetch({ path, next: { revalidate: 0 } }, (json) =>
-    verseSearchResponseSchema.parse(json),
-  );
+  return staticSearchVerses(params);
 }
 
 export async function getTrendingSearches(limit = 8) {

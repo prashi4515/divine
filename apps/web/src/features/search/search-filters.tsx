@@ -2,6 +2,7 @@
 
 const FILTER_TOPICS = [
   { slug: "karma", name: "Karma" },
+  { slug: "dharma", name: "Dharma" },
   { slug: "bhakti", name: "Bhakti" },
   { slug: "jnana", name: "Jnana" },
   { slug: "mind", name: "Mind" },
@@ -10,12 +11,15 @@ const FILTER_TOPICS = [
   { slug: "death", name: "Death" },
   { slug: "duty", name: "Duty" },
   { slug: "detachment", name: "Detachment" },
+  { slug: "peace", name: "Peace" },
 ] as const;
 
 const LANGS = [
   { code: "en", label: "English" },
   { code: "hi", label: "Hindi" },
   { code: "te", label: "Telugu" },
+  { code: "ta", label: "Tamil" },
+  { code: "kn", label: "Kannada" },
   { code: "sa", label: "Sanskrit" },
 ] as const;
 

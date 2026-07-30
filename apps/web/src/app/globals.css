@@ -86,6 +86,47 @@
     line-height: var(--leading-verse);
   }
 
+  .leading-reading {
+    line-height: var(--leading-reading);
+  }
+
+  /**
+   * Long-form verse body (translation / commentary) — light weight + airy
+   * leading so Indic matras don’t pack into a wall of text.
+   */
+  .text-reading {
+    color: hsl(var(--verse));
+    font-size: clamp(1.125rem, 1rem + 0.45vw, 1.3125rem);
+    font-weight: 400;
+    font-synthesis: none;
+    line-height: var(--leading-reading);
+    letter-spacing: 0.015em;
+    word-spacing: 0.08em;
+    text-wrap: pretty;
+  }
+
+  .text-reading p + p {
+    margin-top: 1.75em;
+  }
+
+  .commentary-lead {
+    font-size: clamp(1.1875rem, 1.05rem + 0.5vw, 1.375rem);
+    line-height: calc(var(--leading-reading) + 0.08);
+    color: hsl(var(--foreground));
+  }
+
+  /**
+   * Shloka display — warm color, tight pāda leading.
+   */
+  .text-shloka {
+    color: hsl(var(--sanskrit));
+    font-size: clamp(1.375rem, 1.05rem + 1.1vw, 1.85rem);
+    font-weight: 600;
+    line-height: var(--leading-verse);
+    letter-spacing: 0;
+    text-wrap: pretty;
+  }
+
   .transition-divine {
     transition-property: color, background-color, border-color, opacity, transform, box-shadow;
     transition-timing-function: var(--ease-out);
@@ -108,5 +149,72 @@
     line-height: 1.45;
     overflow: visible;
     padding-block: 0.15em;
+  }
+
+  /**
+   * Chapter grid entrances — distinct from the old fade-up Reveal.
+   * bloom: soft scale · drift: rise with blur · sweep: angled slide.
+   */
+  .chapter-card-motion--pending {
+    opacity: 0;
+  }
+
+  .chapter-card-motion--bloom {
+    animation: chapter-bloom 0.7s var(--ease-out) both;
+  }
+
+  .chapter-card-motion--drift {
+    animation: chapter-drift 0.75s var(--ease-out) both;
+  }
+
+  .chapter-card-motion--sweep {
+    animation: chapter-sweep 0.7s var(--ease-out) both;
+  }
+
+  @keyframes chapter-bloom {
+    from {
+      opacity: 0;
+      transform: scale(0.92);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  @keyframes chapter-drift {
+    from {
+      opacity: 0;
+      transform: translateY(1.75rem);
+      filter: blur(5px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+      filter: blur(0);
+    }
+  }
+
+  @keyframes chapter-sweep {
+    from {
+      opacity: 0;
+      transform: translate3d(-1.25rem, 0.75rem, 0) rotate(-1.2deg);
+    }
+    to {
+      opacity: 1;
+      transform: translate3d(0, 0, 0) rotate(0deg);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .chapter-card-motion--pending,
+    .chapter-card-motion--bloom,
+    .chapter-card-motion--drift,
+    .chapter-card-motion--sweep {
+      opacity: 1;
+      transform: none;
+      filter: none;
+      animation: none;
+    }
   }
 }

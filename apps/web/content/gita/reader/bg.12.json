@@ -1,1 +1,1291 @@
-{"generatedAt":"2026-07-27T08:06:39.019Z","chapter":{"id":"1c0ccbb9-1977-46d5-a13d-04faea96b948","publicId":"bg.12","number":12,"title":"Bhakti Yoga","verseCount":20,"sortOrder":12,"isPublished":true,"work":{"code":"bg","slug":"bhagavad-gita","title":"Bhagavad Gita"},"createdAt":"2026-07-10T08:56:32.953Z","updatedAt":"2026-07-14T08:54:00.658Z"},"verses":[{"id":"8bab99e1-3efc-4467-9cab-f085eb4c2546","publicId":"bg.12.1","number":1,"sanskritText":"अर्जुन उवाचएवं सततयुक्ता ये भक्तास्त्वां पर्युपासते।येचाप्यक्षरमव्यक्तं तेषां के योगवित्तमाः।।12.1।।","transliteration":"arjuna uvācha\nevaṁ satata-yuktā ye bhaktās tvāṁ paryupāsate\nye chāpy akṣharam avyaktaṁ teṣhāṁ ke yoga-vittamāḥ","meaning":"एवम् thus; सततयुक्ताः ever steadfast; ये who; भक्ताः devotees; त्वाम् Thee; पर्युपासते worship; ये who; च and; अपि also; अक्षरम् the imperishable; अव्यक्तम् the unmanifested; तेषाम् of them; के who; योगवित्तमाः better versed in Yoga","commentary":null,"seoTitle":null,"seoDescription":null,"sortOrder":1,"isPublished":true,"chapterPublicId":"bg.12","chapterNumber":12,"workCode":"bg","translations":[{"id":"0c560fcb-2133-4dff-b203-2a076c13075a","languageCode":"en","languageName":"English","sourceKey":"sivananda","sourceDisplayName":"Swami Sivananda","text":"Arjuna said, \"Which of them are better versed in Yoga—those who steadfastly worship You, or those who worship the imperishable and the unmanifested?\"","isPublished":true},{"id":"69db8d03-d7c7-4501-a5af-b234649751c1","languageCode":"hi","languageName":"Hindi","sourceKey":"ramsukhdas","sourceDisplayName":"Swami Ramsukhdas","text":"।।12.1।।जो भक्त इस प्रकार निरन्तर आपमें लगे रहकर आप-(सगुण भगवान्-) की उपासना करते हैं और जो अविनाशी निराकारकी ही उपासना करते हैं, उनमेंसे उत्तम योगवेत्ता कौन हैं?","isPublished":true},{"id":"e298b7f1-c362-41c9-b3e7-6b0ae0de6c1b","languageCode":"te","languageName":"Telugu","sourceKey":"holy-bg-telugu","sourceDisplayName":"Holy Bhagavad Gita (Telugu)","text":"అర్జునుడు ఇలా అడిగెను: నీ యొక్క సాకార రూపము పట్ల స్థిరముగా భక్తితో ఉండేవారు మరియు నిరాకార బ్రహ్మన్ ను ఉపాసించే వారు – వీరిలో, యోగములో ఎవరు ఎక్కువ శ్రేష్ఠులు అని నీవు పరిగణిస్తావు?","isPublished":true},{"id":"58c6a551-47ea-4680-829a-26f202427b30","languageCode":"te","languageName":"Telugu","sourceKey":"holy-bg-telugu-w2w","sourceDisplayName":"Holy Bhagavad Gita (Telugu word meanings)","text":"అర్జున ఉవాచ — అర్జునుడు పలికెను; ఏవం — ఈ విధముగా; సతత — స్థిరముగా; యుక్తా — భక్తితో; యే — ఎవరైతే; భక్తాః — భక్తులు; త్వాం — నిన్ను; పర్యుపాసతే — ఆరాధిస్తారో; యే — వారు; చ — మరియు; అపి — కూడా; అక్షరం — నాశము లేని; అవ్యక్తం — నిరాకార బ్రహ్మము; తేషాం — వారు; కే — ఎవరు?; యోగ-విత్-తమాః — యోగములో ఎక్కువ శ్రేష్ఠులు","isPublished":true},{"id":"a572e725-2107-4c65-a2da-31609a63ce51","languageCode":"or","languageName":"Odia","sourceKey":"holy-bg-odia","sourceDisplayName":"Holy Bhagavad Gita (Odia)","text":"ଅର୍ଜୁନ ପ୍ରଶ୍ନ କଲେ: ଯେଉଁମାନେ ଆପଣଙ୍କର ସାକାର ସ୍ୱରୂପର ନିରବଚ୍ଛିନ୍ନ ଭାବରେ ଭକ୍ତି କରନ୍ତି, ଏବଂ ଯେଉଁମାନେ ଆପଣଙ୍କର ନିରାକାର ବ୍ରହ୍ମସ୍ୱରପର ଆରାଧନା କରନ୍ତି, ସେମାନଙ୍କ ମଧ୍ୟରୁ ଉତ୍ତମ ଯୋଗୀ ଭାବରେ ଆପଣ କାହାକୁ ବିବେଚନା କରନ୍ତି?","isPublished":true}],"createdAt":"2026-07-14T08:54:00.889Z","updatedAt":"2026-07-16T06:18:54.621Z"},{"id":"539dd2c2-925c-4052-845c-573f13a539a6","publicId":"bg.12.2","number":2,"sanskritText":"श्री भगवानुवाचमय्यावेश्य मनो ये मां नित्ययुक्ता उपासते।श्रद्धया परयोपेतास्ते मे युक्ततमा मताः।।12.2।।","transliteration":"śhrī-bhagavān uvācha\nmayy āveśhya mano ye māṁ nitya-yuktā upāsate\nśhraddhayā parayopetās te me yuktatamā matāḥ","meaning":"मयि on Me; आवेश्य fixing; मनः the mind; ये who; माम् Me; नित्ययुक्ताः ever steadfast; उपासते worship; श्रद्धया with faith; परया supreme; उपेताः endowed; ते those; मे of Me; युक्ततमाः the best versed in Yoga; मताः (in My) opinion","commentary":null,"seoTitle":null,"seoDescription":null,"sortOrder":2,"isPublished":true,"chapterPublicId":"bg.12","chapterNumber":12,"workCode":"bg","translations":[{"id":"ad537bef-b932-4b86-a746-49bbdbf140a2","languageCode":"en","languageName":"English","sourceKey":"sivananda","sourceDisplayName":"Swami Sivananda","text":"The Blessed Lord said, \"In My opinion, those who fix their minds on Me, worship Me ever steadfastly, and are endowed with supreme faith, are the best in Yoga.\"","isPublished":true},{"id":"14a86d4a-fc92-45ef-ae92-c4560360d173","languageCode":"hi","languageName":"Hindi","sourceKey":"ramsukhdas","sourceDisplayName":"Swami Ramsukhdas","text":"।।12.2।।मेरेमें मनको लगाकर नित्य-निरन्तर मेरेमें लगे हुए जो भक्त परम श्रद्धासे युक्त होकर मेरी उपासना करते हैं, वे मेरे मतमें सर्वश्रेष्ठ योगी हैं।","isPublished":true},{"id":"13a3c08f-f4bf-403e-a034-724f965e7c18","languageCode":"te","languageName":"Telugu","sourceKey":"holy-bg-telugu","sourceDisplayName":"Holy Bhagavad Gita (Telugu)","text":"శ్రీ భగవానుడు ఇలా పలికెను: నా పైనే తమ మనస్సులను లగ్నం చేసి మరియు సతతమూ నా పట్ల దృఢ విశ్వాసంతో భక్తిలో నిమగ్నమైన వారు అత్యుత్తమ యోగులని నేను పరిగణిస్తాను.","isPublished":true},{"id":"ac569c9c-2bad-41db-b693-3cd553c449ed","languageCode":"te","languageName":"Telugu","sourceKey":"holy-bg-telugu-w2w","sourceDisplayName":"Holy Bhagavad Gita (Telugu word meanings)","text":"శ్రీ-భగవాన్-ఉవాచ — శ్రీ భగవానుడు పలికెను; మయి — నా యందు; ఆవేశ్యా — నిమగ్నమై; మనః — మనస్సు; యే — ఎవరైతే; మాం — నన్ను; నిత్య యుక్తః — ఎల్లప్పుడూ లగ్నం చేసి; ఉపాసతే — పూజిస్తారో/ఆరాధిస్తారో; శ్రద్ధయా — శ్రద్దా-విశ్వాసములతో; పరయా — అత్యుత్తమ; ఉపేతాః — కలిగియున్న; తే — వారు; మే — నా చేత; యుక్త-తమాః — యోగములో ఉన్నతమైన స్థాయిలో ఉన్నట్టు; మతాః — నేను భావిస్తాను.","isPublished":true},{"id":"d31795d5-f814-4569-975f-8f1065a839a9","languageCode":"or","languageName":"Odia","sourceKey":"holy-bg-odia","sourceDisplayName":"Holy Bhagavad Gita (Odia)","text":"ଶ୍ରୀ ଭଗବାନ କହିଲେ: ଯେଉଁମାନେ ନିଜର ମନକୁ ମୋଠାରେ କେନ୍ଦ୍ରିତ କରନ୍ତି, ଏବଂ ଦୃଢ ଶ୍ରଦ୍ଧାଯୁକ୍ତ ହୋଇ ସର୍ବଦା ମୋର ଭକ୍ତି କରନ୍ତି, ମୁଁ ସେମାନଙ୍କୁ ଶ୍ରେଷ୍ଠ ଯୋଗୀ ଭାବରେ ବିବେଚନା କରିଥାଏ ।","isPublished":true}],"createdAt":"2026-07-14T08:54:01.587Z","updatedAt":"2026-07-16T06:18:55.093Z"},{"id":"60826943-79ec-482b-9146-6c874a4c10e6","publicId":"bg.12.3","number":3,"sanskritText":"ये त्वक्षरमनिर्देश्यमव्यक्तं पर्युपासते।सर्वत्रगमचिन्त्यं च कूटस्थमचलं ध्रुवम्।।12.3।।","transliteration":"ye tv akṣharam anirdeśhyam avyaktaṁ paryupāsate\nsarvatra-gam achintyañcha kūṭa-stham achalandhruvam\n sanniyamyendriya-grāmaṁ sarvatra sama-buddhayaḥ\nte prāpnuvanti mām eva sarva-bhūta-hite ratāḥ","meaning":"ये who; तु verily; अक्षरम् the imperishable; अनिर्देश्यम् the indefinable; अव्यक्तम् the unmanifested; पर्युपासते worship; सर्वत्रगम् the omnipresent; अचिन्त्यम् the unthinkable; च and; कूटस्थम् the unchangeable; अचलम् the immovable; ध्रुवम् the eternal","commentary":null,"seoTitle":null,"seoDescription":null,"sortOrder":3,"isPublished":true,"chapterPublicId":"bg.12","chapterNumber":12,"workCode":"bg","translations":[{"id":"5e48c0fc-9686-46b6-abf0-8542eb3ad7c2","languageCode":"en","languageName":"English","sourceKey":"sivananda","sourceDisplayName":"Swami Sivananda","text":"Those who worship the imperishable, the indefinable, the unmanifest, the omnipresent, the unthinkable, the immovable, and the eternal.","isPublished":true},{"id":"66c27ce9-5aec-44c4-8dbc-460b47c7db33","languageCode":"hi","languageName":"Hindi","sourceKey":"ramsukhdas","sourceDisplayName":"Swami Ramsukhdas","text":"।।12.3।।जो अपनी इन्द्रियोंको वशमें करके अचिन्त्य, सब जगह परिपूर्ण, अनिर्देश्य, कूटस्थ, अचल, ध्रुव, अक्षर और अव्यक्तकी उपासना करते हैं, वे प्राणिमात्रके हितमें रत और सब जगह समबुद्धिवाले मनुष्य मुझे ही प्राप्त होते हैं।","isPublished":true},{"id":"45c0d8f0-daac-4d9a-8ef6-73d698bed2b9","languageCode":"te","languageName":"Telugu","sourceKey":"holy-bg-telugu","sourceDisplayName":"Holy Bhagavad Gita (Telugu)","text":"BG 12.3-4:\n                            నాశరహితుడూ, అనిర్వచనీయమైన వాడు, అవ్యక్తమూ, సర్వవ్యాపి, మనోబుద్ధులకు అతీతుడు, మార్పు లేనివాడు, నిత్యశాశ్వతుడూ, మరియు నిశ్చలమైన వాడునూ - అయిన పరమ సత్యము యొక్క నిరాకార తత్త్వాన్ని - ఇంద్రియములను నిగ్రహించి, సర్వత్రా సమబుద్ధితో ఉంటూ, సర్వభూతముల సంక్షేమం కోసం నిమగ్నమై ఉంటూ - ఆరాధించేవారు కూడా నన్ను పొందుతారు.","isPublished":true},{"id":"19548a82-3248-417d-a14a-88ac1f0d2ce5","languageCode":"te","languageName":"Telugu","sourceKey":"holy-bg-telugu-w2w","sourceDisplayName":"Holy Bhagavad Gita (Telugu word meanings)","text":"యే — ఎవరైతే; తు — కానీ; అక్షరం — అనశ్వరమైన/నిత్యమైన; అనిర్దేశ్యం — నిర్వచించుటకు వీలుకాని; అవ్యక్తం — అవ్యక్తమైన; పర్యుపాసతే — ఆరాధిస్తారో; సర్వత్ర-గం — సర్వ వ్యాప్తి అయిన; అచింత్యం — మనోబుద్ధులకు అతీతుడు (ఊహింపశక్యము కాని); చ — మరియు; కూట-స్థమ్ — మారని; అచలం — కదిలించలేని; ధృవం — సనాతనమైన ; సన్నియమ్య — నిగ్రహించి; ఇంద్రియ-గ్రామం — ఇంద్రియములు; సర్వత్ర — అంతటా; సమ-బుద్ధయః — సమ బుద్ధితో ఉండి; తే — వారు; ప్రాప్నువంతి — పొందుతారు; మాం — నన్ను; ఏవ — కూడా; సర్వ-భూత-హితే — సమస్త ప్రాణుల సంక్షేమం కోసం; రతాః — నిమగ్నుడై.","isPublished":true}],"createdAt":"2026-07-14T08:54:02.527Z","updatedAt":"2026-07-16T06:18:55.335Z"},{"id":"1d0f0876-5d5e-4e40-b38a-ecffd17b3296","publicId":"bg.12.4","number":4,"sanskritText":"संनियम्येन्द्रियग्रामं सर्वत्र समबुद्धयः।ते प्राप्नुवन्ति मामेव सर्वभूतहिते रताः।।12.4।।","transliteration":"sanniyamyendriya-grāmaṁ  sarvatra    sama-buddhayaḥ  te  prāpnuvanti mām eva sarva-bhūta-hite    ratāḥ","meaning":"संनियम्य having restrained; इन्द्रियग्रामम् the aggregate of the senses; सर्वत्र everywhere; समबुद्धयः evenminded; ते they; प्राप्नुवन्ति obtian; माम् Me; एव only; सर्वभूतहिते in the welfare of all beings; रताः rejoicers","commentary":null,"seoTitle":null,"seoDescription":null,"sortOrder":4,"isPublished":true,"chapterPublicId":"bg.12","chapterNumber":12,"workCode":"bg","translations":[{"id":"49d2d830-ec59-4edb-abb4-18393d5414fb","languageCode":"en","languageName":"English","sourceKey":"sivananda","sourceDisplayName":"Swami Sivananda","text":"Having restrained all the senses, being even-minded everywhere, and intent on the welfare of all beings, they verily come unto Me.","isPublished":true},{"id":"64f2c202-3789-4d08-9c00-4f132d8694c1","languageCode":"hi","languageName":"Hindi","sourceKey":"ramsukhdas","sourceDisplayName":"Swami Ramsukhdas","text":"।।12.4।।जो अपनी इन्द्रियोंको वशमें करके अचिन्त्य, सब जगह परिपूर्ण, अनिर्देश्य, कूटस्थ, अचल, ध्रुव, अक्षर और अव्यक्तकी उपासना करते हैं, वे प्राणिमात्रके हितमें रत और सब जगह समबुद्धिवाले मनुष्य मुझे ही प्राप्त होते हैं।","isPublished":true},{"id":"42aa2a7a-2bb0-4c9c-b194-6a99198e90e6","languageCode":"te","languageName":"Telugu","sourceKey":"holy-bg-telugu","sourceDisplayName":"Holy Bhagavad Gita (Telugu)","text":"BG 12.3-4:\n                            నాశరహితుడూ, అనిర్వచనీయమైన వాడు, అవ్యక్తమూ, సర్వవ్యాపి, మనోబుద్ధులకు అతీతుడు, మార్పు లేనివాడు, నిత్యశాశ్వతుడూ, మరియు నిశ్చలమైన వాడునూ - అయిన పరమ సత్యము యొక్క నిరాకార తత్త్వాన్ని - ఇంద్రియములను నిగ్రహించి, సర్వత్రా సమబుద్ధితో ఉంటూ, సర్వభూతముల సంక్షేమం కోసం నిమగ్నమై ఉంటూ - ఆరాధించేవారు కూడా నన్ను పొందుతారు.","isPublished":true},{"id":"4d3bf766-c919-44c5-8540-46ea3114cd64","languageCode":"te","languageName":"Telugu","sourceKey":"holy-bg-telugu-w2w","sourceDisplayName":"Holy Bhagavad Gita (Telugu word meanings)","text":"యే — ఎవరైతే; తు — కానీ; అక్షరం — అనశ్వరమైన/నిత్యమైన; అనిర్దేశ్యం — నిర్వచించుటకు వీలుకాని; అవ్యక్తం — అవ్యక్తమైన; పర్యుపాసతే — ఆరాధిస్తారో; సర్వత్ర-గం — సర్వ వ్యాప్తి అయిన; అచింత్యం — మనోబుద్ధులకు అతీతుడు (ఊహింపశక్యము కాని); చ — మరియు; కూట-స్థమ్ — మారని; అచలం — కదిలించలేని; ధృవం — సనాతనమైన ; సన్నియమ్య — నిగ్రహించి; ఇంద్రియ-గ్రామం — ఇంద్రియములు; సర్వత్ర — అంతటా; సమ-బుద్ధయః — సమ బుద్ధితో ఉండి; తే — వారు; ప్రాప్నువంతి — పొందుతారు; మాం — నన్ను; ఏవ — కూడా; సర్వ-భూత-హితే — సమస్త ప్రాణుల సంక్షేమం కోసం; రతాః — నిమగ్నుడై.","isPublished":true}],"createdAt":"2026-07-14T08:54:03.524Z","updatedAt":"2026-07-16T06:18:55.585Z"},{"id":"f39a5be8-b8f4-4eec-acd5-39de69f6ad48","publicId":"bg.12.5","number":5,"sanskritText":"क्लेशोऽधिकतरस्तेषामव्यक्तासक्तचेतसाम्।\n\nअव्यक्ता हि गतिर्दुःखं देहवद्भिरवाप्यते।।12.5।।","transliteration":"kleśho ’dhikataras teṣhām avyaktāsakta-chetasām\navyaktā hi gatir duḥkhaṁ dehavadbhir avāpyate","meaning":"क्लेशः the trouble; अधिकतरः (is) greater; तेषाम् of those; अव्यक्तासक्तचेतसाम् whose minds are set on the unmanifested; अव्यक्ता the unmanifested; हि for; गतिः goal; दुःखम् pain; देहवद्भिः by the embodied; अवाप्यते is reached","commentary":null,"seoTitle":null,"seoDescription":null,"sortOrder":5,"isPublished":true,"chapterPublicId":"bg.12","chapterNumber":12,"workCode":"bg","translations":[{"id":"44e14b32-be16-410d-be76-2e685a35d411","languageCode":"en","languageName":"English","sourceKey":"sivananda","sourceDisplayName":"Swami Sivananda","text":"Greater is their trouble whose minds are set on the unmanifested, for the goal of the unmanifested is very hard for the embodied to reach.","isPublished":true},{"id":"cd1540be-3728-4dd0-9271-165d1350be85","languageCode":"hi","languageName":"Hindi","sourceKey":"ramsukhdas","sourceDisplayName":"Swami Ramsukhdas","text":"।।12.5।।अव्यक्तमें आसक्त चित्तवाले उन साधकोंको (अपने साधनमें) कष्ट अधिक होता है; क्योंकि देहाभिमानियोंके द्वारा अव्यक्त-विषयक गति कठिनतासे प्राप्त की जाती है।","isPublished":true},{"id":"b263eeb9-b821-438d-a58a-b41e1451a28e","languageCode":"te","languageName":"Telugu","sourceKey":"holy-bg-telugu","sourceDisplayName":"Holy Bhagavad Gita (Telugu)","text":"మనస్సు యందు అవ్యక్తము పట్ల ఆసక్తి ఉన్నవారికి, సిద్ధి పథము చాలా కష్టములతో కూడుకున్నది. అవ్యక్తమును ఆరాధించటం అనేది శరీరబద్ధులైన జీవులకు చాలా కష్టతరమైనది.","isPublished":true},{"id":"25a64cd5-0160-4694-b214-dbafa0bec2c6","languageCode":"te","languageName":"Telugu","sourceKey":"holy-bg-telugu-w2w","sourceDisplayName":"Holy Bhagavad Gita (Telugu word meanings)","text":"క్లేశః — కష్టములు/ఇబ్బందులు; అధిక-తర — ఎక్కువగా; తేషాం — వారికి; అవ్యక్త — అవ్యక్త రూపము పట్ల; ఆసక్త — ఆసక్తులై ఉన్న; చేతాసాం — మనస్సు కలవారు; అవ్యక్తా — అవ్యక్తము; హి — నిజముగా; గతిః — మార్గము; దుఃఖం — చాలా కష్టతరముగా; దేహవద్భిః — శరీర బద్దులైన వారికి (జీవాత్మ); అవాప్యతే — పొందెదరు.","isPublished":true},{"id":"af4459ac-dcff-4714-907c-01aec9615441","languageCode":"or","languageName":"Odia","sourceKey":"holy-bg-odia","sourceDisplayName":"Holy Bhagavad Gita (Odia)","text":"ମୋର ଅବ୍ୟକ୍ତ ସ୍ୱରୂପରେ ଯେଉଁମାନଙ୍କର ମନ ଆସକ୍ତ, ସେମାନଙ୍କ ପାଇଁ ଭଗବତ୍ ପ୍ରାପ୍ତିର ପଥ ଅତ୍ୟନ୍ତ କ୍ଳେଶପୂର୍ଣ୍ଣ ଅଟେ । ଅବ୍ୟକ୍ତ ବ୍ରହ୍ମଙ୍କର ଉପାସନା ଶରୀରଧାରୀ ଜୀବଙ୍କ ପାଇଁ ଅତ୍ୟନ୍ତ କଷ୍ଟକର ହୋଇଥାଏ ।","isPublished":true}],"createdAt":"2026-07-14T08:54:04.394Z","updatedAt":"2026-07-16T06:18:55.838Z"},{"id":"64d090f8-10c8-4204-aadf-441291c75850","publicId":"bg.12.6","number":6,"sanskritText":"ये तु सर्वाणि कर्माणि मयि संन्यस्य मत्पराः।अनन्येनैव योगेन मां ध्यायन्त उपासते।।12.6।।","transliteration":"ye tu sarvāṇi karmāṇi mayi sannyasya mat-paraḥ\nananyenaiva yogena māṁ dhyāyanta upāsate","meaning":"ये who; तु but; सर्वाणि all; कर्माणि actions; मयि in Me; संन्यस्य renouncing; मत्पराः regarding Me as the supreme goal; अनन्येन singleminded; एव even; योगेन with the Yoga; माम् Me; ध्यायन्तः meditating; उपासते worship","commentary":null,"seoTitle":null,"seoDescription":null,"sortOrder":6,"isPublished":true,"chapterPublicId":"bg.12","chapterNumber":12,"workCode":"bg","translations":[{"id":"564b83aa-da7e-4cc5-874e-873e51081342","languageCode":"en","languageName":"English","sourceKey":"sivananda","sourceDisplayName":"Swami Sivananda","text":"But to those who worship Me, renouncing all actions in Me, regarding Me as the supreme goal, meditating on Me with single-minded yoga.","isPublished":true},{"id":"ad71cc56-2128-42d2-b87e-ce51feb6236b","languageCode":"hi","languageName":"Hindi","sourceKey":"ramsukhdas","sourceDisplayName":"Swami Ramsukhdas","text":"।।12.6।।परन्तु जो कर्मोंको मेरे अर्पण करके और मेरे परायण होकर अनन्ययोगसे मेरा ही ध्यान करते हुए मेरी उपासना करते हैं।","isPublished":true},{"id":"99ee27c4-9ec0-4203-b34d-fbe18980c648","languageCode":"te","languageName":"Telugu","sourceKey":"holy-bg-telugu","sourceDisplayName":"Holy Bhagavad Gita (Telugu)","text":"BG 12.6-7:\n                            కానీ, తాము చేసే కర్మలన్నింటినీ నాకే సమర్పిస్తూ, నన్నే పరమ లక్ష్యముగా భావిస్తూ, నన్నే ఆరాధిస్తూ మరియు అనన్య భక్తితో నా మీదే ధ్యానం చేసే వారిని, ఓ పార్థా, నేను వారిని శీఘ్రముగానే ఈ మృత్యుసంసారసాగరము నుండి విముక్తి చేస్తాను, ఏలనన వారి అంతఃకరణ నా యందే ఏకమైపోయి ఉంటుంది.","isPublished":true},{"id":"fe816aa3-cc35-42e8-829f-95c4590708e7","languageCode":"te","languageName":"Telugu","sourceKey":"holy-bg-telugu-w2w","sourceDisplayName":"Holy Bhagavad Gita (Telugu word meanings)","text":"యే — ఎవరైతే; తు — కానీ; సర్వాణి — సమస్త; కర్మాణి — పనులు; మయి — నాకు; సన్న్యస్య — సమర్పిస్తూ; మత్ పరః — నన్నే పరమ లక్ష్యముగా పరిగణిస్తూ; అనన్యేన — అనన్యమైన; ఏవ — ఖచ్చితముగా; యోగేన — భక్తితో; మాం — నన్ను; ధ్యాయంతః — ధ్యానము చేస్తూ; ఉపాసతే — ఆరాధిస్తారో; తేషామ్ — వారికి; అహం — నేను; సముద్ధర్తా — ఉద్ధరించేవాడిని; మృత్యు-సంసార-సాగరాత్ — జనన-మరణ సంసార సాగరము నుండి; భవామి — అగుదును; న, చిరాత్ — త్వరగానే; పార్థ — అర్జునా, ప్రిథ పుత్రుడా; మయి — నా తోటి; ఆవేశిత-చేతసామ్ — నాతోనే ఏకమైన (నాయందే లగ్నమైన) మనోబుద్ధులు కలవారికి.","isPublished":true}],"createdAt":"2026-07-14T08:54:05.184Z","updatedAt":"2026-07-16T06:18:56.076Z"},{"id":"5d234009-5444-4cb3-9c41-5d131080acaf","publicId":"bg.12.7","number":7,"sanskritText":"तेषामहं समुद्धर्ता मृत्युसंसारसागरात्।भवामि नचिरात्पार्थ मय्यावेशितचेतसाम्।।12.7।।","transliteration":"teṣhām ahaṁ samuddhartā mṛityu-saṁsāra-sāgarāt\nbhavāmi na chirāt pārtha mayy āveśhita-chetasām","meaning":"तेषाम् for them; अहम् I; समुद्धर्ता the saviour; मृत्युसंसारसागरात् out of the ocean of the mortal Samsara; भवामि (I) become; नचिरात् ere long; पार्थ O Arjuna; मयि in Me; आवेशितचेतसाम् of those whose minds are set","commentary":null,"seoTitle":null,"seoDescription":null,"sortOrder":7,"isPublished":true,"chapterPublicId":"bg.12","chapterNumber":12,"workCode":"bg","translations":[{"id":"2029a0f6-fbb1-4164-b95c-2c53565a6870","languageCode":"en","languageName":"English","sourceKey":"sivananda","sourceDisplayName":"Swami Sivananda","text":"To those whose minds are set on Me, O Arjuna, verily I soon become the savior out of the ocean of Samsara.","isPublished":true},{"id":"7cecea3a-e628-4989-b1db-5364e6455a4c","languageCode":"hi","languageName":"Hindi","sourceKey":"ramsukhdas","sourceDisplayName":"Swami Ramsukhdas","text":"।।12.7।।हे पार्थ ! मेरेमें आविष्ट चित्तवाले उन भक्तोंका मैं मृत्युरूप संसार-समुद्रसे शीघ्र ही उद्धार करनेवाला बन जाता हूँ।","isPublished":true},{"id":"cc882335-c1da-405b-a409-b88bb49d672c","languageCode":"te","languageName":"Telugu","sourceKey":"holy-bg-telugu","sourceDisplayName":"Holy Bhagavad Gita (Telugu)","text":"BG 12.6-7:\n                            కానీ, తాము చేసే కర్మలన్నింటినీ నాకే సమర్పిస్తూ, నన్నే పరమ లక్ష్యముగా భావిస్తూ, నన్నే ఆరాధిస్తూ మరియు అనన్య భక్తితో నా మీదే ధ్యానం చేసే వారిని, ఓ పార్థా, నేను వారిని శీఘ్రముగానే ఈ మృత్యుసంసారసాగరము నుండి విముక్తి చేస్తాను, ఏలనన వారి అంతఃకరణ నా యందే ఏకమైపోయి ఉంటుంది.","isPublished":true},{"id":"b36990f8-324c-49ac-b234-0275eea90156","languageCode":"te","languageName":"Telugu","sourceKey":"holy-bg-telugu-w2w","sourceDisplayName":"Holy Bhagavad Gita (Telugu word meanings)","text":"యే — ఎవరైతే; తు — కానీ; సర్వాణి — సమస్త; కర్మాణి — పనులు; మయి — నాకు; సన్న్యస్య — సమర్పిస్తూ; మత్ పరః — నన్నే పరమ లక్ష్యముగా పరిగణిస్తూ; అనన్యేన — అనన్యమైన; ఏవ — ఖచ్చితముగా; యోగేన — భక్తితో; మాం — నన్ను; ధ్యాయంతః — ధ్యానము చేస్తూ; ఉపాసతే — ఆరాధిస్తారో; తేషామ్ — వారికి; అహం — నేను; సముద్ధర్తా — ఉద్ధరించేవాడిని; మృత్యు-సంసార-సాగరాత్ — జనన-మరణ సంసార సాగరము నుండి; భవామి — అగుదును; న, చిరాత్ — త్వరగానే; పార్థ — అర్జునా, ప్రిథ పుత్రుడా; మయి — నా తోటి; ఆవేశిత-చేతసామ్ — నాతోనే ఏకమైన (నాయందే లగ్నమైన) మనోబుద్ధులు కలవారికి.","isPublished":true}],"createdAt":"2026-07-14T08:54:06.075Z","updatedAt":"2026-07-16T06:18:56.313Z"},{"id":"0913d3e5-abfa-411f-ad9a-ccae03d2f610","publicId":"bg.12.8","number":8,"sanskritText":"मय्येव मन आधत्स्व मयि बुद्धिं निवेशय।निवसिष्यसि मय्येव अत ऊर्ध्वं न संशयः।।12.8।।","transliteration":"mayy eva mana ādhatsva mayi buddhiṁ niveśhaya\nnivasiṣhyasi mayy eva ata ūrdhvaṁ na sanśhayaḥ","meaning":"मयि in Me; एव only; मनः the mind; आधत्स्व fix; मयि in Me; बुद्धिम् (thy) intellect; निवेशय place; निवसिष्यसि thou shalt live; मयि in Me; एव alone; अतः ऊर्ध्वम् hereafter; न not; संशयः doubt","commentary":null,"seoTitle":null,"seoDescription":null,"sortOrder":8,"isPublished":true,"chapterPublicId":"bg.12","chapterNumber":12,"workCode":"bg","translations":[{"id":"cae4cf2c-25b5-400c-9834-17dbc6cbe6c1","languageCode":"en","languageName":"English","sourceKey":"sivananda","sourceDisplayName":"Swami Sivananda","text":"Fix your mind on Me, and your intellect in Me. Then you will certainly live in Me alone hereafter.","isPublished":true},{"id":"b65adf82-c13b-4174-8de8-47bf5e98dac2","languageCode":"hi","languageName":"Hindi","sourceKey":"ramsukhdas","sourceDisplayName":"Swami Ramsukhdas","text":"।।12.8।।तू मेरेमें मनको लगा और मेरेमें ही बुद्धिको लगा; इसके बाद तू मेरेमें ही निवास करेगा -- इसमें संशय नहीं है।","isPublished":true},{"id":"f0dd8ee2-8da6-4135-bc93-dd5425b83372","languageCode":"te","languageName":"Telugu","sourceKey":"holy-bg-telugu","sourceDisplayName":"Holy Bhagavad Gita (Telugu)","text":"నీ మనస్సుని నామీదే లగ్నం చేయుము మరియు నీ బుద్ధిని నాకు అర్పించుము. ఆ తరువాత, నీవు సర్వదా నాలోనే నివసిస్తావు. దీనిపై ఎలాంటి సంశయము వద్దు.","isPublished":true},{"id":"770f0930-7713-439e-ba6b-da012dbd52bb","languageCode":"te","languageName":"Telugu","sourceKey":"holy-bg-telugu-w2w","sourceDisplayName":"Holy Bhagavad Gita (Telugu word meanings)","text":"మయి — నా మీద; ఏవ — మాత్రమే; మనః — మనస్సు; ఆధత్స్వ — లగ్నము చేసి; మయి — నా మీదే; బుద్ధిం — బుద్ధి; నివేశయ — అర్పించి/శరణాగతి చేసి; నివసిష్యసి — నీవు ఎప్పుడూ నివసిస్తావు; మయి — నా లో; ఏవ — మాత్రమే; అతః ఊర్ధ్వం — ఇక ఆ తరువాత; న సంశయః — సంశయము లేదు.","isPublished":true},{"id":"8c90e14b-4fde-4970-9c96-dfdccec533a8","languageCode":"or","languageName":"Odia","sourceKey":"holy-bg-odia","sourceDisplayName":"Holy Bhagavad Gita (Odia)","text":"ତୁମର ମନକୁ କେବଳ ମୋଠାରେ କେନ୍ଦ୍ରୀଭୂତ କର ଏବଂ ବୁଦ୍ଧି ମୋତେ ସମର୍ପଣ କର । ତଦ୍ୱାରା ତୁମେ ମୋ ସହିତ ସର୍ବଦା ବାସ କରିବ, ଏଥିରେ କୌଣସି ସନ୍ଦେହ ନାହିଁ ।","isPublished":true}],"createdAt":"2026-07-14T08:54:07.001Z","updatedAt":"2026-07-16T06:18:56.559Z"},{"id":"14fff028-e2da-460e-a9ba-320150eebc63","publicId":"bg.12.9","number":9,"sanskritText":"अथ चित्तं समाधातुं न शक्नोषि मयि स्थिरम्।अभ्यासयोगेन ततो मामिच्छाप्तुं धनञ्जय।।12.9।।","transliteration":"atha chittaṁ samādhātuṁ na śhaknoṣhi mayi sthiram\nabhyāsa-yogena tato mām ichchhāptuṁ dhanañjaya","meaning":"अथ if; चित्तम् the mind; समाधातुम् to fix; न not; शक्नोषि (thou) art able; मयि in Me; स्थिरम् steadily; अभ्यासयोगेन by the Yoga of constant practice; ततः them; माम् Me; इच्छ wish; आप्तुम् to reach; धनञ्जय O Arjuna","commentary":null,"seoTitle":null,"seoDescription":null,"sortOrder":9,"isPublished":true,"chapterPublicId":"bg.12","chapterNumber":12,"workCode":"bg","translations":[{"id":"05e75983-b853-41e0-a9a7-d64b1d9d73eb","languageCode":"en","languageName":"English","sourceKey":"sivananda","sourceDisplayName":"Swami Sivananda","text":"If you are unable to fix your mind steadily on Me, then seek to reach Me through the yoga of constant practice, O Arjuna.","isPublished":true},{"id":"489d457c-5f57-4d7a-8f7d-d0f1cdf5a771","languageCode":"hi","languageName":"Hindi","sourceKey":"ramsukhdas","sourceDisplayName":"Swami Ramsukhdas","text":"।।12.9।।अगर तू मनको मेरेमें अचलभावसे स्थिर (अर्पण) करनेमें समर्थ नहीं है, तो हे धनञ्जय ! अभ्यासयोगके द्वारा तू मेरी प्राप्तिकी इच्छा कर।","isPublished":true},{"id":"7c873fee-e78b-4118-8198-27c8ce4e7b20","languageCode":"te","languageName":"Telugu","sourceKey":"holy-bg-telugu-w2w","sourceDisplayName":"Holy Bhagavad Gita (Telugu word meanings)","text":"అథ — ఒకవేళ; చిత్తం — మనస్సు; సమాధాతుం — లగ్నము చేయుటకు; న శక్నోషి — నీకు సాధ్యం కాకపోతే (చేయలేకపోతే); మయి — నా యందు; స్థిరమ్ — నిశ్చలముగా; అభ్యాస-యోగేన — నిరంతర ప్రయత్నం (అభ్యాసం) ద్వారా భగవతునితో ఏకమై; తతః — అప్పుడు; మాం — నన్ను; ఇచ్చా — కోరిక; ఆప్తుం — పొందుటకు; ధనంజయ — అర్జునా, సిరి సంపదలను జయించేవాడా.","isPublished":true},{"id":"ea1075bc-ba34-4fd0-9f4f-9758f14f6bf9","languageCode":"te","languageName":"Telugu","sourceKey":"holy-bg-telugu","sourceDisplayName":"Holy Bhagavad Gita (Telugu)","text":"ఒకవేళ నీవు మనస్సును నా యందే నిశ్చలముగా లగ్నం చేయలేకపోతే, ఓ అర్జునా, మనస్సును నిరంతరం ప్రాపంచిక విషయాల నుండి నిగ్రహిస్తూ, నన్ను భక్తితో స్మరించటడానికి అభ్యాసము చేయుము.","isPublished":true},{"id":"1613763f-dfe3-4258-a989-843bd6be8c28","languageCode":"or","languageName":"Odia","sourceKey":"holy-bg-odia","sourceDisplayName":"Holy Bhagavad Gita (Odia)","text":"ହେ ଅର୍ଜୁନ! ଯଦି ତୁମେ ସ୍ଥିର ଭାବରେ ମୋଠାରେ ମନ ଲଗାଇ ପାରୁନାହଁ, ତାହାହେଲେ ସାଂସାରିକ ଜଞ୍ଜାଳରୁ ମନକୁ ବାରମ୍ବାର ହଟାଇ, ଭକ୍ତିର ସହିତ ମୋର ସ୍ମରଣ କରିବାର ଅଭ୍ୟାସ କର ।","isPublished":true}],"createdAt":"2026-07-14T08:54:07.687Z","updatedAt":"2026-07-16T06:18:56.795Z"},{"id":"6dc17a10-40c1-4146-bf78-e24d1d5d5a5b","publicId":"bg.12.10","number":10,"sanskritText":"अभ्यासेऽप्यसमर्थोऽसि मत्कर्मपरमो भव।मदर्थमपि कर्माणि कुर्वन् सिद्धिमवाप्स्यसि।।12.10।।","transliteration":"abhyāse ’py asamartho ’si mat-karma-paramo bhava\nmad-artham api karmāṇi kurvan siddhim avāpsyasi","meaning":"अभ्यासे in practice; अपि also; असमर्थः not capable; असि (thou) art; मत्कर्मपरमः intent on doing actions for My sake; भव be; मदर्थम् for My sake; अपि also; कर्माणि actions; कुर्वन् by doing; सिद्धिम् perfection; अवाप्स्यसि thou shalt attain","commentary":null,"seoTitle":null,"seoDescription":null,"sortOrder":10,"isPublished":true,"chapterPublicId":"bg.12","chapterNumber":12,"workCode":"bg","translations":[{"id":"1bbbb619-9db4-4a2f-9340-db950685f8d6","languageCode":"en","languageName":"English","sourceKey":"sivananda","sourceDisplayName":"Swami Sivananda","text":"If you are unable to practice even this Abhyasa Yoga, be intent on doing actions for My sake; even by doing actions for My sake, you will attain perfection.","isPublished":true},{"id":"32d32508-ea27-484d-bcb1-31af1afd95f3","languageCode":"hi","languageName":"Hindi","sourceKey":"ramsukhdas","sourceDisplayName":"Swami Ramsukhdas","text":"।।12.10।।अगर तू अभ्यास-(योग-) में भी असमर्थ है, तो मेरे लिये कर्म करनेके परायण हो जा। मेरे लिये कर्मोंको करता हुआ भी तू सिद्धिको प्राप्त हो जायगा।","isPublished":true},{"id":"bd5a7bbf-6edb-452c-b8da-c04380431e6a","languageCode":"te","languageName":"Telugu","sourceKey":"holy-bg-telugu","sourceDisplayName":"Holy Bhagavad Gita (Telugu)","text":"నన్ను భక్తితో స్మరించే అభ్యాసం చేయలేకపోతే నాకోసమే పనులు చెయ్యటానికి ప్రయత్నం చేయుము. ఈ విధంగా భక్తి యుక్త సేవ చేయటం వలన నీవు పరిపూర్ణ స్థాయిని చేరుకోగలవు.","isPublished":true},{"id":"db4520dd-e2b3-42c9-b9c0-ef5aea8db7ed","languageCode":"te","languageName":"Telugu","sourceKey":"holy-bg-telugu-w2w","sourceDisplayName":"Holy Bhagavad Gita (Telugu word meanings)","text":"అభ్యాసే — అభ్యాసములో; అపి — ఒకవేళ; అసమర్థః — అసమర్థత (అశక్యత); అసి — నీవు; మత్-కర్మ-పరమః — భక్తితో నాకోసమే పని చేయుము; భవ — ఉండుము; మత్-అర్థం — నా కోసమే; అపి — కూడా; కర్మాణి — కర్మలు; కుర్వన్ — ఆచరింపుము; సిద్ధిం — సిద్ధి (పరిపూర్ణత); అవాప్స్యసి — నీవు పొందగలవు.","isPublished":true},{"id":"1e77a2f9-a1f4-4b60-bb65-7c2e383560b9","languageCode":"or","languageName":"Odia","sourceKey":"holy-bg-odia","sourceDisplayName":"Holy Bhagavad Gita (Odia)","text":"ତୁମେ ଯଦି ଭକ୍ତି ସହକାରେ ମୋ ସ୍ମରଣର ଅଭ୍ୟାସ କରିପାରୁନାହଁ, ତାହେଲେ କେବଳ ମୋ ନିମିତ୍ତ କର୍ମ କରିବାକୁ ଚେଷ୍ଟା କର । ଏହିପରି ମୋର ଭକ୍ତିଯୁକ୍ତ ସେବା କରି, ତୁମେ ପରିପୂର୍ଣ୍ଣତାକୁ ପ୍ରାପ୍ତ କରିପାରିବ ।","isPublished":true}],"createdAt":"2026-07-14T08:54:08.776Z","updatedAt":"2026-07-16T06:18:57.044Z"},{"id":"148acaea-e980-417b-b7e1-5616d685865a","publicId":"bg.12.11","number":11,"sanskritText":"अथैतदप्यशक्तोऽसि कर्तुं मद्योगमाश्रितः।सर्वकर्मफलत्यागं ततः कुरु यतात्मवान्।।12.11।।","transliteration":"athaitad apy aśhakto ’si kartuṁ mad-yogam āśhritaḥ\nsarva-karma-phala-tyāgaṁ tataḥ kuru yatātmavān","meaning":"अथ if; एतत् this; अपि also; अशक्तः unable; असि (thou) art; कर्तुम् to do; मद्योगम् My Yoga; आश्रितः resorting to; सर्वकर्मफलत्यागम् the renunciation of the fruits of all actions; ततः then; कुरु do; यतात्मवान् selfcontrolled","commentary":null,"seoTitle":null,"seoDescription":null,"sortOrder":11,"isPublished":true,"chapterPublicId":"bg.12","chapterNumber":12,"workCode":"bg","translations":[{"id":"5e885289-1658-454d-87b1-5c0b7d0fb706","languageCode":"en","languageName":"English","sourceKey":"sivananda","sourceDisplayName":"Swami Sivananda","text":"If you are unable to do even this, then, resort to union with Me and renounce the fruits of all actions with self-control.","isPublished":true},{"id":"a19ee3cc-abef-4c28-9f7f-1f3687cf4840","languageCode":"hi","languageName":"Hindi","sourceKey":"ramsukhdas","sourceDisplayName":"Swami Ramsukhdas","text":"।।12.11।।अगर मेरे योग-(समता-) के आश्रित हुआ तू इस(पूर्वश्लोकमें कहे गये साधन-) को भी करनेमें असमर्थ है, तो मन-इन्द्रियोंको वशमें करके सम्पूर्ण कर्मोंके फलका त्याग कर।","isPublished":true},{"id":"e902aca8-9a7c-4993-9e50-146e15ee1618","languageCode":"te","languageName":"Telugu","sourceKey":"holy-bg-telugu","sourceDisplayName":"Holy Bhagavad Gita (Telugu)","text":"ఒకవేళ నీవు నా కొరకై భక్తితో పని చేయుట కూడా చేయలేకపోతే, నీ కర్మ ఫలములను త్యజించుటకు ప్రయత్నించుము మరియు ఆత్మయందే స్థితుడవై ఉండుము.","isPublished":true},{"id":"3308460b-a032-42e2-a1d3-42b9c61e872e","languageCode":"te","languageName":"Telugu","sourceKey":"holy-bg-telugu-w2w","sourceDisplayName":"Holy Bhagavad Gita (Telugu word meanings)","text":"అథ — ఒకవేళ; ఏతత్ — ఇది; అపి — కూడా; ఆశక్తః — అశక్తుడవైతే (చేయలేకపోతే); అసి — నీవు; కర్తుమ్ — పనిచేయుట; మద్-యోగం — నా పట్ల భక్తితో; ఆశ్రితః — ఆశ్రయించి; సర్వ-కర్మ — సమస్త కర్మల (అన్ని పనుల); ఫల-త్యాగం — ఫల త్యాగము; తతః — అప్పుడు; కురు — చేయుము; యత-ఆత్మ-వాన్ — ఆత్మయందే స్థితుడవై.","isPublished":true},{"id":"ab5c0c20-2ab9-4dbc-b11f-08ac8fb8c834","languageCode":"or","languageName":"Odia","sourceKey":"holy-bg-odia","sourceDisplayName":"Holy Bhagavad Gita (Odia)","text":"ଯଦି ତୁମେ ଭକ୍ତିର ସହିତ କର୍ମ କରିବାକୁ ମଧ୍ୟ ଅକ୍ଷମ, ତେବେ କର୍ମଫଳ ତ୍ୟାଗ କରିବାକୁ ଚେଷ୍ଟା କର ଏବଂ ଆତ୍ମାରେ ସ୍ଥିତ ହୁଅ ।","isPublished":true}],"createdAt":"2026-07-14T08:54:09.492Z","updatedAt":"2026-07-16T06:18:57.464Z"},{"id":"5b1598e8-19f5-4afd-a67e-792aa977e8af","publicId":"bg.12.12","number":12,"sanskritText":"श्रेयो हि ज्ञानमभ्यासाज्ज्ञानाद्ध्यानं विशिष्यते।ध्यानात्कर्मफलत्यागस्त्यागाच्छान्तिरनन्तरम्।।12.12।।","transliteration":"śhreyo hi jñānam abhyāsāj jñānād dhyānaṁ viśhiṣhyate\ndhyānāt karma-phala-tyāgas tyāgāch chhāntir anantaram","meaning":"श्रेयः better; हि indeed; ज्ञानम् knowledge; अभ्यासात् than practice; ज्ञानात् than knowledge; ध्यानम् meditation; विशिष्यते excels; ध्यानात् than meditation; कर्मफलत्यागः the renunciation of the fruits of actions; त्यागात् from renunciation; शान्तिः peace; अनन्तरम् immediately","commentary":null,"seoTitle":null,"seoDescription":null,"sortOrder":12,"isPublished":true,"chapterPublicId":"bg.12","chapterNumber":12,"workCode":"bg","translations":[{"id":"259eff65-a0a6-4abe-b341-8cf6ae68d26e","languageCode":"en","languageName":"English","sourceKey":"sivananda","sourceDisplayName":"Swami Sivananda","text":"Better indeed is knowledge than practice; better than knowledge is meditation; better than meditation is the renunciation of the fruits of actions: peace immediately follows renunciation.","isPublished":true},{"id":"51d8ca3d-fdcc-4a05-949e-56cdb5de36df","languageCode":"hi","languageName":"Hindi","sourceKey":"ramsukhdas","sourceDisplayName":"Swami Ramsukhdas","text":"।।12.12।।अभ्याससे शास्त्रज्ञान श्रेष्ठ है, शास्त्रज्ञानसे ध्यान श्रेष्ठ है और ध्यानसे भी सब कर्मोंके फलका त्याग श्रेष्ठ है। कर्मफलत्यागसे तत्काल ही परमशान्ति प्राप्त हो जाती है।","isPublished":true},{"id":"c7591ebc-2ea6-49c0-bf5e-76ac3a790015","languageCode":"te","languageName":"Telugu","sourceKey":"holy-bg-telugu","sourceDisplayName":"Holy Bhagavad Gita (Telugu)","text":"యాంత్రికమైన అభ్యాసము కంటే జ్ఞానము మంచిది; జ్ఞానము కంటే ధ్యానము శ్రేష్ఠమయినది. ధ్యానము కంటే కర్మ ఫల త్యాగము మెరుగైనది, ఎందుకంటే ఇటువంటి త్యాగము చేసిన వెంటనే శాంతి లభించును.","isPublished":true},{"id":"51af6c23-a047-4d80-8e1e-13d94cad86fa","languageCode":"te","languageName":"Telugu","sourceKey":"holy-bg-telugu-w2w","sourceDisplayName":"Holy Bhagavad Gita (Telugu word meanings)","text":"శ్రేయః — శ్రేష్ఠతరమైనది; హి — నిజముగా; జ్ఞానం — జ్ఞానము; అభ్యాసాత్ — (యాంత్రికమైన) అభ్యాసము కంటే; జ్ఞానాత్ — జ్ఞానము కంటే; ధ్యానం — ధ్యానము; విశిష్యతే — శ్రేష్ఠమయినది; ధ్యానాత్ — ధ్యానము కంటే; కర్మ-ఫల-త్యాగః — కర్మ ఫలముల త్యాగము; త్యాగాత్ — త్యాగము; శాంతిః — శాంతి; అనంతరమ్ — తక్షణమే.","isPublished":true},{"id":"86884cf7-4532-4383-b8cf-c389bc62c5a8","languageCode":"or","languageName":"Odia","sourceKey":"holy-bg-odia","sourceDisplayName":"Holy Bhagavad Gita (Odia)","text":"ଯାନ୍ତ୍ରିକ ଅଭ୍ୟାସ ଅପେକ୍ଷା ଶ୍ରେଷ୍ଠ ଜ୍ଞାନ ଅଟେ; ଜ୍ଞାନ ଠାରୁ ଧ୍ୟାନ ଶ୍ରେଷ୍ଠ ଏବଂ ଧ୍ୟାନ ଠାରୁ ଶ୍ରେଷ୍ଠ କର୍ମଫଳ ତ୍ୟାଗ ଅଟେ, କାରଣ ତ୍ୟାଗ ଦ୍ୱାରା ଶାନ୍ତି ସ୍ୱତଃ ପ୍ରାପ୍ତ ହୁଏ ।","isPublished":true}],"createdAt":"2026-07-14T08:54:10.330Z","updatedAt":"2026-07-16T06:18:57.727Z"},{"id":"c3d34901-aec7-414f-b1c7-36033000937c","publicId":"bg.12.13","number":13,"sanskritText":"अद्वेष्टा सर्वभूतानां मैत्रः करुण एव च।निर्ममो निरहङ्कारः समदुःखसुखः क्षमी।।12.13।।","transliteration":"adveṣhṭā sarva-bhūtānāṁ maitraḥ karuṇa eva cha\nnirmamo nirahankāraḥ sama-duḥkha-sukhaḥ kṣhamī","meaning":"अद्वेष्टा nonhater; सर्वभूतानाम् of (to) all creatures; मैत्रः friendly; करुणः compassionate; एव even; च and; निर्ममः without mineness; निरहङ्कारः without egoism; समदुःखसुखः balanced in pleasure and pain; क्षमी forgiving","commentary":null,"seoTitle":null,"seoDescription":null,"sortOrder":13,"isPublished":true,"chapterPublicId":"bg.12","chapterNumber":12,"workCode":"bg","translations":[{"id":"2a8948dc-faa5-4052-805b-8968e5ad74f4","languageCode":"en","languageName":"English","sourceKey":"sivananda","sourceDisplayName":"Swami Sivananda","text":"He who hates no creature, is friendly and compassionate to all, is free from attachment and egoism, is balanced in pleasure and pain, and is forgiving.","isPublished":true},{"id":"e61fdb60-2da7-434b-a0a9-56d6d4b4b4b1","languageCode":"hi","languageName":"Hindi","sourceKey":"ramsukhdas","sourceDisplayName":"Swami Ramsukhdas","text":"।।12.13।।सब प्राणियोंमें द्वेषभावसे रहित, सबका मित्र (प्रेमी) और दयालु, ममतारहित, अहंकाररहित, सुखदुःखकी प्राप्तिमें सम, क्षमाशील, निरन्तर सन्तुष्ट, योगी, शरीरको वशमें किये हुए, दृढ़ निश्चयवाला? मेरेमें अर्पित मनबुद्धिवाला जो मेरा भक्त है, वह मेरेको प्रिय है।","isPublished":true},{"id":"971086f0-c40c-4f96-8b52-b0edbff68f47","languageCode":"te","languageName":"Telugu","sourceKey":"holy-bg-telugu","sourceDisplayName":"Holy Bhagavad Gita (Telugu)","text":"BG 12.13-14:\n                            ఏ భక్తులైతే, సమస్త ప్రాణుల పట్ల ద్వేషభావన లేకుండా, మైత్రితో/స్నేహపూరితముగా, మరియు కారుణ్యముతో ఉంటారో, వారు నాకు చాలా ప్రియమైన వారు. వారు ఆస్తి/ధనముపై మమకార/ఆసక్తి రహితముగా ఉంటారు మరియు అహంకారము లేకుండా, సుఖ-దుఃఖముల రెండింటి యందు ఒకే విధంగా ఉంటారు మరియు సర్వదా క్షమించే మనస్సుతో ఉంటారు. వారు ఎల్లప్పుడూ తృప్తితో, భక్తితో నాతోనే ఏకమై, ఆత్మ-నిగ్రహంతో, దృఢ-సంకల్పంతో, మరియు మనోబుద్ధులను నాకే అర్పించి ఉంటారు.","isPublished":true},{"id":"52904956-9beb-4eb7-8d1e-903b1db24910","languageCode":"te","languageName":"Telugu","sourceKey":"holy-bg-telugu-w2w","sourceDisplayName":"Holy Bhagavad Gita (Telugu word meanings)","text":"అద్వేష్టా — ద్వేష భావము లేకుండా; సర్వ-భూతానాం — సమస్త ప్రాణుల పట్ల; మైత్రః — మైత్రీ భావము; కరుణ — కారుణ్యము; ఏవ — నిజముగా; చ — మరియు; నిర్మమః — ప్రాపంచిక వస్తువిషయములపై మమకార/ఆసక్తి లేకుండా; నిరహంకారః — అహంకార రహితముగా; సమ — సమత్వ బుద్ధితో; దుఃఖ — దుఃఖములు/కష్టాలు; సుఖః — సుఖములు; క్షమీ — క్షమాగుణము కలిగి; సంతుష్టః — తృప్తితో ఉంటూ; సతతం — ఎల్లప్పుడూ; యోగీ — భక్తితో ఏకమై; యత-ఆత్మా — ఆత్మ-నిగ్రహము కలిగి; దృఢ-నిశ్చయః — దృఢసంకల్పము/నిశ్చయముతో; మయి — నాకు; అర్పిత — అర్పితము చేసి; మనః — మనస్సు; బుద్ధిః — బుద్ధి; యః — ఎవరైతే; మత్-భక్తః — నా భక్తులు; సః — వారు; మే — నాకు; ప్రియః — చాలా ప్రియమైనవారు.","isPublished":true}],"createdAt":"2026-07-14T08:54:11.122Z","updatedAt":"2026-07-16T06:18:57.968Z"},{"id":"ba69d0e8-ff54-4233-bd72-6219ecf90526","publicId":"bg.12.14","number":14,"sanskritText":"सन्तुष्टः सततं योगी यतात्मा दृढनिश्चयः।मय्यर्पितमनोबुद्धिर्यो मद्भक्तः स मे प्रियः।।12.14।।","transliteration":"santuṣhṭaḥ satataṁ yogī yatātmā dṛiḍha-niśhchayaḥ\nmayy arpita-mano-buddhir yo mad-bhaktaḥ sa me priyaḥ","meaning":"सन्तुष्टः contented; सततम् ever; योगी Yogi; यतात्मा selfcontrolled; दृढनिश्चयः possessed of firm,conviction; मयि अर्पितमनोबुद्धिः with mind and intellect dedicated to Me; यः who; मद्भक्तः My devotee; सः he; मे to Me; प्रियः dear","commentary":null,"seoTitle":null,"seoDescription":null,"sortOrder":14,"isPublished":true,"chapterPublicId":"bg.12","chapterNumber":12,"workCode":"bg","translations":[{"id":"915cff3a-5fe4-4cd5-a62b-403bea7ec838","languageCode":"en","languageName":"English","sourceKey":"sivananda","sourceDisplayName":"Swami Sivananda","text":"Ever content, steady in meditation, self-controlled, possessing firm conviction, with the mind and intellect dedicated to Me, he, My devotee, is dear to Me.","isPublished":true},{"id":"c158ed9b-c404-4891-99bb-d32ebfcf03c5","languageCode":"hi","languageName":"Hindi","sourceKey":"ramsukhdas","sourceDisplayName":"Swami Ramsukhdas","text":"।।12.14।।सब प्राणियोंमें द्वेषभावसे रहित, सबका मित्र (प्रेमी) और दयालु, ममतारहित, अहंकाररहित, सुखदुःखकी प्राप्तिमें सम, क्षमाशील, निरन्तर सन्तुष्ट,योगी, शरीरको वशमें किये हुए, दृढ़ निश्चयवाला, मेरेमें अर्पित मन-बुद्धिवाला जो मेरा भक्त है, वह मेरेको प्रिय है।","isPublished":true},{"id":"9dc54ce1-90e7-4d9b-982b-3ecc728d375c","languageCode":"te","languageName":"Telugu","sourceKey":"holy-bg-telugu","sourceDisplayName":"Holy Bhagavad Gita (Telugu)","text":"BG 12.13-14:\n                            ఏ భక్తులైతే, సమస్త ప్రాణుల పట్ల ద్వేషభావన లేకుండా, మైత్రితో/స్నేహపూరితముగా, మరియు కారుణ్యముతో ఉంటారో, వారు నాకు చాలా ప్రియమైన వారు. వారు ఆస్తి/ధనముపై మమకార/ఆసక్తి రహితముగా ఉంటారు మరియు అహంకారము లేకుండా, సుఖ-దుఃఖముల రెండింటి యందు ఒకే విధంగా ఉంటారు మరియు సర్వదా క్షమించే మనస్సుతో ఉంటారు. వారు ఎల్లప్పుడూ తృప్తితో, భక్తితో నాతోనే ఏకమై, ఆత్మ-నిగ్రహంతో, దృఢ-సంకల్పంతో, మరియు మనోబుద్ధులను నాకే అర్పించి ఉంటారు.","isPublished":true},{"id":"96f5da86-a21e-4f3b-af0c-8bba37a2d300","languageCode":"te","languageName":"Telugu","sourceKey":"holy-bg-telugu-w2w","sourceDisplayName":"Holy Bhagavad Gita (Telugu word meanings)","text":"అద్వేష్టా — ద్వేష భావము లేకుండా; సర్వ-భూతానాం — సమస్త ప్రాణుల పట్ల; మైత్రః — మైత్రీ భావము; కరుణ — కారుణ్యము; ఏవ — నిజముగా; చ — మరియు; నిర్మమః — ప్రాపంచిక వస్తువిషయములపై మమకార/ఆసక్తి లేకుండా; నిరహంకారః — అహంకార రహితముగా; సమ — సమత్వ బుద్ధితో; దుఃఖ — దుఃఖములు/కష్టాలు; సుఖః — సుఖములు; క్షమీ — క్షమాగుణము కలిగి; సంతుష్టః — తృప్తితో ఉంటూ; సతతం — ఎల్లప్పుడూ; యోగీ — భక్తితో ఏకమై; యత-ఆత్మా — ఆత్మ-నిగ్రహము కలిగి; దృఢ-నిశ్చయః — దృఢసంకల్పము/నిశ్చయముతో; మయి — నాకు; అర్పిత — అర్పితము చేసి; మనః — మనస్సు; బుద్ధిః — బుద్ధి; యః — ఎవరైతే; మత్-భక్తః — నా భక్తులు; సః — వారు; మే — నాకు; ప్రియః — చాలా ప్రియమైనవారు.","isPublished":true}],"createdAt":"2026-07-14T08:54:11.969Z","updatedAt":"2026-07-16T06:18:58.208Z"},{"id":"5d240053-7320-429a-b4b4-aa5ce94acf91","publicId":"bg.12.15","number":15,"sanskritText":"यस्मान्नोद्विजते लोको लोकान्नोद्विजते च यः।हर्षामर्षभयोद्वेगैर्मुक्तो यः स च मे प्रियः।।12.15।।","transliteration":"yasmān nodvijate loko lokān nodvijate cha yaḥ\nharṣhāmarṣha-bhayodvegair mukto yaḥ sa cha me priyaḥ","meaning":"यस्मात् for whom; न not; उद्विजते is agitated; लोकः the world; लोकात् from the world; न not; उद्विजते is agitated; च and; यः who; हर्षामर्षभयोद्वेगैः by (from) joy; wrath; fear and anxiety; मुक्तः freed; यः who; सः he; च and; मे to Me; प्रियः dear","commentary":null,"seoTitle":null,"seoDescription":null,"sortOrder":15,"isPublished":true,"chapterPublicId":"bg.12","chapterNumber":12,"workCode":"bg","translations":[{"id":"5d74de1d-c1e1-4e4c-ab9e-67e5cfa395d5","languageCode":"en","languageName":"English","sourceKey":"sivananda","sourceDisplayName":"Swami Sivananda","text":"He whom the world does not agitate, and who cannot be agitated by the world, and who is freed from joy, anger, fear, and anxiety—he is dear to Me.","isPublished":true},{"id":"9018a576-55b4-452e-adb8-9ea71eb9e126","languageCode":"hi","languageName":"Hindi","sourceKey":"ramsukhdas","sourceDisplayName":"Swami Ramsukhdas","text":"।।12.15।।जिससे किसी प्राणीको उद्वेग नहीं होता और जिसको खुद भी किसी प्राणीसे उद्वेग नहीं होता तथा जो हर्ष, अमर्ष (ईर्ष्या), भय और उद्वेगसे रहित है, वह मुझे प्रिय है।","isPublished":true},{"id":"51fcf5f5-7797-43df-8ef4-d0f9172840de","languageCode":"te","languageName":"Telugu","sourceKey":"holy-bg-telugu","sourceDisplayName":"Holy Bhagavad Gita (Telugu)","text":"లోకమున ఎవ్వరినీ బాధ(క్షోభ) పెట్టని వాడు మరియు ఎవరి చేత ఉద్వేగమునకు గురి కాని వాడు, సుఖాల్లో-బాధల్లో ఒక్కలాగే ఉంటూ, మరియు భయము, ఆందోళన రహితముగా ఉన్నటువంటి నా భక్తులు నాకు చాలా ప్రియమైన వారు.","isPublished":true},{"id":"8b24b043-3e41-4621-8f66-176ba3a41048","languageCode":"te","languageName":"Telugu","sourceKey":"holy-bg-telugu-w2w","sourceDisplayName":"Holy Bhagavad Gita (Telugu word meanings)","text":"యస్మాత్ — ఎవరిచే కూడా; న ఉద్విజతే — ఉద్వేగమునకు గురి కాకుండా; లోకః — జనులు; లోకాత్ — జనుల చేత; న ఉద్విజతే — ఉద్రేకపడకుండా; చ — మరియు; యః — ఎవరైతే; హర్ష — సంతోషము; అమర్ష — బాధ; భయ — భయము; ఉద్వేగః — ఆందోళన; ముక్తః — లేకుండా; యః — ఎవరైతే; సః — వారు; చ — మరియు; మే — నాకు; ప్రియః — చాలా ప్రియమైనవారు.","isPublished":true},{"id":"5daee9d6-0098-45ef-bfde-438f1c8bf055","languageCode":"or","languageName":"Odia","sourceKey":"holy-bg-odia","sourceDisplayName":"Holy Bhagavad Gita (Odia)","text":"ଯେଉଁମାନେ ଅନ୍ୟମାନଙ୍କ ଅସନ୍ତୋଷର କାରଣ ନୁହଁନ୍ତି, ଯେଉଁମାନେ କାହା ଦ୍ୱାରା ଉତ୍ତେଜିତ ହୁଅନ୍ତି ନାହିଁ, ଯେଉଁମାନେ ହର୍ଷ-ବିଷାଦ ଏବଂ ଭୟ ଓ ଉତ୍କଣ୍ଠାରୁ ମୁକ୍ତ ରହନ୍ତି, ସେହିପରି ଭକ୍ତମାନେ ମୋର ଅତ୍ୟନ୍ତ ପ୍ରିୟ ଅଟନ୍ତି ।","isPublished":true}],"createdAt":"2026-07-14T08:54:12.895Z","updatedAt":"2026-07-16T06:18:58.512Z"},{"id":"3cd19eda-9f53-4632-b1ce-8d511c444d14","publicId":"bg.12.16","number":16,"sanskritText":"अनपेक्षः शुचिर्दक्ष उदासीनो गतव्यथः।सर्वारम्भपरित्यागी यो मद्भक्तः स मे प्रियः।।12.16।।","transliteration":"anapekṣhaḥ śhuchir dakṣha udāsīno gata-vyathaḥ\nsarvārambha-parityāgī yo mad-bhaktaḥ sa me priyaḥ","meaning":"अनपेक्षः (he who is) free from wants; शुचिः pure; दक्षः expert; उदासीनः unconcerned; गतव्यथः free from pain; सर्वारम्भपरित्यागी renouncing all undertakings or commencements; यः who; मद्भक्तः My,devotee; सः he; मे to Me; प्रियः dear","commentary":null,"seoTitle":null,"seoDescription":null,"sortOrder":16,"isPublished":true,"chapterPublicId":"bg.12","chapterNumber":12,"workCode":"bg","translations":[{"id":"394939ad-ea4e-424e-a9a1-d9017c9064f8","languageCode":"en","languageName":"English","sourceKey":"sivananda","sourceDisplayName":"Swami Sivananda","text":"He who is free from wants, pure, expert, unconcerned, and free from pain, renouncing all undertakings and commencements, he who is devoted to Me is dear to Me.","isPublished":true},{"id":"9ba5adcf-a7de-4e4d-a9a6-6d53388b1fd2","languageCode":"hi","languageName":"Hindi","sourceKey":"ramsukhdas","sourceDisplayName":"Swami Ramsukhdas","text":"।।12.16।।जो आकाङ्क्षासे रहित, बाहर-भीतरसे पवित्र, दक्ष, उदासीन, व्यथासे रहित और सभी आरम्भोंका अर्थात् नये-नये कर्मोंके आरम्भका सर्वथा त्यागी है, वह मेरा भक्त मुझे प्रिय है।","isPublished":true},{"id":"19171ad3-54b4-4c14-8867-9029ec6f4329","languageCode":"te","languageName":"Telugu","sourceKey":"holy-bg-telugu","sourceDisplayName":"Holy Bhagavad Gita (Telugu)","text":"ప్రాపంచిక లాభముల పట్ల అనాసక్తతతో ఉండి, బాహ్యాంతరములలో పవిత్రంగా ఉండి, దక్షతతో, ఉదాసీనంగా, కలతలు లేకుండా, మరియు అన్ని వ్యవహారములలో స్వార్థచింతన లేకుండా ఉన్నటువంటి నా భక్తులు నాకు చాలా ప్రియమైన వారు.","isPublished":true},{"id":"caaaf51c-357e-452b-bfce-6363fd0b23f2","languageCode":"te","languageName":"Telugu","sourceKey":"holy-bg-telugu-w2w","sourceDisplayName":"Holy Bhagavad Gita (Telugu word meanings)","text":"అనపేక్షః — ప్రాపంచిక లాభాల పట్ల అనాసక్తత ఉండి; శుచిః — స్వచ్ఛముగా; దక్షః — నేర్పుగల; ఉదాసీనః — ఉదాసీనంగా (చింతలేకుండా); గత-వ్యథః — కలతలు లేకుండా; సర్వ-ఆరంభ — అన్ని ప్రయత్నములను; పరిత్యాగీ — పరిత్యజించిన వాడై; సః — ఎవరైతే; మత్-భక్తః — నా భక్తుడు; సః — అతడు; మే — నాకు; ప్రియః — చాలా ప్రియమైన వాడు.","isPublished":true},{"id":"3c4726a5-a6aa-4c77-a23b-f566634d82f6","languageCode":"or","languageName":"Odia","sourceKey":"holy-bg-odia","sourceDisplayName":"Holy Bhagavad Gita (Odia)","text":"ଯେଉଁମାନେ ସାଂସାରିକ ଲାଭ ପ୍ରତି ନିର୍ଲିପ୍ତ, ବାହ୍ୟ ଏବଂ ଅଭ୍ୟନ୍ତରରେ ପବିତ୍ର, ଦକ୍ଷ, ନିଶ୍ଚିନ୍ତ, ଅବିଚଳିତ ଏବଂ ସମସ୍ତ ପ୍ରଯତ୍ନରେ ସ୍ୱାର୍ଥରହିତ ଥାଆନ୍ତି, ସେହି ଭକ୍ତମାନେ ମୋର ଅତ୍ୟନ୍ତ ପ୍ରିୟ ଅଟନ୍ତି ।","isPublished":true}],"createdAt":"2026-07-14T08:54:13.761Z","updatedAt":"2026-07-16T06:18:58.762Z"},{"id":"3fda8595-7e31-47dc-a62a-62f837e9fac7","publicId":"bg.12.17","number":17,"sanskritText":"यो न हृष्यति न द्वेष्टि न शोचति न काङ्क्षति।शुभाशुभपरित्यागी भक्ितमान्यः स मे प्रियः।।12.17।।","transliteration":"yo na hṛiṣhyati na dveṣhṭi na śhochati na kāṅkṣhati\nśhubhāśhubha-parityāgī bhaktimān yaḥ sa me priyaḥ","meaning":"यः who; न not; हृष्यति rejoices; न not; द्वेष्टि hates; न not; शोचति grieves; न not; काङ्क्षति desires; शुभाशुभपरित्यागी renouncing good and evil; भक्तिमान् full of devotion; यः who; सः he; मे to Me; प्रियः dear","commentary":null,"seoTitle":null,"seoDescription":null,"sortOrder":17,"isPublished":true,"chapterPublicId":"bg.12","chapterNumber":12,"workCode":"bg","translations":[{"id":"c38e9be4-c765-43f4-8b25-b13381e0e116","languageCode":"en","languageName":"English","sourceKey":"sivananda","sourceDisplayName":"Swami Sivananda","text":"He who neither rejoices nor hates, nor grieves nor desires, renouncing both good and evil, and who is full of devotion, is dear to Me.","isPublished":true},{"id":"b0362cfb-9b2e-4d1b-bab9-754740d77490","languageCode":"hi","languageName":"Hindi","sourceKey":"ramsukhdas","sourceDisplayName":"Swami Ramsukhdas","text":"।।12.17।।जो न कभी हर्षित होता है, न द्वेष करता है, न शोक करता है, न कामना करता है और जो शुभ-अशुभ कर्मोंमें राग-द्वेषका त्यागी है, वह भक्तिमान् मनुष्य मुझे प्रिय है।","isPublished":true},{"id":"4c28629c-aea2-478c-9a05-a89524b826b9","languageCode":"te","languageName":"Telugu","sourceKey":"holy-bg-telugu","sourceDisplayName":"Holy Bhagavad Gita (Telugu)","text":"ఎవరైతే లౌకిక సుఖాల పట్ల ఆనందించకుండా మరియు ప్రాపంచిక కష్టాల పట్ల బాధ పడకుండా ఉంటారో, ఎవరైతే నష్టం జరిగినా బాధ పడరో లేదా లాభం కోసం ప్రాకులాడరో, శుభ-అశుభ పనులను రెంటినీ త్యజిస్తారో, అటువంటి జనులు, భక్తితో నిండి ఉన్న వారు నాకు చాలా ప్రియమైనవారు.","isPublished":true},{"id":"fc0ce327-eb14-4aa0-b9dd-e3bff50ed961","languageCode":"te","languageName":"Telugu","sourceKey":"holy-bg-telugu-w2w","sourceDisplayName":"Holy Bhagavad Gita (Telugu word meanings)","text":"యః — ఎవరైతే; న హృష్యతి — ఆనందపడరు; న ద్వేష్టి — నిరాశ చెందరు; న శోచతి — దుఃఖించరు; న కాంక్షతి — లాభంకోసం ఆశపడరో; శుభ-అశుభ-పరిత్యాగీ — శుభ అశుభములు పరిత్యజించి; భక్తి-మాన్ — భక్తితో నిండి; యః — ఎవరైతే; సః — ఆ వ్యక్తి ; మే — నాకు; ప్రియః — చాలా ప్రియమైన.","isPublished":true},{"id":"a6dae7c5-95fa-46f9-b99c-00628ef13da9","languageCode":"or","languageName":"Odia","sourceKey":"holy-bg-odia","sourceDisplayName":"Holy Bhagavad Gita (Odia)","text":"ଯେଉଁମାନେ ଦୈନନ୍ଦିନ ଜୀବନରେ ଖୁସିରେ ଆତ୍ମହରା ହୁଅନ୍ତି ନାହିଁ, କିମ୍ବା ଦୁଃଖରେ ମର୍ମାହତ ହୁଅନ୍ତି ନାହିଁ; ଯେଉଁମାନେ କୌଣସି କ୍ଷତିରେ ପଶ୍ଚାତାପ କରନ୍ତି ନାହିଁ ବା କୌଣସି ଲାଭ ପାଇଁ ଲାଳାୟିତ ହୁଅନ୍ତି ନାହିଁ; ଯେଉଁମାନେ ଉଭୟ ଭଲ ଓ ମନ୍ଦ କର୍ମକୁ ତ୍ୟାଗ କରିଥାନ୍ତି, ଏବଂ ଯେଉଁମାନେ ପୂର୍ଣ୍ଣ ଭକ୍ତିଯୁକ୍ତ ରହନ୍ତି, ସେମାନେ ମୋର ଅତ୍ୟନ୍ତ ପ୍ରିୟ ଅଟନ୍ତି ।","isPublished":true}],"createdAt":"2026-07-14T08:54:14.988Z","updatedAt":"2026-07-16T06:18:59.001Z"},{"id":"a2cef7c4-9a2a-41cd-be00-78f62079b1f4","publicId":"bg.12.18","number":18,"sanskritText":"समः शत्रौ च मित्रे च तथा मानापमानयोः।शीतोष्णसुखदुःखेषु समः सङ्गविवर्जितः।।12.18।।","transliteration":"samaḥ śhatrau cha mitre cha tathā mānāpamānayoḥ\nśhītoṣhṇa-sukha-duḥkheṣhu samaḥ saṅga-vivarjitaḥ","meaning":"समः (he who is) the same; शत्रौ to foe; च and; मित्रे to friend; च and; तथा also; मानापमानयोः in honour and dishonour; शीतोष्णसुखदुःखेषु in cold and heat; in pleasure and pain; समः the same; सङ्गविवर्जितः free from attachment","commentary":null,"seoTitle":null,"seoDescription":null,"sortOrder":18,"isPublished":true,"chapterPublicId":"bg.12","chapterNumber":12,"workCode":"bg","translations":[{"id":"8f934818-45e7-4db3-8715-c83d5180018d","languageCode":"en","languageName":"English","sourceKey":"sivananda","sourceDisplayName":"Swami Sivananda","text":"He who is the same to foe and friend, and also in honor and dishonor, who is the same in cold and heat, in pleasure and pain, and who is free from attachment.","isPublished":true},{"id":"ed4230bc-1faf-4dee-87f6-8d6aea10cb7a","languageCode":"hi","languageName":"Hindi","sourceKey":"ramsukhdas","sourceDisplayName":"Swami Ramsukhdas","text":"।।12.18।।जो शत्रु और मित्रमें तथा मान-अपमानमें सम है और शीत-उष्ण (अनुकूलता-प्रतिकूलता) तथा सुख-दुःखमें सम है एवं आसक्तिसे रहित है, और जो निन्दास्तुतिको समान समझनेवाला, मननशील, जिस-किसी प्रकारसे भी (शरीरका निर्वाह होनेमें) संतुष्ट, रहनेके स्थान तथा शरीरमें ममता-आसक्तिसे रहित और स्थिर बुद्धिवाला है, वह भक्तिमान् मनुष्य मुझे प्रिय है।","isPublished":true},{"id":"856d100d-65ff-4596-95be-63db7a7685a6","languageCode":"te","languageName":"Telugu","sourceKey":"holy-bg-telugu","sourceDisplayName":"Holy Bhagavad Gita (Telugu)","text":"BG 12.18-19:\n                            ఎవరైతే, మిత్రులపట్ల మరియు శత్రువుల పట్ల ఒక్కలాగే ఉంటారో, గౌరవము-అపమానముల ఎడ, చలి-వేడిమి పట్ల, సుఖ-దుఖఃముల పట్ల సమబుద్ధితో ఉంటారో, మరియు చెడు సాంగత్యమును విడిచి ఉంటారో; దూషణ మరియు పొగడ్తని ఒక్కలాగే తీసుకుంటారో, మౌనముగా చింతన చేస్తుంటారో, తమకు లభించిన దానితో తృప్తిగా ఉంటారో, నివాసస్థానము పట్ల మమకారాసక్తి లేకుండా ఉంటారో, ఎవరి బుద్ధి స్థిరముగా నా యందే లగ్నమై ఉన్నదో, మరియు ఎవరైతే నాయందు భక్తితో నిండిపోయి ఉన్నారో, అటువంటి వ్యక్తులు నాకు చాలా ప్రియమైనవారు.","isPublished":true},{"id":"4a0674f4-cc60-441d-88e3-8777d53014e2","languageCode":"te","languageName":"Telugu","sourceKey":"holy-bg-telugu-w2w","sourceDisplayName":"Holy Bhagavad Gita (Telugu word meanings)","text":"సమః — ఒకేలాగా; శత్రౌ — శత్రువు పట్ల; చ — మరియు; మిత్రే — మిత్రుని పట్ల; చ తథా — మరియు ఇంకా; మాన-అపమానయోః — గౌరవము, అపమానముల యందు; శీత-ఉష్ణ — చలి మరియు వేడిమిలో; సుఖ-దుఃఖేషు — సుఖదుఃఖముల యందు; సమః — ఒక్కలాగే ఉంటూ; సంగ-వివర్జితః — చెడు సాంగత్యము విడిచి; తుల్య — ఒకేలాగా పరిగణిస్తూ; నిందా-స్తుతి — దూషణ మరియు పొగడ్త; మౌనీ — మౌనముగా చింతన; సంతుష్టః — తృప్తిగా ఉంటూ; యేన కేనచిత్ — దేనితో అయినా; అనికేతః — నివాస స్థానము పై మమకారఆసక్తి లేకుండా; స్థిర — స్థిరముగా; మతి — బుద్ధి; భక్తి-మాన్ — భక్తితో నిండి ఉన్నవాడు; మే — నాకు; ప్రియః — చాలా ప్రియమైన; నరః — వ్యక్తి.","isPublished":true}],"createdAt":"2026-07-14T08:54:16.035Z","updatedAt":"2026-07-16T06:18:59.252Z"},{"id":"f2b273a9-9010-4e75-b880-f0a809b81714","publicId":"bg.12.19","number":19,"sanskritText":"तुल्यनिन्दास्तुतिर्मौनी सन्तुष्टो येनकेनचित्।अनिकेतः स्थिरमतिर्भक्ितमान्मे प्रियो नरः।।12.19।।","transliteration":"tulya-nindā-stutir maunī santuṣhṭo yena kenachit\naniketaḥ sthira-matir bhaktimān me priyo naraḥ","meaning":"तुल्यनिन्दास्तुतिः to whom censure and praise are eal; मौनी -- silent; सन्तुष्टः contented; येनकेनचित् with anything; अनिकेतः homeless; स्थिरमतिः steadyminded; भक्तिमान् full of devotion; मे to Me; प्रियः dear; नरः (that) man","commentary":null,"seoTitle":null,"seoDescription":null,"sortOrder":19,"isPublished":true,"chapterPublicId":"bg.12","chapterNumber":12,"workCode":"bg","translations":[{"id":"11a96eb4-a3db-4762-bea0-f6ffafd135b3","languageCode":"en","languageName":"English","sourceKey":"sivananda","sourceDisplayName":"Swami Sivananda","text":"He to whom censure and praise are equal, who is silent, content with anything, homeless, of a steady mind, and full of devotion; that man is dear to me.","isPublished":true},{"id":"da1c325a-96a0-4d86-900f-93dd64b20710","languageCode":"hi","languageName":"Hindi","sourceKey":"ramsukhdas","sourceDisplayName":"Swami Ramsukhdas","text":"।।12.19।।जो शत्रु और मित्रमें तथा मान-अपमानमें सम है और शीतउष्ण (अनुकूलता-प्रतिकूलता) तथा सुख-दुःखमें सम है एवं आसक्तिसे रहित है, और जो निन्दा-स्तुतिको समान समझनेवाला, मननशील, जिस-किसी प्रकारसे भी (शरीरका निर्वाह होनेमें) संतुष्ट, रहनेके स्थान तथा शरीरमें ममता-आसक्तिसे रहित और स्थिर बुद्धिवाला है, वह भक्तिमान् मनुष्य मुझे प्रिय है।","isPublished":true},{"id":"9dc36bc3-ce82-491f-a733-a6faf4c5691f","languageCode":"te","languageName":"Telugu","sourceKey":"holy-bg-telugu","sourceDisplayName":"Holy Bhagavad Gita (Telugu)","text":"BG 12.18-19:\n                            ఎవరైతే, మిత్రులపట్ల మరియు శత్రువుల పట్ల ఒక్కలాగే ఉంటారో, గౌరవము-అపమానముల ఎడ, చలి-వేడిమి పట్ల, సుఖ-దుఖఃముల పట్ల సమబుద్ధితో ఉంటారో, మరియు చెడు సాంగత్యమును విడిచి ఉంటారో; దూషణ మరియు పొగడ్తని ఒక్కలాగే తీసుకుంటారో, మౌనముగా చింతన చేస్తుంటారో, తమకు లభించిన దానితో తృప్తిగా ఉంటారో, నివాసస్థానము పట్ల మమకారాసక్తి లేకుండా ఉంటారో, ఎవరి బుద్ధి స్థిరముగా నా యందే లగ్నమై ఉన్నదో, మరియు ఎవరైతే నాయందు భక్తితో నిండిపోయి ఉన్నారో, అటువంటి వ్యక్తులు నాకు చాలా ప్రియమైనవారు.","isPublished":true},{"id":"d68e7bd9-8908-42be-af53-9d20d3eb35c3","languageCode":"te","languageName":"Telugu","sourceKey":"holy-bg-telugu-w2w","sourceDisplayName":"Holy Bhagavad Gita (Telugu word meanings)","text":"సమః — ఒకేలాగా; శత్రౌ — శత్రువు పట్ల; చ — మరియు; మిత్రే — మిత్రుని పట్ల; చ తథా — మరియు ఇంకా; మాన-అపమానయోః — గౌరవము, అపమానముల యందు; శీత-ఉష్ణ — చలి మరియు వేడిమిలో; సుఖ-దుఃఖేషు — సుఖదుఃఖముల యందు; సమః — ఒక్కలాగే ఉంటూ; సంగ-వివర్జితః — చెడు సాంగత్యము విడిచి; తుల్య — ఒకేలాగా పరిగణిస్తూ; నిందా-స్తుతి — దూషణ మరియు పొగడ్త; మౌనీ — మౌనముగా చింతన; సంతుష్టః — తృప్తిగా ఉంటూ; యేన కేనచిత్ — దేనితో అయినా; అనికేతః — నివాస స్థానము పై మమకారఆసక్తి లేకుండా; స్థిర — స్థిరముగా; మతి — బుద్ధి; భక్తి-మాన్ — భక్తితో నిండి ఉన్నవాడు; మే — నాకు; ప్రియః — చాలా ప్రియమైన; నరః — వ్యక్తి.","isPublished":true}],"createdAt":"2026-07-14T08:54:16.831Z","updatedAt":"2026-07-16T06:18:59.494Z"},{"id":"9e4ac1df-1956-4c95-b853-dc37c1be8a12","publicId":"bg.12.20","number":20,"sanskritText":"ये तु धर्म्यामृतमिदं यथोक्तं पर्युपासते।श्रद्दधाना मत्परमा भक्तास्तेऽतीव मे प्रियाः।।12.20।।","transliteration":"ye tu dharmyāmṛitam idaṁ yathoktaṁ paryupāsate\nśhraddadhānā mat-paramā bhaktās te ’tīva me priyāḥ","meaning":"ये who; तु indeed; धर्म्यामृतम् immortal Dharma (Law); इदम् this; यथोक्तम् as declared (above); पर्युपासते follow; श्रद्दधानाः endowed with faith; मत्परमाः regarding Me as their Supreme; भक्ताः devotees; ते they; अतीव exceedingly; मे to Me; प्रियाः dear","commentary":null,"seoTitle":null,"seoDescription":null,"sortOrder":20,"isPublished":true,"chapterPublicId":"bg.12","chapterNumber":12,"workCode":"bg","translations":[{"id":"e54923a8-3b07-4740-8b23-df83bf9c07ee","languageCode":"en","languageName":"English","sourceKey":"sivananda","sourceDisplayName":"Swami Sivananda","text":"They who follow this immortal Dharma, endowed with faith and regarding Me as their supreme goal, are exceedingly dear to Me.","isPublished":true},{"id":"fc187b51-365e-4100-82e2-47a89090ea8b","languageCode":"hi","languageName":"Hindi","sourceKey":"ramsukhdas","sourceDisplayName":"Swami Ramsukhdas","text":"।।12.20।।जो मेरेमें श्रद्धा रखनेवाले और मेरे परायण हुए भक्त पहले कहे हुए इस धर्ममय अमृतका अच्छी तरहसे सेवन करते हैं, वे मुझे अत्यन्त प्रिय हैं।","isPublished":true},{"id":"6b5eeb19-6295-4711-9ff7-45863da781de","languageCode":"te","languageName":"Telugu","sourceKey":"holy-bg-telugu","sourceDisplayName":"Holy Bhagavad Gita (Telugu)","text":"ఎవరైతే ఇక్కడ ప్రకటించబడిన ఈ జ్ఞానామృతమును గౌరవించి, నాపై విశ్వాసముతో మరియు నేనే పరమ లక్ష్యముగా భక్తితో ఉంటారో, వారు నాకు అత్యంత ప్రియమైన వారు.","isPublished":true},{"id":"60b433c0-de17-44ff-bbb5-e72f18d42846","languageCode":"te","languageName":"Telugu","sourceKey":"holy-bg-telugu-w2w","sourceDisplayName":"Holy Bhagavad Gita (Telugu word meanings)","text":"యే — ఎవరైతే; తు — నిజముగా; ధర్మ — జ్ఞానమనే; అమృతం — అమృతము; ఇదం — ఇది; యథా — ఇలా; ఉక్తం — చెప్పబడిన; పర్యుపాసతే — అనన్య భక్తితో సేవిస్తారో; శ్రద్ధధానాః — విశ్వాసముతో; మత్-పరమాః — నన్నే పరమ లక్ష్యముగా భావిస్తూ; భక్తాః — భక్తులు; తే — వారు; అతీవ — అత్యంత; మే — నాకు; ప్రియాః — ప్రియమైన వారు.","isPublished":true},{"id":"8166fa20-f6ca-4386-9cb7-8a0de844d5c6","languageCode":"or","languageName":"Odia","sourceKey":"holy-bg-odia","sourceDisplayName":"Holy Bhagavad Gita (Odia)","text":"ଏଠାରେ ପ୍ରଦାନ କରାଯାଇଥିବା ଜ୍ଞାନାମୃତର ଯେଉଁମାନେ ଆଦର କରନ୍ତି; ମୋଠାରେ ପୂର୍ଣ୍ଣ ବିଶ୍ୱାସ ରଖି ଯେଉଁମାନେ ମୋର ଶରଣାଗତ ହୁଅନ୍ତି ଏବଂ ମୋତେ ତାଙ୍କର ଚରମ ଲକ୍ଷ୍ୟ ରୂପେ ବିଚାର କରନ୍ତି, ସେମାନେ ମୋର ସର୍ବାଧିକ ପ୍ରିୟ ଅଟନ୍ତି ।","isPublished":true}],"createdAt":"2026-07-14T08:54:17.856Z","updatedAt":"2026-07-16T06:18:59.733Z"}],"languages":[{"code":"sa","name":"Sanskrit","nativeName":"संस्कृतम्"},{"code":"en","name":"English","nativeName":"English"},{"code":"hi","name":"Hindi","nativeName":"हिन्दी"},{"code":"te","name":"Telugu","nativeName":"తెలుగు"},{"code":"or","name":"Odia","nativeName":"ଓଡ଼ିଆ"},{"code":"kn","name":"Kannada","nativeName":"ಕನ್ನಡ"},{"code":"ta","name":"Tamil","nativeName":"தமிழ்"},{"code":"ml","name":"Malayalam","nativeName":"മലയാളം"}]}
+{
+  "generatedAt": "2026-07-27T08:06:39.019Z",
+  "chapter": {
+    "id": "1c0ccbb9-1977-46d5-a13d-04faea96b948",
+    "publicId": "bg.12",
+    "number": 12,
+    "title": "Bhakti Yoga",
+    "verseCount": 20,
+    "sortOrder": 12,
+    "isPublished": true,
+    "work": {
+      "code": "bg",
+      "slug": "bhagavad-gita",
+      "title": "Bhagavad Gita"
+    },
+    "createdAt": "2026-07-10T08:56:32.953Z",
+    "updatedAt": "2026-07-14T08:54:00.658Z"
+  },
+  "verses": [
+    {
+      "id": "8bab99e1-3efc-4467-9cab-f085eb4c2546",
+      "publicId": "bg.12.1",
+      "number": 1,
+      "sanskritText": "अर्जुन उवाचएवं सततयुक्ता ये भक्तास्त्वां पर्युपासते।येचाप्यक्षरमव्यक्तं तेषां के योगवित्तमाः।।12.1।।",
+      "transliteration": "arjuna uvācha\nevaṁ satata-yuktā ye bhaktās tvāṁ paryupāsate\nye chāpy akṣharam avyaktaṁ teṣhāṁ ke yoga-vittamāḥ",
+      "meaning": "एवम् thus; सततयुक्ताः ever steadfast; ये who; भक्ताः devotees; त्वाम् Thee; पर्युपासते worship; ये who; च and; अपि also; अक्षरम् the imperishable; अव्यक्तम् the unmanifested; तेषाम् of them; के who; योगवित्तमाः better versed in Yoga",
+      "commentary": null,
+      "seoTitle": null,
+      "seoDescription": null,
+      "sortOrder": 1,
+      "isPublished": true,
+      "chapterPublicId": "bg.12",
+      "chapterNumber": 12,
+      "workCode": "bg",
+      "translations": [
+        {
+          "id": "0c560fcb-2133-4dff-b203-2a076c13075a",
+          "languageCode": "en",
+          "languageName": "English",
+          "sourceKey": "sivananda",
+          "sourceDisplayName": "Swami Sivananda",
+          "text": "Arjuna said, \"Which of them are better versed in Yoga—those who steadfastly worship You, or those who worship the imperishable and the unmanifested?\"",
+          "isPublished": true
+        },
+        {
+          "id": "69db8d03-d7c7-4501-a5af-b234649751c1",
+          "languageCode": "hi",
+          "languageName": "Hindi",
+          "sourceKey": "ramsukhdas",
+          "sourceDisplayName": "Swami Ramsukhdas",
+          "text": "।।12.1।।जो भक्त इस प्रकार निरन्तर आपमें लगे रहकर आप-(सगुण भगवान्-) की उपासना करते हैं और जो अविनाशी निराकारकी ही उपासना करते हैं, उनमेंसे उत्तम योगवेत्ता कौन हैं?",
+          "isPublished": true
+        },
+        {
+          "id": "e298b7f1-c362-41c9-b3e7-6b0ae0de6c1b",
+          "languageCode": "te",
+          "languageName": "Telugu",
+          "sourceKey": "holy-bg-telugu",
+          "sourceDisplayName": "Holy Bhagavad Gita (Telugu)",
+          "text": "అర్జునుడు ఇలా అడిగెను: నీ యొక్క సాకార రూపము పట్ల స్థిరముగా భక్తితో ఉండేవారు మరియు నిరాకార బ్రహ్మన్ ను ఉపాసించే వారు – వీరిలో, యోగములో ఎవరు ఎక్కువ శ్రేష్ఠులు అని నీవు పరిగణిస్తావు?",
+          "isPublished": true
+        },
+        {
+          "id": "58c6a551-47ea-4680-829a-26f202427b30",
+          "languageCode": "te",
+          "languageName": "Telugu",
+          "sourceKey": "holy-bg-telugu-w2w",
+          "sourceDisplayName": "Holy Bhagavad Gita (Telugu word meanings)",
+          "text": "అర్జున ఉవాచ — అర్జునుడు పలికెను; ఏవం — ఈ విధముగా; సతత — స్థిరముగా; యుక్తా — భక్తితో; యే — ఎవరైతే; భక్తాః — భక్తులు; త్వాం — నిన్ను; పర్యుపాసతే — ఆరాధిస్తారో; యే — వారు; చ — మరియు; అపి — కూడా; అక్షరం — నాశము లేని; అవ్యక్తం — నిరాకార బ్రహ్మము; తేషాం — వారు; కే — ఎవరు?; యోగ-విత్-తమాః — యోగములో ఎక్కువ శ్రేష్ఠులు",
+          "isPublished": true
+        },
+        {
+          "id": "a572e725-2107-4c65-a2da-31609a63ce51",
+          "languageCode": "or",
+          "languageName": "Odia",
+          "sourceKey": "holy-bg-odia",
+          "sourceDisplayName": "Holy Bhagavad Gita (Odia)",
+          "text": "ଅର୍ଜୁନ ପ୍ରଶ୍ନ କଲେ: ଯେଉଁମାନେ ଆପଣଙ୍କର ସାକାର ସ୍ୱରୂପର ନିରବଚ୍ଛିନ୍ନ ଭାବରେ ଭକ୍ତି କରନ୍ତି, ଏବଂ ଯେଉଁମାନେ ଆପଣଙ୍କର ନିରାକାର ବ୍ରହ୍ମସ୍ୱରପର ଆରାଧନା କରନ୍ତି, ସେମାନଙ୍କ ମଧ୍ୟରୁ ଉତ୍ତମ ଯୋଗୀ ଭାବରେ ଆପଣ କାହାକୁ ବିବେଚନା କରନ୍ତି?",
+          "isPublished": true
+        }
+      ],
+      "createdAt": "2026-07-14T08:54:00.889Z",
+      "updatedAt": "2026-07-16T06:18:54.621Z"
+    },
+    {
+      "id": "539dd2c2-925c-4052-845c-573f13a539a6",
+      "publicId": "bg.12.2",
+      "number": 2,
+      "sanskritText": "श्री भगवानुवाचमय्यावेश्य मनो ये मां नित्ययुक्ता उपासते।श्रद्धया परयोपेतास्ते मे युक्ततमा मताः।।12.2।।",
+      "transliteration": "śhrī-bhagavān uvācha\nmayy āveśhya mano ye māṁ nitya-yuktā upāsate\nśhraddhayā parayopetās te me yuktatamā matāḥ",
+      "meaning": "मयि on Me; आवेश्य fixing; मनः the mind; ये who; माम् Me; नित्ययुक्ताः ever steadfast; उपासते worship; श्रद्धया with faith; परया supreme; उपेताः endowed; ते those; मे of Me; युक्ततमाः the best versed in Yoga; मताः (in My) opinion",
+      "commentary": null,
+      "seoTitle": null,
+      "seoDescription": null,
+      "sortOrder": 2,
+      "isPublished": true,
+      "chapterPublicId": "bg.12",
+      "chapterNumber": 12,
+      "workCode": "bg",
+      "translations": [
+        {
+          "id": "ad537bef-b932-4b86-a746-49bbdbf140a2",
+          "languageCode": "en",
+          "languageName": "English",
+          "sourceKey": "sivananda",
+          "sourceDisplayName": "Swami Sivananda",
+          "text": "The Blessed Lord said, \"In My opinion, those who fix their minds on Me, worship Me ever steadfastly, and are endowed with supreme faith, are the best in Yoga.\"",
+          "isPublished": true
+        },
+        {
+          "id": "14a86d4a-fc92-45ef-ae92-c4560360d173",
+          "languageCode": "hi",
+          "languageName": "Hindi",
+          "sourceKey": "ramsukhdas",
+          "sourceDisplayName": "Swami Ramsukhdas",
+          "text": "।।12.2।।मेरेमें मनको लगाकर नित्य-निरन्तर मेरेमें लगे हुए जो भक्त परम श्रद्धासे युक्त होकर मेरी उपासना करते हैं, वे मेरे मतमें सर्वश्रेष्ठ योगी हैं।",
+          "isPublished": true
+        },
+        {
+          "id": "13a3c08f-f4bf-403e-a034-724f965e7c18",
+          "languageCode": "te",
+          "languageName": "Telugu",
+          "sourceKey": "holy-bg-telugu",
+          "sourceDisplayName": "Holy Bhagavad Gita (Telugu)",
+          "text": "శ్రీ భగవానుడు ఇలా పలికెను: నా పైనే తమ మనస్సులను లగ్నం చేసి మరియు సతతమూ నా పట్ల దృఢ విశ్వాసంతో భక్తిలో నిమగ్నమైన వారు అత్యుత్తమ యోగులని నేను పరిగణిస్తాను.",
+          "isPublished": true
+        },
+        {
+          "id": "ac569c9c-2bad-41db-b693-3cd553c449ed",
+          "languageCode": "te",
+          "languageName": "Telugu",
+          "sourceKey": "holy-bg-telugu-w2w",
+          "sourceDisplayName": "Holy Bhagavad Gita (Telugu word meanings)",
+          "text": "శ్రీ-భగవాన్-ఉవాచ — శ్రీ భగవానుడు పలికెను; మయి — నా యందు; ఆవేశ్యా — నిమగ్నమై; మనః — మనస్సు; యే — ఎవరైతే; మాం — నన్ను; నిత్య యుక్తః — ఎల్లప్పుడూ లగ్నం చేసి; ఉపాసతే — పూజిస్తారో/ఆరాధిస్తారో; శ్రద్ధయా — శ్రద్దా-విశ్వాసములతో; పరయా — అత్యుత్తమ; ఉపేతాః — కలిగియున్న; తే — వారు; మే — నా చేత; యుక్త-తమాః — యోగములో ఉన్నతమైన స్థాయిలో ఉన్నట్టు; మతాః — నేను భావిస్తాను.",
+          "isPublished": true
+        },
+        {
+          "id": "d31795d5-f814-4569-975f-8f1065a839a9",
+          "languageCode": "or",
+          "languageName": "Odia",
+          "sourceKey": "holy-bg-odia",
+          "sourceDisplayName": "Holy Bhagavad Gita (Odia)",
+          "text": "ଶ୍ରୀ ଭଗବାନ କହିଲେ: ଯେଉଁମାନେ ନିଜର ମନକୁ ମୋଠାରେ କେନ୍ଦ୍ରିତ କରନ୍ତି, ଏବଂ ଦୃଢ ଶ୍ରଦ୍ଧାଯୁକ୍ତ ହୋଇ ସର୍ବଦା ମୋର ଭକ୍ତି କରନ୍ତି, ମୁଁ ସେମାନଙ୍କୁ ଶ୍ରେଷ୍ଠ ଯୋଗୀ ଭାବରେ ବିବେଚନା କରିଥାଏ ।",
+          "isPublished": true
+        }
+      ],
+      "createdAt": "2026-07-14T08:54:01.587Z",
+      "updatedAt": "2026-07-16T06:18:55.093Z"
+    },
+    {
+      "id": "60826943-79ec-482b-9146-6c874a4c10e6",
+      "publicId": "bg.12.3",
+      "number": 3,
+      "sanskritText": "ये त्वक्षरमनिर्देश्यमव्यक्तं पर्युपासते।सर्वत्रगमचिन्त्यं च कूटस्थमचलं ध्रुवम्।।12.3।।",
+      "transliteration": "ye tv akṣharam anirdeśhyam avyaktaṁ paryupāsate\nsarvatra-gam achintyañcha kūṭa-stham achalandhruvam\n sanniyamyendriya-grāmaṁ sarvatra sama-buddhayaḥ\nte prāpnuvanti mām eva sarva-bhūta-hite ratāḥ",
+      "meaning": "ये who; तु verily; अक्षरम् the imperishable; अनिर्देश्यम् the indefinable; अव्यक्तम् the unmanifested; पर्युपासते worship; सर्वत्रगम् the omnipresent; अचिन्त्यम् the unthinkable; च and; कूटस्थम् the unchangeable; अचलम् the immovable; ध्रुवम् the eternal",
+      "commentary": null,
+      "seoTitle": null,
+      "seoDescription": null,
+      "sortOrder": 3,
+      "isPublished": true,
+      "chapterPublicId": "bg.12",
+      "chapterNumber": 12,
+      "workCode": "bg",
+      "translations": [
+        {
+          "id": "5e48c0fc-9686-46b6-abf0-8542eb3ad7c2",
+          "languageCode": "en",
+          "languageName": "English",
+          "sourceKey": "sivananda",
+          "sourceDisplayName": "Swami Sivananda",
+          "text": "Those who worship the imperishable, the indefinable, the unmanifest, the omnipresent, the unthinkable, the immovable, and the eternal.",
+          "isPublished": true
+        },
+        {
+          "id": "66c27ce9-5aec-44c4-8dbc-460b47c7db33",
+          "languageCode": "hi",
+          "languageName": "Hindi",
+          "sourceKey": "ramsukhdas",
+          "sourceDisplayName": "Swami Ramsukhdas",
+          "text": "।।12.3।।जो अपनी इन्द्रियोंको वशमें करके अचिन्त्य, सब जगह परिपूर्ण, अनिर्देश्य, कूटस्थ, अचल, ध्रुव, अक्षर और अव्यक्तकी उपासना करते हैं, वे प्राणिमात्रके हितमें रत और सब जगह समबुद्धिवाले मनुष्य मुझे ही प्राप्त होते हैं।",
+          "isPublished": true
+        },
+        {
+          "id": "45c0d8f0-daac-4d9a-8ef6-73d698bed2b9",
+          "languageCode": "te",
+          "languageName": "Telugu",
+          "sourceKey": "holy-bg-telugu",
+          "sourceDisplayName": "Holy Bhagavad Gita (Telugu)",
+          "text": "BG 12.3-4:\n                            నాశరహితుడూ, అనిర్వచనీయమైన వాడు, అవ్యక్తమూ, సర్వవ్యాపి, మనోబుద్ధులకు అతీతుడు, మార్పు లేనివాడు, నిత్యశాశ్వతుడూ, మరియు నిశ్చలమైన వాడునూ - అయిన పరమ సత్యము యొక్క నిరాకార తత్త్వాన్ని - ఇంద్రియములను నిగ్రహించి, సర్వత్రా సమబుద్ధితో ఉంటూ, సర్వభూతముల సంక్షేమం కోసం నిమగ్నమై ఉంటూ - ఆరాధించేవారు కూడా నన్ను పొందుతారు.",
+          "isPublished": true
+        },
+        {
+          "id": "19548a82-3248-417d-a14a-88ac1f0d2ce5",
+          "languageCode": "te",
+          "languageName": "Telugu",
+          "sourceKey": "holy-bg-telugu-w2w",
+          "sourceDisplayName": "Holy Bhagavad Gita (Telugu word meanings)",
+          "text": "యే — ఎవరైతే; తు — కానీ; అక్షరం — అనశ్వరమైన/నిత్యమైన; అనిర్దేశ్యం — నిర్వచించుటకు వీలుకాని; అవ్యక్తం — అవ్యక్తమైన; పర్యుపాసతే — ఆరాధిస్తారో; సర్వత్ర-గం — సర్వ వ్యాప్తి అయిన; అచింత్యం — మనోబుద్ధులకు అతీతుడు (ఊహింపశక్యము కాని); చ — మరియు; కూట-స్థమ్ — మారని; అచలం — కదిలించలేని; ధృవం — సనాతనమైన ; సన్నియమ్య — నిగ్రహించి; ఇంద్రియ-గ్రామం — ఇంద్రియములు; సర్వత్ర — అంతటా; సమ-బుద్ధయః — సమ బుద్ధితో ఉండి; తే — వారు; ప్రాప్నువంతి — పొందుతారు; మాం — నన్ను; ఏవ — కూడా; సర్వ-భూత-హితే — సమస్త ప్రాణుల సంక్షేమం కోసం; రతాః — నిమగ్నుడై.",
+          "isPublished": true
+        }
+      ],
+      "createdAt": "2026-07-14T08:54:02.527Z",
+      "updatedAt": "2026-07-16T06:18:55.335Z"
+    },
+    {
+      "id": "1d0f0876-5d5e-4e40-b38a-ecffd17b3296",
+      "publicId": "bg.12.4",
+      "number": 4,
+      "sanskritText": "संनियम्येन्द्रियग्रामं सर्वत्र समबुद्धयः।ते प्राप्नुवन्ति मामेव सर्वभूतहिते रताः।।12.4।।",
+      "transliteration": "sanniyamyendriya-grāmaṁ  sarvatra    sama-buddhayaḥ  te  prāpnuvanti mām eva sarva-bhūta-hite    ratāḥ",
+      "meaning": "संनियम्य having restrained; इन्द्रियग्रामम् the aggregate of the senses; सर्वत्र everywhere; समबुद्धयः evenminded; ते they; प्राप्नुवन्ति obtian; माम् Me; एव only; सर्वभूतहिते in the welfare of all beings; रताः rejoicers",
+      "commentary": null,
+      "seoTitle": null,
+      "seoDescription": null,
+      "sortOrder": 4,
+      "isPublished": true,
+      "chapterPublicId": "bg.12",
+      "chapterNumber": 12,
+      "workCode": "bg",
+      "translations": [
+        {
+          "id": "49d2d830-ec59-4edb-abb4-18393d5414fb",
+          "languageCode": "en",
+          "languageName": "English",
+          "sourceKey": "sivananda",
+          "sourceDisplayName": "Swami Sivananda",
+          "text": "Having restrained all the senses, being even-minded everywhere, and intent on the welfare of all beings, they verily come unto Me.",
+          "isPublished": true
+        },
+        {
+          "id": "64f2c202-3789-4d08-9c00-4f132d8694c1",
+          "languageCode": "hi",
+          "languageName": "Hindi",
+          "sourceKey": "ramsukhdas",
+          "sourceDisplayName": "Swami Ramsukhdas",
+          "text": "।।12.4।।जो अपनी इन्द्रियोंको वशमें करके अचिन्त्य, सब जगह परिपूर्ण, अनिर्देश्य, कूटस्थ, अचल, ध्रुव, अक्षर और अव्यक्तकी उपासना करते हैं, वे प्राणिमात्रके हितमें रत और सब जगह समबुद्धिवाले मनुष्य मुझे ही प्राप्त होते हैं।",
+          "isPublished": true
+        },
+        {
+          "id": "42aa2a7a-2bb0-4c9c-b194-6a99198e90e6",
+          "languageCode": "te",
+          "languageName": "Telugu",
+          "sourceKey": "holy-bg-telugu",
+          "sourceDisplayName": "Holy Bhagavad Gita (Telugu)",
+          "text": "BG 12.3-4:\n                            నాశరహితుడూ, అనిర్వచనీయమైన వాడు, అవ్యక్తమూ, సర్వవ్యాపి, మనోబుద్ధులకు అతీతుడు, మార్పు లేనివాడు, నిత్యశాశ్వతుడూ, మరియు నిశ్చలమైన వాడునూ - అయిన పరమ సత్యము యొక్క నిరాకార తత్త్వాన్ని - ఇంద్రియములను నిగ్రహించి, సర్వత్రా సమబుద్ధితో ఉంటూ, సర్వభూతముల సంక్షేమం కోసం నిమగ్నమై ఉంటూ - ఆరాధించేవారు కూడా నన్ను పొందుతారు.",
+          "isPublished": true
+        },
+        {
+          "id": "4d3bf766-c919-44c5-8540-46ea3114cd64",
+          "languageCode": "te",
+          "languageName": "Telugu",
+          "sourceKey": "holy-bg-telugu-w2w",
+          "sourceDisplayName": "Holy Bhagavad Gita (Telugu word meanings)",
+          "text": "యే — ఎవరైతే; తు — కానీ; అక్షరం — అనశ్వరమైన/నిత్యమైన; అనిర్దేశ్యం — నిర్వచించుటకు వీలుకాని; అవ్యక్తం — అవ్యక్తమైన; పర్యుపాసతే — ఆరాధిస్తారో; సర్వత్ర-గం — సర్వ వ్యాప్తి అయిన; అచింత్యం — మనోబుద్ధులకు అతీతుడు (ఊహింపశక్యము కాని); చ — మరియు; కూట-స్థమ్ — మారని; అచలం — కదిలించలేని; ధృవం — సనాతనమైన ; సన్నియమ్య — నిగ్రహించి; ఇంద్రియ-గ్రామం — ఇంద్రియములు; సర్వత్ర — అంతటా; సమ-బుద్ధయః — సమ బుద్ధితో ఉండి; తే — వారు; ప్రాప్నువంతి — పొందుతారు; మాం — నన్ను; ఏవ — కూడా; సర్వ-భూత-హితే — సమస్త ప్రాణుల సంక్షేమం కోసం; రతాః — నిమగ్నుడై.",
+          "isPublished": true
+        }
+      ],
+      "createdAt": "2026-07-14T08:54:03.524Z",
+      "updatedAt": "2026-07-16T06:18:55.585Z"
+    },
+    {
+      "id": "f39a5be8-b8f4-4eec-acd5-39de69f6ad48",
+      "publicId": "bg.12.5",
+      "number": 5,
+      "sanskritText": "क्लेशोऽधिकतरस्तेषामव्यक्तासक्तचेतसाम्।\n\nअव्यक्ता हि गतिर्दुःखं देहवद्भिरवाप्यते।।12.5।।",
+      "transliteration": "kleśho ’dhikataras teṣhām avyaktāsakta-chetasām\navyaktā hi gatir duḥkhaṁ dehavadbhir avāpyate",
+      "meaning": "क्लेशः the trouble; अधिकतरः (is) greater; तेषाम् of those; अव्यक्तासक्तचेतसाम् whose minds are set on the unmanifested; अव्यक्ता the unmanifested; हि for; गतिः goal; दुःखम् pain; देहवद्भिः by the embodied; अवाप्यते is reached",
+      "commentary": null,
+      "seoTitle": null,
+      "seoDescription": null,
+      "sortOrder": 5,
+      "isPublished": true,
+      "chapterPublicId": "bg.12",
+      "chapterNumber": 12,
+      "workCode": "bg",
+      "translations": [
+        {
+          "id": "44e14b32-be16-410d-be76-2e685a35d411",
+          "languageCode": "en",
+          "languageName": "English",
+          "sourceKey": "sivananda",
+          "sourceDisplayName": "Swami Sivananda",
+          "text": "Greater is their trouble whose minds are set on the unmanifested, for the goal of the unmanifested is very hard for the embodied to reach.",
+          "isPublished": true
+        },
+        {
+          "id": "cd1540be-3728-4dd0-9271-165d1350be85",
+          "languageCode": "hi",
+          "languageName": "Hindi",
+          "sourceKey": "ramsukhdas",
+          "sourceDisplayName": "Swami Ramsukhdas",
+          "text": "।।12.5।।अव्यक्तमें आसक्त चित्तवाले उन साधकोंको (अपने साधनमें) कष्ट अधिक होता है; क्योंकि देहाभिमानियोंके द्वारा अव्यक्त-विषयक गति कठिनतासे प्राप्त की जाती है।",
+          "isPublished": true
+        },
+        {
+          "id": "b263eeb9-b821-438d-a58a-b41e1451a28e",
+          "languageCode": "te",
+          "languageName": "Telugu",
+          "sourceKey": "holy-bg-telugu",
+          "sourceDisplayName": "Holy Bhagavad Gita (Telugu)",
+          "text": "మనస్సు యందు అవ్యక్తము పట్ల ఆసక్తి ఉన్నవారికి, సిద్ధి పథము చాలా కష్టములతో కూడుకున్నది. అవ్యక్తమును ఆరాధించటం అనేది శరీరబద్ధులైన జీవులకు చాలా కష్టతరమైనది.",
+          "isPublished": true
+        },
+        {
+          "id": "25a64cd5-0160-4694-b214-dbafa0bec2c6",
+          "languageCode": "te",
+          "languageName": "Telugu",
+          "sourceKey": "holy-bg-telugu-w2w",
+          "sourceDisplayName": "Holy Bhagavad Gita (Telugu word meanings)",
+          "text": "క్లేశః — కష్టములు/ఇబ్బందులు; అధిక-తర — ఎక్కువగా; తేషాం — వారికి; అవ్యక్త — అవ్యక్త రూపము పట్ల; ఆసక్త — ఆసక్తులై ఉన్న; చేతాసాం — మనస్సు కలవారు; అవ్యక్తా — అవ్యక్తము; హి — నిజముగా; గతిః — మార్గము; దుఃఖం — చాలా కష్టతరముగా; దేహవద్భిః — శరీర బద్దులైన వారికి (జీవాత్మ); అవాప్యతే — పొందెదరు.",
+          "isPublished": true
+        },
+        {
+          "id": "af4459ac-dcff-4714-907c-01aec9615441",
+          "languageCode": "or",
+          "languageName": "Odia",
+          "sourceKey": "holy-bg-odia",
+          "sourceDisplayName": "Holy Bhagavad Gita (Odia)",
+          "text": "ମୋର ଅବ୍ୟକ୍ତ ସ୍ୱରୂପରେ ଯେଉଁମାନଙ୍କର ମନ ଆସକ୍ତ, ସେମାନଙ୍କ ପାଇଁ ଭଗବତ୍ ପ୍ରାପ୍ତିର ପଥ ଅତ୍ୟନ୍ତ କ୍ଳେଶପୂର୍ଣ୍ଣ ଅଟେ । ଅବ୍ୟକ୍ତ ବ୍ରହ୍ମଙ୍କର ଉପାସନା ଶରୀରଧାରୀ ଜୀବଙ୍କ ପାଇଁ ଅତ୍ୟନ୍ତ କଷ୍ଟକର ହୋଇଥାଏ ।",
+          "isPublished": true
+        }
+      ],
+      "createdAt": "2026-07-14T08:54:04.394Z",
+      "updatedAt": "2026-07-16T06:18:55.838Z"
+    },
+    {
+      "id": "64d090f8-10c8-4204-aadf-441291c75850",
+      "publicId": "bg.12.6",
+      "number": 6,
+      "sanskritText": "ये तु सर्वाणि कर्माणि मयि संन्यस्य मत्पराः।अनन्येनैव योगेन मां ध्यायन्त उपासते।।12.6।।",
+      "transliteration": "ye tu sarvāṇi karmāṇi mayi sannyasya mat-paraḥ\nananyenaiva yogena māṁ dhyāyanta upāsate",
+      "meaning": "ये who; तु but; सर्वाणि all; कर्माणि actions; मयि in Me; संन्यस्य renouncing; मत्पराः regarding Me as the supreme goal; अनन्येन singleminded; एव even; योगेन with the Yoga; माम् Me; ध्यायन्तः meditating; उपासते worship",
+      "commentary": null,
+      "seoTitle": null,
+      "seoDescription": null,
+      "sortOrder": 6,
+      "isPublished": true,
+      "chapterPublicId": "bg.12",
+      "chapterNumber": 12,
+      "workCode": "bg",
+      "translations": [
+        {
+          "id": "564b83aa-da7e-4cc5-874e-873e51081342",
+          "languageCode": "en",
+          "languageName": "English",
+          "sourceKey": "sivananda",
+          "sourceDisplayName": "Swami Sivananda",
+          "text": "But to those who worship Me, renouncing all actions in Me, regarding Me as the supreme goal, meditating on Me with single-minded yoga.",
+          "isPublished": true
+        },
+        {
+          "id": "ad71cc56-2128-42d2-b87e-ce51feb6236b",
+          "languageCode": "hi",
+          "languageName": "Hindi",
+          "sourceKey": "ramsukhdas",
+          "sourceDisplayName": "Swami Ramsukhdas",
+          "text": "।।12.6।।परन्तु जो कर्मोंको मेरे अर्पण करके और मेरे परायण होकर अनन्ययोगसे मेरा ही ध्यान करते हुए मेरी उपासना करते हैं।",
+          "isPublished": true
+        },
+        {
+          "id": "99ee27c4-9ec0-4203-b34d-fbe18980c648",
+          "languageCode": "te",
+          "languageName": "Telugu",
+          "sourceKey": "holy-bg-telugu",
+          "sourceDisplayName": "Holy Bhagavad Gita (Telugu)",
+          "text": "BG 12.6-7:\n                            కానీ, తాము చేసే కర్మలన్నింటినీ నాకే సమర్పిస్తూ, నన్నే పరమ లక్ష్యముగా భావిస్తూ, నన్నే ఆరాధిస్తూ మరియు అనన్య భక్తితో నా మీదే ధ్యానం చేసే వారిని, ఓ పార్థా, నేను వారిని శీఘ్రముగానే ఈ మృత్యుసంసారసాగరము నుండి విముక్తి చేస్తాను, ఏలనన వారి అంతఃకరణ నా యందే ఏకమైపోయి ఉంటుంది.",
+          "isPublished": true
+        },
+        {
+          "id": "fe816aa3-cc35-42e8-829f-95c4590708e7",
+          "languageCode": "te",
+          "languageName": "Telugu",
+          "sourceKey": "holy-bg-telugu-w2w",
+          "sourceDisplayName": "Holy Bhagavad Gita (Telugu word meanings)",
+          "text": "యే — ఎవరైతే; తు — కానీ; సర్వాణి — సమస్త; కర్మాణి — పనులు; మయి — నాకు; సన్న్యస్య — సమర్పిస్తూ; మత్ పరః — నన్నే పరమ లక్ష్యముగా పరిగణిస్తూ; అనన్యేన — అనన్యమైన; ఏవ — ఖచ్చితముగా; యోగేన — భక్తితో; మాం — నన్ను; ధ్యాయంతః — ధ్యానము చేస్తూ; ఉపాసతే — ఆరాధిస్తారో; తేషామ్ — వారికి; అహం — నేను; సముద్ధర్తా — ఉద్ధరించేవాడిని; మృత్యు-సంసార-సాగరాత్ — జనన-మరణ సంసార సాగరము నుండి; భవామి — అగుదును; న, చిరాత్ — త్వరగానే; పార్థ — అర్జునా, ప్రిథ పుత్రుడా; మయి — నా తోటి; ఆవేశిత-చేతసామ్ — నాతోనే ఏకమైన (నాయందే లగ్నమైన) మనోబుద్ధులు కలవారికి.",
+          "isPublished": true
+        }
+      ],
+      "createdAt": "2026-07-14T08:54:05.184Z",
+      "updatedAt": "2026-07-16T06:18:56.076Z"
+    },
+    {
+      "id": "5d234009-5444-4cb3-9c41-5d131080acaf",
+      "publicId": "bg.12.7",
+      "number": 7,
+      "sanskritText": "तेषामहं समुद्धर्ता मृत्युसंसारसागरात्।भवामि नचिरात्पार्थ मय्यावेशितचेतसाम्।।12.7।।",
+      "transliteration": "teṣhām ahaṁ samuddhartā mṛityu-saṁsāra-sāgarāt\nbhavāmi na chirāt pārtha mayy āveśhita-chetasām",
+      "meaning": "तेषाम् for them; अहम् I; समुद्धर्ता the saviour; मृत्युसंसारसागरात् out of the ocean of the mortal Samsara; भवामि (I) become; नचिरात् ere long; पार्थ O Arjuna; मयि in Me; आवेशितचेतसाम् of those whose minds are set",
+      "commentary": null,
+      "seoTitle": null,
+      "seoDescription": null,
+      "sortOrder": 7,
+      "isPublished": true,
+      "chapterPublicId": "bg.12",
+      "chapterNumber": 12,
+      "workCode": "bg",
+      "translations": [
+        {
+          "id": "2029a0f6-fbb1-4164-b95c-2c53565a6870",
+          "languageCode": "en",
+          "languageName": "English",
+          "sourceKey": "sivananda",
+          "sourceDisplayName": "Swami Sivananda",
+          "text": "To those whose minds are set on Me, O Arjuna, verily I soon become the savior out of the ocean of Samsara.",
+          "isPublished": true
+        },
+        {
+          "id": "7cecea3a-e628-4989-b1db-5364e6455a4c",
+          "languageCode": "hi",
+          "languageName": "Hindi",
+          "sourceKey": "ramsukhdas",
+          "sourceDisplayName": "Swami Ramsukhdas",
+          "text": "।।12.7।।हे पार्थ ! मेरेमें आविष्ट चित्तवाले उन भक्तोंका मैं मृत्युरूप संसार-समुद्रसे शीघ्र ही उद्धार करनेवाला बन जाता हूँ।",
+          "isPublished": true
+        },
+        {
+          "id": "cc882335-c1da-405b-a409-b88bb49d672c",
+          "languageCode": "te",
+          "languageName": "Telugu",
+          "sourceKey": "holy-bg-telugu",
+          "sourceDisplayName": "Holy Bhagavad Gita (Telugu)",
+          "text": "BG 12.6-7:\n                            కానీ, తాము చేసే కర్మలన్నింటినీ నాకే సమర్పిస్తూ, నన్నే పరమ లక్ష్యముగా భావిస్తూ, నన్నే ఆరాధిస్తూ మరియు అనన్య భక్తితో నా మీదే ధ్యానం చేసే వారిని, ఓ పార్థా, నేను వారిని శీఘ్రముగానే ఈ మృత్యుసంసారసాగరము నుండి విముక్తి చేస్తాను, ఏలనన వారి అంతఃకరణ నా యందే ఏకమైపోయి ఉంటుంది.",
+          "isPublished": true
+        },
+        {
+          "id": "b36990f8-324c-49ac-b234-0275eea90156",
+          "languageCode": "te",
+          "languageName": "Telugu",
+          "sourceKey": "holy-bg-telugu-w2w",
+          "sourceDisplayName": "Holy Bhagavad Gita (Telugu word meanings)",
+          "text": "యే — ఎవరైతే; తు — కానీ; సర్వాణి — సమస్త; కర్మాణి — పనులు; మయి — నాకు; సన్న్యస్య — సమర్పిస్తూ; మత్ పరః — నన్నే పరమ లక్ష్యముగా పరిగణిస్తూ; అనన్యేన — అనన్యమైన; ఏవ — ఖచ్చితముగా; యోగేన — భక్తితో; మాం — నన్ను; ధ్యాయంతః — ధ్యానము చేస్తూ; ఉపాసతే — ఆరాధిస్తారో; తేషామ్ — వారికి; అహం — నేను; సముద్ధర్తా — ఉద్ధరించేవాడిని; మృత్యు-సంసార-సాగరాత్ — జనన-మరణ సంసార సాగరము నుండి; భవామి — అగుదును; న, చిరాత్ — త్వరగానే; పార్థ — అర్జునా, ప్రిథ పుత్రుడా; మయి — నా తోటి; ఆవేశిత-చేతసామ్ — నాతోనే ఏకమైన (నాయందే లగ్నమైన) మనోబుద్ధులు కలవారికి.",
+          "isPublished": true
+        }
+      ],
+      "createdAt": "2026-07-14T08:54:06.075Z",
+      "updatedAt": "2026-07-16T06:18:56.313Z"
+    },
+    {
+      "id": "0913d3e5-abfa-411f-ad9a-ccae03d2f610",
+      "publicId": "bg.12.8",
+      "number": 8,
+      "sanskritText": "मय्येव मन आधत्स्व मयि बुद्धिं निवेशय।निवसिष्यसि मय्येव अत ऊर्ध्वं न संशयः।।12.8।।",
+      "transliteration": "mayy eva mana ādhatsva mayi buddhiṁ niveśhaya\nnivasiṣhyasi mayy eva ata ūrdhvaṁ na sanśhayaḥ",
+      "meaning": "मयि in Me; एव only; मनः the mind; आधत्स्व fix; मयि in Me; बुद्धिम् (thy) intellect; निवेशय place; निवसिष्यसि thou shalt live; मयि in Me; एव alone; अतः ऊर्ध्वम् hereafter; न not; संशयः doubt",
+      "commentary": null,
+      "seoTitle": null,
+      "seoDescription": null,
+      "sortOrder": 8,
+      "isPublished": true,
+      "chapterPublicId": "bg.12",
+      "chapterNumber": 12,
+      "workCode": "bg",
+      "translations": [
+        {
+          "id": "cae4cf2c-25b5-400c-9834-17dbc6cbe6c1",
+          "languageCode": "en",
+          "languageName": "English",
+          "sourceKey": "sivananda",
+          "sourceDisplayName": "Swami Sivananda",
+          "text": "Fix your mind on Me, and your intellect in Me. Then you will certainly live in Me alone hereafter.",
+          "isPublished": true
+        },
+        {
+          "id": "b65adf82-c13b-4174-8de8-47bf5e98dac2",
+          "languageCode": "hi",
+          "languageName": "Hindi",
+          "sourceKey": "ramsukhdas",
+          "sourceDisplayName": "Swami Ramsukhdas",
+          "text": "।।12.8।।तू मेरेमें मनको लगा और मेरेमें ही बुद्धिको लगा; इसके बाद तू मेरेमें ही निवास करेगा -- इसमें संशय नहीं है।",
+          "isPublished": true
+        },
+        {
+          "id": "f0dd8ee2-8da6-4135-bc93-dd5425b83372",
+          "languageCode": "te",
+          "languageName": "Telugu",
+          "sourceKey": "holy-bg-telugu",
+          "sourceDisplayName": "Holy Bhagavad Gita (Telugu)",
+          "text": "నీ మనస్సుని నామీదే లగ్నం చేయుము మరియు నీ బుద్ధిని నాకు అర్పించుము. ఆ తరువాత, నీవు సర్వదా నాలోనే నివసిస్తావు. దీనిపై ఎలాంటి సంశయము వద్దు.",
+          "isPublished": true
+        },
+        {
+          "id": "770f0930-7713-439e-ba6b-da012dbd52bb",
+          "languageCode": "te",
+          "languageName": "Telugu",
+          "sourceKey": "holy-bg-telugu-w2w",
+          "sourceDisplayName": "Holy Bhagavad Gita (Telugu word meanings)",
+          "text": "మయి — నా మీద; ఏవ — మాత్రమే; మనః — మనస్సు; ఆధత్స్వ — లగ్నము చేసి; మయి — నా మీదే; బుద్ధిం — బుద్ధి; నివేశయ — అర్పించి/శరణాగతి చేసి; నివసిష్యసి — నీవు ఎప్పుడూ నివసిస్తావు; మయి — నా లో; ఏవ — మాత్రమే; అతః ఊర్ధ్వం — ఇక ఆ తరువాత; న సంశయః — సంశయము లేదు.",
+          "isPublished": true
+        },
+        {
+          "id": "8c90e14b-4fde-4970-9c96-dfdccec533a8",
+          "languageCode": "or",
+          "languageName": "Odia",
+          "sourceKey": "holy-bg-odia",
+          "sourceDisplayName": "Holy Bhagavad Gita (Odia)",
+          "text": "ତୁମର ମନକୁ କେବଳ ମୋଠାରେ କେନ୍ଦ୍ରୀଭୂତ କର ଏବଂ ବୁଦ୍ଧି ମୋତେ ସମର୍ପଣ କର । ତଦ୍ୱାରା ତୁମେ ମୋ ସହିତ ସର୍ବଦା ବାସ କରିବ, ଏଥିରେ କୌଣସି ସନ୍ଦେହ ନାହିଁ ।",
+          "isPublished": true
+        }
+      ],
+      "createdAt": "2026-07-14T08:54:07.001Z",
+      "updatedAt": "2026-07-16T06:18:56.559Z"
+    },
+    {
+      "id": "14fff028-e2da-460e-a9ba-320150eebc63",
+      "publicId": "bg.12.9",
+      "number": 9,
+      "sanskritText": "अथ चित्तं समाधातुं न शक्नोषि मयि स्थिरम्।अभ्यासयोगेन ततो मामिच्छाप्तुं धनञ्जय।।12.9।।",
+      "transliteration": "atha chittaṁ samādhātuṁ na śhaknoṣhi mayi sthiram\nabhyāsa-yogena tato mām ichchhāptuṁ dhanañjaya",
+      "meaning": "अथ if; चित्तम् the mind; समाधातुम् to fix; न not; शक्नोषि (thou) art able; मयि in Me; स्थिरम् steadily; अभ्यासयोगेन by the Yoga of constant practice; ततः them; माम् Me; इच्छ wish; आप्तुम् to reach; धनञ्जय O Arjuna",
+      "commentary": null,
+      "seoTitle": null,
+      "seoDescription": null,
+      "sortOrder": 9,
+      "isPublished": true,
+      "chapterPublicId": "bg.12",
+      "chapterNumber": 12,
+      "workCode": "bg",
+      "translations": [
+        {
+          "id": "05e75983-b853-41e0-a9a7-d64b1d9d73eb",
+          "languageCode": "en",
+          "languageName": "English",
+          "sourceKey": "sivananda",
+          "sourceDisplayName": "Swami Sivananda",
+          "text": "If you are unable to fix your mind steadily on Me, then seek to reach Me through the yoga of constant practice, O Arjuna.",
+          "isPublished": true
+        },
+        {
+          "id": "489d457c-5f57-4d7a-8f7d-d0f1cdf5a771",
+          "languageCode": "hi",
+          "languageName": "Hindi",
+          "sourceKey": "ramsukhdas",
+          "sourceDisplayName": "Swami Ramsukhdas",
+          "text": "।।12.9।।अगर तू मनको मेरेमें अचलभावसे स्थिर (अर्पण) करनेमें समर्थ नहीं है, तो हे धनञ्जय ! अभ्यासयोगके द्वारा तू मेरी प्राप्तिकी इच्छा कर।",
+          "isPublished": true
+        },
+        {
+          "id": "7c873fee-e78b-4118-8198-27c8ce4e7b20",
+          "languageCode": "te",
+          "languageName": "Telugu",
+          "sourceKey": "holy-bg-telugu-w2w",
+          "sourceDisplayName": "Holy Bhagavad Gita (Telugu word meanings)",
+          "text": "అథ — ఒకవేళ; చిత్తం — మనస్సు; సమాధాతుం — లగ్నము చేయుటకు; న శక్నోషి — నీకు సాధ్యం కాకపోతే (చేయలేకపోతే); మయి — నా యందు; స్థిరమ్ — నిశ్చలముగా; అభ్యాస-యోగేన — నిరంతర ప్రయత్నం (అభ్యాసం) ద్వారా భగవతునితో ఏకమై; తతః — అప్పుడు; మాం — నన్ను; ఇచ్చా — కోరిక; ఆప్తుం — పొందుటకు; ధనంజయ — అర్జునా, సిరి సంపదలను జయించేవాడా.",
+          "isPublished": true
+        },
+        {
+          "id": "ea1075bc-ba34-4fd0-9f4f-9758f14f6bf9",
+          "languageCode": "te",
+          "languageName": "Telugu",
+          "sourceKey": "holy-bg-telugu",
+          "sourceDisplayName": "Holy Bhagavad Gita (Telugu)",
+          "text": "ఒకవేళ నీవు మనస్సును నా యందే నిశ్చలముగా లగ్నం చేయలేకపోతే, ఓ అర్జునా, మనస్సును నిరంతరం ప్రాపంచిక విషయాల నుండి నిగ్రహిస్తూ, నన్ను భక్తితో స్మరించటడానికి అభ్యాసము చేయుము.",
+          "isPublished": true
+        },
+        {
+          "id": "1613763f-dfe3-4258-a989-843bd6be8c28",
+          "languageCode": "or",
+          "languageName": "Odia",
+          "sourceKey": "holy-bg-odia",
+          "sourceDisplayName": "Holy Bhagavad Gita (Odia)",
+          "text": "ହେ ଅର୍ଜୁନ! ଯଦି ତୁମେ ସ୍ଥିର ଭାବରେ ମୋଠାରେ ମନ ଲଗାଇ ପାରୁନାହଁ, ତାହାହେଲେ ସାଂସାରିକ ଜଞ୍ଜାଳରୁ ମନକୁ ବାରମ୍ବାର ହଟାଇ, ଭକ୍ତିର ସହିତ ମୋର ସ୍ମରଣ କରିବାର ଅଭ୍ୟାସ କର ।",
+          "isPublished": true
+        }
+      ],
+      "createdAt": "2026-07-14T08:54:07.687Z",
+      "updatedAt": "2026-07-16T06:18:56.795Z"
+    },
+    {
+      "id": "6dc17a10-40c1-4146-bf78-e24d1d5d5a5b",
+      "publicId": "bg.12.10",
+      "number": 10,
+      "sanskritText": "अभ्यासेऽप्यसमर्थोऽसि मत्कर्मपरमो भव।मदर्थमपि कर्माणि कुर्वन् सिद्धिमवाप्स्यसि।।12.10।।",
+      "transliteration": "abhyāse ’py asamartho ’si mat-karma-paramo bhava\nmad-artham api karmāṇi kurvan siddhim avāpsyasi",
+      "meaning": "अभ्यासे in practice; अपि also; असमर्थः not capable; असि (thou) art; मत्कर्मपरमः intent on doing actions for My sake; भव be; मदर्थम् for My sake; अपि also; कर्माणि actions; कुर्वन् by doing; सिद्धिम् perfection; अवाप्स्यसि thou shalt attain",
+      "commentary": null,
+      "seoTitle": null,
+      "seoDescription": null,
+      "sortOrder": 10,
+      "isPublished": true,
+      "chapterPublicId": "bg.12",
+      "chapterNumber": 12,
+      "workCode": "bg",
+      "translations": [
+        {
+          "id": "1bbbb619-9db4-4a2f-9340-db950685f8d6",
+          "languageCode": "en",
+          "languageName": "English",
+          "sourceKey": "sivananda",
+          "sourceDisplayName": "Swami Sivananda",
+          "text": "If you are unable to practice even this Abhyasa Yoga, be intent on doing actions for My sake; even by doing actions for My sake, you will attain perfection.",
+          "isPublished": true
+        },
+        {
+          "id": "32d32508-ea27-484d-bcb1-31af1afd95f3",
+          "languageCode": "hi",
+          "languageName": "Hindi",
+          "sourceKey": "ramsukhdas",
+          "sourceDisplayName": "Swami Ramsukhdas",
+          "text": "।।12.10।।अगर तू अभ्यास-(योग-) में भी असमर्थ है, तो मेरे लिये कर्म करनेके परायण हो जा। मेरे लिये कर्मोंको करता हुआ भी तू सिद्धिको प्राप्त हो जायगा।",
+          "isPublished": true
+        },
+        {
+          "id": "bd5a7bbf-6edb-452c-b8da-c04380431e6a",
+          "languageCode": "te",
+          "languageName": "Telugu",
+          "sourceKey": "holy-bg-telugu",
+          "sourceDisplayName": "Holy Bhagavad Gita (Telugu)",
+          "text": "నన్ను భక్తితో స్మరించే అభ్యాసం చేయలేకపోతే నాకోసమే పనులు చెయ్యటానికి ప్రయత్నం చేయుము. ఈ విధంగా భక్తి యుక్త సేవ చేయటం వలన నీవు పరిపూర్ణ స్థాయిని చేరుకోగలవు.",
+          "isPublished": true
+        },
+        {
+          "id": "db4520dd-e2b3-42c9-b9c0-ef5aea8db7ed",
+          "languageCode": "te",
+          "languageName": "Telugu",
+          "sourceKey": "holy-bg-telugu-w2w",
+          "sourceDisplayName": "Holy Bhagavad Gita (Telugu word meanings)",
+          "text": "అభ్యాసే — అభ్యాసములో; అపి — ఒకవేళ; అసమర్థః — అసమర్థత (అశక్యత); అసి — నీవు; మత్-కర్మ-పరమః — భక్తితో నాకోసమే పని చేయుము; భవ — ఉండుము; మత్-అర్థం — నా కోసమే; అపి — కూడా; కర్మాణి — కర్మలు; కుర్వన్ — ఆచరింపుము; సిద్ధిం — సిద్ధి (పరిపూర్ణత); అవాప్స్యసి — నీవు పొందగలవు.",
+          "isPublished": true
+        },
+        {
+          "id": "1e77a2f9-a1f4-4b60-bb65-7c2e383560b9",
+          "languageCode": "or",
+          "languageName": "Odia",
+          "sourceKey": "holy-bg-odia",
+          "sourceDisplayName": "Holy Bhagavad Gita (Odia)",
+          "text": "ତୁମେ ଯଦି ଭକ୍ତି ସହକାରେ ମୋ ସ୍ମରଣର ଅଭ୍ୟାସ କରିପାରୁନାହଁ, ତାହେଲେ କେବଳ ମୋ ନିମିତ୍ତ କର୍ମ କରିବାକୁ ଚେଷ୍ଟା କର । ଏହିପରି ମୋର ଭକ୍ତିଯୁକ୍ତ ସେବା କରି, ତୁମେ ପରିପୂର୍ଣ୍ଣତାକୁ ପ୍ରାପ୍ତ କରିପାରିବ ।",
+          "isPublished": true
+        }
+      ],
+      "createdAt": "2026-07-14T08:54:08.776Z",
+      "updatedAt": "2026-07-16T06:18:57.044Z"
+    },
+    {
+      "id": "148acaea-e980-417b-b7e1-5616d685865a",
+      "publicId": "bg.12.11",
+      "number": 11,
+      "sanskritText": "अथैतदप्यशक्तोऽसि कर्तुं मद्योगमाश्रितः।सर्वकर्मफलत्यागं ततः कुरु यतात्मवान्।।12.11।।",
+      "transliteration": "athaitad apy aśhakto ’si kartuṁ mad-yogam āśhritaḥ\nsarva-karma-phala-tyāgaṁ tataḥ kuru yatātmavān",
+      "meaning": "अथ if; एतत् this; अपि also; अशक्तः unable; असि (thou) art; कर्तुम् to do; मद्योगम् My Yoga; आश्रितः resorting to; सर्वकर्मफलत्यागम् the renunciation of the fruits of all actions; ततः then; कुरु do; यतात्मवान् selfcontrolled",
+      "commentary": null,
+      "seoTitle": null,
+      "seoDescription": null,
+      "sortOrder": 11,
+      "isPublished": true,
+      "chapterPublicId": "bg.12",
+      "chapterNumber": 12,
+      "workCode": "bg",
+      "translations": [
+        {
+          "id": "5e885289-1658-454d-87b1-5c0b7d0fb706",
+          "languageCode": "en",
+          "languageName": "English",
+          "sourceKey": "sivananda",
+          "sourceDisplayName": "Swami Sivananda",
+          "text": "If you are unable to do even this, then, resort to union with Me and renounce the fruits of all actions with self-control.",
+          "isPublished": true
+        },
+        {
+          "id": "a19ee3cc-abef-4c28-9f7f-1f3687cf4840",
+          "languageCode": "hi",
+          "languageName": "Hindi",
+          "sourceKey": "ramsukhdas",
+          "sourceDisplayName": "Swami Ramsukhdas",
+          "text": "।।12.11।।अगर मेरे योग-(समता-) के आश्रित हुआ तू इस(पूर्वश्लोकमें कहे गये साधन-) को भी करनेमें असमर्थ है, तो मन-इन्द्रियोंको वशमें करके सम्पूर्ण कर्मोंके फलका त्याग कर।",
+          "isPublished": true
+        },
+        {
+          "id": "e902aca8-9a7c-4993-9e50-146e15ee1618",
+          "languageCode": "te",
+          "languageName": "Telugu",
+          "sourceKey": "holy-bg-telugu",
+          "sourceDisplayName": "Holy Bhagavad Gita (Telugu)",
+          "text": "ఒకవేళ నీవు నా కొరకై భక్తితో పని చేయుట కూడా చేయలేకపోతే, నీ కర్మ ఫలములను త్యజించుటకు ప్రయత్నించుము మరియు ఆత్మయందే స్థితుడవై ఉండుము.",
+          "isPublished": true
+        },
+        {
+          "id": "3308460b-a032-42e2-a1d3-42b9c61e872e",
+          "languageCode": "te",
+          "languageName": "Telugu",
+          "sourceKey": "holy-bg-telugu-w2w",
+          "sourceDisplayName": "Holy Bhagavad Gita (Telugu word meanings)",
+          "text": "అథ — ఒకవేళ; ఏతత్ — ఇది; అపి — కూడా; ఆశక్తః — అశక్తుడవైతే (చేయలేకపోతే); అసి — నీవు; కర్తుమ్ — పనిచేయుట; మద్-యోగం — నా పట్ల భక్తితో; ఆశ్రితః — ఆశ్రయించి; సర్వ-కర్మ — సమస్త కర్మల (అన్ని పనుల); ఫల-త్యాగం — ఫల త్యాగము; తతః — అప్పుడు; కురు — చేయుము; యత-ఆత్మ-వాన్ — ఆత్మయందే స్థితుడవై.",
+          "isPublished": true
+        },
+        {
+          "id": "ab5c0c20-2ab9-4dbc-b11f-08ac8fb8c834",
+          "languageCode": "or",
+          "languageName": "Odia",
+          "sourceKey": "holy-bg-odia",
+          "sourceDisplayName": "Holy Bhagavad Gita (Odia)",
+          "text": "ଯଦି ତୁମେ ଭକ୍ତିର ସହିତ କର୍ମ କରିବାକୁ ମଧ୍ୟ ଅକ୍ଷମ, ତେବେ କର୍ମଫଳ ତ୍ୟାଗ କରିବାକୁ ଚେଷ୍ଟା କର ଏବଂ ଆତ୍ମାରେ ସ୍ଥିତ ହୁଅ ।",
+          "isPublished": true
+        }
+      ],
+      "createdAt": "2026-07-14T08:54:09.492Z",
+      "updatedAt": "2026-07-16T06:18:57.464Z"
+    },
+    {
+      "id": "5b1598e8-19f5-4afd-a67e-792aa977e8af",
+      "publicId": "bg.12.12",
+      "number": 12,
+      "sanskritText": "श्रेयो हि ज्ञानमभ्यासाज्ज्ञानाद्ध्यानं विशिष्यते।ध्यानात्कर्मफलत्यागस्त्यागाच्छान्तिरनन्तरम्।।12.12।।",
+      "transliteration": "śhreyo hi jñānam abhyāsāj jñānād dhyānaṁ viśhiṣhyate\ndhyānāt karma-phala-tyāgas tyāgāch chhāntir anantaram",
+      "meaning": "श्रेयः better; हि indeed; ज्ञानम् knowledge; अभ्यासात् than practice; ज्ञानात् than knowledge; ध्यानम् meditation; विशिष्यते excels; ध्यानात् than meditation; कर्मफलत्यागः the renunciation of the fruits of actions; त्यागात् from renunciation; शान्तिः peace; अनन्तरम् immediately",
+      "commentary": null,
+      "seoTitle": null,
+      "seoDescription": null,
+      "sortOrder": 12,
+      "isPublished": true,
+      "chapterPublicId": "bg.12",
+      "chapterNumber": 12,
+      "workCode": "bg",
+      "translations": [
+        {
+          "id": "259eff65-a0a6-4abe-b341-8cf6ae68d26e",
+          "languageCode": "en",
+          "languageName": "English",
+          "sourceKey": "sivananda",
+          "sourceDisplayName": "Swami Sivananda",
+          "text": "Better indeed is knowledge than practice; better than knowledge is meditation; better than meditation is the renunciation of the fruits of actions: peace immediately follows renunciation.",
+          "isPublished": true
+        },
+        {
+          "id": "51d8ca3d-fdcc-4a05-949e-56cdb5de36df",
+          "languageCode": "hi",
+          "languageName": "Hindi",
+          "sourceKey": "ramsukhdas",
+          "sourceDisplayName": "Swami Ramsukhdas",
+          "text": "।।12.12।।अभ्याससे शास्त्रज्ञान श्रेष्ठ है, शास्त्रज्ञानसे ध्यान श्रेष्ठ है और ध्यानसे भी सब कर्मोंके फलका त्याग श्रेष्ठ है। कर्मफलत्यागसे तत्काल ही परमशान्ति प्राप्त हो जाती है।",
+          "isPublished": true
+        },
+        {
+          "id": "c7591ebc-2ea6-49c0-bf5e-76ac3a790015",
+          "languageCode": "te",
+          "languageName": "Telugu",
+          "sourceKey": "holy-bg-telugu",
+          "sourceDisplayName": "Holy Bhagavad Gita (Telugu)",
+          "text": "యాంత్రికమైన అభ్యాసము కంటే జ్ఞానము మంచిది; జ్ఞానము కంటే ధ్యానము శ్రేష్ఠమయినది. ధ్యానము కంటే కర్మ ఫల త్యాగము మెరుగైనది, ఎందుకంటే ఇటువంటి త్యాగము చేసిన వెంటనే శాంతి లభించును.",
+          "isPublished": true
+        },
+        {
+          "id": "51af6c23-a047-4d80-8e1e-13d94cad86fa",
+          "languageCode": "te",
+          "languageName": "Telugu",
+          "sourceKey": "holy-bg-telugu-w2w",
+          "sourceDisplayName": "Holy Bhagavad Gita (Telugu word meanings)",
+          "text": "శ్రేయః — శ్రేష్ఠతరమైనది; హి — నిజముగా; జ్ఞానం — జ్ఞానము; అభ్యాసాత్ — (యాంత్రికమైన) అభ్యాసము కంటే; జ్ఞానాత్ — జ్ఞానము కంటే; ధ్యానం — ధ్యానము; విశిష్యతే — శ్రేష్ఠమయినది; ధ్యానాత్ — ధ్యానము కంటే; కర్మ-ఫల-త్యాగః — కర్మ ఫలముల త్యాగము; త్యాగాత్ — త్యాగము; శాంతిః — శాంతి; అనంతరమ్ — తక్షణమే.",
+          "isPublished": true
+        },
+        {
+          "id": "86884cf7-4532-4383-b8cf-c389bc62c5a8",
+          "languageCode": "or",
+          "languageName": "Odia",
+          "sourceKey": "holy-bg-odia",
+          "sourceDisplayName": "Holy Bhagavad Gita (Odia)",
+          "text": "ଯାନ୍ତ୍ରିକ ଅଭ୍ୟାସ ଅପେକ୍ଷା ଶ୍ରେଷ୍ଠ ଜ୍ଞାନ ଅଟେ; ଜ୍ଞାନ ଠାରୁ ଧ୍ୟାନ ଶ୍ରେଷ୍ଠ ଏବଂ ଧ୍ୟାନ ଠାରୁ ଶ୍ରେଷ୍ଠ କର୍ମଫଳ ତ୍ୟାଗ ଅଟେ, କାରଣ ତ୍ୟାଗ ଦ୍ୱାରା ଶାନ୍ତି ସ୍ୱତଃ ପ୍ରାପ୍ତ ହୁଏ ।",
+          "isPublished": true
+        }
+      ],
+      "createdAt": "2026-07-14T08:54:10.330Z",
+      "updatedAt": "2026-07-16T06:18:57.727Z"
+    },
+    {
+      "id": "c3d34901-aec7-414f-b1c7-36033000937c",
+      "publicId": "bg.12.13",
+      "number": 13,
+      "sanskritText": "अद्वेष्टा सर्वभूतानां मैत्रः करुण एव च।निर्ममो निरहङ्कारः समदुःखसुखः क्षमी।।12.13।।",
+      "transliteration": "adveṣhṭā sarva-bhūtānāṁ maitraḥ karuṇa eva cha\nnirmamo nirahankāraḥ sama-duḥkha-sukhaḥ kṣhamī",
+      "meaning": "अद्वेष्टा nonhater; सर्वभूतानाम् of (to) all creatures; मैत्रः friendly; करुणः compassionate; एव even; च and; निर्ममः without mineness; निरहङ्कारः without egoism; समदुःखसुखः balanced in pleasure and pain; क्षमी forgiving",
+      "commentary": null,
+      "seoTitle": null,
+      "seoDescription": null,
+      "sortOrder": 13,
+      "isPublished": true,
+      "chapterPublicId": "bg.12",
+      "chapterNumber": 12,
+      "workCode": "bg",
+      "translations": [
+        {
+          "id": "2a8948dc-faa5-4052-805b-8968e5ad74f4",
+          "languageCode": "en",
+          "languageName": "English",
+          "sourceKey": "sivananda",
+          "sourceDisplayName": "Swami Sivananda",
+          "text": "He who hates no creature, is friendly and compassionate to all, is free from attachment and egoism, is balanced in pleasure and pain, and is forgiving.",
+          "isPublished": true
+        },
+        {
+          "id": "e61fdb60-2da7-434b-a0a9-56d6d4b4b4b1",
+          "languageCode": "hi",
+          "languageName": "Hindi",
+          "sourceKey": "ramsukhdas",
+          "sourceDisplayName": "Swami Ramsukhdas",
+          "text": "।।12.13।।सब प्राणियोंमें द्वेषभावसे रहित, सबका मित्र (प्रेमी) और दयालु, ममतारहित, अहंकाररहित, सुखदुःखकी प्राप्तिमें सम, क्षमाशील, निरन्तर सन्तुष्ट, योगी, शरीरको वशमें किये हुए, दृढ़ निश्चयवाला? मेरेमें अर्पित मनबुद्धिवाला जो मेरा भक्त है, वह मेरेको प्रिय है।",
+          "isPublished": true
+        },
+        {
+          "id": "971086f0-c40c-4f96-8b52-b0edbff68f47",
+          "languageCode": "te",
+          "languageName": "Telugu",
+          "sourceKey": "holy-bg-telugu",
+          "sourceDisplayName": "Holy Bhagavad Gita (Telugu)",
+          "text": "BG 12.13-14:\n                            ఏ భక్తులైతే, సమస్త ప్రాణుల పట్ల ద్వేషభావన లేకుండా, మైత్రితో/స్నేహపూరితముగా, మరియు కారుణ్యముతో ఉంటారో, వారు నాకు చాలా ప్రియమైన వారు. వారు ఆస్తి/ధనముపై మమకార/ఆసక్తి రహితముగా ఉంటారు మరియు అహంకారము లేకుండా, సుఖ-దుఃఖముల రెండింటి యందు ఒకే విధంగా ఉంటారు మరియు సర్వదా క్షమించే మనస్సుతో ఉంటారు. వారు ఎల్లప్పుడూ తృప్తితో, భక్తితో నాతోనే ఏకమై, ఆత్మ-నిగ్రహంతో, దృఢ-సంకల్పంతో, మరియు మనోబుద్ధులను నాకే అర్పించి ఉంటారు.",
+          "isPublished": true
+        },
+        {
+          "id": "52904956-9beb-4eb7-8d1e-903b1db24910",
+          "languageCode": "te",
+          "languageName": "Telugu",
+          "sourceKey": "holy-bg-telugu-w2w",
+          "sourceDisplayName": "Holy Bhagavad Gita (Telugu word meanings)",
+          "text": "అద్వేష్టా — ద్వేష భావము లేకుండా; సర్వ-భూతానాం — సమస్త ప్రాణుల పట్ల; మైత్రః — మైత్రీ భావము; కరుణ — కారుణ్యము; ఏవ — నిజముగా; చ — మరియు; నిర్మమః — ప్రాపంచిక వస్తువిషయములపై మమకార/ఆసక్తి లేకుండా; నిరహంకారః — అహంకార రహితముగా; సమ — సమత్వ బుద్ధితో; దుఃఖ — దుఃఖములు/కష్టాలు; సుఖః — సుఖములు; క్షమీ — క్షమాగుణము కలిగి; సంతుష్టః — తృప్తితో ఉంటూ; సతతం — ఎల్లప్పుడూ; యోగీ — భక్తితో ఏకమై; యత-ఆత్మా — ఆత్మ-నిగ్రహము కలిగి; దృఢ-నిశ్చయః — దృఢసంకల్పము/నిశ్చయముతో; మయి — నాకు; అర్పిత — అర్పితము చేసి; మనః — మనస్సు; బుద్ధిః — బుద్ధి; యః — ఎవరైతే; మత్-భక్తః — నా భక్తులు; సః — వారు; మే — నాకు; ప్రియః — చాలా ప్రియమైనవారు.",
+          "isPublished": true
+        }
+      ],
+      "createdAt": "2026-07-14T08:54:11.122Z",
+      "updatedAt": "2026-07-16T06:18:57.968Z"
+    },
+    {
+      "id": "ba69d0e8-ff54-4233-bd72-6219ecf90526",
+      "publicId": "bg.12.14",
+      "number": 14,
+      "sanskritText": "सन्तुष्टः सततं योगी यतात्मा दृढनिश्चयः।मय्यर्पितमनोबुद्धिर्यो मद्भक्तः स मे प्रियः।।12.14।।",
+      "transliteration": "santuṣhṭaḥ satataṁ yogī yatātmā dṛiḍha-niśhchayaḥ\nmayy arpita-mano-buddhir yo mad-bhaktaḥ sa me priyaḥ",
+      "meaning": "सन्तुष्टः contented; सततम् ever; योगी Yogi; यतात्मा selfcontrolled; दृढनिश्चयः possessed of firm,conviction; मयि अर्पितमनोबुद्धिः with mind and intellect dedicated to Me; यः who; मद्भक्तः My devotee; सः he; मे to Me; प्रियः dear",
+      "commentary": null,
+      "seoTitle": null,
+      "seoDescription": null,
+      "sortOrder": 14,
+      "isPublished": true,
+      "chapterPublicId": "bg.12",
+      "chapterNumber": 12,
+      "workCode": "bg",
+      "translations": [
+        {
+          "id": "915cff3a-5fe4-4cd5-a62b-403bea7ec838",
+          "languageCode": "en",
+          "languageName": "English",
+          "sourceKey": "sivananda",
+          "sourceDisplayName": "Swami Sivananda",
+          "text": "Ever content, steady in meditation, self-controlled, possessing firm conviction, with the mind and intellect dedicated to Me, he, My devotee, is dear to Me.",
+          "isPublished": true
+        },
+        {
+          "id": "c158ed9b-c404-4891-99bb-d32ebfcf03c5",
+          "languageCode": "hi",
+          "languageName": "Hindi",
+          "sourceKey": "ramsukhdas",
+          "sourceDisplayName": "Swami Ramsukhdas",
+          "text": "।।12.14।।सब प्राणियोंमें द्वेषभावसे रहित, सबका मित्र (प्रेमी) और दयालु, ममतारहित, अहंकाररहित, सुखदुःखकी प्राप्तिमें सम, क्षमाशील, निरन्तर सन्तुष्ट,योगी, शरीरको वशमें किये हुए, दृढ़ निश्चयवाला, मेरेमें अर्पित मन-बुद्धिवाला जो मेरा भक्त है, वह मेरेको प्रिय है।",
+          "isPublished": true
+        },
+        {
+          "id": "9dc54ce1-90e7-4d9b-982b-3ecc728d375c",
+          "languageCode": "te",
+          "languageName": "Telugu",
+          "sourceKey": "holy-bg-telugu",
+          "sourceDisplayName": "Holy Bhagavad Gita (Telugu)",
+          "text": "BG 12.13-14:\n                            ఏ భక్తులైతే, సమస్త ప్రాణుల పట్ల ద్వేషభావన లేకుండా, మైత్రితో/స్నేహపూరితముగా, మరియు కారుణ్యముతో ఉంటారో, వారు నాకు చాలా ప్రియమైన వారు. వారు ఆస్తి/ధనముపై మమకార/ఆసక్తి రహితముగా ఉంటారు మరియు అహంకారము లేకుండా, సుఖ-దుఃఖముల రెండింటి యందు ఒకే విధంగా ఉంటారు మరియు సర్వదా క్షమించే మనస్సుతో ఉంటారు. వారు ఎల్లప్పుడూ తృప్తితో, భక్తితో నాతోనే ఏకమై, ఆత్మ-నిగ్రహంతో, దృఢ-సంకల్పంతో, మరియు మనోబుద్ధులను నాకే అర్పించి ఉంటారు.",
+          "isPublished": true
+        },
+        {
+          "id": "96f5da86-a21e-4f3b-af0c-8bba37a2d300",
+          "languageCode": "te",
+          "languageName": "Telugu",
+          "sourceKey": "holy-bg-telugu-w2w",
+          "sourceDisplayName": "Holy Bhagavad Gita (Telugu word meanings)",
+          "text": "అద్వేష్టా — ద్వేష భావము లేకుండా; సర్వ-భూతానాం — సమస్త ప్రాణుల పట్ల; మైత్రః — మైత్రీ భావము; కరుణ — కారుణ్యము; ఏవ — నిజముగా; చ — మరియు; నిర్మమః — ప్రాపంచిక వస్తువిషయములపై మమకార/ఆసక్తి లేకుండా; నిరహంకారః — అహంకార రహితముగా; సమ — సమత్వ బుద్ధితో; దుఃఖ — దుఃఖములు/కష్టాలు; సుఖః — సుఖములు; క్షమీ — క్షమాగుణము కలిగి; సంతుష్టః — తృప్తితో ఉంటూ; సతతం — ఎల్లప్పుడూ; యోగీ — భక్తితో ఏకమై; యత-ఆత్మా — ఆత్మ-నిగ్రహము కలిగి; దృఢ-నిశ్చయః — దృఢసంకల్పము/నిశ్చయముతో; మయి — నాకు; అర్పిత — అర్పితము చేసి; మనః — మనస్సు; బుద్ధిః — బుద్ధి; యః — ఎవరైతే; మత్-భక్తః — నా భక్తులు; సః — వారు; మే — నాకు; ప్రియః — చాలా ప్రియమైనవారు.",
+          "isPublished": true
+        }
+      ],
+      "createdAt": "2026-07-14T08:54:11.969Z",
+      "updatedAt": "2026-07-16T06:18:58.208Z"
+    },
+    {
+      "id": "5d240053-7320-429a-b4b4-aa5ce94acf91",
+      "publicId": "bg.12.15",
+      "number": 15,
+      "sanskritText": "यस्मान्नोद्विजते लोको लोकान्नोद्विजते च यः।हर्षामर्षभयोद्वेगैर्मुक्तो यः स च मे प्रियः।।12.15।।",
+      "transliteration": "yasmān nodvijate loko lokān nodvijate cha yaḥ\nharṣhāmarṣha-bhayodvegair mukto yaḥ sa cha me priyaḥ",
+      "meaning": "यस्मात् for whom; न not; उद्विजते is agitated; लोकः the world; लोकात् from the world; न not; उद्विजते is agitated; च and; यः who; हर्षामर्षभयोद्वेगैः by (from) joy; wrath; fear and anxiety; मुक्तः freed; यः who; सः he; च and; मे to Me; प्रियः dear",
+      "commentary": null,
+      "seoTitle": null,
+      "seoDescription": null,
+      "sortOrder": 15,
+      "isPublished": true,
+      "chapterPublicId": "bg.12",
+      "chapterNumber": 12,
+      "workCode": "bg",
+      "translations": [
+        {
+          "id": "5d74de1d-c1e1-4e4c-ab9e-67e5cfa395d5",
+          "languageCode": "en",
+          "languageName": "English",
+          "sourceKey": "sivananda",
+          "sourceDisplayName": "Swami Sivananda",
+          "text": "He whom the world does not agitate, and who cannot be agitated by the world, and who is freed from joy, anger, fear, and anxiety—he is dear to Me.",
+          "isPublished": true
+        },
+        {
+          "id": "9018a576-55b4-452e-adb8-9ea71eb9e126",
+          "languageCode": "hi",
+          "languageName": "Hindi",
+          "sourceKey": "ramsukhdas",
+          "sourceDisplayName": "Swami Ramsukhdas",
+          "text": "।।12.15।।जिससे किसी प्राणीको उद्वेग नहीं होता और जिसको खुद भी किसी प्राणीसे उद्वेग नहीं होता तथा जो हर्ष, अमर्ष (ईर्ष्या), भय और उद्वेगसे रहित है, वह मुझे प्रिय है।",
+          "isPublished": true
+        },
+        {
+          "id": "51fcf5f5-7797-43df-8ef4-d0f9172840de",
+          "languageCode": "te",
+          "languageName": "Telugu",
+          "sourceKey": "holy-bg-telugu",
+          "sourceDisplayName": "Holy Bhagavad Gita (Telugu)",
+          "text": "లోకమున ఎవ్వరినీ బాధ(క్షోభ) పెట్టని వాడు మరియు ఎవరి చేత ఉద్వేగమునకు గురి కాని వాడు, సుఖాల్లో-బాధల్లో ఒక్కలాగే ఉంటూ, మరియు భయము, ఆందోళన రహితముగా ఉన్నటువంటి నా భక్తులు నాకు చాలా ప్రియమైన వారు.",
+          "isPublished": true
+        },
+        {
+          "id": "8b24b043-3e41-4621-8f66-176ba3a41048",
+          "languageCode": "te",
+          "languageName": "Telugu",
+          "sourceKey": "holy-bg-telugu-w2w",
+          "sourceDisplayName": "Holy Bhagavad Gita (Telugu word meanings)",
+          "text": "యస్మాత్ — ఎవరిచే కూడా; న ఉద్విజతే — ఉద్వేగమునకు గురి కాకుండా; లోకః — జనులు; లోకాత్ — జనుల చేత; న ఉద్విజతే — ఉద్రేకపడకుండా; చ — మరియు; యః — ఎవరైతే; హర్ష — సంతోషము; అమర్ష — బాధ; భయ — భయము; ఉద్వేగః — ఆందోళన; ముక్తః — లేకుండా; యః — ఎవరైతే; సః — వారు; చ — మరియు; మే — నాకు; ప్రియః — చాలా ప్రియమైనవారు.",
+          "isPublished": true
+        },
+        {
+          "id": "5daee9d6-0098-45ef-bfde-438f1c8bf055",
+          "languageCode": "or",
+          "languageName": "Odia",
+          "sourceKey": "holy-bg-odia",
+          "sourceDisplayName": "Holy Bhagavad Gita (Odia)",
+          "text": "ଯେଉଁମାନେ ଅନ୍ୟମାନଙ୍କ ଅସନ୍ତୋଷର କାରଣ ନୁହଁନ୍ତି, ଯେଉଁମାନେ କାହା ଦ୍ୱାରା ଉତ୍ତେଜିତ ହୁଅନ୍ତି ନାହିଁ, ଯେଉଁମାନେ ହର୍ଷ-ବିଷାଦ ଏବଂ ଭୟ ଓ ଉତ୍କଣ୍ଠାରୁ ମୁକ୍ତ ରହନ୍ତି, ସେହିପରି ଭକ୍ତମାନେ ମୋର ଅତ୍ୟନ୍ତ ପ୍ରିୟ ଅଟନ୍ତି ।",
+          "isPublished": true
+        }
+      ],
+      "createdAt": "2026-07-14T08:54:12.895Z",
+      "updatedAt": "2026-07-16T06:18:58.512Z"
+    },
+    {
+      "id": "3cd19eda-9f53-4632-b1ce-8d511c444d14",
+      "publicId": "bg.12.16",
+      "number": 16,
+      "sanskritText": "अनपेक्षः शुचिर्दक्ष उदासीनो गतव्यथः।सर्वारम्भपरित्यागी यो मद्भक्तः स मे प्रियः।।12.16।।",
+      "transliteration": "anapekṣhaḥ śhuchir dakṣha udāsīno gata-vyathaḥ\nsarvārambha-parityāgī yo mad-bhaktaḥ sa me priyaḥ",
+      "meaning": "अनपेक्षः (he who is) free from wants; शुचिः pure; दक्षः expert; उदासीनः unconcerned; गतव्यथः free from pain; सर्वारम्भपरित्यागी renouncing all undertakings or commencements; यः who; मद्भक्तः My,devotee; सः he; मे to Me; प्रियः dear",
+      "commentary": null,
+      "seoTitle": null,
+      "seoDescription": null,
+      "sortOrder": 16,
+      "isPublished": true,
+      "chapterPublicId": "bg.12",
+      "chapterNumber": 12,
+      "workCode": "bg",
+      "translations": [
+        {
+          "id": "394939ad-ea4e-424e-a9a1-d9017c9064f8",
+          "languageCode": "en",
+          "languageName": "English",
+          "sourceKey": "sivananda",
+          "sourceDisplayName": "Swami Sivananda",
+          "text": "He who is free from wants, pure, expert, unconcerned, and free from pain, renouncing all undertakings and commencements, he who is devoted to Me is dear to Me.",
+          "isPublished": true
+        },
+        {
+          "id": "9ba5adcf-a7de-4e4d-a9a6-6d53388b1fd2",
+          "languageCode": "hi",
+          "languageName": "Hindi",
+          "sourceKey": "ramsukhdas",
+          "sourceDisplayName": "Swami Ramsukhdas",
+          "text": "।।12.16।।जो आकाङ्क्षासे रहित, बाहर-भीतरसे पवित्र, दक्ष, उदासीन, व्यथासे रहित और सभी आरम्भोंका अर्थात् नये-नये कर्मोंके आरम्भका सर्वथा त्यागी है, वह मेरा भक्त मुझे प्रिय है।",
+          "isPublished": true
+        },
+        {
+          "id": "19171ad3-54b4-4c14-8867-9029ec6f4329",
+          "languageCode": "te",
+          "languageName": "Telugu",
+          "sourceKey": "holy-bg-telugu",
+          "sourceDisplayName": "Holy Bhagavad Gita (Telugu)",
+          "text": "ప్రాపంచిక లాభముల పట్ల అనాసక్తతతో ఉండి, బాహ్యాంతరములలో పవిత్రంగా ఉండి, దక్షతతో, ఉదాసీనంగా, కలతలు లేకుండా, మరియు అన్ని వ్యవహారములలో స్వార్థచింతన లేకుండా ఉన్నటువంటి నా భక్తులు నాకు చాలా ప్రియమైన వారు.",
+          "isPublished": true
+        },
+        {
+          "id": "caaaf51c-357e-452b-bfce-6363fd0b23f2",
+          "languageCode": "te",
+          "languageName": "Telugu",
+          "sourceKey": "holy-bg-telugu-w2w",
+          "sourceDisplayName": "Holy Bhagavad Gita (Telugu word meanings)",
+          "text": "అనపేక్షః — ప్రాపంచిక లాభాల పట్ల అనాసక్తత ఉండి; శుచిః — స్వచ్ఛముగా; దక్షః — నేర్పుగల; ఉదాసీనః — ఉదాసీనంగా (చింతలేకుండా); గత-వ్యథః — కలతలు లేకుండా; సర్వ-ఆరంభ — అన్ని ప్రయత్నములను; పరిత్యాగీ — పరిత్యజించిన వాడై; సః — ఎవరైతే; మత్-భక్తః — నా భక్తుడు; సః — అతడు; మే — నాకు; ప్రియః — చాలా ప్రియమైన వాడు.",
+          "isPublished": true
+        },
+        {
+          "id": "3c4726a5-a6aa-4c77-a23b-f566634d82f6",
+          "languageCode": "or",
+          "languageName": "Odia",
+          "sourceKey": "holy-bg-odia",
+          "sourceDisplayName": "Holy Bhagavad Gita (Odia)",
+          "text": "ଯେଉଁମାନେ ସାଂସାରିକ ଲାଭ ପ୍ରତି ନିର୍ଲିପ୍ତ, ବାହ୍ୟ ଏବଂ ଅଭ୍ୟନ୍ତରରେ ପବିତ୍ର, ଦକ୍ଷ, ନିଶ୍ଚିନ୍ତ, ଅବିଚଳିତ ଏବଂ ସମସ୍ତ ପ୍ରଯତ୍ନରେ ସ୍ୱାର୍ଥରହିତ ଥାଆନ୍ତି, ସେହି ଭକ୍ତମାନେ ମୋର ଅତ୍ୟନ୍ତ ପ୍ରିୟ ଅଟନ୍ତି ।",
+          "isPublished": true
+        }
+      ],
+      "createdAt": "2026-07-14T08:54:13.761Z",
+      "updatedAt": "2026-07-16T06:18:58.762Z"
+    },
+    {
+      "id": "3fda8595-7e31-47dc-a62a-62f837e9fac7",
+      "publicId": "bg.12.17",
+      "number": 17,
+      "sanskritText": "यो न हृष्यति न द्वेष्टि न शोचति न काङ्क्षति।शुभाशुभपरित्यागी भक्तिमान्यः स मे प्रियः।।12.17।।",
+      "transliteration": "yo na hṛiṣhyati na dveṣhṭi na śhochati na kāṅkṣhati\nśhubhāśhubha-parityāgī bhaktimān yaḥ sa me priyaḥ",
+      "meaning": "यः who; न not; हृष्यति rejoices; न not; द्वेष्टि hates; न not; शोचति grieves; न not; काङ्क्षति desires; शुभाशुभपरित्यागी renouncing good and evil; भक्तिमान् full of devotion; यः who; सः he; मे to Me; प्रियः dear",
+      "commentary": null,
+      "seoTitle": null,
+      "seoDescription": null,
+      "sortOrder": 17,
+      "isPublished": true,
+      "chapterPublicId": "bg.12",
+      "chapterNumber": 12,
+      "workCode": "bg",
+      "translations": [
+        {
+          "id": "c38e9be4-c765-43f4-8b25-b13381e0e116",
+          "languageCode": "en",
+          "languageName": "English",
+          "sourceKey": "sivananda",
+          "sourceDisplayName": "Swami Sivananda",
+          "text": "He who neither rejoices nor hates, nor grieves nor desires, renouncing both good and evil, and who is full of devotion, is dear to Me.",
+          "isPublished": true
+        },
+        {
+          "id": "b0362cfb-9b2e-4d1b-bab9-754740d77490",
+          "languageCode": "hi",
+          "languageName": "Hindi",
+          "sourceKey": "ramsukhdas",
+          "sourceDisplayName": "Swami Ramsukhdas",
+          "text": "।।12.17।।जो न कभी हर्षित होता है, न द्वेष करता है, न शोक करता है, न कामना करता है और जो शुभ-अशुभ कर्मोंमें राग-द्वेषका त्यागी है, वह भक्तिमान् मनुष्य मुझे प्रिय है।",
+          "isPublished": true
+        },
+        {
+          "id": "4c28629c-aea2-478c-9a05-a89524b826b9",
+          "languageCode": "te",
+          "languageName": "Telugu",
+          "sourceKey": "holy-bg-telugu",
+          "sourceDisplayName": "Holy Bhagavad Gita (Telugu)",
+          "text": "ఎవరైతే లౌకిక సుఖాల పట్ల ఆనందించకుండా మరియు ప్రాపంచిక కష్టాల పట్ల బాధ పడకుండా ఉంటారో, ఎవరైతే నష్టం జరిగినా బాధ పడరో లేదా లాభం కోసం ప్రాకులాడరో, శుభ-అశుభ పనులను రెంటినీ త్యజిస్తారో, అటువంటి జనులు, భక్తితో నిండి ఉన్న వారు నాకు చాలా ప్రియమైనవారు.",
+          "isPublished": true
+        },
+        {
+          "id": "fc0ce327-eb14-4aa0-b9dd-e3bff50ed961",
+          "languageCode": "te",
+          "languageName": "Telugu",
+          "sourceKey": "holy-bg-telugu-w2w",
+          "sourceDisplayName": "Holy Bhagavad Gita (Telugu word meanings)",
+          "text": "యః — ఎవరైతే; న హృష్యతి — ఆనందపడరు; న ద్వేష్టి — నిరాశ చెందరు; న శోచతి — దుఃఖించరు; న కాంక్షతి — లాభంకోసం ఆశపడరో; శుభ-అశుభ-పరిత్యాగీ — శుభ అశుభములు పరిత్యజించి; భక్తి-మాన్ — భక్తితో నిండి; యః — ఎవరైతే; సః — ఆ వ్యక్తి ; మే — నాకు; ప్రియః — చాలా ప్రియమైన.",
+          "isPublished": true
+        },
+        {
+          "id": "a6dae7c5-95fa-46f9-b99c-00628ef13da9",
+          "languageCode": "or",
+          "languageName": "Odia",
+          "sourceKey": "holy-bg-odia",
+          "sourceDisplayName": "Holy Bhagavad Gita (Odia)",
+          "text": "ଯେଉଁମାନେ ଦୈନନ୍ଦିନ ଜୀବନରେ ଖୁସିରେ ଆତ୍ମହରା ହୁଅନ୍ତି ନାହିଁ, କିମ୍ବା ଦୁଃଖରେ ମର୍ମାହତ ହୁଅନ୍ତି ନାହିଁ; ଯେଉଁମାନେ କୌଣସି କ୍ଷତିରେ ପଶ୍ଚାତାପ କରନ୍ତି ନାହିଁ ବା କୌଣସି ଲାଭ ପାଇଁ ଲାଳାୟିତ ହୁଅନ୍ତି ନାହିଁ; ଯେଉଁମାନେ ଉଭୟ ଭଲ ଓ ମନ୍ଦ କର୍ମକୁ ତ୍ୟାଗ କରିଥାନ୍ତି, ଏବଂ ଯେଉଁମାନେ ପୂର୍ଣ୍ଣ ଭକ୍ତିଯୁକ୍ତ ରହନ୍ତି, ସେମାନେ ମୋର ଅତ୍ୟନ୍ତ ପ୍ରିୟ ଅଟନ୍ତି ।",
+          "isPublished": true
+        }
+      ],
+      "createdAt": "2026-07-14T08:54:14.988Z",
+      "updatedAt": "2026-07-16T06:18:59.001Z"
+    },
+    {
+      "id": "a2cef7c4-9a2a-41cd-be00-78f62079b1f4",
+      "publicId": "bg.12.18",
+      "number": 18,
+      "sanskritText": "समः शत्रौ च मित्रे च तथा मानापमानयोः।शीतोष्णसुखदुःखेषु समः सङ्गविवर्जितः।।12.18।।",
+      "transliteration": "samaḥ śhatrau cha mitre cha tathā mānāpamānayoḥ\nśhītoṣhṇa-sukha-duḥkheṣhu samaḥ saṅga-vivarjitaḥ",
+      "meaning": "समः (he who is) the same; शत्रौ to foe; च and; मित्रे to friend; च and; तथा also; मानापमानयोः in honour and dishonour; शीतोष्णसुखदुःखेषु in cold and heat; in pleasure and pain; समः the same; सङ्गविवर्जितः free from attachment",
+      "commentary": null,
+      "seoTitle": null,
+      "seoDescription": null,
+      "sortOrder": 18,
+      "isPublished": true,
+      "chapterPublicId": "bg.12",
+      "chapterNumber": 12,
+      "workCode": "bg",
+      "translations": [
+        {
+          "id": "8f934818-45e7-4db3-8715-c83d5180018d",
+          "languageCode": "en",
+          "languageName": "English",
+          "sourceKey": "sivananda",
+          "sourceDisplayName": "Swami Sivananda",
+          "text": "He who is the same to foe and friend, and also in honor and dishonor, who is the same in cold and heat, in pleasure and pain, and who is free from attachment.",
+          "isPublished": true
+        },
+        {
+          "id": "ed4230bc-1faf-4dee-87f6-8d6aea10cb7a",
+          "languageCode": "hi",
+          "languageName": "Hindi",
+          "sourceKey": "ramsukhdas",
+          "sourceDisplayName": "Swami Ramsukhdas",
+          "text": "।।12.18।।जो शत्रु और मित्रमें तथा मान-अपमानमें सम है और शीत-उष्ण (अनुकूलता-प्रतिकूलता) तथा सुख-दुःखमें सम है एवं आसक्तिसे रहित है, और जो निन्दास्तुतिको समान समझनेवाला, मननशील, जिस-किसी प्रकारसे भी (शरीरका निर्वाह होनेमें) संतुष्ट, रहनेके स्थान तथा शरीरमें ममता-आसक्तिसे रहित और स्थिर बुद्धिवाला है, वह भक्तिमान् मनुष्य मुझे प्रिय है।",
+          "isPublished": true
+        },
+        {
+          "id": "856d100d-65ff-4596-95be-63db7a7685a6",
+          "languageCode": "te",
+          "languageName": "Telugu",
+          "sourceKey": "holy-bg-telugu",
+          "sourceDisplayName": "Holy Bhagavad Gita (Telugu)",
+          "text": "BG 12.18-19:\n                            ఎవరైతే, మిత్రులపట్ల మరియు శత్రువుల పట్ల ఒక్కలాగే ఉంటారో, గౌరవము-అపమానముల ఎడ, చలి-వేడిమి పట్ల, సుఖ-దుఖఃముల పట్ల సమబుద్ధితో ఉంటారో, మరియు చెడు సాంగత్యమును విడిచి ఉంటారో; దూషణ మరియు పొగడ్తని ఒక్కలాగే తీసుకుంటారో, మౌనముగా చింతన చేస్తుంటారో, తమకు లభించిన దానితో తృప్తిగా ఉంటారో, నివాసస్థానము పట్ల మమకారాసక్తి లేకుండా ఉంటారో, ఎవరి బుద్ధి స్థిరముగా నా యందే లగ్నమై ఉన్నదో, మరియు ఎవరైతే నాయందు భక్తితో నిండిపోయి ఉన్నారో, అటువంటి వ్యక్తులు నాకు చాలా ప్రియమైనవారు.",
+          "isPublished": true
+        },
+        {
+          "id": "4a0674f4-cc60-441d-88e3-8777d53014e2",
+          "languageCode": "te",
+          "languageName": "Telugu",
+          "sourceKey": "holy-bg-telugu-w2w",
+          "sourceDisplayName": "Holy Bhagavad Gita (Telugu word meanings)",
+          "text": "సమః — ఒకేలాగా; శత్రౌ — శత్రువు పట్ల; చ — మరియు; మిత్రే — మిత్రుని పట్ల; చ తథా — మరియు ఇంకా; మాన-అపమానయోః — గౌరవము, అపమానముల యందు; శీత-ఉష్ణ — చలి మరియు వేడిమిలో; సుఖ-దుఃఖేషు — సుఖదుఃఖముల యందు; సమః — ఒక్కలాగే ఉంటూ; సంగ-వివర్జితః — చెడు సాంగత్యము విడిచి; తుల్య — ఒకేలాగా పరిగణిస్తూ; నిందా-స్తుతి — దూషణ మరియు పొగడ్త; మౌనీ — మౌనముగా చింతన; సంతుష్టః — తృప్తిగా ఉంటూ; యేన కేనచిత్ — దేనితో అయినా; అనికేతః — నివాస స్థానము పై మమకారఆసక్తి లేకుండా; స్థిర — స్థిరముగా; మతి — బుద్ధి; భక్తి-మాన్ — భక్తితో నిండి ఉన్నవాడు; మే — నాకు; ప్రియః — చాలా ప్రియమైన; నరః — వ్యక్తి.",
+          "isPublished": true
+        }
+      ],
+      "createdAt": "2026-07-14T08:54:16.035Z",
+      "updatedAt": "2026-07-16T06:18:59.252Z"
+    },
+    {
+      "id": "f2b273a9-9010-4e75-b880-f0a809b81714",
+      "publicId": "bg.12.19",
+      "number": 19,
+      "sanskritText": "तुल्यनिन्दास्तुतिर्मौनी सन्तुष्टो येनकेनचित्।अनिकेतः स्थिरमतिर्भक्तिमान्मे प्रियो नरः।।12.19।।",
+      "transliteration": "tulya-nindā-stutir maunī santuṣhṭo yena kenachit\naniketaḥ sthira-matir bhaktimān me priyo naraḥ",
+      "meaning": "तुल्यनिन्दास्तुतिः to whom censure and praise are eal; मौनी -- silent; सन्तुष्टः contented; येनकेनचित् with anything; अनिकेतः homeless; स्थिरमतिः steadyminded; भक्तिमान् full of devotion; मे to Me; प्रियः dear; नरः (that) man",
+      "commentary": null,
+      "seoTitle": null,
+      "seoDescription": null,
+      "sortOrder": 19,
+      "isPublished": true,
+      "chapterPublicId": "bg.12",
+      "chapterNumber": 12,
+      "workCode": "bg",
+      "translations": [
+        {
+          "id": "11a96eb4-a3db-4762-bea0-f6ffafd135b3",
+          "languageCode": "en",
+          "languageName": "English",
+          "sourceKey": "sivananda",
+          "sourceDisplayName": "Swami Sivananda",
+          "text": "He to whom censure and praise are equal, who is silent, content with anything, homeless, of a steady mind, and full of devotion; that man is dear to me.",
+          "isPublished": true
+        },
+        {
+          "id": "da1c325a-96a0-4d86-900f-93dd64b20710",
+          "languageCode": "hi",
+          "languageName": "Hindi",
+          "sourceKey": "ramsukhdas",
+          "sourceDisplayName": "Swami Ramsukhdas",
+          "text": "।।12.19।।जो शत्रु और मित्रमें तथा मान-अपमानमें सम है और शीतउष्ण (अनुकूलता-प्रतिकूलता) तथा सुख-दुःखमें सम है एवं आसक्तिसे रहित है, और जो निन्दा-स्तुतिको समान समझनेवाला, मननशील, जिस-किसी प्रकारसे भी (शरीरका निर्वाह होनेमें) संतुष्ट, रहनेके स्थान तथा शरीरमें ममता-आसक्तिसे रहित और स्थिर बुद्धिवाला है, वह भक्तिमान् मनुष्य मुझे प्रिय है।",
+          "isPublished": true
+        },
+        {
+          "id": "9dc36bc3-ce82-491f-a733-a6faf4c5691f",
+          "languageCode": "te",
+          "languageName": "Telugu",
+          "sourceKey": "holy-bg-telugu",
+          "sourceDisplayName": "Holy Bhagavad Gita (Telugu)",
+          "text": "BG 12.18-19:\n                            ఎవరైతే, మిత్రులపట్ల మరియు శత్రువుల పట్ల ఒక్కలాగే ఉంటారో, గౌరవము-అపమానముల ఎడ, చలి-వేడిమి పట్ల, సుఖ-దుఖఃముల పట్ల సమబుద్ధితో ఉంటారో, మరియు చెడు సాంగత్యమును విడిచి ఉంటారో; దూషణ మరియు పొగడ్తని ఒక్కలాగే తీసుకుంటారో, మౌనముగా చింతన చేస్తుంటారో, తమకు లభించిన దానితో తృప్తిగా ఉంటారో, నివాసస్థానము పట్ల మమకారాసక్తి లేకుండా ఉంటారో, ఎవరి బుద్ధి స్థిరముగా నా యందే లగ్నమై ఉన్నదో, మరియు ఎవరైతే నాయందు భక్తితో నిండిపోయి ఉన్నారో, అటువంటి వ్యక్తులు నాకు చాలా ప్రియమైనవారు.",
+          "isPublished": true
+        },
+        {
+          "id": "d68e7bd9-8908-42be-af53-9d20d3eb35c3",
+          "languageCode": "te",
+          "languageName": "Telugu",
+          "sourceKey": "holy-bg-telugu-w2w",
+          "sourceDisplayName": "Holy Bhagavad Gita (Telugu word meanings)",
+          "text": "సమః — ఒకేలాగా; శత్రౌ — శత్రువు పట్ల; చ — మరియు; మిత్రే — మిత్రుని పట్ల; చ తథా — మరియు ఇంకా; మాన-అపమానయోః — గౌరవము, అపమానముల యందు; శీత-ఉష్ణ — చలి మరియు వేడిమిలో; సుఖ-దుఃఖేషు — సుఖదుఃఖముల యందు; సమః — ఒక్కలాగే ఉంటూ; సంగ-వివర్జితః — చెడు సాంగత్యము విడిచి; తుల్య — ఒకేలాగా పరిగణిస్తూ; నిందా-స్తుతి — దూషణ మరియు పొగడ్త; మౌనీ — మౌనముగా చింతన; సంతుష్టః — తృప్తిగా ఉంటూ; యేన కేనచిత్ — దేనితో అయినా; అనికేతః — నివాస స్థానము పై మమకారఆసక్తి లేకుండా; స్థిర — స్థిరముగా; మతి — బుద్ధి; భక్తి-మాన్ — భక్తితో నిండి ఉన్నవాడు; మే — నాకు; ప్రియః — చాలా ప్రియమైన; నరః — వ్యక్తి.",
+          "isPublished": true
+        }
+      ],
+      "createdAt": "2026-07-14T08:54:16.831Z",
+      "updatedAt": "2026-07-16T06:18:59.494Z"
+    },
+    {
+      "id": "9e4ac1df-1956-4c95-b853-dc37c1be8a12",
+      "publicId": "bg.12.20",
+      "number": 20,
+      "sanskritText": "ये तु धर्म्यामृतमिदं यथोक्तं पर्युपासते।श्रद्दधाना मत्परमा भक्तास्तेऽतीव मे प्रियाः।।12.20।।",
+      "transliteration": "ye tu dharmyāmṛitam idaṁ yathoktaṁ paryupāsate\nśhraddadhānā mat-paramā bhaktās te ’tīva me priyāḥ",
+      "meaning": "ये who; तु indeed; धर्म्यामृतम् immortal Dharma (Law); इदम् this; यथोक्तम् as declared (above); पर्युपासते follow; श्रद्दधानाः endowed with faith; मत्परमाः regarding Me as their Supreme; भक्ताः devotees; ते they; अतीव exceedingly; मे to Me; प्रियाः dear",
+      "commentary": null,
+      "seoTitle": null,
+      "seoDescription": null,
+      "sortOrder": 20,
+      "isPublished": true,
+      "chapterPublicId": "bg.12",
+      "chapterNumber": 12,
+      "workCode": "bg",
+      "translations": [
+        {
+          "id": "e54923a8-3b07-4740-8b23-df83bf9c07ee",
+          "languageCode": "en",
+          "languageName": "English",
+          "sourceKey": "sivananda",
+          "sourceDisplayName": "Swami Sivananda",
+          "text": "They who follow this immortal Dharma, endowed with faith and regarding Me as their supreme goal, are exceedingly dear to Me.",
+          "isPublished": true
+        },
+        {
+          "id": "fc187b51-365e-4100-82e2-47a89090ea8b",
+          "languageCode": "hi",
+          "languageName": "Hindi",
+          "sourceKey": "ramsukhdas",
+          "sourceDisplayName": "Swami Ramsukhdas",
+          "text": "।।12.20।।जो मेरेमें श्रद्धा रखनेवाले और मेरे परायण हुए भक्त पहले कहे हुए इस धर्ममय अमृतका अच्छी तरहसे सेवन करते हैं, वे मुझे अत्यन्त प्रिय हैं।",
+          "isPublished": true
+        },
+        {
+          "id": "6b5eeb19-6295-4711-9ff7-45863da781de",
+          "languageCode": "te",
+          "languageName": "Telugu",
+          "sourceKey": "holy-bg-telugu",
+          "sourceDisplayName": "Holy Bhagavad Gita (Telugu)",
+          "text": "ఎవరైతే ఇక్కడ ప్రకటించబడిన ఈ జ్ఞానామృతమును గౌరవించి, నాపై విశ్వాసముతో మరియు నేనే పరమ లక్ష్యముగా భక్తితో ఉంటారో, వారు నాకు అత్యంత ప్రియమైన వారు.",
+          "isPublished": true
+        },
+        {
+          "id": "60b433c0-de17-44ff-bbb5-e72f18d42846",
+          "languageCode": "te",
+          "languageName": "Telugu",
+          "sourceKey": "holy-bg-telugu-w2w",
+          "sourceDisplayName": "Holy Bhagavad Gita (Telugu word meanings)",
+          "text": "యే — ఎవరైతే; తు — నిజముగా; ధర్మ — జ్ఞానమనే; అమృతం — అమృతము; ఇదం — ఇది; యథా — ఇలా; ఉక్తం — చెప్పబడిన; పర్యుపాసతే — అనన్య భక్తితో సేవిస్తారో; శ్రద్ధధానాః — విశ్వాసముతో; మత్-పరమాః — నన్నే పరమ లక్ష్యముగా భావిస్తూ; భక్తాః — భక్తులు; తే — వారు; అతీవ — అత్యంత; మే — నాకు; ప్రియాః — ప్రియమైన వారు.",
+          "isPublished": true
+        },
+        {
+          "id": "8166fa20-f6ca-4386-9cb7-8a0de844d5c6",
+          "languageCode": "or",
+          "languageName": "Odia",
+          "sourceKey": "holy-bg-odia",
+          "sourceDisplayName": "Holy Bhagavad Gita (Odia)",
+          "text": "ଏଠାରେ ପ୍ରଦାନ କରାଯାଇଥିବା ଜ୍ଞାନାମୃତର ଯେଉଁମାନେ ଆଦର କରନ୍ତି; ମୋଠାରେ ପୂର୍ଣ୍ଣ ବିଶ୍ୱାସ ରଖି ଯେଉଁମାନେ ମୋର ଶରଣାଗତ ହୁଅନ୍ତି ଏବଂ ମୋତେ ତାଙ୍କର ଚରମ ଲକ୍ଷ୍ୟ ରୂପେ ବିଚାର କରନ୍ତି, ସେମାନେ ମୋର ସର୍ବାଧିକ ପ୍ରିୟ ଅଟନ୍ତି ।",
+          "isPublished": true
+        }
+      ],
+      "createdAt": "2026-07-14T08:54:17.856Z",
+      "updatedAt": "2026-07-16T06:18:59.733Z"
+    }
+  ],
+  "languages": [
+    {
+      "code": "sa",
+      "name": "Sanskrit",
+      "nativeName": "संस्कृतम्"
+    },
+    {
+      "code": "en",
+      "name": "English",
+      "nativeName": "English"
+    },
+    {
+      "code": "hi",
+      "name": "Hindi",
+      "nativeName": "हिन्दी"
+    },
+    {
+      "code": "te",
+      "name": "Telugu",
+      "nativeName": "తెలుగు"
+    },
+    {
+      "code": "or",
+      "name": "Odia",
+      "nativeName": "ଓଡ଼ିଆ"
+    },
+    {
+      "code": "kn",
+      "name": "Kannada",
+      "nativeName": "ಕನ್ನಡ"
+    },
+    {
+      "code": "ta",
+      "name": "Tamil",
+      "nativeName": "தமிழ்"
+    },
+    {
+      "code": "ml",
+      "name": "Malayalam",
+      "nativeName": "മലയാളം"
+    }
+  ]
+}

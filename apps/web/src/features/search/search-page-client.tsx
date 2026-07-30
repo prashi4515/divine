@@ -4,11 +4,13 @@ import * as React from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import type { VerseSearchResult } from "@divine/types";
 import {
+  pushLocalRecentSearch,
   readLocalRecentSearches,
   verseSearchService,
 } from "@/lib/api/services/verse-search";
 import { RecentSearches } from "./recent-searches";
 import { SearchFilters } from "./search-filters";
+import { SearchHero } from "./search-hero";
 import { SearchResults } from "./search-results";
 
 type SearchPageClientProps = {
@@ -23,6 +25,10 @@ type SearchPageClientProps = {
   initialTrending?: Array<{ query: string; hitCount: number }>;
 };
 
+/**
+ * Search UI. URL is the source of truth; each change hits the Next.js static
+ * index (`/api/search/verses`) so new keywords resolve in milliseconds.
+ */
 export function SearchPageClient({
   initialQuery,
   initialTopic,
@@ -40,30 +46,60 @@ export function SearchPageClient({
   const [expanded, setExpanded] = React.useState(initialExpanded);
   const [page, setPage] = React.useState(initialPage);
   const [totalPages, setTotalPages] = React.useState(initialTotalPages);
-  const [loading, setLoading] = React.useState(false);
   const [recent, setRecent] = React.useState<string[]>([]);
+  const [loading, setLoading] = React.useState(
+    Boolean(initialQuery.trim() || initialTopic),
+  );
+  const requestIdRef = React.useRef(0);
 
   const query = searchParams.get("q") ?? initialQuery;
   const topic = searchParams.get("topic") ?? initialTopic;
   const lang = searchParams.get("lang") ?? initialLang;
-
-  React.useEffect(() => {
-    setResults(initialResults);
-    setTotal(initialTotal);
-    setExpanded(initialExpanded);
-    setPage(initialPage);
-    setTotalPages(initialTotalPages);
-  }, [
-    initialResults,
-    initialTotal,
-    initialExpanded,
-    initialPage,
-    initialTotalPages,
-  ]);
+  const pageParam = Number(searchParams.get("page") || 1) || 1;
 
   React.useEffect(() => {
     setRecent(readLocalRecentSearches(6));
-  }, [initialQuery]);
+  }, [query]);
+
+  // Fetch on mount and whenever the URL changes (static index — typically <300ms).
+  React.useEffect(() => {
+    if (!query.trim() && !topic) {
+      setResults([]);
+      setTotal(0);
+      setExpanded([]);
+      setPage(1);
+      setTotalPages(0);
+      setLoading(false);
+      return;
+    }
+
+    const requestId = ++requestIdRef.current;
+    setLoading(true);
+    void verseSearchService
+      .search({
+        q: query.trim() || undefined,
+        topic,
+        lang,
+        page: pageParam,
+        pageSize: 20,
+      })
+      .then((res) => {
+        if (requestId !== requestIdRef.current) return;
+        setResults(res.data);
+        setTotal(res.meta.total);
+        setExpanded(res.meta.expandedTerms);
+        setPage(res.meta.page);
+        setTotalPages(res.meta.totalPages);
+      })
+      .catch(() => {
+        if (requestId !== requestIdRef.current) return;
+        setResults([]);
+        setTotal(0);
+      })
+      .finally(() => {
+        if (requestId === requestIdRef.current) setLoading(false);
+      });
+  }, [query, topic, lang, pageParam]);
 
   function buildHref(next: {
     q?: string;
@@ -74,7 +110,11 @@ export function SearchPageClient({
     const params = new URLSearchParams();
     const q = next.q !== undefined ? next.q : query;
     const t =
-      next.topic === undefined ? topic : next.topic === null ? undefined : next.topic;
+      next.topic === undefined
+        ? topic
+        : next.topic === null
+          ? undefined
+          : next.topic;
     const l = next.lang ?? lang;
     const p = next.page ?? 1;
     if (q) params.set("q", q);
@@ -92,74 +132,46 @@ export function SearchPageClient({
     page?: number;
     record?: boolean;
   }) {
-    const q = opts.q !== undefined ? opts.q : query;
-    const t =
-      opts.topic === undefined
-        ? topic
-        : opts.topic === null
-          ? undefined
-          : opts.topic;
-    const l = opts.lang ?? lang;
-    const p = opts.page ?? 1;
+    const q = (opts.q !== undefined ? opts.q : query).trim();
+    const href = buildHref({
+      q,
+      topic: opts.topic === undefined ? topic : opts.topic,
+      lang: opts.lang ?? lang,
+      page: opts.page ?? 1,
+    });
 
-    router.push(
-      buildHref({
-        q,
-        topic: opts.topic === undefined ? topic : opts.topic,
-        lang: l,
-        page: p,
-      }),
-    );
-
-    if (!q && !t) {
-      setResults([]);
-      setTotal(0);
-      setExpanded([]);
-      setPage(1);
-      setTotalPages(0);
-      return;
+    if (opts.record !== false && q) {
+      pushLocalRecentSearch(q);
+      setRecent(readLocalRecentSearches(6));
+      void verseSearchService.record(q, total).catch(() => undefined);
     }
 
-    setLoading(true);
-    void verseSearchService
-      .search({
-        q: q || undefined,
-        topic: t,
-        lang: l,
-        page: p,
-        pageSize: 20,
-      })
-      .then((res) => {
-        setResults(res.data);
-        setTotal(res.meta.total);
-        setExpanded(res.meta.expandedTerms);
-        setPage(res.meta.page);
-        setTotalPages(res.meta.totalPages);
-        if (opts.record !== false && q) {
-          void verseSearchService.record(q, res.meta.total);
-          setRecent(readLocalRecentSearches(6));
-        }
-      })
-      .catch(() => {
-        setResults([]);
-        setTotal(0);
-      })
-      .finally(() => setLoading(false));
+    router.push(href);
   }
 
   return (
     <div className="mx-auto grid w-full gap-8 lg:grid-cols-[minmax(0,1fr)_200px] lg:gap-12">
       <div className="min-w-0">
-        <header className="mb-5">
-          <h1 className="font-serif text-2xl tracking-tight md:text-3xl">
-            Search
+        <header className="mb-6">
+          <h1 className="font-serif text-3xl tracking-tight md:text-4xl">
+            Search the Bhagavad Gita
           </h1>
-          {query ? (
-            <p className="text-muted-foreground mt-1 text-sm">
-              Results for “{query}”
-            </p>
-          ) : null}
+          <p className="text-muted-foreground mt-2 text-sm md:text-base">
+            Sanskrit, English, Telugu, Hindi, commentary and topics — press
+            Enter or tap Search.
+          </p>
         </header>
+
+        <SearchHero
+          initialQuery={query}
+          onSubmit={(q) => runSearch({ q, page: 1, record: true })}
+        />
+
+        {query ? (
+          <p className="text-muted-foreground mb-4 text-sm">
+            Results for <span className="text-foreground">“{query}”</span>
+          </p>
+        ) : null}
 
         <div className="mb-5 lg:hidden">
           <SearchFilters
@@ -175,18 +187,27 @@ export function SearchPageClient({
         </div>
 
         <div aria-busy={loading}>
-          {loading ? (
-            <p className="text-muted-foreground mb-2 text-xs">Updating…</p>
-          ) : null}
-          <SearchResults
-            results={results}
-            query={query || (topic ? `topic:${topic}` : "")}
-            total={total}
-            expandedTerms={expanded}
-            onTermClick={(term) =>
-              runSearch({ q: term, page: 1, record: true })
-            }
-          />
+          {loading && results.length === 0 ? (
+            <div className="space-y-4 py-2" aria-hidden>
+              <p className="text-muted-foreground text-xs">Searching…</p>
+              {[0, 1, 2].map((i) => (
+                <div
+                  key={i}
+                  className="bg-muted/60 h-28 animate-pulse rounded-xl"
+                />
+              ))}
+            </div>
+          ) : (
+            <SearchResults
+              results={results}
+              query={query || (topic ? `topic:${topic}` : "")}
+              total={total}
+              expandedTerms={expanded}
+              onTermClick={(term) =>
+                runSearch({ q: term, page: 1, record: true })
+              }
+            />
+          )}
         </div>
 
         {totalPages > 1 ? (

@@ -11,12 +11,15 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { SectionHeading } from "@/features/reading/section-heading";
+import { CommentaryProse } from "@/features/reading/commentary-prose";
+import { QuickJumpPanel } from "@/features/reading/quick-jump-panel";
 import { VerseNumberGrid } from "@/features/reading/verse-number-grid";
 import { WordMeaningList } from "@/features/reading/word-meaning-list";
 import { RelatedReading } from "@/features/search/related-reading";
 import { useMessages } from "@/lib/i18n/use-messages";
 import {
   devanagariToReadingScript,
+  formatShlokaDisplay,
   isIndicScriptLanguage,
   localizePadachedaLemmas,
   normalizeScriptProxyText,
@@ -24,6 +27,7 @@ import {
   rescriptPadacheda,
   shlokaInLanguage,
 } from "@/lib/reading/shloka-script";
+import { repairIndicOrthography } from "@/lib/reading/repair-indic-orthography";
 import { isReadingLanguageCode } from "@/lib/reading/languages";
 import {
   readerFontClass,
@@ -47,6 +51,11 @@ type VerseReaderProps = {
   verses: Verse[];
   languages: LanguageOption[];
   initialLanguage?: string;
+  /** Build chapter URL for Quick Jump (defaults to Bhagavad Gita paths). */
+  chapterHref?: (chapterNumber: number) => string;
+  totalChapters?: number;
+  /** Optional chapter hero rendered beside Quick Jump at the top. */
+  hero?: React.ReactNode;
 };
 
 const VYAKHYA_SOURCES = new Set([
@@ -84,11 +93,16 @@ const COMMENTARY_LANGUAGES = new Set([
 
 type PickedText = { text: string; isFallback: boolean };
 
-/** Strip corpus prefixes like "BG 1.16-18:" — the UI adds BG n.m itself. */
+/** Strip corpus prefixes like "BG 1.16-18:" — the UI shows chapter/verse separately. */
 function formatTranslationText(text: string): string {
-  return text
-    .replace(/^\s*BG\s+\d+\.\d+(?:-\d+(?:\.\d+)?)?:\s*/i, "")
-    .trim();
+  return repairIndicOrthography(
+    text
+      .replace(
+        /^\s*(?:BG|bg\.?)\s*\d+\.\d+(?:\s*-\s*\d+(?:\.\d+)?)?\s*:\s*/i,
+        "",
+      )
+      .trim(),
+  );
 }
 
 function pickTranslation(verse: Verse, language: string): PickedText | null {
@@ -238,10 +252,13 @@ function pickCommentary(verse: Verse, language: string): PickedText | null {
     if (hi?.text) return { text: hi.text, isFallback: false };
   }
 
-  const english = verse.commentary?.trim();
-  if (english && language === "en") {
-    return { text: english, isFallback: false };
+  if (language === "en") {
+    const english = verse.commentary?.trim();
+    if (english) return { text: english, isFallback: false };
+    // Do not fall back to Hindi — English readers should see an empty state.
+    return null;
   }
+
   return null;
 }
 
@@ -264,6 +281,9 @@ export function VerseReader({
   verses,
   languages,
   initialLanguage = "en",
+  chapterHref = (n) => `/bhagavad-gita/chapter-${n}`,
+  totalChapters = 18,
+  hero,
 }: VerseReaderProps) {
   const t = useMessages();
   const preferredLanguage = useReadingStore((s) => s.preferredLanguage);
@@ -277,12 +297,27 @@ export function VerseReader({
   >("idle");
   const hydratedRef = React.useRef(new Set<string>());
   const articleRef = React.useRef<HTMLElement>(null);
+  /** True after the initial URL hash has been applied (or confirmed absent). */
+  const hashReadyRef = React.useRef(false);
 
   React.useEffect(() => setMounted(true), []);
 
+  // Sync props → state only when the chapter verse set actually changes.
+  // A fresh array reference every render used to retrigger hash sync → setIndex loop.
   React.useEffect(() => {
-    setLocalVerses(verses);
-    hydratedRef.current.clear();
+    setLocalVerses((prev) => {
+      const same =
+        prev.length === verses.length &&
+        prev.every(
+          (row, i) =>
+            row.publicId === verses[i]?.publicId &&
+            row.sanskritText === verses[i]?.sanskritText,
+        );
+      if (same) return prev;
+      hydratedRef.current.clear();
+      hashReadyRef.current = false;
+      return verses;
+    });
   }, [verses]);
 
   const language = resolveLanguage(
@@ -295,22 +330,47 @@ export function VerseReader({
 
   const verse = localVerses[index] ?? null;
   const verseNumbers = localVerses.map((v) => v.number);
+  const versesRef = React.useRef(localVerses);
+  versesRef.current = localVerses;
 
-  React.useEffect(() => {
-    const hash = window.location.hash.match(/^#verse-(\d+)$/);
-    if (!hash) return;
-    const n = Number.parseInt(hash[1]!, 10);
-    const found = localVerses.findIndex((v) => v.number === n);
-    if (found >= 0) setIndex(found);
-  }, [localVerses]);
+  /**
+   * Deep-link: apply `#verse-N` before any effect that writes the hash.
+   * useLayoutEffect runs before paint / before useEffect, so we don't clobber
+   * `/chapter-4#verse-7` with `#verse-1` (index starts at 0).
+   */
+  React.useLayoutEffect(() => {
+    function applyHash() {
+      const hash = window.location.hash.match(/^#verse-(\d+)$/);
+      if (!hash) {
+        hashReadyRef.current = true;
+        return;
+      }
+      const n = Number.parseInt(hash[1]!, 10);
+      const found = versesRef.current.findIndex((v) => v.number === n);
+      if (found >= 0) {
+        setIndex((prev) => (prev === found ? prev : found));
+      }
+      hashReadyRef.current = true;
+    }
+    applyHash();
+    window.addEventListener("hashchange", applyHash);
+    return () => window.removeEventListener("hashchange", applyHash);
+  }, [localVerses.length]);
 
+  // Keep the URL hash in sync with the active verse — never overwrite an
+  // incoming deep-link that hasn't been reflected in state yet.
   React.useEffect(() => {
-    if (!verse) return;
+    if (!verse || !hashReadyRef.current) return;
+    const incoming = window.location.hash.match(/^#verse-(\d+)$/);
+    if (incoming) {
+      const n = Number.parseInt(incoming[1]!, 10);
+      if (n !== verse.number) return;
+    }
     const next = `#verse-${verse.number}`;
     if (window.location.hash !== next) {
       window.history.replaceState(null, "", next);
     }
-  }, [verse]);
+  }, [verse?.number]);
 
   /**
    * Commentaries are stripped from the chapter list (keeps HTML small).
@@ -326,7 +386,7 @@ export function VerseReader({
 
     if (hasBundledCommentary) {
       hydratedRef.current.add(active.publicId);
-      setCommentaryStatus("ready");
+      setCommentaryStatus((prev) => (prev === "ready" ? prev : "ready"));
       // Still prefetch neighbours from the local static route.
     }
 
@@ -398,8 +458,9 @@ export function VerseReader({
 
   async function copyVerse() {
     if (!verse) return;
+    const label = `${t.chapterFallback(chapterNumber)}, ${t.verseSingular} ${verse.number}`;
     const text = [
-      verse.publicId,
+      label,
       shlokaInLanguage(verse.sanskritText, language, verse.transliteration),
       translation?.text,
       commentary?.text,
@@ -415,10 +476,11 @@ export function VerseReader({
   async function shareVerse() {
     if (!verse) return;
     const url = `${window.location.origin}${window.location.pathname}#verse-${verse.number}`;
+    const title = `${t.chapterFallback(chapterNumber)}, ${t.verseSingular} ${verse.number}`;
     try {
       if (typeof navigator.share === "function") {
         await navigator.share({
-          title: verse.publicId,
+          title,
           text: translation?.text ?? verse.sanskritText,
           url,
         });
@@ -474,6 +536,20 @@ export function VerseReader({
     </div>
   );
 
+  const sidebar = (
+    <div className="space-y-4">
+      <QuickJumpPanel
+        chapterNumber={chapterNumber}
+        currentVerse={verse?.number ?? 1}
+        verseNumbers={verseNumbers}
+        totalChapters={totalChapters}
+        chapterHref={chapterHref}
+        onJumpVerse={goToVerseNumber}
+      />
+      {grid}
+    </div>
+  );
+
   return (
     <section
       id="reader"
@@ -482,6 +558,7 @@ export function VerseReader({
     >
       <div className="lg:grid lg:grid-cols-[minmax(0,1fr)_18rem] lg:items-start lg:gap-6 xl:grid-cols-[minmax(0,1fr)_20rem] xl:gap-8">
         <div className="min-w-0 space-y-6">
+          {hero ? <div className="mb-4 md:mb-6">{hero}</div> : null}
           <div className="flex flex-wrap items-center justify-between gap-3">
             <Button
               type="button"
@@ -527,8 +604,9 @@ export function VerseReader({
               aria-label={`${t.verseSingular} ${verse.number}`}
             >
               <div className="relative">
-                <p className="text-maroon font-mono text-[11px] tracking-wide">
-                  {verse.publicId}
+                <p className="text-maroon text-[11px] font-medium tracking-wide">
+                  {t.chapterFallback(chapterNumber)}, {t.verseSingular}{" "}
+                  {verse.number}
                 </p>
                 <div className="absolute top-0 right-0 flex gap-0.5">
                   <Button
@@ -565,26 +643,26 @@ export function VerseReader({
                 </div>
               </div>
 
-              <div className="mt-6 space-y-8 sm:mt-8 sm:space-y-10">
+              <div className="mt-8 space-y-10 sm:mt-10 sm:space-y-12">
                 <div className="mx-auto w-full max-w-4xl px-1 text-center sm:px-2">
                   {language === "en" ? (
                     <>
                       <p
                         className={cn(
-                          "text-sanskrit text-2xl font-semibold leading-verse tracking-wide whitespace-pre-line sm:text-3xl md:text-[2rem]",
+                          "text-shloka whitespace-pre-line",
                           shlokaFont,
                         )}
                       >
-                        {verse.sanskritText}
+                        {formatShlokaDisplay(verse.sanskritText)}
                       </p>
                       {verse.transliteration?.trim() ? (
                         <p
                           className={cn(
-                            "text-muted-foreground mt-5 text-base italic leading-verse tracking-wide whitespace-pre-line sm:text-lg",
+                            "text-muted-foreground mt-2 text-base italic leading-snug tracking-wide whitespace-pre-line sm:text-lg",
                             readerFontClass("en"),
                           )}
                         >
-                          {verse.transliteration}
+                          {formatShlokaDisplay(verse.transliteration)}
                         </p>
                       ) : null}
                     </>
@@ -592,7 +670,7 @@ export function VerseReader({
                     <>
                       <p
                         className={cn(
-                          "text-sanskrit text-2xl font-semibold leading-verse tracking-wide whitespace-pre-line sm:text-3xl md:text-[2rem]",
+                          "text-shloka whitespace-pre-line",
                           shlokaFont,
                         )}
                       >
@@ -603,11 +681,11 @@ export function VerseReader({
                         verse.transliteration) ? (
                         <p
                           className={cn(
-                            "text-muted-foreground mt-5 text-base italic leading-verse tracking-wide whitespace-pre-line sm:text-lg",
+                            "text-muted-foreground mt-2 text-base italic leading-snug tracking-wide whitespace-pre-line sm:text-lg",
                             readerFontClass("en"),
                           )}
                         >
-                          {verse.transliteration}
+                          {formatShlokaDisplay(verse.transliteration ?? "")}
                         </p>
                       ) : null}
                       {language !== "sa" &&
@@ -616,11 +694,11 @@ export function VerseReader({
                       shloka !== verse.sanskritText ? (
                         <p
                           className={cn(
-                            "text-muted-foreground mt-4 text-sm leading-verse tracking-wide whitespace-pre-line sm:text-base",
+                            "text-muted-foreground mt-1.5 text-sm leading-snug tracking-wide whitespace-pre-line sm:text-base",
                             shlokaFontClass("sa"),
                           )}
                         >
-                          {verse.sanskritText}
+                          {formatShlokaDisplay(verse.sanskritText)}
                         </p>
                       ) : null}
                     </>
@@ -637,24 +715,16 @@ export function VerseReader({
                   </div>
                 ) : null}
 
-                <div>
+                <div className="space-y-5">
                   <SectionHeading>
                     {language === "sa" ? t.sanskrit : t.translation}
                   </SectionHeading>
                   {translation ? (
-                    <p
-                      className={cn(
-                        "text-verse text-base leading-verse whitespace-pre-line sm:text-lg",
-                        bodyFont,
-                      )}
+                    <div
+                      className={cn("text-reading whitespace-pre-line", bodyFont)}
                     >
-                      {language === "sa" ? null : (
-                        <span className="text-foreground mr-2 font-semibold">
-                          BG {chapterNumber}.{verse.number}:
-                        </span>
-                      )}
                       {translation.text}
-                    </p>
+                    </div>
                   ) : (
                     <p className={cn("text-muted-foreground text-sm", bodyFont)}>
                       {language === "sa" ? t.noSanskrit : t.noTranslation}
@@ -663,29 +733,36 @@ export function VerseReader({
                 </div>
 
                 {COMMENTARY_LANGUAGES.has(language) ? (
-                  <div>
+                  <div className="space-y-5">
                     <SectionHeading>{t.commentary}</SectionHeading>
                     {commentary ? (
-                      <p
-                        className={cn(
-                          "text-verse text-base leading-verse whitespace-pre-line sm:text-lg",
-                          bodyFont,
-                        )}
-                      >
-                        {commentary.text}
-                      </p>
+                      <CommentaryProse
+                        text={commentary.text}
+                        versePublicId={verse.publicId}
+                        lang={commentary.isFallback ? "hi" : undefined}
+                        className={
+                          commentary.isFallback
+                            ? readerFontClass("hi")
+                            : bodyFont
+                        }
+                        fallbackNote={
+                          commentary.isFallback ? "Hindi commentary" : null
+                        }
+                      />
                     ) : !mounted ||
                       commentaryStatus === "idle" ||
                       commentaryStatus === "loading" ? (
                       mounted ? (
                         <div
-                          className="animate-pulse space-y-2.5"
+                          className="animate-pulse space-y-4"
                           aria-busy="true"
                           aria-label={t.commentary}
                         >
-                          <div className="bg-muted h-3.5 w-full rounded" />
-                          <div className="bg-muted h-3.5 w-[92%] rounded" />
-                          <div className="bg-muted h-3.5 w-[78%] rounded" />
+                          <div className="bg-muted h-4 w-full rounded" />
+                          <div className="bg-muted h-4 w-[92%] rounded" />
+                          <div className="bg-muted h-4 w-[78%] rounded" />
+                          <div className="bg-muted h-4 w-[88%] rounded" />
+                          <div className="bg-muted h-4 w-[70%] rounded" />
                         </div>
                       ) : null
                     ) : (
@@ -761,11 +838,11 @@ export function VerseReader({
 
           {verse ? <RelatedReading versePublicId={verse.publicId} /> : null}
 
-          <div className="lg:hidden">{grid}</div>
+          <div className="lg:hidden">{sidebar}</div>
         </div>
 
         <aside className="hidden lg:sticky lg:top-24 lg:block lg:self-start">
-          {grid}
+          {sidebar}
         </aside>
       </div>
     </section>
