@@ -12,10 +12,7 @@ import {
   isAtlasPlace,
   type AtlasPlace,
 } from "@/lib/atlas/geo";
-import {
-  getAtlasDataset,
-  getAtlasRoutesFromDataset,
-} from "@/lib/atlas/data/load-dataset";
+import { getAtlasRoutesFromDataset } from "@/lib/atlas/data/load-dataset";
 import type { AtlasDataset, AtlasRoute } from "@divine/types";
 
 export * from "@/lib/atlas/geo";

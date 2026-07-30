@@ -286,7 +286,7 @@ export async function resolveKingdomLinks(
   ]).sort((a, b) => b.importance - a.importance);
 
   // Capital: explicit edge, else city tagged capital, else highest-importance affiliated city
-  let capital: KnowledgeEntity | null =
+  const capital: KnowledgeEntity | null =
     capitalFromEdges[0] ??
     majorCities.find(
       (c) =>

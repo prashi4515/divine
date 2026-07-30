@@ -55,16 +55,16 @@ export function TimelineExplorer({ view }: TimelineExplorerProps) {
     visible.find((n) => n.event.id === selectedId) ?? visible[0] ?? null;
 
   React.useEffect(() => {
-    if (!selected) return;
+    if (!selectedId) return;
     const el = scrollerRef.current?.querySelector(
-      `[data-event-id="${selected.event.id}"]`,
+      `[data-event-id="${selectedId}"]`,
     );
     el?.scrollIntoView({
       behavior: "smooth",
       inline: "center",
       block: "nearest",
     });
-  }, [selected?.event.id, zoom, filter]);
+  }, [selectedId, zoom, filter]);
 
   const erasWithVisible = React.useMemo(() => {
     const byEra = new Map<string, typeof visible>();
