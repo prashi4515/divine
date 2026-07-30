@@ -1,53 +1,44 @@
 import { Suspense } from "react";
 import type { Metadata } from "next";
+import {
+  KNOWLEDGE_SEARCH_GROUPS,
+  type KnowledgeSearchGroup,
+} from "@divine/types";
 import { SearchPageClient } from "@/features/search";
 import { SearchSkeleton } from "@/features/search/search-skeleton";
 import { SiteFooter } from "@/features/reading/site-footer";
 import { SiteHeader } from "@/features/reading/site-header";
-import { warmStaticSearchIndex } from "@/lib/search/static-verse-search";
+import { warmKnowledgeSearchIndex } from "@/lib/search/knowledge-search";
 
 export const metadata: Metadata = {
-  title: "Search — Bhagavad Gita",
+  title: "Knowledge Search - Divine",
   description:
-    "Intelligent search across Sanskrit, English, Telugu, Hindi, transliteration, commentary, and topics.",
+    "Search people, places, events, kingdoms, weapons, concepts, genealogy, atlas, and Bhagavad Gita verses. Aliases, Sanskrit, and fuzzy matching over a static knowledge index.",
   alternates: { canonical: "/search" },
 };
 
-/** Prefetch the static verse index so the first API search is warm. */
-void warmStaticSearchIndex().catch(() => undefined);
+void warmKnowledgeSearchIndex().catch(() => undefined);
 
 type SearchPageProps = {
   searchParams: Promise<{
     q?: string;
-    topic?: string;
-    lang?: string;
-    page?: string;
+    group?: string;
   }>;
 };
 
-/**
- * Thin shell — does not await Nest/Neon. Results load from `/api/search/verses`
- * (in-memory static index) so the page paints immediately.
- */
+function parseGroup(raw: string | undefined): KnowledgeSearchGroup | undefined {
+  if (!raw) return undefined;
+  return (KNOWLEDGE_SEARCH_GROUPS as readonly string[]).includes(raw)
+    ? (raw as KnowledgeSearchGroup)
+    : undefined;
+}
+
 async function SearchBody({ searchParams }: SearchPageProps) {
   const sp = await searchParams;
   const q = sp.q?.trim() ?? "";
-  const topic = sp.topic?.trim() || undefined;
-  const lang = sp.lang?.trim() || "en";
-  const page = Number(sp.page) || 1;
+  const group = parseGroup(sp.group?.trim());
 
-  return (
-    <SearchPageClient
-      initialQuery={q}
-      initialTopic={topic}
-      initialLang={lang}
-      initialResults={[]}
-      initialTotal={0}
-      initialExpanded={[]}
-      initialPage={page}
-      initialTotalPages={0}
-    />
-  );
+  return <SearchPageClient initialQuery={q} initialGroup={group} />;
 }
 
 export default function SearchPage(props: SearchPageProps) {

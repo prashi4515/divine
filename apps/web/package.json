@@ -11,7 +11,12 @@
     "typecheck": "tsc --noEmit",
     "generate:gita-static": "node scripts/generate-gita-static.mts",
     "generate:genealogy": "node scripts/genealogy/rebuild-genealogy.mts",
-    "validate:genealogy": "node scripts/genealogy/validate-genealogy.mts"
+    "validate:genealogy": "node scripts/genealogy/validate-genealogy.mts",
+    "migrate:genealogy-to-knowledge": "node scripts/knowledge/migrate-genealogy.mts",
+    "generate:knowledge": "node scripts/knowledge/rebuild-knowledge.mts",
+    "validate:knowledge": "node scripts/knowledge/validate-knowledge.mts",
+    "generate:search-index": "node scripts/generate-search-index.mts",
+    "prebuild": "node scripts/generate-search-index.mts"
   },
   "dependencies": {
     "@divine/types": "workspace:*",

@@ -6,7 +6,7 @@ export default function SettingsLayout({ children }: { children: React.ReactNode
     <div className="space-y-6">
       <AdminPageHeader
         title="Settings"
-        description="Platform configuration — branding, SEO, email, storage, API keys, and access control."
+        description="Platform configuration - branding, SEO, email, storage, API keys, and access control."
       />
       <SettingsNav />
       <div>{children}</div>

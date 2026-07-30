@@ -1,0 +1,658 @@
+{
+  "schemaVersion": 1,
+  "entities": [
+    {
+      "status": "published",
+      "era": "eternal",
+      "variantTraditions": [],
+      "schemaVersion": 1,
+      "id": "concept.dharma",
+      "slug": "dharma",
+      "kind": "concept",
+      "name": "Dharma",
+      "englishName": "Dharma",
+      "iastName": "Dharma",
+      "sanskritName": "धर्म",
+      "aliases": [
+        "Duty",
+        "Righteousness",
+        "Law",
+        "Dharm",
+        "Svadharma"
+      ],
+      "summary": "Right order, duty, and righteousness — central to the Gītā.",
+      "description": "Dharma denotes cosmic and social order, personal duty, and righteousness. The Gītā turns on Arjuna's dharma-crisis on the battlefield of Kurukṣetra.",
+      "primaryScripture": "Bhagavad Gītā",
+      "scriptureSources": [
+        {
+          "work": "Bhagavad Gītā",
+          "chapter": "1"
+        },
+        {
+          "work": "Bhagavad Gītā",
+          "chapter": "2"
+        },
+        {
+          "work": "Mahābhārata",
+          "section": "Bhīṣma Parva"
+        }
+      ],
+      "tags": [
+        "philosophy",
+        "gita",
+        "ethics"
+      ],
+      "categories": [
+        "concept"
+      ],
+      "importance": 5,
+      "seo": {
+        "title": "Dharma",
+        "description": "Duty, righteousness, and cosmic order in the Bhagavad Gītā."
+      },
+      "concept": {
+        "definition": "That which upholds — cosmic order, social duty, and righteous conduct.",
+        "meaning": "In the Gītā, dharma is both the field (dharmakṣetra) and Arjuna's personal duty as a warrior (svadharma), weighed against compassion and confusion.",
+        "etymology": "From Sanskrit √dhṛ “to hold, sustain” — that which upholds the world and one's role within it.",
+        "examples": [
+          "Arjuna's crisis: fight as kṣatriya dharma vs. killing kin",
+          "Kurukṣetra named dharmakṣetra in Gītā 1.1",
+          "Yudhiṣṭhira as Dharmarāja — king of dharma"
+        ],
+        "chapters": [
+          1,
+          2,
+          3,
+          18
+        ]
+      }
+    },
+    {
+      "status": "published",
+      "era": "eternal",
+      "variantTraditions": [],
+      "schemaVersion": 1,
+      "id": "concept.karma",
+      "slug": "karma",
+      "kind": "concept",
+      "name": "Karma",
+      "englishName": "Karma",
+      "iastName": "Karma",
+      "sanskritName": "कर्म",
+      "aliases": [
+        "Action",
+        "Karman",
+        "Karma-yoga",
+        "Work"
+      ],
+      "summary": "Action and its consequences; taught as Karma-yoga in the Gītā.",
+      "description": "Karma is action. In the Bhagavad Gītā, Kṛṣṇa teaches acting without attachment to fruits (karma-yoga).",
+      "primaryScripture": "Bhagavad Gītā",
+      "scriptureSources": [
+        {
+          "work": "Bhagavad Gītā",
+          "chapter": "2"
+        },
+        {
+          "work": "Bhagavad Gītā",
+          "chapter": "3"
+        },
+        {
+          "work": "Bhagavad Gītā",
+          "chapter": "4"
+        }
+      ],
+      "tags": [
+        "philosophy",
+        "gita",
+        "action"
+      ],
+      "categories": [
+        "concept"
+      ],
+      "importance": 5,
+      "seo": {
+        "title": "Karma",
+        "description": "Action and karma-yoga in the Bhagavad Gītā."
+      },
+      "concept": {
+        "definition": "Action; also the law linking deeds to their results.",
+        "meaning": "The Gītā reframes karma as disciplined, detached action offered without clinging to outcomes — the path of karma-yoga.",
+        "etymology": "From Sanskrit √kṛ “to do, make” — deed, work, ritual act.",
+        "examples": [
+          "Gītā 2.47 — right to action, not to fruits",
+          "Karma-yoga as sacrifice of action to the Divine",
+          "Niṣkāma karma — desireless action"
+        ],
+        "chapters": [
+          2,
+          3,
+          4,
+          5
+        ]
+      }
+    },
+    {
+      "status": "published",
+      "era": "eternal",
+      "variantTraditions": [],
+      "schemaVersion": 1,
+      "id": "concept.bhakti",
+      "slug": "bhakti",
+      "kind": "concept",
+      "name": "Bhakti",
+      "englishName": "Bhakti",
+      "iastName": "Bhakti",
+      "sanskritName": "भक्ति",
+      "aliases": [
+        "Devotion",
+        "Loving devotion",
+        "Bhakti-yoga",
+        "Love of God"
+      ],
+      "summary": "Devotional love of the Divine; a central path in the Gītā.",
+      "description": "Bhakti is loving devotion. The Gītā presents devotion to Kṛṣṇa as a path of liberation alongside knowledge and action.",
+      "primaryScripture": "Bhagavad Gītā",
+      "scriptureSources": [
+        {
+          "work": "Bhagavad Gītā",
+          "chapter": "9"
+        },
+        {
+          "work": "Bhagavad Gītā",
+          "chapter": "12"
+        }
+      ],
+      "tags": [
+        "philosophy",
+        "gita",
+        "devotion"
+      ],
+      "categories": [
+        "concept"
+      ],
+      "importance": 5,
+      "seo": {
+        "title": "Bhakti",
+        "description": "Devotional love as a path in the Bhagavad Gītā."
+      },
+      "concept": {
+        "definition": "Loving devotion and surrender to the Divine.",
+        "meaning": "Bhakti-yoga is the path of the heart — worship, remembrance, and offering — presented as accessible and supreme in the later Gītā chapters.",
+        "etymology": "From Sanskrit √bhaj “to share, partake, worship”.",
+        "examples": [
+          "Chapter 12 — the devotee dear to Kṛṣṇa",
+          "Offering leaf, flower, fruit, or water in love (9.26)",
+          "Constant remembrance and surrender"
+        ],
+        "chapters": [
+          7,
+          9,
+          10,
+          11,
+          12
+        ]
+      }
+    },
+    {
+      "status": "published",
+      "era": "eternal",
+      "variantTraditions": [],
+      "schemaVersion": 1,
+      "id": "concept.jnana",
+      "slug": "jnana",
+      "kind": "concept",
+      "name": "Jñāna",
+      "englishName": "Jnana",
+      "iastName": "Jñāna",
+      "sanskritName": "ज्ञान",
+      "aliases": [
+        "Knowledge",
+        "Jnana",
+        "Gyan",
+        "Jñāna-yoga",
+        "Wisdom"
+      ],
+      "summary": "Liberating knowledge of the Self and the Absolute.",
+      "description": "Jñāna is discriminative wisdom. In the Gītā it is the path of knowing the eternal Self (ātman) and its relation to Brahman, distinct from mere information.",
+      "primaryScripture": "Bhagavad Gītā",
+      "scriptureSources": [
+        {
+          "work": "Bhagavad Gītā",
+          "chapter": "4"
+        },
+        {
+          "work": "Bhagavad Gītā",
+          "chapter": "13"
+        },
+        {
+          "work": "Bhagavad Gītā",
+          "chapter": "18"
+        }
+      ],
+      "tags": [
+        "philosophy",
+        "gita",
+        "knowledge"
+      ],
+      "categories": [
+        "concept"
+      ],
+      "importance": 5,
+      "seo": {
+        "title": "Jñāna",
+        "description": "Knowledge-yoga and wisdom in the Bhagavad Gītā."
+      },
+      "concept": {
+        "definition": "True knowledge — insight into Self, reality, and liberation.",
+        "meaning": "Jñāna-yoga is the path of understanding: discriminating the eternal from the transient, and seeing the one Self in all beings.",
+        "etymology": "From Sanskrit √jñā “to know”.",
+        "examples": [
+          "Kṛṣṇa teaching the eternal Self beyond the body",
+          "Jñāna-yajña — sacrifice of knowledge (ch. 4)",
+          "Field and knower of the field (ch. 13)"
+        ],
+        "chapters": [
+          2,
+          4,
+          5,
+          13,
+          18
+        ]
+      }
+    },
+    {
+      "status": "published",
+      "era": "eternal",
+      "variantTraditions": [],
+      "schemaVersion": 1,
+      "id": "concept.yoga",
+      "slug": "yoga",
+      "kind": "concept",
+      "name": "Yoga",
+      "englishName": "Yoga",
+      "iastName": "Yoga",
+      "sanskritName": "योग",
+      "aliases": [
+        "Union",
+        "Discipline",
+        "Yoga-śāstra",
+        "Yog"
+      ],
+      "summary": "Discipline of union — action, knowledge, and devotion in the Gītā.",
+      "description": "Yoga in the Bhagavad Gītā means disciplined practice uniting the self with the Divine through karma, jñāna, and bhakti.",
+      "primaryScripture": "Bhagavad Gītā",
+      "scriptureSources": [
+        {
+          "work": "Bhagavad Gītā",
+          "chapter": "2"
+        },
+        {
+          "work": "Bhagavad Gītā",
+          "chapter": "6"
+        }
+      ],
+      "tags": [
+        "philosophy",
+        "gita",
+        "practice"
+      ],
+      "categories": [
+        "concept"
+      ],
+      "importance": 5,
+      "seo": {
+        "title": "Yoga",
+        "description": "Disciplined union in the Bhagavad Gītā."
+      },
+      "concept": {
+        "definition": "Disciplined union of the self with the Divine.",
+        "meaning": "In the Gītā, yoga is not only posture but skill in action, evenness of mind (samatva), and paths of karma, jñāna, and bhakti.",
+        "etymology": "From Sanskrit √yuj “to yoke, join, unite”.",
+        "examples": [
+          "Samatvaṃ yoga ucyate — evenness is called yoga",
+          "Karma-yoga, jñāna-yoga, bhakti-yoga as paths",
+          "Dhyāna-yoga of chapter 6 — meditation"
+        ],
+        "chapters": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          12
+        ]
+      }
+    },
+    {
+      "status": "published",
+      "era": "eternal",
+      "variantTraditions": [],
+      "schemaVersion": 1,
+      "id": "concept.atman",
+      "slug": "atman",
+      "kind": "concept",
+      "name": "Ātman",
+      "englishName": "Atman",
+      "iastName": "Ātman",
+      "sanskritName": "आत्मन्",
+      "aliases": [
+        "Self",
+        "Atma",
+        "Soul",
+        "Inner Self",
+        "Ātmā"
+      ],
+      "summary": "The eternal Self — beyond body, mind, and death.",
+      "description": "Ātman is the innermost Self. The Gītā teaches that the Self is unborn, eternal, and untouched by the death of the body — the ground of Arjuna's courage.",
+      "primaryScripture": "Bhagavad Gītā",
+      "scriptureSources": [
+        {
+          "work": "Bhagavad Gītā",
+          "chapter": "2"
+        },
+        {
+          "work": "Bhagavad Gītā",
+          "chapter": "10"
+        },
+        {
+          "work": "Bhagavad Gītā",
+          "chapter": "13"
+        }
+      ],
+      "tags": [
+        "philosophy",
+        "gita",
+        "self"
+      ],
+      "categories": [
+        "concept"
+      ],
+      "importance": 5,
+      "seo": {
+        "title": "Ātman",
+        "description": "The eternal Self in the Bhagavad Gītā."
+      },
+      "concept": {
+        "definition": "The true Self — eternal consciousness beyond body and mind.",
+        "meaning": "Kṛṣṇa teaches that weapons cannot cut the Self, fire cannot burn it; grief over death of bodies is born of ignorance of ātman.",
+        "etymology": "Sanskrit ātman — breath, self, essence; the reflexive “oneself”.",
+        "examples": [
+          "Gītā 2 — the Self does not die with the body",
+          "“I am the Self seated in the hearts of all” (10.20)",
+          "Knower of the field (kṣetrajña) as Self"
+        ],
+        "chapters": [
+          2,
+          6,
+          10,
+          13,
+          15
+        ]
+      }
+    },
+    {
+      "status": "published",
+      "era": "eternal",
+      "variantTraditions": [],
+      "schemaVersion": 1,
+      "id": "concept.brahman",
+      "slug": "brahman",
+      "kind": "concept",
+      "name": "Brahman",
+      "englishName": "Brahman",
+      "iastName": "Brahman",
+      "sanskritName": "ब्रह्मन्",
+      "aliases": [
+        "Absolute",
+        "Ultimate Reality",
+        "Para-Brahman",
+        "The Absolute"
+      ],
+      "summary": "The Absolute — ultimate reality taught in the Gītā and Upaniṣads.",
+      "description": "Brahman is the impersonal Absolute. The Gītā speaks of knowing Brahman, becoming Brahman-like (brahma-bhūta), and the relation of ātman to the highest.",
+      "primaryScripture": "Bhagavad Gītā",
+      "scriptureSources": [
+        {
+          "work": "Bhagavad Gītā",
+          "chapter": "8"
+        },
+        {
+          "work": "Bhagavad Gītā",
+          "chapter": "13"
+        },
+        {
+          "work": "Bhagavad Gītā",
+          "chapter": "14"
+        }
+      ],
+      "tags": [
+        "philosophy",
+        "gita",
+        "absolute"
+      ],
+      "categories": [
+        "concept"
+      ],
+      "importance": 5,
+      "seo": {
+        "title": "Brahman",
+        "description": "The Absolute in the Bhagavad Gītā."
+      },
+      "concept": {
+        "definition": "Ultimate reality — the Absolute underlying all that exists.",
+        "meaning": "Distinct from Brahmā the creator-god, Brahman is the ground of being. The Gītā links liberation with resting in Brahman and seeing Kṛṣṇa as its personal face.",
+        "etymology": "From Sanskrit √bṛh “to expand, grow great” — the vast, the Absolute.",
+        "examples": [
+          "Akṣara Brahman — the Imperishable (ch. 8)",
+          "Brahma-nirvāṇa — peace in Brahman",
+          "Identity and distinction of ātman and Brahman in teaching"
+        ],
+        "chapters": [
+          5,
+          8,
+          13,
+          14,
+          18
+        ]
+      }
+    },
+    {
+      "status": "published",
+      "era": "eternal",
+      "variantTraditions": [],
+      "schemaVersion": 1,
+      "id": "concept.maya",
+      "slug": "maya",
+      "kind": "concept",
+      "name": "Māyā",
+      "englishName": "Maya",
+      "iastName": "Māyā",
+      "sanskritName": "माया",
+      "aliases": [
+        "Illusion",
+        "Divine power",
+        "Cosmic illusion",
+        "Maya-shakti"
+      ],
+      "summary": "Divine creative power and the veil that binds the soul.",
+      "description": "Māyā is the Lord's wondrous power and the illusion that conceals true nature. The Gītā speaks of divine māyā that is hard to cross without taking refuge.",
+      "primaryScripture": "Bhagavad Gītā",
+      "scriptureSources": [
+        {
+          "work": "Bhagavad Gītā",
+          "chapter": "7"
+        },
+        {
+          "work": "Bhagavad Gītā",
+          "chapter": "18"
+        }
+      ],
+      "tags": [
+        "philosophy",
+        "gita",
+        "illusion"
+      ],
+      "categories": [
+        "concept"
+      ],
+      "importance": 5,
+      "seo": {
+        "title": "Māyā",
+        "description": "Divine power and illusion in the Bhagavad Gītā."
+      },
+      "concept": {
+        "definition": "The Divine's creative power and the appearance that veils reality.",
+        "meaning": "Not mere 'falsehood' — māyā is Kṛṣṇa's own energy that projects and binds; crossing it requires devotion and knowledge.",
+        "etymology": "Sanskrit māyā — art, wonder, illusion, measuring-out.",
+        "examples": [
+          "Divine māyā hard to transcend (Gītā 7)",
+          "Guṇas of prakṛti as binding appearance",
+          "Refuge in the Divine as the way beyond māyā"
+        ],
+        "chapters": [
+          7,
+          9,
+          14,
+          18
+        ]
+      }
+    },
+    {
+      "status": "published",
+      "era": "eternal",
+      "variantTraditions": [],
+      "schemaVersion": 1,
+      "id": "concept.prakriti",
+      "slug": "prakriti",
+      "kind": "concept",
+      "name": "Prakṛti",
+      "englishName": "Prakriti",
+      "iastName": "Prakṛti",
+      "sanskritName": "प्रकृति",
+      "aliases": [
+        "Nature",
+        "Prakrti",
+        "Matter",
+        "Primordial nature",
+        "Prakriti"
+      ],
+      "summary": "Primordial nature — the field of the three guṇas.",
+      "description": "Prakṛti is material nature. In the Gītā's Sāṅkhya teaching, all action belongs to prakṛti and its guṇas; the Self is the witness.",
+      "primaryScripture": "Bhagavad Gītā",
+      "scriptureSources": [
+        {
+          "work": "Bhagavad Gītā",
+          "chapter": "3"
+        },
+        {
+          "work": "Bhagavad Gītā",
+          "chapter": "7"
+        },
+        {
+          "work": "Bhagavad Gītā",
+          "chapter": "13"
+        },
+        {
+          "work": "Bhagavad Gītā",
+          "chapter": "14"
+        }
+      ],
+      "tags": [
+        "philosophy",
+        "gita",
+        "sankhya"
+      ],
+      "categories": [
+        "concept"
+      ],
+      "importance": 5,
+      "seo": {
+        "title": "Prakṛti",
+        "description": "Material nature and the guṇas in the Bhagavad Gītā."
+      },
+      "concept": {
+        "definition": "Primordial nature — matter and energy of manifestation.",
+        "meaning": "Paired with puruṣa, prakṛti is the changing field of the three guṇas (sattva, rajas, tamas). Actions arise in prakṛti; the wise do not claim doership.",
+        "etymology": "Sanskrit pra-kṛti — “original making,” nature, constitution.",
+        "examples": [
+          "Three guṇas binding the embodied soul (ch. 14)",
+          "Lower and higher prakṛti of the Lord (ch. 7)",
+          "Field (kṣetra) as prakṛti in chapter 13"
+        ],
+        "chapters": [
+          3,
+          7,
+          13,
+          14,
+          18
+        ]
+      }
+    },
+    {
+      "status": "published",
+      "era": "eternal",
+      "variantTraditions": [],
+      "schemaVersion": 1,
+      "id": "concept.purusha",
+      "slug": "purusha",
+      "kind": "concept",
+      "name": "Puruṣa",
+      "englishName": "Purusha",
+      "iastName": "Puruṣa",
+      "sanskritName": "पुरुष",
+      "aliases": [
+        "Spirit",
+        "Purusa",
+        "Cosmic Person",
+        "Consciousness",
+        "Puruṣa"
+      ],
+      "summary": "Conscious spirit — the knower paired with prakṛti.",
+      "description": "Puruṣa is the conscious principle. The Gītā's Sāṅkhya and Vedānta strands treat puruṣa as the witness Self, and the supreme Puruṣa as the Lord.",
+      "primaryScripture": "Bhagavad Gītā",
+      "scriptureSources": [
+        {
+          "work": "Bhagavad Gītā",
+          "chapter": "8"
+        },
+        {
+          "work": "Bhagavad Gītā",
+          "chapter": "13"
+        },
+        {
+          "work": "Bhagavad Gītā",
+          "chapter": "15"
+        }
+      ],
+      "tags": [
+        "philosophy",
+        "gita",
+        "sankhya"
+      ],
+      "categories": [
+        "concept"
+      ],
+      "importance": 5,
+      "seo": {
+        "title": "Puruṣa",
+        "description": "Spirit and the supreme Person in the Bhagavad Gītā."
+      },
+      "concept": {
+        "definition": "Conscious spirit — the knower and witness of nature.",
+        "meaning": "In Sāṅkhya, puruṣa is plural conscious selves amid prakṛti. In the Gītā, the supreme Puruṣa (Puruṣottama) is Kṛṣṇa beyond the perishable and imperishable.",
+        "etymology": "Sanskrit puruṣa — person, man, cosmic Person (Ṛgvedic sense).",
+        "examples": [
+          "Knower of the field as puruṣa (ch. 13)",
+          "Puruṣottama — the supreme Person (ch. 15)",
+          "Two puruṣas: perishable and imperishable"
+        ],
+        "chapters": [
+          8,
+          13,
+          15
+        ]
+      }
+    }
+  ]
+}

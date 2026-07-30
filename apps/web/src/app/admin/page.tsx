@@ -26,17 +26,17 @@ import {
 export const metadata = { title: "Dashboard" };
 
 const STATS = [
-  { label: "Scriptures", value: "—", hint: "Corpora in the library", icon: Library },
-  { label: "Books", value: "—", hint: "Structural top level", icon: BookMarked },
-  { label: "Chapters", value: "—", hint: "Structural units", icon: FolderTree },
-  { label: "Verses", value: "—", hint: "Atomic units", icon: BookOpen },
-  { label: "Translations", value: "—", hint: "Across languages", icon: FileText },
-  { label: "Languages", value: "—", hint: "BCP-47 locales", icon: Languages },
-  { label: "Users", value: "—", hint: "Team members", icon: Users },
-  { label: "Pending Reviews", value: "—", hint: "Awaiting reviewers", icon: ClipboardList },
-  { label: "Published", value: "—", hint: "Live content", icon: CheckCircle2 },
-  { label: "Drafts", value: "—", hint: "Unpublished", icon: PenLine },
-  { label: "Storage Used", value: "—", hint: "Media assets", icon: HardDrive },
+  { label: "Scriptures", value: " - ", hint: "Corpora in the library", icon: Library },
+  { label: "Books", value: " - ", hint: "Structural top level", icon: BookMarked },
+  { label: "Chapters", value: " - ", hint: "Structural units", icon: FolderTree },
+  { label: "Verses", value: " - ", hint: "Atomic units", icon: BookOpen },
+  { label: "Translations", value: " - ", hint: "Across languages", icon: FileText },
+  { label: "Languages", value: " - ", hint: "BCP-47 locales", icon: Languages },
+  { label: "Users", value: " - ", hint: "Team members", icon: Users },
+  { label: "Pending Reviews", value: " - ", hint: "Awaiting reviewers", icon: ClipboardList },
+  { label: "Published", value: " - ", hint: "Live content", icon: CheckCircle2 },
+  { label: "Drafts", value: " - ", hint: "Unpublished", icon: PenLine },
+  { label: "Storage Used", value: " - ", hint: "Media assets", icon: HardDrive },
 ] as const;
 
 export default function AdminDashboardPage() {
@@ -44,7 +44,7 @@ export default function AdminDashboardPage() {
     <div className="space-y-8">
       <AdminPageHeader
         title="Dashboard"
-        description="Platform overview across every scripture. Counts activate as content and APIs land — the layout is production-ready today."
+        description="Platform overview across every scripture. Counts activate as content and APIs land - the layout is production-ready today."
       />
 
       <section className="space-y-3" aria-labelledby="catalog-heading">

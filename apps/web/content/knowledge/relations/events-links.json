@@ -1,0 +1,3811 @@
+{
+  "schemaVersion": 1,
+  "relations": [
+    {
+      "id": "rel.person.brahma.participated-in.event.creation",
+      "fromId": "person.brahma",
+      "toId": "event.creation",
+      "type": "participated-in",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Ādi Parva",
+          "note": "cosmic preface"
+        },
+        {
+          "work": "Bhāgavata Purāṇa",
+          "section": "Skandha 3"
+        }
+      ]
+    },
+    {
+      "id": "rel.person.kashyapa.participated-in.event.creation",
+      "fromId": "person.kashyapa",
+      "toId": "event.creation",
+      "type": "participated-in",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Ādi Parva",
+          "note": "cosmic preface"
+        },
+        {
+          "work": "Bhāgavata Purāṇa",
+          "section": "Skandha 3"
+        }
+      ]
+    },
+    {
+      "id": "rel.event.creation.connected-to.event.major-dynasties",
+      "fromId": "event.creation",
+      "toId": "event.major-dynasties",
+      "type": "connected-to",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Ādi Parva",
+          "note": "cosmic preface"
+        },
+        {
+          "work": "Bhāgavata Purāṇa",
+          "section": "Skandha 3"
+        }
+      ]
+    },
+    {
+      "id": "rel.person.kuru.participated-in.event.major-dynasties",
+      "fromId": "person.kuru",
+      "toId": "event.major-dynasties",
+      "type": "participated-in",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Ādi Parva"
+        }
+      ]
+    },
+    {
+      "id": "rel.person.bharata.participated-in.event.major-dynasties",
+      "fromId": "person.bharata",
+      "toId": "event.major-dynasties",
+      "type": "participated-in",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Ādi Parva"
+        }
+      ]
+    },
+    {
+      "id": "rel.person.ikshvaku.participated-in.event.major-dynasties",
+      "fromId": "person.ikshvaku",
+      "toId": "event.major-dynasties",
+      "type": "participated-in",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Ādi Parva"
+        }
+      ]
+    },
+    {
+      "id": "rel.event.major-dynasties.occurred-at.city.hastinapura",
+      "fromId": "event.major-dynasties",
+      "toId": "city.hastinapura",
+      "type": "occurred-at",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Ādi Parva"
+        }
+      ]
+    },
+    {
+      "id": "rel.event.major-dynasties.occurred-at.city.ayodhya",
+      "fromId": "event.major-dynasties",
+      "toId": "city.ayodhya",
+      "type": "occurred-at",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Ādi Parva"
+        }
+      ]
+    },
+    {
+      "id": "rel.event.major-dynasties.connected-to.kingdom.kuru",
+      "fromId": "event.major-dynasties",
+      "toId": "kingdom.kuru",
+      "type": "connected-to",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Ādi Parva"
+        }
+      ],
+      "note": "kingdom"
+    },
+    {
+      "id": "rel.event.major-dynasties.connected-to.kingdom.kosala",
+      "fromId": "event.major-dynasties",
+      "toId": "kingdom.kosala",
+      "type": "connected-to",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Ādi Parva"
+        }
+      ],
+      "note": "kingdom"
+    },
+    {
+      "id": "rel.event.major-dynasties.connected-to.event.creation",
+      "fromId": "event.major-dynasties",
+      "toId": "event.creation",
+      "type": "connected-to",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Ādi Parva"
+        }
+      ]
+    },
+    {
+      "id": "rel.event.major-dynasties.connected-to.event.birth-of-krishna",
+      "fromId": "event.major-dynasties",
+      "toId": "event.birth-of-krishna",
+      "type": "connected-to",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Ādi Parva"
+        }
+      ]
+    },
+    {
+      "id": "rel.person.krishna.participated-in.event.birth-of-krishna",
+      "fromId": "person.krishna",
+      "toId": "event.birth-of-krishna",
+      "type": "participated-in",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Bhāgavata Purāṇa",
+          "section": "Skandha 10"
+        },
+        {
+          "work": "Harivaṃśa"
+        }
+      ]
+    },
+    {
+      "id": "rel.person.devaki.participated-in.event.birth-of-krishna",
+      "fromId": "person.devaki",
+      "toId": "event.birth-of-krishna",
+      "type": "participated-in",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Bhāgavata Purāṇa",
+          "section": "Skandha 10"
+        },
+        {
+          "work": "Harivaṃśa"
+        }
+      ]
+    },
+    {
+      "id": "rel.person.vasudeva.participated-in.event.birth-of-krishna",
+      "fromId": "person.vasudeva",
+      "toId": "event.birth-of-krishna",
+      "type": "participated-in",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Bhāgavata Purāṇa",
+          "section": "Skandha 10"
+        },
+        {
+          "work": "Harivaṃśa"
+        }
+      ]
+    },
+    {
+      "id": "rel.person.kamsa.participated-in.event.birth-of-krishna",
+      "fromId": "person.kamsa",
+      "toId": "event.birth-of-krishna",
+      "type": "participated-in",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Bhāgavata Purāṇa",
+          "section": "Skandha 10"
+        },
+        {
+          "work": "Harivaṃśa"
+        }
+      ]
+    },
+    {
+      "id": "rel.person.nanda.participated-in.event.birth-of-krishna",
+      "fromId": "person.nanda",
+      "toId": "event.birth-of-krishna",
+      "type": "participated-in",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Bhāgavata Purāṇa",
+          "section": "Skandha 10"
+        },
+        {
+          "work": "Harivaṃśa"
+        }
+      ]
+    },
+    {
+      "id": "rel.event.birth-of-krishna.occurred-at.city.mathura",
+      "fromId": "event.birth-of-krishna",
+      "toId": "city.mathura",
+      "type": "occurred-at",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Bhāgavata Purāṇa",
+          "section": "Skandha 10"
+        },
+        {
+          "work": "Harivaṃśa"
+        }
+      ]
+    },
+    {
+      "id": "rel.event.birth-of-krishna.occurred-at.place.gokula",
+      "fromId": "event.birth-of-krishna",
+      "toId": "place.gokula",
+      "type": "occurred-at",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Bhāgavata Purāṇa",
+          "section": "Skandha 10"
+        },
+        {
+          "work": "Harivaṃśa"
+        }
+      ]
+    },
+    {
+      "id": "rel.event.birth-of-krishna.occurred-at.place.vrindavana",
+      "fromId": "event.birth-of-krishna",
+      "toId": "place.vrindavana",
+      "type": "occurred-at",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Bhāgavata Purāṇa",
+          "section": "Skandha 10"
+        },
+        {
+          "work": "Harivaṃśa"
+        }
+      ]
+    },
+    {
+      "id": "rel.event.birth-of-krishna.connected-to.kingdom.surasena",
+      "fromId": "event.birth-of-krishna",
+      "toId": "kingdom.surasena",
+      "type": "connected-to",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Bhāgavata Purāṇa",
+          "section": "Skandha 10"
+        },
+        {
+          "work": "Harivaṃśa"
+        }
+      ],
+      "note": "kingdom"
+    },
+    {
+      "id": "rel.event.birth-of-krishna.appears-in.verse.bg.4.7",
+      "fromId": "event.birth-of-krishna",
+      "toId": "verse.bg.4.7",
+      "type": "appears-in",
+      "confidence": "verified",
+      "sources": [
+        {
+          "work": "Bhāgavata Purāṇa",
+          "section": "Skandha 10"
+        },
+        {
+          "work": "Harivaṃśa"
+        }
+      ]
+    },
+    {
+      "id": "rel.event.birth-of-krishna.connected-to.event.major-dynasties",
+      "fromId": "event.birth-of-krishna",
+      "toId": "event.major-dynasties",
+      "type": "connected-to",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Bhāgavata Purāṇa",
+          "section": "Skandha 10"
+        },
+        {
+          "work": "Harivaṃśa"
+        }
+      ]
+    },
+    {
+      "id": "rel.event.birth-of-krishna.connected-to.event.birth-of-pandavas",
+      "fromId": "event.birth-of-krishna",
+      "toId": "event.birth-of-pandavas",
+      "type": "connected-to",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Bhāgavata Purāṇa",
+          "section": "Skandha 10"
+        },
+        {
+          "work": "Harivaṃśa"
+        }
+      ]
+    },
+    {
+      "id": "rel.person.kunti.participated-in.event.birth-of-pandavas",
+      "fromId": "person.kunti",
+      "toId": "event.birth-of-pandavas",
+      "type": "participated-in",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Ādi Parva"
+        }
+      ]
+    },
+    {
+      "id": "rel.person.madri.participated-in.event.birth-of-pandavas",
+      "fromId": "person.madri",
+      "toId": "event.birth-of-pandavas",
+      "type": "participated-in",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Ādi Parva"
+        }
+      ]
+    },
+    {
+      "id": "rel.person.pandu.participated-in.event.birth-of-pandavas",
+      "fromId": "person.pandu",
+      "toId": "event.birth-of-pandavas",
+      "type": "participated-in",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Ādi Parva"
+        }
+      ]
+    },
+    {
+      "id": "rel.person.yudhishthira.participated-in.event.birth-of-pandavas",
+      "fromId": "person.yudhishthira",
+      "toId": "event.birth-of-pandavas",
+      "type": "participated-in",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Ādi Parva"
+        }
+      ]
+    },
+    {
+      "id": "rel.person.bhima.participated-in.event.birth-of-pandavas",
+      "fromId": "person.bhima",
+      "toId": "event.birth-of-pandavas",
+      "type": "participated-in",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Ādi Parva"
+        }
+      ]
+    },
+    {
+      "id": "rel.person.arjuna.participated-in.event.birth-of-pandavas",
+      "fromId": "person.arjuna",
+      "toId": "event.birth-of-pandavas",
+      "type": "participated-in",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Ādi Parva"
+        }
+      ]
+    },
+    {
+      "id": "rel.person.nakula.participated-in.event.birth-of-pandavas",
+      "fromId": "person.nakula",
+      "toId": "event.birth-of-pandavas",
+      "type": "participated-in",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Ādi Parva"
+        }
+      ]
+    },
+    {
+      "id": "rel.person.sahadeva.participated-in.event.birth-of-pandavas",
+      "fromId": "person.sahadeva",
+      "toId": "event.birth-of-pandavas",
+      "type": "participated-in",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Ādi Parva"
+        }
+      ]
+    },
+    {
+      "id": "rel.person.yama.participated-in.event.birth-of-pandavas",
+      "fromId": "person.yama",
+      "toId": "event.birth-of-pandavas",
+      "type": "participated-in",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Ādi Parva"
+        }
+      ]
+    },
+    {
+      "id": "rel.person.vayu.participated-in.event.birth-of-pandavas",
+      "fromId": "person.vayu",
+      "toId": "event.birth-of-pandavas",
+      "type": "participated-in",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Ādi Parva"
+        }
+      ]
+    },
+    {
+      "id": "rel.person.indra.participated-in.event.birth-of-pandavas",
+      "fromId": "person.indra",
+      "toId": "event.birth-of-pandavas",
+      "type": "participated-in",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Ādi Parva"
+        }
+      ]
+    },
+    {
+      "id": "rel.person.ashvins.participated-in.event.birth-of-pandavas",
+      "fromId": "person.ashvins",
+      "toId": "event.birth-of-pandavas",
+      "type": "participated-in",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Ādi Parva"
+        }
+      ]
+    },
+    {
+      "id": "rel.event.birth-of-pandavas.occurred-at.city.hastinapura",
+      "fromId": "event.birth-of-pandavas",
+      "toId": "city.hastinapura",
+      "type": "occurred-at",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Ādi Parva"
+        }
+      ]
+    },
+    {
+      "id": "rel.event.birth-of-pandavas.connected-to.kingdom.kuru",
+      "fromId": "event.birth-of-pandavas",
+      "toId": "kingdom.kuru",
+      "type": "connected-to",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Ādi Parva"
+        }
+      ],
+      "note": "kingdom"
+    },
+    {
+      "id": "rel.event.birth-of-pandavas.connected-to.event.lakshagriha",
+      "fromId": "event.birth-of-pandavas",
+      "toId": "event.lakshagriha",
+      "type": "connected-to",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Ādi Parva"
+        }
+      ]
+    },
+    {
+      "id": "rel.event.birth-of-pandavas.connected-to.event.draupadi-swayamvara",
+      "fromId": "event.birth-of-pandavas",
+      "toId": "event.draupadi-swayamvara",
+      "type": "connected-to",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Ādi Parva"
+        }
+      ]
+    },
+    {
+      "id": "rel.person.gandhari.participated-in.event.birth-of-kauravas",
+      "fromId": "person.gandhari",
+      "toId": "event.birth-of-kauravas",
+      "type": "participated-in",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Ādi Parva"
+        }
+      ]
+    },
+    {
+      "id": "rel.person.dhritarashtra.participated-in.event.birth-of-kauravas",
+      "fromId": "person.dhritarashtra",
+      "toId": "event.birth-of-kauravas",
+      "type": "participated-in",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Ādi Parva"
+        }
+      ]
+    },
+    {
+      "id": "rel.person.duryodhana.participated-in.event.birth-of-kauravas",
+      "fromId": "person.duryodhana",
+      "toId": "event.birth-of-kauravas",
+      "type": "participated-in",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Ādi Parva"
+        }
+      ]
+    },
+    {
+      "id": "rel.person.dushasana.participated-in.event.birth-of-kauravas",
+      "fromId": "person.dushasana",
+      "toId": "event.birth-of-kauravas",
+      "type": "participated-in",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Ādi Parva"
+        }
+      ]
+    },
+    {
+      "id": "rel.person.vyasa.participated-in.event.birth-of-kauravas",
+      "fromId": "person.vyasa",
+      "toId": "event.birth-of-kauravas",
+      "type": "participated-in",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Ādi Parva"
+        }
+      ]
+    },
+    {
+      "id": "rel.event.birth-of-kauravas.occurred-at.city.hastinapura",
+      "fromId": "event.birth-of-kauravas",
+      "toId": "city.hastinapura",
+      "type": "occurred-at",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Ādi Parva"
+        }
+      ]
+    },
+    {
+      "id": "rel.event.birth-of-kauravas.connected-to.kingdom.kuru",
+      "fromId": "event.birth-of-kauravas",
+      "toId": "kingdom.kuru",
+      "type": "connected-to",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Ādi Parva"
+        }
+      ],
+      "note": "kingdom"
+    },
+    {
+      "id": "rel.event.birth-of-kauravas.connected-to.event.birth-of-pandavas",
+      "fromId": "event.birth-of-kauravas",
+      "toId": "event.birth-of-pandavas",
+      "type": "connected-to",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Ādi Parva"
+        }
+      ]
+    },
+    {
+      "id": "rel.event.birth-of-kauravas.connected-to.event.lakshagriha",
+      "fromId": "event.birth-of-kauravas",
+      "toId": "event.lakshagriha",
+      "type": "connected-to",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Ādi Parva"
+        }
+      ]
+    },
+    {
+      "id": "rel.person.yudhishthira.participated-in.event.lakshagriha",
+      "fromId": "person.yudhishthira",
+      "toId": "event.lakshagriha",
+      "type": "participated-in",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Ādi Parva"
+        }
+      ]
+    },
+    {
+      "id": "rel.person.bhima.participated-in.event.lakshagriha",
+      "fromId": "person.bhima",
+      "toId": "event.lakshagriha",
+      "type": "participated-in",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Ādi Parva"
+        }
+      ]
+    },
+    {
+      "id": "rel.person.arjuna.participated-in.event.lakshagriha",
+      "fromId": "person.arjuna",
+      "toId": "event.lakshagriha",
+      "type": "participated-in",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Ādi Parva"
+        }
+      ]
+    },
+    {
+      "id": "rel.person.nakula.participated-in.event.lakshagriha",
+      "fromId": "person.nakula",
+      "toId": "event.lakshagriha",
+      "type": "participated-in",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Ādi Parva"
+        }
+      ]
+    },
+    {
+      "id": "rel.person.sahadeva.participated-in.event.lakshagriha",
+      "fromId": "person.sahadeva",
+      "toId": "event.lakshagriha",
+      "type": "participated-in",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Ādi Parva"
+        }
+      ]
+    },
+    {
+      "id": "rel.person.kunti.participated-in.event.lakshagriha",
+      "fromId": "person.kunti",
+      "toId": "event.lakshagriha",
+      "type": "participated-in",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Ādi Parva"
+        }
+      ]
+    },
+    {
+      "id": "rel.person.duryodhana.participated-in.event.lakshagriha",
+      "fromId": "person.duryodhana",
+      "toId": "event.lakshagriha",
+      "type": "participated-in",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Ādi Parva"
+        }
+      ]
+    },
+    {
+      "id": "rel.person.vidura.participated-in.event.lakshagriha",
+      "fromId": "person.vidura",
+      "toId": "event.lakshagriha",
+      "type": "participated-in",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Ādi Parva"
+        }
+      ]
+    },
+    {
+      "id": "rel.event.lakshagriha.occurred-at.city.varanavata",
+      "fromId": "event.lakshagriha",
+      "toId": "city.varanavata",
+      "type": "occurred-at",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Ādi Parva"
+        }
+      ]
+    },
+    {
+      "id": "rel.event.lakshagriha.occurred-at.city.hastinapura",
+      "fromId": "event.lakshagriha",
+      "toId": "city.hastinapura",
+      "type": "occurred-at",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Ādi Parva"
+        }
+      ]
+    },
+    {
+      "id": "rel.event.lakshagriha.connected-to.kingdom.kuru",
+      "fromId": "event.lakshagriha",
+      "toId": "kingdom.kuru",
+      "type": "connected-to",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Ādi Parva"
+        }
+      ],
+      "note": "kingdom"
+    },
+    {
+      "id": "rel.event.lakshagriha.connected-to.event.birth-of-pandavas",
+      "fromId": "event.lakshagriha",
+      "toId": "event.birth-of-pandavas",
+      "type": "connected-to",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Ādi Parva"
+        }
+      ]
+    },
+    {
+      "id": "rel.event.lakshagriha.connected-to.event.draupadi-swayamvara",
+      "fromId": "event.lakshagriha",
+      "toId": "event.draupadi-swayamvara",
+      "type": "connected-to",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Ādi Parva"
+        }
+      ]
+    },
+    {
+      "id": "rel.person.draupadi.participated-in.event.draupadi-swayamvara",
+      "fromId": "person.draupadi",
+      "toId": "event.draupadi-swayamvara",
+      "type": "participated-in",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Ādi Parva"
+        }
+      ]
+    },
+    {
+      "id": "rel.person.arjuna.participated-in.event.draupadi-swayamvara",
+      "fromId": "person.arjuna",
+      "toId": "event.draupadi-swayamvara",
+      "type": "participated-in",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Ādi Parva"
+        }
+      ]
+    },
+    {
+      "id": "rel.person.yudhishthira.participated-in.event.draupadi-swayamvara",
+      "fromId": "person.yudhishthira",
+      "toId": "event.draupadi-swayamvara",
+      "type": "participated-in",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Ādi Parva"
+        }
+      ]
+    },
+    {
+      "id": "rel.person.bhima.participated-in.event.draupadi-swayamvara",
+      "fromId": "person.bhima",
+      "toId": "event.draupadi-swayamvara",
+      "type": "participated-in",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Ādi Parva"
+        }
+      ]
+    },
+    {
+      "id": "rel.person.nakula.participated-in.event.draupadi-swayamvara",
+      "fromId": "person.nakula",
+      "toId": "event.draupadi-swayamvara",
+      "type": "participated-in",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Ādi Parva"
+        }
+      ]
+    },
+    {
+      "id": "rel.person.sahadeva.participated-in.event.draupadi-swayamvara",
+      "fromId": "person.sahadeva",
+      "toId": "event.draupadi-swayamvara",
+      "type": "participated-in",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Ādi Parva"
+        }
+      ]
+    },
+    {
+      "id": "rel.person.kunti.participated-in.event.draupadi-swayamvara",
+      "fromId": "person.kunti",
+      "toId": "event.draupadi-swayamvara",
+      "type": "participated-in",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Ādi Parva"
+        }
+      ]
+    },
+    {
+      "id": "rel.person.karna.participated-in.event.draupadi-swayamvara",
+      "fromId": "person.karna",
+      "toId": "event.draupadi-swayamvara",
+      "type": "participated-in",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Ādi Parva"
+        }
+      ]
+    },
+    {
+      "id": "rel.person.krishna.participated-in.event.draupadi-swayamvara",
+      "fromId": "person.krishna",
+      "toId": "event.draupadi-swayamvara",
+      "type": "participated-in",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Ādi Parva"
+        }
+      ]
+    },
+    {
+      "id": "rel.event.draupadi-swayamvara.occurred-at.city.kampilya",
+      "fromId": "event.draupadi-swayamvara",
+      "toId": "city.kampilya",
+      "type": "occurred-at",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Ādi Parva"
+        }
+      ]
+    },
+    {
+      "id": "rel.event.draupadi-swayamvara.connected-to.kingdom.pancala",
+      "fromId": "event.draupadi-swayamvara",
+      "toId": "kingdom.pancala",
+      "type": "connected-to",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Ādi Parva"
+        }
+      ],
+      "note": "kingdom"
+    },
+    {
+      "id": "rel.event.draupadi-swayamvara.connected-to.weapon.gandiva",
+      "fromId": "event.draupadi-swayamvara",
+      "toId": "weapon.gandiva",
+      "type": "connected-to",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Ādi Parva"
+        }
+      ],
+      "note": "weapon"
+    },
+    {
+      "id": "rel.event.draupadi-swayamvara.connected-to.event.lakshagriha",
+      "fromId": "event.draupadi-swayamvara",
+      "toId": "event.lakshagriha",
+      "type": "connected-to",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Ādi Parva"
+        }
+      ]
+    },
+    {
+      "id": "rel.event.draupadi-swayamvara.connected-to.event.dice-game",
+      "fromId": "event.draupadi-swayamvara",
+      "toId": "event.dice-game",
+      "type": "connected-to",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Ādi Parva"
+        }
+      ]
+    },
+    {
+      "id": "rel.person.yudhishthira.participated-in.event.dice-game",
+      "fromId": "person.yudhishthira",
+      "toId": "event.dice-game",
+      "type": "participated-in",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Sabhā Parva"
+        }
+      ]
+    },
+    {
+      "id": "rel.person.shakuni.participated-in.event.dice-game",
+      "fromId": "person.shakuni",
+      "toId": "event.dice-game",
+      "type": "participated-in",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Sabhā Parva"
+        }
+      ]
+    },
+    {
+      "id": "rel.person.duryodhana.participated-in.event.dice-game",
+      "fromId": "person.duryodhana",
+      "toId": "event.dice-game",
+      "type": "participated-in",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Sabhā Parva"
+        }
+      ]
+    },
+    {
+      "id": "rel.person.dushasana.participated-in.event.dice-game",
+      "fromId": "person.dushasana",
+      "toId": "event.dice-game",
+      "type": "participated-in",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Sabhā Parva"
+        }
+      ]
+    },
+    {
+      "id": "rel.person.draupadi.participated-in.event.dice-game",
+      "fromId": "person.draupadi",
+      "toId": "event.dice-game",
+      "type": "participated-in",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Sabhā Parva"
+        }
+      ]
+    },
+    {
+      "id": "rel.person.bhishma.participated-in.event.dice-game",
+      "fromId": "person.bhishma",
+      "toId": "event.dice-game",
+      "type": "participated-in",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Sabhā Parva"
+        }
+      ]
+    },
+    {
+      "id": "rel.person.vidura.participated-in.event.dice-game",
+      "fromId": "person.vidura",
+      "toId": "event.dice-game",
+      "type": "participated-in",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Sabhā Parva"
+        }
+      ]
+    },
+    {
+      "id": "rel.person.karna.participated-in.event.dice-game",
+      "fromId": "person.karna",
+      "toId": "event.dice-game",
+      "type": "participated-in",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Sabhā Parva"
+        }
+      ]
+    },
+    {
+      "id": "rel.person.dhritarashtra.participated-in.event.dice-game",
+      "fromId": "person.dhritarashtra",
+      "toId": "event.dice-game",
+      "type": "participated-in",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Sabhā Parva"
+        }
+      ]
+    },
+    {
+      "id": "rel.event.dice-game.occurred-at.city.hastinapura",
+      "fromId": "event.dice-game",
+      "toId": "city.hastinapura",
+      "type": "occurred-at",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Sabhā Parva"
+        }
+      ]
+    },
+    {
+      "id": "rel.event.dice-game.connected-to.kingdom.kuru",
+      "fromId": "event.dice-game",
+      "toId": "kingdom.kuru",
+      "type": "connected-to",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Sabhā Parva"
+        }
+      ],
+      "note": "kingdom"
+    },
+    {
+      "id": "rel.event.dice-game.connected-to.event.draupadi-swayamvara",
+      "fromId": "event.dice-game",
+      "toId": "event.draupadi-swayamvara",
+      "type": "connected-to",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Sabhā Parva"
+        }
+      ]
+    },
+    {
+      "id": "rel.event.dice-game.connected-to.event.exile",
+      "fromId": "event.dice-game",
+      "toId": "event.exile",
+      "type": "connected-to",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Sabhā Parva"
+        }
+      ]
+    },
+    {
+      "id": "rel.person.yudhishthira.participated-in.event.exile",
+      "fromId": "person.yudhishthira",
+      "toId": "event.exile",
+      "type": "participated-in",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Vana Parva"
+        }
+      ]
+    },
+    {
+      "id": "rel.person.bhima.participated-in.event.exile",
+      "fromId": "person.bhima",
+      "toId": "event.exile",
+      "type": "participated-in",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Vana Parva"
+        }
+      ]
+    },
+    {
+      "id": "rel.person.arjuna.participated-in.event.exile",
+      "fromId": "person.arjuna",
+      "toId": "event.exile",
+      "type": "participated-in",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Vana Parva"
+        }
+      ]
+    },
+    {
+      "id": "rel.person.nakula.participated-in.event.exile",
+      "fromId": "person.nakula",
+      "toId": "event.exile",
+      "type": "participated-in",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Vana Parva"
+        }
+      ]
+    },
+    {
+      "id": "rel.person.sahadeva.participated-in.event.exile",
+      "fromId": "person.sahadeva",
+      "toId": "event.exile",
+      "type": "participated-in",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Vana Parva"
+        }
+      ]
+    },
+    {
+      "id": "rel.person.draupadi.participated-in.event.exile",
+      "fromId": "person.draupadi",
+      "toId": "event.exile",
+      "type": "participated-in",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Vana Parva"
+        }
+      ]
+    },
+    {
+      "id": "rel.person.krishna.participated-in.event.exile",
+      "fromId": "person.krishna",
+      "toId": "event.exile",
+      "type": "participated-in",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Vana Parva"
+        }
+      ]
+    },
+    {
+      "id": "rel.event.exile.occurred-at.forest.kamyaka",
+      "fromId": "event.exile",
+      "toId": "forest.kamyaka",
+      "type": "occurred-at",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Vana Parva"
+        }
+      ]
+    },
+    {
+      "id": "rel.event.exile.occurred-at.forest.dvaita",
+      "fromId": "event.exile",
+      "toId": "forest.dvaita",
+      "type": "occurred-at",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Vana Parva"
+        }
+      ]
+    },
+    {
+      "id": "rel.event.exile.occurred-at.place.prayaga",
+      "fromId": "event.exile",
+      "toId": "place.prayaga",
+      "type": "occurred-at",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Vana Parva"
+        }
+      ]
+    },
+    {
+      "id": "rel.event.exile.connected-to.kingdom.kuru",
+      "fromId": "event.exile",
+      "toId": "kingdom.kuru",
+      "type": "connected-to",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Vana Parva"
+        }
+      ],
+      "note": "kingdom"
+    },
+    {
+      "id": "rel.event.exile.connected-to.weapon.gandiva",
+      "fromId": "event.exile",
+      "toId": "weapon.gandiva",
+      "type": "connected-to",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Vana Parva"
+        }
+      ],
+      "note": "weapon"
+    },
+    {
+      "id": "rel.event.exile.connected-to.weapon.pashupatastra",
+      "fromId": "event.exile",
+      "toId": "weapon.pashupatastra",
+      "type": "connected-to",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Vana Parva"
+        }
+      ],
+      "note": "weapon"
+    },
+    {
+      "id": "rel.event.exile.connected-to.event.dice-game",
+      "fromId": "event.exile",
+      "toId": "event.dice-game",
+      "type": "connected-to",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Vana Parva"
+        }
+      ]
+    },
+    {
+      "id": "rel.event.exile.connected-to.event.virata-parva",
+      "fromId": "event.exile",
+      "toId": "event.virata-parva",
+      "type": "connected-to",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Vana Parva"
+        }
+      ]
+    },
+    {
+      "id": "rel.person.yudhishthira.participated-in.event.virata-parva",
+      "fromId": "person.yudhishthira",
+      "toId": "event.virata-parva",
+      "type": "participated-in",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Virāṭa Parva"
+        }
+      ]
+    },
+    {
+      "id": "rel.person.bhima.participated-in.event.virata-parva",
+      "fromId": "person.bhima",
+      "toId": "event.virata-parva",
+      "type": "participated-in",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Virāṭa Parva"
+        }
+      ]
+    },
+    {
+      "id": "rel.person.arjuna.participated-in.event.virata-parva",
+      "fromId": "person.arjuna",
+      "toId": "event.virata-parva",
+      "type": "participated-in",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Virāṭa Parva"
+        }
+      ]
+    },
+    {
+      "id": "rel.person.nakula.participated-in.event.virata-parva",
+      "fromId": "person.nakula",
+      "toId": "event.virata-parva",
+      "type": "participated-in",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Virāṭa Parva"
+        }
+      ]
+    },
+    {
+      "id": "rel.person.sahadeva.participated-in.event.virata-parva",
+      "fromId": "person.sahadeva",
+      "toId": "event.virata-parva",
+      "type": "participated-in",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Virāṭa Parva"
+        }
+      ]
+    },
+    {
+      "id": "rel.person.draupadi.participated-in.event.virata-parva",
+      "fromId": "person.draupadi",
+      "toId": "event.virata-parva",
+      "type": "participated-in",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Virāṭa Parva"
+        }
+      ]
+    },
+    {
+      "id": "rel.person.duryodhana.participated-in.event.virata-parva",
+      "fromId": "person.duryodhana",
+      "toId": "event.virata-parva",
+      "type": "participated-in",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Virāṭa Parva"
+        }
+      ]
+    },
+    {
+      "id": "rel.event.virata-parva.occurred-at.city.viratanagara",
+      "fromId": "event.virata-parva",
+      "toId": "city.viratanagara",
+      "type": "occurred-at",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Virāṭa Parva"
+        }
+      ]
+    },
+    {
+      "id": "rel.event.virata-parva.occurred-at.city.upaplavya",
+      "fromId": "event.virata-parva",
+      "toId": "city.upaplavya",
+      "type": "occurred-at",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Virāṭa Parva"
+        }
+      ]
+    },
+    {
+      "id": "rel.event.virata-parva.connected-to.kingdom.virata",
+      "fromId": "event.virata-parva",
+      "toId": "kingdom.virata",
+      "type": "connected-to",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Virāṭa Parva"
+        }
+      ],
+      "note": "kingdom"
+    },
+    {
+      "id": "rel.event.virata-parva.connected-to.weapon.gandiva",
+      "fromId": "event.virata-parva",
+      "toId": "weapon.gandiva",
+      "type": "connected-to",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Virāṭa Parva"
+        }
+      ],
+      "note": "weapon"
+    },
+    {
+      "id": "rel.event.virata-parva.connected-to.weapon.sammohana",
+      "fromId": "event.virata-parva",
+      "toId": "weapon.sammohana",
+      "type": "connected-to",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Virāṭa Parva"
+        }
+      ],
+      "note": "weapon"
+    },
+    {
+      "id": "rel.event.virata-parva.connected-to.weapon.devadatta",
+      "fromId": "event.virata-parva",
+      "toId": "weapon.devadatta",
+      "type": "connected-to",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Virāṭa Parva"
+        }
+      ],
+      "note": "weapon"
+    },
+    {
+      "id": "rel.event.virata-parva.connected-to.event.exile",
+      "fromId": "event.virata-parva",
+      "toId": "event.exile",
+      "type": "connected-to",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Virāṭa Parva"
+        }
+      ]
+    },
+    {
+      "id": "rel.event.virata-parva.connected-to.event.krishna-peace-mission",
+      "fromId": "event.virata-parva",
+      "toId": "event.krishna-peace-mission",
+      "type": "connected-to",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Virāṭa Parva"
+        }
+      ]
+    },
+    {
+      "id": "rel.person.krishna.participated-in.event.krishna-peace-mission",
+      "fromId": "person.krishna",
+      "toId": "event.krishna-peace-mission",
+      "type": "participated-in",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Udyoga Parva"
+        }
+      ]
+    },
+    {
+      "id": "rel.person.yudhishthira.participated-in.event.krishna-peace-mission",
+      "fromId": "person.yudhishthira",
+      "toId": "event.krishna-peace-mission",
+      "type": "participated-in",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Udyoga Parva"
+        }
+      ]
+    },
+    {
+      "id": "rel.person.duryodhana.participated-in.event.krishna-peace-mission",
+      "fromId": "person.duryodhana",
+      "toId": "event.krishna-peace-mission",
+      "type": "participated-in",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Udyoga Parva"
+        }
+      ]
+    },
+    {
+      "id": "rel.person.dhritarashtra.participated-in.event.krishna-peace-mission",
+      "fromId": "person.dhritarashtra",
+      "toId": "event.krishna-peace-mission",
+      "type": "participated-in",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Udyoga Parva"
+        }
+      ]
+    },
+    {
+      "id": "rel.person.vidura.participated-in.event.krishna-peace-mission",
+      "fromId": "person.vidura",
+      "toId": "event.krishna-peace-mission",
+      "type": "participated-in",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Udyoga Parva"
+        }
+      ]
+    },
+    {
+      "id": "rel.person.karna.participated-in.event.krishna-peace-mission",
+      "fromId": "person.karna",
+      "toId": "event.krishna-peace-mission",
+      "type": "participated-in",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Udyoga Parva"
+        }
+      ]
+    },
+    {
+      "id": "rel.person.bhishma.participated-in.event.krishna-peace-mission",
+      "fromId": "person.bhishma",
+      "toId": "event.krishna-peace-mission",
+      "type": "participated-in",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Udyoga Parva"
+        }
+      ]
+    },
+    {
+      "id": "rel.event.krishna-peace-mission.occurred-at.city.hastinapura",
+      "fromId": "event.krishna-peace-mission",
+      "toId": "city.hastinapura",
+      "type": "occurred-at",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Udyoga Parva"
+        }
+      ]
+    },
+    {
+      "id": "rel.event.krishna-peace-mission.occurred-at.city.upaplavya",
+      "fromId": "event.krishna-peace-mission",
+      "toId": "city.upaplavya",
+      "type": "occurred-at",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Udyoga Parva"
+        }
+      ]
+    },
+    {
+      "id": "rel.event.krishna-peace-mission.occurred-at.place.kurukshetra",
+      "fromId": "event.krishna-peace-mission",
+      "toId": "place.kurukshetra",
+      "type": "occurred-at",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Udyoga Parva"
+        }
+      ]
+    },
+    {
+      "id": "rel.event.krishna-peace-mission.connected-to.kingdom.kuru",
+      "fromId": "event.krishna-peace-mission",
+      "toId": "kingdom.kuru",
+      "type": "connected-to",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Udyoga Parva"
+        }
+      ],
+      "note": "kingdom"
+    },
+    {
+      "id": "rel.event.krishna-peace-mission.appears-in.verse.bg.1.1",
+      "fromId": "event.krishna-peace-mission",
+      "toId": "verse.bg.1.1",
+      "type": "appears-in",
+      "confidence": "verified",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Udyoga Parva"
+        }
+      ]
+    },
+    {
+      "id": "rel.event.krishna-peace-mission.connected-to.event.virata-parva",
+      "fromId": "event.krishna-peace-mission",
+      "toId": "event.virata-parva",
+      "type": "connected-to",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Udyoga Parva"
+        }
+      ]
+    },
+    {
+      "id": "rel.event.krishna-peace-mission.connected-to.event.bhagavad-gita",
+      "fromId": "event.krishna-peace-mission",
+      "toId": "event.bhagavad-gita",
+      "type": "connected-to",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Udyoga Parva"
+        }
+      ]
+    },
+    {
+      "id": "rel.person.krishna.participated-in.event.bhagavad-gita",
+      "fromId": "person.krishna",
+      "toId": "event.bhagavad-gita",
+      "type": "participated-in",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Bhīṣma Parva"
+        },
+        {
+          "work": "Bhagavad Gītā",
+          "chapter": "1"
+        },
+        {
+          "work": "Bhagavad Gītā",
+          "chapter": "2"
+        },
+        {
+          "work": "Bhagavad Gītā",
+          "chapter": "18"
+        }
+      ]
+    },
+    {
+      "id": "rel.person.arjuna.participated-in.event.bhagavad-gita",
+      "fromId": "person.arjuna",
+      "toId": "event.bhagavad-gita",
+      "type": "participated-in",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Bhīṣma Parva"
+        },
+        {
+          "work": "Bhagavad Gītā",
+          "chapter": "1"
+        },
+        {
+          "work": "Bhagavad Gītā",
+          "chapter": "2"
+        },
+        {
+          "work": "Bhagavad Gītā",
+          "chapter": "18"
+        }
+      ]
+    },
+    {
+      "id": "rel.person.sanjaya.participated-in.event.bhagavad-gita",
+      "fromId": "person.sanjaya",
+      "toId": "event.bhagavad-gita",
+      "type": "participated-in",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Bhīṣma Parva"
+        },
+        {
+          "work": "Bhagavad Gītā",
+          "chapter": "1"
+        },
+        {
+          "work": "Bhagavad Gītā",
+          "chapter": "2"
+        },
+        {
+          "work": "Bhagavad Gītā",
+          "chapter": "18"
+        }
+      ]
+    },
+    {
+      "id": "rel.person.dhritarashtra.participated-in.event.bhagavad-gita",
+      "fromId": "person.dhritarashtra",
+      "toId": "event.bhagavad-gita",
+      "type": "participated-in",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Bhīṣma Parva"
+        },
+        {
+          "work": "Bhagavad Gītā",
+          "chapter": "1"
+        },
+        {
+          "work": "Bhagavad Gītā",
+          "chapter": "2"
+        },
+        {
+          "work": "Bhagavad Gītā",
+          "chapter": "18"
+        }
+      ]
+    },
+    {
+      "id": "rel.event.bhagavad-gita.occurred-at.place.kurukshetra",
+      "fromId": "event.bhagavad-gita",
+      "toId": "place.kurukshetra",
+      "type": "occurred-at",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Bhīṣma Parva"
+        },
+        {
+          "work": "Bhagavad Gītā",
+          "chapter": "1"
+        },
+        {
+          "work": "Bhagavad Gītā",
+          "chapter": "2"
+        },
+        {
+          "work": "Bhagavad Gītā",
+          "chapter": "18"
+        }
+      ]
+    },
+    {
+      "id": "rel.event.bhagavad-gita.connected-to.kingdom.kuru",
+      "fromId": "event.bhagavad-gita",
+      "toId": "kingdom.kuru",
+      "type": "connected-to",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Bhīṣma Parva"
+        },
+        {
+          "work": "Bhagavad Gītā",
+          "chapter": "1"
+        },
+        {
+          "work": "Bhagavad Gītā",
+          "chapter": "2"
+        },
+        {
+          "work": "Bhagavad Gītā",
+          "chapter": "18"
+        }
+      ],
+      "note": "kingdom"
+    },
+    {
+      "id": "rel.event.bhagavad-gita.connected-to.weapon.gandiva",
+      "fromId": "event.bhagavad-gita",
+      "toId": "weapon.gandiva",
+      "type": "connected-to",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Bhīṣma Parva"
+        },
+        {
+          "work": "Bhagavad Gītā",
+          "chapter": "1"
+        },
+        {
+          "work": "Bhagavad Gītā",
+          "chapter": "2"
+        },
+        {
+          "work": "Bhagavad Gītā",
+          "chapter": "18"
+        }
+      ],
+      "note": "weapon"
+    },
+    {
+      "id": "rel.event.bhagavad-gita.connected-to.weapon.sudarshana",
+      "fromId": "event.bhagavad-gita",
+      "toId": "weapon.sudarshana",
+      "type": "connected-to",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Bhīṣma Parva"
+        },
+        {
+          "work": "Bhagavad Gītā",
+          "chapter": "1"
+        },
+        {
+          "work": "Bhagavad Gītā",
+          "chapter": "2"
+        },
+        {
+          "work": "Bhagavad Gītā",
+          "chapter": "18"
+        }
+      ],
+      "note": "weapon"
+    },
+    {
+      "id": "rel.event.bhagavad-gita.connected-to.weapon.panchajanya",
+      "fromId": "event.bhagavad-gita",
+      "toId": "weapon.panchajanya",
+      "type": "connected-to",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Bhīṣma Parva"
+        },
+        {
+          "work": "Bhagavad Gītā",
+          "chapter": "1"
+        },
+        {
+          "work": "Bhagavad Gītā",
+          "chapter": "2"
+        },
+        {
+          "work": "Bhagavad Gītā",
+          "chapter": "18"
+        }
+      ],
+      "note": "weapon"
+    },
+    {
+      "id": "rel.event.bhagavad-gita.connected-to.weapon.devadatta",
+      "fromId": "event.bhagavad-gita",
+      "toId": "weapon.devadatta",
+      "type": "connected-to",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Bhīṣma Parva"
+        },
+        {
+          "work": "Bhagavad Gītā",
+          "chapter": "1"
+        },
+        {
+          "work": "Bhagavad Gītā",
+          "chapter": "2"
+        },
+        {
+          "work": "Bhagavad Gītā",
+          "chapter": "18"
+        }
+      ],
+      "note": "weapon"
+    },
+    {
+      "id": "rel.event.bhagavad-gita.connected-to.weapon.krishna-chariot",
+      "fromId": "event.bhagavad-gita",
+      "toId": "weapon.krishna-chariot",
+      "type": "connected-to",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Bhīṣma Parva"
+        },
+        {
+          "work": "Bhagavad Gītā",
+          "chapter": "1"
+        },
+        {
+          "work": "Bhagavad Gītā",
+          "chapter": "2"
+        },
+        {
+          "work": "Bhagavad Gītā",
+          "chapter": "18"
+        }
+      ],
+      "note": "weapon"
+    },
+    {
+      "id": "rel.event.bhagavad-gita.appears-in.verse.bg.1.1",
+      "fromId": "event.bhagavad-gita",
+      "toId": "verse.bg.1.1",
+      "type": "appears-in",
+      "confidence": "verified",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Bhīṣma Parva"
+        },
+        {
+          "work": "Bhagavad Gītā",
+          "chapter": "1"
+        },
+        {
+          "work": "Bhagavad Gītā",
+          "chapter": "2"
+        },
+        {
+          "work": "Bhagavad Gītā",
+          "chapter": "18"
+        }
+      ]
+    },
+    {
+      "id": "rel.event.bhagavad-gita.appears-in.verse.bg.2.3",
+      "fromId": "event.bhagavad-gita",
+      "toId": "verse.bg.2.3",
+      "type": "appears-in",
+      "confidence": "verified",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Bhīṣma Parva"
+        },
+        {
+          "work": "Bhagavad Gītā",
+          "chapter": "1"
+        },
+        {
+          "work": "Bhagavad Gītā",
+          "chapter": "2"
+        },
+        {
+          "work": "Bhagavad Gītā",
+          "chapter": "18"
+        }
+      ]
+    },
+    {
+      "id": "rel.event.bhagavad-gita.appears-in.verse.bg.2.47",
+      "fromId": "event.bhagavad-gita",
+      "toId": "verse.bg.2.47",
+      "type": "appears-in",
+      "confidence": "verified",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Bhīṣma Parva"
+        },
+        {
+          "work": "Bhagavad Gītā",
+          "chapter": "1"
+        },
+        {
+          "work": "Bhagavad Gītā",
+          "chapter": "2"
+        },
+        {
+          "work": "Bhagavad Gītā",
+          "chapter": "18"
+        }
+      ]
+    },
+    {
+      "id": "rel.event.bhagavad-gita.appears-in.verse.bg.4.7",
+      "fromId": "event.bhagavad-gita",
+      "toId": "verse.bg.4.7",
+      "type": "appears-in",
+      "confidence": "verified",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Bhīṣma Parva"
+        },
+        {
+          "work": "Bhagavad Gītā",
+          "chapter": "1"
+        },
+        {
+          "work": "Bhagavad Gītā",
+          "chapter": "2"
+        },
+        {
+          "work": "Bhagavad Gītā",
+          "chapter": "18"
+        }
+      ]
+    },
+    {
+      "id": "rel.event.bhagavad-gita.connected-to.event.krishna-peace-mission",
+      "fromId": "event.bhagavad-gita",
+      "toId": "event.krishna-peace-mission",
+      "type": "connected-to",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Bhīṣma Parva"
+        },
+        {
+          "work": "Bhagavad Gītā",
+          "chapter": "1"
+        },
+        {
+          "work": "Bhagavad Gītā",
+          "chapter": "2"
+        },
+        {
+          "work": "Bhagavad Gītā",
+          "chapter": "18"
+        }
+      ]
+    },
+    {
+      "id": "rel.event.bhagavad-gita.connected-to.event.bhishmas-fall",
+      "fromId": "event.bhagavad-gita",
+      "toId": "event.bhishmas-fall",
+      "type": "connected-to",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Bhīṣma Parva"
+        },
+        {
+          "work": "Bhagavad Gītā",
+          "chapter": "1"
+        },
+        {
+          "work": "Bhagavad Gītā",
+          "chapter": "2"
+        },
+        {
+          "work": "Bhagavad Gītā",
+          "chapter": "18"
+        }
+      ]
+    },
+    {
+      "id": "rel.person.bhishma.participated-in.event.bhishmas-fall",
+      "fromId": "person.bhishma",
+      "toId": "event.bhishmas-fall",
+      "type": "participated-in",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Bhīṣma Parva"
+        }
+      ]
+    },
+    {
+      "id": "rel.person.arjuna.participated-in.event.bhishmas-fall",
+      "fromId": "person.arjuna",
+      "toId": "event.bhishmas-fall",
+      "type": "participated-in",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Bhīṣma Parva"
+        }
+      ]
+    },
+    {
+      "id": "rel.person.krishna.participated-in.event.bhishmas-fall",
+      "fromId": "person.krishna",
+      "toId": "event.bhishmas-fall",
+      "type": "participated-in",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Bhīṣma Parva"
+        }
+      ]
+    },
+    {
+      "id": "rel.person.yudhishthira.participated-in.event.bhishmas-fall",
+      "fromId": "person.yudhishthira",
+      "toId": "event.bhishmas-fall",
+      "type": "participated-in",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Bhīṣma Parva"
+        }
+      ]
+    },
+    {
+      "id": "rel.event.bhishmas-fall.occurred-at.place.kurukshetra",
+      "fromId": "event.bhishmas-fall",
+      "toId": "place.kurukshetra",
+      "type": "occurred-at",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Bhīṣma Parva"
+        }
+      ]
+    },
+    {
+      "id": "rel.event.bhishmas-fall.connected-to.kingdom.kuru",
+      "fromId": "event.bhishmas-fall",
+      "toId": "kingdom.kuru",
+      "type": "connected-to",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Bhīṣma Parva"
+        }
+      ],
+      "note": "kingdom"
+    },
+    {
+      "id": "rel.event.bhishmas-fall.connected-to.kingdom.pancala",
+      "fromId": "event.bhishmas-fall",
+      "toId": "kingdom.pancala",
+      "type": "connected-to",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Bhīṣma Parva"
+        }
+      ],
+      "note": "kingdom"
+    },
+    {
+      "id": "rel.event.bhishmas-fall.connected-to.weapon.gandiva",
+      "fromId": "event.bhishmas-fall",
+      "toId": "weapon.gandiva",
+      "type": "connected-to",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Bhīṣma Parva"
+        }
+      ],
+      "note": "weapon"
+    },
+    {
+      "id": "rel.event.bhishmas-fall.appears-in.verse.bg.1.8",
+      "fromId": "event.bhishmas-fall",
+      "toId": "verse.bg.1.8",
+      "type": "appears-in",
+      "confidence": "verified",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Bhīṣma Parva"
+        }
+      ]
+    },
+    {
+      "id": "rel.event.bhishmas-fall.connected-to.event.bhagavad-gita",
+      "fromId": "event.bhishmas-fall",
+      "toId": "event.bhagavad-gita",
+      "type": "connected-to",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Bhīṣma Parva"
+        }
+      ]
+    },
+    {
+      "id": "rel.event.bhishmas-fall.connected-to.event.dronas-death",
+      "fromId": "event.bhishmas-fall",
+      "toId": "event.dronas-death",
+      "type": "connected-to",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Bhīṣma Parva"
+        }
+      ]
+    },
+    {
+      "id": "rel.person.abhimanyu.participated-in.event.abhimanyus-death",
+      "fromId": "person.abhimanyu",
+      "toId": "event.abhimanyus-death",
+      "type": "participated-in",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Droṇa Parva"
+        }
+      ]
+    },
+    {
+      "id": "rel.person.arjuna.participated-in.event.abhimanyus-death",
+      "fromId": "person.arjuna",
+      "toId": "event.abhimanyus-death",
+      "type": "participated-in",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Droṇa Parva"
+        }
+      ]
+    },
+    {
+      "id": "rel.person.duryodhana.participated-in.event.abhimanyus-death",
+      "fromId": "person.duryodhana",
+      "toId": "event.abhimanyus-death",
+      "type": "participated-in",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Droṇa Parva"
+        }
+      ]
+    },
+    {
+      "id": "rel.person.drona.participated-in.event.abhimanyus-death",
+      "fromId": "person.drona",
+      "toId": "event.abhimanyus-death",
+      "type": "participated-in",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Droṇa Parva"
+        }
+      ]
+    },
+    {
+      "id": "rel.person.karna.participated-in.event.abhimanyus-death",
+      "fromId": "person.karna",
+      "toId": "event.abhimanyus-death",
+      "type": "participated-in",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Droṇa Parva"
+        }
+      ]
+    },
+    {
+      "id": "rel.person.dushasana.participated-in.event.abhimanyus-death",
+      "fromId": "person.dushasana",
+      "toId": "event.abhimanyus-death",
+      "type": "participated-in",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Droṇa Parva"
+        }
+      ]
+    },
+    {
+      "id": "rel.event.abhimanyus-death.occurred-at.place.kurukshetra",
+      "fromId": "event.abhimanyus-death",
+      "toId": "place.kurukshetra",
+      "type": "occurred-at",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Droṇa Parva"
+        }
+      ]
+    },
+    {
+      "id": "rel.event.abhimanyus-death.connected-to.kingdom.kuru",
+      "fromId": "event.abhimanyus-death",
+      "toId": "kingdom.kuru",
+      "type": "connected-to",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Droṇa Parva"
+        }
+      ],
+      "note": "kingdom"
+    },
+    {
+      "id": "rel.event.abhimanyus-death.connected-to.event.bhishmas-fall",
+      "fromId": "event.abhimanyus-death",
+      "toId": "event.bhishmas-fall",
+      "type": "connected-to",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Droṇa Parva"
+        }
+      ]
+    },
+    {
+      "id": "rel.event.abhimanyus-death.connected-to.event.dronas-death",
+      "fromId": "event.abhimanyus-death",
+      "toId": "event.dronas-death",
+      "type": "connected-to",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Droṇa Parva"
+        }
+      ]
+    },
+    {
+      "id": "rel.person.drona.participated-in.event.dronas-death",
+      "fromId": "person.drona",
+      "toId": "event.dronas-death",
+      "type": "participated-in",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Droṇa Parva"
+        }
+      ]
+    },
+    {
+      "id": "rel.person.ashwatthama.participated-in.event.dronas-death",
+      "fromId": "person.ashwatthama",
+      "toId": "event.dronas-death",
+      "type": "participated-in",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Droṇa Parva"
+        }
+      ]
+    },
+    {
+      "id": "rel.person.yudhishthira.participated-in.event.dronas-death",
+      "fromId": "person.yudhishthira",
+      "toId": "event.dronas-death",
+      "type": "participated-in",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Droṇa Parva"
+        }
+      ]
+    },
+    {
+      "id": "rel.person.arjuna.participated-in.event.dronas-death",
+      "fromId": "person.arjuna",
+      "toId": "event.dronas-death",
+      "type": "participated-in",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Droṇa Parva"
+        }
+      ]
+    },
+    {
+      "id": "rel.person.krishna.participated-in.event.dronas-death",
+      "fromId": "person.krishna",
+      "toId": "event.dronas-death",
+      "type": "participated-in",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Droṇa Parva"
+        }
+      ]
+    },
+    {
+      "id": "rel.event.dronas-death.occurred-at.place.kurukshetra",
+      "fromId": "event.dronas-death",
+      "toId": "place.kurukshetra",
+      "type": "occurred-at",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Droṇa Parva"
+        }
+      ]
+    },
+    {
+      "id": "rel.event.dronas-death.connected-to.kingdom.kuru",
+      "fromId": "event.dronas-death",
+      "toId": "kingdom.kuru",
+      "type": "connected-to",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Droṇa Parva"
+        }
+      ],
+      "note": "kingdom"
+    },
+    {
+      "id": "rel.event.dronas-death.connected-to.kingdom.pancala",
+      "fromId": "event.dronas-death",
+      "toId": "kingdom.pancala",
+      "type": "connected-to",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Droṇa Parva"
+        }
+      ],
+      "note": "kingdom"
+    },
+    {
+      "id": "rel.event.dronas-death.connected-to.weapon.narayanastra",
+      "fromId": "event.dronas-death",
+      "toId": "weapon.narayanastra",
+      "type": "connected-to",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Droṇa Parva"
+        }
+      ],
+      "note": "weapon"
+    },
+    {
+      "id": "rel.event.dronas-death.connected-to.event.abhimanyus-death",
+      "fromId": "event.dronas-death",
+      "toId": "event.abhimanyus-death",
+      "type": "connected-to",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Droṇa Parva"
+        }
+      ]
+    },
+    {
+      "id": "rel.event.dronas-death.connected-to.event.karnas-death",
+      "fromId": "event.dronas-death",
+      "toId": "event.karnas-death",
+      "type": "connected-to",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Droṇa Parva"
+        }
+      ]
+    },
+    {
+      "id": "rel.person.karna.participated-in.event.karnas-death",
+      "fromId": "person.karna",
+      "toId": "event.karnas-death",
+      "type": "participated-in",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Karṇa Parva"
+        }
+      ]
+    },
+    {
+      "id": "rel.person.arjuna.participated-in.event.karnas-death",
+      "fromId": "person.arjuna",
+      "toId": "event.karnas-death",
+      "type": "participated-in",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Karṇa Parva"
+        }
+      ]
+    },
+    {
+      "id": "rel.person.krishna.participated-in.event.karnas-death",
+      "fromId": "person.krishna",
+      "toId": "event.karnas-death",
+      "type": "participated-in",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Karṇa Parva"
+        }
+      ]
+    },
+    {
+      "id": "rel.person.kunti.participated-in.event.karnas-death",
+      "fromId": "person.kunti",
+      "toId": "event.karnas-death",
+      "type": "participated-in",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Karṇa Parva"
+        }
+      ]
+    },
+    {
+      "id": "rel.event.karnas-death.occurred-at.place.kurukshetra",
+      "fromId": "event.karnas-death",
+      "toId": "place.kurukshetra",
+      "type": "occurred-at",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Karṇa Parva"
+        }
+      ]
+    },
+    {
+      "id": "rel.event.karnas-death.connected-to.kingdom.kuru",
+      "fromId": "event.karnas-death",
+      "toId": "kingdom.kuru",
+      "type": "connected-to",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Karṇa Parva"
+        }
+      ],
+      "note": "kingdom"
+    },
+    {
+      "id": "rel.event.karnas-death.connected-to.kingdom.anga",
+      "fromId": "event.karnas-death",
+      "toId": "kingdom.anga",
+      "type": "connected-to",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Karṇa Parva"
+        }
+      ],
+      "note": "kingdom"
+    },
+    {
+      "id": "rel.event.karnas-death.connected-to.weapon.gandiva",
+      "fromId": "event.karnas-death",
+      "toId": "weapon.gandiva",
+      "type": "connected-to",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Karṇa Parva"
+        }
+      ],
+      "note": "weapon"
+    },
+    {
+      "id": "rel.event.karnas-death.connected-to.weapon.vijaya-bow",
+      "fromId": "event.karnas-death",
+      "toId": "weapon.vijaya-bow",
+      "type": "connected-to",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Karṇa Parva"
+        }
+      ],
+      "note": "weapon"
+    },
+    {
+      "id": "rel.event.karnas-death.connected-to.event.dronas-death",
+      "fromId": "event.karnas-death",
+      "toId": "event.dronas-death",
+      "type": "connected-to",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Karṇa Parva"
+        }
+      ]
+    },
+    {
+      "id": "rel.event.karnas-death.connected-to.event.end-of-war",
+      "fromId": "event.karnas-death",
+      "toId": "event.end-of-war",
+      "type": "connected-to",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Karṇa Parva"
+        }
+      ]
+    },
+    {
+      "id": "rel.person.duryodhana.participated-in.event.end-of-war",
+      "fromId": "person.duryodhana",
+      "toId": "event.end-of-war",
+      "type": "participated-in",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Śalya Parva"
+        },
+        {
+          "work": "Mahābhārata",
+          "section": "Sauptika Parva"
+        },
+        {
+          "work": "Mahābhārata",
+          "section": "Strī Parva"
+        }
+      ]
+    },
+    {
+      "id": "rel.person.bhima.participated-in.event.end-of-war",
+      "fromId": "person.bhima",
+      "toId": "event.end-of-war",
+      "type": "participated-in",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Śalya Parva"
+        },
+        {
+          "work": "Mahābhārata",
+          "section": "Sauptika Parva"
+        },
+        {
+          "work": "Mahābhārata",
+          "section": "Strī Parva"
+        }
+      ]
+    },
+    {
+      "id": "rel.person.yudhishthira.participated-in.event.end-of-war",
+      "fromId": "person.yudhishthira",
+      "toId": "event.end-of-war",
+      "type": "participated-in",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Śalya Parva"
+        },
+        {
+          "work": "Mahābhārata",
+          "section": "Sauptika Parva"
+        },
+        {
+          "work": "Mahābhārata",
+          "section": "Strī Parva"
+        }
+      ]
+    },
+    {
+      "id": "rel.person.arjuna.participated-in.event.end-of-war",
+      "fromId": "person.arjuna",
+      "toId": "event.end-of-war",
+      "type": "participated-in",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Śalya Parva"
+        },
+        {
+          "work": "Mahābhārata",
+          "section": "Sauptika Parva"
+        },
+        {
+          "work": "Mahābhārata",
+          "section": "Strī Parva"
+        }
+      ]
+    },
+    {
+      "id": "rel.person.krishna.participated-in.event.end-of-war",
+      "fromId": "person.krishna",
+      "toId": "event.end-of-war",
+      "type": "participated-in",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Śalya Parva"
+        },
+        {
+          "work": "Mahābhārata",
+          "section": "Sauptika Parva"
+        },
+        {
+          "work": "Mahābhārata",
+          "section": "Strī Parva"
+        }
+      ]
+    },
+    {
+      "id": "rel.person.ashwatthama.participated-in.event.end-of-war",
+      "fromId": "person.ashwatthama",
+      "toId": "event.end-of-war",
+      "type": "participated-in",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Śalya Parva"
+        },
+        {
+          "work": "Mahābhārata",
+          "section": "Sauptika Parva"
+        },
+        {
+          "work": "Mahābhārata",
+          "section": "Strī Parva"
+        }
+      ]
+    },
+    {
+      "id": "rel.person.draupadi.participated-in.event.end-of-war",
+      "fromId": "person.draupadi",
+      "toId": "event.end-of-war",
+      "type": "participated-in",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Śalya Parva"
+        },
+        {
+          "work": "Mahābhārata",
+          "section": "Sauptika Parva"
+        },
+        {
+          "work": "Mahābhārata",
+          "section": "Strī Parva"
+        }
+      ]
+    },
+    {
+      "id": "rel.event.end-of-war.occurred-at.place.kurukshetra",
+      "fromId": "event.end-of-war",
+      "toId": "place.kurukshetra",
+      "type": "occurred-at",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Śalya Parva"
+        },
+        {
+          "work": "Mahābhārata",
+          "section": "Sauptika Parva"
+        },
+        {
+          "work": "Mahābhārata",
+          "section": "Strī Parva"
+        }
+      ]
+    },
+    {
+      "id": "rel.event.end-of-war.connected-to.kingdom.kuru",
+      "fromId": "event.end-of-war",
+      "toId": "kingdom.kuru",
+      "type": "connected-to",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Śalya Parva"
+        },
+        {
+          "work": "Mahābhārata",
+          "section": "Sauptika Parva"
+        },
+        {
+          "work": "Mahābhārata",
+          "section": "Strī Parva"
+        }
+      ],
+      "note": "kingdom"
+    },
+    {
+      "id": "rel.event.end-of-war.connected-to.weapon.gandiva",
+      "fromId": "event.end-of-war",
+      "toId": "weapon.gandiva",
+      "type": "connected-to",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Śalya Parva"
+        },
+        {
+          "work": "Mahābhārata",
+          "section": "Sauptika Parva"
+        },
+        {
+          "work": "Mahābhārata",
+          "section": "Strī Parva"
+        }
+      ],
+      "note": "weapon"
+    },
+    {
+      "id": "rel.event.end-of-war.connected-to.weapon.sudarshana",
+      "fromId": "event.end-of-war",
+      "toId": "weapon.sudarshana",
+      "type": "connected-to",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Śalya Parva"
+        },
+        {
+          "work": "Mahābhārata",
+          "section": "Sauptika Parva"
+        },
+        {
+          "work": "Mahābhārata",
+          "section": "Strī Parva"
+        }
+      ],
+      "note": "weapon"
+    },
+    {
+      "id": "rel.event.end-of-war.connected-to.weapon.brahmastra",
+      "fromId": "event.end-of-war",
+      "toId": "weapon.brahmastra",
+      "type": "connected-to",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Śalya Parva"
+        },
+        {
+          "work": "Mahābhārata",
+          "section": "Sauptika Parva"
+        },
+        {
+          "work": "Mahābhārata",
+          "section": "Strī Parva"
+        }
+      ],
+      "note": "weapon"
+    },
+    {
+      "id": "rel.event.end-of-war.connected-to.weapon.narayanastra",
+      "fromId": "event.end-of-war",
+      "toId": "weapon.narayanastra",
+      "type": "connected-to",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Śalya Parva"
+        },
+        {
+          "work": "Mahābhārata",
+          "section": "Sauptika Parva"
+        },
+        {
+          "work": "Mahābhārata",
+          "section": "Strī Parva"
+        }
+      ],
+      "note": "weapon"
+    },
+    {
+      "id": "rel.event.end-of-war.connected-to.weapon.brahmashira",
+      "fromId": "event.end-of-war",
+      "toId": "weapon.brahmashira",
+      "type": "connected-to",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Śalya Parva"
+        },
+        {
+          "work": "Mahābhārata",
+          "section": "Sauptika Parva"
+        },
+        {
+          "work": "Mahābhārata",
+          "section": "Strī Parva"
+        }
+      ],
+      "note": "weapon"
+    },
+    {
+      "id": "rel.event.end-of-war.connected-to.weapon.bhima-gada",
+      "fromId": "event.end-of-war",
+      "toId": "weapon.bhima-gada",
+      "type": "connected-to",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Śalya Parva"
+        },
+        {
+          "work": "Mahābhārata",
+          "section": "Sauptika Parva"
+        },
+        {
+          "work": "Mahābhārata",
+          "section": "Strī Parva"
+        }
+      ],
+      "note": "weapon"
+    },
+    {
+      "id": "rel.event.end-of-war.connected-to.event.karnas-death",
+      "fromId": "event.end-of-war",
+      "toId": "event.karnas-death",
+      "type": "connected-to",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Śalya Parva"
+        },
+        {
+          "work": "Mahābhārata",
+          "section": "Sauptika Parva"
+        },
+        {
+          "work": "Mahābhārata",
+          "section": "Strī Parva"
+        }
+      ]
+    },
+    {
+      "id": "rel.event.end-of-war.connected-to.event.ashwamedha",
+      "fromId": "event.end-of-war",
+      "toId": "event.ashwamedha",
+      "type": "connected-to",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Śalya Parva"
+        },
+        {
+          "work": "Mahābhārata",
+          "section": "Sauptika Parva"
+        },
+        {
+          "work": "Mahābhārata",
+          "section": "Strī Parva"
+        }
+      ]
+    },
+    {
+      "id": "rel.person.yudhishthira.participated-in.event.ashwamedha",
+      "fromId": "person.yudhishthira",
+      "toId": "event.ashwamedha",
+      "type": "participated-in",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Aśvamedhika Parva"
+        }
+      ]
+    },
+    {
+      "id": "rel.person.arjuna.participated-in.event.ashwamedha",
+      "fromId": "person.arjuna",
+      "toId": "event.ashwamedha",
+      "type": "participated-in",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Aśvamedhika Parva"
+        }
+      ]
+    },
+    {
+      "id": "rel.person.bhima.participated-in.event.ashwamedha",
+      "fromId": "person.bhima",
+      "toId": "event.ashwamedha",
+      "type": "participated-in",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Aśvamedhika Parva"
+        }
+      ]
+    },
+    {
+      "id": "rel.person.krishna.participated-in.event.ashwamedha",
+      "fromId": "person.krishna",
+      "toId": "event.ashwamedha",
+      "type": "participated-in",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Aśvamedhika Parva"
+        }
+      ]
+    },
+    {
+      "id": "rel.person.draupadi.participated-in.event.ashwamedha",
+      "fromId": "person.draupadi",
+      "toId": "event.ashwamedha",
+      "type": "participated-in",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Aśvamedhika Parva"
+        }
+      ]
+    },
+    {
+      "id": "rel.event.ashwamedha.occurred-at.city.hastinapura",
+      "fromId": "event.ashwamedha",
+      "toId": "city.hastinapura",
+      "type": "occurred-at",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Aśvamedhika Parva"
+        }
+      ]
+    },
+    {
+      "id": "rel.event.ashwamedha.occurred-at.city.indraprastha",
+      "fromId": "event.ashwamedha",
+      "toId": "city.indraprastha",
+      "type": "occurred-at",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Aśvamedhika Parva"
+        }
+      ]
+    },
+    {
+      "id": "rel.event.ashwamedha.connected-to.kingdom.kuru",
+      "fromId": "event.ashwamedha",
+      "toId": "kingdom.kuru",
+      "type": "connected-to",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Aśvamedhika Parva"
+        }
+      ],
+      "note": "kingdom"
+    },
+    {
+      "id": "rel.event.ashwamedha.connected-to.weapon.gandiva",
+      "fromId": "event.ashwamedha",
+      "toId": "weapon.gandiva",
+      "type": "connected-to",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Aśvamedhika Parva"
+        }
+      ],
+      "note": "weapon"
+    },
+    {
+      "id": "rel.event.ashwamedha.connected-to.event.end-of-war",
+      "fromId": "event.ashwamedha",
+      "toId": "event.end-of-war",
+      "type": "connected-to",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Aśvamedhika Parva"
+        }
+      ]
+    },
+    {
+      "id": "rel.person.yudhishthira.participated-in.event.aftermath",
+      "fromId": "person.yudhishthira",
+      "toId": "event.aftermath",
+      "type": "participated-in",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Strī Parva"
+        },
+        {
+          "work": "Mahābhārata",
+          "section": "Śānti Parva"
+        },
+        {
+          "work": "Mahābhārata",
+          "section": "Mahāprasthānika Parva"
+        }
+      ]
+    },
+    {
+      "id": "rel.person.draupadi.participated-in.event.aftermath",
+      "fromId": "person.draupadi",
+      "toId": "event.aftermath",
+      "type": "participated-in",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Strī Parva"
+        },
+        {
+          "work": "Mahābhārata",
+          "section": "Śānti Parva"
+        },
+        {
+          "work": "Mahābhārata",
+          "section": "Mahāprasthānika Parva"
+        }
+      ]
+    },
+    {
+      "id": "rel.person.krishna.participated-in.event.aftermath",
+      "fromId": "person.krishna",
+      "toId": "event.aftermath",
+      "type": "participated-in",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Strī Parva"
+        },
+        {
+          "work": "Mahābhārata",
+          "section": "Śānti Parva"
+        },
+        {
+          "work": "Mahābhārata",
+          "section": "Mahāprasthānika Parva"
+        }
+      ]
+    },
+    {
+      "id": "rel.person.gandhari.participated-in.event.aftermath",
+      "fromId": "person.gandhari",
+      "toId": "event.aftermath",
+      "type": "participated-in",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Strī Parva"
+        },
+        {
+          "work": "Mahābhārata",
+          "section": "Śānti Parva"
+        },
+        {
+          "work": "Mahābhārata",
+          "section": "Mahāprasthānika Parva"
+        }
+      ]
+    },
+    {
+      "id": "rel.person.dhritarashtra.participated-in.event.aftermath",
+      "fromId": "person.dhritarashtra",
+      "toId": "event.aftermath",
+      "type": "participated-in",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Strī Parva"
+        },
+        {
+          "work": "Mahābhārata",
+          "section": "Śānti Parva"
+        },
+        {
+          "work": "Mahābhārata",
+          "section": "Mahāprasthānika Parva"
+        }
+      ]
+    },
+    {
+      "id": "rel.person.bhishma.participated-in.event.aftermath",
+      "fromId": "person.bhishma",
+      "toId": "event.aftermath",
+      "type": "participated-in",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Strī Parva"
+        },
+        {
+          "work": "Mahābhārata",
+          "section": "Śānti Parva"
+        },
+        {
+          "work": "Mahābhārata",
+          "section": "Mahāprasthānika Parva"
+        }
+      ]
+    },
+    {
+      "id": "rel.event.aftermath.occurred-at.city.hastinapura",
+      "fromId": "event.aftermath",
+      "toId": "city.hastinapura",
+      "type": "occurred-at",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Strī Parva"
+        },
+        {
+          "work": "Mahābhārata",
+          "section": "Śānti Parva"
+        },
+        {
+          "work": "Mahābhārata",
+          "section": "Mahāprasthānika Parva"
+        }
+      ]
+    },
+    {
+      "id": "rel.event.aftermath.occurred-at.place.kurukshetra",
+      "fromId": "event.aftermath",
+      "toId": "place.kurukshetra",
+      "type": "occurred-at",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Strī Parva"
+        },
+        {
+          "work": "Mahābhārata",
+          "section": "Śānti Parva"
+        },
+        {
+          "work": "Mahābhārata",
+          "section": "Mahāprasthānika Parva"
+        }
+      ]
+    },
+    {
+      "id": "rel.event.aftermath.connected-to.kingdom.kuru",
+      "fromId": "event.aftermath",
+      "toId": "kingdom.kuru",
+      "type": "connected-to",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Strī Parva"
+        },
+        {
+          "work": "Mahābhārata",
+          "section": "Śānti Parva"
+        },
+        {
+          "work": "Mahābhārata",
+          "section": "Mahāprasthānika Parva"
+        }
+      ],
+      "note": "kingdom"
+    },
+    {
+      "id": "rel.event.aftermath.connected-to.event.ashwamedha",
+      "fromId": "event.aftermath",
+      "toId": "event.ashwamedha",
+      "type": "connected-to",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Strī Parva"
+        },
+        {
+          "work": "Mahābhārata",
+          "section": "Śānti Parva"
+        },
+        {
+          "work": "Mahābhārata",
+          "section": "Mahāprasthānika Parva"
+        }
+      ]
+    },
+    {
+      "id": "rel.event.aftermath.connected-to.event.end-of-war",
+      "fromId": "event.aftermath",
+      "toId": "event.end-of-war",
+      "type": "connected-to",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Strī Parva"
+        },
+        {
+          "work": "Mahābhārata",
+          "section": "Śānti Parva"
+        },
+        {
+          "work": "Mahābhārata",
+          "section": "Mahāprasthānika Parva"
+        }
+      ]
+    },
+    {
+      "id": "rel.event.creation.precedes.event.major-dynasties",
+      "fromId": "event.creation",
+      "toId": "event.major-dynasties",
+      "type": "precedes",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Ādi Parva",
+          "note": "cosmic preface"
+        },
+        {
+          "work": "Bhāgavata Purāṇa",
+          "section": "Skandha 3"
+        }
+      ],
+      "note": "timeline"
+    },
+    {
+      "id": "rel.event.major-dynasties.precedes.event.birth-of-krishna",
+      "fromId": "event.major-dynasties",
+      "toId": "event.birth-of-krishna",
+      "type": "precedes",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Ādi Parva"
+        }
+      ],
+      "note": "timeline"
+    },
+    {
+      "id": "rel.event.birth-of-krishna.precedes.event.birth-of-pandavas",
+      "fromId": "event.birth-of-krishna",
+      "toId": "event.birth-of-pandavas",
+      "type": "precedes",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Bhāgavata Purāṇa",
+          "section": "Skandha 10"
+        },
+        {
+          "work": "Harivaṃśa"
+        }
+      ],
+      "note": "timeline"
+    },
+    {
+      "id": "rel.event.birth-of-pandavas.precedes.event.birth-of-kauravas",
+      "fromId": "event.birth-of-pandavas",
+      "toId": "event.birth-of-kauravas",
+      "type": "precedes",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Ādi Parva"
+        }
+      ],
+      "note": "timeline"
+    },
+    {
+      "id": "rel.event.birth-of-kauravas.precedes.event.lakshagriha",
+      "fromId": "event.birth-of-kauravas",
+      "toId": "event.lakshagriha",
+      "type": "precedes",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Ādi Parva"
+        }
+      ],
+      "note": "timeline"
+    },
+    {
+      "id": "rel.event.lakshagriha.precedes.event.draupadi-swayamvara",
+      "fromId": "event.lakshagriha",
+      "toId": "event.draupadi-swayamvara",
+      "type": "precedes",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Ādi Parva"
+        }
+      ],
+      "note": "timeline"
+    },
+    {
+      "id": "rel.event.draupadi-swayamvara.precedes.event.dice-game",
+      "fromId": "event.draupadi-swayamvara",
+      "toId": "event.dice-game",
+      "type": "precedes",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Ādi Parva"
+        }
+      ],
+      "note": "timeline"
+    },
+    {
+      "id": "rel.event.dice-game.precedes.event.exile",
+      "fromId": "event.dice-game",
+      "toId": "event.exile",
+      "type": "precedes",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Sabhā Parva"
+        }
+      ],
+      "note": "timeline"
+    },
+    {
+      "id": "rel.event.exile.precedes.event.virata-parva",
+      "fromId": "event.exile",
+      "toId": "event.virata-parva",
+      "type": "precedes",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Vana Parva"
+        }
+      ],
+      "note": "timeline"
+    },
+    {
+      "id": "rel.event.virata-parva.precedes.event.krishna-peace-mission",
+      "fromId": "event.virata-parva",
+      "toId": "event.krishna-peace-mission",
+      "type": "precedes",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Virāṭa Parva"
+        }
+      ],
+      "note": "timeline"
+    },
+    {
+      "id": "rel.event.krishna-peace-mission.precedes.event.bhagavad-gita",
+      "fromId": "event.krishna-peace-mission",
+      "toId": "event.bhagavad-gita",
+      "type": "precedes",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Udyoga Parva"
+        }
+      ],
+      "note": "timeline"
+    },
+    {
+      "id": "rel.event.bhagavad-gita.precedes.event.bhishmas-fall",
+      "fromId": "event.bhagavad-gita",
+      "toId": "event.bhishmas-fall",
+      "type": "precedes",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Bhīṣma Parva"
+        },
+        {
+          "work": "Bhagavad Gītā",
+          "chapter": "1"
+        },
+        {
+          "work": "Bhagavad Gītā",
+          "chapter": "2"
+        },
+        {
+          "work": "Bhagavad Gītā",
+          "chapter": "18"
+        }
+      ],
+      "note": "timeline"
+    },
+    {
+      "id": "rel.event.bhishmas-fall.precedes.event.abhimanyus-death",
+      "fromId": "event.bhishmas-fall",
+      "toId": "event.abhimanyus-death",
+      "type": "precedes",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Bhīṣma Parva"
+        }
+      ],
+      "note": "timeline"
+    },
+    {
+      "id": "rel.event.abhimanyus-death.precedes.event.dronas-death",
+      "fromId": "event.abhimanyus-death",
+      "toId": "event.dronas-death",
+      "type": "precedes",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Droṇa Parva"
+        }
+      ],
+      "note": "timeline"
+    },
+    {
+      "id": "rel.event.dronas-death.precedes.event.karnas-death",
+      "fromId": "event.dronas-death",
+      "toId": "event.karnas-death",
+      "type": "precedes",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Droṇa Parva"
+        }
+      ],
+      "note": "timeline"
+    },
+    {
+      "id": "rel.event.karnas-death.precedes.event.end-of-war",
+      "fromId": "event.karnas-death",
+      "toId": "event.end-of-war",
+      "type": "precedes",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Karṇa Parva"
+        }
+      ],
+      "note": "timeline"
+    },
+    {
+      "id": "rel.event.end-of-war.precedes.event.ashwamedha",
+      "fromId": "event.end-of-war",
+      "toId": "event.ashwamedha",
+      "type": "precedes",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Śalya Parva"
+        },
+        {
+          "work": "Mahābhārata",
+          "section": "Sauptika Parva"
+        },
+        {
+          "work": "Mahābhārata",
+          "section": "Strī Parva"
+        }
+      ],
+      "note": "timeline"
+    },
+    {
+      "id": "rel.event.ashwamedha.precedes.event.aftermath",
+      "fromId": "event.ashwamedha",
+      "toId": "event.aftermath",
+      "type": "precedes",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Aśvamedhika Parva"
+        }
+      ],
+      "note": "timeline"
+    }
+  ]
+}

@@ -134,7 +134,7 @@ export function LibraryPageClient() {
       <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
         <AdminPageHeader
           title="Library"
-          description="Every scripture in the platform — structure, translations, and media."
+          description="Every scripture in the platform - structure, translations, and media."
         />
         <Button size="sm" className="shrink-0 self-start" onClick={() => setCreateOpen(true)}>
           <Plus className="h-4 w-4" aria-hidden />
@@ -271,10 +271,10 @@ export function LibraryPageClient() {
                         </Link>
                       </td>
                       <td className="text-muted-foreground px-3 py-2.5 font-mono text-xs">{row.slug}</td>
-                      <td className="px-3 py-2.5">{row.religion ?? "—"}</td>
-                      <td className="px-3 py-2.5">{row.originalLanguage ?? "—"}</td>
+                      <td className="px-3 py-2.5">{row.religion ?? " - "}</td>
+                      <td className="px-3 py-2.5">{row.originalLanguage ?? " - "}</td>
                       <td className="text-muted-foreground max-w-[10rem] truncate px-3 py-2.5 text-xs">
-                        {row.structureLevels.join(" › ") || "—"}
+                        {row.structureLevels.join(" › ") || " - "}
                       </td>
                       <td className="px-3 py-2.5">{row.bookCount}</td>
                       <td className="px-3 py-2.5">{row.chapterCount}</td>

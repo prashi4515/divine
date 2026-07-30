@@ -41,7 +41,7 @@ export function HomeLanguages() {
         </h2>
         <p className="text-muted-foreground mx-auto mt-4 max-w-2xl text-pretty text-base leading-relaxed sm:text-lg">
           {h.languagesSubheading ??
-            "Every verse comes with Sanskrit, translations, word-by-word meanings and commentary — in eight scripts."}
+            "Every verse comes with Sanskrit, translations, word-by-word meanings and commentary - in eight scripts."}
         </p>
       </header>
 

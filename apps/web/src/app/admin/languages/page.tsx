@@ -13,7 +13,7 @@ export default function AdminLanguagesPage() {
       filters={["Published"]}
       emptyIcon={Languages}
       emptyTitle="No languages yet"
-      emptyDescription="Seed en and hi first — more Indian languages follow."
+      emptyDescription="Seed en and hi first - more Indian languages follow."
       columns={[
         { key: "code", label: "Code" },
         { key: "name", label: "Name" },

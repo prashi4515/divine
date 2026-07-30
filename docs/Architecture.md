@@ -1,28 +1,33 @@
 # Architecture
 
 > System architecture for the Divine platform — a production-grade,
-> multilingual Bhagavad Gita platform designed to scale to millions of users.
+> multilingual Hindu Knowledge Graph Platform (Bhagavad Gita reading +
+> Encyclopedia + Genealogy, designed to scale to Atlas, Timeline, and more).
 
 ## 1. Overview
 
-- **Vision:** content-first, API-first, SEO-first platform for the Bhagavad Gita.
+- **Vision:** content-first, API-first, SEO-first **Knowledge Graph Platform** —
+  interconnected persons, places, concepts and scriptures with citation-backed
+  edges. The Bhagavad Gita reader is the first deep content surface; Encyclopedia
+  is the canonical entity surface; Genealogy is a curated graph view.
 - **Primary surface:** the website (SEO + discovery). Mobile apps and AI Guru are clients of the same API.
-- **Guiding principle:** _TODO — one-paragraph north star statement._
+- **Guiding principle:** one shared entity/relation model — product features never fork parallel person/place datasets. See [Knowledge-Graph](./Knowledge-Graph.md).
 
 ## 2. Architectural Principles
 
 - Shared domain contracts live in `packages/*` — never duplicated across apps.
+- Knowledge entities use stable namespaced text IDs (`person.krishna`, `verse.bg.2.47`).
 - Locale is a first-class dimension on every public content route.
 - Read path is optimized for anonymous traffic; write path is isolated behind auth.
 - Modular monolith until traffic or team size forces a split.
-- _TODO — add any additional principles._
+- Phase 1 knowledge corpus is static JSON shaped like future Prisma columns (hybrid storage).
 
 ## 3. System Topology
 
 - **Clients:** Next.js web, future Android/iOS, future AI Guru UI.
 - **Edge / CDN:** Vercel edge for HTML/ISR, CDN for audio/static.
 - **Application:** NestJS modular monolith API.
-- **Data plane:** Neon PostgreSQL (source of truth), Redis (later), Meilisearch (later), object storage/CDN for audio.
+- **Data plane:** Neon PostgreSQL (source of truth for accounts + future KG), Redis (later), Meilisearch (later), object storage/CDN for audio. Phase 1 KG reads from `apps/web/content/knowledge/`.
 
 _TODO — insert topology diagram._
 
@@ -31,37 +36,39 @@ _TODO — insert topology diagram._
 ```
 divine/
 ├── apps/
-│   ├── web/     # Next.js 15
+│   ├── web/     # Next.js 15 (Gita, Encyclopedia, Genealogy)
 │   └── api/     # NestJS
 ├── packages/
 │   ├── ui/      # shared React components
 │   ├── config/  # shared config presets
-│   └── types/   # shared TS types / DTOs
+│   └── types/   # shared TS types / DTOs (incl. knowledge Zod)
 └── docs/
 ```
 
 - **Tooling:** pnpm workspaces (Turborepo planned).
-- _TODO — document dependency rules and boundaries._
+- Dependency flow: `apps/* → packages/*` only. Web and API never import each other.
 
 ## 5. Backend Architecture (NestJS)
 
 - Module-per-domain organization.
 - Cross-cutting concerns: global `ValidationPipe`, global `AllExceptionsFilter`, pino logging.
 - Data access isolated in `PrismaModule` / `PrismaService`.
-- _TODO — list domain modules as they are added._
+- Future: Knowledge module for Prisma-backed entities (Phase 1 is web-static only).
 
 ## 6. Frontend Architecture (Next.js)
 
 - App Router, Server Components by default.
 - Locale-first routing (`/[locale]/...`) — _planned_.
-- Data fetched from the API over HTTP; no direct DB access.
+- Public knowledge reads: SSG from static JSON via `lib/knowledge/store.ts`.
+- Authenticated user data: client → API → Postgres.
 - Public pages never block on auth: no `/me` or refresh without a session cookie; navbar hydrates asynchronously. See [Client-Bundle-Auth](./Client-Bundle-Auth.md).
 - Admin chrome is scoped to `app/admin/layout.tsx` only.
-- _TODO — document feature-folder conventions._
+- Feature folders: `features/reading`, `features/encyclopedia`, `features/genealogy`, `features/search`.
 
 ## 7. Data Flow
 
 - Public content reads: SSG/ISR → optional API hydrate.
+- Knowledge graph: content packs → `generate:knowledge` → validated JSON → store → Encyclopedia / Genealogy / Gita rails.
 - Authenticated user data: client → API → Postgres.
 - _TODO — add sequence diagrams per flow._
 
@@ -89,4 +96,4 @@ divine/
 
 ## References
 
-- See [Roadmap](./Roadmap.md), [API](./API.md), [Database](./Database.md), [Client-Bundle-Auth](./Client-Bundle-Auth.md).
+- See [Roadmap](./Roadmap.md), [Knowledge-Graph](./Knowledge-Graph.md), [API](./API.md), [Database](./Database.md), [Client-Bundle-Auth](./Client-Bundle-Auth.md).

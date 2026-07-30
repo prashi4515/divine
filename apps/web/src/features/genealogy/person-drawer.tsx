@@ -272,12 +272,21 @@ function PersonDrawerBody({
           </section>
         )}
 
-        <div className="border-border/70 border-t pt-5">
+        <div className="border-border/70 border-t pt-5 space-y-2">
+          {person.encyclopediaHref && (
+            <Link
+              href={person.encyclopediaHref}
+              className="text-foreground inline-flex items-center gap-1.5 text-sm font-medium underline-offset-4 hover:underline"
+            >
+              Open in Encyclopedia
+              <ArrowUpRight className="h-3.5 w-3.5" aria-hidden />
+            </Link>
+          )}
           <Link
             href={`/genealogy/person/${person.id}`}
-            className="text-foreground inline-flex items-center gap-1.5 text-sm font-medium underline-offset-4 hover:underline"
+            className="text-muted-foreground inline-flex items-center gap-1.5 text-sm underline-offset-4 hover:underline"
           >
-            Open dedicated page for {person.name}
+            Open dedicated genealogy page
             <ArrowUpRight className="h-3.5 w-3.5" aria-hidden />
           </Link>
         </div>
@@ -290,13 +299,14 @@ const REL_GROUP_ORDER: Array<{
   title: string;
   match: (t: string) => boolean;
 }> = [
-  { title: "Parents", match: (t) => t === "father" || t === "mother" || t === "adoptive-father" || t === "adoptive-mother" },
+  { title: "Parents", match: (t) => t === "parent" || t === "father" || t === "mother" || t === "adoptive-father" || t === "adoptive-mother" },
   { title: "Spouses", match: (t) => t === "spouse" || t === "consort" },
-  { title: "Siblings", match: (t) => t === "brother" || t === "sister" },
-  { title: "Children", match: (t) => t === "son" || t === "daughter" || t === "adoptive-son" || t === "adoptive-daughter" },
+  { title: "Siblings", match: (t) => t === "sibling" || t === "brother" || t === "sister" },
+  { title: "Children", match: (t) => t === "child" || t === "son" || t === "daughter" || t === "adoptive-son" || t === "adoptive-daughter" },
   { title: "Descendants", match: (t) => t === "descendant" },
   { title: "Ancestors", match: (t) => t === "ancestor" },
   { title: "Teachers & Disciples", match: (t) => t === "guru" || t === "disciple" },
+  { title: "Friends & foes", match: (t) => t === "friend" || t === "enemy" },
   { title: "Divine identity", match: (t) => t === "incarnation-of" || t === "manifestation-of" },
 ];
 

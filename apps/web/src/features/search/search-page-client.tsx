@@ -2,73 +2,62 @@
 
 import * as React from "react";
 import { useRouter, useSearchParams } from "next/navigation";
-import type { VerseSearchResult } from "@divine/types";
+import {
+  KNOWLEDGE_SEARCH_GROUPS,
+  type KnowledgeSearchGroup,
+  type KnowledgeSearchGroupBucket,
+} from "@divine/types";
 import {
   pushLocalRecentSearch,
   readLocalRecentSearches,
   verseSearchService,
 } from "@/lib/api/services/verse-search";
+import { KnowledgeSearchResults } from "./knowledge-search-results";
 import { RecentSearches } from "./recent-searches";
 import { SearchFilters } from "./search-filters";
 import { SearchHero } from "./search-hero";
-import { SearchResults } from "./search-results";
+
+function parseGroup(raw: string | null | undefined): KnowledgeSearchGroup | undefined {
+  if (!raw) return undefined;
+  return (KNOWLEDGE_SEARCH_GROUPS as readonly string[]).includes(raw)
+    ? (raw as KnowledgeSearchGroup)
+    : undefined;
+}
 
 type SearchPageClientProps = {
   initialQuery: string;
-  initialTopic?: string;
-  initialLang: string;
-  initialResults: VerseSearchResult[];
-  initialTotal: number;
-  initialExpanded: string[];
-  initialPage: number;
-  initialTotalPages: number;
-  initialTrending?: Array<{ query: string; hitCount: number }>;
+  initialGroup?: KnowledgeSearchGroup;
 };
 
 /**
- * Search UI. URL is the source of truth; each change hits the Next.js static
- * index (`/api/search/verses`) so new keywords resolve in milliseconds.
+ * Global Knowledge Search. URL is source of truth; results come from the
+ * build-time static index via `/api/search/knowledge` (no Neon).
  */
 export function SearchPageClient({
   initialQuery,
-  initialTopic,
-  initialLang,
-  initialResults,
-  initialTotal,
-  initialExpanded,
-  initialPage,
-  initialTotalPages,
+  initialGroup,
 }: SearchPageClientProps) {
   const router = useRouter();
   const searchParams = useSearchParams();
-  const [results, setResults] = React.useState(initialResults);
-  const [total, setTotal] = React.useState(initialTotal);
-  const [expanded, setExpanded] = React.useState(initialExpanded);
-  const [page, setPage] = React.useState(initialPage);
-  const [totalPages, setTotalPages] = React.useState(initialTotalPages);
+  const [groups, setGroups] = React.useState<KnowledgeSearchGroupBucket[]>([]);
+  const [total, setTotal] = React.useState(0);
+  const [tookMs, setTookMs] = React.useState<number | undefined>();
   const [recent, setRecent] = React.useState<string[]>([]);
-  const [loading, setLoading] = React.useState(
-    Boolean(initialQuery.trim() || initialTopic),
-  );
+  const [loading, setLoading] = React.useState(Boolean(initialQuery.trim()));
   const requestIdRef = React.useRef(0);
 
   const query = searchParams.get("q") ?? initialQuery;
-  const topic = searchParams.get("topic") ?? initialTopic;
-  const lang = searchParams.get("lang") ?? initialLang;
-  const pageParam = Number(searchParams.get("page") || 1) || 1;
+  const group = parseGroup(searchParams.get("group")) ?? initialGroup;
 
   React.useEffect(() => {
     setRecent(readLocalRecentSearches(6));
   }, [query]);
 
-  // Fetch on mount and whenever the URL changes (static index — typically <300ms).
   React.useEffect(() => {
-    if (!query.trim() && !topic) {
-      setResults([]);
+    if (!query.trim()) {
+      setGroups([]);
       setTotal(0);
-      setExpanded([]);
-      setPage(1);
-      setTotalPages(0);
+      setTookMs(undefined);
       setLoading(false);
       return;
     }
@@ -76,68 +65,54 @@ export function SearchPageClient({
     const requestId = ++requestIdRef.current;
     setLoading(true);
     void verseSearchService
-      .search({
-        q: query.trim() || undefined,
-        topic,
-        lang,
-        page: pageParam,
-        pageSize: 20,
+      .knowledgeSearch({
+        q: query.trim(),
+        group,
+        perGroup: group ? 24 : 8,
       })
       .then((res) => {
         if (requestId !== requestIdRef.current) return;
-        setResults(res.data);
-        setTotal(res.meta.total);
-        setExpanded(res.meta.expandedTerms);
-        setPage(res.meta.page);
-        setTotalPages(res.meta.totalPages);
+        setGroups(res.data.groups);
+        setTotal(res.data.total);
+        setTookMs(res.meta.tookMs);
       })
       .catch(() => {
         if (requestId !== requestIdRef.current) return;
-        setResults([]);
+        setGroups([]);
         setTotal(0);
       })
       .finally(() => {
         if (requestId === requestIdRef.current) setLoading(false);
       });
-  }, [query, topic, lang, pageParam]);
+  }, [query, group]);
 
   function buildHref(next: {
     q?: string;
-    topic?: string | null;
-    lang?: string;
-    page?: number;
+    group?: KnowledgeSearchGroup | null;
   }) {
     const params = new URLSearchParams();
     const q = next.q !== undefined ? next.q : query;
-    const t =
-      next.topic === undefined
-        ? topic
-        : next.topic === null
+    const g =
+      next.group === undefined
+        ? group
+        : next.group === null
           ? undefined
-          : next.topic;
-    const l = next.lang ?? lang;
-    const p = next.page ?? 1;
+          : next.group;
     if (q) params.set("q", q);
-    if (t) params.set("topic", t);
-    if (l && l !== "en") params.set("lang", l);
-    if (p > 1) params.set("page", String(p));
+    if (g) params.set("group", g);
     const qs = params.toString();
     return qs ? `/search?${qs}` : "/search";
   }
 
   function runSearch(opts: {
     q?: string;
-    topic?: string | null;
-    lang?: string;
-    page?: number;
+    group?: KnowledgeSearchGroup | null;
     record?: boolean;
   }) {
     const q = (opts.q !== undefined ? opts.q : query).trim();
     const href = buildHref({
       q,
-      topic: opts.topic === undefined ? topic : opts.topic,
-      lang: opts.lang ?? lang,
-      page: opts.page ?? 1,
+      group: opts.group === undefined ? group : opts.group,
     });
 
     if (opts.record !== false && q) {
@@ -154,17 +129,17 @@ export function SearchPageClient({
       <div className="min-w-0">
         <header className="mb-6">
           <h1 className="font-serif text-3xl tracking-tight md:text-4xl">
-            Search the Bhagavad Gita
+            Knowledge Search
           </h1>
           <p className="text-muted-foreground mt-2 text-sm md:text-base">
-            Sanskrit, English, Telugu, Hindi, commentary and topics — press
-            Enter or tap Search.
+            People, places, events, kingdoms, weapons, concepts, genealogy,
+            atlas, and verses — aliases, Sanskrit, and fuzzy matching.
           </p>
         </header>
 
         <SearchHero
           initialQuery={query}
-          onSubmit={(q) => runSearch({ q, page: 1, record: true })}
+          onSubmit={(q) => runSearch({ q, record: true })}
         />
 
         {query ? (
@@ -175,19 +150,15 @@ export function SearchPageClient({
 
         <div className="mb-5 lg:hidden">
           <SearchFilters
-            topic={topic}
-            lang={lang}
-            onTopicChange={(t) =>
-              runSearch({ topic: t ?? null, page: 1, record: false })
-            }
-            onLangChange={(l) =>
-              runSearch({ lang: l, page: 1, record: false })
+            group={group}
+            onGroupChange={(g) =>
+              runSearch({ group: g ?? null, record: false })
             }
           />
         </div>
 
         <div aria-busy={loading}>
-          {loading && results.length === 0 ? (
+          {loading && groups.length === 0 ? (
             <div className="space-y-4 py-2" aria-hidden>
               <p className="text-muted-foreground text-xs">Searching…</p>
               {[0, 1, 2].map((i) => (
@@ -198,58 +169,24 @@ export function SearchPageClient({
               ))}
             </div>
           ) : (
-            <SearchResults
-              results={results}
-              query={query || (topic ? `topic:${topic}` : "")}
+            <KnowledgeSearchResults
+              groups={groups}
+              query={query}
               total={total}
-              expandedTerms={expanded}
-              onTermClick={(term) =>
-                runSearch({ q: term, page: 1, record: true })
-              }
+              tookMs={tookMs}
             />
           )}
         </div>
-
-        {totalPages > 1 ? (
-          <nav
-            className="mt-8 flex items-center justify-between gap-4 text-sm"
-            aria-label="Search pagination"
-          >
-            <button
-              type="button"
-              disabled={page <= 1 || loading}
-              className="text-muted-foreground hover:text-foreground disabled:opacity-40"
-              onClick={() => runSearch({ page: page - 1, record: false })}
-            >
-              Previous
-            </button>
-            <span className="text-muted-foreground tabular-nums">
-              {page} / {totalPages}
-            </span>
-            <button
-              type="button"
-              disabled={page >= totalPages || loading}
-              className="text-muted-foreground hover:text-foreground disabled:opacity-40"
-              onClick={() => runSearch({ page: page + 1, record: false })}
-            >
-              Next
-            </button>
-          </nav>
-        ) : null}
       </div>
 
       <aside className="hidden space-y-6 lg:block">
         <SearchFilters
-          topic={topic}
-          lang={lang}
-          onTopicChange={(t) =>
-            runSearch({ topic: t ?? null, page: 1, record: false })
-          }
-          onLangChange={(l) => runSearch({ lang: l, page: 1, record: false })}
+          group={group}
+          onGroupChange={(g) => runSearch({ group: g ?? null, record: false })}
         />
         <RecentSearches
           items={recent}
-          onSelect={(q) => runSearch({ q, page: 1, record: true })}
+          onSelect={(q) => runSearch({ q, record: true })}
         />
       </aside>
     </div>

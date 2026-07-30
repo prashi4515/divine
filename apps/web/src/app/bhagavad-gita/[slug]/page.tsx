@@ -3,9 +3,11 @@ import { notFound } from "next/navigation";
 import { ChapterHero } from "@/features/reading/chapter-hero";
 import { ChapterReaderHeader } from "@/features/reading/chapter-reader-header";
 import { VerseReaderClient } from "@/features/reading/verse-reader-client";
+import { RelatedEntitiesRail } from "@/features/encyclopedia/related-entities-rail";
 import { SiteFooter } from "@/features/reading/site-footer";
 import { gitaChapterTitle } from "@/lib/i18n/gita-chapters";
 import { getStaticGitaChapter } from "@/lib/reading/gita-static";
+import { getEntitiesForGitaChapter } from "@/lib/knowledge/store";
 
 type ChapterPageProps = {
   params: Promise<{ slug: string }>;
@@ -91,6 +93,7 @@ export default async function ChapterPage({ params }: ChapterPageProps) {
   }
 
   const readerLanguages = orderLanguages(snapshot.languages);
+  const relatedEntities = await getEntitiesForGitaChapter(n).catch(() => []);
 
   return (
     <div className="relative flex min-h-svh flex-col">
@@ -124,6 +127,10 @@ export default async function ChapterPage({ params }: ChapterPageProps) {
               align="center"
             />
           }
+        />
+        <RelatedEntitiesRail
+          entities={relatedEntities}
+          chapterNumber={n}
         />
       </main>
 

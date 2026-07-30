@@ -1,0 +1,783 @@
+{
+  "schemaVersion": 2,
+  "polygons": [
+    {
+      "id": "polygon.gandhara",
+      "slug": "gandhara",
+      "title": "Gandhara",
+      "iastTitle": "Gāndhāra",
+      "entityId": "kingdom.gandhara",
+      "layerId": "layer.kingdoms",
+      "geometry": {
+        "type": "Polygon",
+        "rings": [
+          [
+            [
+              35.2,
+              69.5
+            ],
+            [
+              35,
+              73.2
+            ],
+            [
+              33,
+              73.5
+            ],
+            [
+              32.5,
+              70
+            ]
+          ]
+        ]
+      },
+      "styleToken": "kingdom.gandhara",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata"
+        }
+      ],
+      "minLevel": 1,
+      "maxLevel": 5,
+      "order": 0
+    },
+    {
+      "id": "polygon.kamboja",
+      "slug": "kamboja",
+      "title": "Kamboja",
+      "iastTitle": "Kāmboja",
+      "entityId": "kingdom.kamboja",
+      "layerId": "layer.kingdoms",
+      "geometry": {
+        "type": "Polygon",
+        "rings": [
+          [
+            [
+              36,
+              70.5
+            ],
+            [
+              35.8,
+              73
+            ],
+            [
+              34.5,
+              73.2
+            ],
+            [
+              34.2,
+              70.8
+            ]
+          ]
+        ]
+      },
+      "styleToken": "kingdom.kamboja",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata"
+        }
+      ],
+      "minLevel": 1,
+      "maxLevel": 5,
+      "order": 10
+    },
+    {
+      "id": "polygon.kuru",
+      "slug": "kuru",
+      "title": "Kuru",
+      "iastTitle": "Kuru",
+      "entityId": "kingdom.kuru",
+      "layerId": "layer.kingdoms",
+      "geometry": {
+        "type": "Polygon",
+        "rings": [
+          [
+            [
+              30.5,
+              75.8
+            ],
+            [
+              30.3,
+              78.5
+            ],
+            [
+              28.4,
+              78.8
+            ],
+            [
+              28.2,
+              76
+            ]
+          ]
+        ]
+      },
+      "styleToken": "kingdom.kuru",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata"
+        }
+      ],
+      "minLevel": 1,
+      "maxLevel": 5,
+      "order": 20
+    },
+    {
+      "id": "polygon.pancala",
+      "slug": "pancala",
+      "title": "Pancala",
+      "iastTitle": "Pañcāla",
+      "entityId": "kingdom.pancala",
+      "layerId": "layer.kingdoms",
+      "geometry": {
+        "type": "Polygon",
+        "rings": [
+          [
+            [
+              28.8,
+              78.6
+            ],
+            [
+              28.6,
+              80.8
+            ],
+            [
+              27,
+              81
+            ],
+            [
+              26.8,
+              78.8
+            ]
+          ]
+        ]
+      },
+      "styleToken": "kingdom.pancala",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata"
+        }
+      ],
+      "minLevel": 1,
+      "maxLevel": 5,
+      "order": 30
+    },
+    {
+      "id": "polygon.surasena",
+      "slug": "surasena",
+      "title": "Surasena",
+      "iastTitle": "Śūrasena",
+      "entityId": "kingdom.surasena",
+      "layerId": "layer.kingdoms",
+      "geometry": {
+        "type": "Polygon",
+        "rings": [
+          [
+            [
+              28,
+              76.8
+            ],
+            [
+              27.9,
+              78.2
+            ],
+            [
+              26.9,
+              78.4
+            ],
+            [
+              26.8,
+              76.9
+            ]
+          ]
+        ]
+      },
+      "styleToken": "kingdom.surasena",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata"
+        }
+      ],
+      "minLevel": 1,
+      "maxLevel": 5,
+      "order": 40
+    },
+    {
+      "id": "polygon.matsya",
+      "slug": "matsya",
+      "title": "Matsya",
+      "iastTitle": "Matsya",
+      "entityId": "kingdom.virata",
+      "layerId": "layer.kingdoms",
+      "geometry": {
+        "type": "Polygon",
+        "rings": [
+          [
+            [
+              27.8,
+              75
+            ],
+            [
+              27.6,
+              76.8
+            ],
+            [
+              26,
+              76.6
+            ],
+            [
+              25.8,
+              74.8
+            ]
+          ]
+        ]
+      },
+      "styleToken": "kingdom.matsya",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata"
+        }
+      ],
+      "minLevel": 1,
+      "maxLevel": 5,
+      "order": 50
+    },
+    {
+      "id": "polygon.vatsa",
+      "slug": "vatsa",
+      "title": "Vatsa",
+      "iastTitle": "Vatsa",
+      "entityId": "kingdom.vatsa",
+      "layerId": "layer.kingdoms",
+      "geometry": {
+        "type": "Polygon",
+        "rings": [
+          [
+            [
+              26.2,
+              80.5
+            ],
+            [
+              26,
+              82
+            ],
+            [
+              25,
+              82.2
+            ],
+            [
+              24.8,
+              80.6
+            ]
+          ]
+        ]
+      },
+      "styleToken": "kingdom.vatsa",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata"
+        }
+      ],
+      "minLevel": 1,
+      "maxLevel": 5,
+      "order": 60
+    },
+    {
+      "id": "polygon.kosala",
+      "slug": "kosala",
+      "title": "Kosala",
+      "iastTitle": "Kosala",
+      "entityId": "kingdom.kosala",
+      "layerId": "layer.kingdoms",
+      "geometry": {
+        "type": "Polygon",
+        "rings": [
+          [
+            [
+              28,
+              81.2
+            ],
+            [
+              27.8,
+              83.5
+            ],
+            [
+              26,
+              83.8
+            ],
+            [
+              25.8,
+              81.4
+            ]
+          ]
+        ]
+      },
+      "styleToken": "kingdom.kosala",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata"
+        }
+      ],
+      "minLevel": 1,
+      "maxLevel": 5,
+      "order": 70
+    },
+    {
+      "id": "polygon.kashi",
+      "slug": "kashi",
+      "title": "Kasi",
+      "iastTitle": "Kāśī",
+      "entityId": "kingdom.kashi",
+      "layerId": "layer.kingdoms",
+      "geometry": {
+        "type": "Polygon",
+        "rings": [
+          [
+            [
+              25.8,
+              82.4
+            ],
+            [
+              25.7,
+              83.6
+            ],
+            [
+              24.9,
+              83.8
+            ],
+            [
+              24.8,
+              82.5
+            ]
+          ]
+        ]
+      },
+      "styleToken": "kingdom.kashi",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata"
+        }
+      ],
+      "minLevel": 1,
+      "maxLevel": 5,
+      "order": 80
+    },
+    {
+      "id": "polygon.malla",
+      "slug": "malla",
+      "title": "Malla",
+      "iastTitle": "Malla",
+      "entityId": "kingdom.malla",
+      "layerId": "layer.kingdoms",
+      "geometry": {
+        "type": "Polygon",
+        "rings": [
+          [
+            [
+              27.2,
+              83.2
+            ],
+            [
+              27,
+              84.5
+            ],
+            [
+              26.2,
+              84.6
+            ],
+            [
+              26,
+              83.3
+            ]
+          ]
+        ]
+      },
+      "styleToken": "kingdom.malla",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata"
+        }
+      ],
+      "minLevel": 1,
+      "maxLevel": 5,
+      "order": 90
+    },
+    {
+      "id": "polygon.vajji",
+      "slug": "vajji",
+      "title": "Vajji",
+      "iastTitle": "Vṛji",
+      "entityId": "kingdom.vajji",
+      "layerId": "layer.kingdoms",
+      "geometry": {
+        "type": "Polygon",
+        "rings": [
+          [
+            [
+              26.5,
+              84.5
+            ],
+            [
+              26.3,
+              86
+            ],
+            [
+              25.5,
+              86.2
+            ],
+            [
+              25.3,
+              84.6
+            ]
+          ]
+        ]
+      },
+      "styleToken": "kingdom.vajji",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata"
+        }
+      ],
+      "minLevel": 1,
+      "maxLevel": 5,
+      "order": 100
+    },
+    {
+      "id": "polygon.anga",
+      "slug": "anga",
+      "title": "Anga",
+      "iastTitle": "Aṅga",
+      "entityId": "kingdom.anga",
+      "layerId": "layer.kingdoms",
+      "geometry": {
+        "type": "Polygon",
+        "rings": [
+          [
+            [
+              25.5,
+              86.2
+            ],
+            [
+              25.3,
+              87.8
+            ],
+            [
+              24.5,
+              88
+            ],
+            [
+              24.3,
+              86.4
+            ]
+          ]
+        ]
+      },
+      "styleToken": "kingdom.anga",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata"
+        }
+      ],
+      "minLevel": 1,
+      "maxLevel": 5,
+      "order": 110
+    },
+    {
+      "id": "polygon.magadha",
+      "slug": "magadha",
+      "title": "Magadha",
+      "iastTitle": "Magadha",
+      "entityId": "kingdom.magadha",
+      "layerId": "layer.kingdoms",
+      "geometry": {
+        "type": "Polygon",
+        "rings": [
+          [
+            [
+              25.5,
+              84.5
+            ],
+            [
+              25.3,
+              86.2
+            ],
+            [
+              24,
+              86.5
+            ],
+            [
+              23.8,
+              84.6
+            ]
+          ]
+        ]
+      },
+      "styleToken": "kingdom.magadha",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata"
+        }
+      ],
+      "minLevel": 1,
+      "maxLevel": 5,
+      "order": 120
+    },
+    {
+      "id": "polygon.cedi",
+      "slug": "cedi",
+      "title": "Cedi",
+      "iastTitle": "Cedi",
+      "entityId": "kingdom.cedi",
+      "layerId": "layer.kingdoms",
+      "geometry": {
+        "type": "Polygon",
+        "rings": [
+          [
+            [
+              25,
+              79.5
+            ],
+            [
+              24.8,
+              81.2
+            ],
+            [
+              23.5,
+              81.4
+            ],
+            [
+              23.3,
+              79.6
+            ]
+          ]
+        ]
+      },
+      "styleToken": "kingdom.cedi",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata"
+        }
+      ],
+      "minLevel": 1,
+      "maxLevel": 5,
+      "order": 130
+    },
+    {
+      "id": "polygon.avanti",
+      "slug": "avanti",
+      "title": "Avanti",
+      "iastTitle": "Avanti",
+      "entityId": "kingdom.avanti",
+      "layerId": "layer.kingdoms",
+      "geometry": {
+        "type": "Polygon",
+        "rings": [
+          [
+            [
+              24.2,
+              74.8
+            ],
+            [
+              24,
+              77.2
+            ],
+            [
+              22.2,
+              77.5
+            ],
+            [
+              22,
+              74.8
+            ]
+          ]
+        ]
+      },
+      "styleToken": "kingdom.avanti",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata"
+        }
+      ],
+      "minLevel": 1,
+      "maxLevel": 5,
+      "order": 140
+    },
+    {
+      "id": "polygon.assaka",
+      "slug": "assaka",
+      "title": "Assaka",
+      "iastTitle": "Aśmaka",
+      "entityId": "kingdom.assaka",
+      "layerId": "layer.kingdoms",
+      "geometry": {
+        "type": "Polygon",
+        "rings": [
+          [
+            [
+              19.8,
+              76.5
+            ],
+            [
+              19.5,
+              79.5
+            ],
+            [
+              17.8,
+              79.8
+            ],
+            [
+              17.5,
+              76.8
+            ]
+          ]
+        ]
+      },
+      "styleToken": "kingdom.assaka",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata"
+        }
+      ],
+      "minLevel": 1,
+      "maxLevel": 5,
+      "order": 150
+    },
+    {
+      "id": "polygon.yadava",
+      "slug": "yadava",
+      "title": "Yadava",
+      "iastTitle": "Yādava",
+      "entityId": "city.dvaraka",
+      "layerId": "layer.kingdoms",
+      "geometry": {
+        "type": "Polygon",
+        "rings": [
+          [
+            [
+              23,
+              68.8
+            ],
+            [
+              22.8,
+              71.5
+            ],
+            [
+              21.2,
+              71.8
+            ],
+            [
+              21,
+              68.8
+            ]
+          ]
+        ]
+      },
+      "styleToken": "kingdom.yadava",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata"
+        }
+      ],
+      "minLevel": 1,
+      "maxLevel": 5,
+      "order": 160
+    },
+    {
+      "id": "polygon.vidarbha",
+      "slug": "vidarbha",
+      "title": "Vidarbha",
+      "iastTitle": "Vidarbha",
+      "entityId": "kingdom.vidarbha",
+      "layerId": "layer.kingdoms",
+      "geometry": {
+        "type": "Polygon",
+        "rings": [
+          [
+            [
+              21.8,
+              77
+            ],
+            [
+              21.5,
+              80
+            ],
+            [
+              19.5,
+              80.2
+            ],
+            [
+              19.2,
+              77.2
+            ]
+          ]
+        ]
+      },
+      "styleToken": "kingdom.vidarbha",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata"
+        }
+      ],
+      "minLevel": 1,
+      "maxLevel": 5,
+      "order": 170
+    },
+    {
+      "id": "polygon.chedi-south",
+      "slug": "chedi-south",
+      "title": "Dasarna",
+      "iastTitle": "Daśārṇa",
+      "layerId": "layer.kingdoms",
+      "geometry": {
+        "type": "Polygon",
+        "rings": [
+          [
+            [
+              23.8,
+              77.5
+            ],
+            [
+              23.5,
+              79.5
+            ],
+            [
+              22.2,
+              79.6
+            ],
+            [
+              22,
+              77.6
+            ]
+          ]
+        ]
+      },
+      "styleToken": "kingdom.chedi-south",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata"
+        }
+      ],
+      "minLevel": 1,
+      "maxLevel": 5,
+      "order": 180
+    }
+  ]
+}

@@ -41,7 +41,7 @@ export default function AdminChaptersPage() {
     <div className="space-y-6">
       <AdminPageHeader
         title="Chapters"
-        description="Locale-independent chapter structure within a work (e.g. bg.1 … bg.18). Read-only — backed by the live API."
+        description="Locale-independent chapter structure within a work (e.g. bg.1 … bg.18). Read-only - backed by the live API."
       />
       <Suspense fallback={<TableSkeleton columns={6} />}>
         <ChaptersSection />

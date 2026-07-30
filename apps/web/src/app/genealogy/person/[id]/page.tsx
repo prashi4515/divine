@@ -5,11 +5,13 @@ import { ArrowUpRight, BookOpen, ScrollText } from "lucide-react";
 import { GenealogyHeader } from "@/features/genealogy/genealogy-header";
 import { SiteFooter } from "@/features/reading/site-footer";
 import { SiteHeader } from "@/features/reading/site-header";
+import { RelatedContentSection } from "@/features/knowledge/related-content-section";
 import {
   getAllGenealogyPeople,
   getGenealogyPerson,
   getModulesForPerson,
 } from "@/lib/genealogy/store";
+import { resolveEntityId } from "@/lib/knowledge/store";
 import {
   CATEGORY_LABELS,
   CATEGORY_TOKENS,
@@ -57,9 +59,10 @@ export default async function PersonPage({ params }: PageProps) {
   const person = await getGenealogyPerson(id);
   if (!person) notFound();
 
-  const [modules, allPeople] = await Promise.all([
+  const [modules, allPeople, entityId] = await Promise.all([
     getModulesForPerson(id),
     getAllGenealogyPeople(),
+    resolveEntityId(id),
   ]);
   const byId = new Map(allPeople.map((p) => [p.id, p]));
 
@@ -79,7 +82,12 @@ export default async function PersonPage({ params }: PageProps) {
       ? person.gender
       : undefined,
     parent: person.relationships
-      .filter((r) => r.type === "father" || r.type === "mother")
+      .filter(
+        (r) =>
+          r.type === "parent" ||
+          r.type === "father" ||
+          r.type === "mother",
+      )
       .map((r) => ({
         "@type": "Person",
         name: byId.get(r.personId)?.name ?? r.personId,
@@ -93,7 +101,12 @@ export default async function PersonPage({ params }: PageProps) {
         url: `${SITE_URL}/genealogy/person/${r.personId}`,
       })),
     children: person.relationships
-      .filter((r) => r.type === "son" || r.type === "daughter")
+      .filter(
+        (r) =>
+          r.type === "child" ||
+          r.type === "son" ||
+          r.type === "daughter",
+      )
       .map((r) => ({
         "@type": "Person",
         name: byId.get(r.personId)?.name ?? r.personId,
@@ -130,7 +143,6 @@ export default async function PersonPage({ params }: PageProps) {
         <GenealogyHeader
           eyebrow={CATEGORY_LABELS[person.category]}
           title={person.name}
-          sanskritTitle={person.sanskritName}
           description={person.description}
           breadcrumbs={[
             { href: "/", label: "Home" },
@@ -138,15 +150,26 @@ export default async function PersonPage({ params }: PageProps) {
             { label: person.name },
           ]}
           actions={
-            modules[0] && (
-              <Link
-                href={`/genealogy/${modules[0].slug}`}
-                className="border-border bg-background/80 text-foreground hover:border-saffron/40 inline-flex items-center gap-1.5 rounded-full border px-3.5 py-1.5 text-xs transition-divine"
-              >
-                Open in {modules[0].title}
-                <ArrowUpRight className="h-3.5 w-3.5" aria-hidden />
-              </Link>
-            )
+            <>
+              {person.encyclopediaHref && (
+                <Link
+                  href={person.encyclopediaHref}
+                  className="cta-saffron inline-flex items-center gap-1.5 rounded-full px-3.5 py-1.5 text-xs text-white"
+                >
+                  Encyclopedia
+                  <ArrowUpRight className="h-3.5 w-3.5" aria-hidden />
+                </Link>
+              )}
+              {modules[0] && (
+                <Link
+                  href={`/genealogy/${modules[0].slug}`}
+                  className="border-border bg-background/80 text-foreground hover:border-saffron/40 inline-flex items-center gap-1.5 rounded-full border px-3.5 py-1.5 text-xs transition-divine"
+                >
+                  Open in {modules[0].title}
+                  <ArrowUpRight className="h-3.5 w-3.5" aria-hidden />
+                </Link>
+              )}
+            </>
           }
         />
 
@@ -339,6 +362,7 @@ export default async function PersonPage({ params }: PageProps) {
             </aside>
           </div>
         </section>
+        {entityId ? <RelatedContentSection entityId={entityId} /> : null}
       </main>
       <SiteFooter />
 
@@ -358,12 +382,13 @@ const REL_GROUP_ORDER: Array<{
   title: string;
   match: (t: string) => boolean;
 }> = [
-  { title: "Parents", match: (t) => t === "father" || t === "mother" || t === "adoptive-father" || t === "adoptive-mother" },
+  { title: "Parents", match: (t) => t === "parent" || t === "father" || t === "mother" || t === "adoptive-father" || t === "adoptive-mother" },
   { title: "Spouses", match: (t) => t === "spouse" || t === "consort" },
-  { title: "Siblings", match: (t) => t === "brother" || t === "sister" },
-  { title: "Children", match: (t) => t === "son" || t === "daughter" || t === "adoptive-son" || t === "adoptive-daughter" },
+  { title: "Siblings", match: (t) => t === "sibling" || t === "brother" || t === "sister" },
+  { title: "Children", match: (t) => t === "child" || t === "son" || t === "daughter" || t === "adoptive-son" || t === "adoptive-daughter" },
   { title: "Descendants", match: (t) => t === "descendant" },
   { title: "Teachers & Disciples", match: (t) => t === "guru" || t === "disciple" },
+  { title: "Friends & foes", match: (t) => t === "friend" || t === "enemy" },
   { title: "Divine identity", match: (t) => t === "incarnation-of" || t === "manifestation-of" },
 ];
 

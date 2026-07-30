@@ -1,4 +1,4 @@
-import { http } from "../http";
+import { AUTH_TIMEOUT_MS, http } from "../http";
 import { getRefreshToken } from "@/lib/auth/tokens";
 import {
   authUserSchema,
@@ -43,7 +43,9 @@ export function logoutAll(): Promise<null> {
 }
 
 export function fetchMe(): Promise<AuthUser> {
-  return http("/v1/auth/me", (json) => meResponseSchema.parse(json).data);
+  return http("/v1/auth/me", (json) => meResponseSchema.parse(json).data, {
+    timeoutMs: AUTH_TIMEOUT_MS,
+  });
 }
 
 export function refreshSession(refreshToken?: string): Promise<LoginResponse> {
@@ -53,6 +55,7 @@ export function refreshSession(refreshToken?: string): Promise<LoginResponse> {
     body: token ? { refreshToken: token } : {},
     auth: false,
     skipRefresh: true,
+    timeoutMs: AUTH_TIMEOUT_MS,
   });
 }
 

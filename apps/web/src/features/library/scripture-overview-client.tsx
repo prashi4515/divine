@@ -48,9 +48,9 @@ export function ScriptureOverviewClient({ scriptureId }: { scriptureId: string }
         <CardContent className="grid gap-3 text-sm sm:grid-cols-2">
           <Row label="Name" value={scripture.name} />
           <Row label="Slug" value={scripture.slug} />
-          <Row label="Religion" value={scripture.religion ?? "—"} />
-          <Row label="Original language" value={scripture.originalLanguage ?? "—"} />
-          <Row label="Structure" value={scripture.structureLevels.join(" › ") || "—"} />
+          <Row label="Religion" value={scripture.religion ?? " - "} />
+          <Row label="Original language" value={scripture.originalLanguage ?? " - "} />
+          <Row label="Structure" value={scripture.structureLevels.join(" › ") || " - "} />
           <Row label="Published" value={scripture.isPublished ? "Yes" : "No"} />
           <Row label="Created" value={new Date(scripture.createdAt).toLocaleString()} />
           <Row label="Modified" value={new Date(scripture.updatedAt).toLocaleString()} />

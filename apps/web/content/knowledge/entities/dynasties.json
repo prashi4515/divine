@@ -1,0 +1,533 @@
+{
+  "schemaVersion": 1,
+  "entities": [
+    {
+      "id": "dynasty.kuru",
+      "slug": "kuru",
+      "kind": "dynasty",
+      "name": "Kuru",
+      "englishName": "Kuru",
+      "iastName": "Kuru",
+      "aliases": [
+        "kuru"
+      ],
+      "summary": "Kuru dynasty / lineage.",
+      "description": "The Kuru line as attested across epic and Purāṇic genealogies in Divine's knowledge graph.",
+      "primaryScripture": "Bhāgavata Purāṇa",
+      "scriptureSources": [
+        {
+          "work": "Bhāgavata Purāṇa"
+        }
+      ],
+      "tags": [
+        "dynasty"
+      ],
+      "categories": [
+        "dynasty"
+      ],
+      "importance": 3,
+      "seo": {
+        "title": "Kuru dynasty"
+      },
+      "status": "published",
+      "schemaVersion": 1,
+      "era": "unspecified",
+      "variantTraditions": []
+    },
+    {
+      "id": "dynasty.aditya",
+      "slug": "aditya",
+      "kind": "dynasty",
+      "name": "Āditya",
+      "englishName": "Āditya",
+      "iastName": "Āditya",
+      "aliases": [
+        "aditya"
+      ],
+      "summary": "Āditya dynasty / lineage.",
+      "description": "The Āditya line as attested across epic and Purāṇic genealogies in Divine's knowledge graph.",
+      "primaryScripture": "Bhāgavata Purāṇa",
+      "scriptureSources": [
+        {
+          "work": "Bhāgavata Purāṇa"
+        }
+      ],
+      "tags": [
+        "dynasty"
+      ],
+      "categories": [
+        "dynasty"
+      ],
+      "importance": 3,
+      "seo": {
+        "title": "Āditya dynasty"
+      },
+      "status": "published",
+      "schemaVersion": 1,
+      "era": "unspecified",
+      "variantTraditions": []
+    },
+    {
+      "id": "dynasty.raghu",
+      "slug": "raghu",
+      "kind": "dynasty",
+      "name": "Raghu",
+      "englishName": "Raghu",
+      "iastName": "Raghu",
+      "aliases": [
+        "raghu"
+      ],
+      "summary": "Raghu dynasty / lineage.",
+      "description": "The Raghu line as attested across epic and Purāṇic genealogies in Divine's knowledge graph.",
+      "primaryScripture": "Bhāgavata Purāṇa",
+      "scriptureSources": [
+        {
+          "work": "Bhāgavata Purāṇa"
+        }
+      ],
+      "tags": [
+        "dynasty"
+      ],
+      "categories": [
+        "dynasty"
+      ],
+      "importance": 3,
+      "seo": {
+        "title": "Raghu dynasty"
+      },
+      "status": "published",
+      "schemaVersion": 1,
+      "era": "unspecified",
+      "variantTraditions": []
+    },
+    {
+      "id": "dynasty.naga",
+      "slug": "naga",
+      "kind": "dynasty",
+      "name": "Nāga",
+      "englishName": "Nāga",
+      "iastName": "Nāga",
+      "aliases": [
+        "naga"
+      ],
+      "summary": "Nāga dynasty / lineage.",
+      "description": "The Nāga line as attested across epic and Purāṇic genealogies in Divine's knowledge graph.",
+      "primaryScripture": "Bhāgavata Purāṇa",
+      "scriptureSources": [
+        {
+          "work": "Bhāgavata Purāṇa"
+        }
+      ],
+      "tags": [
+        "dynasty"
+      ],
+      "categories": [
+        "dynasty"
+      ],
+      "importance": 3,
+      "seo": {
+        "title": "Nāga dynasty"
+      },
+      "status": "published",
+      "schemaVersion": 1,
+      "era": "unspecified",
+      "variantTraditions": []
+    },
+    {
+      "id": "dynasty.yadu",
+      "slug": "yadu",
+      "kind": "dynasty",
+      "name": "Yadu",
+      "englishName": "Yadu",
+      "iastName": "Yadu",
+      "aliases": [
+        "yadu"
+      ],
+      "summary": "Yadu dynasty / lineage.",
+      "description": "The Yadu line as attested across epic and Purāṇic genealogies in Divine's knowledge graph.",
+      "primaryScripture": "Bhāgavata Purāṇa",
+      "scriptureSources": [
+        {
+          "work": "Bhāgavata Purāṇa"
+        }
+      ],
+      "tags": [
+        "dynasty"
+      ],
+      "categories": [
+        "dynasty"
+      ],
+      "importance": 3,
+      "seo": {
+        "title": "Yadu dynasty"
+      },
+      "status": "published",
+      "schemaVersion": 1,
+      "era": "unspecified",
+      "variantTraditions": []
+    },
+    {
+      "id": "dynasty.daitya",
+      "slug": "daitya",
+      "kind": "dynasty",
+      "name": "Daitya",
+      "englishName": "Daitya",
+      "iastName": "Daitya",
+      "aliases": [
+        "daitya"
+      ],
+      "summary": "Daitya dynasty / lineage.",
+      "description": "The Daitya line as attested across epic and Purāṇic genealogies in Divine's knowledge graph.",
+      "primaryScripture": "Bhāgavata Purāṇa",
+      "scriptureSources": [
+        {
+          "work": "Bhāgavata Purāṇa"
+        }
+      ],
+      "tags": [
+        "dynasty"
+      ],
+      "categories": [
+        "dynasty"
+      ],
+      "importance": 3,
+      "seo": {
+        "title": "Daitya dynasty"
+      },
+      "status": "published",
+      "schemaVersion": 1,
+      "era": "unspecified",
+      "variantTraditions": []
+    },
+    {
+      "id": "dynasty.chandravamsa",
+      "slug": "chandravamsa",
+      "kind": "dynasty",
+      "name": "Candravaṃśa",
+      "englishName": "Candravaṃśa",
+      "iastName": "Candravaṃśa",
+      "aliases": [
+        "chandravamsa"
+      ],
+      "summary": "Candravaṃśa dynasty / lineage.",
+      "description": "The Candravaṃśa line as attested across epic and Purāṇic genealogies in Divine's knowledge graph.",
+      "primaryScripture": "Bhāgavata Purāṇa",
+      "scriptureSources": [
+        {
+          "work": "Bhāgavata Purāṇa"
+        }
+      ],
+      "tags": [
+        "dynasty"
+      ],
+      "categories": [
+        "dynasty"
+      ],
+      "importance": 3,
+      "seo": {
+        "title": "Candravaṃśa dynasty"
+      },
+      "status": "published",
+      "schemaVersion": 1,
+      "era": "unspecified",
+      "variantTraditions": []
+    },
+    {
+      "id": "dynasty.gandharva",
+      "slug": "gandharva",
+      "kind": "dynasty",
+      "name": "Gandharva",
+      "englishName": "Gandharva",
+      "iastName": "Gandharva",
+      "aliases": [
+        "gandharva"
+      ],
+      "summary": "Gandharva dynasty / lineage.",
+      "description": "The Gandharva line as attested across epic and Purāṇic genealogies in Divine's knowledge graph.",
+      "primaryScripture": "Bhāgavata Purāṇa",
+      "scriptureSources": [
+        {
+          "work": "Bhāgavata Purāṇa"
+        }
+      ],
+      "tags": [
+        "dynasty"
+      ],
+      "categories": [
+        "dynasty"
+      ],
+      "importance": 3,
+      "seo": {
+        "title": "Gandharva dynasty"
+      },
+      "status": "published",
+      "schemaVersion": 1,
+      "era": "unspecified",
+      "variantTraditions": []
+    },
+    {
+      "id": "dynasty.danava",
+      "slug": "danava",
+      "kind": "dynasty",
+      "name": "Dānava",
+      "englishName": "Dānava",
+      "iastName": "Dānava",
+      "aliases": [
+        "danava"
+      ],
+      "summary": "Dānava dynasty / lineage.",
+      "description": "The Dānava line as attested across epic and Purāṇic genealogies in Divine's knowledge graph.",
+      "primaryScripture": "Bhāgavata Purāṇa",
+      "scriptureSources": [
+        {
+          "work": "Bhāgavata Purāṇa"
+        }
+      ],
+      "tags": [
+        "dynasty"
+      ],
+      "categories": [
+        "dynasty"
+      ],
+      "importance": 3,
+      "seo": {
+        "title": "Dānava dynasty"
+      },
+      "status": "published",
+      "schemaVersion": 1,
+      "era": "unspecified",
+      "variantTraditions": []
+    },
+    {
+      "id": "dynasty.suryavamsa",
+      "slug": "suryavamsa",
+      "kind": "dynasty",
+      "name": "Sūryavaṃśa",
+      "englishName": "Sūryavaṃśa",
+      "iastName": "Sūryavaṃśa",
+      "aliases": [
+        "suryavamsa"
+      ],
+      "summary": "Sūryavaṃśa dynasty / lineage.",
+      "description": "The Sūryavaṃśa line as attested across epic and Purāṇic genealogies in Divine's knowledge graph.",
+      "primaryScripture": "Bhāgavata Purāṇa",
+      "scriptureSources": [
+        {
+          "work": "Bhāgavata Purāṇa"
+        }
+      ],
+      "tags": [
+        "dynasty"
+      ],
+      "categories": [
+        "dynasty"
+      ],
+      "importance": 3,
+      "seo": {
+        "title": "Sūryavaṃśa dynasty"
+      },
+      "status": "published",
+      "schemaVersion": 1,
+      "era": "unspecified",
+      "variantTraditions": []
+    },
+    {
+      "id": "dynasty.rakshasa",
+      "slug": "rakshasa",
+      "kind": "dynasty",
+      "name": "Rākṣasa",
+      "englishName": "Rākṣasa",
+      "iastName": "Rākṣasa",
+      "aliases": [
+        "rakshasa"
+      ],
+      "summary": "Rākṣasa dynasty / lineage.",
+      "description": "The Rākṣasa line as attested across epic and Purāṇic genealogies in Divine's knowledge graph.",
+      "primaryScripture": "Bhāgavata Purāṇa",
+      "scriptureSources": [
+        {
+          "work": "Bhāgavata Purāṇa"
+        }
+      ],
+      "tags": [
+        "dynasty"
+      ],
+      "categories": [
+        "dynasty"
+      ],
+      "importance": 3,
+      "seo": {
+        "title": "Rākṣasa dynasty"
+      },
+      "status": "published",
+      "schemaVersion": 1,
+      "era": "unspecified",
+      "variantTraditions": []
+    },
+    {
+      "id": "dynasty.videha",
+      "slug": "videha",
+      "kind": "dynasty",
+      "name": "Videha",
+      "englishName": "Videha",
+      "iastName": "Videha",
+      "aliases": [
+        "videha"
+      ],
+      "summary": "Videha dynasty / lineage.",
+      "description": "The Videha line as attested across epic and Purāṇic genealogies in Divine's knowledge graph.",
+      "primaryScripture": "Bhāgavata Purāṇa",
+      "scriptureSources": [
+        {
+          "work": "Bhāgavata Purāṇa"
+        }
+      ],
+      "tags": [
+        "dynasty"
+      ],
+      "categories": [
+        "dynasty"
+      ],
+      "importance": 3,
+      "seo": {
+        "title": "Videha dynasty"
+      },
+      "status": "published",
+      "schemaVersion": 1,
+      "era": "unspecified",
+      "variantTraditions": []
+    },
+    {
+      "id": "dynasty.kashyapa",
+      "slug": "kashyapa",
+      "kind": "dynasty",
+      "name": "Kaśyapa",
+      "englishName": "Kaśyapa",
+      "iastName": "Kaśyapa",
+      "aliases": [
+        "kashyapa"
+      ],
+      "summary": "Kaśyapa dynasty / lineage.",
+      "description": "The Kaśyapa line as attested across epic and Purāṇic genealogies in Divine's knowledge graph.",
+      "primaryScripture": "Bhāgavata Purāṇa",
+      "scriptureSources": [
+        {
+          "work": "Bhāgavata Purāṇa"
+        }
+      ],
+      "tags": [
+        "dynasty"
+      ],
+      "categories": [
+        "dynasty"
+      ],
+      "importance": 3,
+      "seo": {
+        "title": "Kaśyapa dynasty"
+      },
+      "status": "published",
+      "schemaVersion": 1,
+      "era": "unspecified",
+      "variantTraditions": []
+    },
+    {
+      "id": "dynasty.yaksha",
+      "slug": "yaksha",
+      "kind": "dynasty",
+      "name": "Yakṣa",
+      "englishName": "Yakṣa",
+      "iastName": "Yakṣa",
+      "aliases": [
+        "yaksha"
+      ],
+      "summary": "Yakṣa dynasty / lineage.",
+      "description": "The Yakṣa line as attested across epic and Purāṇic genealogies in Divine's knowledge graph.",
+      "primaryScripture": "Bhāgavata Purāṇa",
+      "scriptureSources": [
+        {
+          "work": "Bhāgavata Purāṇa"
+        }
+      ],
+      "tags": [
+        "dynasty"
+      ],
+      "categories": [
+        "dynasty"
+      ],
+      "importance": 3,
+      "seo": {
+        "title": "Yakṣa dynasty"
+      },
+      "status": "published",
+      "schemaVersion": 1,
+      "era": "unspecified",
+      "variantTraditions": []
+    },
+    {
+      "id": "dynasty.prajapati",
+      "slug": "prajapati",
+      "kind": "dynasty",
+      "name": "Prajāpati",
+      "englishName": "Prajāpati",
+      "iastName": "Prajāpati",
+      "aliases": [
+        "prajapati"
+      ],
+      "summary": "Prajāpati dynasty / lineage.",
+      "description": "The Prajāpati line as attested across epic and Purāṇic genealogies in Divine's knowledge graph.",
+      "primaryScripture": "Bhāgavata Purāṇa",
+      "scriptureSources": [
+        {
+          "work": "Bhāgavata Purāṇa"
+        }
+      ],
+      "tags": [
+        "dynasty"
+      ],
+      "categories": [
+        "dynasty"
+      ],
+      "importance": 3,
+      "seo": {
+        "title": "Prajāpati dynasty"
+      },
+      "status": "published",
+      "schemaVersion": 1,
+      "era": "unspecified",
+      "variantTraditions": []
+    },
+    {
+      "id": "dynasty.paurava",
+      "slug": "paurava",
+      "kind": "dynasty",
+      "name": "Paurava",
+      "englishName": "Paurava",
+      "iastName": "Paurava",
+      "aliases": [
+        "paurava"
+      ],
+      "summary": "Paurava dynasty / lineage.",
+      "description": "The Paurava line as attested across epic and Purāṇic genealogies in Divine's knowledge graph.",
+      "primaryScripture": "Bhāgavata Purāṇa",
+      "scriptureSources": [
+        {
+          "work": "Bhāgavata Purāṇa"
+        }
+      ],
+      "tags": [
+        "dynasty"
+      ],
+      "categories": [
+        "dynasty"
+      ],
+      "importance": 3,
+      "seo": {
+        "title": "Paurava dynasty"
+      },
+      "status": "published",
+      "schemaVersion": 1,
+      "era": "unspecified",
+      "variantTraditions": []
+    }
+  ]
+}

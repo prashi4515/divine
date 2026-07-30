@@ -60,7 +60,7 @@ const en: HomeMessages = {
   heroEyebrow: "A quieter way to read scripture",
   startReading: "Start reading",
   todaysVerse: "Today's verse",
-  searchVerses: "Search verses",
+  searchVerses: "Knowledge Search",
   verseForReflection: "Verse for reflection",
   readInContext: "Read in context",
   valuesHeading: "A quiet place to read scripture",

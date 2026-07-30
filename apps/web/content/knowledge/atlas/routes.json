@@ -1,0 +1,106 @@
+{
+  "generatedAt": "2026-07-30T11:41:55.552Z",
+  "schemaVersion": 1,
+  "routes": [
+    {
+      "id": "route.pandava-exile",
+      "slug": "pandava-exile",
+      "title": "Pāṇḍava Exile",
+      "iastTitle": "Pāṇḍava-vanavāsa",
+      "summary": "Forest wanderings of the Pāṇḍavas during the twelve-year exile.",
+      "description": "A simplified path through principal exile landscapes named in the Vana Parva — Kāmyaka and Dvaita — toward the year in disguise at Virāṭa.",
+      "placeIds": [
+        "city.indraprastha",
+        "forest.kamyaka",
+        "forest.dvaita",
+        "kingdom.virata"
+      ],
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Vana Parva"
+        },
+        {
+          "work": "Mahābhārata",
+          "section": "Virāṭa Parva"
+        }
+      ],
+      "stroke": "#8a5a2b",
+      "order": 10
+    },
+    {
+      "id": "route.krishna-journey",
+      "slug": "krishna-journey",
+      "title": "Kṛṣṇa's Journey",
+      "iastTitle": "Kṛṣṇa-yātrā",
+      "summary": "From Vraja and Mathurā to the ocean capital Dvārakā.",
+      "description": "Educational path linking Gokula–Vṛndāvana–Mathurā with Dvārakā after Kaṃsa's fall — a traditional narrative arc, not a surveyed itinerary.",
+      "placeIds": [
+        "place.gokula",
+        "place.vrindavana",
+        "city.mathura",
+        "city.dvaraka"
+      ],
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Bhāgavata Purāṇa",
+          "section": "Skandha 10"
+        },
+        {
+          "work": "Harivaṃśa"
+        }
+      ],
+      "stroke": "#6b3a5a",
+      "order": 20
+    },
+    {
+      "id": "route.arjuna-digvijaya",
+      "slug": "arjuna-digvijaya",
+      "title": "Arjuna's Digvijaya",
+      "iastTitle": "Arjuna-digvijaya",
+      "summary": "Indicative northern–eastern arc of Arjuna's conquest circuit.",
+      "description": "A schematic digvijaya spine for Atlas visualization — Indraprastha outward toward Magadha and the Gaṅgā lands — not a complete itinerary of every campaign.",
+      "placeIds": [
+        "city.indraprastha",
+        "kingdom.pancala",
+        "kingdom.kashi",
+        "kingdom.magadha"
+      ],
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Sabhā Parva"
+        }
+      ],
+      "stroke": "#3d5c3a",
+      "order": 30
+    },
+    {
+      "id": "route.balarama-pilgrimage",
+      "slug": "balarama-pilgrimage",
+      "title": "Balarāma's Pilgrimage",
+      "iastTitle": "Balarāma-tīrthayātrā",
+      "summary": "Pilgrim path associated with Balarāma during the war.",
+      "description": "Traditional accounts have Balarāma leave the Kurukṣetra war for a tīrtha-yātrā along sacred rivers. This Atlas path is a respectful simplification for exploration.",
+      "placeIds": [
+        "place.kurukshetra",
+        "river.sarasvati",
+        "river.yamuna",
+        "river.ganga",
+        "forest.naimisharanya"
+      ],
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Śalya Parva"
+        }
+      ],
+      "stroke": "#4d6a86",
+      "order": 40
+    }
+  ]
+}

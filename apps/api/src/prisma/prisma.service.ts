@@ -16,6 +16,10 @@ function withNeonPoolDefaults(databaseUrl: string): string {
   if (!url.searchParams.has("pool_timeout")) {
     url.searchParams.set("pool_timeout", "30");
   }
+  // Fail fast when Neon is unreachable (avoids 15s hangs on auth refresh).
+  if (!url.searchParams.has("connect_timeout")) {
+    url.searchParams.set("connect_timeout", "5");
+  }
   return url.toString();
 }
 

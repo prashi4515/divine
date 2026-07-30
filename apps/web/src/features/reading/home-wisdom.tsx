@@ -16,7 +16,7 @@ type Wisdom = {
 const WISDOM: readonly Wisdom[] = [
   {
     quote:
-      "When I read the Bhagavad-Gita I ask myself — how God created the universe; everything else seems so superfluous.",
+      "When I read the Bhagavad-Gita I ask myself - how God created the universe; everything else seems so superfluous.",
     attribution: "Albert Einstein",
     role: "Theoretical physicist",
   },
@@ -34,7 +34,7 @@ const WISDOM: readonly Wisdom[] = [
   },
   {
     quote:
-      "I owed a magnificent day to the Bhagavad-Gita — the first of books, as if an empire spoke to us.",
+      "I owed a magnificent day to the Bhagavad-Gita - the first of books, as if an empire spoke to us.",
     attribution: "Ralph Waldo Emerson",
     role: "American essayist",
   },

@@ -1,7 +1,6 @@
 import { NextResponse } from "next/server";
 import type { SearchSuggestion } from "@divine/types";
-import { formatGitaVerseLabel } from "@/lib/reading/verse-label";
-import { staticSearchVerses } from "@/lib/search/static-verse-search";
+import { suggestKnowledge } from "@/lib/search/knowledge-search";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -11,18 +10,16 @@ const TOPIC_HINTS = [
   "dharma",
   "bhakti",
   "jnana",
-  "mind",
-  "meditation",
-  "soul",
-  "death",
-  "duty",
-  "detachment",
-  "peace",
+  "krishna",
+  "arjuna",
+  "kurukshetra",
+  "hastinapura",
+  "pandavas",
   "yoga",
 ] as const;
 
 /**
- * Instant autocomplete from the static verse index (no Nest/Neon).
+ * Instant autocomplete from the static Knowledge Search index (no Neon).
  */
 export async function GET(request: Request) {
   const url = new URL(request.url);
@@ -43,54 +40,30 @@ export async function GET(request: Request) {
   };
 
   const lower = q.toLowerCase();
+
   for (const topic of TOPIC_HINTS) {
     if (topic.startsWith(lower) || lower.startsWith(topic.slice(0, 3))) {
       push({
         text: topic,
         kind: "topic",
-        href: `/search?topic=${encodeURIComponent(topic)}`,
+        href: `/search?q=${encodeURIComponent(topic)}`,
       });
     }
   }
 
-  // Verse refs like 2.47 / bg.2.47
-  const ref = q.match(/^(?:bg\.)?(\d{1,2})\.(\d{1,3})$/i);
-  if (ref) {
-    const chapter = Number(ref[1]);
-    const verse = Number(ref[2]);
-    if (chapter >= 1 && chapter <= 18) {
+  try {
+    const hits = await suggestKnowledge(q, limit);
+    for (const hit of hits) {
       push({
-        text: formatGitaVerseLabel(chapter, verse),
-        kind: "verse",
-        href: `/search?q=${encodeURIComponent(q)}`,
+        text: hit.text,
+        kind: hit.kind,
+        href: hit.href,
+        ...(hit.entityKind ? { entityKind: hit.entityKind } : {}),
       });
+      if (suggestions.length >= limit) break;
     }
-  }
-
-  const results = await staticSearchVerses({
-    q,
-    lang: "en",
-    page: 1,
-    pageSize: Math.min(limit, 6),
-  });
-
-  for (const hit of results.data) {
-    push({
-      text: formatGitaVerseLabel(hit.chapterNumber, hit.verseNumber),
-      kind: "verse",
-      href: `/search?q=${encodeURIComponent(q)}`,
-    });
-    if (suggestions.length >= limit) break;
-  }
-
-  for (const term of results.meta.expandedTerms) {
-    if (term.toLowerCase() === lower) continue;
-    push({
-      text: term,
-      kind: "synonym",
-      href: `/search?q=${encodeURIComponent(term)}`,
-    });
-    if (suggestions.length >= limit) break;
+  } catch {
+    // Index may be missing in fresh checkouts before generate:search-index
   }
 
   return NextResponse.json({ data: suggestions.slice(0, limit) });

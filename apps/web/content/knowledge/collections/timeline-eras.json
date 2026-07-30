@@ -1,0 +1,168 @@
+{
+  "schemaVersion": 1,
+  "collections": [
+    {
+      "id": "timeline.creation",
+      "slug": "creation",
+      "title": "Creation",
+      "kind": "timeline-era",
+      "summary": "Cosmic beginning before the dynastic age.",
+      "description": "Creation and the opening of cosmic order before the dynastic age.",
+      "entityIds": [
+        "event.creation"
+      ],
+      "order": 1,
+      "sanskritTitle": "सृष्टि",
+      "eyebrow": "Epoch",
+      "status": "available",
+      "color": {
+        "accent": "#5c6d80",
+        "tint": "#dce6ee"
+      }
+    },
+    {
+      "id": "timeline.major-dynasties",
+      "slug": "major-dynasties",
+      "title": "Major Dynasties",
+      "kind": "timeline-era",
+      "summary": "Solar, lunar, Yadu, and Kuru houses.",
+      "description": "Rise of the great houses of epic geography.",
+      "entityIds": [
+        "event.major-dynasties"
+      ],
+      "order": 2,
+      "sanskritTitle": "महावंश",
+      "eyebrow": "Epoch",
+      "status": "available",
+      "color": {
+        "accent": "#7a5a2a",
+        "tint": "#efdfbd"
+      }
+    },
+    {
+      "id": "timeline.birth-of-krishna",
+      "slug": "birth-of-krishna",
+      "title": "Birth of Krishna",
+      "kind": "timeline-era",
+      "summary": "Kṛṣṇa enters the Yadu world.",
+      "description": "Kṛṣṇa is born in Mathurā and raised in Vraja.",
+      "entityIds": [
+        "event.birth-of-krishna"
+      ],
+      "order": 3,
+      "sanskritTitle": "कृष्णजन्म",
+      "eyebrow": "Epoch",
+      "status": "available",
+      "color": {
+        "accent": "#8a3b52",
+        "tint": "#f7d9dd"
+      }
+    },
+    {
+      "id": "timeline.pandavas",
+      "slug": "pandavas",
+      "title": "Pandavas",
+      "kind": "timeline-era",
+      "summary": "Birth and rise of the five brothers.",
+      "description": "The five Pāṇḍavas enter the epic world.",
+      "entityIds": [
+        "event.birth-of-pandavas"
+      ],
+      "order": 4,
+      "sanskritTitle": "पाण्डवाः",
+      "eyebrow": "Epoch",
+      "status": "available",
+      "color": {
+        "accent": "#5d6e37",
+        "tint": "#e9edcc"
+      }
+    },
+    {
+      "id": "timeline.kauravas",
+      "slug": "kauravas",
+      "title": "Kauravas",
+      "kind": "timeline-era",
+      "summary": "Birth of Duryodhana's hundred.",
+      "description": "The Kaurava brothers are born at Hastināpura.",
+      "entityIds": [
+        "event.birth-of-kauravas"
+      ],
+      "order": 5,
+      "sanskritTitle": "कौरवाः",
+      "eyebrow": "Epoch",
+      "status": "available",
+      "color": {
+        "accent": "#7c3f28",
+        "tint": "#f2d5c8"
+      }
+    },
+    {
+      "id": "timeline.major-events",
+      "slug": "major-mahabharata-events",
+      "title": "Major Mahabharata Events",
+      "kind": "timeline-era",
+      "summary": "From the lacquer house to the field of war.",
+      "description": "Core narrative from the lacquer house through the end of the war.",
+      "entityIds": [
+        "event.lakshagriha",
+        "event.draupadi-swayamvara",
+        "event.dice-game",
+        "event.exile",
+        "event.virata-parva",
+        "event.krishna-peace-mission",
+        "event.bhishmas-fall",
+        "event.abhimanyus-death",
+        "event.dronas-death",
+        "event.karnas-death",
+        "event.end-of-war"
+      ],
+      "order": 6,
+      "sanskritTitle": "महाभारत कथा",
+      "eyebrow": "Epoch",
+      "status": "available",
+      "color": {
+        "accent": "#6a4530",
+        "tint": "#f0ddd0"
+      }
+    },
+    {
+      "id": "timeline.bhagavad-gita",
+      "slug": "bhagavad-gita",
+      "title": "Bhagavad Gita",
+      "kind": "timeline-era",
+      "summary": "The discourse on the field of dharma.",
+      "description": "Kṛṣṇa teaches Arjuna between the armies at Kurukṣetra.",
+      "entityIds": [
+        "event.bhagavad-gita"
+      ],
+      "order": 7,
+      "sanskritTitle": "भगवद्गीता",
+      "eyebrow": "Epoch",
+      "status": "available",
+      "color": {
+        "accent": "#4d6a86",
+        "tint": "#d5e2ee"
+      }
+    },
+    {
+      "id": "timeline.aftermath",
+      "slug": "aftermath",
+      "title": "Aftermath",
+      "kind": "timeline-era",
+      "summary": "Sacrifice, grief, and the closing of the age.",
+      "description": "Horse sacrifice, mourning, and the close of the age.",
+      "entityIds": [
+        "event.ashwamedha",
+        "event.aftermath"
+      ],
+      "order": 8,
+      "sanskritTitle": "युद्धानन्तरम्",
+      "eyebrow": "Epoch",
+      "status": "available",
+      "color": {
+        "accent": "#5a5560",
+        "tint": "#e4e0e8"
+      }
+    }
+  ]
+}

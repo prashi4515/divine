@@ -50,7 +50,7 @@ export function HomeChaptersPreview() {
         </h2>
         <p className="text-muted-foreground mx-auto mt-4 max-w-2xl text-pretty text-base leading-relaxed sm:text-lg">
           {h.chaptersSubheading ??
-            "From Arjuna’s despair to the final teaching of surrender — every chapter is one step of the path."}
+            "From Arjuna’s despair to the final teaching of surrender - every chapter is one step of the path."}
         </p>
       </header>
 

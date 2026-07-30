@@ -17,6 +17,7 @@ const KIND_LABEL: Record<SearchSuggestion["kind"], string> = {
   topic: "Topic",
   verse: "Verse",
   synonym: "Related",
+  entity: "Entity",
 };
 
 function displaySuggestionText(text: string): string {
@@ -86,7 +87,9 @@ export function AutocompleteDropdown({
               onClick={() => onSelect(item)}
             >
               <span className="text-muted-foreground w-[3.25rem] shrink-0 text-[10px] uppercase tracking-wider">
-                {KIND_LABEL[item.kind]}
+                {item.kind === "entity" && item.entityKind
+                  ? item.entityKind
+                  : KIND_LABEL[item.kind]}
               </span>
               {renderMatchedLabel(item.text, query)}
               {item.kind === "synonym" ? (

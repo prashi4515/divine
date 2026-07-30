@@ -1,0 +1,62 @@
+{
+  "schemaVersion": 1,
+  "collections": [
+    {
+      "id": "events.mahabharata",
+      "slug": "mahabharata-events",
+      "title": "Mahābhārata Events",
+      "kind": "events-layer",
+      "summary": "Major narrative events of the Mahābhārata — births, exile, the Gītā, and the war — linked across the Knowledge Graph.",
+      "description": "Events connects people, places, kingdoms, weapons, Gītā chapters, and verses. Each event is a shared Knowledge Graph entity.",
+      "entityIds": [
+        "event.creation",
+        "event.major-dynasties",
+        "event.birth-of-krishna",
+        "event.birth-of-pandavas",
+        "event.birth-of-kauravas",
+        "event.lakshagriha",
+        "event.draupadi-swayamvara",
+        "event.dice-game",
+        "event.exile",
+        "event.virata-parva",
+        "event.krishna-peace-mission",
+        "event.bhagavad-gita",
+        "event.bhishmas-fall",
+        "event.abhimanyus-death",
+        "event.dronas-death",
+        "event.karnas-death",
+        "event.end-of-war",
+        "event.ashwamedha",
+        "event.aftermath"
+      ],
+      "order": 4,
+      "sanskritTitle": "महाभारत घटनाक्रम",
+      "eyebrow": "Timeline",
+      "status": "available",
+      "scriptureSources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Ādi Parva"
+        },
+        {
+          "work": "Mahābhārata",
+          "section": "Bhīṣma Parva"
+        },
+        {
+          "work": "Bhagavad Gītā",
+          "chapter": "1"
+        }
+      ],
+      "relatedGitaChapters": [
+        1,
+        2,
+        11,
+        18
+      ],
+      "color": {
+        "accent": "#6a4530",
+        "tint": "#f0ddd0"
+      }
+    }
+  ]
+}

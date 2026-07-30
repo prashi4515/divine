@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 2,
+  "icons": [
+    { "id": "icon.kingdom", "category": "kingdom", "label": "Kingdom", "minLevel": 1 },
+    { "id": "icon.city", "category": "city", "label": "City", "minLevel": 1 },
+    { "id": "icon.mountain", "category": "mountain", "label": "Mountain", "minLevel": 1 },
+    { "id": "icon.river", "category": "river", "label": "River", "minLevel": 2 },
+    { "id": "icon.pilgrimage", "category": "pilgrimage", "label": "Pilgrimage", "minLevel": 2 },
+    { "id": "icon.forest", "category": "forest", "label": "Forest", "minLevel": 2 },
+    { "id": "icon.battlefield", "category": "battlefield", "label": "Battlefield", "minLevel": 3 },
+    { "id": "icon.ashrama", "category": "ashrama", "label": "Ashrama", "minLevel": 3 },
+    { "id": "icon.sacred", "category": "sacred", "label": "Sacred", "minLevel": 2 },
+    { "id": "icon.default", "label": "Place", "minLevel": 1 },
+    { "id": "icon.cluster", "label": "Cluster", "minLevel": 1 }
+  ]
+}

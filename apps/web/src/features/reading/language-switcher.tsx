@@ -6,8 +6,8 @@ import { READING_LANGUAGES } from "@/lib/reading/languages";
 import { useReadingStore } from "@/lib/stores/reading-store";
 
 /**
- * Site-wide translation language switcher for the public header.
- * Preference is persisted and applied in the verse reader.
+ * Site-wide UI language switcher for the public header.
+ * Preference is persisted and applied to chrome, Gita reader, and nav labels.
  */
 export function LanguageSwitcher() {
   const preferredLanguage = useReadingStore((s) => s.preferredLanguage);

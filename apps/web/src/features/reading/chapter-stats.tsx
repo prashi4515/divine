@@ -45,7 +45,7 @@ export function ChapterStats({ verseCount }: ChapterStatsProps) {
   const minutes = estimateReadingMinutes(verseCount);
   const verseValue =
     verseCount === 1 ? "1" : verseCount > 0 ? String(verseCount) : "0";
-  const timeValue = minutes === null ? "—" : t.minutes(minutes);
+  const timeValue = minutes === null ? " - " : t.minutes(minutes);
 
   return (
     <section aria-labelledby="chapter-stats-heading" className="animate-fade-in">

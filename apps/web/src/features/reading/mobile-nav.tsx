@@ -6,29 +6,22 @@ import { usePathname } from "next/navigation";
 import * as DialogPrimitive from "@radix-ui/react-dialog";
 import {
   BookOpen,
+  Crown,
   GitBranch,
+  Globe2,
   Home,
+  Library,
   Menu,
   Search,
+  Shield,
+  Sparkles,
+  Swords,
+  Timer,
   UserRound,
   X,
 } from "lucide-react";
+import { useMessages } from "@/lib/i18n/use-messages";
 import { cn } from "@/lib/utils";
-
-type NavItem = {
-  href: string;
-  label: string;
-  icon: React.ComponentType<{ className?: string }>;
-  match?: (pathname: string) => boolean;
-};
-
-const NAV_ITEMS: NavItem[] = [
-  { href: "/", label: "Home", icon: Home, match: (p) => p === "/" },
-  { href: "/bhagavad-gita", label: "All Chapters", icon: BookOpen },
-  { href: "/genealogy", label: "Genealogy", icon: GitBranch },
-  { href: "/search", label: "Search", icon: Search },
-  { href: "/account", label: "My Account", icon: UserRound },
-];
 
 /**
  * Mobile hamburger — slide-in nav sheet with primary destinations.
@@ -36,11 +29,62 @@ const NAV_ITEMS: NavItem[] = [
  */
 export function MobileNav() {
   const pathname = usePathname();
+  const t = useMessages();
   const [open, setOpen] = React.useState(false);
 
   React.useEffect(() => {
     setOpen(false);
   }, [pathname]);
+
+  const items = [
+    { href: "/", label: t.home, icon: Home, match: (p: string) => p === "/" },
+    { href: "/bhagavad-gita", label: t.allChapters, icon: BookOpen },
+    {
+      href: "/atlas",
+      label: t.navAtlas,
+      icon: Globe2,
+      match: (p: string) => p.startsWith("/atlas"),
+    },
+    {
+      href: "/events",
+      label: t.navEvents,
+      icon: Swords,
+      match: (p: string) => p.startsWith("/events"),
+    },
+    {
+      href: "/kingdoms",
+      label: t.navKingdoms,
+      icon: Crown,
+      match: (p: string) => p.startsWith("/kingdoms"),
+    },
+    {
+      href: "/weapons",
+      label: t.navWeapons,
+      icon: Shield,
+      match: (p: string) => p.startsWith("/weapons"),
+    },
+    {
+      href: "/concepts",
+      label: t.navConcepts,
+      icon: Sparkles,
+      match: (p: string) => p.startsWith("/concepts"),
+    },
+    {
+      href: "/timeline",
+      label: t.navTimeline,
+      icon: Timer,
+      match: (p: string) => p.startsWith("/timeline"),
+    },
+    {
+      href: "/encyclopedia",
+      label: t.navEncyclopedia,
+      icon: Library,
+      match: (p: string) => p.startsWith("/encyclopedia"),
+    },
+    { href: "/genealogy", label: t.navGenealogy, icon: GitBranch },
+    { href: "/search", label: t.navSearch, icon: Search },
+    { href: "/account", label: t.navAccount, icon: UserRound },
+  ] as const;
 
   return (
     <DialogPrimitive.Root open={open} onOpenChange={setOpen}>
@@ -48,7 +92,7 @@ export function MobileNav() {
         <button
           type="button"
           className="text-muted-foreground hover:bg-muted/60 hover:text-foreground focus-visible:ring-ring inline-flex h-9 w-9 items-center justify-center rounded-md transition-divine focus-visible:outline-none focus-visible:ring-2 md:hidden"
-          aria-label="Open navigation menu"
+          aria-label={t.navMenu}
         >
           <Menu className="h-5 w-5" aria-hidden />
         </button>
@@ -71,10 +115,10 @@ export function MobileNav() {
         >
           <div className="border-border/70 flex items-center justify-between border-b px-5 py-4">
             <DialogPrimitive.Title asChild>
-              <span className="font-serif text-base">Menu</span>
+              <span className="font-serif text-base">{t.navMenu}</span>
             </DialogPrimitive.Title>
             <DialogPrimitive.Close
-              aria-label="Close navigation menu"
+              aria-label={t.navMenu}
               className="text-muted-foreground hover:bg-muted hover:text-foreground rounded-md p-1.5 transition-divine"
             >
               <X className="h-4 w-4" />
@@ -82,8 +126,8 @@ export function MobileNav() {
           </div>
           <nav aria-label="Mobile primary" className="flex-1 overflow-y-auto p-3">
             <ul className="space-y-1">
-              {NAV_ITEMS.map((item) => {
-                const active = item.match
+              {items.map((item) => {
+                const active = "match" in item && item.match
                   ? item.match(pathname ?? "")
                   : pathname?.startsWith(item.href);
                 const Icon = item.icon;
@@ -117,10 +161,7 @@ export function MobileNav() {
             </ul>
           </nav>
           <div className="border-border/70 border-t px-5 py-4">
-            <p className="text-muted-foreground text-xs">
-              Read the Bhagavad Gītā and explore Hindu genealogy with clarity
-              and reverence.
-            </p>
+            <p className="text-muted-foreground text-xs">{t.tagline}</p>
           </div>
         </DialogPrimitive.Content>
       </DialogPrimitive.Portal>

@@ -44,7 +44,7 @@ export function HomeJourney() {
       title: h.pathDailyTitle ?? "One verse a day",
       body:
         h.pathDailyBody ??
-        "A single shloka to sit with — arrives with the sunrise in Kolkata.",
+        "A single shloka to sit with - arrives with the sunrise in Kolkata.",
       href: todayHref,
       cta: h.todaysVerse,
     },
@@ -53,7 +53,7 @@ export function HomeJourney() {
       title: h.pathSearchTitle ?? "Search a theme",
       body:
         h.pathSearchBody ??
-        "Duty, devotion, dispassion, doubt — find verses that meet your question.",
+        "Duty, devotion, dispassion, doubt - find verses that meet your question.",
       href: "/search",
       cta: h.searchVerses,
     },

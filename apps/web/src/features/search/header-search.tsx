@@ -87,6 +87,11 @@ export function HeaderSearch() {
   }
 
   function selectSuggestion(item: SearchSuggestion) {
+    if (item.kind === "entity" && item.href) {
+      collapse();
+      router.push(item.href);
+      return;
+    }
     // Always open the search results page — never jump straight to one verse.
     // The same query string often matches many chapters.
     if (item.kind === "topic" && item.href) {
@@ -113,7 +118,7 @@ export function HeaderSearch() {
   return (
     <div ref={wrapRef} className="relative w-[min(16rem,70vw)] shrink-0 sm:w-64">
       <label htmlFor="divine-header-search" className="sr-only">
-        Search the Bhagavad Gita
+        Knowledge Search
       </label>
       <div className="border-border bg-background flex items-center gap-1.5 rounded-md border px-2 py-1.5 shadow-xs">
         <Search className="text-muted-foreground size-3.5 shrink-0" aria-hidden />
@@ -151,7 +156,8 @@ export function HeaderSearch() {
               if (
                 listOpen &&
                 activeIndex >= 0 &&
-                suggestions[activeIndex]?.kind === "topic"
+                (suggestions[activeIndex]?.kind === "topic" ||
+                  suggestions[activeIndex]?.kind === "entity")
               ) {
                 selectSuggestion(suggestions[activeIndex]!);
               } else {

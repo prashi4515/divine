@@ -1,0 +1,1160 @@
+{
+  "schemaVersion": 1,
+  "collections": [
+    {
+      "id": "genealogy.cosmic-creation",
+      "slug": "cosmic-creation",
+      "title": "Cosmic Creation",
+      "kind": "genealogy-module",
+      "sanskritTitle": "सृष्टि",
+      "eyebrow": "Origin",
+      "summary": "Viṣṇu, Brahmā, and the first mind-born progenitors.",
+      "description": "Purāṇic creation opens with Viṣṇu; Brahmā projects the Prajāpatis who seed later lineages. This module stays at the cosmic root — not a merged mega-tree.",
+      "status": "available",
+      "entityIds": [
+        "person.vishnu",
+        "person.brahma",
+        "person.saraswati",
+        "person.lakshmi",
+        "person.shiva",
+        "person.parvati",
+        "person.marichi",
+        "person.atri",
+        "person.angiras",
+        "person.pulastya",
+        "person.pulaha",
+        "person.kratu",
+        "person.vasishtha",
+        "person.daksha",
+        "person.narada"
+      ],
+      "rootEntityId": "person.vishnu",
+      "scriptureSources": [
+        {
+          "work": "Bhāgavata Purāṇa",
+          "section": "Skandha 3",
+          "chapter": "8–12"
+        },
+        {
+          "work": "Viṣṇu Purāṇa",
+          "section": "Aṃśa 1"
+        }
+      ],
+      "color": {
+        "accent": "#7f4a2b",
+        "tint": "#f6dfcd"
+      },
+      "order": 5
+    },
+    {
+      "id": "genealogy.trimurti",
+      "slug": "trimurti",
+      "title": "Trimūrti",
+      "kind": "genealogy-module",
+      "sanskritTitle": "त्रिमूर्ति",
+      "eyebrow": "Divinity",
+      "summary": "Brahmā, Viṣṇu, Śiva with consorts and children.",
+      "description": "Creation, sustenance and dissolution — with Sarasvatī, Lakṣmī, Pārvatī, Gaṇeśa and Kārttikeya. Variant birth narratives are marked, not flattened.",
+      "status": "available",
+      "entityIds": [
+        "person.brahma",
+        "person.vishnu",
+        "person.shiva",
+        "person.saraswati",
+        "person.lakshmi",
+        "person.parvati",
+        "person.ganesha",
+        "person.kartikeya"
+      ],
+      "rootEntityId": "person.vishnu",
+      "scriptureSources": [
+        {
+          "work": "Viṣṇu Purāṇa"
+        },
+        {
+          "work": "Śiva Purāṇa"
+        },
+        {
+          "work": "Bhāgavata Purāṇa"
+        }
+      ],
+      "relatedGitaChapters": [
+        10,
+        11
+      ],
+      "color": {
+        "accent": "#7f4a2b",
+        "tint": "#f6dfcd"
+      },
+      "order": 10
+    },
+    {
+      "id": "genealogy.major-devis",
+      "slug": "major-devis",
+      "title": "Major Devīs",
+      "kind": "genealogy-module",
+      "sanskritTitle": "देव्यः",
+      "eyebrow": "Śakti",
+      "summary": "Lakṣmī, Sarasvatī, Pārvatī, Gaṅgā and related forms.",
+      "description": "Principal goddesses attested in Purāṇa and epic, kept as a Devī module rather than mixed into male dynastic trees.",
+      "status": "available",
+      "entityIds": [
+        "person.lakshmi",
+        "person.saraswati",
+        "person.parvati",
+        "person.ganga",
+        "person.sita",
+        "person.draupadi",
+        "person.vishnu",
+        "person.brahma",
+        "person.shiva",
+        "person.shantanu",
+        "person.rama",
+        "person.yudhishthira"
+      ],
+      "rootEntityId": "person.lakshmi",
+      "scriptureSources": [
+        {
+          "work": "Viṣṇu Purāṇa"
+        },
+        {
+          "work": "Śiva Purāṇa"
+        },
+        {
+          "work": "Rāmāyaṇa"
+        }
+      ],
+      "color": {
+        "accent": "#8c4573",
+        "tint": "#f4d3e2"
+      },
+      "order": 15
+    },
+    {
+      "id": "genealogy.prajapatis",
+      "slug": "prajapatis",
+      "title": "Prajāpatis",
+      "kind": "genealogy-module",
+      "sanskritTitle": "प्रजापतयः",
+      "eyebrow": "Progenitors",
+      "summary": "Mind-born sons of Brahmā who seed later races.",
+      "description": "Bhāgavata Purāṇa 3.12 lists the mānasaputras. Counts vary across Manu Smṛti and epic redactions — recorded as variant tradition on Brahmā.",
+      "status": "available",
+      "entityIds": [
+        "person.brahma",
+        "person.marichi",
+        "person.atri",
+        "person.angiras",
+        "person.pulastya",
+        "person.pulaha",
+        "person.kratu",
+        "person.vasishtha",
+        "person.daksha",
+        "person.narada",
+        "person.kashyapa"
+      ],
+      "rootEntityId": "person.brahma",
+      "highlightPath": [
+        "person.brahma",
+        "person.marichi",
+        "person.kashyapa"
+      ],
+      "scriptureSources": [
+        {
+          "work": "Bhāgavata Purāṇa",
+          "section": "Skandha 3",
+          "chapter": "12"
+        }
+      ],
+      "color": {
+        "accent": "#5b6b3c",
+        "tint": "#e8ecd0"
+      },
+      "order": 20
+    },
+    {
+      "id": "genealogy.manus",
+      "slug": "manus",
+      "title": "Manus",
+      "kind": "genealogy-module",
+      "sanskritTitle": "मनवः",
+      "eyebrow": "Manvantara",
+      "summary": "Vaivasvata Manu — Manu of the present age.",
+      "description": "Only the current Manu (Vaivasvata) is expanded here with verified links to Vivasvān and Ikṣvāku. Other Manus can be added when each citation is locked.",
+      "status": "available",
+      "entityIds": [
+        "person.vivasvan",
+        "person.vaivasvata-manu",
+        "person.ikshvaku",
+        "person.aditi",
+        "person.kashyapa"
+      ],
+      "rootEntityId": "person.vivasvan",
+      "highlightPath": [
+        "person.vivasvan",
+        "person.vaivasvata-manu",
+        "person.ikshvaku"
+      ],
+      "scriptureSources": [
+        {
+          "work": "Bhāgavata Purāṇa",
+          "section": "Skandha 8–9"
+        },
+        {
+          "work": "Bhagavad Gītā",
+          "chapter": "4"
+        }
+      ],
+      "color": {
+        "accent": "#6f5b2f",
+        "tint": "#efe4c2"
+      },
+      "order": 25
+    },
+    {
+      "id": "genealogy.saptarishis",
+      "slug": "saptarishis",
+      "title": "Saptarṣis",
+      "kind": "genealogy-module",
+      "sanskritTitle": "सप्तर्षयः",
+      "eyebrow": "Seers",
+      "summary": "The seven seers associated with Brahmā's mind-born line.",
+      "description": "Lists of Saptarṣis shift by manvantara. Divine shows the Bhāgavata mānasaputra set used as the working Vaivasvata baseline.",
+      "status": "available",
+      "entityIds": [
+        "person.brahma",
+        "person.marichi",
+        "person.atri",
+        "person.angiras",
+        "person.pulastya",
+        "person.pulaha",
+        "person.kratu",
+        "person.vasishtha",
+        "person.brihaspati",
+        "person.anasuya",
+        "person.dattatreya"
+      ],
+      "rootEntityId": "person.brahma",
+      "scriptureSources": [
+        {
+          "work": "Bhāgavata Purāṇa",
+          "section": "Skandha 3",
+          "chapter": "12"
+        }
+      ],
+      "color": {
+        "accent": "#3e5a70",
+        "tint": "#d3e0ea"
+      },
+      "order": 30
+    },
+    {
+      "id": "genealogy.devas",
+      "slug": "devas",
+      "title": "Devas",
+      "kind": "genealogy-module",
+      "sanskritTitle": "देवाः",
+      "eyebrow": "Ādityas",
+      "summary": "Kaśyapa → Aditi → the Ādityas (Indra, Vivasvān, and kin).",
+      "description": "Devas are not Asuras. This module follows Kaśyapa and Aditi into the Āditya catalogue of Viṣṇu and Bhāgavata Purāṇas.",
+      "status": "available",
+      "entityIds": [
+        "person.brahma",
+        "person.marichi",
+        "person.kashyapa",
+        "person.daksha",
+        "person.aditi",
+        "person.indra",
+        "person.vivasvan",
+        "person.varuna",
+        "person.mitra",
+        "person.aryaman",
+        "person.bhaga",
+        "person.pushan",
+        "person.savitr",
+        "person.brihaspati",
+        "person.angiras"
+      ],
+      "rootEntityId": "person.kashyapa",
+      "highlightPath": [
+        "person.brahma",
+        "person.marichi",
+        "person.kashyapa",
+        "person.aditi",
+        "person.indra"
+      ],
+      "scriptureSources": [
+        {
+          "work": "Bhāgavata Purāṇa",
+          "section": "Skandha 6",
+          "chapter": "6"
+        },
+        {
+          "work": "Viṣṇu Purāṇa",
+          "section": "Aṃśa 1",
+          "chapter": "15"
+        }
+      ],
+      "color": {
+        "accent": "#4d6a86",
+        "tint": "#d5e2ee"
+      },
+      "order": 35
+    },
+    {
+      "id": "genealogy.asuras",
+      "slug": "asuras",
+      "title": "Asuras",
+      "kind": "genealogy-module",
+      "sanskritTitle": "असुराः",
+      "eyebrow": "Asura lineages",
+      "summary": "Daityas and Dānavas — the principal Asura houses. Open Daityas or Dānavas for the full separate trees.",
+      "description": "In Purāṇic taxonomy, Asura is an umbrella for the lineages of Diti (Daityas) and Danu (Dānavas). Rākṣasas are a separate race (Pulastya → Rāvaṇa) and are not merged here. This hub shows both Asura houses side by side; dive into Daityas or Dānavas for the dedicated spines.",
+      "status": "available",
+      "entityIds": [
+        "person.brahma",
+        "person.marichi",
+        "person.kashyapa",
+        "person.daksha",
+        "person.diti",
+        "person.danu",
+        "person.hiranyakashipu",
+        "person.hiranyaksha",
+        "person.simhika",
+        "person.prahlada",
+        "person.virocana",
+        "person.bali",
+        "person.bana",
+        "person.rahu",
+        "person.vipracitti",
+        "person.puloman",
+        "person.namuci",
+        "person.shambara",
+        "person.maya-danava"
+      ],
+      "rootEntityId": "person.kashyapa",
+      "highlightPath": [
+        "person.kashyapa",
+        "person.diti",
+        "person.hiranyakashipu",
+        "person.prahlada",
+        "person.virocana",
+        "person.bali"
+      ],
+      "scriptureSources": [
+        {
+          "work": "Bhāgavata Purāṇa",
+          "section": "Skandha 3",
+          "chapter": "14"
+        },
+        {
+          "work": "Bhāgavata Purāṇa",
+          "section": "Skandha 6–8"
+        },
+        {
+          "work": "Viṣṇu Purāṇa",
+          "section": "Aṃśa 1",
+          "chapter": "21"
+        }
+      ],
+      "relatedGitaChapters": [
+        10
+      ],
+      "faq": [
+        {
+          "question": "Are Daityas, Dānavas and Rākṣasas the same?",
+          "answer": "No. Daityas are children of Diti; Dānavas of Danu; Rākṣasas (e.g. Rāvaṇa) descend from Pulastya through Viśravas. Divine keeps three separate modules so the trees are never mixed."
+        },
+        {
+          "question": "Where is Prahlāda / Bali / Rāvaṇa?",
+          "answer": "Prahlāda and Bali are under Daityas (and this Asuras hub). Rāvaṇa is under Rākṣasas — not Asuras."
+        }
+      ],
+      "color": {
+        "accent": "#6b3236",
+        "tint": "#e9c9cd"
+      },
+      "order": 38
+    },
+    {
+      "id": "genealogy.daityas",
+      "slug": "daityas",
+      "title": "Daityas",
+      "kind": "genealogy-module",
+      "sanskritTitle": "दैत्याः",
+      "eyebrow": "Asura · Sons of Diti",
+      "summary": "Kaśyapa → Diti → Hiraṇyakaśipu line through Bali and Bāṇa.",
+      "description": "Daityas are the children of Diti — kept strictly separate from Dānavas and Rākṣasas. Includes Siṃhikā and Rāhu (Daitya mother; Dānava father).",
+      "status": "available",
+      "entityIds": [
+        "person.brahma",
+        "person.marichi",
+        "person.kashyapa",
+        "person.daksha",
+        "person.diti",
+        "person.hiranyakashipu",
+        "person.hiranyaksha",
+        "person.simhika",
+        "person.prahlada",
+        "person.virocana",
+        "person.bali",
+        "person.bana",
+        "person.rahu",
+        "person.vipracitti"
+      ],
+      "rootEntityId": "person.diti",
+      "highlightPath": [
+        "person.brahma",
+        "person.marichi",
+        "person.kashyapa",
+        "person.diti",
+        "person.hiranyakashipu",
+        "person.prahlada",
+        "person.virocana",
+        "person.bali",
+        "person.bana"
+      ],
+      "scriptureSources": [
+        {
+          "work": "Bhāgavata Purāṇa",
+          "section": "Skandha 3",
+          "chapter": "14"
+        },
+        {
+          "work": "Bhāgavata Purāṇa",
+          "section": "Skandha 7–8"
+        }
+      ],
+      "relatedGitaChapters": [
+        10
+      ],
+      "color": {
+        "accent": "#6b3236",
+        "tint": "#e9c9cd"
+      },
+      "order": 40
+    },
+    {
+      "id": "genealogy.danavas",
+      "slug": "danavas",
+      "title": "Dānavas",
+      "kind": "genealogy-module",
+      "sanskritTitle": "दानवाः",
+      "eyebrow": "Asura · Sons of Danu",
+      "summary": "Kaśyapa → Danu → Vipracitti and listed Dānava sons.",
+      "description": "Dānavas descend from Danu. Only figures with Purāṇic or epic support are included — Vipracitti, Puloman, Namuci, Śambara, Maya.",
+      "status": "available",
+      "entityIds": [
+        "person.brahma",
+        "person.marichi",
+        "person.kashyapa",
+        "person.daksha",
+        "person.danu",
+        "person.vipracitti",
+        "person.puloman",
+        "person.namuci",
+        "person.shambara",
+        "person.maya-danava",
+        "person.simhika",
+        "person.rahu"
+      ],
+      "rootEntityId": "person.danu",
+      "highlightPath": [
+        "person.brahma",
+        "person.marichi",
+        "person.kashyapa",
+        "person.danu",
+        "person.vipracitti"
+      ],
+      "scriptureSources": [
+        {
+          "work": "Bhāgavata Purāṇa",
+          "section": "Skandha 6",
+          "chapter": "6"
+        },
+        {
+          "work": "Viṣṇu Purāṇa",
+          "section": "Aṃśa 1",
+          "chapter": "21"
+        }
+      ],
+      "color": {
+        "accent": "#5a3a4a",
+        "tint": "#e8d0da"
+      },
+      "order": 45
+    },
+    {
+      "id": "genealogy.rakshasas",
+      "slug": "rakshasas",
+      "title": "Rākṣasas",
+      "kind": "genealogy-module",
+      "sanskritTitle": "राक्षसाः",
+      "eyebrow": "Not Asuras · Laṅkā line",
+      "summary": "Pulastya → Viśravas → Rāvaṇa and siblings (separate from Daitya/Dānava).",
+      "description": "Rākṣasa genealogy is independent: Pulastya's line through Viśravas and Kaikasī. Kubera (Yakṣa) appears as half-brother, not reclassified as Rākṣasa. Not merged into the Asuras module.",
+      "status": "available",
+      "entityIds": [
+        "person.brahma",
+        "person.pulastya",
+        "person.visravas",
+        "person.kaikasi",
+        "person.kubera",
+        "person.ravana",
+        "person.kumbhakarna",
+        "person.vibhishana",
+        "person.surpanakha",
+        "person.indrajit"
+      ],
+      "rootEntityId": "person.pulastya",
+      "highlightPath": [
+        "person.brahma",
+        "person.pulastya",
+        "person.visravas",
+        "person.ravana",
+        "person.indrajit"
+      ],
+      "scriptureSources": [
+        {
+          "work": "Rāmāyaṇa",
+          "section": "Uttara Kāṇḍa",
+          "chapter": "2–9"
+        }
+      ],
+      "color": {
+        "accent": "#5c2a2e",
+        "tint": "#e6c4c8"
+      },
+      "order": 50
+    },
+    {
+      "id": "genealogy.nagas",
+      "slug": "nagas",
+      "title": "Nāgas",
+      "kind": "genealogy-module",
+      "sanskritTitle": "नागाः",
+      "eyebrow": "Serpent race",
+      "summary": "Kaśyapa → Kadrū → Ananta, Vāsuki, Takṣaka and principal Nāgas.",
+      "description": "Nāgas are a separate Kaśyapa–Kadrū lineage. Lists of principal serpents follow Bhāgavata and Mahābhārata catalogues.",
+      "status": "available",
+      "entityIds": [
+        "person.kashyapa",
+        "person.daksha",
+        "person.kadru",
+        "person.ananta",
+        "person.vasuki",
+        "person.takshaka",
+        "person.karkotaka",
+        "person.padma-naga",
+        "person.mahapadma-naga",
+        "person.kulika-naga",
+        "person.shankha-naga"
+      ],
+      "rootEntityId": "person.kadru",
+      "highlightPath": [
+        "person.kashyapa",
+        "person.kadru",
+        "person.ananta"
+      ],
+      "scriptureSources": [
+        {
+          "work": "Bhāgavata Purāṇa",
+          "section": "Skandha 5–6"
+        },
+        {
+          "work": "Mahābhārata",
+          "section": "Ādi Parva",
+          "chapter": "16"
+        }
+      ],
+      "color": {
+        "accent": "#3f6a6a",
+        "tint": "#cee3e3"
+      },
+      "order": 55
+    },
+    {
+      "id": "genealogy.yakshas",
+      "slug": "yakshas",
+      "title": "Yakṣas",
+      "kind": "genealogy-module",
+      "sanskritTitle": "यक्षाः",
+      "eyebrow": "Guardians",
+      "summary": "Kubera, lord of Yakṣas — linked but not merged into Rākṣasas.",
+      "description": "Sparse by design: Kubera is securely attested as Yakṣa sovereign and half-brother of Rāvaṇa. Further Yakṣa names await verified parentage before inclusion.",
+      "status": "available",
+      "entityIds": [
+        "person.visravas",
+        "person.kubera",
+        "person.ravana"
+      ],
+      "rootEntityId": "person.kubera",
+      "scriptureSources": [
+        {
+          "work": "Rāmāyaṇa",
+          "section": "Uttara Kāṇḍa"
+        },
+        {
+          "work": "Bhāgavata Purāṇa",
+          "section": "Skandha 4",
+          "chapter": "1"
+        }
+      ],
+      "color": {
+        "accent": "#4b6c5f",
+        "tint": "#d4e5df"
+      },
+      "order": 60
+    },
+    {
+      "id": "genealogy.gandharvas",
+      "slug": "gandharvas",
+      "title": "Gandharvas",
+      "kind": "genealogy-module",
+      "sanskritTitle": "गन्धर्वाः",
+      "eyebrow": "Celestial musicians",
+      "summary": "Named Gandharvas with epic/Gītā attestation — no invented pedigree.",
+      "description": "Citraratha is included from Mahābhārata and Bhagavad Gītā 10.26. Parentage is left unset where primary sources do not fix it.",
+      "status": "available",
+      "entityIds": [
+        "person.chitraratha"
+      ],
+      "rootEntityId": "person.chitraratha",
+      "scriptureSources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Ādi Parva"
+        },
+        {
+          "work": "Bhagavad Gītā",
+          "chapter": "10"
+        }
+      ],
+      "relatedGitaChapters": [
+        10
+      ],
+      "color": {
+        "accent": "#7c6c39",
+        "tint": "#eee4c0"
+      },
+      "order": 65
+    },
+    {
+      "id": "genealogy.solar-dynasty",
+      "slug": "solar-dynasty",
+      "title": "Solar Dynasty",
+      "kind": "genealogy-module",
+      "sanskritTitle": "सूर्यवंश",
+      "eyebrow": "Sūryavaṃśa",
+      "summary": "Vivasvān → Vaivasvata Manu → Ikṣvāku → Raghu → Daśaratha.",
+      "description": "A verified spine of the Ikṣvāku line. Intermediate kings are omitted until each link is individually cited — accuracy over a dense unverified ladder.",
+      "status": "available",
+      "entityIds": [
+        "person.vivasvan",
+        "person.vaivasvata-manu",
+        "person.ikshvaku",
+        "person.raghu",
+        "person.aja",
+        "person.dasharatha",
+        "person.kausalya",
+        "person.kaikeyi",
+        "person.sumitra",
+        "person.rama",
+        "person.bharata",
+        "person.lakshmana",
+        "person.shatrughna"
+      ],
+      "rootEntityId": "person.vivasvan",
+      "highlightPath": [
+        "person.vivasvan",
+        "person.vaivasvata-manu",
+        "person.ikshvaku",
+        "person.raghu",
+        "person.aja",
+        "person.dasharatha",
+        "person.rama"
+      ],
+      "scriptureSources": [
+        {
+          "work": "Bhāgavata Purāṇa",
+          "section": "Skandha 9"
+        },
+        {
+          "work": "Rāmāyaṇa",
+          "section": "Bāla Kāṇḍa",
+          "chapter": "70"
+        },
+        {
+          "work": "Viṣṇu Purāṇa",
+          "section": "Aṃśa 4"
+        }
+      ],
+      "color": {
+        "accent": "#6a4b1e",
+        "tint": "#f0e0bd"
+      },
+      "order": 70
+    },
+    {
+      "id": "genealogy.lunar-dynasty",
+      "slug": "lunar-dynasty",
+      "title": "Lunar Dynasty",
+      "kind": "genealogy-module",
+      "sanskritTitle": "चन्द्रवंश",
+      "eyebrow": "Candravaṃśa",
+      "summary": "Atri → Candra → Budha → Purūravas → Yayāti → Yadu / Puru.",
+      "description": "Origin of the Lunar line and the fork into Yādava and Paurava branches. Long intermediate reigns are marked as traditional descendant links, not invented father–son steps.",
+      "status": "available",
+      "entityIds": [
+        "person.atri",
+        "person.chandra",
+        "person.budha",
+        "person.pururavas",
+        "person.yayati",
+        "person.yadu",
+        "person.puru"
+      ],
+      "rootEntityId": "person.atri",
+      "highlightPath": [
+        "person.atri",
+        "person.chandra",
+        "person.budha",
+        "person.pururavas",
+        "person.yayati"
+      ],
+      "scriptureSources": [
+        {
+          "work": "Bhāgavata Purāṇa",
+          "section": "Skandha 9",
+          "chapter": "14–19"
+        },
+        {
+          "work": "Viṣṇu Purāṇa",
+          "section": "Aṃśa 4"
+        }
+      ],
+      "color": {
+        "accent": "#5c6d80",
+        "tint": "#dce6ee"
+      },
+      "order": 75
+    },
+    {
+      "id": "genealogy.raghu-dynasty",
+      "slug": "raghu-dynasty",
+      "title": "Raghu Dynasty",
+      "kind": "genealogy-module",
+      "sanskritTitle": "रघुवंश",
+      "eyebrow": "Raghuvaṃśa",
+      "summary": "Raghu → Aja → Daśaratha → Rāma and brothers.",
+      "description": "Focused Raghuvaṃśa module overlapping the Solar spine from Raghu through Rāma's generation.",
+      "status": "available",
+      "entityIds": [
+        "person.raghu",
+        "person.aja",
+        "person.dasharatha",
+        "person.kausalya",
+        "person.kaikeyi",
+        "person.sumitra",
+        "person.rama",
+        "person.sita",
+        "person.bharata",
+        "person.lakshmana",
+        "person.shatrughna",
+        "person.lava",
+        "person.kusha",
+        "person.vasishtha"
+      ],
+      "rootEntityId": "person.raghu",
+      "highlightPath": [
+        "person.raghu",
+        "person.aja",
+        "person.dasharatha",
+        "person.rama"
+      ],
+      "scriptureSources": [
+        {
+          "work": "Rāmāyaṇa"
+        },
+        {
+          "work": "Bhāgavata Purāṇa",
+          "section": "Skandha 9",
+          "chapter": "10"
+        }
+      ],
+      "color": {
+        "accent": "#6a4b1e",
+        "tint": "#f0e0bd"
+      },
+      "order": 80
+    },
+    {
+      "id": "genealogy.yadu-dynasty",
+      "slug": "yadu-dynasty",
+      "title": "Yadu Dynasty",
+      "kind": "genealogy-module",
+      "sanskritTitle": "यदुवंश",
+      "eyebrow": "Yādavas",
+      "summary": "Yayāti → Yadu → Vasudeva → Kṛṣṇa and Balarāma.",
+      "description": "Yādava line into the Vṛṣṇi house of Vasudeva. Intermediate names between Yadu and Vasudeva are not fabricated.",
+      "status": "available",
+      "entityIds": [
+        "person.yayati",
+        "person.yadu",
+        "person.vasudeva",
+        "person.devaki",
+        "person.rohini",
+        "person.kamsa",
+        "person.krishna",
+        "person.balarama",
+        "person.subhadra",
+        "person.nanda",
+        "person.yashoda",
+        "person.rukmini"
+      ],
+      "rootEntityId": "person.yadu",
+      "highlightPath": [
+        "person.yadu",
+        "person.vasudeva",
+        "person.krishna"
+      ],
+      "scriptureSources": [
+        {
+          "work": "Bhāgavata Purāṇa",
+          "section": "Skandha 9–10"
+        },
+        {
+          "work": "Harivaṃśa"
+        }
+      ],
+      "color": {
+        "accent": "#8a3b52",
+        "tint": "#f7d9dd"
+      },
+      "order": 85
+    },
+    {
+      "id": "genealogy.kuru-dynasty",
+      "slug": "kuru-dynasty",
+      "title": "Kuru Dynasty",
+      "kind": "genealogy-module",
+      "sanskritTitle": "कुरुवंश",
+      "eyebrow": "Kurus",
+      "summary": "Kuru → Śaṃtanu → Bhīṣma / Vicitravīrya → Dhṛtarāṣṭra & Pāṇḍu.",
+      "description": "Core Kuru house of the Mahābhārata Ādi Parva — including Vyāsa's niyoga and the split into Kaurava and Pāṇḍava houses.",
+      "status": "available",
+      "entityIds": [
+        "person.puru",
+        "person.kuru",
+        "person.shantanu",
+        "person.ganga",
+        "person.satyavati",
+        "person.bhishma",
+        "person.vyasa",
+        "person.parasara",
+        "person.vichitravirya",
+        "person.ambika",
+        "person.ambalika",
+        "person.dhritarashtra",
+        "person.gandhari",
+        "person.pandu",
+        "person.vidura",
+        "person.kunti",
+        "person.madri"
+      ],
+      "rootEntityId": "person.kuru",
+      "highlightPath": [
+        "person.kuru",
+        "person.shantanu",
+        "person.bhishma"
+      ],
+      "scriptureSources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Ādi Parva",
+          "chapter": "94–115"
+        }
+      ],
+      "color": {
+        "accent": "#7c3f28",
+        "tint": "#f2d5c8"
+      },
+      "order": 90
+    },
+    {
+      "id": "genealogy.pandavas",
+      "slug": "pandavas",
+      "title": "Pāṇḍavas",
+      "kind": "genealogy-module",
+      "sanskritTitle": "पाण्डवाः",
+      "eyebrow": "Sons of Pāṇḍu",
+      "summary": "The five brothers, Draupadī, Subhadrā, Abhimanyu and Karṇa.",
+      "description": "Pāṇḍu's sons by divine fathers, their common wife Draupadī, and close kin. Divine parentage is noted on relationships.",
+      "status": "available",
+      "entityIds": [
+        "person.pandu",
+        "person.kunti",
+        "person.madri",
+        "person.yudhishthira",
+        "person.bhima",
+        "person.arjuna",
+        "person.nakula",
+        "person.sahadeva",
+        "person.draupadi",
+        "person.subhadra",
+        "person.abhimanyu",
+        "person.karna",
+        "person.krishna"
+      ],
+      "rootEntityId": "person.pandu",
+      "highlightPath": [
+        "person.pandu",
+        "person.arjuna",
+        "person.abhimanyu"
+      ],
+      "scriptureSources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Ādi Parva"
+        }
+      ],
+      "relatedGitaChapters": [
+        1,
+        2
+      ],
+      "color": {
+        "accent": "#5d6e37",
+        "tint": "#e9edcc"
+      },
+      "order": 95
+    },
+    {
+      "id": "genealogy.kauravas",
+      "slug": "kauravas",
+      "title": "Kauravas",
+      "kind": "genealogy-module",
+      "sanskritTitle": "कौरवाः",
+      "eyebrow": "Sons of Dhṛtarāṣṭra",
+      "summary": "Dhṛtarāṣṭra, Gāndhārī, Duryodhana, Duḥśāsana and Duḥśalā.",
+      "description": "The hundred sons are not enumerated one-by-one; the principal named siblings are included with Ādi Parva citations.",
+      "status": "available",
+      "entityIds": [
+        "person.dhritarashtra",
+        "person.gandhari",
+        "person.duryodhana",
+        "person.dushasana",
+        "person.duhsala",
+        "person.bhishma",
+        "person.vidura",
+        "person.shantanu",
+        "person.vyasa"
+      ],
+      "rootEntityId": "person.dhritarashtra",
+      "highlightPath": [
+        "person.dhritarashtra",
+        "person.duryodhana"
+      ],
+      "scriptureSources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Ādi Parva",
+          "chapter": "109–115"
+        }
+      ],
+      "color": {
+        "accent": "#6b3236",
+        "tint": "#e9c9cd"
+      },
+      "order": 100
+    },
+    {
+      "id": "genealogy.krishna-family",
+      "slug": "krishna-family",
+      "title": "Kṛṣṇa's Family",
+      "kind": "genealogy-module",
+      "sanskritTitle": "कृष्णपरिवार",
+      "eyebrow": "Vṛṣṇi house",
+      "summary": "Vasudeva, Devakī, Nanda–Yaśodā, Balarāma, Rukmiṇī and Subhadrā.",
+      "description": "Birth house and foster house of Kṛṣṇa, plus principal consort Rukmiṇī. Aliases (Govinda, Mādhava, Vāsudeva…) are searchable.",
+      "status": "available",
+      "entityIds": [
+        "person.vasudeva",
+        "person.devaki",
+        "person.rohini",
+        "person.kamsa",
+        "person.krishna",
+        "person.balarama",
+        "person.nanda",
+        "person.yashoda",
+        "person.rukmini",
+        "person.subhadra",
+        "person.vishnu"
+      ],
+      "rootEntityId": "person.vasudeva",
+      "highlightPath": [
+        "person.vasudeva",
+        "person.krishna"
+      ],
+      "scriptureSources": [
+        {
+          "work": "Bhāgavata Purāṇa",
+          "section": "Skandha 10"
+        },
+        {
+          "work": "Harivaṃśa"
+        }
+      ],
+      "relatedGitaChapters": [
+        4,
+        10,
+        11
+      ],
+      "color": {
+        "accent": "#8a3b52",
+        "tint": "#f7d9dd"
+      },
+      "order": 105
+    },
+    {
+      "id": "genealogy.rama-family",
+      "slug": "rama-family",
+      "title": "Rāma's Family",
+      "kind": "genealogy-module",
+      "sanskritTitle": "रामपरिवार",
+      "eyebrow": "Ayodhyā",
+      "summary": "Daśaratha's queens, the four brothers, Sītā, Lava and Kuśa.",
+      "description": "Immediate family of Rāma from the Valmīki Rāmāyaṇa — including Janaka as adoptive father of Sītā.",
+      "status": "available",
+      "entityIds": [
+        "person.dasharatha",
+        "person.kausalya",
+        "person.kaikeyi",
+        "person.sumitra",
+        "person.rama",
+        "person.sita",
+        "person.janaka",
+        "person.bharata",
+        "person.lakshmana",
+        "person.shatrughna",
+        "person.lava",
+        "person.kusha",
+        "person.vasishtha",
+        "person.vishnu"
+      ],
+      "rootEntityId": "person.dasharatha",
+      "highlightPath": [
+        "person.dasharatha",
+        "person.rama",
+        "person.lava"
+      ],
+      "scriptureSources": [
+        {
+          "work": "Rāmāyaṇa"
+        }
+      ],
+      "color": {
+        "accent": "#6a4b1e",
+        "tint": "#f0e0bd"
+      },
+      "order": 110
+    },
+    {
+      "id": "genealogy.major-rishis",
+      "slug": "major-rishis",
+      "title": "Major Ṛṣis",
+      "kind": "genealogy-module",
+      "sanskritTitle": "महर्षयः",
+      "eyebrow": "Sages",
+      "summary": "Vasiṣṭha, Vyāsa, Vālmīki, Nārada, Parāśara and kin.",
+      "description": "Seers who structure epic and Purāṇic transmission. Parentage is stated only where the primary narrative fixes it.",
+      "status": "available",
+      "entityIds": [
+        "person.brahma",
+        "person.vasishtha",
+        "person.vyasa",
+        "person.parasara",
+        "person.valmiki",
+        "person.narada",
+        "person.atri",
+        "person.anasuya",
+        "person.dattatreya",
+        "person.brihaspati",
+        "person.angiras",
+        "person.pulastya",
+        "person.dasharatha",
+        "person.rama",
+        "person.satyavati"
+      ],
+      "rootEntityId": "person.brahma",
+      "scriptureSources": [
+        {
+          "work": "Mahābhārata"
+        },
+        {
+          "work": "Rāmāyaṇa"
+        },
+        {
+          "work": "Bhāgavata Purāṇa"
+        }
+      ],
+      "color": {
+        "accent": "#5c6d80",
+        "tint": "#dce6ee"
+      },
+      "order": 115
+    },
+    {
+      "id": "genealogy.major-kings",
+      "slug": "major-kings",
+      "title": "Major Kings",
+      "kind": "genealogy-module",
+      "sanskritTitle": "राजानः",
+      "eyebrow": "Sovereigns",
+      "summary": "Cross-dynasty kings with the strongest scriptural footprints.",
+      "description": "A curated index of major kings already attested in dynasty modules — not a new invented genealogy.",
+      "status": "available",
+      "entityIds": [
+        "person.ikshvaku",
+        "person.raghu",
+        "person.aja",
+        "person.dasharatha",
+        "person.rama",
+        "person.janaka",
+        "person.sita",
+        "person.yayati",
+        "person.yadu",
+        "person.puru",
+        "person.kuru",
+        "person.shantanu",
+        "person.dhritarashtra",
+        "person.pandu",
+        "person.yudhishthira",
+        "person.bali",
+        "person.virocana",
+        "person.prahlada",
+        "person.ravana",
+        "person.visravas",
+        "person.kubera",
+        "person.kamsa",
+        "person.devaki"
+      ],
+      "rootEntityId": "person.yudhishthira",
+      "scriptureSources": [
+        {
+          "work": "Mahābhārata"
+        },
+        {
+          "work": "Rāmāyaṇa"
+        },
+        {
+          "work": "Bhāgavata Purāṇa"
+        }
+      ],
+      "color": {
+        "accent": "#6a4b1e",
+        "tint": "#f0e0bd"
+      },
+      "order": 120
+    }
+  ]
+}

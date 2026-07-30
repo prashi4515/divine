@@ -19,7 +19,7 @@ const fredoka = Fredoka({
 
 export const metadata: Metadata = {
   title: {
-    default: "Bhagavad Gita — The Song of God",
+    default: "Bhagavad Gita - The Song of God",
     template: "%s · Bhagavad Gita",
   },
   description:

@@ -39,10 +39,13 @@ export const PERSON_CATEGORIES = [
 export type PersonCategory = (typeof PERSON_CATEGORIES)[number];
 
 export const RELATIONSHIP_TYPES = [
+  "parent",
+  "child",
   "father",
   "mother",
   "spouse",
   "consort",
+  "sibling",
   "brother",
   "sister",
   "son",
@@ -53,6 +56,8 @@ export const RELATIONSHIP_TYPES = [
   "adoptive-daughter",
   "guru",
   "disciple",
+  "friend",
+  "enemy",
   "ancestor",
   "descendant",
   "incarnation-of",
@@ -179,6 +184,8 @@ export const personSchema = z.object({
   relatedVerses: z.array(relatedVerseSchema).default([]),
   notes: z.string().optional(),
   imagePlaceholder: z.string().optional(),
+  /** Canonical Encyclopedia entity page when served from the knowledge graph. */
+  encyclopediaHref: z.string().optional(),
 });
 export type Person = z.infer<typeof personSchema>;
 
@@ -251,10 +258,13 @@ export const CATEGORY_LABELS: Record<PersonCategory, string> = {
 };
 
 export const RELATIONSHIP_LABELS: Record<RelationshipType, string> = {
+  parent: "Parent",
+  child: "Child",
   father: "Father",
   mother: "Mother",
   spouse: "Spouse",
   consort: "Consort",
+  sibling: "Sibling",
   brother: "Brother",
   sister: "Sister",
   son: "Son",
@@ -265,6 +275,8 @@ export const RELATIONSHIP_LABELS: Record<RelationshipType, string> = {
   "adoptive-daughter": "Adoptive daughter",
   guru: "Guru",
   disciple: "Disciple",
+  friend: "Friend",
+  enemy: "Enemy",
   ancestor: "Ancestor",
   descendant: "Descendant",
   "incarnation-of": "Incarnation of",

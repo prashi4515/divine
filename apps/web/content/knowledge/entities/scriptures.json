@@ -1,0 +1,591 @@
+{
+  "schemaVersion": 1,
+  "entities": [
+    {
+      "id": "scripture.bg",
+      "slug": "bhagavad-gita",
+      "kind": "scripture",
+      "name": "Bhagavad Gītā",
+      "englishName": "Bhagavad Gita",
+      "iastName": "Bhagavad Gītā",
+      "aliases": [
+        "Gita",
+        "Bhagavadgita",
+        "Song of God"
+      ],
+      "summary": "The dialogue of Kṛṣṇa and Arjuna on the field of Kurukṣetra.",
+      "description": "The Bhagavad Gītā is a dialogue within the Mahābhārata in which Kṛṣṇa instructs Arjuna on dharma, yoga, and liberation.",
+      "primaryScripture": "Bhagavad Gītā",
+      "scriptureSources": [
+        {
+          "work": "Bhagavad Gītā"
+        }
+      ],
+      "tags": [
+        "gita"
+      ],
+      "categories": [
+        "scripture"
+      ],
+      "importance": 5,
+      "seo": {
+        "title": "Bhagavad Gītā — Scripture",
+        "description": "The dialogue of Kṛṣṇa and Arjuna."
+      },
+      "externalRefs": {
+        "workCode": "bg",
+        "publicId": "bg"
+      },
+      "status": "published",
+      "schemaVersion": 1,
+      "era": "dvapara-yuga",
+      "variantTraditions": []
+    },
+    {
+      "id": "verse.bg.2.3",
+      "slug": "bg-2-3",
+      "kind": "verse",
+      "name": "Do not yield to unmanliness",
+      "englishName": "bg.2.3",
+      "iastName": "Do not yield to unmanliness",
+      "aliases": [
+        "bg.2.3"
+      ],
+      "summary": "Do not yield to unmanliness",
+      "description": "Stub entity linking the knowledge graph to Gita verse bg.2.3. Full text lives in the reader corpus.",
+      "primaryScripture": "Bhagavad Gītā",
+      "scriptureSources": [
+        {
+          "work": "Bhagavad Gītā",
+          "chapter": "2.3"
+        }
+      ],
+      "tags": [
+        "gita",
+        "verse"
+      ],
+      "categories": [
+        "verse"
+      ],
+      "importance": 3,
+      "seo": {
+        "title": "bg.2.3"
+      },
+      "externalRefs": {
+        "workCode": "bg",
+        "publicId": "bg.2.3"
+      },
+      "status": "published",
+      "schemaVersion": 1,
+      "era": "dvapara-yuga",
+      "variantTraditions": []
+    },
+    {
+      "id": "verse.bg.1.8",
+      "slug": "bg-1-8",
+      "kind": "verse",
+      "name": "Named among warriors",
+      "englishName": "bg.1.8",
+      "iastName": "Named among warriors",
+      "aliases": [
+        "bg.1.8"
+      ],
+      "summary": "Named among warriors",
+      "description": "Stub entity linking the knowledge graph to Gita verse bg.1.8. Full text lives in the reader corpus.",
+      "primaryScripture": "Bhagavad Gītā",
+      "scriptureSources": [
+        {
+          "work": "Bhagavad Gītā",
+          "chapter": "1.8"
+        }
+      ],
+      "tags": [
+        "gita",
+        "verse"
+      ],
+      "categories": [
+        "verse"
+      ],
+      "importance": 3,
+      "seo": {
+        "title": "bg.1.8"
+      },
+      "externalRefs": {
+        "workCode": "bg",
+        "publicId": "bg.1.8"
+      },
+      "status": "published",
+      "schemaVersion": 1,
+      "era": "dvapara-yuga",
+      "variantTraditions": []
+    },
+    {
+      "id": "verse.bg.8.16",
+      "slug": "bg-8-16",
+      "kind": "verse",
+      "name": "The realm of Brahmā",
+      "englishName": "bg.8.16",
+      "iastName": "The realm of Brahmā",
+      "aliases": [
+        "bg.8.16"
+      ],
+      "summary": "The realm of Brahmā",
+      "description": "Stub entity linking the knowledge graph to Gita verse bg.8.16. Full text lives in the reader corpus.",
+      "primaryScripture": "Bhagavad Gītā",
+      "scriptureSources": [
+        {
+          "work": "Bhagavad Gītā",
+          "chapter": "8.16"
+        }
+      ],
+      "tags": [
+        "gita",
+        "verse"
+      ],
+      "categories": [
+        "verse"
+      ],
+      "importance": 3,
+      "seo": {
+        "title": "bg.8.16"
+      },
+      "externalRefs": {
+        "workCode": "bg",
+        "publicId": "bg.8.16"
+      },
+      "status": "published",
+      "schemaVersion": 1,
+      "era": "dvapara-yuga",
+      "variantTraditions": []
+    },
+    {
+      "id": "verse.bg.8.17",
+      "slug": "bg-8-17",
+      "kind": "verse",
+      "name": "A day and night of Brahmā",
+      "englishName": "bg.8.17",
+      "iastName": "A day and night of Brahmā",
+      "aliases": [
+        "bg.8.17"
+      ],
+      "summary": "A day and night of Brahmā",
+      "description": "Stub entity linking the knowledge graph to Gita verse bg.8.17. Full text lives in the reader corpus.",
+      "primaryScripture": "Bhagavad Gītā",
+      "scriptureSources": [
+        {
+          "work": "Bhagavad Gītā",
+          "chapter": "8.17"
+        }
+      ],
+      "tags": [
+        "gita",
+        "verse"
+      ],
+      "categories": [
+        "verse"
+      ],
+      "importance": 3,
+      "seo": {
+        "title": "bg.8.17"
+      },
+      "externalRefs": {
+        "workCode": "bg",
+        "publicId": "bg.8.17"
+      },
+      "status": "published",
+      "schemaVersion": 1,
+      "era": "dvapara-yuga",
+      "variantTraditions": []
+    },
+    {
+      "id": "verse.bg.10.24",
+      "slug": "bg-10-24",
+      "kind": "verse",
+      "name": "Among priests I am Bṛhaspati",
+      "englishName": "bg.10.24",
+      "iastName": "Among priests I am Bṛhaspati",
+      "aliases": [
+        "bg.10.24"
+      ],
+      "summary": "Among priests I am Bṛhaspati",
+      "description": "Stub entity linking the knowledge graph to Gita verse bg.10.24. Full text lives in the reader corpus.",
+      "primaryScripture": "Bhagavad Gītā",
+      "scriptureSources": [
+        {
+          "work": "Bhagavad Gītā",
+          "chapter": "10.24"
+        }
+      ],
+      "tags": [
+        "gita",
+        "verse"
+      ],
+      "categories": [
+        "verse"
+      ],
+      "importance": 3,
+      "seo": {
+        "title": "bg.10.24"
+      },
+      "externalRefs": {
+        "workCode": "bg",
+        "publicId": "bg.10.24"
+      },
+      "status": "published",
+      "schemaVersion": 1,
+      "era": "dvapara-yuga",
+      "variantTraditions": []
+    },
+    {
+      "id": "verse.bg.10.26",
+      "slug": "bg-10-26",
+      "kind": "verse",
+      "name": "Among Gandharvas I am Citraratha",
+      "englishName": "bg.10.26",
+      "iastName": "Among Gandharvas I am Citraratha",
+      "aliases": [
+        "bg.10.26"
+      ],
+      "summary": "Among Gandharvas I am Citraratha",
+      "description": "Stub entity linking the knowledge graph to Gita verse bg.10.26. Full text lives in the reader corpus.",
+      "primaryScripture": "Bhagavad Gītā",
+      "scriptureSources": [
+        {
+          "work": "Bhagavad Gītā",
+          "chapter": "10.26"
+        }
+      ],
+      "tags": [
+        "gita",
+        "verse"
+      ],
+      "categories": [
+        "verse"
+      ],
+      "importance": 3,
+      "seo": {
+        "title": "bg.10.26"
+      },
+      "externalRefs": {
+        "workCode": "bg",
+        "publicId": "bg.10.26"
+      },
+      "status": "published",
+      "schemaVersion": 1,
+      "era": "dvapara-yuga",
+      "variantTraditions": []
+    },
+    {
+      "id": "verse.bg.10.22",
+      "slug": "bg-10-22",
+      "kind": "verse",
+      "name": "Among gods I am Indra (Vāsava)",
+      "englishName": "bg.10.22",
+      "iastName": "Among gods I am Indra (Vāsava)",
+      "aliases": [
+        "bg.10.22"
+      ],
+      "summary": "Among gods I am Indra (Vāsava)",
+      "description": "Stub entity linking the knowledge graph to Gita verse bg.10.22. Full text lives in the reader corpus.",
+      "primaryScripture": "Bhagavad Gītā",
+      "scriptureSources": [
+        {
+          "work": "Bhagavad Gītā",
+          "chapter": "10.22"
+        }
+      ],
+      "tags": [
+        "gita",
+        "verse"
+      ],
+      "categories": [
+        "verse"
+      ],
+      "importance": 3,
+      "seo": {
+        "title": "bg.10.22"
+      },
+      "externalRefs": {
+        "workCode": "bg",
+        "publicId": "bg.10.22"
+      },
+      "status": "published",
+      "schemaVersion": 1,
+      "era": "dvapara-yuga",
+      "variantTraditions": []
+    },
+    {
+      "id": "verse.bg.4.7",
+      "slug": "bg-4-7",
+      "kind": "verse",
+      "name": "I descend age after age",
+      "englishName": "bg.4.7",
+      "iastName": "I descend age after age",
+      "aliases": [
+        "bg.4.7"
+      ],
+      "summary": "I descend age after age",
+      "description": "Stub entity linking the knowledge graph to Gita verse bg.4.7. Full text lives in the reader corpus.",
+      "primaryScripture": "Bhagavad Gītā",
+      "scriptureSources": [
+        {
+          "work": "Bhagavad Gītā",
+          "chapter": "4.7"
+        }
+      ],
+      "tags": [
+        "gita",
+        "verse"
+      ],
+      "categories": [
+        "verse"
+      ],
+      "importance": 3,
+      "seo": {
+        "title": "bg.4.7"
+      },
+      "externalRefs": {
+        "workCode": "bg",
+        "publicId": "bg.4.7"
+      },
+      "status": "published",
+      "schemaVersion": 1,
+      "era": "dvapara-yuga",
+      "variantTraditions": []
+    },
+    {
+      "id": "verse.bg.10.20",
+      "slug": "bg-10-20",
+      "kind": "verse",
+      "name": "I am the Self in all beings",
+      "englishName": "bg.10.20",
+      "iastName": "I am the Self in all beings",
+      "aliases": [
+        "bg.10.20"
+      ],
+      "summary": "I am the Self in all beings",
+      "description": "Stub entity linking the knowledge graph to Gita verse bg.10.20. Full text lives in the reader corpus.",
+      "primaryScripture": "Bhagavad Gītā",
+      "scriptureSources": [
+        {
+          "work": "Bhagavad Gītā",
+          "chapter": "10.20"
+        }
+      ],
+      "tags": [
+        "gita",
+        "verse"
+      ],
+      "categories": [
+        "verse"
+      ],
+      "importance": 3,
+      "seo": {
+        "title": "bg.10.20"
+      },
+      "externalRefs": {
+        "workCode": "bg",
+        "publicId": "bg.10.20"
+      },
+      "status": "published",
+      "schemaVersion": 1,
+      "era": "dvapara-yuga",
+      "variantTraditions": []
+    },
+    {
+      "id": "verse.bg.10.30",
+      "slug": "bg-10-30",
+      "kind": "verse",
+      "name": "Among Daityas I am Prahlāda",
+      "englishName": "bg.10.30",
+      "iastName": "Among Daityas I am Prahlāda",
+      "aliases": [
+        "bg.10.30"
+      ],
+      "summary": "Among Daityas I am Prahlāda",
+      "description": "Stub entity linking the knowledge graph to Gita verse bg.10.30. Full text lives in the reader corpus.",
+      "primaryScripture": "Bhagavad Gītā",
+      "scriptureSources": [
+        {
+          "work": "Bhagavad Gītā",
+          "chapter": "10.30"
+        }
+      ],
+      "tags": [
+        "gita",
+        "verse"
+      ],
+      "categories": [
+        "verse"
+      ],
+      "importance": 3,
+      "seo": {
+        "title": "bg.10.30"
+      },
+      "externalRefs": {
+        "workCode": "bg",
+        "publicId": "bg.10.30"
+      },
+      "status": "published",
+      "schemaVersion": 1,
+      "era": "dvapara-yuga",
+      "variantTraditions": []
+    },
+    {
+      "id": "verse.bg.4.1",
+      "slug": "bg-4-1",
+      "kind": "verse",
+      "name": "Vivasvān taught Manu",
+      "englishName": "bg.4.1",
+      "iastName": "Vivasvān taught Manu",
+      "aliases": [
+        "bg.4.1"
+      ],
+      "summary": "Vivasvān taught Manu",
+      "description": "Stub entity linking the knowledge graph to Gita verse bg.4.1. Full text lives in the reader corpus.",
+      "primaryScripture": "Bhagavad Gītā",
+      "scriptureSources": [
+        {
+          "work": "Bhagavad Gītā",
+          "chapter": "4.1"
+        }
+      ],
+      "tags": [
+        "gita",
+        "verse"
+      ],
+      "categories": [
+        "verse"
+      ],
+      "importance": 3,
+      "seo": {
+        "title": "bg.4.1"
+      },
+      "externalRefs": {
+        "workCode": "bg",
+        "publicId": "bg.4.1"
+      },
+      "status": "published",
+      "schemaVersion": 1,
+      "era": "dvapara-yuga",
+      "variantTraditions": []
+    },
+    {
+      "id": "verse.bg.4.7",
+      "slug": "bg-4-7",
+      "kind": "verse",
+      "name": "Whenever dharma declines, I descend",
+      "englishName": "bg.4.7",
+      "iastName": "Whenever dharma declines, I descend",
+      "aliases": [
+        "bg.4.7"
+      ],
+      "summary": "Whenever dharma declines, I descend",
+      "description": "Stub entity linking the knowledge graph to Gita verse bg.4.7. Full text lives in the reader corpus.",
+      "primaryScripture": "Bhagavad Gītā",
+      "scriptureSources": [
+        {
+          "work": "Bhagavad Gītā",
+          "chapter": "4.7"
+        }
+      ],
+      "tags": [
+        "gita",
+        "verse"
+      ],
+      "categories": [
+        "verse"
+      ],
+      "importance": 3,
+      "seo": {
+        "title": "bg.4.7"
+      },
+      "externalRefs": {
+        "workCode": "bg",
+        "publicId": "bg.4.7"
+      },
+      "status": "published",
+      "schemaVersion": 1,
+      "era": "dvapara-yuga",
+      "variantTraditions": []
+    },
+    {
+      "id": "verse.bg.10.20",
+      "slug": "bg-10-20",
+      "kind": "verse",
+      "name": "I am the Self seated in every being",
+      "englishName": "bg.10.20",
+      "iastName": "I am the Self seated in every being",
+      "aliases": [
+        "bg.10.20"
+      ],
+      "summary": "I am the Self seated in every being",
+      "description": "Stub entity linking the knowledge graph to Gita verse bg.10.20. Full text lives in the reader corpus.",
+      "primaryScripture": "Bhagavad Gītā",
+      "scriptureSources": [
+        {
+          "work": "Bhagavad Gītā",
+          "chapter": "10.20"
+        }
+      ],
+      "tags": [
+        "gita",
+        "verse"
+      ],
+      "categories": [
+        "verse"
+      ],
+      "importance": 3,
+      "seo": {
+        "title": "bg.10.20"
+      },
+      "externalRefs": {
+        "workCode": "bg",
+        "publicId": "bg.10.20"
+      },
+      "status": "published",
+      "schemaVersion": 1,
+      "era": "dvapara-yuga",
+      "variantTraditions": []
+    },
+    {
+      "id": "verse.bg.4.1",
+      "slug": "bg-4-1",
+      "kind": "verse",
+      "name": "I taught this yoga to Vivasvān",
+      "englishName": "bg.4.1",
+      "iastName": "I taught this yoga to Vivasvān",
+      "aliases": [
+        "bg.4.1"
+      ],
+      "summary": "I taught this yoga to Vivasvān",
+      "description": "Stub entity linking the knowledge graph to Gita verse bg.4.1. Full text lives in the reader corpus.",
+      "primaryScripture": "Bhagavad Gītā",
+      "scriptureSources": [
+        {
+          "work": "Bhagavad Gītā",
+          "chapter": "4.1"
+        }
+      ],
+      "tags": [
+        "gita",
+        "verse"
+      ],
+      "categories": [
+        "verse"
+      ],
+      "importance": 3,
+      "seo": {
+        "title": "bg.4.1"
+      },
+      "externalRefs": {
+        "workCode": "bg",
+        "publicId": "bg.4.1"
+      },
+      "status": "published",
+      "schemaVersion": 1,
+      "era": "dvapara-yuga",
+      "variantTraditions": []
+    }
+  ]
+}

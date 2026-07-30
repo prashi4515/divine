@@ -118,7 +118,7 @@ export function SearchBar({
   return (
     <div ref={wrapRef} className="relative z-40 w-full">
       <label htmlFor="divine-search" className="sr-only">
-        Search the Bhagavad Gita
+        Knowledge Search
       </label>
       <div className="border-border bg-background flex items-center gap-2 rounded-xl border px-3 py-2.5 shadow-sm md:px-4 md:py-3">
         <Search className="text-muted-foreground size-4 shrink-0" aria-hidden />
@@ -208,7 +208,7 @@ export function SearchBar({
                 setActiveIndex(-1);
               }
             }}
-            placeholder="Search Sanskrit, English, Telugu, Hindi, topics…"
+            placeholder="People, places, events, verses, concepts…"
             className="placeholder:text-muted-foreground/70 relative w-full bg-transparent text-sm outline-none md:text-[15px]"
           />
         </div>

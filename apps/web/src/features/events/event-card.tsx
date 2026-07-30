@@ -1,0 +1,51 @@
+import Link from "next/link";
+import type { KnowledgeEvent } from "@/lib/events/store";
+import { eventHref, eventTypeLabel } from "@/lib/events/store";
+import { displayEnglishName } from "@/lib/text/modern-english";
+import { cn } from "@/lib/utils";
+
+/**
+ * Timeline card — data-driven from KnowledgeEvent JSON (no hardcoded copy).
+ */
+export function EventCard({
+  event,
+  index = 0,
+}: {
+  event: KnowledgeEvent;
+  index?: number;
+}) {
+  return (
+    <Link
+      href={eventHref(event)}
+      style={{ ["--card-index" as string]: index }}
+      className={cn(
+        "group border-border/70 bg-card relative flex h-full flex-col overflow-hidden rounded-2xl border p-5 shadow-xs",
+        "hover:border-saffron/40 transition-divine hover:-translate-y-0.5 hover:shadow-md",
+        "focus-visible:ring-ring focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none",
+      )}
+    >
+      <span
+        className="absolute inset-x-0 top-0 h-0.5 bg-[#6a4530]"
+        aria-hidden
+      />
+      <div className="flex flex-wrap items-center gap-2">
+        <span className="text-[10px] font-medium uppercase tracking-[0.16em] text-[#6a4530]">
+          {eventTypeLabel(event.event.eventType)}
+        </span>
+        <span className="text-muted-foreground text-[10px] uppercase tracking-[0.14em]">
+          · Timeline {event.event.timelineOrder}
+        </span>
+      </div>
+      <h3 className="text-foreground mt-2 font-serif text-lg leading-tight tracking-tight">
+        {displayEnglishName(event)}
+      </h3>
+      <p className="text-muted-foreground mt-2 flex-1 text-sm leading-relaxed">
+        {event.summary}
+      </p>
+      <p className="text-muted-foreground mt-3 text-[11px]">
+        {event.event.participants.length} people · {event.event.places.length}{" "}
+        places
+      </p>
+    </Link>
+  );
+}

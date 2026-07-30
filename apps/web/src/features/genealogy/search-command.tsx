@@ -10,7 +10,7 @@ import {
 } from "@/lib/genealogy/types";
 import { cn } from "@/lib/utils";
 
-/** Fold IAST diacritics so "Krsna" matches "Kṛṣṇa". */
+/** Fold IAST diacritics so "Krsna" matches "Krsna". */
 function fold(s: string): string {
   return s
     .normalize("NFD")

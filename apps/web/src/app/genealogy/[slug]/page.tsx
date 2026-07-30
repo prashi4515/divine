@@ -145,7 +145,6 @@ export default async function GenealogyModulePage({ params }: PageProps) {
         <GenealogyHeader
           eyebrow={mod.eyebrow ?? "Module"}
           title={mod.title}
-          sanskritTitle={mod.sanskritTitle}
           description={mod.description}
           breadcrumbs={[
             { href: "/", label: "Home" },

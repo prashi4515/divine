@@ -15,6 +15,13 @@ export function SiteFooter() {
   const explore = [
     { href: "/", label: t.home },
     { href: "/bhagavad-gita", label: t.allChapters },
+    { href: "/atlas", label: "Atlas" },
+    { href: "/events", label: "Events" },
+    { href: "/kingdoms", label: "Kingdoms" },
+    { href: "/weapons", label: "Weapons" },
+    { href: "/concepts", label: "Concepts" },
+    { href: "/timeline", label: "Timeline" },
+    { href: "/encyclopedia", label: "Encyclopedia" },
     { href: "/genealogy", label: "Genealogy" },
     { href: "/search", label: h.searchVerses },
   ];

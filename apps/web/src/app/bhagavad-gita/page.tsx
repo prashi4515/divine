@@ -9,7 +9,7 @@ import { getStaticGitaChaptersIndex } from "@/lib/reading/gita-static";
 export const metadata: Metadata = {
   title: "Bhagavad Gita",
   description:
-    "Explore all 18 chapters of the Bhagavad Gita — a calm, chapter-by-chapter reading path.",
+    "Explore all 18 chapters of the Bhagavad Gita - a calm, chapter-by-chapter reading path.",
   alternates: {
     canonical: "/bhagavad-gita",
   },

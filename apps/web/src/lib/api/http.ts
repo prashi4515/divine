@@ -29,6 +29,11 @@ export function getPublicApiBaseUrl(): string {
 
 export type HttpMethod = "GET" | "POST" | "PATCH" | "PUT" | "DELETE";
 
+/** Default client timeout — keep UI snappy when API/Neon is unreachable. */
+const DEFAULT_TIMEOUT_MS = 8_000;
+/** Auth bootstrap (/me, refresh) should fail fast on public pages. */
+export const AUTH_TIMEOUT_MS = 3_000;
+
 export type HttpOptions = {
   method?: HttpMethod;
   body?: unknown;
@@ -40,7 +45,33 @@ export type HttpOptions = {
   headers?: Record<string, string>;
   /** Skip the 401→refresh→retry path (used by refresh itself). */
   skipRefresh?: boolean;
+  /** Abort after this many ms (default 8s). Pass 0 to disable. */
+  timeoutMs?: number;
 };
+
+function combineAbortSignals(
+  ...signals: Array<AbortSignal | undefined>
+): AbortSignal | undefined {
+  const active = signals.filter((s): s is AbortSignal => Boolean(s));
+  if (active.length === 0) return undefined;
+  if (active.length === 1) return active[0];
+  if (typeof AbortSignal.any === "function") {
+    return AbortSignal.any(active);
+  }
+  const controller = new AbortController();
+  for (const signal of active) {
+    if (signal.aborted) {
+      controller.abort(signal.reason);
+      return controller.signal;
+    }
+    signal.addEventListener(
+      "abort",
+      () => controller.abort(signal.reason),
+      { once: true },
+    );
+  }
+  return controller.signal;
+}
 
 function buildUrl(path: string, query?: HttpOptions["query"]): string {
   const base = getPublicApiBaseUrl();
@@ -70,6 +101,7 @@ async function refreshAccessToken(): Promise<boolean> {
         headers,
         body: JSON.stringify(storedRefresh ? { refreshToken: storedRefresh } : {}),
         credentials: "include",
+        signal: AbortSignal.timeout(AUTH_TIMEOUT_MS),
       });
       if (!response.ok) {
         clearTokens();
@@ -107,6 +139,7 @@ export async function http<T>(
     query,
     headers: extraHeaders,
     skipRefresh = false,
+    timeoutMs = DEFAULT_TIMEOUT_MS,
   } = options;
 
   const headers: Record<string, string> = {
@@ -119,13 +152,19 @@ export async function http<T>(
     if (token) headers.Authorization = `Bearer ${token}`;
   }
 
+  const timeoutSignal =
+    timeoutMs > 0 && typeof AbortSignal.timeout === "function"
+      ? AbortSignal.timeout(timeoutMs)
+      : undefined;
+  const fetchSignal = combineAbortSignals(signal, timeoutSignal);
+
   let response: Response;
   try {
     response = await fetch(buildUrl(path, query), {
       method,
       headers,
       body: body === undefined ? undefined : JSON.stringify(body),
-      signal,
+      signal: fetchSignal,
       credentials: "include",
     });
   } catch (error: unknown) {

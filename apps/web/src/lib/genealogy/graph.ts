@@ -4,14 +4,17 @@ import type {
   Person,
   RelationshipType,
 } from "@/lib/genealogy/types";
+import {
+  isParentToChildType,
+  type RelationType,
+} from "@/lib/knowledge/types";
 
 /**
  * Graph builder — turns a module's person set into React-Flow nodes and edges
  * with a hierarchical layout suitable for family trees.
  *
- * Layout algorithm: simple deterministic BFS from the module root, packing
- * generations left-to-right and centring siblings under their parents.
- * Pure and framework-free; runs on server (SSG) or client (dynamic import).
+ * Parent/child classification uses the shared relationship-engine kinship
+ * helpers (same rules as the Knowledge Graph). Pure and framework-free.
  */
 
 export type GraphNode = {
@@ -41,18 +44,11 @@ export type GraphEdge = {
   confidence: ConfidenceLevel;
 };
 
-const PARENT_TYPES: readonly RelationshipType[] = [
-  "son",
-  "daughter",
-  "adoptive-son",
-  "adoptive-daughter",
-  "descendant",
-];
 const SPOUSE_TYPES: readonly RelationshipType[] = ["spouse", "consort"];
 const SIBLING_TYPES: readonly RelationshipType[] = ["brother", "sister"];
 
 function edgeKind(type: RelationshipType): GraphEdgeKind {
-  if (PARENT_TYPES.includes(type)) return "parent";
+  if (isParentToChildType(type as RelationType)) return "parent";
   if (SPOUSE_TYPES.includes(type)) return "spouse";
   if (SIBLING_TYPES.includes(type)) return "sibling";
   return "other";
@@ -204,15 +200,17 @@ export function buildModuleGraph(
 }
 
 /**
- * BFS over parent relationships in the given person set, starting from
- * `personId` and following edges backwards (child → parent) to produce a
- * lineage highlight.
+ * BFS over parent relationships — child → parent lineage highlight.
+ * Uses the same parent→child type classification as the relationship engine.
  */
 export function computeLineage(
   personId: string,
   people: readonly Person[],
   moduleIds: ReadonlySet<string>,
-): { personIds: Set<string>; edgeKey: (source: string, target: string) => string } {
+): {
+  personIds: Set<string>;
+  edgeKey: (source: string, target: string) => string;
+} {
   const childToParents = new Map<string, string[]>();
   for (const person of people) {
     if (!moduleIds.has(person.id)) continue;

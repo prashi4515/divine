@@ -1,0 +1,4492 @@
+{
+  "schemaVersion": 1,
+  "entities": [
+    {
+      "id": "ashrama.kanva",
+      "slug": "kanva-ashrama",
+      "kind": "ashrama",
+      "name": "Kaṇva's āśrama",
+      "englishName": "Kanva ashrama",
+      "iastName": "Kaṇvāśrama",
+      "summary": "Āśrama linked to Śakuntalā traditions in epic lore.",
+      "description": "Āśrama linked to Śakuntalā traditions in epic lore. Placed approximately for educational atlas use.",
+      "primaryScripture": "Mahābhārata",
+      "status": "published",
+      "schemaVersion": 1,
+      "era": "dvapara-yuga",
+      "variantTraditions": [],
+      "aliases": [],
+      "scriptureSources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Sabhā Parva"
+        },
+        {
+          "work": "Mahābhārata",
+          "section": "Vana Parva"
+        }
+      ],
+      "tags": [
+        "atlas",
+        "mahabharata"
+      ],
+      "categories": [
+        "ashrama"
+      ],
+      "importance": 3,
+      "seo": {
+        "title": "Kaṇva's āśrama"
+      },
+      "atlas": {
+        "latitude": 27.5,
+        "longitude": 78,
+        "modernLocation": "Upper Gangetic plain (traditional)",
+        "atlasCategory": "ashrama"
+      }
+    },
+    {
+      "id": "ashrama.vyasa",
+      "slug": "vyasa-ashrama",
+      "kind": "ashrama",
+      "name": "Vyāsa's āśrama",
+      "englishName": "Vyasa ashrama",
+      "iastName": "Vyāsāśrama",
+      "summary": "Traditional seat of Vyāsa in the north.",
+      "description": "Traditional seat of Vyāsa in the north. Placed approximately for educational atlas use.",
+      "primaryScripture": "Mahābhārata",
+      "status": "published",
+      "schemaVersion": 1,
+      "era": "dvapara-yuga",
+      "variantTraditions": [],
+      "aliases": [],
+      "scriptureSources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Ādi Parva"
+        }
+      ],
+      "tags": [
+        "atlas",
+        "mahabharata"
+      ],
+      "categories": [
+        "ashrama"
+      ],
+      "importance": 4,
+      "seo": {
+        "title": "Vyāsa's āśrama"
+      },
+      "atlas": {
+        "latitude": 30.7,
+        "longitude": 78.5,
+        "modernLocation": "Himalayan foothills (traditional)",
+        "atlasCategory": "ashrama"
+      }
+    },
+    {
+      "id": "battlefield.jayadratha-vadha",
+      "slug": "sindhu-battlefield",
+      "kind": "battlefield",
+      "name": "Sindhu battlefield",
+      "englishName": "Sindhu field",
+      "iastName": "Sindhu-yuddha",
+      "summary": "Theatre of Jayadratha's wars with the Pāṇḍavas.",
+      "description": "Theatre of Jayadratha's wars with the Pāṇḍavas. Placed approximately for educational atlas use.",
+      "primaryScripture": "Mahābhārata",
+      "status": "published",
+      "schemaVersion": 1,
+      "era": "dvapara-yuga",
+      "variantTraditions": [],
+      "aliases": [],
+      "scriptureSources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Vana Parva"
+        }
+      ],
+      "tags": [
+        "atlas",
+        "mahabharata"
+      ],
+      "categories": [
+        "battlefield"
+      ],
+      "importance": 3,
+      "seo": {
+        "title": "Sindhu battlefield"
+      },
+      "atlas": {
+        "latitude": 27,
+        "longitude": 69,
+        "modernLocation": "Indus fringe (traditional)",
+        "kingdom": "Sindhu",
+        "atlasCategory": "battlefield"
+      }
+    },
+    {
+      "id": "city.ahicchatra",
+      "slug": "ahicchatra",
+      "kind": "city",
+      "name": "Ahicchatra",
+      "englishName": "Ahicchatra",
+      "iastName": "Ahicchatra",
+      "summary": "Northern Pañcāla capital.",
+      "description": "Northern Pañcāla capital. Placed approximately for educational atlas use.",
+      "primaryScripture": "Mahābhārata",
+      "status": "published",
+      "schemaVersion": 1,
+      "era": "dvapara-yuga",
+      "variantTraditions": [],
+      "aliases": [],
+      "scriptureSources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Ādi Parva"
+        }
+      ],
+      "tags": [
+        "atlas",
+        "mahabharata",
+        "capital"
+      ],
+      "categories": [
+        "city"
+      ],
+      "importance": 4,
+      "seo": {
+        "title": "Ahicchatra"
+      },
+      "atlas": {
+        "latitude": 28.37,
+        "longitude": 79.12,
+        "modernLocation": "Ramnagar / Bareilly region, UP",
+        "kingdom": "Pañcāla",
+        "atlasCategory": "city"
+      }
+    },
+    {
+      "id": "city.ayodhya",
+      "slug": "ayodhya",
+      "kind": "city",
+      "name": "Ayodhyā",
+      "englishName": "Ayodhya",
+      "iastName": "Ayodhyā",
+      "summary": "Capital of the Ikṣvāku / Raghu kings; city of Rāma.",
+      "description": "Ayodhyā is the royal city of Daśaratha and Rāma in the Valmīki Rāmāyaṇa.",
+      "primaryScripture": "Rāmāyaṇa",
+      "status": "published",
+      "aliases": [
+        "Saketa"
+      ],
+      "scriptureSources": [
+        {
+          "work": "Rāmāyaṇa",
+          "section": "Bāla Kāṇḍa"
+        }
+      ],
+      "tags": [
+        "raghu",
+        "rama"
+      ],
+      "categories": [
+        "city"
+      ],
+      "importance": 5,
+      "seo": {
+        "title": "Ayodhyā"
+      },
+      "schemaVersion": 1,
+      "era": "treta-yuga",
+      "variantTraditions": []
+    },
+    {
+      "id": "city.champa",
+      "slug": "champa",
+      "kind": "city",
+      "name": "Campā",
+      "englishName": "Champa",
+      "iastName": "Campā",
+      "summary": "Capital of Aṅga.",
+      "description": "Campā is the Aṅga capital on the Gaṅgā.",
+      "primaryScripture": "Mahābhārata",
+      "status": "published",
+      "schemaVersion": 1,
+      "era": "dvapara-yuga",
+      "variantTraditions": [],
+      "aliases": [],
+      "scriptureSources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Vana Parva"
+        }
+      ],
+      "tags": [
+        "capital"
+      ],
+      "categories": [
+        "city"
+      ],
+      "importance": 3,
+      "seo": {
+        "title": "Campā"
+      },
+      "atlas": {
+        "latitude": 25.25,
+        "longitude": 87,
+        "modernLocation": "Near Bhagalpur, Bihar",
+        "kingdom": "Aṅga",
+        "atlasCategory": "city"
+      }
+    },
+    {
+      "id": "city.dvaraka",
+      "slug": "dwaraka",
+      "kind": "city",
+      "name": "Dvārakā",
+      "englishName": "Dwaraka",
+      "iastName": "Dvārakā",
+      "summary": "Ocean capital of Kṛṣṇa and the Yādavas.",
+      "description": "Dvārakā is the fortified island city Kṛṣṇa establishes after leaving Mathurā; it is the Yadu capital until its submergence at the close of the Dvāpara age.",
+      "primaryScripture": "Bhāgavata Purāṇa",
+      "status": "published",
+      "schemaVersion": 1,
+      "era": "dvapara-yuga",
+      "variantTraditions": [],
+      "aliases": [
+        "Dvaravati",
+        "Dwaraka",
+        "Kushasthali"
+      ],
+      "scriptureSources": [
+        {
+          "work": "Bhāgavata Purāṇa",
+          "section": "Skandha 10"
+        },
+        {
+          "work": "Mahābhārata",
+          "section": "Mausala Parva"
+        },
+        {
+          "work": "Harivaṃśa"
+        }
+      ],
+      "tags": [
+        "yadu",
+        "krishna",
+        "capital"
+      ],
+      "categories": [
+        "city",
+        "pilgrimage"
+      ],
+      "importance": 5,
+      "seo": {
+        "title": "Dvārakā"
+      },
+      "atlas": {
+        "latitude": 22.24,
+        "longitude": 68.97,
+        "modernLocation": "Gujarat",
+        "kingdom": "Yadu",
+        "scripturalSignificance": "Kṛṣṇa's capital after Mathurā; later submerged in the Mausala narrative.",
+        "atlasCategory": "city"
+      }
+    },
+    {
+      "id": "city.ekachakra",
+      "slug": "ekachakra",
+      "kind": "city",
+      "name": "Ekacakra",
+      "englishName": "Ekachakra",
+      "iastName": "Ekacakra",
+      "summary": "Where Bhīma slays Baka.",
+      "description": "Ekacakra is where Bhīma destroys the asura Baka.",
+      "primaryScripture": "Mahābhārata",
+      "status": "published",
+      "schemaVersion": 1,
+      "era": "dvapara-yuga",
+      "variantTraditions": [],
+      "aliases": [],
+      "scriptureSources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Ādi Parva"
+        }
+      ],
+      "tags": [
+        "bhima"
+      ],
+      "categories": [
+        "city"
+      ],
+      "importance": 3,
+      "seo": {
+        "title": "Ekacakra"
+      },
+      "atlas": {
+        "latitude": 26.5,
+        "longitude": 82,
+        "modernLocation": "Eastern UP (traditional)",
+        "atlasCategory": "city"
+      }
+    },
+    {
+      "id": "city.gaya",
+      "slug": "gaya",
+      "kind": "city",
+      "name": "Gayā",
+      "englishName": "Gaya",
+      "iastName": "Gayā",
+      "summary": "Sacred city of Magadha pilgrimage.",
+      "description": "Sacred city of Magadha pilgrimage. Placed approximately for educational atlas use.",
+      "primaryScripture": "Mahābhārata",
+      "status": "published",
+      "schemaVersion": 1,
+      "era": "dvapara-yuga",
+      "variantTraditions": [],
+      "aliases": [],
+      "scriptureSources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Vana Parva"
+        }
+      ],
+      "tags": [
+        "atlas",
+        "mahabharata",
+        "tirtha"
+      ],
+      "categories": [
+        "city"
+      ],
+      "importance": 4,
+      "seo": {
+        "title": "Gayā"
+      },
+      "atlas": {
+        "latitude": 24.78,
+        "longitude": 85,
+        "modernLocation": "Gaya, Bihar",
+        "kingdom": "Magadha",
+        "atlasCategory": "pilgrimage"
+      }
+    },
+    {
+      "id": "city.hastinapura",
+      "slug": "hastinapura",
+      "kind": "city",
+      "name": "Hastināpura",
+      "englishName": "Hastinapura",
+      "iastName": "Hastināpura",
+      "summary": "Capital of the Kuru kingdom in the Mahābhārata.",
+      "description": "Hastināpura is the seat of the Kuru kings — Śaṃtanu, Dhṛtarāṣṭra and the court from which the epic war narrative unfolds.",
+      "primaryScripture": "Mahābhārata",
+      "status": "published",
+      "schemaVersion": 1,
+      "era": "dvapara-yuga",
+      "variantTraditions": [],
+      "aliases": [
+        "Hastinapur",
+        "City of the Elephants"
+      ],
+      "scriptureSources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Ādi Parva"
+        }
+      ],
+      "tags": [
+        "kuru",
+        "capital"
+      ],
+      "categories": [
+        "city"
+      ],
+      "importance": 5,
+      "seo": {
+        "title": "Hastināpura — Atlas",
+        "description": "Kuru capital on the Mahābhārata Atlas."
+      },
+      "atlas": {
+        "latitude": 29.16,
+        "longitude": 78.02,
+        "modernLocation": "Near Meerut, Uttar Pradesh",
+        "kingdom": "Kuru",
+        "scripturalSignificance": "Capital of the Kurus; court of Dhṛtarāṣṭra and seat of the epic's political drama.",
+        "atlasCategory": "city"
+      }
+    },
+    {
+      "id": "city.indraprastha",
+      "slug": "indraprastha",
+      "kind": "city",
+      "name": "Indraprastha",
+      "englishName": "Indraprastha",
+      "iastName": "Indraprastha",
+      "summary": "Capital raised by the Pāṇḍavas on the Khāṇḍava tract.",
+      "description": "Indraprastha is the splendid city the Pāṇḍavas build after receiving half the kingdom; Maya constructs its hall, and Yudhiṣṭhira's Rājasūya is celebrated here.",
+      "primaryScripture": "Mahābhārata",
+      "status": "published",
+      "schemaVersion": 1,
+      "era": "dvapara-yuga",
+      "variantTraditions": [],
+      "aliases": [
+        "Khandavaprastha",
+        "City of Indra"
+      ],
+      "scriptureSources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Ādi Parva"
+        },
+        {
+          "work": "Mahābhārata",
+          "section": "Sabhā Parva"
+        }
+      ],
+      "tags": [
+        "pandava",
+        "capital"
+      ],
+      "categories": [
+        "city"
+      ],
+      "importance": 5,
+      "seo": {
+        "title": "Indraprastha"
+      },
+      "atlas": {
+        "latitude": 28.61,
+        "longitude": 77.21,
+        "modernLocation": "Delhi",
+        "kingdom": "Kuru (Pāṇḍava)",
+        "scripturalSignificance": "Pāṇḍava capital; Maya's hall and the Rājasūya of Yudhiṣṭhira.",
+        "atlasCategory": "city"
+      }
+    },
+    {
+      "id": "city.kampilya",
+      "slug": "kampilya",
+      "kind": "city",
+      "name": "Kāmpilya",
+      "englishName": "Kampilya",
+      "iastName": "Kāmpilya",
+      "summary": "Southern Pañcāla capital; Draupadī's city.",
+      "description": "Southern Pañcāla capital; Draupadī's city. Placed approximately for educational atlas use.",
+      "primaryScripture": "Mahābhārata",
+      "status": "published",
+      "schemaVersion": 1,
+      "era": "dvapara-yuga",
+      "variantTraditions": [],
+      "aliases": [],
+      "scriptureSources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Ādi Parva"
+        }
+      ],
+      "tags": [
+        "atlas",
+        "mahabharata",
+        "capital",
+        "draupadi"
+      ],
+      "categories": [
+        "city"
+      ],
+      "importance": 5,
+      "seo": {
+        "title": "Kāmpilya"
+      },
+      "atlas": {
+        "latitude": 27.5,
+        "longitude": 79.4,
+        "modernLocation": "Farrukhabad region, UP (traditional)",
+        "kingdom": "Pañcāla",
+        "atlasCategory": "city"
+      }
+    },
+    {
+      "id": "city.kausambi",
+      "slug": "kausambi",
+      "kind": "city",
+      "name": "Kauśāmbī",
+      "englishName": "Kausambi",
+      "iastName": "Kauśāmbī",
+      "summary": "Capital of Vatsa.",
+      "description": "Kauśāmbī is the Vatsa capital on the Yamunā.",
+      "primaryScripture": "Mahābhārata",
+      "status": "published",
+      "schemaVersion": 1,
+      "era": "dvapara-yuga",
+      "variantTraditions": [],
+      "aliases": [],
+      "scriptureSources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Sabhā Parva"
+        }
+      ],
+      "tags": [
+        "capital"
+      ],
+      "categories": [
+        "city"
+      ],
+      "importance": 4,
+      "seo": {
+        "title": "Kauśāmbī"
+      },
+      "atlas": {
+        "latitude": 25.34,
+        "longitude": 81.39,
+        "modernLocation": "Near Prayagraj, UP",
+        "kingdom": "Vatsa",
+        "atlasCategory": "city"
+      }
+    },
+    {
+      "id": "city.kundinapura",
+      "slug": "kundinapura",
+      "kind": "city",
+      "name": "Kuṇḍinapura",
+      "englishName": "Kundinapura",
+      "iastName": "Kuṇḍinapura",
+      "summary": "Vidarbha capital; Rukmiṇī's city.",
+      "description": "Kuṇḍinapura is where Kṛṣṇa wins Rukmiṇī.",
+      "primaryScripture": "Bhāgavata Purāṇa",
+      "status": "published",
+      "schemaVersion": 1,
+      "era": "dvapara-yuga",
+      "variantTraditions": [],
+      "aliases": [],
+      "scriptureSources": [
+        {
+          "work": "Bhāgavata Purāṇa",
+          "section": "Skandha 10"
+        }
+      ],
+      "tags": [
+        "rukmini"
+      ],
+      "categories": [
+        "city"
+      ],
+      "importance": 3,
+      "seo": {
+        "title": "Kuṇḍinapura"
+      },
+      "atlas": {
+        "latitude": 20.7,
+        "longitude": 77,
+        "modernLocation": "Vidarbha (traditional)",
+        "kingdom": "Vidarbha",
+        "atlasCategory": "city"
+      }
+    },
+    {
+      "id": "city.mahishmati",
+      "slug": "mahishmati",
+      "kind": "city",
+      "name": "Māhiṣmatī",
+      "englishName": "Mahishmati",
+      "iastName": "Māhiṣmatī",
+      "summary": "Narmadā city of Kartavīrya / Haihaya fame.",
+      "description": "Narmadā city of Kartavīrya / Haihaya fame. Placed approximately for educational atlas use.",
+      "primaryScripture": "Mahābhārata",
+      "status": "published",
+      "schemaVersion": 1,
+      "era": "dvapara-yuga",
+      "variantTraditions": [],
+      "aliases": [],
+      "scriptureSources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Vana Parva"
+        }
+      ],
+      "tags": [
+        "atlas",
+        "mahabharata",
+        "capital"
+      ],
+      "categories": [
+        "city"
+      ],
+      "importance": 4,
+      "seo": {
+        "title": "Māhiṣmatī"
+      },
+      "atlas": {
+        "latitude": 22.17,
+        "longitude": 75.6,
+        "modernLocation": "Maheshwar region, MP (traditional)",
+        "kingdom": "Avanti",
+        "atlasCategory": "city"
+      }
+    },
+    {
+      "id": "city.mathura",
+      "slug": "mathura",
+      "kind": "city",
+      "name": "Mathurā",
+      "englishName": "Mathura",
+      "iastName": "Mathurā",
+      "summary": "City of Kaṃsa and early seat of Kṛṣṇa's deeds.",
+      "description": "Mathurā on the Yamunā is where Vasudeva brings the infant Kṛṣṇa past Kaṃsa's prison, and where Kṛṣṇa later slays Kaṃsa before founding Dvārakā.",
+      "primaryScripture": "Bhāgavata Purāṇa",
+      "status": "published",
+      "schemaVersion": 1,
+      "era": "dvapara-yuga",
+      "variantTraditions": [],
+      "aliases": [
+        "Madhura",
+        "Mathura"
+      ],
+      "scriptureSources": [
+        {
+          "work": "Bhāgavata Purāṇa",
+          "section": "Skandha 10"
+        },
+        {
+          "work": "Harivaṃśa"
+        }
+      ],
+      "tags": [
+        "yadu",
+        "krishna"
+      ],
+      "categories": [
+        "city",
+        "pilgrimage"
+      ],
+      "importance": 5,
+      "seo": {
+        "title": "Mathurā"
+      },
+      "atlas": {
+        "latitude": 27.49,
+        "longitude": 77.67,
+        "modernLocation": "Uttar Pradesh",
+        "kingdom": "Śūrasena / Yadu",
+        "scripturalSignificance": "Kaṃsa's capital; scene of Kṛṣṇa's childhood return and Kaṃsa-vadha.",
+        "atlasCategory": "city"
+      }
+    },
+    {
+      "id": "city.mithila",
+      "slug": "mithila",
+      "kind": "city",
+      "name": "Mithilā",
+      "englishName": "Mithila",
+      "iastName": "Mithilā",
+      "summary": "Capital of Videha.",
+      "description": "Capital of Videha. Placed approximately for educational atlas use.",
+      "primaryScripture": "Mahābhārata",
+      "status": "published",
+      "schemaVersion": 1,
+      "era": "dvapara-yuga",
+      "variantTraditions": [],
+      "aliases": [],
+      "scriptureSources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Sabhā Parva"
+        },
+        {
+          "work": "Mahābhārata",
+          "section": "Vana Parva"
+        }
+      ],
+      "tags": [
+        "atlas",
+        "mahabharata",
+        "capital"
+      ],
+      "categories": [
+        "city"
+      ],
+      "importance": 4,
+      "seo": {
+        "title": "Mithilā"
+      },
+      "atlas": {
+        "latitude": 26.6,
+        "longitude": 85.9,
+        "modernLocation": "Janakpur / north Bihar (traditional)",
+        "kingdom": "Videha",
+        "atlasCategory": "city"
+      }
+    },
+    {
+      "id": "city.pataliputra",
+      "slug": "pataliputra",
+      "kind": "city",
+      "name": "Pāṭaliputra",
+      "englishName": "Pataliputra",
+      "iastName": "Pāṭaliputra",
+      "summary": "Later Magadha capital.",
+      "description": "Pāṭaliputra at the Gaṅgā–Śoṇa confluence.",
+      "primaryScripture": "Mahābhārata",
+      "status": "published",
+      "schemaVersion": 1,
+      "era": "dvapara-yuga",
+      "variantTraditions": [],
+      "aliases": [
+        "Patna"
+      ],
+      "scriptureSources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Sabhā Parva"
+        }
+      ],
+      "tags": [
+        "capital"
+      ],
+      "categories": [
+        "city"
+      ],
+      "importance": 4,
+      "seo": {
+        "title": "Pāṭaliputra"
+      },
+      "atlas": {
+        "latitude": 25.6,
+        "longitude": 85.1,
+        "modernLocation": "Patna, Bihar",
+        "kingdom": "Magadha",
+        "atlasCategory": "city"
+      }
+    },
+    {
+      "id": "city.potana",
+      "slug": "potana",
+      "kind": "city",
+      "name": "Potana",
+      "englishName": "Potana",
+      "iastName": "Potana",
+      "summary": "Aśmaka capital on the Godāvarī.",
+      "description": "Aśmaka capital on the Godāvarī. Placed approximately for educational atlas use.",
+      "primaryScripture": "Mahābhārata",
+      "status": "published",
+      "schemaVersion": 1,
+      "era": "dvapara-yuga",
+      "variantTraditions": [],
+      "aliases": [],
+      "scriptureSources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Sabhā Parva"
+        },
+        {
+          "work": "Mahābhārata",
+          "section": "Vana Parva"
+        }
+      ],
+      "tags": [
+        "atlas",
+        "mahabharata",
+        "capital"
+      ],
+      "categories": [
+        "city"
+      ],
+      "importance": 3,
+      "seo": {
+        "title": "Potana"
+      },
+      "atlas": {
+        "latitude": 18.7,
+        "longitude": 77.5,
+        "modernLocation": "Godavari valley (traditional)",
+        "kingdom": "Aśmaka",
+        "atlasCategory": "city"
+      }
+    },
+    {
+      "id": "city.rajagriha",
+      "slug": "rajagriha",
+      "kind": "city",
+      "name": "Rājagṛha",
+      "englishName": "Rajagriha",
+      "iastName": "Rājagṛha",
+      "summary": "Hill capital of Magadha.",
+      "description": "Rājagṛha is Jarāsandha's fortified capital.",
+      "primaryScripture": "Mahābhārata",
+      "status": "published",
+      "schemaVersion": 1,
+      "era": "dvapara-yuga",
+      "variantTraditions": [],
+      "aliases": [
+        "Rajgir",
+        "Girivraja"
+      ],
+      "scriptureSources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Sabhā Parva"
+        }
+      ],
+      "tags": [
+        "capital"
+      ],
+      "categories": [
+        "city"
+      ],
+      "importance": 5,
+      "seo": {
+        "title": "Rājagṛha"
+      },
+      "atlas": {
+        "latitude": 25.03,
+        "longitude": 85.42,
+        "modernLocation": "Rajgir, Bihar",
+        "kingdom": "Magadha",
+        "atlasCategory": "city"
+      }
+    },
+    {
+      "id": "city.sakala",
+      "slug": "sakala",
+      "kind": "city",
+      "name": "Śākala",
+      "englishName": "Sakala",
+      "iastName": "Śākala",
+      "summary": "Madra capital in epic geography.",
+      "description": "Madra capital in epic geography. Placed approximately for educational atlas use.",
+      "primaryScripture": "Mahābhārata",
+      "status": "published",
+      "schemaVersion": 1,
+      "era": "dvapara-yuga",
+      "variantTraditions": [],
+      "aliases": [],
+      "scriptureSources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Sabhā Parva"
+        },
+        {
+          "work": "Mahābhārata",
+          "section": "Vana Parva"
+        }
+      ],
+      "tags": [
+        "atlas",
+        "mahabharata",
+        "capital"
+      ],
+      "categories": [
+        "city"
+      ],
+      "importance": 3,
+      "seo": {
+        "title": "Śākala"
+      },
+      "atlas": {
+        "latitude": 32.5,
+        "longitude": 74.5,
+        "modernLocation": "Sialkot region (traditional)",
+        "kingdom": "Madra",
+        "atlasCategory": "city"
+      }
+    },
+    {
+      "id": "city.shravasti",
+      "slug": "shravasti",
+      "kind": "city",
+      "name": "Śrāvastī",
+      "englishName": "Shravasti",
+      "iastName": "Śrāvastī",
+      "summary": "Kosala capital in many epic lists.",
+      "description": "Kosala capital in many epic lists. Placed approximately for educational atlas use.",
+      "primaryScripture": "Mahābhārata",
+      "status": "published",
+      "schemaVersion": 1,
+      "era": "dvapara-yuga",
+      "variantTraditions": [],
+      "aliases": [],
+      "scriptureSources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Sabhā Parva"
+        },
+        {
+          "work": "Mahābhārata",
+          "section": "Vana Parva"
+        }
+      ],
+      "tags": [
+        "atlas",
+        "mahabharata",
+        "capital"
+      ],
+      "categories": [
+        "city"
+      ],
+      "importance": 4,
+      "seo": {
+        "title": "Śrāvastī"
+      },
+      "atlas": {
+        "latitude": 27.51,
+        "longitude": 82.05,
+        "modernLocation": "Shravasti, Uttar Pradesh",
+        "kingdom": "Kosala",
+        "atlasCategory": "city"
+      }
+    },
+    {
+      "id": "city.suktimati",
+      "slug": "suktimati",
+      "kind": "city",
+      "name": "Śuktimatī",
+      "englishName": "Suktimati",
+      "iastName": "Śuktimatī",
+      "summary": "Capital of Cedi.",
+      "description": "Capital of Cedi. Placed approximately for educational atlas use.",
+      "primaryScripture": "Mahābhārata",
+      "status": "published",
+      "schemaVersion": 1,
+      "era": "dvapara-yuga",
+      "variantTraditions": [],
+      "aliases": [],
+      "scriptureSources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Sabhā Parva"
+        },
+        {
+          "work": "Mahābhārata",
+          "section": "Vana Parva"
+        }
+      ],
+      "tags": [
+        "atlas",
+        "mahabharata",
+        "capital"
+      ],
+      "categories": [
+        "city"
+      ],
+      "importance": 3,
+      "seo": {
+        "title": "Śuktimatī"
+      },
+      "atlas": {
+        "latitude": 24,
+        "longitude": 80.5,
+        "modernLocation": "Bundelkhand (Ken river, traditional)",
+        "kingdom": "Cedi",
+        "atlasCategory": "city"
+      }
+    },
+    {
+      "id": "city.taxila",
+      "slug": "taxila",
+      "kind": "city",
+      "name": "Takṣaśilā",
+      "englishName": "Taxila",
+      "iastName": "Takṣaśilā",
+      "summary": "Capital of Gāndhāra.",
+      "description": "Takṣaśilā is the capital of Gāndhāra, homeland of Gāndhārī and Śakuni.",
+      "primaryScripture": "Mahābhārata",
+      "status": "published",
+      "schemaVersion": 1,
+      "era": "dvapara-yuga",
+      "variantTraditions": [],
+      "aliases": [
+        "Takshashila"
+      ],
+      "scriptureSources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Ādi Parva"
+        }
+      ],
+      "tags": [
+        "capital"
+      ],
+      "categories": [
+        "city"
+      ],
+      "importance": 4,
+      "seo": {
+        "title": "Takṣaśilā"
+      },
+      "atlas": {
+        "latitude": 33.74,
+        "longitude": 72.78,
+        "modernLocation": "Taxila, Pakistan",
+        "kingdom": "Gāndhāra",
+        "atlasCategory": "city"
+      }
+    },
+    {
+      "id": "city.ujjayini",
+      "slug": "ujjayini",
+      "kind": "city",
+      "name": "Ujjayinī",
+      "englishName": "Ujjain",
+      "iastName": "Ujjayinī",
+      "summary": "Capital of Avanti.",
+      "description": "Ujjayinī is the great city of Avanti on the Śiprā.",
+      "primaryScripture": "Mahābhārata",
+      "status": "published",
+      "schemaVersion": 1,
+      "era": "dvapara-yuga",
+      "variantTraditions": [],
+      "aliases": [
+        "Ujjain"
+      ],
+      "scriptureSources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Vana Parva"
+        }
+      ],
+      "tags": [
+        "capital",
+        "pilgrimage"
+      ],
+      "categories": [
+        "city",
+        "pilgrimage"
+      ],
+      "importance": 5,
+      "seo": {
+        "title": "Ujjayinī"
+      },
+      "atlas": {
+        "latitude": 23.18,
+        "longitude": 75.78,
+        "modernLocation": "Ujjain, Madhya Pradesh",
+        "kingdom": "Avanti",
+        "atlasCategory": "city"
+      }
+    },
+    {
+      "id": "city.upaplavya",
+      "slug": "upaplavya",
+      "kind": "city",
+      "name": "Upaplavya",
+      "englishName": "Upaplavya",
+      "iastName": "Upaplavya",
+      "summary": "Matsya base before the war.",
+      "description": "Upaplavya is the Pāṇḍava seat of embassies before Kurukṣetra.",
+      "primaryScripture": "Mahābhārata",
+      "status": "published",
+      "schemaVersion": 1,
+      "era": "dvapara-yuga",
+      "variantTraditions": [],
+      "aliases": [],
+      "scriptureSources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Udyoga Parva"
+        }
+      ],
+      "tags": [
+        "pandava"
+      ],
+      "categories": [
+        "city"
+      ],
+      "importance": 4,
+      "seo": {
+        "title": "Upaplavya"
+      },
+      "atlas": {
+        "latitude": 26.7,
+        "longitude": 76,
+        "modernLocation": "Matsya / Rajasthan (traditional)",
+        "kingdom": "Matsya",
+        "atlasCategory": "city"
+      }
+    },
+    {
+      "id": "city.vaishali",
+      "slug": "vaishali",
+      "kind": "city",
+      "name": "Vaiśālī",
+      "englishName": "Vaishali",
+      "iastName": "Vaiśālī",
+      "summary": "Great city of the Vṛji confederacy.",
+      "description": "Great city of the Vṛji confederacy. Placed approximately for educational atlas use.",
+      "primaryScripture": "Mahābhārata",
+      "status": "published",
+      "schemaVersion": 1,
+      "era": "dvapara-yuga",
+      "variantTraditions": [],
+      "aliases": [],
+      "scriptureSources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Sabhā Parva"
+        },
+        {
+          "work": "Mahābhārata",
+          "section": "Vana Parva"
+        }
+      ],
+      "tags": [
+        "atlas",
+        "mahabharata",
+        "capital"
+      ],
+      "categories": [
+        "city"
+      ],
+      "importance": 4,
+      "seo": {
+        "title": "Vaiśālī"
+      },
+      "atlas": {
+        "latitude": 25.99,
+        "longitude": 85.13,
+        "modernLocation": "Vaishali, Bihar",
+        "kingdom": "Vṛji",
+        "atlasCategory": "city"
+      }
+    },
+    {
+      "id": "city.varanavata",
+      "slug": "varanavata",
+      "kind": "city",
+      "name": "Vāraṇāvata",
+      "englishName": "Varanavata",
+      "iastName": "Vāraṇāvata",
+      "summary": "Town of the lacquer-house plot.",
+      "description": "At Vāraṇāvata the Pāṇḍavas are nearly burned in the house of lac.",
+      "primaryScripture": "Mahābhārata",
+      "status": "published",
+      "schemaVersion": 1,
+      "era": "dvapara-yuga",
+      "variantTraditions": [],
+      "aliases": [],
+      "scriptureSources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Ādi Parva"
+        }
+      ],
+      "tags": [
+        "pandava"
+      ],
+      "categories": [
+        "city"
+      ],
+      "importance": 4,
+      "seo": {
+        "title": "Vāraṇāvata"
+      },
+      "atlas": {
+        "latitude": 29.6,
+        "longitude": 77.6,
+        "modernLocation": "Near Meerut region (traditional)",
+        "kingdom": "Kuru",
+        "atlasCategory": "city"
+      }
+    },
+    {
+      "id": "city.viratanagara",
+      "slug": "viratanagara",
+      "kind": "city",
+      "name": "Virāṭanagara",
+      "englishName": "Viratanagara",
+      "iastName": "Virāṭanagara",
+      "summary": "Matsya capital of the thirteenth year.",
+      "description": "Matsya capital of the thirteenth year. Placed approximately for educational atlas use.",
+      "primaryScripture": "Mahābhārata",
+      "status": "published",
+      "schemaVersion": 1,
+      "era": "dvapara-yuga",
+      "variantTraditions": [],
+      "aliases": [],
+      "scriptureSources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Virāṭa Parva"
+        }
+      ],
+      "tags": [
+        "atlas",
+        "mahabharata",
+        "capital",
+        "pandava"
+      ],
+      "categories": [
+        "city"
+      ],
+      "importance": 5,
+      "seo": {
+        "title": "Virāṭanagara"
+      },
+      "atlas": {
+        "latitude": 27,
+        "longitude": 75.8,
+        "modernLocation": "Jaipur / Bairat region (traditional)",
+        "kingdom": "Matsya",
+        "atlasCategory": "city"
+      }
+    },
+    {
+      "id": "forest.dvaita",
+      "slug": "dvaita",
+      "kind": "forest",
+      "name": "Dvaita Forest",
+      "englishName": "Dvaita Forest",
+      "iastName": "Dvaita-vana",
+      "summary": "Exile forest associated with the Pāṇḍavas and lake episodes.",
+      "description": "Dvaita-vana is another major forest of the Pāṇḍava exile narrative, paired with Kāmyaka in the wanderings of the Vana Parva.",
+      "primaryScripture": "Mahābhārata",
+      "status": "published",
+      "schemaVersion": 1,
+      "era": "dvapara-yuga",
+      "variantTraditions": [],
+      "aliases": [
+        "Dvaitavana"
+      ],
+      "scriptureSources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Vana Parva"
+        }
+      ],
+      "tags": [
+        "exile",
+        "pandava"
+      ],
+      "categories": [
+        "forest"
+      ],
+      "importance": 3,
+      "seo": {
+        "title": "Dvaita Forest"
+      },
+      "atlas": {
+        "latitude": 29.1,
+        "longitude": 74.8,
+        "modernLocation": "Northwestern India (approximate traditional placement)",
+        "scripturalSignificance": "Pāṇḍava exile forest of the Vana Parva.",
+        "atlasCategory": "forest"
+      }
+    },
+    {
+      "id": "forest.dvaitavana",
+      "slug": "dvaitavana-extra",
+      "kind": "forest",
+      "name": "Dvaitavana margin",
+      "englishName": "Dvaitavana south",
+      "iastName": "Dvaitavana",
+      "summary": "Southern margin of the exile forest belt.",
+      "description": "Southern margin of the exile forest belt. Placed approximately for educational atlas use.",
+      "primaryScripture": "Mahābhārata",
+      "status": "published",
+      "schemaVersion": 1,
+      "era": "dvapara-yuga",
+      "variantTraditions": [],
+      "aliases": [],
+      "scriptureSources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Vana Parva"
+        }
+      ],
+      "tags": [
+        "atlas",
+        "mahabharata"
+      ],
+      "categories": [
+        "forest"
+      ],
+      "importance": 2,
+      "seo": {
+        "title": "Dvaitavana margin"
+      },
+      "atlas": {
+        "latitude": 28.2,
+        "longitude": 75.5,
+        "modernLocation": "NW Rajasthan fringe (traditional)",
+        "atlasCategory": "forest"
+      }
+    },
+    {
+      "id": "forest.kamyaka",
+      "slug": "kamyaka",
+      "kind": "forest",
+      "name": "Kāmyaka Forest",
+      "englishName": "Kamyaka Forest",
+      "iastName": "Kāmyaka-vana",
+      "summary": "Forest refuge of the Pāṇḍavas during exile.",
+      "description": "Kāmyaka is one of the principal forests of the Pāṇḍava exile, visited alongside Dvaita and other hermitage landscapes of the Vana Parva.",
+      "primaryScripture": "Mahābhārata",
+      "status": "published",
+      "schemaVersion": 1,
+      "era": "dvapara-yuga",
+      "variantTraditions": [],
+      "aliases": [
+        "Kamyaka"
+      ],
+      "scriptureSources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Vana Parva"
+        }
+      ],
+      "tags": [
+        "exile",
+        "pandava"
+      ],
+      "categories": [
+        "forest"
+      ],
+      "importance": 3,
+      "seo": {
+        "title": "Kāmyaka Forest"
+      },
+      "atlas": {
+        "latitude": 29.4,
+        "longitude": 75.5,
+        "modernLocation": "Northwestern Rajasthan / southern Haryana region (approximate)",
+        "kingdom": "Kuru marches",
+        "scripturalSignificance": "Pāṇḍava exile forest in the Vana Parva.",
+        "atlasCategory": "forest"
+      }
+    },
+    {
+      "id": "forest.khandava",
+      "slug": "khandava",
+      "kind": "forest",
+      "name": "Khāṇḍava Forest",
+      "englishName": "Khandava",
+      "iastName": "Khāṇḍava-vana",
+      "summary": "Forest burned for Indraprastha.",
+      "description": "Arjuna and Kṛṣṇa aid Agni in the Khāṇḍava fire.",
+      "primaryScripture": "Mahābhārata",
+      "status": "published",
+      "schemaVersion": 1,
+      "era": "dvapara-yuga",
+      "variantTraditions": [],
+      "aliases": [],
+      "scriptureSources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Ādi Parva"
+        }
+      ],
+      "tags": [
+        "arjuna"
+      ],
+      "categories": [
+        "forest"
+      ],
+      "importance": 4,
+      "seo": {
+        "title": "Khāṇḍava"
+      },
+      "atlas": {
+        "latitude": 28.5,
+        "longitude": 77.1,
+        "modernLocation": "Delhi / Yamuna tract",
+        "kingdom": "Kuru",
+        "atlasCategory": "forest"
+      }
+    },
+    {
+      "id": "forest.naimisharanya",
+      "slug": "naimisharanya",
+      "kind": "forest",
+      "name": "Naimiṣāraṇya",
+      "englishName": "Naimisharanya",
+      "iastName": "Naimiṣāraṇya",
+      "summary": "Sacred forest where sages hear the telling of the Mahābhārata.",
+      "description": "Naimiṣāraṇya is the hermitage forest where the Sūta recounts the Mahābhārata to assembled ṛṣis — the frame setting of the epic's narration.",
+      "primaryScripture": "Mahābhārata",
+      "status": "published",
+      "schemaVersion": 1,
+      "era": "dvapara-yuga",
+      "variantTraditions": [],
+      "aliases": [
+        "Naimisha",
+        "Naimisaranya"
+      ],
+      "scriptureSources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Ādi Parva"
+        }
+      ],
+      "tags": [
+        "sages",
+        "narration"
+      ],
+      "categories": [
+        "forest",
+        "ashrama",
+        "sacred"
+      ],
+      "importance": 4,
+      "seo": {
+        "title": "Naimiṣāraṇya"
+      },
+      "atlas": {
+        "latitude": 27.4,
+        "longitude": 80.5,
+        "modernLocation": "Sitapur region, Uttar Pradesh (traditional)",
+        "scripturalSignificance": "Frame setting where the epic is recited to the sages.",
+        "atlasCategory": "forest"
+      }
+    },
+    {
+      "id": "forest.nandana",
+      "slug": "nandana",
+      "kind": "forest",
+      "name": "Nandana",
+      "englishName": "Nandana",
+      "iastName": "Nandana-vana",
+      "summary": "Celestial grove named in epic geography.",
+      "description": "Celestial grove named in epic geography. Placed approximately for educational atlas use.",
+      "primaryScripture": "Mahābhārata",
+      "status": "published",
+      "schemaVersion": 1,
+      "era": "dvapara-yuga",
+      "variantTraditions": [],
+      "aliases": [],
+      "scriptureSources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Sabhā Parva"
+        },
+        {
+          "work": "Mahābhārata",
+          "section": "Vana Parva"
+        }
+      ],
+      "tags": [
+        "atlas",
+        "mahabharata"
+      ],
+      "categories": [
+        "forest"
+      ],
+      "importance": 2,
+      "seo": {
+        "title": "Nandana"
+      },
+      "atlas": {
+        "latitude": 30.5,
+        "longitude": 79.5,
+        "modernLocation": "Himalayan north (symbolic)",
+        "atlasCategory": "forest"
+      }
+    },
+    {
+      "id": "kingdom.anarta",
+      "slug": "anarta",
+      "kind": "kingdom",
+      "name": "Ānarta",
+      "englishName": "Anarta",
+      "iastName": "Ānarta",
+      "summary": "Saurashtra heartland of the Yadus.",
+      "description": "Saurashtra heartland of the Yadus. Placed approximately for educational atlas use.",
+      "primaryScripture": "Mahābhārata",
+      "status": "published",
+      "schemaVersion": 1,
+      "era": "dvapara-yuga",
+      "variantTraditions": [],
+      "aliases": [],
+      "scriptureSources": [
+        {
+          "work": "Bhāgavata Purāṇa",
+          "section": "Skandha 10"
+        },
+        {
+          "work": "Mahābhārata",
+          "section": "Mausala Parva"
+        }
+      ],
+      "tags": [
+        "atlas",
+        "mahabharata"
+      ],
+      "categories": [
+        "kingdom"
+      ],
+      "importance": 4,
+      "seo": {
+        "title": "Ānarta"
+      },
+      "atlas": {
+        "latitude": 22.3,
+        "longitude": 70.8,
+        "modernLocation": "Saurashtra, Gujarat",
+        "kingdom": "Yadu",
+        "atlasCategory": "kingdom"
+      }
+    },
+    {
+      "id": "kingdom.andhra",
+      "slug": "andhra",
+      "kind": "kingdom",
+      "name": "Andhra",
+      "englishName": "Andhra",
+      "iastName": "Āndhra",
+      "summary": "Deccan kingdom of the Godāvarī–Kṛṣṇā tract.",
+      "description": "Deccan kingdom of the Godāvarī–Kṛṣṇā tract. Placed approximately for educational atlas use.",
+      "primaryScripture": "Mahābhārata",
+      "status": "published",
+      "schemaVersion": 1,
+      "era": "dvapara-yuga",
+      "variantTraditions": [],
+      "aliases": [],
+      "scriptureSources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Sabhā Parva"
+        },
+        {
+          "work": "Mahābhārata",
+          "section": "Vana Parva"
+        }
+      ],
+      "tags": [
+        "atlas",
+        "mahabharata"
+      ],
+      "categories": [
+        "kingdom"
+      ],
+      "importance": 3,
+      "seo": {
+        "title": "Andhra"
+      },
+      "atlas": {
+        "latitude": 16.5,
+        "longitude": 80.5,
+        "modernLocation": "Andhra coastal hinterland",
+        "atlasCategory": "kingdom"
+      }
+    },
+    {
+      "id": "kingdom.anga",
+      "slug": "anga",
+      "kind": "kingdom",
+      "name": "Aṅga",
+      "englishName": "Anga",
+      "iastName": "Aṅga",
+      "summary": "Eastern kingdom of Karṇa; capital Campā.",
+      "description": "Aṅga is granted to Karṇa; Campā stands on the Gaṅgā.",
+      "primaryScripture": "Mahābhārata",
+      "status": "published",
+      "schemaVersion": 1,
+      "era": "dvapara-yuga",
+      "variantTraditions": [],
+      "aliases": [
+        "Anga"
+      ],
+      "scriptureSources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Ādi Parva"
+        }
+      ],
+      "tags": [
+        "mahajanapada",
+        "karna"
+      ],
+      "categories": [
+        "kingdom"
+      ],
+      "importance": 4,
+      "seo": {
+        "title": "Aṅga"
+      },
+      "atlas": {
+        "latitude": 25,
+        "longitude": 87,
+        "modernLocation": "Bhagalpur region, Bihar",
+        "kingdom": "Aṅga",
+        "scripturalSignificance": "Gaṅgā / Campā.",
+        "atlasCategory": "kingdom"
+      }
+    },
+    {
+      "id": "kingdom.aparanta",
+      "slug": "aparanta",
+      "kind": "kingdom",
+      "name": "Aparānta",
+      "englishName": "Aparanta",
+      "iastName": "Aparānta",
+      "summary": "Western coastal lands (Konkan).",
+      "description": "Western coastal lands (Konkan). Placed approximately for educational atlas use.",
+      "primaryScripture": "Mahābhārata",
+      "status": "published",
+      "schemaVersion": 1,
+      "era": "dvapara-yuga",
+      "variantTraditions": [],
+      "aliases": [],
+      "scriptureSources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Sabhā Parva"
+        },
+        {
+          "work": "Mahābhārata",
+          "section": "Vana Parva"
+        }
+      ],
+      "tags": [
+        "atlas",
+        "mahabharata"
+      ],
+      "categories": [
+        "kingdom"
+      ],
+      "importance": 3,
+      "seo": {
+        "title": "Aparānta"
+      },
+      "atlas": {
+        "latitude": 18.5,
+        "longitude": 73,
+        "modernLocation": "Konkan coast",
+        "atlasCategory": "kingdom"
+      }
+    },
+    {
+      "id": "kingdom.assaka",
+      "slug": "assaka",
+      "kind": "kingdom",
+      "name": "Aśmaka",
+      "englishName": "Assaka",
+      "iastName": "Aśmaka",
+      "summary": "Deccan Mahājanapada on the Godāvarī.",
+      "description": "Aśmaka is the southern Mahājanapada of the Godāvarī valley.",
+      "primaryScripture": "Mahābhārata",
+      "status": "published",
+      "schemaVersion": 1,
+      "era": "dvapara-yuga",
+      "variantTraditions": [],
+      "aliases": [
+        "Assaka"
+      ],
+      "scriptureSources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Sabhā Parva"
+        }
+      ],
+      "tags": [
+        "mahajanapada"
+      ],
+      "categories": [
+        "kingdom"
+      ],
+      "importance": 3,
+      "seo": {
+        "title": "Aśmaka"
+      },
+      "atlas": {
+        "latitude": 18.8,
+        "longitude": 78,
+        "modernLocation": "Godavari valley",
+        "kingdom": "Aśmaka",
+        "atlasCategory": "kingdom"
+      }
+    },
+    {
+      "id": "kingdom.avanti",
+      "slug": "avanti",
+      "kind": "kingdom",
+      "name": "Avanti",
+      "englishName": "Avanti",
+      "iastName": "Avanti",
+      "summary": "Malwa kingdom; capital Ujjayinī.",
+      "description": "Avanti is the western realm of Ujjayinī on the Śiprā.",
+      "primaryScripture": "Mahābhārata",
+      "status": "published",
+      "schemaVersion": 1,
+      "era": "dvapara-yuga",
+      "variantTraditions": [],
+      "aliases": [],
+      "scriptureSources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Vana Parva"
+        }
+      ],
+      "tags": [
+        "mahajanapada"
+      ],
+      "categories": [
+        "kingdom"
+      ],
+      "importance": 4,
+      "seo": {
+        "title": "Avanti"
+      },
+      "atlas": {
+        "latitude": 23.2,
+        "longitude": 75.8,
+        "modernLocation": "Ujjain, Madhya Pradesh",
+        "kingdom": "Avanti",
+        "atlasCategory": "kingdom"
+      }
+    },
+    {
+      "id": "kingdom.bahlika",
+      "slug": "bahlika",
+      "kind": "kingdom",
+      "name": "Bāhlīka",
+      "englishName": "Bahlika",
+      "iastName": "Bāhlīka",
+      "summary": "Northern kingdom allied to the Kurus.",
+      "description": "Northern kingdom allied to the Kurus. Placed approximately for educational atlas use.",
+      "primaryScripture": "Mahābhārata",
+      "status": "published",
+      "schemaVersion": 1,
+      "era": "dvapara-yuga",
+      "variantTraditions": [],
+      "aliases": [
+        "Vahlika"
+      ],
+      "scriptureSources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Sabhā Parva"
+        },
+        {
+          "work": "Mahābhārata",
+          "section": "Vana Parva"
+        }
+      ],
+      "tags": [
+        "atlas",
+        "mahabharata"
+      ],
+      "categories": [
+        "kingdom"
+      ],
+      "importance": 3,
+      "seo": {
+        "title": "Bāhlīka"
+      },
+      "atlas": {
+        "latitude": 34,
+        "longitude": 72,
+        "modernLocation": "Balkh / NW frontier (traditional)",
+        "atlasCategory": "kingdom"
+      }
+    },
+    {
+      "id": "kingdom.cedi",
+      "slug": "cedi",
+      "kind": "kingdom",
+      "name": "Cedi",
+      "englishName": "Cedi",
+      "iastName": "Cedi",
+      "summary": "Kingdom of Śiśupāla; Ken river region.",
+      "description": "Cedi is Śiśupāla's realm, opposed to Kṛṣṇa at the Rājasūya.",
+      "primaryScripture": "Mahābhārata",
+      "status": "published",
+      "schemaVersion": 1,
+      "era": "dvapara-yuga",
+      "variantTraditions": [],
+      "aliases": [
+        "Chedi"
+      ],
+      "scriptureSources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Sabhā Parva"
+        }
+      ],
+      "tags": [
+        "mahajanapada"
+      ],
+      "categories": [
+        "kingdom"
+      ],
+      "importance": 4,
+      "seo": {
+        "title": "Cedi"
+      },
+      "atlas": {
+        "latitude": 24.2,
+        "longitude": 80.3,
+        "modernLocation": "Bundelkhand (Ken river)",
+        "kingdom": "Cedi",
+        "atlasCategory": "kingdom"
+      }
+    },
+    {
+      "id": "kingdom.chola",
+      "slug": "chola",
+      "kind": "kingdom",
+      "name": "Cola",
+      "englishName": "Chola",
+      "iastName": "Cola",
+      "summary": "Southern coastal kingdom.",
+      "description": "Southern coastal kingdom. Placed approximately for educational atlas use.",
+      "primaryScripture": "Mahābhārata",
+      "status": "published",
+      "schemaVersion": 1,
+      "era": "dvapara-yuga",
+      "variantTraditions": [],
+      "aliases": [
+        "Chola"
+      ],
+      "scriptureSources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Sabhā Parva"
+        },
+        {
+          "work": "Mahābhārata",
+          "section": "Vana Parva"
+        }
+      ],
+      "tags": [
+        "atlas",
+        "mahabharata"
+      ],
+      "categories": [
+        "kingdom"
+      ],
+      "importance": 3,
+      "seo": {
+        "title": "Cola"
+      },
+      "atlas": {
+        "latitude": 11,
+        "longitude": 79.5,
+        "modernLocation": "Coromandel / Tamil Nadu",
+        "atlasCategory": "kingdom"
+      }
+    },
+    {
+      "id": "kingdom.dasarna",
+      "slug": "dasarna",
+      "kind": "kingdom",
+      "name": "Daśārṇa",
+      "englishName": "Dasarna",
+      "iastName": "Daśārṇa",
+      "summary": "Central kingdom east of Avanti.",
+      "description": "Central kingdom east of Avanti. Placed approximately for educational atlas use.",
+      "primaryScripture": "Mahābhārata",
+      "status": "published",
+      "schemaVersion": 1,
+      "era": "dvapara-yuga",
+      "variantTraditions": [],
+      "aliases": [],
+      "scriptureSources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Sabhā Parva"
+        },
+        {
+          "work": "Mahābhārata",
+          "section": "Vana Parva"
+        }
+      ],
+      "tags": [
+        "atlas",
+        "mahabharata"
+      ],
+      "categories": [
+        "kingdom"
+      ],
+      "importance": 3,
+      "seo": {
+        "title": "Daśārṇa"
+      },
+      "atlas": {
+        "latitude": 23.2,
+        "longitude": 78.5,
+        "modernLocation": "Eastern MP (traditional)",
+        "atlasCategory": "kingdom"
+      }
+    },
+    {
+      "id": "kingdom.dravida",
+      "slug": "dravida",
+      "kind": "kingdom",
+      "name": "Draviḍa",
+      "englishName": "Dravida",
+      "iastName": "Draviḍa",
+      "summary": "Far-southern lands in digvijaya lists.",
+      "description": "Far-southern lands in digvijaya lists. Placed approximately for educational atlas use.",
+      "primaryScripture": "Mahābhārata",
+      "status": "published",
+      "schemaVersion": 1,
+      "era": "dvapara-yuga",
+      "variantTraditions": [],
+      "aliases": [],
+      "scriptureSources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Sabhā Parva"
+        },
+        {
+          "work": "Mahābhārata",
+          "section": "Vana Parva"
+        }
+      ],
+      "tags": [
+        "atlas",
+        "mahabharata"
+      ],
+      "categories": [
+        "kingdom"
+      ],
+      "importance": 3,
+      "seo": {
+        "title": "Draviḍa"
+      },
+      "atlas": {
+        "latitude": 11,
+        "longitude": 78.5,
+        "modernLocation": "Tamil country (traditional)",
+        "atlasCategory": "kingdom"
+      }
+    },
+    {
+      "id": "kingdom.gandhara",
+      "slug": "gandhara",
+      "kind": "kingdom",
+      "name": "Gāndhāra",
+      "englishName": "Gandhara",
+      "iastName": "Gāndhāra",
+      "summary": "Northwestern kingdom of Gāndhārī and Śakuni.",
+      "description": "Gāndhāra is the homeland of Gāndhārī and her brother Śakuni, whose counsel shapes the dice game and the path to war.",
+      "primaryScripture": "Mahābhārata",
+      "status": "published",
+      "schemaVersion": 1,
+      "era": "dvapara-yuga",
+      "variantTraditions": [],
+      "aliases": [
+        "Gandhara",
+        "Takshashila region"
+      ],
+      "scriptureSources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Ādi Parva"
+        }
+      ],
+      "tags": [
+        "gandhari",
+        "shakuni"
+      ],
+      "categories": [
+        "kingdom"
+      ],
+      "importance": 4,
+      "seo": {
+        "title": "Gāndhāra"
+      },
+      "atlas": {
+        "latitude": 34,
+        "longitude": 71.5,
+        "modernLocation": "Northwest Pakistan / Eastern Afghanistan",
+        "kingdom": "Gāndhāra",
+        "scripturalSignificance": "Origin of Gāndhārī and Śakuni.",
+        "atlasCategory": "kingdom"
+      }
+    },
+    {
+      "id": "kingdom.kalinga",
+      "slug": "kalinga",
+      "kind": "kingdom",
+      "name": "Kaliṅga",
+      "englishName": "Kalinga",
+      "iastName": "Kaliṅga",
+      "summary": "Famous eastern coastal kingdom.",
+      "description": "Famous eastern coastal kingdom. Placed approximately for educational atlas use.",
+      "primaryScripture": "Mahābhārata",
+      "status": "published",
+      "schemaVersion": 1,
+      "era": "dvapara-yuga",
+      "variantTraditions": [],
+      "aliases": [],
+      "scriptureSources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Sabhā Parva"
+        },
+        {
+          "work": "Mahābhārata",
+          "section": "Vana Parva"
+        }
+      ],
+      "tags": [
+        "atlas",
+        "mahabharata"
+      ],
+      "categories": [
+        "kingdom"
+      ],
+      "importance": 4,
+      "seo": {
+        "title": "Kaliṅga"
+      },
+      "atlas": {
+        "latitude": 20,
+        "longitude": 85.5,
+        "modernLocation": "Coastal Odisha",
+        "atlasCategory": "kingdom"
+      }
+    },
+    {
+      "id": "kingdom.kamboja",
+      "slug": "kamboja",
+      "kind": "kingdom",
+      "name": "Kāmboja",
+      "englishName": "Kamboja",
+      "iastName": "Kāmboja",
+      "summary": "Northwestern highland realm.",
+      "description": "Kāmboja is associated with the Hindukush–Indus frontier in digvijaya lists.",
+      "primaryScripture": "Mahābhārata",
+      "status": "published",
+      "schemaVersion": 1,
+      "era": "dvapara-yuga",
+      "variantTraditions": [],
+      "aliases": [
+        "Kamboja"
+      ],
+      "scriptureSources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Sabhā Parva"
+        }
+      ],
+      "tags": [
+        "mahajanapada"
+      ],
+      "categories": [
+        "kingdom"
+      ],
+      "importance": 3,
+      "seo": {
+        "title": "Kāmboja"
+      },
+      "atlas": {
+        "latitude": 35,
+        "longitude": 71.5,
+        "modernLocation": "Hindukush / NW frontier",
+        "kingdom": "Kāmboja",
+        "atlasCategory": "kingdom"
+      }
+    },
+    {
+      "id": "kingdom.karnata",
+      "slug": "karnata",
+      "kind": "kingdom",
+      "name": "Karṇāṭa",
+      "englishName": "Karnata",
+      "iastName": "Karṇāṭa",
+      "summary": "Deccan plateau land in southern lists.",
+      "description": "Deccan plateau land in southern lists. Placed approximately for educational atlas use.",
+      "primaryScripture": "Mahābhārata",
+      "status": "published",
+      "schemaVersion": 1,
+      "era": "dvapara-yuga",
+      "variantTraditions": [],
+      "aliases": [],
+      "scriptureSources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Sabhā Parva"
+        },
+        {
+          "work": "Mahābhārata",
+          "section": "Vana Parva"
+        }
+      ],
+      "tags": [
+        "atlas",
+        "mahabharata"
+      ],
+      "categories": [
+        "kingdom"
+      ],
+      "importance": 2,
+      "seo": {
+        "title": "Karṇāṭa"
+      },
+      "atlas": {
+        "latitude": 15,
+        "longitude": 76.5,
+        "modernLocation": "Karnataka plateau",
+        "atlasCategory": "kingdom"
+      }
+    },
+    {
+      "id": "kingdom.kashi",
+      "slug": "kashi",
+      "kind": "kingdom",
+      "name": "Kāśī",
+      "englishName": "Kashi",
+      "iastName": "Kāśī",
+      "summary": "Ancient kingdom and sacred city on the Gaṅgā.",
+      "description": "Kāśī appears in marriage alliances and pilgrim geography of the Mahābhārata; it remains one of the great sacred cities of Bhārata.",
+      "primaryScripture": "Mahābhārata",
+      "status": "published",
+      "schemaVersion": 1,
+      "era": "dvapara-yuga",
+      "variantTraditions": [],
+      "aliases": [
+        "Varanasi",
+        "Banaras",
+        "Kasi"
+      ],
+      "scriptureSources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Ādi Parva",
+          "note": "marriage alliances"
+        }
+      ],
+      "tags": [
+        "sacred",
+        "ganga"
+      ],
+      "categories": [
+        "kingdom",
+        "pilgrimage",
+        "city"
+      ],
+      "importance": 4,
+      "seo": {
+        "title": "Kāśī"
+      },
+      "atlas": {
+        "latitude": 25.32,
+        "longitude": 83.01,
+        "modernLocation": "Varanasi, Uttar Pradesh",
+        "kingdom": "Kāśī",
+        "scripturalSignificance": "Sacred Gaṅgā city referenced in epic marriage and pilgrimage lore.",
+        "atlasCategory": "kingdom"
+      }
+    },
+    {
+      "id": "kingdom.kashmira",
+      "slug": "kashmira",
+      "kind": "kingdom",
+      "name": "Kāśmīra",
+      "englishName": "Kashmira",
+      "iastName": "Kāśmīra",
+      "summary": "Himalayan valley kingdom.",
+      "description": "Himalayan valley kingdom. Placed approximately for educational atlas use.",
+      "primaryScripture": "Mahābhārata",
+      "status": "published",
+      "schemaVersion": 1,
+      "era": "dvapara-yuga",
+      "variantTraditions": [],
+      "aliases": [],
+      "scriptureSources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Sabhā Parva"
+        },
+        {
+          "work": "Mahābhārata",
+          "section": "Vana Parva"
+        }
+      ],
+      "tags": [
+        "atlas",
+        "mahabharata"
+      ],
+      "categories": [
+        "kingdom"
+      ],
+      "importance": 3,
+      "seo": {
+        "title": "Kāśmīra"
+      },
+      "atlas": {
+        "latitude": 34,
+        "longitude": 74.8,
+        "modernLocation": "Kashmir Valley",
+        "atlasCategory": "kingdom"
+      }
+    },
+    {
+      "id": "kingdom.kekaya",
+      "slug": "kekaya",
+      "kind": "kingdom",
+      "name": "Kekaya",
+      "englishName": "Kekaya",
+      "iastName": "Kekaya",
+      "summary": "Northwestern clan-kingdom in digvijaya lists.",
+      "description": "Northwestern clan-kingdom in digvijaya lists. Placed approximately for educational atlas use.",
+      "primaryScripture": "Mahābhārata",
+      "status": "published",
+      "schemaVersion": 1,
+      "era": "dvapara-yuga",
+      "variantTraditions": [],
+      "aliases": [],
+      "scriptureSources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Sabhā Parva"
+        },
+        {
+          "work": "Mahābhārata",
+          "section": "Vana Parva"
+        }
+      ],
+      "tags": [
+        "atlas",
+        "mahabharata"
+      ],
+      "categories": [
+        "kingdom"
+      ],
+      "importance": 3,
+      "seo": {
+        "title": "Kekaya"
+      },
+      "atlas": {
+        "latitude": 33.2,
+        "longitude": 73.5,
+        "modernLocation": "NW Punjab (traditional)",
+        "atlasCategory": "kingdom"
+      }
+    },
+    {
+      "id": "kingdom.kerala",
+      "slug": "kerala",
+      "kind": "kingdom",
+      "name": "Kerala",
+      "englishName": "Kerala",
+      "iastName": "Kerala",
+      "summary": "Malabar coastal kingdom.",
+      "description": "Malabar coastal kingdom. Placed approximately for educational atlas use.",
+      "primaryScripture": "Mahābhārata",
+      "status": "published",
+      "schemaVersion": 1,
+      "era": "dvapara-yuga",
+      "variantTraditions": [],
+      "aliases": [],
+      "scriptureSources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Sabhā Parva"
+        },
+        {
+          "work": "Mahābhārata",
+          "section": "Vana Parva"
+        }
+      ],
+      "tags": [
+        "atlas",
+        "mahabharata"
+      ],
+      "categories": [
+        "kingdom"
+      ],
+      "importance": 3,
+      "seo": {
+        "title": "Kerala"
+      },
+      "atlas": {
+        "latitude": 10.5,
+        "longitude": 76.2,
+        "modernLocation": "Kerala",
+        "atlasCategory": "kingdom"
+      }
+    },
+    {
+      "id": "kingdom.kosala",
+      "slug": "kosala",
+      "kind": "kingdom",
+      "name": "Kosala",
+      "englishName": "Kosala",
+      "iastName": "Kosala",
+      "summary": "Northern kingdom on the Sarayū.",
+      "description": "Kosala is tied to the Sarayū river in epic geography.",
+      "primaryScripture": "Mahābhārata",
+      "status": "published",
+      "schemaVersion": 1,
+      "era": "dvapara-yuga",
+      "variantTraditions": [],
+      "aliases": [],
+      "scriptureSources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Sabhā Parva"
+        }
+      ],
+      "tags": [
+        "mahajanapada"
+      ],
+      "categories": [
+        "kingdom"
+      ],
+      "importance": 4,
+      "seo": {
+        "title": "Kosala"
+      },
+      "atlas": {
+        "latitude": 27,
+        "longitude": 82.5,
+        "modernLocation": "Eastern Uttar Pradesh (Awadh)",
+        "kingdom": "Kosala",
+        "scripturalSignificance": "Sarayū river.",
+        "atlasCategory": "kingdom"
+      }
+    },
+    {
+      "id": "kingdom.kukura",
+      "slug": "kukura",
+      "kind": "kingdom",
+      "name": "Kukura",
+      "englishName": "Kukura",
+      "iastName": "Kukura",
+      "summary": "Yadu-related western clan territory.",
+      "description": "Yadu-related western clan territory. Placed approximately for educational atlas use.",
+      "primaryScripture": "Mahābhārata",
+      "status": "published",
+      "schemaVersion": 1,
+      "era": "dvapara-yuga",
+      "variantTraditions": [],
+      "aliases": [],
+      "scriptureSources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Sabhā Parva"
+        },
+        {
+          "work": "Mahābhārata",
+          "section": "Vana Parva"
+        }
+      ],
+      "tags": [
+        "atlas",
+        "mahabharata"
+      ],
+      "categories": [
+        "kingdom"
+      ],
+      "importance": 2,
+      "seo": {
+        "title": "Kukura"
+      },
+      "atlas": {
+        "latitude": 22.8,
+        "longitude": 72.5,
+        "modernLocation": "Gujarat (traditional)",
+        "atlasCategory": "kingdom"
+      }
+    },
+    {
+      "id": "kingdom.kuru",
+      "slug": "kuru",
+      "kind": "kingdom",
+      "name": "Kuru",
+      "englishName": "Kuru",
+      "iastName": "Kuru",
+      "summary": "Heartland of the Kauravas and Pāṇḍavas.",
+      "description": "The Kuru realm is the political centre of the Mahābhārata — Hastināpura, Indraprastha and Kurukṣetra.",
+      "primaryScripture": "Mahābhārata",
+      "status": "published",
+      "schemaVersion": 1,
+      "era": "dvapara-yuga",
+      "variantTraditions": [],
+      "aliases": [
+        "Kurujangala"
+      ],
+      "scriptureSources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Ādi Parva"
+        },
+        {
+          "work": "Bhagavad Gītā",
+          "chapter": "1"
+        }
+      ],
+      "tags": [
+        "mahajanapada"
+      ],
+      "categories": [
+        "kingdom"
+      ],
+      "importance": 5,
+      "seo": {
+        "title": "Kuru"
+      },
+      "atlas": {
+        "latitude": 29.5,
+        "longitude": 77.2,
+        "modernLocation": "Haryana / western Uttar Pradesh",
+        "kingdom": "Kuru",
+        "scripturalSignificance": "Yamunā / Sarasvatī heartland.",
+        "atlasCategory": "kingdom"
+      }
+    },
+    {
+      "id": "kingdom.madra",
+      "slug": "madra",
+      "kind": "kingdom",
+      "name": "Madra",
+      "englishName": "Madra",
+      "iastName": "Madra",
+      "summary": "Northwestern realm of Mādrī.",
+      "description": "Northwestern realm of Mādrī. Placed approximately for educational atlas use.",
+      "primaryScripture": "Mahābhārata",
+      "status": "published",
+      "schemaVersion": 1,
+      "era": "dvapara-yuga",
+      "variantTraditions": [],
+      "aliases": [],
+      "scriptureSources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Ādi Parva"
+        }
+      ],
+      "tags": [
+        "atlas",
+        "mahabharata",
+        "madri"
+      ],
+      "categories": [
+        "kingdom"
+      ],
+      "importance": 4,
+      "seo": {
+        "title": "Madra"
+      },
+      "atlas": {
+        "latitude": 32.5,
+        "longitude": 74.5,
+        "modernLocation": "Punjab / Sialkot region (traditional)",
+        "kingdom": "Madra",
+        "atlasCategory": "kingdom"
+      }
+    },
+    {
+      "id": "kingdom.magadha",
+      "slug": "magadha",
+      "kind": "kingdom",
+      "name": "Magadha",
+      "englishName": "Magadha",
+      "iastName": "Magadha",
+      "summary": "Eastern kingdom of Jarāsandha at Girivraja.",
+      "description": "Magadha under Jarāsandha is a major power opposing Kṛṣṇa and the Yadus; Bhīma later slays Jarāsandha so Yudhiṣṭhira's Rājasūya may proceed.",
+      "primaryScripture": "Mahābhārata",
+      "status": "published",
+      "schemaVersion": 1,
+      "era": "dvapara-yuga",
+      "variantTraditions": [],
+      "aliases": [
+        "Girivraja",
+        "Rajagriha"
+      ],
+      "scriptureSources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Sabhā Parva"
+        },
+        {
+          "work": "Bhāgavata Purāṇa",
+          "section": "Skandha 10"
+        }
+      ],
+      "tags": [
+        "jarasandha"
+      ],
+      "categories": [
+        "kingdom"
+      ],
+      "importance": 4,
+      "seo": {
+        "title": "Magadha"
+      },
+      "atlas": {
+        "latitude": 24.7,
+        "longitude": 85,
+        "modernLocation": "Bihar (around Rajgir / Patna region)",
+        "kingdom": "Magadha",
+        "scripturalSignificance": "Jarāsandha's capital; Bhīma's duel enables the Rājasūya.",
+        "atlasCategory": "kingdom"
+      }
+    },
+    {
+      "id": "kingdom.malava",
+      "slug": "malava",
+      "kind": "kingdom",
+      "name": "Mālava",
+      "englishName": "Malava",
+      "iastName": "Mālava",
+      "summary": "Malwa plateau kingdom near Avanti.",
+      "description": "Malwa plateau kingdom near Avanti. Placed approximately for educational atlas use.",
+      "primaryScripture": "Mahābhārata",
+      "status": "published",
+      "schemaVersion": 1,
+      "era": "dvapara-yuga",
+      "variantTraditions": [],
+      "aliases": [],
+      "scriptureSources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Sabhā Parva"
+        },
+        {
+          "work": "Mahābhārata",
+          "section": "Vana Parva"
+        }
+      ],
+      "tags": [
+        "atlas",
+        "mahabharata"
+      ],
+      "categories": [
+        "kingdom"
+      ],
+      "importance": 3,
+      "seo": {
+        "title": "Mālava"
+      },
+      "atlas": {
+        "latitude": 23.5,
+        "longitude": 76.5,
+        "modernLocation": "Malwa, Madhya Pradesh",
+        "atlasCategory": "kingdom"
+      }
+    },
+    {
+      "id": "kingdom.malla",
+      "slug": "malla",
+      "kind": "kingdom",
+      "name": "Malla",
+      "englishName": "Malla",
+      "iastName": "Malla",
+      "summary": "Realm near the Little Gandak.",
+      "description": "Malla is counted among the sixteen great realms of northern Bhārata.",
+      "primaryScripture": "Mahābhārata",
+      "status": "published",
+      "schemaVersion": 1,
+      "era": "dvapara-yuga",
+      "variantTraditions": [],
+      "aliases": [],
+      "scriptureSources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Sabhā Parva"
+        }
+      ],
+      "tags": [
+        "mahajanapada"
+      ],
+      "categories": [
+        "kingdom"
+      ],
+      "importance": 3,
+      "seo": {
+        "title": "Malla"
+      },
+      "atlas": {
+        "latitude": 26.6,
+        "longitude": 83.8,
+        "modernLocation": "Gandak region, eastern UP / Bihar",
+        "kingdom": "Malla",
+        "atlasCategory": "kingdom"
+      }
+    },
+    {
+      "id": "kingdom.matsya-label",
+      "slug": "matsya-heartland",
+      "kind": "kingdom",
+      "name": "Matsya heartland",
+      "englishName": "Matsya core",
+      "iastName": "Matsya",
+      "summary": "Core Matsya territory around Virāṭa.",
+      "description": "Core Matsya territory around Virāṭa. Placed approximately for educational atlas use.",
+      "primaryScripture": "Mahābhārata",
+      "status": "published",
+      "schemaVersion": 1,
+      "era": "dvapara-yuga",
+      "variantTraditions": [],
+      "aliases": [],
+      "scriptureSources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Virāṭa Parva"
+        }
+      ],
+      "tags": [
+        "atlas",
+        "mahabharata"
+      ],
+      "categories": [
+        "kingdom"
+      ],
+      "importance": 2,
+      "seo": {
+        "title": "Matsya heartland"
+      },
+      "atlas": {
+        "latitude": 26.8,
+        "longitude": 76.2,
+        "modernLocation": "Eastern Rajasthan",
+        "atlasCategory": "kingdom"
+      }
+    },
+    {
+      "id": "kingdom.odra",
+      "slug": "odra",
+      "kind": "kingdom",
+      "name": "Oḍra",
+      "englishName": "Odra",
+      "iastName": "Oḍra",
+      "summary": "Eastern coastal realm (Odisha tract).",
+      "description": "Eastern coastal realm (Odisha tract). Placed approximately for educational atlas use.",
+      "primaryScripture": "Mahābhārata",
+      "status": "published",
+      "schemaVersion": 1,
+      "era": "dvapara-yuga",
+      "variantTraditions": [],
+      "aliases": [],
+      "scriptureSources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Sabhā Parva"
+        },
+        {
+          "work": "Mahābhārata",
+          "section": "Vana Parva"
+        }
+      ],
+      "tags": [
+        "atlas",
+        "mahabharata"
+      ],
+      "categories": [
+        "kingdom"
+      ],
+      "importance": 3,
+      "seo": {
+        "title": "Oḍra"
+      },
+      "atlas": {
+        "latitude": 20.5,
+        "longitude": 86,
+        "modernLocation": "Odisha (traditional)",
+        "atlasCategory": "kingdom"
+      }
+    },
+    {
+      "id": "kingdom.pancala",
+      "slug": "panchala",
+      "kind": "kingdom",
+      "name": "Pañcāla",
+      "englishName": "Panchala",
+      "iastName": "Pañcāla",
+      "summary": "Kingdom of Drupada; home of Draupadī and Dhṛṣṭadyumna.",
+      "description": "Pañcāla is the realm of King Drupada. Its court hosts Draupadī's svayaṃvara, binding the Pāṇḍavas to the Pañcāla alliance that shapes the war.",
+      "primaryScripture": "Mahābhārata",
+      "status": "published",
+      "schemaVersion": 1,
+      "era": "dvapara-yuga",
+      "variantTraditions": [],
+      "aliases": [
+        "Panchala",
+        "Southern Panchala"
+      ],
+      "scriptureSources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Ādi Parva"
+        }
+      ],
+      "tags": [
+        "drupada",
+        "draupadi"
+      ],
+      "categories": [
+        "kingdom"
+      ],
+      "importance": 4,
+      "seo": {
+        "title": "Pañcāla"
+      },
+      "atlas": {
+        "latitude": 27.9,
+        "longitude": 79,
+        "modernLocation": "Western Uttar Pradesh",
+        "kingdom": "Pañcāla",
+        "scripturalSignificance": "Drupada's realm; Draupadī's svayaṃvara and Pāṇḍava marriage alliance.",
+        "atlasCategory": "kingdom"
+      }
+    },
+    {
+      "id": "kingdom.pandya",
+      "slug": "pandya",
+      "kind": "kingdom",
+      "name": "Pāṇḍya",
+      "englishName": "Pandya",
+      "iastName": "Pāṇḍya",
+      "summary": "Far-southern kingdom near the tip.",
+      "description": "Far-southern kingdom near the tip. Placed approximately for educational atlas use.",
+      "primaryScripture": "Mahābhārata",
+      "status": "published",
+      "schemaVersion": 1,
+      "era": "dvapara-yuga",
+      "variantTraditions": [],
+      "aliases": [],
+      "scriptureSources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Sabhā Parva"
+        },
+        {
+          "work": "Mahābhārata",
+          "section": "Vana Parva"
+        }
+      ],
+      "tags": [
+        "atlas",
+        "mahabharata"
+      ],
+      "categories": [
+        "kingdom"
+      ],
+      "importance": 3,
+      "seo": {
+        "title": "Pāṇḍya"
+      },
+      "atlas": {
+        "latitude": 9.5,
+        "longitude": 77.8,
+        "modernLocation": "Madurai / southern Tamil Nadu",
+        "atlasCategory": "kingdom"
+      }
+    },
+    {
+      "id": "kingdom.pragjyotisha",
+      "slug": "pragjyotisha",
+      "kind": "kingdom",
+      "name": "Prāgjyotiṣa",
+      "englishName": "Pragjyotisha",
+      "iastName": "Prāgjyotiṣa",
+      "summary": "Far-eastern kingdom of Bhagadatta.",
+      "description": "Far-eastern kingdom of Bhagadatta. Placed approximately for educational atlas use.",
+      "primaryScripture": "Mahābhārata",
+      "status": "published",
+      "schemaVersion": 1,
+      "era": "dvapara-yuga",
+      "variantTraditions": [],
+      "aliases": [
+        "Pragjyotisapura"
+      ],
+      "scriptureSources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Sabhā Parva"
+        },
+        {
+          "work": "Mahābhārata",
+          "section": "Droṇa Parva"
+        }
+      ],
+      "tags": [
+        "atlas",
+        "mahabharata",
+        "bhagadatta"
+      ],
+      "categories": [
+        "kingdom"
+      ],
+      "importance": 4,
+      "seo": {
+        "title": "Prāgjyotiṣa"
+      },
+      "atlas": {
+        "latitude": 26.2,
+        "longitude": 91.7,
+        "modernLocation": "Assam / Guwahati region (traditional)",
+        "atlasCategory": "kingdom"
+      }
+    },
+    {
+      "id": "kingdom.pundra",
+      "slug": "pundra",
+      "kind": "kingdom",
+      "name": "Puṇḍra",
+      "englishName": "Pundra",
+      "iastName": "Puṇḍra",
+      "summary": "Eastern realm north of Vaṅga.",
+      "description": "Eastern realm north of Vaṅga. Placed approximately for educational atlas use.",
+      "primaryScripture": "Mahābhārata",
+      "status": "published",
+      "schemaVersion": 1,
+      "era": "dvapara-yuga",
+      "variantTraditions": [],
+      "aliases": [],
+      "scriptureSources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Sabhā Parva"
+        },
+        {
+          "work": "Mahābhārata",
+          "section": "Vana Parva"
+        }
+      ],
+      "tags": [
+        "atlas",
+        "mahabharata"
+      ],
+      "categories": [
+        "kingdom"
+      ],
+      "importance": 3,
+      "seo": {
+        "title": "Puṇḍra"
+      },
+      "atlas": {
+        "latitude": 25,
+        "longitude": 89,
+        "modernLocation": "North Bengal (traditional)",
+        "atlasCategory": "kingdom"
+      }
+    },
+    {
+      "id": "kingdom.sauvira",
+      "slug": "sauvira",
+      "kind": "kingdom",
+      "name": "Sauvīra",
+      "englishName": "Sauvira",
+      "iastName": "Sauvīra",
+      "summary": "Realm paired with Sindhu in epic lists.",
+      "description": "Realm paired with Sindhu in epic lists. Placed approximately for educational atlas use.",
+      "primaryScripture": "Mahābhārata",
+      "status": "published",
+      "schemaVersion": 1,
+      "era": "dvapara-yuga",
+      "variantTraditions": [],
+      "aliases": [],
+      "scriptureSources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Sabhā Parva"
+        },
+        {
+          "work": "Mahābhārata",
+          "section": "Vana Parva"
+        }
+      ],
+      "tags": [
+        "atlas",
+        "mahabharata"
+      ],
+      "categories": [
+        "kingdom"
+      ],
+      "importance": 3,
+      "seo": {
+        "title": "Sauvīra"
+      },
+      "atlas": {
+        "latitude": 25.5,
+        "longitude": 69.5,
+        "modernLocation": "Lower Indus / Kutch fringe (traditional)",
+        "atlasCategory": "kingdom"
+      }
+    },
+    {
+      "id": "kingdom.sindhu",
+      "slug": "sindhu-kingdom",
+      "kind": "kingdom",
+      "name": "Sindhu",
+      "englishName": "Sindhu",
+      "iastName": "Sindhu",
+      "summary": "Indus-side kingdom of Jayadratha.",
+      "description": "Indus-side kingdom of Jayadratha. Placed approximately for educational atlas use.",
+      "primaryScripture": "Mahābhārata",
+      "status": "published",
+      "schemaVersion": 1,
+      "era": "dvapara-yuga",
+      "variantTraditions": [],
+      "aliases": [],
+      "scriptureSources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Vana Parva"
+        }
+      ],
+      "tags": [
+        "atlas",
+        "mahabharata",
+        "jayadratha"
+      ],
+      "categories": [
+        "kingdom"
+      ],
+      "importance": 4,
+      "seo": {
+        "title": "Sindhu"
+      },
+      "atlas": {
+        "latitude": 26.5,
+        "longitude": 68.5,
+        "modernLocation": "Sindh (Pakistan)",
+        "kingdom": "Sindhu",
+        "atlasCategory": "kingdom"
+      }
+    },
+    {
+      "id": "kingdom.suhma",
+      "slug": "suhma",
+      "kind": "kingdom",
+      "name": "Suhma",
+      "englishName": "Suhma",
+      "iastName": "Suhma",
+      "summary": "Eastern coastal kingdom in digvijaya lists.",
+      "description": "Eastern coastal kingdom in digvijaya lists. Placed approximately for educational atlas use.",
+      "primaryScripture": "Mahābhārata",
+      "status": "published",
+      "schemaVersion": 1,
+      "era": "dvapara-yuga",
+      "variantTraditions": [],
+      "aliases": [],
+      "scriptureSources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Sabhā Parva"
+        },
+        {
+          "work": "Mahābhārata",
+          "section": "Vana Parva"
+        }
+      ],
+      "tags": [
+        "atlas",
+        "mahabharata"
+      ],
+      "categories": [
+        "kingdom"
+      ],
+      "importance": 2,
+      "seo": {
+        "title": "Suhma"
+      },
+      "atlas": {
+        "latitude": 22.5,
+        "longitude": 88,
+        "modernLocation": "Southwest Bengal (traditional)",
+        "atlasCategory": "kingdom"
+      }
+    },
+    {
+      "id": "kingdom.surasena",
+      "slug": "surasena",
+      "kind": "kingdom",
+      "name": "Śūrasena",
+      "englishName": "Surasena",
+      "iastName": "Śūrasena",
+      "summary": "Mathurā region on the Yamunā.",
+      "description": "Śūrasena is the Mathurā heartland of early Yadu history.",
+      "primaryScripture": "Bhāgavata Purāṇa",
+      "status": "published",
+      "schemaVersion": 1,
+      "era": "dvapara-yuga",
+      "variantTraditions": [],
+      "aliases": [
+        "Surasena"
+      ],
+      "scriptureSources": [
+        {
+          "work": "Bhāgavata Purāṇa",
+          "section": "Skandha 10"
+        },
+        {
+          "work": "Mahābhārata",
+          "section": "Sabhā Parva"
+        }
+      ],
+      "tags": [
+        "mahajanapada",
+        "yadu"
+      ],
+      "categories": [
+        "kingdom"
+      ],
+      "importance": 5,
+      "seo": {
+        "title": "Śūrasena"
+      },
+      "atlas": {
+        "latitude": 27.4,
+        "longitude": 77.5,
+        "modernLocation": "Mathura, Uttar Pradesh",
+        "kingdom": "Śūrasena",
+        "atlasCategory": "kingdom"
+      }
+    },
+    {
+      "id": "kingdom.surashtra",
+      "slug": "surashtra",
+      "kind": "kingdom",
+      "name": "Surāṣṭra",
+      "englishName": "Surashtra",
+      "iastName": "Surāṣṭra",
+      "summary": "Peninsula kingdom of western Bhārata.",
+      "description": "Peninsula kingdom of western Bhārata. Placed approximately for educational atlas use.",
+      "primaryScripture": "Mahābhārata",
+      "status": "published",
+      "schemaVersion": 1,
+      "era": "dvapara-yuga",
+      "variantTraditions": [],
+      "aliases": [],
+      "scriptureSources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Sabhā Parva"
+        },
+        {
+          "work": "Mahābhārata",
+          "section": "Vana Parva"
+        }
+      ],
+      "tags": [
+        "atlas",
+        "mahabharata"
+      ],
+      "categories": [
+        "kingdom"
+      ],
+      "importance": 3,
+      "seo": {
+        "title": "Surāṣṭra"
+      },
+      "atlas": {
+        "latitude": 21.5,
+        "longitude": 70.5,
+        "modernLocation": "Saurashtra peninsula",
+        "atlasCategory": "kingdom"
+      }
+    },
+    {
+      "id": "kingdom.trigarta",
+      "slug": "trigarta",
+      "kind": "kingdom",
+      "name": "Trigarta",
+      "englishName": "Trigarta",
+      "iastName": "Trigarta",
+      "summary": "Hill kingdom of Suśarmā; foe of Matsya.",
+      "description": "Hill kingdom of Suśarmā; foe of Matsya. Placed approximately for educational atlas use.",
+      "primaryScripture": "Mahābhārata",
+      "status": "published",
+      "schemaVersion": 1,
+      "era": "dvapara-yuga",
+      "variantTraditions": [],
+      "aliases": [],
+      "scriptureSources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Virāṭa Parva"
+        }
+      ],
+      "tags": [
+        "atlas",
+        "mahabharata"
+      ],
+      "categories": [
+        "kingdom"
+      ],
+      "importance": 3,
+      "seo": {
+        "title": "Trigarta"
+      },
+      "atlas": {
+        "latitude": 32,
+        "longitude": 76,
+        "modernLocation": "Kangra / Jalandhar tract (traditional)",
+        "atlasCategory": "kingdom"
+      }
+    },
+    {
+      "id": "kingdom.vajji",
+      "slug": "vajji",
+      "kind": "kingdom",
+      "name": "Vṛji",
+      "englishName": "Vajji",
+      "iastName": "Vṛji",
+      "summary": "Confederacy north of the Gaṅgā.",
+      "description": "Vṛji lies north of the Gaṅgā; Vaiśālī is its great city.",
+      "primaryScripture": "Mahābhārata",
+      "status": "published",
+      "schemaVersion": 1,
+      "era": "dvapara-yuga",
+      "variantTraditions": [],
+      "aliases": [
+        "Vajji"
+      ],
+      "scriptureSources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Sabhā Parva"
+        }
+      ],
+      "tags": [
+        "mahajanapada"
+      ],
+      "categories": [
+        "kingdom"
+      ],
+      "importance": 3,
+      "seo": {
+        "title": "Vṛji"
+      },
+      "atlas": {
+        "latitude": 26,
+        "longitude": 85.2,
+        "modernLocation": "North Bihar (Vaishali)",
+        "kingdom": "Vṛji",
+        "atlasCategory": "kingdom"
+      }
+    },
+    {
+      "id": "kingdom.vanga",
+      "slug": "vanga",
+      "kind": "kingdom",
+      "name": "Vaṅga",
+      "englishName": "Vanga",
+      "iastName": "Vaṅga",
+      "summary": "Eastern kingdom of the Bengal delta.",
+      "description": "Eastern kingdom of the Bengal delta. Placed approximately for educational atlas use.",
+      "primaryScripture": "Mahābhārata",
+      "status": "published",
+      "schemaVersion": 1,
+      "era": "dvapara-yuga",
+      "variantTraditions": [],
+      "aliases": [],
+      "scriptureSources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Sabhā Parva"
+        },
+        {
+          "work": "Mahābhārata",
+          "section": "Vana Parva"
+        }
+      ],
+      "tags": [
+        "atlas",
+        "mahabharata"
+      ],
+      "categories": [
+        "kingdom"
+      ],
+      "importance": 3,
+      "seo": {
+        "title": "Vaṅga"
+      },
+      "atlas": {
+        "latitude": 23.5,
+        "longitude": 90,
+        "modernLocation": "Bengal / Bangladesh (traditional)",
+        "atlasCategory": "kingdom"
+      }
+    },
+    {
+      "id": "kingdom.vatsa",
+      "slug": "vatsa",
+      "kind": "kingdom",
+      "name": "Vatsa",
+      "englishName": "Vatsa",
+      "iastName": "Vatsa",
+      "summary": "Yamunā kingdom; capital Kauśāmbī.",
+      "description": "Vatsa is a Yamunā-side Mahājanapada with capital Kauśāmbī.",
+      "primaryScripture": "Mahābhārata",
+      "status": "published",
+      "schemaVersion": 1,
+      "era": "dvapara-yuga",
+      "variantTraditions": [],
+      "aliases": [],
+      "scriptureSources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Sabhā Parva"
+        }
+      ],
+      "tags": [
+        "mahajanapada"
+      ],
+      "categories": [
+        "kingdom"
+      ],
+      "importance": 4,
+      "seo": {
+        "title": "Vatsa"
+      },
+      "atlas": {
+        "latitude": 25.5,
+        "longitude": 81.3,
+        "modernLocation": "Near Prayagraj (Kausambi)",
+        "kingdom": "Vatsa",
+        "atlasCategory": "kingdom"
+      }
+    },
+    {
+      "id": "kingdom.vidarbha",
+      "slug": "vidarbha",
+      "kind": "kingdom",
+      "name": "Vidarbha",
+      "englishName": "Vidarbha",
+      "iastName": "Vidarbha",
+      "summary": "Deccan kingdom of Rukmiṇī.",
+      "description": "Vidarbha is Rukmiṇī's homeland in the Bhāgavata.",
+      "primaryScripture": "Bhāgavata Purāṇa",
+      "status": "published",
+      "schemaVersion": 1,
+      "era": "dvapara-yuga",
+      "variantTraditions": [],
+      "aliases": [],
+      "scriptureSources": [
+        {
+          "work": "Bhāgavata Purāṇa",
+          "section": "Skandha 10"
+        }
+      ],
+      "tags": [
+        "rukmini"
+      ],
+      "categories": [
+        "kingdom"
+      ],
+      "importance": 4,
+      "seo": {
+        "title": "Vidarbha"
+      },
+      "atlas": {
+        "latitude": 20.5,
+        "longitude": 78.5,
+        "modernLocation": "Vidarbha, Maharashtra",
+        "kingdom": "Vidarbha",
+        "atlasCategory": "kingdom"
+      }
+    },
+    {
+      "id": "kingdom.videha",
+      "slug": "videha",
+      "kind": "kingdom",
+      "name": "Videha",
+      "englishName": "Videha",
+      "iastName": "Videha",
+      "summary": "East-Gangetic kingdom; Mithilā.",
+      "description": "East-Gangetic kingdom; Mithilā. Placed approximately for educational atlas use.",
+      "primaryScripture": "Mahābhārata",
+      "status": "published",
+      "schemaVersion": 1,
+      "era": "dvapara-yuga",
+      "variantTraditions": [],
+      "aliases": [],
+      "scriptureSources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Sabhā Parva"
+        },
+        {
+          "work": "Mahābhārata",
+          "section": "Vana Parva"
+        }
+      ],
+      "tags": [
+        "atlas",
+        "mahabharata"
+      ],
+      "categories": [
+        "kingdom"
+      ],
+      "importance": 4,
+      "seo": {
+        "title": "Videha"
+      },
+      "atlas": {
+        "latitude": 26.5,
+        "longitude": 86,
+        "modernLocation": "North Bihar / Terai",
+        "atlasCategory": "kingdom"
+      }
+    },
+    {
+      "id": "kingdom.virata",
+      "slug": "virata",
+      "kind": "kingdom",
+      "name": "Virāṭa",
+      "englishName": "Virata",
+      "iastName": "Virāṭa",
+      "summary": "Matsya kingdom where the Pāṇḍavas spend their year in disguise.",
+      "description": "The kingdom of Virāṭa (Matsya) is the setting of the Virāṭa Parva — the Pāṇḍavas' thirteenth year of exile in disguise, ending with the recovery of the Kaurava cattle raid.",
+      "primaryScripture": "Mahābhārata",
+      "status": "published",
+      "schemaVersion": 1,
+      "era": "dvapara-yuga",
+      "variantTraditions": [],
+      "aliases": [
+        "Matsya",
+        "Virata's kingdom"
+      ],
+      "scriptureSources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Virāṭa Parva"
+        }
+      ],
+      "tags": [
+        "pandava",
+        "exile"
+      ],
+      "categories": [
+        "kingdom"
+      ],
+      "importance": 4,
+      "seo": {
+        "title": "Virāṭa"
+      },
+      "atlas": {
+        "latitude": 26.9,
+        "longitude": 76.3,
+        "modernLocation": "Rajasthan / northeastern Rajasthan region (traditional)",
+        "kingdom": "Matsya (Virāṭa)",
+        "scripturalSignificance": "Setting of the Pāṇḍavas' year of ajñātavāsa.",
+        "atlasCategory": "kingdom"
+      }
+    },
+    {
+      "id": "mountain.gandhamadana",
+      "slug": "gandhamadana",
+      "kind": "mountain",
+      "name": "Gandhamādana",
+      "englishName": "Gandhamadana",
+      "iastName": "Gandhamādana",
+      "summary": "Mountain of Bhīma's journeys and divine flora.",
+      "description": "Mountain of Bhīma's journeys and divine flora. Placed approximately for educational atlas use.",
+      "primaryScripture": "Mahābhārata",
+      "status": "published",
+      "schemaVersion": 1,
+      "era": "dvapara-yuga",
+      "variantTraditions": [],
+      "aliases": [],
+      "scriptureSources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Vana Parva"
+        }
+      ],
+      "tags": [
+        "atlas",
+        "mahabharata"
+      ],
+      "categories": [
+        "mountain"
+      ],
+      "importance": 4,
+      "seo": {
+        "title": "Gandhamādana"
+      },
+      "atlas": {
+        "latitude": 30.9,
+        "longitude": 79.2,
+        "modernLocation": "Garhwal Himalaya (traditional)",
+        "atlasCategory": "mountain"
+      }
+    },
+    {
+      "id": "mountain.govardhana",
+      "slug": "govardhana",
+      "kind": "mountain",
+      "name": "Govardhana",
+      "englishName": "Govardhana",
+      "iastName": "Govardhana",
+      "summary": "Hill lifted by Kṛṣṇa to shelter the cowherds from Indra's storm.",
+      "description": "Govardhana is the hill Kṛṣṇa raises on his little finger for seven days, ending Indra's pride and establishing Govardhana-pūjā among the Vraja folk.",
+      "primaryScripture": "Bhāgavata Purāṇa",
+      "status": "published",
+      "schemaVersion": 1,
+      "era": "dvapara-yuga",
+      "variantTraditions": [],
+      "aliases": [
+        "Giriraja",
+        "Govardhan Hill"
+      ],
+      "scriptureSources": [
+        {
+          "work": "Bhāgavata Purāṇa",
+          "section": "Skandha 10",
+          "chapter": "25"
+        }
+      ],
+      "tags": [
+        "krishna",
+        "vraja"
+      ],
+      "categories": [
+        "mountain",
+        "sacred"
+      ],
+      "importance": 5,
+      "seo": {
+        "title": "Govardhana"
+      },
+      "atlas": {
+        "latitude": 27.5,
+        "longitude": 77.47,
+        "modernLocation": "Uttar Pradesh (near Mathurā)",
+        "kingdom": "Vraja",
+        "scripturalSignificance": "Site of Govardhana-dhāraṇa in Bhāgavata 10.",
+        "atlasCategory": "mountain"
+      }
+    },
+    {
+      "id": "mountain.meru",
+      "slug": "meru",
+      "kind": "mountain",
+      "name": "Meru",
+      "englishName": "Meru",
+      "iastName": "Meru",
+      "summary": "Cosmic mountain of northern sacred geography.",
+      "description": "Cosmic mountain of northern sacred geography. Placed approximately for educational atlas use.",
+      "primaryScripture": "Mahābhārata",
+      "status": "published",
+      "schemaVersion": 1,
+      "era": "dvapara-yuga",
+      "variantTraditions": [],
+      "aliases": [],
+      "scriptureSources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Sabhā Parva"
+        },
+        {
+          "work": "Mahābhārata",
+          "section": "Vana Parva"
+        }
+      ],
+      "tags": [
+        "atlas",
+        "mahabharata"
+      ],
+      "categories": [
+        "mountain"
+      ],
+      "importance": 4,
+      "seo": {
+        "title": "Meru"
+      },
+      "atlas": {
+        "latitude": 31.5,
+        "longitude": 80,
+        "modernLocation": "Himalayan / cosmological north (symbolic)",
+        "atlasCategory": "mountain"
+      }
+    },
+    {
+      "id": "place.badari",
+      "slug": "badari-tirtha",
+      "kind": "pilgrimage",
+      "name": "Badarī",
+      "englishName": "Badari",
+      "iastName": "Badarī",
+      "summary": "Northern tīrtha of Nara–Nārāyaṇa fame.",
+      "description": "Northern tīrtha of Nara–Nārāyaṇa fame. Placed approximately for educational atlas use.",
+      "primaryScripture": "Mahābhārata",
+      "status": "published",
+      "schemaVersion": 1,
+      "era": "dvapara-yuga",
+      "variantTraditions": [],
+      "aliases": [],
+      "scriptureSources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Vana Parva"
+        },
+        {
+          "work": "Bhagavad Gītā",
+          "chapter": "11"
+        }
+      ],
+      "tags": [
+        "atlas",
+        "mahabharata",
+        "tirtha"
+      ],
+      "categories": [
+        "pilgrimage"
+      ],
+      "importance": 5,
+      "seo": {
+        "title": "Badarī"
+      },
+      "atlas": {
+        "latitude": 30.74,
+        "longitude": 79.49,
+        "modernLocation": "Badrinath, Uttarakhand",
+        "atlasCategory": "pilgrimage"
+      }
+    },
+    {
+      "id": "place.badarikashrama",
+      "slug": "badarikashrama",
+      "kind": "pilgrimage",
+      "name": "Badarikāśrama",
+      "englishName": "Badarikashrama",
+      "iastName": "Badarikāśrama",
+      "summary": "Himalayan āśrama of Nara-Nārāyaṇa; pilgrimage of the epic.",
+      "description": "Badarikāśrama in the high Himalaya is linked to Nara-Nārāyaṇa and appears among the great northern tīrthas visited in Mahābhārata pilgrimage lore.",
+      "primaryScripture": "Mahābhārata",
+      "status": "published",
+      "schemaVersion": 1,
+      "era": "dvapara-yuga",
+      "variantTraditions": [],
+      "aliases": [
+        "Badrinath",
+        "Badari",
+        "Badarikashrama"
+      ],
+      "scriptureSources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Vana Parva"
+        },
+        {
+          "work": "Mahābhārata",
+          "section": "Śānti Parva"
+        }
+      ],
+      "tags": [
+        "ashrama",
+        "himalaya",
+        "tirtha"
+      ],
+      "categories": [
+        "ashrama",
+        "pilgrimage",
+        "sacred"
+      ],
+      "importance": 4,
+      "seo": {
+        "title": "Badarikāśrama"
+      },
+      "atlas": {
+        "latitude": 30.74,
+        "longitude": 79.49,
+        "modernLocation": "Badrinath, Uttarakhand",
+        "scripturalSignificance": "Sacred Himalayan āśrama and northern tīrtha.",
+        "atlasCategory": "ashrama"
+      }
+    },
+    {
+      "id": "place.gokula",
+      "slug": "gokula",
+      "kind": "city",
+      "name": "Gokula",
+      "englishName": "Gokula",
+      "iastName": "Gokula",
+      "summary": "Cowherd settlement where Kṛṣṇa is raised by Nanda and Yaśodā.",
+      "description": "Gokula (with nearby Mahāvana) is the pastoral home of Nanda's clan where the infant Kṛṣṇa is brought after birth in Mathurā.",
+      "primaryScripture": "Bhāgavata Purāṇa",
+      "status": "published",
+      "schemaVersion": 1,
+      "era": "dvapara-yuga",
+      "variantTraditions": [],
+      "aliases": [
+        "Mahavana",
+        "Gokul"
+      ],
+      "scriptureSources": [
+        {
+          "work": "Bhāgavata Purāṇa",
+          "section": "Skandha 10"
+        }
+      ],
+      "tags": [
+        "krishna",
+        "vraja"
+      ],
+      "categories": [
+        "city",
+        "sacred"
+      ],
+      "importance": 4,
+      "seo": {
+        "title": "Gokula"
+      },
+      "atlas": {
+        "latitude": 27.44,
+        "longitude": 77.72,
+        "modernLocation": "Uttar Pradesh (near Mathurā)",
+        "kingdom": "Vraja",
+        "scripturalSignificance": "Nanda-Gopa's settlement; Kṛṣṇa's infancy.",
+        "atlasCategory": "city"
+      }
+    },
+    {
+      "id": "place.haridwar",
+      "slug": "haridwar",
+      "kind": "pilgrimage",
+      "name": "Gaṅgādvāra",
+      "englishName": "Haridwar",
+      "iastName": "Gaṅgādvāra",
+      "summary": "Where Gaṅgā enters the plains.",
+      "description": "Gaṅgādvāra is the northern gate of the Gaṅgā.",
+      "primaryScripture": "Mahābhārata",
+      "status": "published",
+      "schemaVersion": 1,
+      "era": "dvapara-yuga",
+      "variantTraditions": [],
+      "aliases": [
+        "Haridwar"
+      ],
+      "scriptureSources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Vana Parva"
+        }
+      ],
+      "tags": [
+        "tirtha"
+      ],
+      "categories": [
+        "pilgrimage"
+      ],
+      "importance": 4,
+      "seo": {
+        "title": "Gaṅgādvāra"
+      },
+      "atlas": {
+        "latitude": 29.95,
+        "longitude": 78.16,
+        "modernLocation": "Haridwar, Uttarakhand",
+        "atlasCategory": "pilgrimage"
+      }
+    },
+    {
+      "id": "place.hastinapura-ghat",
+      "slug": "hastinapura-ghat",
+      "kind": "pilgrimage",
+      "name": "Hastināpura ghats",
+      "englishName": "Hastinapura ghats",
+      "iastName": "Hastināpura-ghāṭa",
+      "summary": "Riverfront of the Kuru capital.",
+      "description": "Riverfront of the Kuru capital. Placed approximately for educational atlas use.",
+      "primaryScripture": "Mahābhārata",
+      "status": "published",
+      "schemaVersion": 1,
+      "era": "dvapara-yuga",
+      "variantTraditions": [],
+      "aliases": [],
+      "scriptureSources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Sabhā Parva"
+        },
+        {
+          "work": "Mahābhārata",
+          "section": "Vana Parva"
+        }
+      ],
+      "tags": [
+        "atlas",
+        "mahabharata"
+      ],
+      "categories": [
+        "pilgrimage"
+      ],
+      "importance": 3,
+      "seo": {
+        "title": "Hastināpura ghats"
+      },
+      "atlas": {
+        "latitude": 29.16,
+        "longitude": 78.02,
+        "modernLocation": "Near Meerut, UP",
+        "kingdom": "Kuru",
+        "atlasCategory": "pilgrimage"
+      }
+    },
+    {
+      "id": "place.kailasa",
+      "slug": "kailasa",
+      "kind": "mountain",
+      "name": "Kailāsa",
+      "englishName": "Kailasa",
+      "iastName": "Kailāsa",
+      "summary": "Sacred northern mountain of divine geography.",
+      "description": "Sacred northern mountain of divine geography. Placed approximately for educational atlas use.",
+      "primaryScripture": "Mahābhārata",
+      "status": "published",
+      "schemaVersion": 1,
+      "era": "dvapara-yuga",
+      "variantTraditions": [],
+      "aliases": [],
+      "scriptureSources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Sabhā Parva"
+        },
+        {
+          "work": "Mahābhārata",
+          "section": "Vana Parva"
+        }
+      ],
+      "tags": [
+        "atlas",
+        "mahabharata"
+      ],
+      "categories": [
+        "mountain"
+      ],
+      "importance": 5,
+      "seo": {
+        "title": "Kailāsa"
+      },
+      "atlas": {
+        "latitude": 31.07,
+        "longitude": 81.31,
+        "modernLocation": "Mount Kailash region (traditional)",
+        "atlasCategory": "mountain"
+      }
+    },
+    {
+      "id": "place.kedara",
+      "slug": "kedara",
+      "kind": "pilgrimage",
+      "name": "Kedāra",
+      "englishName": "Kedara",
+      "iastName": "Kedāra",
+      "summary": "Himalayan tīrtha of Śiva fame in pilgrimage lists.",
+      "description": "Himalayan tīrtha of Śiva fame in pilgrimage lists. Placed approximately for educational atlas use.",
+      "primaryScripture": "Mahābhārata",
+      "status": "published",
+      "schemaVersion": 1,
+      "era": "dvapara-yuga",
+      "variantTraditions": [],
+      "aliases": [],
+      "scriptureSources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Vana Parva"
+        }
+      ],
+      "tags": [
+        "atlas",
+        "mahabharata",
+        "tirtha"
+      ],
+      "categories": [
+        "pilgrimage"
+      ],
+      "importance": 4,
+      "seo": {
+        "title": "Kedāra"
+      },
+      "atlas": {
+        "latitude": 30.73,
+        "longitude": 79.07,
+        "modernLocation": "Kedarnath, Uttarakhand",
+        "atlasCategory": "pilgrimage"
+      }
+    },
+    {
+      "id": "place.kurukshetra",
+      "slug": "kurukshetra",
+      "kind": "pilgrimage",
+      "name": "Kurukṣetra",
+      "englishName": "Kurukshetra",
+      "iastName": "Kurukṣetra",
+      "summary": "Battlefield of the Mahābhārata war and setting of the Bhagavad Gītā.",
+      "description": "Kurukṣetra is the sacred plain where the Kauravas and Pāṇḍavas fought. The Bhagavad Gītā opens with Arjuna's despondency on this field — Dharmakṣetra, Kurukṣetra.",
+      "primaryScripture": "Bhagavad Gītā",
+      "status": "published",
+      "schemaVersion": 1,
+      "era": "dvapara-yuga",
+      "variantTraditions": [],
+      "aliases": [
+        "Dharmakshetra",
+        "Field of the Kurus",
+        "Samantapancaka"
+      ],
+      "scriptureSources": [
+        {
+          "work": "Bhagavad Gītā",
+          "chapter": "1"
+        },
+        {
+          "work": "Mahābhārata",
+          "section": "Bhīṣma Parva"
+        }
+      ],
+      "tags": [
+        "battle",
+        "gita"
+      ],
+      "categories": [
+        "pilgrimage",
+        "battlefield"
+      ],
+      "importance": 5,
+      "seo": {
+        "title": "Kurukṣetra"
+      },
+      "atlas": {
+        "latitude": 29.97,
+        "longitude": 76.88,
+        "modernLocation": "Haryana",
+        "kingdom": "Kuru",
+        "scripturalSignificance": "Site of the eighteen-day war; the Gītā is spoken here between Kṛṣṇa and Arjuna.",
+        "atlasCategory": "battlefield"
+      }
+    },
+    {
+      "id": "place.lanka",
+      "slug": "lanka-atlas",
+      "kind": "city",
+      "name": "Laṅkā",
+      "englishName": "Lanka",
+      "iastName": "Laṅkā",
+      "summary": "Island realm south of the tip (epic geography).",
+      "description": "Island realm south of the tip (epic geography). Placed approximately for educational atlas use.",
+      "primaryScripture": "Mahābhārata",
+      "status": "published",
+      "schemaVersion": 1,
+      "era": "dvapara-yuga",
+      "variantTraditions": [],
+      "aliases": [],
+      "scriptureSources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Vana Parva"
+        }
+      ],
+      "tags": [
+        "atlas",
+        "mahabharata",
+        "island"
+      ],
+      "categories": [
+        "city"
+      ],
+      "importance": 3,
+      "seo": {
+        "title": "Laṅkā"
+      },
+      "atlas": {
+        "latitude": 7.5,
+        "longitude": 80.5,
+        "modernLocation": "Sri Lanka (traditional epic placement)",
+        "atlasCategory": "city"
+      }
+    },
+    {
+      "id": "place.prabhasa",
+      "slug": "prabhasa",
+      "kind": "pilgrimage",
+      "name": "Prabhāsa",
+      "englishName": "Prabhasa",
+      "iastName": "Prabhāsa",
+      "summary": "Shore of the Yadu end.",
+      "description": "Prabhāsa is linked to the Mausala destruction of the Yadus.",
+      "primaryScripture": "Mahābhārata",
+      "status": "published",
+      "schemaVersion": 1,
+      "era": "dvapara-yuga",
+      "variantTraditions": [],
+      "aliases": [
+        "Somnath"
+      ],
+      "scriptureSources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Mausala Parva"
+        }
+      ],
+      "tags": [
+        "yadu"
+      ],
+      "categories": [
+        "pilgrimage"
+      ],
+      "importance": 4,
+      "seo": {
+        "title": "Prabhāsa"
+      },
+      "atlas": {
+        "latitude": 20.89,
+        "longitude": 70.4,
+        "modernLocation": "Somnath, Gujarat",
+        "kingdom": "Yadu",
+        "atlasCategory": "pilgrimage"
+      }
+    },
+    {
+      "id": "place.prayaga",
+      "slug": "prayaga",
+      "kind": "pilgrimage",
+      "name": "Prayāga",
+      "englishName": "Prayaga",
+      "iastName": "Prayāga",
+      "summary": "Gaṅgā–Yamunā confluence.",
+      "description": "Prayāga is the foremost saṅgama tīrtha of epic pilgrimage lists.",
+      "primaryScripture": "Mahābhārata",
+      "status": "published",
+      "schemaVersion": 1,
+      "era": "dvapara-yuga",
+      "variantTraditions": [],
+      "aliases": [
+        "Prayagraj"
+      ],
+      "scriptureSources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Vana Parva"
+        }
+      ],
+      "tags": [
+        "tirtha"
+      ],
+      "categories": [
+        "pilgrimage"
+      ],
+      "importance": 5,
+      "seo": {
+        "title": "Prayāga"
+      },
+      "atlas": {
+        "latitude": 25.43,
+        "longitude": 81.85,
+        "modernLocation": "Prayagraj, Uttar Pradesh",
+        "atlasCategory": "pilgrimage"
+      }
+    },
+    {
+      "id": "place.pushkara",
+      "slug": "pushkara",
+      "kind": "pilgrimage",
+      "name": "Puṣkara",
+      "englishName": "Pushkara",
+      "iastName": "Puṣkara",
+      "summary": "Great western tīrtha of pilgrimage lists.",
+      "description": "Great western tīrtha of pilgrimage lists. Placed approximately for educational atlas use.",
+      "primaryScripture": "Mahābhārata",
+      "status": "published",
+      "schemaVersion": 1,
+      "era": "dvapara-yuga",
+      "variantTraditions": [],
+      "aliases": [],
+      "scriptureSources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Vana Parva"
+        }
+      ],
+      "tags": [
+        "atlas",
+        "mahabharata",
+        "tirtha"
+      ],
+      "categories": [
+        "pilgrimage"
+      ],
+      "importance": 4,
+      "seo": {
+        "title": "Puṣkara"
+      },
+      "atlas": {
+        "latitude": 26.49,
+        "longitude": 74.55,
+        "modernLocation": "Pushkar, Rajasthan",
+        "atlasCategory": "pilgrimage"
+      }
+    },
+    {
+      "id": "place.vrindavana",
+      "slug": "vrindavana",
+      "kind": "pilgrimage",
+      "name": "Vṛndāvana",
+      "englishName": "Vrindavana",
+      "iastName": "Vṛndāvana",
+      "summary": "Forest grove of Kṛṣṇa's childhood līlās.",
+      "description": "Vṛndāvana is the pastoral landscape of Kṛṣṇa's cowherd years — rāsa, lifting of Govardhana, and the affection of the gopīs — celebrated in the Bhāgavata's tenth skandha.",
+      "primaryScripture": "Bhāgavata Purāṇa",
+      "status": "published",
+      "schemaVersion": 1,
+      "era": "dvapara-yuga",
+      "variantTraditions": [],
+      "aliases": [
+        "Vrindavan",
+        "Brindaban"
+      ],
+      "scriptureSources": [
+        {
+          "work": "Bhāgavata Purāṇa",
+          "section": "Skandha 10"
+        }
+      ],
+      "tags": [
+        "krishna",
+        "bhakti"
+      ],
+      "categories": [
+        "pilgrimage",
+        "forest",
+        "sacred"
+      ],
+      "importance": 5,
+      "seo": {
+        "title": "Vṛndāvana"
+      },
+      "atlas": {
+        "latitude": 27.58,
+        "longitude": 77.7,
+        "modernLocation": "Uttar Pradesh (near Mathurā)",
+        "kingdom": "Vraja",
+        "scripturalSignificance": "Setting of Kṛṣṇa's youthful līlās in the Bhāgavata Purāṇa.",
+        "atlasCategory": "pilgrimage"
+      }
+    },
+    {
+      "id": "river.ganga",
+      "slug": "ganga",
+      "kind": "river",
+      "name": "Gaṅgā",
+      "englishName": "Ganga",
+      "iastName": "Gaṅgā",
+      "summary": "Sacred river; mother of Bhīṣma in the epic genealogy.",
+      "description": "Gaṅgā is both goddess and river — mother of Bhīṣma by Śaṃtanu, and the purifying stream that defines much of northern sacred geography.",
+      "primaryScripture": "Mahābhārata",
+      "status": "published",
+      "schemaVersion": 1,
+      "era": "eternal",
+      "variantTraditions": [],
+      "aliases": [
+        "Ganges",
+        "Jahnavi",
+        "Bhagirathi"
+      ],
+      "scriptureSources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Ādi Parva"
+        }
+      ],
+      "tags": [
+        "river",
+        "devi"
+      ],
+      "categories": [
+        "river",
+        "devi"
+      ],
+      "importance": 5,
+      "seo": {
+        "title": "Gaṅgā"
+      },
+      "externalRefs": {
+        "genealogyId": "ganga"
+      },
+      "atlas": {
+        "latitude": 27.5,
+        "longitude": 80.5,
+        "modernLocation": "Ganges river system, North India",
+        "scripturalSignificance": "Mother of Bhīṣma; foremost sacred river of Bhārata.",
+        "atlasCategory": "river"
+      }
+    },
+    {
+      "id": "river.godavari",
+      "slug": "godavari",
+      "kind": "river",
+      "name": "Godāvarī",
+      "englishName": "Godavari",
+      "iastName": "Godāvarī",
+      "summary": "Great Deccan river.",
+      "description": "Godāvarī is the principal river of Aśmaka and the Deccan.",
+      "primaryScripture": "Mahābhārata",
+      "status": "published",
+      "schemaVersion": 1,
+      "era": "dvapara-yuga",
+      "variantTraditions": [],
+      "aliases": [],
+      "scriptureSources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Sabhā Parva"
+        }
+      ],
+      "tags": [
+        "river"
+      ],
+      "categories": [
+        "river"
+      ],
+      "importance": 4,
+      "seo": {
+        "title": "Godāvarī"
+      },
+      "atlas": {
+        "latitude": 18.5,
+        "longitude": 78,
+        "modernLocation": "Godavari river",
+        "atlasCategory": "river"
+      }
+    },
+    {
+      "id": "river.kaveri",
+      "slug": "kaveri",
+      "kind": "river",
+      "name": "Kāverī",
+      "englishName": "Kaveri",
+      "iastName": "Kāverī",
+      "summary": "Great southern river.",
+      "description": "Great southern river. Placed approximately for educational atlas use.",
+      "primaryScripture": "Mahābhārata",
+      "status": "published",
+      "schemaVersion": 1,
+      "era": "dvapara-yuga",
+      "variantTraditions": [],
+      "aliases": [],
+      "scriptureSources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Sabhā Parva"
+        },
+        {
+          "work": "Mahābhārata",
+          "section": "Vana Parva"
+        }
+      ],
+      "tags": [
+        "atlas",
+        "mahabharata"
+      ],
+      "categories": [
+        "river"
+      ],
+      "importance": 3,
+      "seo": {
+        "title": "Kāverī"
+      },
+      "atlas": {
+        "latitude": 11.5,
+        "longitude": 77.5,
+        "modernLocation": "Kaveri river",
+        "atlasCategory": "river"
+      }
+    },
+    {
+      "id": "river.krishna",
+      "slug": "krishna-river",
+      "kind": "river",
+      "name": "Kṛṣṇā",
+      "englishName": "Krishna River",
+      "iastName": "Kṛṣṇā",
+      "summary": "Deccan river of southern digvijaya geography.",
+      "description": "Deccan river of southern digvijaya geography. Placed approximately for educational atlas use.",
+      "primaryScripture": "Mahābhārata",
+      "status": "published",
+      "schemaVersion": 1,
+      "era": "dvapara-yuga",
+      "variantTraditions": [],
+      "aliases": [],
+      "scriptureSources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Sabhā Parva"
+        },
+        {
+          "work": "Mahābhārata",
+          "section": "Vana Parva"
+        }
+      ],
+      "tags": [
+        "atlas",
+        "mahabharata"
+      ],
+      "categories": [
+        "river"
+      ],
+      "importance": 3,
+      "seo": {
+        "title": "Kṛṣṇā"
+      },
+      "atlas": {
+        "latitude": 16.5,
+        "longitude": 78,
+        "modernLocation": "Krishna river",
+        "atlasCategory": "river"
+      }
+    },
+    {
+      "id": "river.narmada",
+      "slug": "narmada",
+      "kind": "river",
+      "name": "Narmadā",
+      "englishName": "Narmada",
+      "iastName": "Narmadā",
+      "summary": "Great west-flowing central river.",
+      "description": "Narmadā bounds northern and southern landscapes in epic geography.",
+      "primaryScripture": "Mahābhārata",
+      "status": "published",
+      "schemaVersion": 1,
+      "era": "dvapara-yuga",
+      "variantTraditions": [],
+      "aliases": [
+        "Narmada"
+      ],
+      "scriptureSources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Vana Parva"
+        }
+      ],
+      "tags": [
+        "river"
+      ],
+      "categories": [
+        "river"
+      ],
+      "importance": 4,
+      "seo": {
+        "title": "Narmadā"
+      },
+      "atlas": {
+        "latitude": 22,
+        "longitude": 76,
+        "modernLocation": "Narmada river, central India",
+        "atlasCategory": "river"
+      }
+    },
+    {
+      "id": "river.sarasvati",
+      "slug": "sarasvati",
+      "kind": "river",
+      "name": "Sarasvatī",
+      "englishName": "Sarasvati",
+      "iastName": "Sarasvatī",
+      "summary": "Sacred river of Kurukṣetra lore and Vedic memory.",
+      "description": "Sarasvatī is praised in Vedic and epic geography; near Kurukṣetra she figures in tīrtha lore associated with the field of the Kurus.",
+      "primaryScripture": "Mahābhārata",
+      "status": "published",
+      "schemaVersion": 1,
+      "era": "dvapara-yuga",
+      "variantTraditions": [],
+      "aliases": [
+        "Saraswati"
+      ],
+      "scriptureSources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Vana Parva"
+        },
+        {
+          "work": "Mahābhārata",
+          "section": "Śalya Parva"
+        }
+      ],
+      "tags": [
+        "river",
+        "tirtha"
+      ],
+      "categories": [
+        "river",
+        "sacred"
+      ],
+      "importance": 4,
+      "seo": {
+        "title": "Sarasvatī"
+      },
+      "atlas": {
+        "latitude": 29.8,
+        "longitude": 76.5,
+        "modernLocation": "Ghaggar–Hakra / Kurukṣetra region (traditional identification)",
+        "scripturalSignificance": "Sacred river tied to Kurukṣetra tīrtha geography.",
+        "atlasCategory": "river"
+      }
+    },
+    {
+      "id": "river.sarayu",
+      "slug": "sarayu",
+      "kind": "river",
+      "name": "Sarayū",
+      "englishName": "Sarayu",
+      "iastName": "Sarayū",
+      "summary": "River of Kosala in epic geography.",
+      "description": "River of Kosala in epic geography. Placed approximately for educational atlas use.",
+      "primaryScripture": "Mahābhārata",
+      "status": "published",
+      "schemaVersion": 1,
+      "era": "dvapara-yuga",
+      "variantTraditions": [],
+      "aliases": [],
+      "scriptureSources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Sabhā Parva"
+        },
+        {
+          "work": "Mahābhārata",
+          "section": "Vana Parva"
+        }
+      ],
+      "tags": [
+        "atlas",
+        "mahabharata"
+      ],
+      "categories": [
+        "river"
+      ],
+      "importance": 4,
+      "seo": {
+        "title": "Sarayū"
+      },
+      "atlas": {
+        "latitude": 27.2,
+        "longitude": 82.2,
+        "modernLocation": "Ghaghara / Sarayu system",
+        "atlasCategory": "river"
+      }
+    },
+    {
+      "id": "river.shipra",
+      "slug": "shipra",
+      "kind": "river",
+      "name": "Śiprā",
+      "englishName": "Shipra",
+      "iastName": "Śiprā",
+      "summary": "River of Ujjayinī.",
+      "description": "River of Ujjayinī. Placed approximately for educational atlas use.",
+      "primaryScripture": "Mahābhārata",
+      "status": "published",
+      "schemaVersion": 1,
+      "era": "dvapara-yuga",
+      "variantTraditions": [],
+      "aliases": [],
+      "scriptureSources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Sabhā Parva"
+        },
+        {
+          "work": "Mahābhārata",
+          "section": "Vana Parva"
+        }
+      ],
+      "tags": [
+        "atlas",
+        "mahabharata"
+      ],
+      "categories": [
+        "river"
+      ],
+      "importance": 3,
+      "seo": {
+        "title": "Śiprā"
+      },
+      "atlas": {
+        "latitude": 23.2,
+        "longitude": 75.8,
+        "modernLocation": "Shipra, Madhya Pradesh",
+        "kingdom": "Avanti",
+        "atlasCategory": "river"
+      }
+    },
+    {
+      "id": "river.sindhu",
+      "slug": "sindhu",
+      "kind": "river",
+      "name": "Sindhu",
+      "englishName": "Sindhu",
+      "iastName": "Sindhu",
+      "summary": "Great western river marking the edge of epic Bhārata.",
+      "description": "Sindhu is the mighty western river of Bhārata's geography, bounding northwestern kingdoms such as Gāndhāra in the epic world-map.",
+      "primaryScripture": "Mahābhārata",
+      "status": "published",
+      "schemaVersion": 1,
+      "era": "dvapara-yuga",
+      "variantTraditions": [],
+      "aliases": [
+        "Indus",
+        "Sindh"
+      ],
+      "scriptureSources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Bhīṣma Parva",
+          "note": "digvijaya / geography"
+        }
+      ],
+      "tags": [
+        "river"
+      ],
+      "categories": [
+        "river"
+      ],
+      "importance": 4,
+      "seo": {
+        "title": "Sindhu"
+      },
+      "atlas": {
+        "latitude": 28,
+        "longitude": 69,
+        "modernLocation": "Indus river (Pakistan / northwest)",
+        "scripturalSignificance": "Western river of epic Bhārata geography.",
+        "atlasCategory": "river"
+      }
+    },
+    {
+      "id": "river.yamuna",
+      "slug": "yamuna",
+      "kind": "river",
+      "name": "Yamunā",
+      "englishName": "Yamuna",
+      "iastName": "Yamunā",
+      "summary": "River of Mathurā–Vṛndāvana and Kṛṣṇa's childhood landscape.",
+      "description": "Yamunā flows past Mathurā and Vraja; Kṛṣṇa's childhood narratives — Kāliya, boat crossings, and gopa play — unfold along her banks.",
+      "primaryScripture": "Bhāgavata Purāṇa",
+      "status": "published",
+      "schemaVersion": 1,
+      "era": "dvapara-yuga",
+      "variantTraditions": [],
+      "aliases": [
+        "Jamuna",
+        "Kalindi"
+      ],
+      "scriptureSources": [
+        {
+          "work": "Bhāgavata Purāṇa",
+          "section": "Skandha 10"
+        },
+        {
+          "work": "Mahābhārata",
+          "section": "Ādi Parva"
+        }
+      ],
+      "tags": [
+        "river",
+        "vraja"
+      ],
+      "categories": [
+        "river"
+      ],
+      "importance": 5,
+      "seo": {
+        "title": "Yamunā"
+      },
+      "atlas": {
+        "latitude": 27.5,
+        "longitude": 77.6,
+        "modernLocation": "Yamuna river, North India",
+        "scripturalSignificance": "River of Vraja and Mathurā in Kṛṣṇa-līlā.",
+        "atlasCategory": "river"
+      }
+    }
+  ]
+}

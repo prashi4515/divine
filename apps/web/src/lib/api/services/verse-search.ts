@@ -1,8 +1,11 @@
 import {
+  knowledgeSearchResponseSchema,
   recentSearchesResponseSchema,
   searchSuggestResponseSchema,
   trendingSearchesResponseSchema,
   verseSearchResponseSchema,
+  type KnowledgeSearchGroup,
+  type KnowledgeSearchResponse,
   type SearchSuggestion,
   type VerseSearchResponse,
 } from "@divine/types";
@@ -56,6 +59,28 @@ export function pushLocalRecentSearch(query: string): void {
 }
 
 export const verseSearchService = {
+  /** Global Knowledge Search (people, places, events, verses, concepts). */
+  knowledgeSearch(params: {
+    q: string;
+    group?: KnowledgeSearchGroup;
+    perGroup?: number;
+  }): Promise<KnowledgeSearchResponse> {
+    const qs = new URLSearchParams();
+    qs.set("q", params.q);
+    if (params.group) qs.set("group", params.group);
+    if (params.perGroup) qs.set("perGroup", String(params.perGroup));
+    return fetch(`/api/search/knowledge?${qs.toString()}`, {
+      headers: { Accept: "application/json" },
+    }).then(async (res) => {
+      if (!res.ok) {
+        throw new Error(`Knowledge search failed (${res.status})`);
+      }
+      const json: unknown = await res.json();
+      return knowledgeSearchResponseSchema.parse(json);
+    });
+  },
+
+  /** @deprecated Prefer knowledgeSearch — verse-only static index. */
   search(params: {
     q?: string;
     page?: number;
@@ -63,7 +88,6 @@ export const verseSearchService = {
     topic?: string;
     lang?: string;
   }): Promise<VerseSearchResponse> {
-    // Prefer the Next.js static index (ms) over Nest/Neon (multi-second).
     const qs = new URLSearchParams();
     if (params.q) qs.set("q", params.q);
     if (params.page) qs.set("page", String(params.page));

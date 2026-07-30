@@ -1,6 +1,8 @@
 export { AutocompleteDropdown } from "./autocomplete-dropdown";
 export { HeaderSearch } from "./header-search";
 export { HighlightText } from "./highlight-text";
+export { KnowledgeResultCard } from "./knowledge-result-card";
+export { KnowledgeSearchResults } from "./knowledge-search-results";
 export { MatchExplanation } from "./match-explanation";
 export { RecentSearches } from "./recent-searches";
 export { RelatedReading } from "./related-reading";

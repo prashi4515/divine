@@ -28,6 +28,75 @@ export function formatShlokaDisplay(text: string): string {
   );
 }
 
+/** Strip dandas / verse markers left by Devanagari→IAST conversion. */
+function cleanIastMarkup(text: string): string {
+  return text
+    .replace(/[।॥]/g, "")
+    .replace(/\|+/g, "")
+    .replace(/\b\d+\.\d+\b/g, "")
+    .replace(/[^\S\n]+\n/g, "\n")
+    .replace(/\n{3,}/g, "\n\n")
+    .trim();
+}
+
+/**
+ * Popular “easy pronunciation” Latin (śhrī, kṛipayā, ch… for च) → standard IAST.
+ * Used only when Devanagari is unavailable.
+ */
+export function normalizePhoneticTransliteration(text: string): string {
+  // Distinct PUA placeholders (must not contain "ch").
+  const CCH = "\uE000";
+  const CCH_UP = "\uE002";
+  const CH = "\uE001";
+  const CH_UP = "\uE003";
+  return text
+    .replace(/chchh/g, CCH)
+    .replace(/Chchh/g, CCH_UP)
+    .replace(/chh/g, CH)
+    .replace(/Chh/g, CH_UP)
+    .replace(/ch/g, "c")
+    .replace(/Ch/g, "C")
+    .replaceAll(CCH, "cch")
+    .replaceAll(CCH_UP, "Cch")
+    .replaceAll(CH, "ch")
+    .replaceAll(CH_UP, "Ch")
+    .replace(/śh/g, "ś")
+    .replace(/Śh/g, "Ś")
+    .replace(/ṣh/g, "ṣ")
+    .replace(/Ṣh/g, "Ṣ")
+    .replace(/ṛi/g, "ṛ")
+    .replace(/Ṛi/g, "Ṛ")
+    .replace(/ṝi/g, "ṝ")
+    .replace(/Ṝi/g, "Ṝ")
+    .replace(/\b[Ss]w(?=[aeiouāīūṛṝḷḹeéoó])/g, (m) =>
+      m[0] === "S" ? "Sv" : "sv",
+    );
+}
+
+/**
+ * Canonical IAST for display: prefer Devanagari→IAST (Sanscript), else
+ * normalize a stored phonetic Latin string.
+ */
+export function toIast(
+  sanskritText: string,
+  fallbackPhonetic?: string | null,
+): string {
+  const source = repairIndicOrthography(sanskritText).trim();
+  if (source) {
+    try {
+      const converted = Sanscript.t(source, "devanagari", "iast");
+      return formatShlokaDisplay(cleanIastMarkup(converted));
+    } catch {
+      // fall through to phonetic cleanup
+    }
+  }
+  const phonetic = fallbackPhonetic?.trim();
+  if (phonetic) {
+    return formatShlokaDisplay(normalizePhoneticTransliteration(phonetic));
+  }
+  return "";
+}
+
 /**
  * Sanscript → Telugu keeps Sanskrit class-nasals (సఞ్జయ). Print Telugu
  * (holy-bhagavad-gita.org) uses anusvara (సంజయ). Same for other vargas.
@@ -60,8 +129,9 @@ export function shlokaInLanguage(
   }
 
   if (scheme === "iast") {
-    const stored = iastFromDb?.trim();
-    if (stored) return formatShlokaDisplay(stored);
+    // Always prefer proper IAST from Devanagari — imported Latin is often
+    // a non-standard “śhrī / kṛipayā / ch…” pronunciation scheme.
+    return toIast(source, iastFromDb);
   }
 
   try {

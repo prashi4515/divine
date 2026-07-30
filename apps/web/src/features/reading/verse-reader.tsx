@@ -26,6 +26,7 @@ import {
   readingLanguageScheme,
   rescriptPadacheda,
   shlokaInLanguage,
+  toIast,
 } from "@/lib/reading/shloka-script";
 import { repairIndicOrthography } from "@/lib/reading/repair-indic-orthography";
 import { isReadingLanguageCode } from "@/lib/reading/languages";
@@ -438,10 +439,13 @@ export function VerseReader({
   const shloka = verse
     ? shlokaInLanguage(verse.sanskritText, language, verse.transliteration)
     : null;
+  const iastDisplay = verse
+    ? toIast(verse.sanskritText, verse.transliteration)
+    : null;
   const showIastAside =
     verse != null &&
     (language === "sa" || language === "hi") &&
-    Boolean(verse.transliteration?.trim());
+    Boolean(iastDisplay);
 
   function goToIndex(nextIndex: number) {
     setIndex(nextIndex);
@@ -655,14 +659,14 @@ export function VerseReader({
                       >
                         {formatShlokaDisplay(verse.sanskritText)}
                       </p>
-                      {verse.transliteration?.trim() ? (
+                      {iastDisplay ? (
                         <p
                           className={cn(
                             "text-muted-foreground mt-2 text-base italic leading-snug tracking-wide whitespace-pre-line sm:text-lg",
                             readerFontClass("en"),
                           )}
                         >
-                          {formatShlokaDisplay(verse.transliteration)}
+                          {iastDisplay}
                         </p>
                       ) : null}
                     </>
@@ -677,15 +681,14 @@ export function VerseReader({
                         {shloka}
                       </p>
                       {showIastAside ||
-                      (isIndicScriptLanguage(language) &&
-                        verse.transliteration) ? (
+                      (isIndicScriptLanguage(language) && iastDisplay) ? (
                         <p
                           className={cn(
                             "text-muted-foreground mt-2 text-base italic leading-snug tracking-wide whitespace-pre-line sm:text-lg",
                             readerFontClass("en"),
                           )}
                         >
-                          {formatShlokaDisplay(verse.transliteration ?? "")}
+                          {iastDisplay}
                         </p>
                       ) : null}
                       {language !== "sa" &&

@@ -1,0 +1,5509 @@
+{
+  "schemaVersion": 1,
+  "entities": [
+    {
+      "id": "person.abhimanyu",
+      "slug": "abhimanyu",
+      "kind": "warrior",
+      "name": "Abhimanyu",
+      "englishName": "Abhimanyu",
+      "iastName": "Abhimanyu",
+      "sanskritName": "अभिमन्यु",
+      "aliases": [],
+      "gender": "male",
+      "era": "dvapara-yuga",
+      "epithet": "Son of Arjuna and Subhadrā",
+      "summary": "Son of Arjuna and Subhadrā",
+      "description": "Abhimanyu, son of Arjuna and Subhadrā, dies heroically in the cakra-vyūha on the thirteenth day of battle.",
+      "primaryScripture": "Mahābhārata",
+      "scriptureSources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Ādi Parva",
+          "chapter": "221"
+        },
+        {
+          "work": "Mahābhārata",
+          "section": "Droṇa Parva"
+        }
+      ],
+      "tags": [
+        "dynasty:kuru"
+      ],
+      "categories": [
+        "warrior"
+      ],
+      "importance": 4,
+      "seo": {
+        "title": "Abhimanyu — Hindu encyclopedia",
+        "description": "Abhimanyu, son of Arjuna and Subhadrā, dies heroically in the cakra-vyūha on the thirteenth day of battle."
+      },
+      "externalRefs": {
+        "genealogyId": "abhimanyu"
+      },
+      "variantTraditions": [],
+      "status": "published",
+      "schemaVersion": 1
+    },
+    {
+      "id": "person.aditi",
+      "slug": "aditi",
+      "kind": "devi",
+      "name": "Aditi",
+      "englishName": "Aditi",
+      "iastName": "Aditi",
+      "sanskritName": "अदिति",
+      "aliases": [],
+      "gender": "female",
+      "era": "creation",
+      "epithet": "Mother of the Ādityas",
+      "summary": "Mother of the Ādityas",
+      "description": "Aditi, daughter of Dakṣa and wife of Kaśyapa, is mother of the Ādityas — including Indra and Vivasvān.",
+      "primaryScripture": "Bhāgavata Purāṇa",
+      "scriptureSources": [
+        {
+          "work": "Bhāgavata Purāṇa",
+          "section": "Skandha 6",
+          "chapter": "6"
+        },
+        {
+          "work": "Viṣṇu Purāṇa",
+          "section": "Aṃśa 1",
+          "chapter": "15"
+        }
+      ],
+      "tags": [
+        "dynasty:aditya"
+      ],
+      "categories": [
+        "devi"
+      ],
+      "importance": 5,
+      "seo": {
+        "title": "Aditi — Hindu encyclopedia",
+        "description": "Aditi, daughter of Dakṣa and wife of Kaśyapa, is mother of the Ādityas — including Indra and Vivasvān."
+      },
+      "externalRefs": {
+        "genealogyId": "aditi"
+      },
+      "variantTraditions": [],
+      "status": "published",
+      "schemaVersion": 1
+    },
+    {
+      "id": "person.aja",
+      "slug": "aja",
+      "kind": "king",
+      "name": "Aja",
+      "englishName": "Aja",
+      "iastName": "Aja",
+      "sanskritName": "अज",
+      "aliases": [],
+      "gender": "male",
+      "era": "treta-yuga",
+      "epithet": "Son of Raghu; father of Daśaratha",
+      "summary": "Son of Raghu; father of Daśaratha",
+      "description": "Aja, son of Raghu, is father of Daśaratha in the Solar/Raghu genealogy.",
+      "primaryScripture": "Bhāgavata Purāṇa",
+      "scriptureSources": [
+        {
+          "work": "Bhāgavata Purāṇa",
+          "section": "Skandha 9",
+          "chapter": "10"
+        }
+      ],
+      "tags": [
+        "dynasty:raghu"
+      ],
+      "categories": [
+        "king"
+      ],
+      "importance": 3,
+      "seo": {
+        "title": "Aja — Hindu encyclopedia",
+        "description": "Aja, son of Raghu, is father of Daśaratha in the Solar/Raghu genealogy."
+      },
+      "externalRefs": {
+        "genealogyId": "aja"
+      },
+      "variantTraditions": [],
+      "status": "published",
+      "schemaVersion": 1
+    },
+    {
+      "id": "person.ambalika",
+      "slug": "ambalika",
+      "kind": "queen",
+      "name": "Ambālikā",
+      "englishName": "Ambalika",
+      "iastName": "Ambālikā",
+      "sanskritName": "अम्बालिका",
+      "aliases": [],
+      "gender": "female",
+      "era": "dvapara-yuga",
+      "epithet": "Mother of Pāṇḍu (by niyoga)",
+      "summary": "Mother of Pāṇḍu (by niyoga)",
+      "description": "Ambālikā, widow of Vicitravīrya, bears Pāṇḍu through Vyāsa's niyoga.",
+      "primaryScripture": "Mahābhārata",
+      "scriptureSources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Ādi Parva",
+          "chapter": "105–106"
+        }
+      ],
+      "tags": [
+        "dynasty:kuru"
+      ],
+      "categories": [
+        "queen"
+      ],
+      "importance": 3,
+      "seo": {
+        "title": "Ambālikā — Hindu encyclopedia",
+        "description": "Ambālikā, widow of Vicitravīrya, bears Pāṇḍu through Vyāsa's niyoga."
+      },
+      "externalRefs": {
+        "genealogyId": "ambalika"
+      },
+      "variantTraditions": [],
+      "status": "published",
+      "schemaVersion": 1
+    },
+    {
+      "id": "person.ambika",
+      "slug": "ambika",
+      "kind": "queen",
+      "name": "Ambikā",
+      "englishName": "Ambika",
+      "iastName": "Ambikā",
+      "sanskritName": "अम्बिका",
+      "aliases": [],
+      "gender": "female",
+      "era": "dvapara-yuga",
+      "epithet": "Mother of Dhṛtarāṣṭra (by niyoga)",
+      "summary": "Mother of Dhṛtarāṣṭra (by niyoga)",
+      "description": "Ambikā, widow of Vicitravīrya, bears Dhṛtarāṣṭra through Vyāsa's niyoga.",
+      "primaryScripture": "Mahābhārata",
+      "scriptureSources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Ādi Parva",
+          "chapter": "105–106"
+        }
+      ],
+      "tags": [
+        "dynasty:kuru"
+      ],
+      "categories": [
+        "queen"
+      ],
+      "importance": 3,
+      "seo": {
+        "title": "Ambikā — Hindu encyclopedia",
+        "description": "Ambikā, widow of Vicitravīrya, bears Dhṛtarāṣṭra through Vyāsa's niyoga."
+      },
+      "externalRefs": {
+        "genealogyId": "ambika"
+      },
+      "variantTraditions": [],
+      "status": "published",
+      "schemaVersion": 1
+    },
+    {
+      "id": "person.ananta",
+      "slug": "ananta",
+      "kind": "naga",
+      "name": "Ananta",
+      "englishName": "Ananta",
+      "iastName": "Ananta",
+      "sanskritName": "अनन्त",
+      "aliases": [
+        "Shesha",
+        "Śeṣa",
+        "Sesha",
+        "Adi Shesha",
+        "Ādiśeṣa"
+      ],
+      "gender": "male",
+      "era": "eternal",
+      "epithet": "Endless serpent; bed of Viṣṇu",
+      "summary": "Endless serpent; bed of Viṣṇu",
+      "description": "Ananta (Śeṣa) is the foremost Nāga, son of Kaśyapa and Kadrū. He supports the worlds and serves as Viṣṇu's couch.",
+      "primaryScripture": "Bhāgavata Purāṇa",
+      "scriptureSources": [
+        {
+          "work": "Bhāgavata Purāṇa",
+          "section": "Skandha 5",
+          "chapter": "25"
+        },
+        {
+          "work": "Bhāgavata Purāṇa",
+          "section": "Skandha 6",
+          "chapter": "6"
+        }
+      ],
+      "tags": [
+        "dynasty:naga"
+      ],
+      "categories": [
+        "naga"
+      ],
+      "importance": 5,
+      "image": {
+        "placeholder": "🐍"
+      },
+      "seo": {
+        "title": "Ananta — Hindu encyclopedia",
+        "description": "Ananta (Śeṣa) is the foremost Nāga, son of Kaśyapa and Kadrū. He supports the worlds and serves as Viṣṇu's couch."
+      },
+      "externalRefs": {
+        "genealogyId": "ananta"
+      },
+      "variantTraditions": [],
+      "status": "published",
+      "schemaVersion": 1
+    },
+    {
+      "id": "person.anasuya",
+      "slug": "anasuya",
+      "kind": "sage",
+      "name": "Anasūyā",
+      "englishName": "Anasuya",
+      "iastName": "Anasūyā",
+      "sanskritName": "अनसूया",
+      "aliases": [],
+      "gender": "female",
+      "era": "treta-yuga",
+      "epithet": "Wife of Atri; mother of Dattātreya",
+      "summary": "Wife of Atri; mother of Dattātreya",
+      "description": "Anasūyā is the wife of Atri, celebrated for chastity and austerity; Dattātreya is born to them.",
+      "primaryScripture": "Bhāgavata Purāṇa",
+      "scriptureSources": [
+        {
+          "work": "Bhāgavata Purāṇa",
+          "section": "Skandha 4",
+          "chapter": "1"
+        }
+      ],
+      "tags": [],
+      "categories": [
+        "rishi"
+      ],
+      "importance": 3,
+      "seo": {
+        "title": "Anasūyā — Hindu encyclopedia",
+        "description": "Anasūyā is the wife of Atri, celebrated for chastity and austerity; Dattātreya is born to them."
+      },
+      "externalRefs": {
+        "genealogyId": "anasuya"
+      },
+      "variantTraditions": [],
+      "status": "published",
+      "schemaVersion": 1
+    },
+    {
+      "id": "person.angiras",
+      "slug": "angiras",
+      "kind": "sage",
+      "name": "Aṅgiras",
+      "englishName": "Angiras",
+      "iastName": "Aṅgiras",
+      "sanskritName": "अङ्गिरस्",
+      "aliases": [],
+      "gender": "male",
+      "era": "creation",
+      "epithet": "Saptarṣi; ancestor of Bṛhaspati",
+      "summary": "Saptarṣi; ancestor of Bṛhaspati",
+      "description": "Aṅgiras is a mānasaputra of Brahmā and a Saptarṣi; Bṛhaspati is born in his line.",
+      "primaryScripture": "Bhāgavata Purāṇa",
+      "scriptureSources": [
+        {
+          "work": "Bhāgavata Purāṇa",
+          "section": "Skandha 3",
+          "chapter": "12"
+        }
+      ],
+      "tags": [],
+      "categories": [
+        "saptarishi"
+      ],
+      "importance": 4,
+      "seo": {
+        "title": "Aṅgiras — Hindu encyclopedia",
+        "description": "Aṅgiras is a mānasaputra of Brahmā and a Saptarṣi; Bṛhaspati is born in his line."
+      },
+      "externalRefs": {
+        "genealogyId": "angiras"
+      },
+      "variantTraditions": [],
+      "status": "published",
+      "schemaVersion": 1
+    },
+    {
+      "id": "person.arjuna",
+      "slug": "arjuna",
+      "kind": "warrior",
+      "name": "Arjuna",
+      "englishName": "Arjuna",
+      "iastName": "Arjuna",
+      "sanskritName": "अर्जुन",
+      "aliases": [
+        "Partha",
+        "Pārtha",
+        "Dhananjaya",
+        "Gudakesha",
+        "Guḍākeśa",
+        "Kiriti"
+      ],
+      "gender": "male",
+      "era": "dvapara-yuga",
+      "epithet": "Third Pāṇḍava; hearer of the Bhagavad Gītā",
+      "summary": "Third Pāṇḍava; hearer of the Bhagavad Gītā",
+      "description": "Arjuna, son of Indra through Kuntī, is the premier archer of the age and the interlocutor of the Bhagavad Gītā.",
+      "primaryScripture": "Bhagavad Gītā",
+      "scriptureSources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Ādi Parva",
+          "chapter": "123"
+        },
+        {
+          "work": "Bhagavad Gītā",
+          "chapter": "1"
+        }
+      ],
+      "tags": [
+        "dynasty:kuru"
+      ],
+      "categories": [
+        "warrior"
+      ],
+      "importance": 5,
+      "seo": {
+        "title": "Arjuna — Hindu encyclopedia",
+        "description": "Arjuna, son of Indra through Kuntī, is the premier archer of the age and the interlocutor of the Bhagavad Gītā."
+      },
+      "externalRefs": {
+        "genealogyId": "arjuna"
+      },
+      "variantTraditions": [],
+      "status": "published",
+      "schemaVersion": 1
+    },
+    {
+      "id": "person.aryaman",
+      "slug": "aryaman",
+      "kind": "deva",
+      "name": "Aryaman",
+      "englishName": "Aryaman",
+      "iastName": "Aryaman",
+      "sanskritName": "अर्यमन्",
+      "aliases": [],
+      "gender": "male",
+      "era": "eternal",
+      "epithet": "Āditya",
+      "summary": "Āditya",
+      "description": "Aryaman is named among the Ādityas in Purāṇic catalogues of Aditi's sons.",
+      "primaryScripture": "Viṣṇu Purāṇa",
+      "scriptureSources": [
+        {
+          "work": "Viṣṇu Purāṇa",
+          "section": "Aṃśa 1",
+          "chapter": "15"
+        }
+      ],
+      "tags": [
+        "dynasty:aditya"
+      ],
+      "categories": [
+        "deva"
+      ],
+      "importance": 2,
+      "seo": {
+        "title": "Aryaman — Hindu encyclopedia",
+        "description": "Aryaman is named among the Ādityas in Purāṇic catalogues of Aditi's sons."
+      },
+      "externalRefs": {
+        "genealogyId": "aryaman"
+      },
+      "variantTraditions": [],
+      "status": "published",
+      "schemaVersion": 1
+    },
+    {
+      "id": "person.atri",
+      "slug": "atri",
+      "kind": "sage",
+      "name": "Atri",
+      "englishName": "Atri",
+      "iastName": "Atri",
+      "sanskritName": "अत्रि",
+      "aliases": [],
+      "gender": "male",
+      "era": "creation",
+      "epithet": "Saptarṣi; husband of Anasūyā",
+      "summary": "Saptarṣi; husband of Anasūyā",
+      "description": "Atri is a mind-born son of Brahmā, one of the Saptarṣis, and husband of Anasūyā; through him is born Candra in Purāṇic genealogy.",
+      "primaryScripture": "Bhāgavata Purāṇa",
+      "scriptureSources": [
+        {
+          "work": "Bhāgavata Purāṇa",
+          "section": "Skandha 3",
+          "chapter": "12"
+        },
+        {
+          "work": "Bhāgavata Purāṇa",
+          "section": "Skandha 4",
+          "chapter": "1"
+        }
+      ],
+      "tags": [],
+      "categories": [
+        "saptarishi"
+      ],
+      "importance": 5,
+      "seo": {
+        "title": "Atri — Hindu encyclopedia",
+        "description": "Atri is a mind-born son of Brahmā, one of the Saptarṣis, and husband of Anasūyā; through him is born Candra in Purāṇic genealogy."
+      },
+      "externalRefs": {
+        "genealogyId": "atri"
+      },
+      "variantTraditions": [],
+      "status": "published",
+      "schemaVersion": 1
+    },
+    {
+      "id": "person.balarama",
+      "slug": "balarama",
+      "kind": "avatar",
+      "name": "Balarāma",
+      "englishName": "Balarama",
+      "iastName": "Balarāma",
+      "sanskritName": "बलराम",
+      "aliases": [
+        "Baladeva",
+        "Sankarsana",
+        "Saṅkarṣaṇa",
+        "Rama"
+      ],
+      "gender": "male",
+      "era": "dvapara-yuga",
+      "epithet": "Elder brother of Kṛṣṇa",
+      "summary": "Elder brother of Kṛṣṇa",
+      "description": "Balarāma, son of Vasudeva (born of Rohiṇī), is Kṛṣṇa's elder brother and companion in Vraja and Dvārakā.",
+      "primaryScripture": "Bhāgavata Purāṇa",
+      "scriptureSources": [
+        {
+          "work": "Bhāgavata Purāṇa",
+          "section": "Skandha 10",
+          "chapter": "1–8"
+        },
+        {
+          "work": "Harivaṃśa"
+        }
+      ],
+      "tags": [
+        "dynasty:yadu"
+      ],
+      "categories": [
+        "avatar"
+      ],
+      "importance": 5,
+      "seo": {
+        "title": "Balarāma — Hindu encyclopedia",
+        "description": "Balarāma, son of Vasudeva (born of Rohiṇī), is Kṛṣṇa's elder brother and companion in Vraja and Dvārakā."
+      },
+      "externalRefs": {
+        "genealogyId": "balarama"
+      },
+      "variantTraditions": [],
+      "status": "published",
+      "schemaVersion": 1
+    },
+    {
+      "id": "person.bali",
+      "slug": "bali",
+      "kind": "daitya",
+      "name": "Bali",
+      "englishName": "Bali",
+      "iastName": "Bali",
+      "sanskritName": "बलि",
+      "aliases": [
+        "Mahabali",
+        "Mahābali"
+      ],
+      "gender": "male",
+      "era": "treta-yuga",
+      "epithet": "Daitya king of the Vāmana episode",
+      "summary": "Daitya king of the Vāmana episode",
+      "description": "Bali, grandson of Prahlāda, conquered the three worlds. Viṣṇu as Vāmana requested three paces of land; Bali's gift sent him to Pātāla while honouring his vow.",
+      "primaryScripture": "Bhāgavata Purāṇa",
+      "scriptureSources": [
+        {
+          "work": "Bhāgavata Purāṇa",
+          "section": "Skandha 8",
+          "chapter": "15–23"
+        }
+      ],
+      "tags": [
+        "dynasty:daitya"
+      ],
+      "categories": [
+        "daitya"
+      ],
+      "importance": 5,
+      "image": {
+        "placeholder": "🦶"
+      },
+      "seo": {
+        "title": "Bali — Hindu encyclopedia",
+        "description": "Bali, grandson of Prahlāda, conquered the three worlds. Viṣṇu as Vāmana requested three paces of land; Bali's gift sent him to Pātāla while honouring his vow."
+      },
+      "externalRefs": {
+        "genealogyId": "bali"
+      },
+      "variantTraditions": [],
+      "status": "published",
+      "schemaVersion": 1
+    },
+    {
+      "id": "person.bana",
+      "slug": "bana",
+      "kind": "daitya",
+      "name": "Bāṇa",
+      "englishName": "Bana",
+      "iastName": "Bāṇa",
+      "sanskritName": "बाण",
+      "aliases": [
+        "Banasura",
+        "Bāṇāsura"
+      ],
+      "gender": "male",
+      "era": "dvapara-yuga",
+      "epithet": "Thousand-armed Daitya; son of Bali",
+      "summary": "Thousand-armed Daitya; son of Bali",
+      "description": "Bāṇa (Bāṇāsura), son of Bali, is a devotee of Śiva whose conflict with Kṛṣṇa is narrated in the Bhāgavata and Harivaṃśa.",
+      "primaryScripture": "Bhāgavata Purāṇa",
+      "scriptureSources": [
+        {
+          "work": "Bhāgavata Purāṇa",
+          "section": "Skandha 10",
+          "chapter": "62–63"
+        },
+        {
+          "work": "Harivaṃśa",
+          "section": "Viṣṇu Parva"
+        }
+      ],
+      "tags": [
+        "dynasty:daitya"
+      ],
+      "categories": [
+        "daitya"
+      ],
+      "importance": 4,
+      "seo": {
+        "title": "Bāṇa — Hindu encyclopedia",
+        "description": "Bāṇa (Bāṇāsura), son of Bali, is a devotee of Śiva whose conflict with Kṛṣṇa is narrated in the Bhāgavata and Harivaṃśa."
+      },
+      "externalRefs": {
+        "genealogyId": "bana"
+      },
+      "variantTraditions": [],
+      "status": "published",
+      "schemaVersion": 1
+    },
+    {
+      "id": "person.bhaga",
+      "slug": "bhaga",
+      "kind": "deva",
+      "name": "Bhaga",
+      "englishName": "Bhaga",
+      "iastName": "Bhaga",
+      "sanskritName": "भग",
+      "aliases": [],
+      "gender": "male",
+      "era": "eternal",
+      "epithet": "Āditya",
+      "summary": "Āditya",
+      "description": "Bhaga is listed among Aditi's Āditya sons in the Viṣṇu Purāṇa.",
+      "primaryScripture": "Viṣṇu Purāṇa",
+      "scriptureSources": [
+        {
+          "work": "Viṣṇu Purāṇa",
+          "section": "Aṃśa 1",
+          "chapter": "15"
+        }
+      ],
+      "tags": [
+        "dynasty:aditya"
+      ],
+      "categories": [
+        "deva"
+      ],
+      "importance": 2,
+      "seo": {
+        "title": "Bhaga — Hindu encyclopedia",
+        "description": "Bhaga is listed among Aditi's Āditya sons in the Viṣṇu Purāṇa."
+      },
+      "externalRefs": {
+        "genealogyId": "bhaga"
+      },
+      "variantTraditions": [],
+      "status": "published",
+      "schemaVersion": 1
+    },
+    {
+      "id": "person.bharata",
+      "slug": "bharata",
+      "kind": "prince",
+      "name": "Bharata",
+      "englishName": "Bharata",
+      "iastName": "Bharata",
+      "sanskritName": "भरत",
+      "aliases": [],
+      "gender": "male",
+      "era": "treta-yuga",
+      "epithet": "Son of Kaikeyī; regent of Ayodhyā",
+      "summary": "Son of Kaikeyī; regent of Ayodhyā",
+      "description": "Bharata, son of Daśaratha and Kaikeyī, refuses the throne won by intrigue and rules as Rāma's deputy from Nandigrāma.",
+      "primaryScripture": "Rāmāyaṇa",
+      "scriptureSources": [
+        {
+          "work": "Rāmāyaṇa",
+          "section": "Ayodhyā Kāṇḍa"
+        }
+      ],
+      "tags": [
+        "dynasty:raghu"
+      ],
+      "categories": [
+        "prince"
+      ],
+      "importance": 4,
+      "seo": {
+        "title": "Bharata — Hindu encyclopedia",
+        "description": "Bharata, son of Daśaratha and Kaikeyī, refuses the throne won by intrigue and rules as Rāma's deputy from Nandigrāma."
+      },
+      "externalRefs": {
+        "genealogyId": "bharata"
+      },
+      "variantTraditions": [],
+      "status": "published",
+      "schemaVersion": 1
+    },
+    {
+      "id": "person.bhima",
+      "slug": "bhima",
+      "kind": "warrior",
+      "name": "Bhīma",
+      "englishName": "Bhima",
+      "iastName": "Bhīma",
+      "sanskritName": "भीम",
+      "aliases": [
+        "Bhimasena",
+        "Vrikodara",
+        "Vṛkodara"
+      ],
+      "gender": "male",
+      "era": "dvapara-yuga",
+      "epithet": "Second Pāṇḍava; son of Vāyu",
+      "summary": "Second Pāṇḍava; son of Vāyu",
+      "description": "Bhīma, son of Vāyu through Kuntī, is the strongest of the brothers and slayer of many Kauravas including Duryodhana.",
+      "primaryScripture": "Mahābhārata",
+      "scriptureSources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Ādi Parva",
+          "chapter": "123"
+        }
+      ],
+      "tags": [
+        "dynasty:kuru"
+      ],
+      "categories": [
+        "warrior"
+      ],
+      "importance": 5,
+      "seo": {
+        "title": "Bhīma — Hindu encyclopedia",
+        "description": "Bhīma, son of Vāyu through Kuntī, is the strongest of the brothers and slayer of many Kauravas including Duryodhana."
+      },
+      "externalRefs": {
+        "genealogyId": "bhima"
+      },
+      "variantTraditions": [],
+      "status": "published",
+      "schemaVersion": 1
+    },
+    {
+      "id": "person.bhishma",
+      "slug": "bhishma",
+      "kind": "warrior",
+      "name": "Bhīṣma",
+      "englishName": "Bhishma",
+      "iastName": "Bhīṣma",
+      "sanskritName": "भीष्म",
+      "aliases": [
+        "Devavrata",
+        "Bhishma Pitamaha",
+        "Gangeya"
+      ],
+      "gender": "male",
+      "era": "dvapara-yuga",
+      "epithet": "Son of Gaṅgā; vow of celibacy",
+      "summary": "Son of Gaṅgā; vow of celibacy",
+      "description": "Bhīṣma (Devavrata), son of Śaṃtanu and Gaṅgā, takes the terrible vow of celibacy so that Satyavatī's line may inherit; he is grandsire of the war.",
+      "primaryScripture": "Mahābhārata",
+      "scriptureSources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Ādi Parva",
+          "chapter": "96–100"
+        },
+        {
+          "work": "Mahābhārata",
+          "section": "Bhīṣma Parva"
+        }
+      ],
+      "tags": [
+        "dynasty:kuru"
+      ],
+      "categories": [
+        "warrior"
+      ],
+      "importance": 5,
+      "seo": {
+        "title": "Bhīṣma — Hindu encyclopedia",
+        "description": "Bhīṣma (Devavrata), son of Śaṃtanu and Gaṅgā, takes the terrible vow of celibacy so that Satyavatī's line may inherit; he is grandsire of the war."
+      },
+      "externalRefs": {
+        "genealogyId": "bhishma"
+      },
+      "variantTraditions": [],
+      "status": "published",
+      "schemaVersion": 1
+    },
+    {
+      "id": "person.brahma",
+      "slug": "brahma",
+      "kind": "deity",
+      "name": "Brahmā",
+      "englishName": "Brahma",
+      "iastName": "Brahmā",
+      "sanskritName": "ब्रह्मा",
+      "aliases": [
+        "Pitamaha",
+        "Pitāmaha",
+        "Svayambhu",
+        "Svayambhū",
+        "Hiranyagarbha",
+        "Hiraṇyagarbha"
+      ],
+      "gender": "divine",
+      "era": "creation",
+      "epithet": "Four-faced creator; grandfather of beings",
+      "summary": "Four-faced creator; grandfather of beings",
+      "description": "Brahmā projects the manifest cosmos and fathers the mind-born progenitors (Prajāpatis), including the Saptarṣis of the current tradition.",
+      "primaryScripture": "Bhāgavata Purāṇa",
+      "scriptureSources": [
+        {
+          "work": "Bhāgavata Purāṇa",
+          "section": "Skandha 3",
+          "chapter": "8–12"
+        },
+        {
+          "work": "Viṣṇu Purāṇa",
+          "section": "Aṃśa 1",
+          "chapter": "5–7"
+        }
+      ],
+      "tags": [],
+      "categories": [
+        "trimurti"
+      ],
+      "importance": 5,
+      "image": {
+        "placeholder": "🪷"
+      },
+      "seo": {
+        "title": "Brahmā — Hindu encyclopedia",
+        "description": "Brahmā projects the manifest cosmos and fathers the mind-born progenitors (Prajāpatis), including the Saptarṣis of the current tradition."
+      },
+      "externalRefs": {
+        "genealogyId": "brahma"
+      },
+      "variantTraditions": [
+        {
+          "label": "Number of Prajāpatis",
+          "description": "Bhāgavata Purāṇa 3.12 lists nine mind-born sons plus Nārada; Manu Smṛti 1.34–35 lists ten; some Mahābhārata redactions list seven. Divine follows the Bhāgavata list and records variants.",
+          "sources": [
+            {
+              "work": "Bhāgavata Purāṇa",
+              "section": "Skandha 3",
+              "chapter": "12"
+            },
+            {
+              "work": "Manu Smṛti",
+              "chapter": "1.34–35"
+            },
+            {
+              "work": "Mahābhārata",
+              "section": "Ādi Parva",
+              "chapter": "66"
+            }
+          ]
+        }
+      ],
+      "status": "published",
+      "schemaVersion": 1
+    },
+    {
+      "id": "person.brihaspati",
+      "slug": "brihaspati",
+      "kind": "deva",
+      "name": "Bṛhaspati",
+      "englishName": "Brihaspati",
+      "iastName": "Bṛhaspati",
+      "sanskritName": "बृहस्पति",
+      "aliases": [
+        "Brhaspati",
+        "Guru"
+      ],
+      "gender": "male",
+      "era": "eternal",
+      "epithet": "Preceptor of the Devas",
+      "summary": "Preceptor of the Devas",
+      "description": "Bṛhaspati is the guru of the Devas, born in the line of Aṅgiras.",
+      "primaryScripture": "Bhāgavata Purāṇa",
+      "scriptureSources": [
+        {
+          "work": "Bhāgavata Purāṇa",
+          "section": "Skandha 4",
+          "chapter": "1"
+        }
+      ],
+      "tags": [],
+      "categories": [
+        "deva"
+      ],
+      "importance": 4,
+      "seo": {
+        "title": "Bṛhaspati — Hindu encyclopedia",
+        "description": "Bṛhaspati is the guru of the Devas, born in the line of Aṅgiras."
+      },
+      "externalRefs": {
+        "genealogyId": "brihaspati"
+      },
+      "variantTraditions": [],
+      "status": "published",
+      "schemaVersion": 1
+    },
+    {
+      "id": "person.budha",
+      "slug": "budha",
+      "kind": "deva",
+      "name": "Budha",
+      "englishName": "Budha",
+      "iastName": "Budha",
+      "sanskritName": "बुध",
+      "aliases": [],
+      "gender": "male",
+      "era": "creation",
+      "epithet": "Son of Candra; father of Purūravas",
+      "summary": "Son of Candra; father of Purūravas",
+      "description": "Budha, son of Candra (and Tārā in the Purāṇic tale), fathers Purūravas by Ilā — founding the Lunar royal line.",
+      "primaryScripture": "Bhāgavata Purāṇa",
+      "scriptureSources": [
+        {
+          "work": "Bhāgavata Purāṇa",
+          "section": "Skandha 9",
+          "chapter": "14"
+        },
+        {
+          "work": "Viṣṇu Purāṇa",
+          "section": "Aṃśa 4",
+          "chapter": "6"
+        }
+      ],
+      "tags": [
+        "dynasty:chandravamsa"
+      ],
+      "categories": [
+        "deva"
+      ],
+      "importance": 4,
+      "seo": {
+        "title": "Budha — Hindu encyclopedia",
+        "description": "Budha, son of Candra (and Tārā in the Purāṇic tale), fathers Purūravas by Ilā — founding the Lunar royal line."
+      },
+      "externalRefs": {
+        "genealogyId": "budha"
+      },
+      "variantTraditions": [],
+      "status": "published",
+      "schemaVersion": 1
+    },
+    {
+      "id": "person.chandra",
+      "slug": "chandra",
+      "kind": "deva",
+      "name": "Candra",
+      "englishName": "Chandra",
+      "iastName": "Candra",
+      "sanskritName": "चन्द्र",
+      "aliases": [
+        "Soma",
+        "Chandra",
+        "Moon"
+      ],
+      "gender": "male",
+      "era": "creation",
+      "epithet": "Moon; origin of the Lunar Dynasty",
+      "summary": "Moon; origin of the Lunar Dynasty",
+      "description": "Candra (Soma), son of Atri in the Purāṇic account, is the celestial source of the Candravaṃśa through Budha and Purūravas.",
+      "primaryScripture": "Bhāgavata Purāṇa",
+      "scriptureSources": [
+        {
+          "work": "Bhāgavata Purāṇa",
+          "section": "Skandha 4",
+          "chapter": "1"
+        },
+        {
+          "work": "Bhāgavata Purāṇa",
+          "section": "Skandha 9",
+          "chapter": "14"
+        },
+        {
+          "work": "Viṣṇu Purāṇa",
+          "section": "Aṃśa 4",
+          "chapter": "6"
+        }
+      ],
+      "tags": [
+        "dynasty:chandravamsa"
+      ],
+      "categories": [
+        "deva"
+      ],
+      "importance": 5,
+      "seo": {
+        "title": "Candra — Hindu encyclopedia",
+        "description": "Candra (Soma), son of Atri in the Purāṇic account, is the celestial source of the Candravaṃśa through Budha and Purūravas."
+      },
+      "externalRefs": {
+        "genealogyId": "chandra"
+      },
+      "variantTraditions": [],
+      "status": "published",
+      "schemaVersion": 1
+    },
+    {
+      "id": "person.chitraratha",
+      "slug": "chitraratha",
+      "kind": "gandharva",
+      "name": "Citraratha",
+      "englishName": "Chitraratha",
+      "iastName": "Citraratha",
+      "sanskritName": "चित्ररथ",
+      "aliases": [],
+      "gender": "male",
+      "era": "dvapara-yuga",
+      "epithet": "Gandharva king mentioned in the Mahābhārata",
+      "summary": "Gandharva king mentioned in the Mahābhārata",
+      "description": "Citraratha is a Gandharva who encounters Arjuna; the Gītā names him among Kṛṣṇa's vibhūtis.",
+      "primaryScripture": "Mahābhārata",
+      "scriptureSources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Ādi Parva"
+        },
+        {
+          "work": "Bhagavad Gītā",
+          "chapter": "10"
+        }
+      ],
+      "tags": [
+        "dynasty:gandharva"
+      ],
+      "categories": [
+        "gandharva"
+      ],
+      "importance": 3,
+      "seo": {
+        "title": "Citraratha — Hindu encyclopedia",
+        "description": "Citraratha is a Gandharva who encounters Arjuna; the Gītā names him among Kṛṣṇa's vibhūtis."
+      },
+      "externalRefs": {
+        "genealogyId": "chitraratha"
+      },
+      "variantTraditions": [],
+      "notes": "Parentage is not securely fixed in the primary epic passages used here; listed as a named Gandharva without invented ancestors.",
+      "status": "published",
+      "schemaVersion": 1
+    },
+    {
+      "id": "person.daksha",
+      "slug": "daksha",
+      "kind": "prajapati",
+      "name": "Dakṣa",
+      "englishName": "Daksha",
+      "iastName": "Dakṣa",
+      "sanskritName": "दक्ष",
+      "aliases": [],
+      "gender": "male",
+      "era": "creation",
+      "epithet": "Prajāpati; father of many daughters given to Kaśyapa and others",
+      "summary": "Prajāpati; father of many daughters given to Kaśyapa and others",
+      "description": "Dakṣa Prajāpati gives numerous daughters in marriage — notably to Kaśyapa — from whom arise Devas, Daityas, Dānavas, Nāgas and other classes.",
+      "primaryScripture": "Bhāgavata Purāṇa",
+      "scriptureSources": [
+        {
+          "work": "Bhāgavata Purāṇa",
+          "section": "Skandha 4",
+          "chapter": "1"
+        },
+        {
+          "work": "Bhāgavata Purāṇa",
+          "section": "Skandha 6",
+          "chapter": "6"
+        },
+        {
+          "work": "Viṣṇu Purāṇa",
+          "section": "Aṃśa 1",
+          "chapter": "15"
+        }
+      ],
+      "tags": [],
+      "categories": [
+        "prajapati"
+      ],
+      "importance": 5,
+      "seo": {
+        "title": "Dakṣa — Hindu encyclopedia",
+        "description": "Dakṣa Prajāpati gives numerous daughters in marriage — notably to Kaśyapa — from whom arise Devas, Daityas, Dānavas, Nāgas and other classes."
+      },
+      "externalRefs": {
+        "genealogyId": "daksha"
+      },
+      "variantTraditions": [],
+      "status": "published",
+      "schemaVersion": 1
+    },
+    {
+      "id": "person.danu",
+      "slug": "danu",
+      "kind": "danava",
+      "name": "Danu",
+      "englishName": "Danu",
+      "iastName": "Danu",
+      "sanskritName": "दनु",
+      "aliases": [],
+      "gender": "female",
+      "era": "creation",
+      "epithet": "Mother of the Dānavas",
+      "summary": "Mother of the Dānavas",
+      "description": "Danu, daughter of Dakṣa and wife of Kaśyapa, is the mother of the Dānavas, including Vipracitti.",
+      "primaryScripture": "Bhāgavata Purāṇa",
+      "scriptureSources": [
+        {
+          "work": "Bhāgavata Purāṇa",
+          "section": "Skandha 6",
+          "chapter": "6"
+        },
+        {
+          "work": "Viṣṇu Purāṇa",
+          "section": "Aṃśa 1",
+          "chapter": "21"
+        }
+      ],
+      "tags": [
+        "dynasty:danava"
+      ],
+      "categories": [
+        "danava"
+      ],
+      "importance": 5,
+      "seo": {
+        "title": "Danu — Hindu encyclopedia",
+        "description": "Danu, daughter of Dakṣa and wife of Kaśyapa, is the mother of the Dānavas, including Vipracitti."
+      },
+      "externalRefs": {
+        "genealogyId": "danu"
+      },
+      "variantTraditions": [],
+      "status": "published",
+      "schemaVersion": 1
+    },
+    {
+      "id": "person.dasharatha",
+      "slug": "dasharatha",
+      "kind": "king",
+      "name": "Daśaratha",
+      "englishName": "Dasharatha",
+      "iastName": "Daśaratha",
+      "sanskritName": "दशरथ",
+      "aliases": [
+        "Dasaratha"
+      ],
+      "gender": "male",
+      "era": "treta-yuga",
+      "epithet": "King of Ayodhyā; father of Rāma",
+      "summary": "King of Ayodhyā; father of Rāma",
+      "description": "Daśaratha, son of Aja, rules Ayodhyā. By Kausalyā, Kaikeyī and Sumitrā he fathers Rāma, Bharata, Lakṣmaṇa and Śatrughna.",
+      "primaryScripture": "Rāmāyaṇa",
+      "scriptureSources": [
+        {
+          "work": "Rāmāyaṇa",
+          "section": "Bāla Kāṇḍa"
+        },
+        {
+          "work": "Bhāgavata Purāṇa",
+          "section": "Skandha 9",
+          "chapter": "10"
+        }
+      ],
+      "tags": [
+        "dynasty:raghu"
+      ],
+      "categories": [
+        "king"
+      ],
+      "importance": 5,
+      "seo": {
+        "title": "Daśaratha — Hindu encyclopedia",
+        "description": "Daśaratha, son of Aja, rules Ayodhyā. By Kausalyā, Kaikeyī and Sumitrā he fathers Rāma, Bharata, Lakṣmaṇa and Śatrughna."
+      },
+      "externalRefs": {
+        "genealogyId": "dasharatha"
+      },
+      "variantTraditions": [],
+      "status": "published",
+      "schemaVersion": 1
+    },
+    {
+      "id": "person.dattatreya",
+      "slug": "dattatreya",
+      "kind": "sage",
+      "name": "Dattātreya",
+      "englishName": "Dattatreya",
+      "iastName": "Dattātreya",
+      "sanskritName": "दत्तात्रेय",
+      "aliases": [],
+      "gender": "male",
+      "era": "treta-yuga",
+      "epithet": "Son of Atri and Anasūyā; avatāra tradition",
+      "summary": "Son of Atri and Anasūyā; avatāra tradition",
+      "description": "Dattātreya is the son of Atri and Anasūyā; later traditions revere him as a combined avatāra of the Trimūrti.",
+      "primaryScripture": "Bhāgavata Purāṇa",
+      "scriptureSources": [
+        {
+          "work": "Bhāgavata Purāṇa",
+          "section": "Skandha 4",
+          "chapter": "1"
+        }
+      ],
+      "tags": [],
+      "categories": [
+        "rishi"
+      ],
+      "importance": 4,
+      "seo": {
+        "title": "Dattātreya — Hindu encyclopedia",
+        "description": "Dattātreya is the son of Atri and Anasūyā; later traditions revere him as a combined avatāra of the Trimūrti."
+      },
+      "externalRefs": {
+        "genealogyId": "dattatreya"
+      },
+      "variantTraditions": [],
+      "status": "published",
+      "schemaVersion": 1
+    },
+    {
+      "id": "person.devaki",
+      "slug": "devaki",
+      "kind": "queen",
+      "name": "Devakī",
+      "englishName": "Devaki",
+      "iastName": "Devakī",
+      "sanskritName": "देवकी",
+      "aliases": [],
+      "gender": "female",
+      "era": "dvapara-yuga",
+      "epithet": "Mother of Kṛṣṇa",
+      "summary": "Mother of Kṛṣṇa",
+      "description": "Devakī, sister of Kaṃsa, is mother of Kṛṣṇa; Kaṃsa imprisons her after a prophecy.",
+      "primaryScripture": "Bhāgavata Purāṇa",
+      "scriptureSources": [
+        {
+          "work": "Bhāgavata Purāṇa",
+          "section": "Skandha 10",
+          "chapter": "1–3"
+        }
+      ],
+      "tags": [
+        "dynasty:yadu"
+      ],
+      "categories": [
+        "queen"
+      ],
+      "importance": 5,
+      "seo": {
+        "title": "Devakī — Hindu encyclopedia",
+        "description": "Devakī, sister of Kaṃsa, is mother of Kṛṣṇa; Kaṃsa imprisons her after a prophecy."
+      },
+      "externalRefs": {
+        "genealogyId": "devaki"
+      },
+      "variantTraditions": [],
+      "status": "published",
+      "schemaVersion": 1
+    },
+    {
+      "id": "person.dhritarashtra",
+      "slug": "dhritarashtra",
+      "kind": "king",
+      "name": "Dhṛtarāṣṭra",
+      "englishName": "Dhritarashtra",
+      "iastName": "Dhṛtarāṣṭra",
+      "sanskritName": "धृतराष्ट्र",
+      "aliases": [
+        "Dhritrashtra"
+      ],
+      "gender": "male",
+      "era": "dvapara-yuga",
+      "epithet": "Blind king; father of the Kauravas",
+      "summary": "Blind king; father of the Kauravas",
+      "description": "Dhṛtarāṣṭra, son of Vyāsa and Ambikā, fathers one hundred sons by Gāndhārī, led by Duryodhana.",
+      "primaryScripture": "Mahābhārata",
+      "scriptureSources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Ādi Parva",
+          "chapter": "105–115"
+        }
+      ],
+      "tags": [
+        "dynasty:kuru"
+      ],
+      "categories": [
+        "king"
+      ],
+      "importance": 5,
+      "seo": {
+        "title": "Dhṛtarāṣṭra — Hindu encyclopedia",
+        "description": "Dhṛtarāṣṭra, son of Vyāsa and Ambikā, fathers one hundred sons by Gāndhārī, led by Duryodhana."
+      },
+      "externalRefs": {
+        "genealogyId": "dhritarashtra"
+      },
+      "variantTraditions": [],
+      "status": "published",
+      "schemaVersion": 1
+    },
+    {
+      "id": "person.diti",
+      "slug": "diti",
+      "kind": "daitya",
+      "name": "Diti",
+      "englishName": "Diti",
+      "iastName": "Diti",
+      "sanskritName": "दिति",
+      "aliases": [],
+      "gender": "female",
+      "era": "creation",
+      "epithet": "Mother of the Daityas",
+      "summary": "Mother of the Daityas",
+      "description": "Diti, daughter of Dakṣa and wife of Kaśyapa, is the mother of Hiraṇyakaśipu, Hiraṇyākṣa and Siṃhikā — the root of the Daitya line.",
+      "primaryScripture": "Bhāgavata Purāṇa",
+      "scriptureSources": [
+        {
+          "work": "Bhāgavata Purāṇa",
+          "section": "Skandha 3",
+          "chapter": "14"
+        },
+        {
+          "work": "Bhāgavata Purāṇa",
+          "section": "Skandha 7",
+          "chapter": "2"
+        }
+      ],
+      "tags": [
+        "dynasty:daitya"
+      ],
+      "categories": [
+        "daitya"
+      ],
+      "importance": 5,
+      "seo": {
+        "title": "Diti — Hindu encyclopedia",
+        "description": "Diti, daughter of Dakṣa and wife of Kaśyapa, is the mother of Hiraṇyakaśipu, Hiraṇyākṣa and Siṃhikā — the root of the Daitya line."
+      },
+      "externalRefs": {
+        "genealogyId": "diti"
+      },
+      "variantTraditions": [],
+      "status": "published",
+      "schemaVersion": 1
+    },
+    {
+      "id": "person.draupadi",
+      "slug": "draupadi",
+      "kind": "queen",
+      "name": "Draupadī",
+      "englishName": "Draupadi",
+      "iastName": "Draupadī",
+      "sanskritName": "द्रौपदी",
+      "aliases": [
+        "Panchali",
+        "Pāñcālī",
+        "Yajnaseni",
+        "Yājñasenī",
+        "Krishnaa"
+      ],
+      "gender": "female",
+      "era": "dvapara-yuga",
+      "epithet": "Wife of the five Pāṇḍavas",
+      "summary": "Wife of the five Pāṇḍavas",
+      "description": "Draupadī, daughter of Drupada, becomes the common wife of the five Pāṇḍavas after the svayaṃvara — a arrangement explained by prior boon and Vyāsa's counsel.",
+      "primaryScripture": "Mahābhārata",
+      "scriptureSources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Ādi Parva",
+          "chapter": "174–199"
+        }
+      ],
+      "tags": [
+        "dynasty:kuru"
+      ],
+      "categories": [
+        "queen"
+      ],
+      "importance": 5,
+      "seo": {
+        "title": "Draupadī — Hindu encyclopedia",
+        "description": "Draupadī, daughter of Drupada, becomes the common wife of the five Pāṇḍavas after the svayaṃvara — a arrangement explained by prior boon and Vyāsa's counsel."
+      },
+      "externalRefs": {
+        "genealogyId": "draupadi"
+      },
+      "variantTraditions": [],
+      "status": "published",
+      "schemaVersion": 1
+    },
+    {
+      "id": "person.duhsala",
+      "slug": "duhsala",
+      "kind": "princess",
+      "name": "Duḥśalā",
+      "englishName": "Duhsala",
+      "iastName": "Duḥśalā",
+      "sanskritName": "दुःशला",
+      "aliases": [
+        "Dushala",
+        "Duhshala"
+      ],
+      "gender": "female",
+      "era": "dvapara-yuga",
+      "epithet": "Daughter of Dhṛtarāṣṭra and Gāndhārī",
+      "summary": "Daughter of Dhṛtarāṣṭra and Gāndhārī",
+      "description": "Duḥśalā is the only daughter of Dhṛtarāṣṭra and Gāndhārī among the hundred-and-one siblings.",
+      "primaryScripture": "Mahābhārata",
+      "scriptureSources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Ādi Parva",
+          "chapter": "115"
+        }
+      ],
+      "tags": [
+        "dynasty:kuru"
+      ],
+      "categories": [
+        "princess"
+      ],
+      "importance": 2,
+      "seo": {
+        "title": "Duḥśalā — Hindu encyclopedia",
+        "description": "Duḥśalā is the only daughter of Dhṛtarāṣṭra and Gāndhārī among the hundred-and-one siblings."
+      },
+      "externalRefs": {
+        "genealogyId": "duhsala"
+      },
+      "variantTraditions": [],
+      "status": "published",
+      "schemaVersion": 1
+    },
+    {
+      "id": "person.duryodhana",
+      "slug": "duryodhana",
+      "kind": "prince",
+      "name": "Duryodhana",
+      "englishName": "Duryodhana",
+      "iastName": "Duryodhana",
+      "sanskritName": "दुर्योधन",
+      "aliases": [
+        "Suyodhana"
+      ],
+      "gender": "male",
+      "era": "dvapara-yuga",
+      "epithet": "Eldest Kaurava; rival of the Pāṇḍavas",
+      "summary": "Eldest Kaurava; rival of the Pāṇḍavas",
+      "description": "Duryodhana, eldest son of Dhṛtarāṣṭra and Gāndhārī, leads the Kaurava side in the Kurukṣetra war.",
+      "primaryScripture": "Mahābhārata",
+      "scriptureSources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Ādi Parva",
+          "chapter": "114–115"
+        },
+        {
+          "work": "Mahābhārata",
+          "section": "Śalya Parva"
+        }
+      ],
+      "tags": [
+        "dynasty:kuru"
+      ],
+      "categories": [
+        "prince"
+      ],
+      "importance": 5,
+      "seo": {
+        "title": "Duryodhana — Hindu encyclopedia",
+        "description": "Duryodhana, eldest son of Dhṛtarāṣṭra and Gāndhārī, leads the Kaurava side in the Kurukṣetra war."
+      },
+      "externalRefs": {
+        "genealogyId": "duryodhana"
+      },
+      "variantTraditions": [],
+      "status": "published",
+      "schemaVersion": 1
+    },
+    {
+      "id": "person.dushasana",
+      "slug": "dushasana",
+      "kind": "prince",
+      "name": "Duḥśāsana",
+      "englishName": "Dushasana",
+      "iastName": "Duḥśāsana",
+      "sanskritName": "दुःशासन",
+      "aliases": [
+        "Duhshasana",
+        "Dushasana"
+      ],
+      "gender": "male",
+      "era": "dvapara-yuga",
+      "epithet": "Brother of Duryodhana",
+      "summary": "Brother of Duryodhana",
+      "description": "Duḥśāsana, second among the Kaurava brothers, is notorious for the disrobing of Draupadī and is slain by Bhīma.",
+      "primaryScripture": "Mahābhārata",
+      "scriptureSources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Ādi Parva",
+          "chapter": "114–115"
+        },
+        {
+          "work": "Mahābhārata",
+          "section": "Sabhā Parva"
+        }
+      ],
+      "tags": [
+        "dynasty:kuru"
+      ],
+      "categories": [
+        "prince"
+      ],
+      "importance": 4,
+      "seo": {
+        "title": "Duḥśāsana — Hindu encyclopedia",
+        "description": "Duḥśāsana, second among the Kaurava brothers, is notorious for the disrobing of Draupadī and is slain by Bhīma."
+      },
+      "externalRefs": {
+        "genealogyId": "dushasana"
+      },
+      "variantTraditions": [],
+      "status": "published",
+      "schemaVersion": 1
+    },
+    {
+      "id": "person.gandhari",
+      "slug": "gandhari",
+      "kind": "queen",
+      "name": "Gāndhārī",
+      "englishName": "Gandhari",
+      "iastName": "Gāndhārī",
+      "sanskritName": "गान्धारी",
+      "aliases": [],
+      "gender": "female",
+      "era": "dvapara-yuga",
+      "epithet": "Wife of Dhṛtarāṣṭra; mother of the Kauravas",
+      "summary": "Wife of Dhṛtarāṣṭra; mother of the Kauravas",
+      "description": "Gāndhārī, princess of Gandhāra, blindfolds herself and bears the hundred Kaurava sons.",
+      "primaryScripture": "Mahābhārata",
+      "scriptureSources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Ādi Parva",
+          "chapter": "109–115"
+        }
+      ],
+      "tags": [
+        "dynasty:kuru"
+      ],
+      "categories": [
+        "queen"
+      ],
+      "importance": 5,
+      "seo": {
+        "title": "Gāndhārī — Hindu encyclopedia",
+        "description": "Gāndhārī, princess of Gandhāra, blindfolds herself and bears the hundred Kaurava sons."
+      },
+      "externalRefs": {
+        "genealogyId": "gandhari"
+      },
+      "variantTraditions": [],
+      "status": "published",
+      "schemaVersion": 1
+    },
+    {
+      "id": "person.ganesha",
+      "slug": "ganesha",
+      "kind": "deva",
+      "name": "Gaṇeśa",
+      "englishName": "Ganesha",
+      "iastName": "Gaṇeśa",
+      "sanskritName": "गणेश",
+      "aliases": [
+        "Ganapati",
+        "Gaṇapati",
+        "Vinayaka",
+        "Vināyaka",
+        "Vighneshvara",
+        "Vighneśvara"
+      ],
+      "gender": "divine",
+      "era": "eternal",
+      "epithet": "Lord of gaṇas; remover of obstacles",
+      "summary": "Lord of gaṇas; remover of obstacles",
+      "description": "Gaṇeśa is the elephant-headed son of Śiva and Pārvatī, worshipped at the start of undertakings.",
+      "primaryScripture": "Śiva Purāṇa",
+      "scriptureSources": [
+        {
+          "work": "Śiva Purāṇa",
+          "section": "Rudra Saṃhitā, Kumāra Khaṇḍa"
+        }
+      ],
+      "tags": [],
+      "categories": [
+        "deva"
+      ],
+      "importance": 5,
+      "image": {
+        "placeholder": "🐘"
+      },
+      "seo": {
+        "title": "Gaṇeśa — Hindu encyclopedia",
+        "description": "Gaṇeśa is the elephant-headed son of Śiva and Pārvatī, worshipped at the start of undertakings."
+      },
+      "externalRefs": {
+        "genealogyId": "ganesha"
+      },
+      "variantTraditions": [],
+      "status": "published",
+      "schemaVersion": 1
+    },
+    {
+      "id": "person.ganga",
+      "slug": "ganga",
+      "kind": "devi",
+      "name": "Gaṅgā",
+      "englishName": "Ganga",
+      "iastName": "Gaṅgā",
+      "sanskritName": "गङ्गा",
+      "aliases": [
+        "Ganga",
+        "Jahnavi",
+        "Jāhnavī"
+      ],
+      "gender": "female",
+      "era": "eternal",
+      "epithet": "River goddess; mother of Bhīṣma",
+      "summary": "River goddess; mother of Bhīṣma",
+      "description": "Gaṅgā marries Śaṃtanu and bears Devavrata (Bhīṣma), later returning to her celestial form.",
+      "primaryScripture": "Mahābhārata",
+      "scriptureSources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Ādi Parva",
+          "chapter": "96–100"
+        }
+      ],
+      "tags": [
+        "dynasty:kuru"
+      ],
+      "categories": [
+        "devi"
+      ],
+      "importance": 5,
+      "seo": {
+        "title": "Gaṅgā — Hindu encyclopedia",
+        "description": "Gaṅgā marries Śaṃtanu and bears Devavrata (Bhīṣma), later returning to her celestial form."
+      },
+      "externalRefs": {
+        "genealogyId": "ganga"
+      },
+      "variantTraditions": [],
+      "status": "published",
+      "schemaVersion": 1
+    },
+    {
+      "id": "person.hiranyakashipu",
+      "slug": "hiranyakashipu",
+      "kind": "daitya",
+      "name": "Hiraṇyakaśipu",
+      "englishName": "Hiranyakashipu",
+      "iastName": "Hiraṇyakaśipu",
+      "sanskritName": "हिरण्यकशिपु",
+      "aliases": [
+        "Hiranyakasipu"
+      ],
+      "gender": "male",
+      "era": "satya-yuga",
+      "epithet": "Daitya king slain by Narasiṃha",
+      "summary": "Daitya king slain by Narasiṃha",
+      "description": "Hiraṇyakaśipu, son of Kaśyapa and Diti, persecuted his son Prahlāda for devotion to Viṣṇu and was destroyed by the Narasiṃha avatāra.",
+      "primaryScripture": "Bhāgavata Purāṇa",
+      "scriptureSources": [
+        {
+          "work": "Bhāgavata Purāṇa",
+          "section": "Skandha 7"
+        }
+      ],
+      "tags": [
+        "dynasty:daitya"
+      ],
+      "categories": [
+        "daitya"
+      ],
+      "importance": 5,
+      "image": {
+        "placeholder": "🦁"
+      },
+      "seo": {
+        "title": "Hiraṇyakaśipu — Hindu encyclopedia",
+        "description": "Hiraṇyakaśipu, son of Kaśyapa and Diti, persecuted his son Prahlāda for devotion to Viṣṇu and was destroyed by the Narasiṃha avatāra."
+      },
+      "externalRefs": {
+        "genealogyId": "hiranyakashipu"
+      },
+      "variantTraditions": [],
+      "status": "published",
+      "schemaVersion": 1
+    },
+    {
+      "id": "person.hiranyaksha",
+      "slug": "hiranyaksha",
+      "kind": "daitya",
+      "name": "Hiraṇyākṣa",
+      "englishName": "Hiranyaksha",
+      "iastName": "Hiraṇyākṣa",
+      "sanskritName": "हिरण्याक्ष",
+      "aliases": [
+        "Hiranyaksa"
+      ],
+      "gender": "male",
+      "era": "satya-yuga",
+      "epithet": "Daitya slain by Varāha",
+      "summary": "Daitya slain by Varāha",
+      "description": "Hiraṇyākṣa, twin brother of Hiraṇyakaśipu, dragged the earth into the waters and was slain by Viṣṇu as Varāha.",
+      "primaryScripture": "Bhāgavata Purāṇa",
+      "scriptureSources": [
+        {
+          "work": "Bhāgavata Purāṇa",
+          "section": "Skandha 3",
+          "chapter": "14–19"
+        }
+      ],
+      "tags": [
+        "dynasty:daitya"
+      ],
+      "categories": [
+        "daitya"
+      ],
+      "importance": 4,
+      "image": {
+        "placeholder": "🐗"
+      },
+      "seo": {
+        "title": "Hiraṇyākṣa — Hindu encyclopedia",
+        "description": "Hiraṇyākṣa, twin brother of Hiraṇyakaśipu, dragged the earth into the waters and was slain by Viṣṇu as Varāha."
+      },
+      "externalRefs": {
+        "genealogyId": "hiranyaksha"
+      },
+      "variantTraditions": [],
+      "status": "published",
+      "schemaVersion": 1
+    },
+    {
+      "id": "person.ikshvaku",
+      "slug": "ikshvaku",
+      "kind": "king",
+      "name": "Ikṣvāku",
+      "englishName": "Ikshvaku",
+      "iastName": "Ikṣvāku",
+      "sanskritName": "इक्ष्वाकु",
+      "aliases": [],
+      "gender": "male",
+      "era": "satya-yuga",
+      "epithet": "Founder of the Ikṣvāku (Solar) line",
+      "summary": "Founder of the Ikṣvāku (Solar) line",
+      "description": "Ikṣvāku, son of Vaivasvata Manu, is the eponymous founder of the Solar Dynasty of Ayodhyā.",
+      "primaryScripture": "Bhāgavata Purāṇa",
+      "scriptureSources": [
+        {
+          "work": "Bhāgavata Purāṇa",
+          "section": "Skandha 9",
+          "chapter": "6"
+        },
+        {
+          "work": "Viṣṇu Purāṇa",
+          "section": "Aṃśa 4",
+          "chapter": "1"
+        }
+      ],
+      "tags": [
+        "dynasty:suryavamsa"
+      ],
+      "categories": [
+        "dynasty-founder"
+      ],
+      "importance": 5,
+      "seo": {
+        "title": "Ikṣvāku — Hindu encyclopedia",
+        "description": "Ikṣvāku, son of Vaivasvata Manu, is the eponymous founder of the Solar Dynasty of Ayodhyā."
+      },
+      "externalRefs": {
+        "genealogyId": "ikshvaku"
+      },
+      "variantTraditions": [],
+      "status": "published",
+      "schemaVersion": 1
+    },
+    {
+      "id": "person.indra",
+      "slug": "indra",
+      "kind": "deva",
+      "name": "Indra",
+      "englishName": "Indra",
+      "iastName": "Indra",
+      "sanskritName": "इन्द्र",
+      "aliases": [
+        "Sakrada",
+        "Śakra",
+        "Purandara",
+        "Devendra"
+      ],
+      "gender": "male",
+      "era": "eternal",
+      "epithet": "King of the Devas; an Āditya",
+      "summary": "King of the Devas; an Āditya",
+      "description": "Indra, son of Kaśyapa and Aditi, is sovereign of Svarga and foremost among the Ādityas in epic and Purāṇic narrative.",
+      "primaryScripture": "Bhāgavata Purāṇa",
+      "scriptureSources": [
+        {
+          "work": "Bhāgavata Purāṇa",
+          "section": "Skandha 6",
+          "chapter": "18"
+        },
+        {
+          "work": "Viṣṇu Purāṇa",
+          "section": "Aṃśa 1",
+          "chapter": "15"
+        }
+      ],
+      "tags": [
+        "dynasty:aditya"
+      ],
+      "categories": [
+        "deva"
+      ],
+      "importance": 5,
+      "image": {
+        "placeholder": "⚡"
+      },
+      "seo": {
+        "title": "Indra — Hindu encyclopedia",
+        "description": "Indra, son of Kaśyapa and Aditi, is sovereign of Svarga and foremost among the Ādityas in epic and Purāṇic narrative."
+      },
+      "externalRefs": {
+        "genealogyId": "indra"
+      },
+      "variantTraditions": [],
+      "status": "published",
+      "schemaVersion": 1
+    },
+    {
+      "id": "person.indrajit",
+      "slug": "indrajit",
+      "kind": "rakshasa",
+      "name": "Indrajit",
+      "englishName": "Indrajit",
+      "iastName": "Indrajit",
+      "sanskritName": "इन्द्रजित्",
+      "aliases": [
+        "Meghanada",
+        "Meghanāda"
+      ],
+      "gender": "male",
+      "era": "treta-yuga",
+      "epithet": "Son of Rāvaṇa; conqueror of Indra",
+      "summary": "Son of Rāvaṇa; conqueror of Indra",
+      "description": "Indrajit (Meghanāda), son of Rāvaṇa, is the foremost warrior of Laṅkā, slain by Lakṣmaṇa in the Yuddha Kāṇḍa.",
+      "primaryScripture": "Rāmāyaṇa",
+      "scriptureSources": [
+        {
+          "work": "Rāmāyaṇa",
+          "section": "Yuddha Kāṇḍa"
+        }
+      ],
+      "tags": [
+        "dynasty:rakshasa"
+      ],
+      "categories": [
+        "rakshasa"
+      ],
+      "importance": 4,
+      "seo": {
+        "title": "Indrajit — Hindu encyclopedia",
+        "description": "Indrajit (Meghanāda), son of Rāvaṇa, is the foremost warrior of Laṅkā, slain by Lakṣmaṇa in the Yuddha Kāṇḍa."
+      },
+      "externalRefs": {
+        "genealogyId": "indrajit"
+      },
+      "variantTraditions": [],
+      "status": "published",
+      "schemaVersion": 1
+    },
+    {
+      "id": "person.janaka",
+      "slug": "janaka",
+      "kind": "king",
+      "name": "Janaka",
+      "englishName": "Janaka",
+      "iastName": "Janaka",
+      "sanskritName": "जनक",
+      "aliases": [
+        "Siradhvaja",
+        "Sīradhvaja"
+      ],
+      "gender": "male",
+      "era": "treta-yuga",
+      "epithet": "King of Videha; adoptive father of Sītā",
+      "summary": "King of Videha; adoptive father of Sītā",
+      "description": "Janaka of Mithilā finds Sītā in the furrow and raises her; Rāma wins her hand by stringing Śiva's bow.",
+      "primaryScripture": "Rāmāyaṇa",
+      "scriptureSources": [
+        {
+          "work": "Rāmāyaṇa",
+          "section": "Bāla Kāṇḍa",
+          "chapter": "66–73"
+        }
+      ],
+      "tags": [
+        "dynasty:videha"
+      ],
+      "categories": [
+        "king"
+      ],
+      "importance": 4,
+      "seo": {
+        "title": "Janaka — Hindu encyclopedia",
+        "description": "Janaka of Mithilā finds Sītā in the furrow and raises her; Rāma wins her hand by stringing Śiva's bow."
+      },
+      "externalRefs": {
+        "genealogyId": "janaka"
+      },
+      "variantTraditions": [],
+      "status": "published",
+      "schemaVersion": 1
+    },
+    {
+      "id": "person.kadru",
+      "slug": "kadru",
+      "kind": "naga",
+      "name": "Kadrū",
+      "englishName": "Kadru",
+      "iastName": "Kadrū",
+      "sanskritName": "कद्रू",
+      "aliases": [],
+      "gender": "female",
+      "era": "creation",
+      "epithet": "Mother of the Nāgas",
+      "summary": "Mother of the Nāgas",
+      "description": "Kadrū, daughter of Dakṣa and wife of Kaśyapa, is the mother of the serpent race (Nāgas), including Ananta, Vāsuki and Takṣaka.",
+      "primaryScripture": "Mahābhārata",
+      "scriptureSources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Ādi Parva",
+          "chapter": "16"
+        },
+        {
+          "work": "Bhāgavata Purāṇa",
+          "section": "Skandha 5",
+          "chapter": "25"
+        },
+        {
+          "work": "Bhāgavata Purāṇa",
+          "section": "Skandha 6",
+          "chapter": "6"
+        }
+      ],
+      "tags": [
+        "dynasty:naga"
+      ],
+      "categories": [
+        "naga"
+      ],
+      "importance": 5,
+      "seo": {
+        "title": "Kadrū — Hindu encyclopedia",
+        "description": "Kadrū, daughter of Dakṣa and wife of Kaśyapa, is the mother of the serpent race (Nāgas), including Ananta, Vāsuki and Takṣaka."
+      },
+      "externalRefs": {
+        "genealogyId": "kadru"
+      },
+      "variantTraditions": [],
+      "status": "published",
+      "schemaVersion": 1
+    },
+    {
+      "id": "person.kaikasi",
+      "slug": "kaikasi",
+      "kind": "rakshasa",
+      "name": "Kaikasī",
+      "englishName": "Kaikasi",
+      "iastName": "Kaikasī",
+      "sanskritName": "कैकसी",
+      "aliases": [
+        "Kaikasi"
+      ],
+      "gender": "female",
+      "era": "treta-yuga",
+      "epithet": "Mother of Rāvaṇa and his siblings",
+      "summary": "Mother of Rāvaṇa and his siblings",
+      "description": "Kaikasī, daughter of the rākṣasa Sumālin, is the wife of Viśravas and mother of Rāvaṇa, Kumbhakarṇa, Vibhīṣaṇa and Śūrpaṇakhā.",
+      "primaryScripture": "Rāmāyaṇa",
+      "scriptureSources": [
+        {
+          "work": "Rāmāyaṇa",
+          "section": "Uttara Kāṇḍa",
+          "chapter": "9"
+        }
+      ],
+      "tags": [
+        "dynasty:rakshasa"
+      ],
+      "categories": [
+        "rakshasa"
+      ],
+      "importance": 4,
+      "seo": {
+        "title": "Kaikasī — Hindu encyclopedia",
+        "description": "Kaikasī, daughter of the rākṣasa Sumālin, is the wife of Viśravas and mother of Rāvaṇa, Kumbhakarṇa, Vibhīṣaṇa and Śūrpaṇakhā."
+      },
+      "externalRefs": {
+        "genealogyId": "kaikasi"
+      },
+      "variantTraditions": [],
+      "status": "published",
+      "schemaVersion": 1
+    },
+    {
+      "id": "person.kaikeyi",
+      "slug": "kaikeyi",
+      "kind": "queen",
+      "name": "Kaikeyī",
+      "englishName": "Kaikeyi",
+      "iastName": "Kaikeyī",
+      "sanskritName": "कैकेयी",
+      "aliases": [],
+      "gender": "female",
+      "era": "treta-yuga",
+      "epithet": "Queen of Daśaratha; mother of Bharata",
+      "summary": "Queen of Daśaratha; mother of Bharata",
+      "description": "Kaikeyī, daughter of the Kekaya king, is mother of Bharata and the queen whose boons send Rāma into exile.",
+      "primaryScripture": "Rāmāyaṇa",
+      "scriptureSources": [
+        {
+          "work": "Rāmāyaṇa",
+          "section": "Bāla Kāṇḍa",
+          "chapter": "18"
+        },
+        {
+          "work": "Rāmāyaṇa",
+          "section": "Ayodhyā Kāṇḍa"
+        }
+      ],
+      "tags": [
+        "dynasty:raghu"
+      ],
+      "categories": [
+        "queen"
+      ],
+      "importance": 4,
+      "seo": {
+        "title": "Kaikeyī — Hindu encyclopedia",
+        "description": "Kaikeyī, daughter of the Kekaya king, is mother of Bharata and the queen whose boons send Rāma into exile."
+      },
+      "externalRefs": {
+        "genealogyId": "kaikeyi"
+      },
+      "variantTraditions": [],
+      "status": "published",
+      "schemaVersion": 1
+    },
+    {
+      "id": "person.kamsa",
+      "slug": "kamsa",
+      "kind": "king",
+      "name": "Kaṃsa",
+      "englishName": "Kamsa",
+      "iastName": "Kaṃsa",
+      "sanskritName": "कंस",
+      "aliases": [
+        "Kansa"
+      ],
+      "gender": "male",
+      "era": "dvapara-yuga",
+      "epithet": "Tyrant of Mathurā; maternal uncle of Kṛṣṇa",
+      "summary": "Tyrant of Mathurā; maternal uncle of Kṛṣṇa",
+      "description": "Kaṃsa, brother of Devakī, usurps Mathurā and seeks to kill Devakī's children; slain by Kṛṣṇa.",
+      "primaryScripture": "Bhāgavata Purāṇa",
+      "scriptureSources": [
+        {
+          "work": "Bhāgavata Purāṇa",
+          "section": "Skandha 10",
+          "chapter": "1–44"
+        }
+      ],
+      "tags": [
+        "dynasty:yadu"
+      ],
+      "categories": [
+        "king"
+      ],
+      "importance": 4,
+      "seo": {
+        "title": "Kaṃsa — Hindu encyclopedia",
+        "description": "Kaṃsa, brother of Devakī, usurps Mathurā and seeks to kill Devakī's children; slain by Kṛṣṇa."
+      },
+      "externalRefs": {
+        "genealogyId": "kamsa"
+      },
+      "variantTraditions": [],
+      "status": "published",
+      "schemaVersion": 1
+    },
+    {
+      "id": "person.karkotaka",
+      "slug": "karkotaka",
+      "kind": "naga",
+      "name": "Karkoṭaka",
+      "englishName": "Karkotaka",
+      "iastName": "Karkoṭaka",
+      "sanskritName": "कर्कोटक",
+      "aliases": [],
+      "gender": "male",
+      "era": "dvapara-yuga",
+      "epithet": "Principal Nāga of Kadrū's line",
+      "summary": "Principal Nāga of Kadrū's line",
+      "description": "Karkoṭaka is named among the great Nāgas born of Kadrū in epic and Purāṇic lists.",
+      "primaryScripture": "Mahābhārata",
+      "scriptureSources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Ādi Parva"
+        },
+        {
+          "work": "Bhāgavata Purāṇa",
+          "section": "Skandha 6",
+          "chapter": "6"
+        }
+      ],
+      "tags": [
+        "dynasty:naga"
+      ],
+      "categories": [
+        "naga"
+      ],
+      "importance": 3,
+      "seo": {
+        "title": "Karkoṭaka — Hindu encyclopedia",
+        "description": "Karkoṭaka is named among the great Nāgas born of Kadrū in epic and Purāṇic lists."
+      },
+      "externalRefs": {
+        "genealogyId": "karkotaka"
+      },
+      "variantTraditions": [],
+      "status": "published",
+      "schemaVersion": 1
+    },
+    {
+      "id": "person.karna",
+      "slug": "karna",
+      "kind": "warrior",
+      "name": "Karṇa",
+      "englishName": "Karna",
+      "iastName": "Karṇa",
+      "sanskritName": "कर्ण",
+      "aliases": [
+        "Radheya",
+        "Vasushena",
+        "Suryaputra"
+      ],
+      "gender": "male",
+      "era": "dvapara-yuga",
+      "epithet": "Son of Kuntī and Sūrya; ally of Duryodhana",
+      "summary": "Son of Kuntī and Sūrya; ally of Duryodhana",
+      "description": "Karṇa is born of Kuntī and Sūrya before her marriage, raised by Adhiratha and Rādhā, and fights for Duryodhana.",
+      "primaryScripture": "Mahābhārata",
+      "scriptureSources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Ādi Parva",
+          "chapter": "104–111"
+        },
+        {
+          "work": "Mahābhārata",
+          "section": "Karṇa Parva"
+        }
+      ],
+      "tags": [
+        "dynasty:kuru"
+      ],
+      "categories": [
+        "warrior"
+      ],
+      "importance": 5,
+      "seo": {
+        "title": "Karṇa — Hindu encyclopedia",
+        "description": "Karṇa is born of Kuntī and Sūrya before her marriage, raised by Adhiratha and Rādhā, and fights for Duryodhana."
+      },
+      "externalRefs": {
+        "genealogyId": "karna"
+      },
+      "variantTraditions": [],
+      "status": "published",
+      "schemaVersion": 1
+    },
+    {
+      "id": "person.kartikeya",
+      "slug": "kartikeya",
+      "kind": "deva",
+      "name": "Kārttikeya",
+      "englishName": "Kartikeya",
+      "iastName": "Kārttikeya",
+      "sanskritName": "कार्त्तिकेय",
+      "aliases": [
+        "Skanda",
+        "Kumara",
+        "Kumāra",
+        "Subrahmanya",
+        "Subrahmaṇya",
+        "Murugan"
+      ],
+      "gender": "divine",
+      "era": "eternal",
+      "epithet": "Commander of the divine hosts",
+      "summary": "Commander of the divine hosts",
+      "description": "Kārttikeya (Skanda) is the war-god son of Śiva, raised by the Kṛttikās in the epic and Purāṇic accounts.",
+      "primaryScripture": "Skanda Purāṇa",
+      "scriptureSources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Vana Parva",
+          "chapter": "223–232"
+        },
+        {
+          "work": "Skanda Purāṇa"
+        }
+      ],
+      "tags": [],
+      "categories": [
+        "deva"
+      ],
+      "importance": 4,
+      "image": {
+        "placeholder": "🗡️"
+      },
+      "seo": {
+        "title": "Kārttikeya — Hindu encyclopedia",
+        "description": "Kārttikeya (Skanda) is the war-god son of Śiva, raised by the Kṛttikās in the epic and Purāṇic accounts."
+      },
+      "externalRefs": {
+        "genealogyId": "kartikeya"
+      },
+      "variantTraditions": [],
+      "status": "published",
+      "schemaVersion": 1
+    },
+    {
+      "id": "person.kashyapa",
+      "slug": "kashyapa",
+      "kind": "prajapati",
+      "name": "Kaśyapa",
+      "englishName": "Kashyapa",
+      "iastName": "Kaśyapa",
+      "sanskritName": "कश्यप",
+      "aliases": [
+        "Kasyapa"
+      ],
+      "gender": "male",
+      "era": "creation",
+      "epithet": "Progenitor of Devas, Daityas, Dānavas, Nāgas and others",
+      "summary": "Progenitor of Devas, Daityas, Dānavas, Nāgas and others",
+      "description": "Kaśyapa, son of Marīci, marries many daughters of Dakṣa. From Aditi come the Ādityas (Devas); from Diti the Daityas; from Danu the Dānavas; from Kadrū the Nāgas.",
+      "primaryScripture": "Bhāgavata Purāṇa",
+      "scriptureSources": [
+        {
+          "work": "Bhāgavata Purāṇa",
+          "section": "Skandha 6",
+          "chapter": "6"
+        },
+        {
+          "work": "Viṣṇu Purāṇa",
+          "section": "Aṃśa 1",
+          "chapter": "15"
+        },
+        {
+          "work": "Mahābhārata",
+          "section": "Ādi Parva",
+          "chapter": "16"
+        }
+      ],
+      "tags": [
+        "dynasty:kashyapa"
+      ],
+      "categories": [
+        "prajapati"
+      ],
+      "importance": 5,
+      "seo": {
+        "title": "Kaśyapa — Hindu encyclopedia",
+        "description": "Kaśyapa, son of Marīci, marries many daughters of Dakṣa. From Aditi come the Ādityas (Devas); from Diti the Daityas; from Danu the Dānavas; from Kadrū the Nāgas"
+      },
+      "externalRefs": {
+        "genealogyId": "kashyapa"
+      },
+      "variantTraditions": [],
+      "status": "published",
+      "schemaVersion": 1
+    },
+    {
+      "id": "person.kausalya",
+      "slug": "kausalya",
+      "kind": "queen",
+      "name": "Kausalyā",
+      "englishName": "Kausalya",
+      "iastName": "Kausalyā",
+      "sanskritName": "कौसल्या",
+      "aliases": [
+        "Kausalya"
+      ],
+      "gender": "female",
+      "era": "treta-yuga",
+      "epithet": "Chief queen of Daśaratha; mother of Rāma",
+      "summary": "Chief queen of Daśaratha; mother of Rāma",
+      "description": "Kausalyā is the senior queen of Daśaratha and mother of Rāma.",
+      "primaryScripture": "Rāmāyaṇa",
+      "scriptureSources": [
+        {
+          "work": "Rāmāyaṇa",
+          "section": "Bāla Kāṇḍa",
+          "chapter": "18"
+        }
+      ],
+      "tags": [
+        "dynasty:raghu"
+      ],
+      "categories": [
+        "queen"
+      ],
+      "importance": 4,
+      "seo": {
+        "title": "Kausalyā — Hindu encyclopedia",
+        "description": "Kausalyā is the senior queen of Daśaratha and mother of Rāma."
+      },
+      "externalRefs": {
+        "genealogyId": "kausalya"
+      },
+      "variantTraditions": [],
+      "status": "published",
+      "schemaVersion": 1
+    },
+    {
+      "id": "person.kratu",
+      "slug": "kratu",
+      "kind": "sage",
+      "name": "Kratu",
+      "englishName": "Kratu",
+      "iastName": "Kratu",
+      "sanskritName": "क्रतु",
+      "aliases": [],
+      "gender": "male",
+      "era": "creation",
+      "epithet": "Saptarṣi; mind-born son of Brahmā",
+      "summary": "Saptarṣi; mind-born son of Brahmā",
+      "description": "Kratu is a mānasaputra of Brahmā and one of the seven seers associated with the current manvantara lists.",
+      "primaryScripture": "Bhāgavata Purāṇa",
+      "scriptureSources": [
+        {
+          "work": "Bhāgavata Purāṇa",
+          "section": "Skandha 3",
+          "chapter": "12"
+        }
+      ],
+      "tags": [],
+      "categories": [
+        "saptarishi"
+      ],
+      "importance": 3,
+      "seo": {
+        "title": "Kratu — Hindu encyclopedia",
+        "description": "Kratu is a mānasaputra of Brahmā and one of the seven seers associated with the current manvantara lists."
+      },
+      "externalRefs": {
+        "genealogyId": "kratu"
+      },
+      "variantTraditions": [],
+      "status": "published",
+      "schemaVersion": 1
+    },
+    {
+      "id": "person.krishna",
+      "slug": "krishna",
+      "kind": "avatar",
+      "name": "Kṛṣṇa",
+      "englishName": "Krishna",
+      "iastName": "Kṛṣṇa",
+      "sanskritName": "कृष्ण",
+      "aliases": [
+        "Krishna",
+        "Krsna",
+        "Govinda",
+        "Madhava",
+        "Mādhava",
+        "Vasudeva",
+        "Vāsudeva",
+        "Hari",
+        "Mukunda",
+        "Yadava",
+        "Yādava"
+      ],
+      "gender": "male",
+      "era": "dvapara-yuga",
+      "epithet": "Avatāra of Viṣṇu; speaker of the Bhagavad Gītā",
+      "summary": "Avatāra of Viṣṇu; speaker of the Bhagavad Gītā",
+      "description": "Kṛṣṇa, son of Vasudeva and Devakī, raised by Nanda and Yaśodā, is the central figure of the Bhāgavata's tenth skandha and the charioteer-teacher of the Gītā.",
+      "primaryScripture": "Bhāgavata Purāṇa",
+      "scriptureSources": [
+        {
+          "work": "Bhāgavata Purāṇa",
+          "section": "Skandha 10"
+        },
+        {
+          "work": "Harivaṃśa"
+        },
+        {
+          "work": "Bhagavad Gītā"
+        }
+      ],
+      "tags": [
+        "dynasty:yadu"
+      ],
+      "categories": [
+        "avatar"
+      ],
+      "importance": 5,
+      "image": {
+        "placeholder": "🪈"
+      },
+      "seo": {
+        "title": "Kṛṣṇa — Hindu encyclopedia",
+        "description": "Kṛṣṇa, son of Vasudeva and Devakī, raised by Nanda and Yaśodā, is the central figure of the Bhāgavata's tenth skandha and the charioteer-teacher of the Gītā."
+      },
+      "externalRefs": {
+        "genealogyId": "krishna"
+      },
+      "variantTraditions": [],
+      "status": "published",
+      "schemaVersion": 1
+    },
+    {
+      "id": "person.kubera",
+      "slug": "kubera",
+      "kind": "yaksha",
+      "name": "Kubera",
+      "englishName": "Kubera",
+      "iastName": "Kubera",
+      "sanskritName": "कुबेर",
+      "aliases": [
+        "Vaisravana",
+        "Vaiśravaṇa",
+        "Kuvera"
+      ],
+      "gender": "male",
+      "era": "treta-yuga",
+      "epithet": "Lord of Yakṣas; half-brother of Rāvaṇa",
+      "summary": "Lord of Yakṣas; half-brother of Rāvaṇa",
+      "description": "Kubera (Vaiśravaṇa), son of Viśravas, is lord of the Yakṣas and guardian of wealth. He first ruled Laṅkā before Rāvaṇa seized it.",
+      "primaryScripture": "Rāmāyaṇa",
+      "scriptureSources": [
+        {
+          "work": "Rāmāyaṇa",
+          "section": "Uttara Kāṇḍa",
+          "chapter": "3–9"
+        },
+        {
+          "work": "Bhāgavata Purāṇa",
+          "section": "Skandha 4",
+          "chapter": "1"
+        }
+      ],
+      "tags": [
+        "dynasty:yaksha"
+      ],
+      "categories": [
+        "yaksha"
+      ],
+      "importance": 5,
+      "seo": {
+        "title": "Kubera — Hindu encyclopedia",
+        "description": "Kubera (Vaiśravaṇa), son of Viśravas, is lord of the Yakṣas and guardian of wealth. He first ruled Laṅkā before Rāvaṇa seized it."
+      },
+      "externalRefs": {
+        "genealogyId": "kubera"
+      },
+      "variantTraditions": [],
+      "notes": "Categorised as Yakṣa (lord of Yakṣas), not Rākṣasa — though of the same paternal line.",
+      "status": "published",
+      "schemaVersion": 1
+    },
+    {
+      "id": "person.kulika-naga",
+      "slug": "kulika-naga",
+      "kind": "naga",
+      "name": "Kulika",
+      "englishName": "Kulika",
+      "iastName": "Kulika",
+      "sanskritName": "कुलिक",
+      "aliases": [],
+      "gender": "male",
+      "era": "eternal",
+      "epithet": "Principal Nāga",
+      "summary": "Principal Nāga",
+      "description": "Kulika is counted among the great Nāgas in traditional lists of Kadrū's progeny.",
+      "primaryScripture": "Bhāgavata Purāṇa",
+      "scriptureSources": [
+        {
+          "work": "Bhāgavata Purāṇa",
+          "section": "Skandha 6",
+          "chapter": "6"
+        }
+      ],
+      "tags": [
+        "dynasty:naga"
+      ],
+      "categories": [
+        "naga"
+      ],
+      "importance": 2,
+      "seo": {
+        "title": "Kulika — Hindu encyclopedia",
+        "description": "Kulika is counted among the great Nāgas in traditional lists of Kadrū's progeny."
+      },
+      "externalRefs": {
+        "genealogyId": "kulika-naga"
+      },
+      "variantTraditions": [],
+      "status": "published",
+      "schemaVersion": 1
+    },
+    {
+      "id": "person.kumbhakarna",
+      "slug": "kumbhakarna",
+      "kind": "rakshasa",
+      "name": "Kumbhakarṇa",
+      "englishName": "Kumbhakarna",
+      "iastName": "Kumbhakarṇa",
+      "sanskritName": "कुम्भकर्ण",
+      "aliases": [],
+      "gender": "male",
+      "era": "treta-yuga",
+      "epithet": "Brother of Rāvaṇa; giant warrior of Laṅkā",
+      "summary": "Brother of Rāvaṇa; giant warrior of Laṅkā",
+      "description": "Kumbhakarṇa, son of Viśravas and Kaikasī, is famed for his vast size, long sleep, and death in battle against Rāma's army.",
+      "primaryScripture": "Rāmāyaṇa",
+      "scriptureSources": [
+        {
+          "work": "Rāmāyaṇa",
+          "section": "Uttara Kāṇḍa",
+          "chapter": "9"
+        },
+        {
+          "work": "Rāmāyaṇa",
+          "section": "Yuddha Kāṇḍa"
+        }
+      ],
+      "tags": [
+        "dynasty:rakshasa"
+      ],
+      "categories": [
+        "rakshasa"
+      ],
+      "importance": 4,
+      "seo": {
+        "title": "Kumbhakarṇa — Hindu encyclopedia",
+        "description": "Kumbhakarṇa, son of Viśravas and Kaikasī, is famed for his vast size, long sleep, and death in battle against Rāma's army."
+      },
+      "externalRefs": {
+        "genealogyId": "kumbhakarna"
+      },
+      "variantTraditions": [],
+      "status": "published",
+      "schemaVersion": 1
+    },
+    {
+      "id": "person.kunti",
+      "slug": "kunti",
+      "kind": "queen",
+      "name": "Kuntī",
+      "englishName": "Kunti",
+      "iastName": "Kuntī",
+      "sanskritName": "कुन्ती",
+      "aliases": [
+        "Pritha",
+        "Pṛthā"
+      ],
+      "gender": "female",
+      "era": "dvapara-yuga",
+      "epithet": "Mother of Yudhiṣṭhira, Bhīma, Arjuna and Karṇa",
+      "summary": "Mother of Yudhiṣṭhira, Bhīma, Arjuna and Karṇa",
+      "description": "Kuntī (Pṛthā), wife of Pāṇḍu, bears three Pāṇḍavas by divine fathers and earlier bore Karṇa by Sūrya.",
+      "primaryScripture": "Mahābhārata",
+      "scriptureSources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Ādi Parva",
+          "chapter": "104–124"
+        }
+      ],
+      "tags": [
+        "dynasty:kuru"
+      ],
+      "categories": [
+        "queen"
+      ],
+      "importance": 5,
+      "seo": {
+        "title": "Kuntī — Hindu encyclopedia",
+        "description": "Kuntī (Pṛthā), wife of Pāṇḍu, bears three Pāṇḍavas by divine fathers and earlier bore Karṇa by Sūrya."
+      },
+      "externalRefs": {
+        "genealogyId": "kunti"
+      },
+      "variantTraditions": [],
+      "status": "published",
+      "schemaVersion": 1
+    },
+    {
+      "id": "person.kuru",
+      "slug": "kuru",
+      "kind": "king",
+      "name": "Kuru",
+      "englishName": "Kuru",
+      "iastName": "Kuru",
+      "sanskritName": "कुरु",
+      "aliases": [],
+      "gender": "male",
+      "era": "treta-yuga",
+      "epithet": "Eponym of the Kuru dynasty",
+      "summary": "Eponym of the Kuru dynasty",
+      "description": "Kuru gives his name to Kurukṣetra and the Kuru line; Bhīṣma, Dhṛtarāṣṭra and Pāṇḍu descend in this house.",
+      "primaryScripture": "Mahābhārata",
+      "scriptureSources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Ādi Parva"
+        },
+        {
+          "work": "Bhāgavata Purāṇa",
+          "section": "Skandha 9",
+          "chapter": "22"
+        }
+      ],
+      "tags": [
+        "dynasty:kuru"
+      ],
+      "categories": [
+        "dynasty-founder"
+      ],
+      "importance": 5,
+      "seo": {
+        "title": "Kuru — Hindu encyclopedia",
+        "description": "Kuru gives his name to Kurukṣetra and the Kuru line; Bhīṣma, Dhṛtarāṣṭra and Pāṇḍu descend in this house."
+      },
+      "externalRefs": {
+        "genealogyId": "kuru"
+      },
+      "variantTraditions": [],
+      "status": "published",
+      "schemaVersion": 1
+    },
+    {
+      "id": "person.kusha",
+      "slug": "kusha",
+      "kind": "prince",
+      "name": "Kuśa",
+      "englishName": "Kusha",
+      "iastName": "Kuśa",
+      "sanskritName": "कुश",
+      "aliases": [
+        "Kusa"
+      ],
+      "gender": "male",
+      "era": "treta-yuga",
+      "epithet": "Son of Rāma and Sītā",
+      "summary": "Son of Rāma and Sītā",
+      "description": "Kuśa, twin of Lava, continues the Raghu line in later tradition after the Aśvamedha episode.",
+      "primaryScripture": "Rāmāyaṇa",
+      "scriptureSources": [
+        {
+          "work": "Rāmāyaṇa",
+          "section": "Uttara Kāṇḍa"
+        }
+      ],
+      "tags": [
+        "dynasty:raghu"
+      ],
+      "categories": [
+        "prince"
+      ],
+      "importance": 3,
+      "seo": {
+        "title": "Kuśa — Hindu encyclopedia",
+        "description": "Kuśa, twin of Lava, continues the Raghu line in later tradition after the Aśvamedha episode."
+      },
+      "externalRefs": {
+        "genealogyId": "kusha"
+      },
+      "variantTraditions": [],
+      "status": "published",
+      "schemaVersion": 1
+    },
+    {
+      "id": "person.lakshmana",
+      "slug": "lakshmana",
+      "kind": "prince",
+      "name": "Lakṣmaṇa",
+      "englishName": "Lakshmana",
+      "iastName": "Lakṣmaṇa",
+      "sanskritName": "लक्ष्मण",
+      "aliases": [
+        "Laxman",
+        "Lakshman"
+      ],
+      "gender": "male",
+      "era": "treta-yuga",
+      "epithet": "Constant companion of Rāma",
+      "summary": "Constant companion of Rāma",
+      "description": "Lakṣmaṇa, son of Sumitrā, accompanies Rāma and Sītā into exile and slays Indrajit.",
+      "primaryScripture": "Rāmāyaṇa",
+      "scriptureSources": [
+        {
+          "work": "Rāmāyaṇa",
+          "section": "Bāla Kāṇḍa",
+          "chapter": "18"
+        },
+        {
+          "work": "Rāmāyaṇa",
+          "section": "Yuddha Kāṇḍa"
+        }
+      ],
+      "tags": [
+        "dynasty:raghu"
+      ],
+      "categories": [
+        "prince"
+      ],
+      "importance": 5,
+      "seo": {
+        "title": "Lakṣmaṇa — Hindu encyclopedia",
+        "description": "Lakṣmaṇa, son of Sumitrā, accompanies Rāma and Sītā into exile and slays Indrajit."
+      },
+      "externalRefs": {
+        "genealogyId": "lakshmana"
+      },
+      "variantTraditions": [],
+      "status": "published",
+      "schemaVersion": 1
+    },
+    {
+      "id": "person.lakshmi",
+      "slug": "lakshmi",
+      "kind": "devi",
+      "name": "Lakṣmī",
+      "englishName": "Lakshmi",
+      "iastName": "Lakṣmī",
+      "sanskritName": "लक्ष्मी",
+      "aliases": [
+        "Sri",
+        "Śrī",
+        "Padma",
+        "Kamala"
+      ],
+      "gender": "divine",
+      "era": "eternal",
+      "epithet": "Goddess of fortune; consort of Viṣṇu",
+      "summary": "Goddess of fortune; consort of Viṣṇu",
+      "description": "Lakṣmī is the consort of Viṣṇu and the embodiment of śrī — prosperity, sovereignty and grace.",
+      "primaryScripture": "Viṣṇu Purāṇa",
+      "scriptureSources": [
+        {
+          "work": "Viṣṇu Purāṇa",
+          "section": "Aṃśa 1",
+          "chapter": "9"
+        },
+        {
+          "work": "Bhāgavata Purāṇa",
+          "section": "Skandha 8",
+          "chapter": "8"
+        }
+      ],
+      "tags": [],
+      "categories": [
+        "devi"
+      ],
+      "importance": 5,
+      "image": {
+        "placeholder": "🪷"
+      },
+      "seo": {
+        "title": "Lakṣmī — Hindu encyclopedia",
+        "description": "Lakṣmī is the consort of Viṣṇu and the embodiment of śrī — prosperity, sovereignty and grace."
+      },
+      "externalRefs": {
+        "genealogyId": "lakshmi"
+      },
+      "variantTraditions": [],
+      "status": "published",
+      "schemaVersion": 1
+    },
+    {
+      "id": "person.lava",
+      "slug": "lava",
+      "kind": "prince",
+      "name": "Lava",
+      "englishName": "Lava",
+      "iastName": "Lava",
+      "sanskritName": "लव",
+      "aliases": [],
+      "gender": "male",
+      "era": "treta-yuga",
+      "epithet": "Son of Rāma and Sītā",
+      "summary": "Son of Rāma and Sītā",
+      "description": "Lava, son of Rāma and Sītā, is raised in Vālmīki's āśrama and appears in the Uttara Kāṇḍa.",
+      "primaryScripture": "Rāmāyaṇa",
+      "scriptureSources": [
+        {
+          "work": "Rāmāyaṇa",
+          "section": "Uttara Kāṇḍa"
+        }
+      ],
+      "tags": [
+        "dynasty:raghu"
+      ],
+      "categories": [
+        "prince"
+      ],
+      "importance": 3,
+      "seo": {
+        "title": "Lava — Hindu encyclopedia",
+        "description": "Lava, son of Rāma and Sītā, is raised in Vālmīki's āśrama and appears in the Uttara Kāṇḍa."
+      },
+      "externalRefs": {
+        "genealogyId": "lava"
+      },
+      "variantTraditions": [],
+      "status": "published",
+      "schemaVersion": 1
+    },
+    {
+      "id": "person.madri",
+      "slug": "madri",
+      "kind": "queen",
+      "name": "Mādrī",
+      "englishName": "Madri",
+      "iastName": "Mādrī",
+      "sanskritName": "माद्री",
+      "aliases": [],
+      "gender": "female",
+      "era": "dvapara-yuga",
+      "epithet": "Mother of Nakula and Sahadeva",
+      "summary": "Mother of Nakula and Sahadeva",
+      "description": "Mādrī, second wife of Pāṇḍu, bears the twins Nakula and Sahadeva by the Aśvins.",
+      "primaryScripture": "Mahābhārata",
+      "scriptureSources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Ādi Parva",
+          "chapter": "124"
+        }
+      ],
+      "tags": [
+        "dynasty:kuru"
+      ],
+      "categories": [
+        "queen"
+      ],
+      "importance": 4,
+      "seo": {
+        "title": "Mādrī — Hindu encyclopedia",
+        "description": "Mādrī, second wife of Pāṇḍu, bears the twins Nakula and Sahadeva by the Aśvins."
+      },
+      "externalRefs": {
+        "genealogyId": "madri"
+      },
+      "variantTraditions": [],
+      "status": "published",
+      "schemaVersion": 1
+    },
+    {
+      "id": "person.mahapadma-naga",
+      "slug": "mahapadma-naga",
+      "kind": "naga",
+      "name": "Mahāpadma",
+      "englishName": "Mahapadma",
+      "iastName": "Mahāpadma",
+      "sanskritName": "महापद्म",
+      "aliases": [],
+      "gender": "male",
+      "era": "eternal",
+      "epithet": "Principal Nāga",
+      "summary": "Principal Nāga",
+      "description": "Mahāpadma appears among named Nāga princes in Purāṇic lists of the serpent race.",
+      "primaryScripture": "Bhāgavata Purāṇa",
+      "scriptureSources": [
+        {
+          "work": "Bhāgavata Purāṇa",
+          "section": "Skandha 6",
+          "chapter": "6"
+        }
+      ],
+      "tags": [
+        "dynasty:naga"
+      ],
+      "categories": [
+        "naga"
+      ],
+      "importance": 2,
+      "seo": {
+        "title": "Mahāpadma — Hindu encyclopedia",
+        "description": "Mahāpadma appears among named Nāga princes in Purāṇic lists of the serpent race."
+      },
+      "externalRefs": {
+        "genealogyId": "mahapadma-naga"
+      },
+      "variantTraditions": [],
+      "status": "published",
+      "schemaVersion": 1
+    },
+    {
+      "id": "person.marichi",
+      "slug": "marichi",
+      "kind": "prajapati",
+      "name": "Marīci",
+      "englishName": "Marichi",
+      "iastName": "Marīci",
+      "sanskritName": "मरीचि",
+      "aliases": [],
+      "gender": "male",
+      "era": "creation",
+      "epithet": "Mind-born son of Brahmā; father of Kaśyapa",
+      "summary": "Mind-born son of Brahmā; father of Kaśyapa",
+      "description": "Marīci is a mānasaputra of Brahmā and father of Kaśyapa, the great progenitor of many celestial lineages.",
+      "primaryScripture": "Bhāgavata Purāṇa",
+      "scriptureSources": [
+        {
+          "work": "Bhāgavata Purāṇa",
+          "section": "Skandha 3",
+          "chapter": "12"
+        },
+        {
+          "work": "Viṣṇu Purāṇa",
+          "section": "Aṃśa 1",
+          "chapter": "7"
+        }
+      ],
+      "tags": [
+        "dynasty:prajapati"
+      ],
+      "categories": [
+        "prajapati"
+      ],
+      "importance": 5,
+      "seo": {
+        "title": "Marīci — Hindu encyclopedia",
+        "description": "Marīci is a mānasaputra of Brahmā and father of Kaśyapa, the great progenitor of many celestial lineages."
+      },
+      "externalRefs": {
+        "genealogyId": "marichi"
+      },
+      "variantTraditions": [],
+      "status": "published",
+      "schemaVersion": 1
+    },
+    {
+      "id": "person.maya-danava",
+      "slug": "maya-danava",
+      "kind": "danava",
+      "name": "Maya",
+      "englishName": "Maya Danava",
+      "iastName": "Maya",
+      "sanskritName": "मय",
+      "aliases": [
+        "Mayasura",
+        "Maya Dānava",
+        "Maya Danava"
+      ],
+      "gender": "male",
+      "era": "dvapara-yuga",
+      "epithet": "Architect of the Dānavas; builder of the hall at Indraprastha",
+      "summary": "Architect of the Dānavas; builder of the hall at Indraprastha",
+      "description": "Maya is the divine architect associated with the Dānava/asura side in the Mahābhārata; he builds the wondrous sabhā for the Pāṇḍavas after being spared by Arjuna and Kṛṣṇa.",
+      "primaryScripture": "Mahābhārata",
+      "scriptureSources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Ādi Parva",
+          "chapter": "228–233"
+        },
+        {
+          "work": "Viṣṇu Purāṇa",
+          "section": "Aṃśa 1",
+          "chapter": "21"
+        }
+      ],
+      "tags": [
+        "dynasty:danava"
+      ],
+      "categories": [
+        "danava"
+      ],
+      "importance": 4,
+      "seo": {
+        "title": "Maya — Hindu encyclopedia",
+        "description": "Maya is the divine architect associated with the Dānava/asura side in the Mahābhārata; he builds the wondrous sabhā for the Pāṇḍavas after being spared by Arjun"
+      },
+      "externalRefs": {
+        "genealogyId": "maya-danava"
+      },
+      "variantTraditions": [],
+      "status": "published",
+      "schemaVersion": 1
+    },
+    {
+      "id": "person.mitra",
+      "slug": "mitra",
+      "kind": "deva",
+      "name": "Mitra",
+      "englishName": "Mitra",
+      "iastName": "Mitra",
+      "sanskritName": "मित्र",
+      "aliases": [],
+      "gender": "male",
+      "era": "eternal",
+      "epithet": "Āditya; companion of Varuṇa in Vedic liturgy",
+      "summary": "Āditya; companion of Varuṇa in Vedic liturgy",
+      "description": "Mitra is listed among the Ādityas born of Aditi in the Viṣṇu and Bhāgavata Purāṇas.",
+      "primaryScripture": "Viṣṇu Purāṇa",
+      "scriptureSources": [
+        {
+          "work": "Viṣṇu Purāṇa",
+          "section": "Aṃśa 1",
+          "chapter": "15"
+        }
+      ],
+      "tags": [
+        "dynasty:aditya"
+      ],
+      "categories": [
+        "deva"
+      ],
+      "importance": 2,
+      "seo": {
+        "title": "Mitra — Hindu encyclopedia",
+        "description": "Mitra is listed among the Ādityas born of Aditi in the Viṣṇu and Bhāgavata Purāṇas."
+      },
+      "externalRefs": {
+        "genealogyId": "mitra"
+      },
+      "variantTraditions": [],
+      "status": "published",
+      "schemaVersion": 1
+    },
+    {
+      "id": "person.nakula",
+      "slug": "nakula",
+      "kind": "warrior",
+      "name": "Nakula",
+      "englishName": "Nakula",
+      "iastName": "Nakula",
+      "sanskritName": "नकुल",
+      "aliases": [],
+      "gender": "male",
+      "era": "dvapara-yuga",
+      "epithet": "Fourth Pāṇḍava; son of the Aśvins",
+      "summary": "Fourth Pāṇḍava; son of the Aśvins",
+      "description": "Nakula, twin of Sahadeva, is born of the Aśvins through Mādrī.",
+      "primaryScripture": "Mahābhārata",
+      "scriptureSources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Ādi Parva",
+          "chapter": "124"
+        }
+      ],
+      "tags": [
+        "dynasty:kuru"
+      ],
+      "categories": [
+        "warrior"
+      ],
+      "importance": 4,
+      "seo": {
+        "title": "Nakula — Hindu encyclopedia",
+        "description": "Nakula, twin of Sahadeva, is born of the Aśvins through Mādrī."
+      },
+      "externalRefs": {
+        "genealogyId": "nakula"
+      },
+      "variantTraditions": [],
+      "status": "published",
+      "schemaVersion": 1
+    },
+    {
+      "id": "person.namuci",
+      "slug": "namuci",
+      "kind": "danava",
+      "name": "Namuci",
+      "englishName": "Namuci",
+      "iastName": "Namuci",
+      "sanskritName": "नमुचि",
+      "aliases": [],
+      "gender": "male",
+      "era": "creation",
+      "epithet": "Dānava adversary of Indra",
+      "summary": "Dānava adversary of Indra",
+      "description": "Namuci is a Dānava associated with Indra's battles in epic and Purāṇic memory; listed among Danu's progeny in Viṣṇu Purāṇa.",
+      "primaryScripture": "Viṣṇu Purāṇa",
+      "scriptureSources": [
+        {
+          "work": "Viṣṇu Purāṇa",
+          "section": "Aṃśa 1",
+          "chapter": "21"
+        },
+        {
+          "work": "Mahābhārata",
+          "section": "Udyoga Parva"
+        }
+      ],
+      "tags": [
+        "dynasty:danava"
+      ],
+      "categories": [
+        "danava"
+      ],
+      "importance": 2,
+      "seo": {
+        "title": "Namuci — Hindu encyclopedia",
+        "description": "Namuci is a Dānava associated with Indra's battles in epic and Purāṇic memory; listed among Danu's progeny in Viṣṇu Purāṇa."
+      },
+      "externalRefs": {
+        "genealogyId": "namuci"
+      },
+      "variantTraditions": [],
+      "status": "published",
+      "schemaVersion": 1
+    },
+    {
+      "id": "person.nanda",
+      "slug": "nanda",
+      "kind": "person",
+      "name": "Nanda",
+      "englishName": "Nanda",
+      "iastName": "Nanda",
+      "sanskritName": "नन्द",
+      "aliases": [
+        "Nanda Baba",
+        "Nandaraja"
+      ],
+      "gender": "male",
+      "era": "dvapara-yuga",
+      "epithet": "Foster-father of Kṛṣṇa in Vraja",
+      "summary": "Foster-father of Kṛṣṇa in Vraja",
+      "description": "Nanda, chief of the cowherds of Vraja, raises Kṛṣṇa with Yaśodā after Vasudeva brings the infant to Gokula.",
+      "primaryScripture": "Bhāgavata Purāṇa",
+      "scriptureSources": [
+        {
+          "work": "Bhāgavata Purāṇa",
+          "section": "Skandha 10",
+          "chapter": "5–8"
+        }
+      ],
+      "tags": [
+        "dynasty:yadu"
+      ],
+      "categories": [
+        "other"
+      ],
+      "importance": 4,
+      "seo": {
+        "title": "Nanda — Hindu encyclopedia",
+        "description": "Nanda, chief of the cowherds of Vraja, raises Kṛṣṇa with Yaśodā after Vasudeva brings the infant to Gokula."
+      },
+      "externalRefs": {
+        "genealogyId": "nanda"
+      },
+      "variantTraditions": [],
+      "status": "published",
+      "schemaVersion": 1
+    },
+    {
+      "id": "person.narada",
+      "slug": "narada",
+      "kind": "sage",
+      "name": "Nārada",
+      "englishName": "Narada",
+      "iastName": "Nārada",
+      "sanskritName": "नारद",
+      "aliases": [],
+      "gender": "male",
+      "era": "eternal",
+      "epithet": "Divine sage; messenger among the worlds",
+      "summary": "Divine sage; messenger among the worlds",
+      "description": "Nārada is a mind-born son of Brahmā, the wandering sage who transmits bhakti and often catalyzes Purāṇic narratives.",
+      "primaryScripture": "Bhāgavata Purāṇa",
+      "scriptureSources": [
+        {
+          "work": "Bhāgavata Purāṇa",
+          "section": "Skandha 1",
+          "chapter": "5–6"
+        }
+      ],
+      "tags": [],
+      "categories": [
+        "rishi"
+      ],
+      "importance": 5,
+      "seo": {
+        "title": "Nārada — Hindu encyclopedia",
+        "description": "Nārada is a mind-born son of Brahmā, the wandering sage who transmits bhakti and often catalyzes Purāṇic narratives."
+      },
+      "externalRefs": {
+        "genealogyId": "narada"
+      },
+      "variantTraditions": [],
+      "status": "published",
+      "schemaVersion": 1
+    },
+    {
+      "id": "person.padma-naga",
+      "slug": "padma-naga",
+      "kind": "naga",
+      "name": "Padma",
+      "englishName": "Padma",
+      "iastName": "Padma",
+      "sanskritName": "पद्म",
+      "aliases": [],
+      "gender": "male",
+      "era": "eternal",
+      "epithet": "One of the principal Nāgas",
+      "summary": "One of the principal Nāgas",
+      "description": "Padma is listed among the principal Nāgas in Bhāgavata Purāṇa catalogues of Kadrū's sons.",
+      "primaryScripture": "Bhāgavata Purāṇa",
+      "scriptureSources": [
+        {
+          "work": "Bhāgavata Purāṇa",
+          "section": "Skandha 6",
+          "chapter": "6"
+        }
+      ],
+      "tags": [
+        "dynasty:naga"
+      ],
+      "categories": [
+        "naga"
+      ],
+      "importance": 2,
+      "seo": {
+        "title": "Padma — Hindu encyclopedia",
+        "description": "Padma is listed among the principal Nāgas in Bhāgavata Purāṇa catalogues of Kadrū's sons."
+      },
+      "externalRefs": {
+        "genealogyId": "padma-naga"
+      },
+      "variantTraditions": [],
+      "status": "published",
+      "schemaVersion": 1
+    },
+    {
+      "id": "person.pandu",
+      "slug": "pandu",
+      "kind": "king",
+      "name": "Pāṇḍu",
+      "englishName": "Pandu",
+      "iastName": "Pāṇḍu",
+      "sanskritName": "पाण्डु",
+      "aliases": [],
+      "gender": "male",
+      "era": "dvapara-yuga",
+      "epithet": "Father of the Pāṇḍavas (by divine niyoga)",
+      "summary": "Father of the Pāṇḍavas (by divine niyoga)",
+      "description": "Pāṇḍu, son of Vyāsa and Ambālikā, cannot father children by curse; his wives Kuntī and Mādrī invoke gods to bear the five Pāṇḍavas.",
+      "primaryScripture": "Mahābhārata",
+      "scriptureSources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Ādi Parva",
+          "chapter": "105–124"
+        }
+      ],
+      "tags": [
+        "dynasty:kuru"
+      ],
+      "categories": [
+        "king"
+      ],
+      "importance": 5,
+      "seo": {
+        "title": "Pāṇḍu — Hindu encyclopedia",
+        "description": "Pāṇḍu, son of Vyāsa and Ambālikā, cannot father children by curse; his wives Kuntī and Mādrī invoke gods to bear the five Pāṇḍavas."
+      },
+      "externalRefs": {
+        "genealogyId": "pandu"
+      },
+      "variantTraditions": [],
+      "status": "published",
+      "schemaVersion": 1
+    },
+    {
+      "id": "person.parasara",
+      "slug": "parasara",
+      "kind": "sage",
+      "name": "Parāśara",
+      "englishName": "Parashara",
+      "iastName": "Parāśara",
+      "sanskritName": "पराशर",
+      "aliases": [],
+      "gender": "male",
+      "era": "dvapara-yuga",
+      "epithet": "Father of Vyāsa",
+      "summary": "Father of Vyāsa",
+      "description": "Parāśara fathers Kṛṣṇa-Dvaipāyana Vyāsa by Satyavatī (Matsyagandhā) as told in the Mahābhārata.",
+      "primaryScripture": "Mahābhārata",
+      "scriptureSources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Ādi Parva",
+          "chapter": "57–63"
+        }
+      ],
+      "tags": [],
+      "categories": [
+        "rishi"
+      ],
+      "importance": 4,
+      "seo": {
+        "title": "Parāśara — Hindu encyclopedia",
+        "description": "Parāśara fathers Kṛṣṇa-Dvaipāyana Vyāsa by Satyavatī (Matsyagandhā) as told in the Mahābhārata."
+      },
+      "externalRefs": {
+        "genealogyId": "parasara"
+      },
+      "variantTraditions": [],
+      "status": "published",
+      "schemaVersion": 1
+    },
+    {
+      "id": "person.parvati",
+      "slug": "parvati",
+      "kind": "devi",
+      "name": "Pārvatī",
+      "englishName": "Parvati",
+      "iastName": "Pārvatī",
+      "sanskritName": "पार्वती",
+      "aliases": [
+        "Uma",
+        "Umā",
+        "Gauri",
+        "Gaurī",
+        "Durga",
+        "Durgā",
+        "Shakti",
+        "Śakti"
+      ],
+      "gender": "divine",
+      "era": "eternal",
+      "epithet": "Daughter of the Mountain; consort of Śiva",
+      "summary": "Daughter of the Mountain; consort of Śiva",
+      "description": "Pārvatī is the daughter of Himavat and the consort of Śiva; as Śakti she is mother of Gaṇeśa and Skanda.",
+      "primaryScripture": "Śiva Purāṇa",
+      "scriptureSources": [
+        {
+          "work": "Śiva Purāṇa"
+        }
+      ],
+      "tags": [],
+      "categories": [
+        "devi"
+      ],
+      "importance": 5,
+      "image": {
+        "placeholder": "⛰️"
+      },
+      "seo": {
+        "title": "Pārvatī — Hindu encyclopedia",
+        "description": "Pārvatī is the daughter of Himavat and the consort of Śiva; as Śakti she is mother of Gaṇeśa and Skanda."
+      },
+      "externalRefs": {
+        "genealogyId": "parvati"
+      },
+      "variantTraditions": [],
+      "status": "published",
+      "schemaVersion": 1
+    },
+    {
+      "id": "person.prahlada",
+      "slug": "prahlada",
+      "kind": "daitya",
+      "name": "Prahlāda",
+      "englishName": "Prahlada",
+      "iastName": "Prahlāda",
+      "sanskritName": "प्रह्लाद",
+      "aliases": [
+        "Prahlad"
+      ],
+      "gender": "male",
+      "era": "satya-yuga",
+      "epithet": "Devotee-prince among the Daityas",
+      "summary": "Devotee-prince among the Daityas",
+      "description": "Prahlāda, son of Hiraṇyakaśipu, remained devoted to Viṣṇu despite persecution — the paradigm of steadfast bhakti.",
+      "primaryScripture": "Bhāgavata Purāṇa",
+      "scriptureSources": [
+        {
+          "work": "Bhāgavata Purāṇa",
+          "section": "Skandha 7"
+        }
+      ],
+      "tags": [
+        "dynasty:daitya"
+      ],
+      "categories": [
+        "daitya"
+      ],
+      "importance": 5,
+      "image": {
+        "placeholder": "🙏"
+      },
+      "seo": {
+        "title": "Prahlāda — Hindu encyclopedia",
+        "description": "Prahlāda, son of Hiraṇyakaśipu, remained devoted to Viṣṇu despite persecution — the paradigm of steadfast bhakti."
+      },
+      "externalRefs": {
+        "genealogyId": "prahlada"
+      },
+      "variantTraditions": [],
+      "status": "published",
+      "schemaVersion": 1
+    },
+    {
+      "id": "person.pulaha",
+      "slug": "pulaha",
+      "kind": "sage",
+      "name": "Pulaha",
+      "englishName": "Pulaha",
+      "iastName": "Pulaha",
+      "sanskritName": "पुलह",
+      "aliases": [],
+      "gender": "male",
+      "era": "creation",
+      "epithet": "Saptarṣi; mind-born son of Brahmā",
+      "summary": "Saptarṣi; mind-born son of Brahmā",
+      "description": "Pulaha is counted among Brahmā's mind-born sons and the Saptarṣis of the Vaivasvata manvantara tradition.",
+      "primaryScripture": "Bhāgavata Purāṇa",
+      "scriptureSources": [
+        {
+          "work": "Bhāgavata Purāṇa",
+          "section": "Skandha 3",
+          "chapter": "12"
+        }
+      ],
+      "tags": [],
+      "categories": [
+        "saptarishi"
+      ],
+      "importance": 3,
+      "seo": {
+        "title": "Pulaha — Hindu encyclopedia",
+        "description": "Pulaha is counted among Brahmā's mind-born sons and the Saptarṣis of the Vaivasvata manvantara tradition."
+      },
+      "externalRefs": {
+        "genealogyId": "pulaha"
+      },
+      "variantTraditions": [],
+      "status": "published",
+      "schemaVersion": 1
+    },
+    {
+      "id": "person.pulastya",
+      "slug": "pulastya",
+      "kind": "sage",
+      "name": "Pulastya",
+      "englishName": "Pulastya",
+      "iastName": "Pulastya",
+      "sanskritName": "पुलस्त्य",
+      "aliases": [],
+      "gender": "male",
+      "era": "creation",
+      "epithet": "Saptarṣi; grandfather of Rāvaṇa",
+      "summary": "Saptarṣi; grandfather of Rāvaṇa",
+      "description": "Pulastya is a mind-born son of Brahmā. Through his son Viśravas arise Kubera and the principal rākṣasas of Laṅkā.",
+      "primaryScripture": "Rāmāyaṇa",
+      "scriptureSources": [
+        {
+          "work": "Bhāgavata Purāṇa",
+          "section": "Skandha 3",
+          "chapter": "12"
+        },
+        {
+          "work": "Rāmāyaṇa",
+          "section": "Uttara Kāṇḍa",
+          "chapter": "2–9"
+        }
+      ],
+      "tags": [],
+      "categories": [
+        "saptarishi"
+      ],
+      "importance": 5,
+      "seo": {
+        "title": "Pulastya — Hindu encyclopedia",
+        "description": "Pulastya is a mind-born son of Brahmā. Through his son Viśravas arise Kubera and the principal rākṣasas of Laṅkā."
+      },
+      "externalRefs": {
+        "genealogyId": "pulastya"
+      },
+      "variantTraditions": [],
+      "status": "published",
+      "schemaVersion": 1
+    },
+    {
+      "id": "person.puloman",
+      "slug": "puloman",
+      "kind": "danava",
+      "name": "Puloman",
+      "englishName": "Puloman",
+      "iastName": "Puloman",
+      "sanskritName": "पुलोमन्",
+      "aliases": [],
+      "gender": "male",
+      "era": "creation",
+      "epithet": "Dānava listed among Danu's sons",
+      "summary": "Dānava listed among Danu's sons",
+      "description": "Puloman appears in Purāṇic lists of Danu's sons (Viṣṇu Purāṇa).",
+      "primaryScripture": "Viṣṇu Purāṇa",
+      "scriptureSources": [
+        {
+          "work": "Viṣṇu Purāṇa",
+          "section": "Aṃśa 1",
+          "chapter": "21"
+        }
+      ],
+      "tags": [
+        "dynasty:danava"
+      ],
+      "categories": [
+        "danava"
+      ],
+      "importance": 2,
+      "seo": {
+        "title": "Puloman — Hindu encyclopedia",
+        "description": "Puloman appears in Purāṇic lists of Danu's sons (Viṣṇu Purāṇa)."
+      },
+      "externalRefs": {
+        "genealogyId": "puloman"
+      },
+      "variantTraditions": [],
+      "status": "published",
+      "schemaVersion": 1
+    },
+    {
+      "id": "person.puru",
+      "slug": "puru",
+      "kind": "king",
+      "name": "Puru",
+      "englishName": "Puru",
+      "iastName": "Puru",
+      "sanskritName": "पुरु",
+      "aliases": [],
+      "gender": "male",
+      "era": "treta-yuga",
+      "epithet": "Ancestor of the Kurus and Pāṇḍavas",
+      "summary": "Ancestor of the Kurus and Pāṇḍavas",
+      "description": "Puru, son of Yayāti, receives the kingdom; through him descend Duṣyanta, Bharata, Kuru and the Pāṇḍava–Kaurava houses.",
+      "primaryScripture": "Bhāgavata Purāṇa",
+      "scriptureSources": [
+        {
+          "work": "Bhāgavata Purāṇa",
+          "section": "Skandha 9",
+          "chapter": "20–22"
+        }
+      ],
+      "tags": [
+        "dynasty:paurava"
+      ],
+      "categories": [
+        "dynasty-founder"
+      ],
+      "importance": 5,
+      "seo": {
+        "title": "Puru — Hindu encyclopedia",
+        "description": "Puru, son of Yayāti, receives the kingdom; through him descend Duṣyanta, Bharata, Kuru and the Pāṇḍava–Kaurava houses."
+      },
+      "externalRefs": {
+        "genealogyId": "puru"
+      },
+      "variantTraditions": [],
+      "status": "published",
+      "schemaVersion": 1
+    },
+    {
+      "id": "person.pururavas",
+      "slug": "pururavas",
+      "kind": "king",
+      "name": "Purūravas",
+      "englishName": "Pururavas",
+      "iastName": "Purūravas",
+      "sanskritName": "पुरूरवस्",
+      "aliases": [],
+      "gender": "male",
+      "era": "satya-yuga",
+      "epithet": "First king of the Lunar Dynasty",
+      "summary": "First king of the Lunar Dynasty",
+      "description": "Purūravas, son of Budha and Ilā, is the founding king of the Candravaṃśa; his romance with Urvaśī is classical.",
+      "primaryScripture": "Bhāgavata Purāṇa",
+      "scriptureSources": [
+        {
+          "work": "Bhāgavata Purāṇa",
+          "section": "Skandha 9",
+          "chapter": "14–15"
+        },
+        {
+          "work": "Viṣṇu Purāṇa",
+          "section": "Aṃśa 4",
+          "chapter": "6–7"
+        }
+      ],
+      "tags": [
+        "dynasty:chandravamsa"
+      ],
+      "categories": [
+        "dynasty-founder"
+      ],
+      "importance": 5,
+      "seo": {
+        "title": "Purūravas — Hindu encyclopedia",
+        "description": "Purūravas, son of Budha and Ilā, is the founding king of the Candravaṃśa; his romance with Urvaśī is classical."
+      },
+      "externalRefs": {
+        "genealogyId": "pururavas"
+      },
+      "variantTraditions": [],
+      "status": "published",
+      "schemaVersion": 1
+    },
+    {
+      "id": "person.pushan",
+      "slug": "pushan",
+      "kind": "deva",
+      "name": "Pūṣan",
+      "englishName": "Pushan",
+      "iastName": "Pūṣan",
+      "sanskritName": "पूषन्",
+      "aliases": [
+        "Pusan"
+      ],
+      "gender": "male",
+      "era": "eternal",
+      "epithet": "Āditya; nourisher",
+      "summary": "Āditya; nourisher",
+      "description": "Pūṣan is counted among the Ādityas in Purāṇic lists of Aditi's sons.",
+      "primaryScripture": "Viṣṇu Purāṇa",
+      "scriptureSources": [
+        {
+          "work": "Viṣṇu Purāṇa",
+          "section": "Aṃśa 1",
+          "chapter": "15"
+        }
+      ],
+      "tags": [
+        "dynasty:aditya"
+      ],
+      "categories": [
+        "deva"
+      ],
+      "importance": 2,
+      "seo": {
+        "title": "Pūṣan — Hindu encyclopedia",
+        "description": "Pūṣan is counted among the Ādityas in Purāṇic lists of Aditi's sons."
+      },
+      "externalRefs": {
+        "genealogyId": "pushan"
+      },
+      "variantTraditions": [],
+      "status": "published",
+      "schemaVersion": 1
+    },
+    {
+      "id": "person.raghu",
+      "slug": "raghu",
+      "kind": "king",
+      "name": "Raghu",
+      "englishName": "Raghu",
+      "iastName": "Raghu",
+      "sanskritName": "रघु",
+      "aliases": [],
+      "gender": "male",
+      "era": "treta-yuga",
+      "epithet": "Eponym of the Raghuvaṃśa",
+      "summary": "Eponym of the Raghuvaṃśa",
+      "description": "Raghu is a celebrated Ikṣvāku king; the Raghuvaṃśa takes its name from him. Daśaratha and Rāma descend in his line.",
+      "primaryScripture": "Bhāgavata Purāṇa",
+      "scriptureSources": [
+        {
+          "work": "Bhāgavata Purāṇa",
+          "section": "Skandha 9",
+          "chapter": "10"
+        },
+        {
+          "work": "Viṣṇu Purāṇa",
+          "section": "Aṃśa 4",
+          "chapter": "4"
+        }
+      ],
+      "tags": [
+        "dynasty:raghu"
+      ],
+      "categories": [
+        "king"
+      ],
+      "importance": 4,
+      "seo": {
+        "title": "Raghu — Hindu encyclopedia",
+        "description": "Raghu is a celebrated Ikṣvāku king; the Raghuvaṃśa takes its name from him. Daśaratha and Rāma descend in his line."
+      },
+      "externalRefs": {
+        "genealogyId": "raghu"
+      },
+      "variantTraditions": [],
+      "status": "published",
+      "schemaVersion": 1
+    },
+    {
+      "id": "person.rahu",
+      "slug": "rahu",
+      "kind": "daitya",
+      "name": "Rāhu",
+      "englishName": "Rahu",
+      "iastName": "Rāhu",
+      "sanskritName": "राहु",
+      "aliases": [],
+      "gender": "male",
+      "era": "eternal",
+      "epithet": "Eclipse-graha; son of Siṃhikā",
+      "summary": "Eclipse-graha; son of Siṃhikā",
+      "description": "Rāhu is the son of Siṃhikā and Vipracitti. After the churning of the ocean he became an immortal eclipse-graha when severed by Viṣṇu's discus.",
+      "primaryScripture": "Bhāgavata Purāṇa",
+      "scriptureSources": [
+        {
+          "work": "Bhāgavata Purāṇa",
+          "section": "Skandha 8",
+          "chapter": "9–10"
+        }
+      ],
+      "tags": [
+        "dynasty:daitya"
+      ],
+      "categories": [
+        "daitya"
+      ],
+      "importance": 4,
+      "seo": {
+        "title": "Rāhu — Hindu encyclopedia",
+        "description": "Rāhu is the son of Siṃhikā and Vipracitti. After the churning of the ocean he became an immortal eclipse-graha when severed by Viṣṇu's discus."
+      },
+      "externalRefs": {
+        "genealogyId": "rahu"
+      },
+      "variantTraditions": [],
+      "notes": "Cross-lineage: Daitya mother (Siṃhikā) + Dānava father (Vipracitti).",
+      "status": "published",
+      "schemaVersion": 1
+    },
+    {
+      "id": "person.rama",
+      "slug": "rama",
+      "kind": "avatar",
+      "name": "Rāma",
+      "englishName": "Rama",
+      "iastName": "Rāma",
+      "sanskritName": "राम",
+      "aliases": [
+        "Ram",
+        "Raghunatha",
+        "Raghunātha",
+        "Sita-pati",
+        "Maryada Purushottama"
+      ],
+      "gender": "male",
+      "era": "treta-yuga",
+      "epithet": "Prince of Ayodhyā; avatāra of Viṣṇu",
+      "summary": "Prince of Ayodhyā; avatāra of Viṣṇu",
+      "description": "Rāma, son of Daśaratha and Kausalyā, is the hero of the Rāmāyaṇa — exile, the recovery of Sītā, and the establishment of rāma-rājya.",
+      "primaryScripture": "Rāmāyaṇa",
+      "scriptureSources": [
+        {
+          "work": "Rāmāyaṇa",
+          "section": "Bāla Kāṇḍa"
+        },
+        {
+          "work": "Bhāgavata Purāṇa",
+          "section": "Skandha 9",
+          "chapter": "10–11"
+        }
+      ],
+      "tags": [
+        "dynasty:raghu"
+      ],
+      "categories": [
+        "avatar"
+      ],
+      "importance": 5,
+      "image": {
+        "placeholder": "🏹"
+      },
+      "seo": {
+        "title": "Rāma — Hindu encyclopedia",
+        "description": "Rāma, son of Daśaratha and Kausalyā, is the hero of the Rāmāyaṇa — exile, the recovery of Sītā, and the establishment of rāma-rājya."
+      },
+      "externalRefs": {
+        "genealogyId": "rama"
+      },
+      "variantTraditions": [],
+      "status": "published",
+      "schemaVersion": 1
+    },
+    {
+      "id": "person.ravana",
+      "slug": "ravana",
+      "kind": "rakshasa",
+      "name": "Rāvaṇa",
+      "englishName": "Ravana",
+      "iastName": "Rāvaṇa",
+      "sanskritName": "रावण",
+      "aliases": [
+        "Dashagriva",
+        "Daśagrīva",
+        "Lankesha",
+        "Laṅkeśa"
+      ],
+      "gender": "male",
+      "era": "treta-yuga",
+      "epithet": "Ten-headed king of Laṅkā",
+      "summary": "Ten-headed king of Laṅkā",
+      "description": "Rāvaṇa, son of Viśravas and Kaikasī, rules Laṅkā, abducts Sītā, and is slain by Rāma — the central antagonist of the Rāmāyaṇa.",
+      "primaryScripture": "Rāmāyaṇa",
+      "scriptureSources": [
+        {
+          "work": "Rāmāyaṇa",
+          "section": "Uttara Kāṇḍa",
+          "chapter": "9"
+        },
+        {
+          "work": "Rāmāyaṇa",
+          "section": "Yuddha Kāṇḍa"
+        }
+      ],
+      "tags": [
+        "dynasty:rakshasa"
+      ],
+      "categories": [
+        "rakshasa"
+      ],
+      "importance": 5,
+      "image": {
+        "placeholder": "👑"
+      },
+      "seo": {
+        "title": "Rāvaṇa — Hindu encyclopedia",
+        "description": "Rāvaṇa, son of Viśravas and Kaikasī, rules Laṅkā, abducts Sītā, and is slain by Rāma — the central antagonist of the Rāmāyaṇa."
+      },
+      "externalRefs": {
+        "genealogyId": "ravana"
+      },
+      "variantTraditions": [],
+      "status": "published",
+      "schemaVersion": 1
+    },
+    {
+      "id": "person.rohini",
+      "slug": "rohini",
+      "kind": "queen",
+      "name": "Rohiṇī",
+      "englishName": "Rohini",
+      "iastName": "Rohiṇī",
+      "sanskritName": "रोहिणी",
+      "aliases": [],
+      "gender": "female",
+      "era": "dvapara-yuga",
+      "epithet": "Wife of Vasudeva; mother of Balarāma",
+      "summary": "Wife of Vasudeva; mother of Balarāma",
+      "description": "Rohiṇī receives the transferred embryo and gives birth to Balarāma in the Bhāgavata account.",
+      "primaryScripture": "Bhāgavata Purāṇa",
+      "scriptureSources": [
+        {
+          "work": "Bhāgavata Purāṇa",
+          "section": "Skandha 10",
+          "chapter": "1–2"
+        }
+      ],
+      "tags": [
+        "dynasty:yadu"
+      ],
+      "categories": [
+        "queen"
+      ],
+      "importance": 4,
+      "seo": {
+        "title": "Rohiṇī — Hindu encyclopedia",
+        "description": "Rohiṇī receives the transferred embryo and gives birth to Balarāma in the Bhāgavata account."
+      },
+      "externalRefs": {
+        "genealogyId": "rohini"
+      },
+      "variantTraditions": [],
+      "status": "published",
+      "schemaVersion": 1
+    },
+    {
+      "id": "person.rukmini",
+      "slug": "rukmini",
+      "kind": "queen",
+      "name": "Rukmiṇī",
+      "englishName": "Rukmini",
+      "iastName": "Rukmiṇī",
+      "sanskritName": "रुक्मिणी",
+      "aliases": [],
+      "gender": "female",
+      "era": "dvapara-yuga",
+      "epithet": "Chief consort of Kṛṣṇa at Dvārakā",
+      "summary": "Chief consort of Kṛṣṇa at Dvārakā",
+      "description": "Rukmiṇī, princess of Vidarbha, is taken by Kṛṣṇa from an unwanted marriage; she is foremost among his queens in the Bhāgavata.",
+      "primaryScripture": "Bhāgavata Purāṇa",
+      "scriptureSources": [
+        {
+          "work": "Bhāgavata Purāṇa",
+          "section": "Skandha 10",
+          "chapter": "52–54"
+        }
+      ],
+      "tags": [
+        "dynasty:yadu"
+      ],
+      "categories": [
+        "queen"
+      ],
+      "importance": 4,
+      "seo": {
+        "title": "Rukmiṇī — Hindu encyclopedia",
+        "description": "Rukmiṇī, princess of Vidarbha, is taken by Kṛṣṇa from an unwanted marriage; she is foremost among his queens in the Bhāgavata."
+      },
+      "externalRefs": {
+        "genealogyId": "rukmini"
+      },
+      "variantTraditions": [],
+      "status": "published",
+      "schemaVersion": 1
+    },
+    {
+      "id": "person.sahadeva",
+      "slug": "sahadeva",
+      "kind": "warrior",
+      "name": "Sahadeva",
+      "englishName": "Sahadeva",
+      "iastName": "Sahadeva",
+      "sanskritName": "सहदेव",
+      "aliases": [],
+      "gender": "male",
+      "era": "dvapara-yuga",
+      "epithet": "Youngest Pāṇḍava; son of the Aśvins",
+      "summary": "Youngest Pāṇḍava; son of the Aśvins",
+      "description": "Sahadeva, twin of Nakula, is born of the Aśvins through Mādrī and noted for wisdom.",
+      "primaryScripture": "Mahābhārata",
+      "scriptureSources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Ādi Parva",
+          "chapter": "124"
+        }
+      ],
+      "tags": [
+        "dynasty:kuru"
+      ],
+      "categories": [
+        "warrior"
+      ],
+      "importance": 4,
+      "seo": {
+        "title": "Sahadeva — Hindu encyclopedia",
+        "description": "Sahadeva, twin of Nakula, is born of the Aśvins through Mādrī and noted for wisdom."
+      },
+      "externalRefs": {
+        "genealogyId": "sahadeva"
+      },
+      "variantTraditions": [],
+      "status": "published",
+      "schemaVersion": 1
+    },
+    {
+      "id": "person.saraswati",
+      "slug": "saraswati",
+      "kind": "devi",
+      "name": "Sarasvatī",
+      "englishName": "Saraswati",
+      "iastName": "Sarasvatī",
+      "sanskritName": "सरस्वती",
+      "aliases": [
+        "Vagdevi",
+        "Vāgdevī",
+        "Sharada",
+        "Śāradā",
+        "Bharati",
+        "Bhāratī"
+      ],
+      "gender": "divine",
+      "era": "eternal",
+      "epithet": "Goddess of speech, learning and the arts",
+      "summary": "Goddess of speech, learning and the arts",
+      "description": "Sarasvatī presides over speech (vāc), learning, music and the arts; she is traditionally the consort of Brahmā.",
+      "primaryScripture": "Matsya Purāṇa",
+      "scriptureSources": [
+        {
+          "work": "Matsya Purāṇa",
+          "chapter": "3"
+        }
+      ],
+      "tags": [],
+      "categories": [
+        "devi"
+      ],
+      "importance": 5,
+      "image": {
+        "placeholder": "📜"
+      },
+      "seo": {
+        "title": "Sarasvatī — Hindu encyclopedia",
+        "description": "Sarasvatī presides over speech (vāc), learning, music and the arts; she is traditionally the consort of Brahmā."
+      },
+      "externalRefs": {
+        "genealogyId": "saraswati"
+      },
+      "variantTraditions": [],
+      "status": "published",
+      "schemaVersion": 1
+    },
+    {
+      "id": "person.satyavati",
+      "slug": "satyavati",
+      "kind": "queen",
+      "name": "Satyavatī",
+      "englishName": "Satyavati",
+      "iastName": "Satyavatī",
+      "sanskritName": "सत्यवती",
+      "aliases": [
+        "Matsyagandha"
+      ],
+      "gender": "female",
+      "era": "dvapara-yuga",
+      "epithet": "Queen of Śaṃtanu; mother of Vyāsa and Vicitravīrya",
+      "summary": "Queen of Śaṃtanu; mother of Vyāsa and Vicitravīrya",
+      "description": "Satyavatī marries Śaṃtanu on condition that her sons inherit. Before marriage she bore Kṛṣṇa-Dvaipāyana Vyāsa to Parāśara.",
+      "primaryScripture": "Mahābhārata",
+      "scriptureSources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Ādi Parva",
+          "chapter": "57–101"
+        }
+      ],
+      "tags": [
+        "dynasty:kuru"
+      ],
+      "categories": [
+        "queen"
+      ],
+      "importance": 5,
+      "seo": {
+        "title": "Satyavatī — Hindu encyclopedia",
+        "description": "Satyavatī marries Śaṃtanu on condition that her sons inherit. Before marriage she bore Kṛṣṇa-Dvaipāyana Vyāsa to Parāśara."
+      },
+      "externalRefs": {
+        "genealogyId": "satyavati"
+      },
+      "variantTraditions": [],
+      "status": "published",
+      "schemaVersion": 1
+    },
+    {
+      "id": "person.savitr",
+      "slug": "savitr",
+      "kind": "deva",
+      "name": "Savitṛ",
+      "englishName": "Savitr",
+      "iastName": "Savitṛ",
+      "sanskritName": "सवितृ",
+      "aliases": [
+        "Savita",
+        "Savitā"
+      ],
+      "gender": "male",
+      "era": "eternal",
+      "epithet": "Āditya; the impeller",
+      "summary": "Āditya; the impeller",
+      "description": "Savitṛ is named among the Ādityas; in some traditions he is closely identified with aspects of the solar deity.",
+      "primaryScripture": "Viṣṇu Purāṇa",
+      "scriptureSources": [
+        {
+          "work": "Viṣṇu Purāṇa",
+          "section": "Aṃśa 1",
+          "chapter": "15"
+        }
+      ],
+      "tags": [
+        "dynasty:aditya"
+      ],
+      "categories": [
+        "deva"
+      ],
+      "importance": 2,
+      "seo": {
+        "title": "Savitṛ — Hindu encyclopedia",
+        "description": "Savitṛ is named among the Ādityas; in some traditions he is closely identified with aspects of the solar deity."
+      },
+      "externalRefs": {
+        "genealogyId": "savitr"
+      },
+      "variantTraditions": [],
+      "status": "published",
+      "schemaVersion": 1
+    },
+    {
+      "id": "person.shambara",
+      "slug": "shambara",
+      "kind": "danava",
+      "name": "Śambara",
+      "englishName": "Shambara",
+      "iastName": "Śambara",
+      "sanskritName": "शम्बर",
+      "aliases": [
+        "Sambara"
+      ],
+      "gender": "male",
+      "era": "creation",
+      "epithet": "Dānava of Vedic and Purāṇic conflict narratives",
+      "summary": "Dānava of Vedic and Purāṇic conflict narratives",
+      "description": "Śambara is counted among Danu's sons in the Viṣṇu Purāṇa and appears as an adversary in older Indra lore.",
+      "primaryScripture": "Viṣṇu Purāṇa",
+      "scriptureSources": [
+        {
+          "work": "Viṣṇu Purāṇa",
+          "section": "Aṃśa 1",
+          "chapter": "21"
+        }
+      ],
+      "tags": [
+        "dynasty:danava"
+      ],
+      "categories": [
+        "danava"
+      ],
+      "importance": 2,
+      "seo": {
+        "title": "Śambara — Hindu encyclopedia",
+        "description": "Śambara is counted among Danu's sons in the Viṣṇu Purāṇa and appears as an adversary in older Indra lore."
+      },
+      "externalRefs": {
+        "genealogyId": "shambara"
+      },
+      "variantTraditions": [],
+      "status": "published",
+      "schemaVersion": 1
+    },
+    {
+      "id": "person.shankha-naga",
+      "slug": "shankha-naga",
+      "kind": "naga",
+      "name": "Śaṅkha",
+      "englishName": "Shankha",
+      "iastName": "Śaṅkha",
+      "sanskritName": "शङ्ख",
+      "aliases": [
+        "Sankha"
+      ],
+      "gender": "male",
+      "era": "eternal",
+      "epithet": "Principal Nāga",
+      "summary": "Principal Nāga",
+      "description": "Śaṅkha is named among the principal Nāgas of Kadrū's line in the Bhāgavata.",
+      "primaryScripture": "Bhāgavata Purāṇa",
+      "scriptureSources": [
+        {
+          "work": "Bhāgavata Purāṇa",
+          "section": "Skandha 6",
+          "chapter": "6"
+        }
+      ],
+      "tags": [
+        "dynasty:naga"
+      ],
+      "categories": [
+        "naga"
+      ],
+      "importance": 2,
+      "seo": {
+        "title": "Śaṅkha — Hindu encyclopedia",
+        "description": "Śaṅkha is named among the principal Nāgas of Kadrū's line in the Bhāgavata."
+      },
+      "externalRefs": {
+        "genealogyId": "shankha-naga"
+      },
+      "variantTraditions": [],
+      "status": "published",
+      "schemaVersion": 1
+    },
+    {
+      "id": "person.shantanu",
+      "slug": "shantanu",
+      "kind": "king",
+      "name": "Śaṃtanu",
+      "englishName": "Shantanu",
+      "iastName": "Śaṃtanu",
+      "sanskritName": "शंतनु",
+      "aliases": [
+        "Santanu",
+        "Shantanu"
+      ],
+      "gender": "male",
+      "era": "dvapara-yuga",
+      "epithet": "King of Hastināpura; father of Bhīṣma",
+      "summary": "King of Hastināpura; father of Bhīṣma",
+      "description": "Śaṃtanu marries Gaṅgā and later Satyavatī; by Gaṅgā he fathers Devavrata (Bhīṣma).",
+      "primaryScripture": "Mahābhārata",
+      "scriptureSources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Ādi Parva",
+          "chapter": "94–101"
+        }
+      ],
+      "tags": [
+        "dynasty:kuru"
+      ],
+      "categories": [
+        "king"
+      ],
+      "importance": 5,
+      "seo": {
+        "title": "Śaṃtanu — Hindu encyclopedia",
+        "description": "Śaṃtanu marries Gaṅgā and later Satyavatī; by Gaṅgā he fathers Devavrata (Bhīṣma)."
+      },
+      "externalRefs": {
+        "genealogyId": "shantanu"
+      },
+      "variantTraditions": [],
+      "status": "published",
+      "schemaVersion": 1
+    },
+    {
+      "id": "person.shatrughna",
+      "slug": "shatrughna",
+      "kind": "prince",
+      "name": "Śatrughna",
+      "englishName": "Shatrughna",
+      "iastName": "Śatrughna",
+      "sanskritName": "शत्रुघ्न",
+      "aliases": [
+        "Satrughna"
+      ],
+      "gender": "male",
+      "era": "treta-yuga",
+      "epithet": "Youngest brother of Rāma",
+      "summary": "Youngest brother of Rāma",
+      "description": "Śatrughna, twin of Lakṣmaṇa and son of Sumitrā, supports Bharata and later conquers Lavaṇa.",
+      "primaryScripture": "Rāmāyaṇa",
+      "scriptureSources": [
+        {
+          "work": "Rāmāyaṇa",
+          "section": "Bāla Kāṇḍa",
+          "chapter": "18"
+        },
+        {
+          "work": "Rāmāyaṇa",
+          "section": "Uttara Kāṇḍa"
+        }
+      ],
+      "tags": [
+        "dynasty:raghu"
+      ],
+      "categories": [
+        "prince"
+      ],
+      "importance": 3,
+      "seo": {
+        "title": "Śatrughna — Hindu encyclopedia",
+        "description": "Śatrughna, twin of Lakṣmaṇa and son of Sumitrā, supports Bharata and later conquers Lavaṇa."
+      },
+      "externalRefs": {
+        "genealogyId": "shatrughna"
+      },
+      "variantTraditions": [],
+      "status": "published",
+      "schemaVersion": 1
+    },
+    {
+      "id": "person.shiva",
+      "slug": "shiva",
+      "kind": "deity",
+      "name": "Śiva",
+      "englishName": "Shiva",
+      "iastName": "Śiva",
+      "sanskritName": "शिव",
+      "aliases": [
+        "Mahadeva",
+        "Mahādeva",
+        "Rudra",
+        "Shankara",
+        "Śaṅkara",
+        "Nilakantha",
+        "Nīlakaṇṭha"
+      ],
+      "gender": "divine",
+      "era": "eternal",
+      "epithet": "The auspicious; lord of yoga and dissolution",
+      "summary": "The auspicious; lord of yoga and dissolution",
+      "description": "Śiva is the yogi-lord of Kailāsa, consort of Pārvatī, and father of Gaṇeśa and Skanda (Kārttikeya) in the Purāṇic narratives.",
+      "primaryScripture": "Śiva Purāṇa",
+      "scriptureSources": [
+        {
+          "work": "Śiva Purāṇa"
+        },
+        {
+          "work": "Skanda Purāṇa"
+        }
+      ],
+      "tags": [],
+      "categories": [
+        "trimurti"
+      ],
+      "importance": 5,
+      "image": {
+        "placeholder": "🕉️"
+      },
+      "seo": {
+        "title": "Śiva — Hindu encyclopedia",
+        "description": "Śiva is the yogi-lord of Kailāsa, consort of Pārvatī, and father of Gaṇeśa and Skanda (Kārttikeya) in the Purāṇic narratives."
+      },
+      "externalRefs": {
+        "genealogyId": "shiva"
+      },
+      "variantTraditions": [
+        {
+          "label": "Birth of Gaṇeśa",
+          "description": "Śiva Purāṇa relates Gaṇeśa formed from Pārvatī's substance and later given an elephant head; Skanda Purāṇa preserves alternate tellings. Both are recorded as variants.",
+          "sources": [
+            {
+              "work": "Śiva Purāṇa",
+              "section": "Rudra Saṃhitā, Kumāra Khaṇḍa"
+            },
+            {
+              "work": "Skanda Purāṇa"
+            }
+          ]
+        }
+      ],
+      "status": "published",
+      "schemaVersion": 1
+    },
+    {
+      "id": "person.simhika",
+      "slug": "simhika",
+      "kind": "daitya",
+      "name": "Siṃhikā",
+      "englishName": "Simhika",
+      "iastName": "Siṃhikā",
+      "sanskritName": "सिंहिका",
+      "aliases": [
+        "Simhika"
+      ],
+      "gender": "female",
+      "era": "satya-yuga",
+      "epithet": "Daughter of Diti; mother of Rāhu",
+      "summary": "Daughter of Diti; mother of Rāhu",
+      "description": "Siṃhikā, daughter of Diti, married the Dānava Vipracitti and bore Rāhu — a cross-lineage birth recorded in the Bhāgavata.",
+      "primaryScripture": "Bhāgavata Purāṇa",
+      "scriptureSources": [
+        {
+          "work": "Bhāgavata Purāṇa",
+          "section": "Skandha 6",
+          "chapter": "18"
+        },
+        {
+          "work": "Bhāgavata Purāṇa",
+          "section": "Skandha 8",
+          "chapter": "9–10"
+        }
+      ],
+      "tags": [
+        "dynasty:daitya"
+      ],
+      "categories": [
+        "daitya"
+      ],
+      "importance": 4,
+      "seo": {
+        "title": "Siṃhikā — Hindu encyclopedia",
+        "description": "Siṃhikā, daughter of Diti, married the Dānava Vipracitti and bore Rāhu — a cross-lineage birth recorded in the Bhāgavata."
+      },
+      "externalRefs": {
+        "genealogyId": "simhika"
+      },
+      "variantTraditions": [],
+      "notes": "Rāhu's mother is Daitya (Siṃhikā); his father is Dānava (Vipracitti).",
+      "status": "published",
+      "schemaVersion": 1
+    },
+    {
+      "id": "person.sita",
+      "slug": "sita",
+      "kind": "queen",
+      "name": "Sītā",
+      "englishName": "Sita",
+      "iastName": "Sītā",
+      "sanskritName": "सीता",
+      "aliases": [
+        "Janaki",
+        "Jānakī",
+        "Maithili",
+        "Vaidehi"
+      ],
+      "gender": "female",
+      "era": "treta-yuga",
+      "epithet": "Daughter of Janaka; wife of Rāma",
+      "summary": "Daughter of Janaka; wife of Rāma",
+      "description": "Sītā, found by King Janaka, marries Rāma, shares his exile, and is abducted by Rāvaṇa — the moral centre of the Rāmāyaṇa.",
+      "primaryScripture": "Rāmāyaṇa",
+      "scriptureSources": [
+        {
+          "work": "Rāmāyaṇa",
+          "section": "Bāla Kāṇḍa"
+        },
+        {
+          "work": "Rāmāyaṇa",
+          "section": "Uttara Kāṇḍa"
+        }
+      ],
+      "tags": [
+        "dynasty:raghu"
+      ],
+      "categories": [
+        "queen"
+      ],
+      "importance": 5,
+      "seo": {
+        "title": "Sītā — Hindu encyclopedia",
+        "description": "Sītā, found by King Janaka, marries Rāma, shares his exile, and is abducted by Rāvaṇa — the moral centre of the Rāmāyaṇa."
+      },
+      "externalRefs": {
+        "genealogyId": "sita"
+      },
+      "variantTraditions": [],
+      "status": "published",
+      "schemaVersion": 1
+    },
+    {
+      "id": "person.subhadra",
+      "slug": "subhadra",
+      "kind": "princess",
+      "name": "Subhadrā",
+      "englishName": "Subhadra",
+      "iastName": "Subhadrā",
+      "sanskritName": "सुभद्रा",
+      "aliases": [],
+      "gender": "female",
+      "era": "dvapara-yuga",
+      "epithet": "Sister of Kṛṣṇa; wife of Arjuna; mother of Abhimanyu",
+      "summary": "Sister of Kṛṣṇa; wife of Arjuna; mother of Abhimanyu",
+      "description": "Subhadrā, sister of Kṛṣṇa and Balarāma, marries Arjuna and bears Abhimanyu.",
+      "primaryScripture": "Mahābhārata",
+      "scriptureSources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Ādi Parva",
+          "chapter": "211–221"
+        }
+      ],
+      "tags": [
+        "dynasty:yadu"
+      ],
+      "categories": [
+        "princess"
+      ],
+      "importance": 4,
+      "seo": {
+        "title": "Subhadrā — Hindu encyclopedia",
+        "description": "Subhadrā, sister of Kṛṣṇa and Balarāma, marries Arjuna and bears Abhimanyu."
+      },
+      "externalRefs": {
+        "genealogyId": "subhadra"
+      },
+      "variantTraditions": [],
+      "status": "published",
+      "schemaVersion": 1
+    },
+    {
+      "id": "person.sumitra",
+      "slug": "sumitra",
+      "kind": "queen",
+      "name": "Sumitrā",
+      "englishName": "Sumitra",
+      "iastName": "Sumitrā",
+      "sanskritName": "सुमित्रा",
+      "aliases": [],
+      "gender": "female",
+      "era": "treta-yuga",
+      "epithet": "Queen of Daśaratha; mother of Lakṣmaṇa and Śatrughna",
+      "summary": "Queen of Daśaratha; mother of Lakṣmaṇa and Śatrughna",
+      "description": "Sumitrā is mother of the twins Lakṣmaṇa and Śatrughna.",
+      "primaryScripture": "Rāmāyaṇa",
+      "scriptureSources": [
+        {
+          "work": "Rāmāyaṇa",
+          "section": "Bāla Kāṇḍa",
+          "chapter": "18"
+        }
+      ],
+      "tags": [
+        "dynasty:raghu"
+      ],
+      "categories": [
+        "queen"
+      ],
+      "importance": 3,
+      "seo": {
+        "title": "Sumitrā — Hindu encyclopedia",
+        "description": "Sumitrā is mother of the twins Lakṣmaṇa and Śatrughna."
+      },
+      "externalRefs": {
+        "genealogyId": "sumitra"
+      },
+      "variantTraditions": [],
+      "status": "published",
+      "schemaVersion": 1
+    },
+    {
+      "id": "person.surpanakha",
+      "slug": "surpanakha",
+      "kind": "rakshasa",
+      "name": "Śūrpaṇakhā",
+      "englishName": "Surpanakha",
+      "iastName": "Śūrpaṇakhā",
+      "sanskritName": "शूर्पणखा",
+      "aliases": [
+        "Surpanakha",
+        "Shurpanakha"
+      ],
+      "gender": "female",
+      "era": "treta-yuga",
+      "epithet": "Sister of Rāvaṇa",
+      "summary": "Sister of Rāvaṇa",
+      "description": "Śūrpaṇakhā, daughter of Viśravas and Kaikasī, encounters Rāma and Lakṣmaṇa in the Daṇḍaka forest — an episode that precipitates the war with Laṅkā.",
+      "primaryScripture": "Rāmāyaṇa",
+      "scriptureSources": [
+        {
+          "work": "Rāmāyaṇa",
+          "section": "Araṇya Kāṇḍa"
+        },
+        {
+          "work": "Rāmāyaṇa",
+          "section": "Uttara Kāṇḍa",
+          "chapter": "9"
+        }
+      ],
+      "tags": [
+        "dynasty:rakshasa"
+      ],
+      "categories": [
+        "rakshasa"
+      ],
+      "importance": 4,
+      "seo": {
+        "title": "Śūrpaṇakhā — Hindu encyclopedia",
+        "description": "Śūrpaṇakhā, daughter of Viśravas and Kaikasī, encounters Rāma and Lakṣmaṇa in the Daṇḍaka forest — an episode that precipitates the war with Laṅkā."
+      },
+      "externalRefs": {
+        "genealogyId": "surpanakha"
+      },
+      "variantTraditions": [],
+      "status": "published",
+      "schemaVersion": 1
+    },
+    {
+      "id": "person.takshaka",
+      "slug": "takshaka",
+      "kind": "naga",
+      "name": "Takṣaka",
+      "englishName": "Takshaka",
+      "iastName": "Takṣaka",
+      "sanskritName": "तक्षक",
+      "aliases": [
+        "Taksaka"
+      ],
+      "gender": "male",
+      "era": "dvapara-yuga",
+      "epithet": "Nāga who bites Parīkṣit",
+      "summary": "Nāga who bites Parīkṣit",
+      "description": "Takṣaka, a principal Nāga son of Kadrū, appears in the Mahābhārata as the serpent who bites King Parīkṣit.",
+      "primaryScripture": "Mahābhārata",
+      "scriptureSources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Ādi Parva",
+          "chapter": "3"
+        },
+        {
+          "work": "Mahābhārata",
+          "section": "Ādi Parva",
+          "chapter": "43"
+        }
+      ],
+      "tags": [
+        "dynasty:naga"
+      ],
+      "categories": [
+        "naga"
+      ],
+      "importance": 4,
+      "seo": {
+        "title": "Takṣaka — Hindu encyclopedia",
+        "description": "Takṣaka, a principal Nāga son of Kadrū, appears in the Mahābhārata as the serpent who bites King Parīkṣit."
+      },
+      "externalRefs": {
+        "genealogyId": "takshaka"
+      },
+      "variantTraditions": [],
+      "status": "published",
+      "schemaVersion": 1
+    },
+    {
+      "id": "person.vaivasvata-manu",
+      "slug": "vaivasvata-manu",
+      "kind": "manu",
+      "name": "Vaivasvata Manu",
+      "englishName": "Vaivasvata Manu",
+      "iastName": "Vaivasvata Manu",
+      "sanskritName": "वैवस्वत मनु",
+      "aliases": [
+        "Manu",
+        "Sraddhadeva",
+        "Śrāddhadeva",
+        "Satyavrata"
+      ],
+      "gender": "male",
+      "era": "satya-yuga",
+      "epithet": "Current Manu; son of Vivasvān; father of Ikṣvāku",
+      "summary": "Current Manu; son of Vivasvān; father of Ikṣvāku",
+      "description": "Vaivasvata Manu, son of Vivasvān, is the Manu of the present manvantara. From him descends Ikṣvāku and the Solar Dynasty. The Bhāgavata preserves the flood narrative of this Manu.",
+      "primaryScripture": "Bhāgavata Purāṇa",
+      "scriptureSources": [
+        {
+          "work": "Bhāgavata Purāṇa",
+          "section": "Skandha 8",
+          "chapter": "24"
+        },
+        {
+          "work": "Bhāgavata Purāṇa",
+          "section": "Skandha 9",
+          "chapter": "1–6"
+        },
+        {
+          "work": "Viṣṇu Purāṇa",
+          "section": "Aṃśa 3",
+          "chapter": "1"
+        }
+      ],
+      "tags": [
+        "dynasty:suryavamsa"
+      ],
+      "categories": [
+        "manu"
+      ],
+      "importance": 5,
+      "seo": {
+        "title": "Vaivasvata Manu — Hindu encyclopedia",
+        "description": "Vaivasvata Manu, son of Vivasvān, is the Manu of the present manvantara. From him descends Ikṣvāku and the Solar Dynasty. The Bhāgavata preserves the flood narr"
+      },
+      "externalRefs": {
+        "genealogyId": "vaivasvata-manu"
+      },
+      "variantTraditions": [],
+      "status": "published",
+      "schemaVersion": 1
+    },
+    {
+      "id": "person.valmiki",
+      "slug": "valmiki",
+      "kind": "sage",
+      "name": "Vālmīki",
+      "englishName": "Valmiki",
+      "iastName": "Vālmīki",
+      "sanskritName": "वाल्मीकि",
+      "aliases": [],
+      "gender": "male",
+      "era": "treta-yuga",
+      "epithet": "Ādi kavi; author of the Rāmāyaṇa",
+      "summary": "Ādi kavi; author of the Rāmāyaṇa",
+      "description": "Vālmīki composes the Rāmāyaṇa and shelters Sītā; Lava and Kuśa learn the poem in his āśrama.",
+      "primaryScripture": "Rāmāyaṇa",
+      "scriptureSources": [
+        {
+          "work": "Rāmāyaṇa",
+          "section": "Bāla Kāṇḍa",
+          "chapter": "1–4"
+        },
+        {
+          "work": "Rāmāyaṇa",
+          "section": "Uttara Kāṇḍa"
+        }
+      ],
+      "tags": [],
+      "categories": [
+        "rishi"
+      ],
+      "importance": 5,
+      "seo": {
+        "title": "Vālmīki — Hindu encyclopedia",
+        "description": "Vālmīki composes the Rāmāyaṇa and shelters Sītā; Lava and Kuśa learn the poem in his āśrama."
+      },
+      "externalRefs": {
+        "genealogyId": "valmiki"
+      },
+      "variantTraditions": [],
+      "notes": "Traditional accounts of his earlier life vary; parentage is not asserted here without a single primary consensus.",
+      "status": "published",
+      "schemaVersion": 1
+    },
+    {
+      "id": "person.varuna",
+      "slug": "varuna",
+      "kind": "deva",
+      "name": "Varuṇa",
+      "englishName": "Varuna",
+      "iastName": "Varuṇa",
+      "sanskritName": "वरुण",
+      "aliases": [],
+      "gender": "male",
+      "era": "eternal",
+      "epithet": "Āditya; lord of waters and cosmic order",
+      "summary": "Āditya; lord of waters and cosmic order",
+      "description": "Varuṇa is counted among the Ādityas, sons of Aditi, in Purāṇic lists; he governs waters and ṛta in Vedic memory.",
+      "primaryScripture": "Viṣṇu Purāṇa",
+      "scriptureSources": [
+        {
+          "work": "Viṣṇu Purāṇa",
+          "section": "Aṃśa 1",
+          "chapter": "15"
+        },
+        {
+          "work": "Bhāgavata Purāṇa",
+          "section": "Skandha 6",
+          "chapter": "6"
+        }
+      ],
+      "tags": [
+        "dynasty:aditya"
+      ],
+      "categories": [
+        "deva"
+      ],
+      "importance": 3,
+      "seo": {
+        "title": "Varuṇa — Hindu encyclopedia",
+        "description": "Varuṇa is counted among the Ādityas, sons of Aditi, in Purāṇic lists; he governs waters and ṛta in Vedic memory."
+      },
+      "externalRefs": {
+        "genealogyId": "varuna"
+      },
+      "variantTraditions": [],
+      "status": "published",
+      "schemaVersion": 1
+    },
+    {
+      "id": "person.vasishtha",
+      "slug": "vasishtha",
+      "kind": "sage",
+      "name": "Vasiṣṭha",
+      "englishName": "Vasishtha",
+      "iastName": "Vasiṣṭha",
+      "sanskritName": "वसिष्ठ",
+      "aliases": [
+        "Vasistha",
+        "Vashistha"
+      ],
+      "gender": "male",
+      "era": "creation",
+      "epithet": "Family priest of the Ikṣvākus; Saptarṣi",
+      "summary": "Family priest of the Ikṣvākus; Saptarṣi",
+      "description": "Vasiṣṭha is a mind-born son of Brahmā, a Saptarṣi, and the kulaguru of the Solar (Ikṣvāku) kings including Daśaratha and Rāma.",
+      "primaryScripture": "Rāmāyaṇa",
+      "scriptureSources": [
+        {
+          "work": "Bhāgavata Purāṇa",
+          "section": "Skandha 3",
+          "chapter": "12"
+        },
+        {
+          "work": "Rāmāyaṇa",
+          "section": "Bāla Kāṇḍa"
+        }
+      ],
+      "tags": [],
+      "categories": [
+        "saptarishi"
+      ],
+      "importance": 5,
+      "seo": {
+        "title": "Vasiṣṭha — Hindu encyclopedia",
+        "description": "Vasiṣṭha is a mind-born son of Brahmā, a Saptarṣi, and the kulaguru of the Solar (Ikṣvāku) kings including Daśaratha and Rāma."
+      },
+      "externalRefs": {
+        "genealogyId": "vasishtha"
+      },
+      "variantTraditions": [],
+      "status": "published",
+      "schemaVersion": 1
+    },
+    {
+      "id": "person.vasudeva",
+      "slug": "vasudeva",
+      "kind": "king",
+      "name": "Vasudeva",
+      "englishName": "Vasudeva",
+      "iastName": "Vasudeva",
+      "sanskritName": "वसुदेव",
+      "aliases": [
+        "Anakadundubhi",
+        "Ānakadundubhi"
+      ],
+      "gender": "male",
+      "era": "dvapara-yuga",
+      "epithet": "Father of Kṛṣṇa and Balarāma",
+      "summary": "Father of Kṛṣṇa and Balarāma",
+      "description": "Vasudeva of the Yadu/Vṛṣṇi line marries Devakī; their son is Kṛṣṇa. With Rohiṇī he fathers Balarāma (transferred embryo in the Bhāgavata).",
+      "primaryScripture": "Bhāgavata Purāṇa",
+      "scriptureSources": [
+        {
+          "work": "Bhāgavata Purāṇa",
+          "section": "Skandha 10",
+          "chapter": "1–3"
+        },
+        {
+          "work": "Harivaṃśa"
+        }
+      ],
+      "tags": [
+        "dynasty:yadu"
+      ],
+      "categories": [
+        "king"
+      ],
+      "importance": 5,
+      "seo": {
+        "title": "Vasudeva — Hindu encyclopedia",
+        "description": "Vasudeva of the Yadu/Vṛṣṇi line marries Devakī; their son is Kṛṣṇa. With Rohiṇī he fathers Balarāma (transferred embryo in the Bhāgavata)."
+      },
+      "externalRefs": {
+        "genealogyId": "vasudeva"
+      },
+      "variantTraditions": [],
+      "status": "published",
+      "schemaVersion": 1
+    },
+    {
+      "id": "person.vasuki",
+      "slug": "vasuki",
+      "kind": "naga",
+      "name": "Vāsuki",
+      "englishName": "Vasuki",
+      "iastName": "Vāsuki",
+      "sanskritName": "वासुकि",
+      "aliases": [],
+      "gender": "male",
+      "era": "eternal",
+      "epithet": "Nāga king; rope in the churning of the ocean",
+      "summary": "Nāga king; rope in the churning of the ocean",
+      "description": "Vāsuki, son of Kaśyapa and Kadrū, is the Nāga used as the churning-rope in the Samudra Manthana.",
+      "primaryScripture": "Bhāgavata Purāṇa",
+      "scriptureSources": [
+        {
+          "work": "Bhāgavata Purāṇa",
+          "section": "Skandha 8",
+          "chapter": "7"
+        },
+        {
+          "work": "Mahābhārata",
+          "section": "Ādi Parva",
+          "chapter": "16"
+        }
+      ],
+      "tags": [
+        "dynasty:naga"
+      ],
+      "categories": [
+        "naga"
+      ],
+      "importance": 5,
+      "seo": {
+        "title": "Vāsuki — Hindu encyclopedia",
+        "description": "Vāsuki, son of Kaśyapa and Kadrū, is the Nāga used as the churning-rope in the Samudra Manthana."
+      },
+      "externalRefs": {
+        "genealogyId": "vasuki"
+      },
+      "variantTraditions": [],
+      "status": "published",
+      "schemaVersion": 1
+    },
+    {
+      "id": "person.vibhishana",
+      "slug": "vibhishana",
+      "kind": "rakshasa",
+      "name": "Vibhīṣaṇa",
+      "englishName": "Vibhishana",
+      "iastName": "Vibhīṣaṇa",
+      "sanskritName": "विभीषण",
+      "aliases": [
+        "Vibhisana"
+      ],
+      "gender": "male",
+      "era": "treta-yuga",
+      "epithet": "Dharmic brother of Rāvaṇa; ally of Rāma",
+      "summary": "Dharmic brother of Rāvaṇa; ally of Rāma",
+      "description": "Vibhīṣaṇa, son of Viśravas and Kaikasī, counsels dharma, defects to Rāma, and is crowned king of Laṅkā after Rāvaṇa's fall.",
+      "primaryScripture": "Rāmāyaṇa",
+      "scriptureSources": [
+        {
+          "work": "Rāmāyaṇa",
+          "section": "Uttara Kāṇḍa",
+          "chapter": "9"
+        },
+        {
+          "work": "Rāmāyaṇa",
+          "section": "Yuddha Kāṇḍa"
+        }
+      ],
+      "tags": [
+        "dynasty:rakshasa"
+      ],
+      "categories": [
+        "rakshasa"
+      ],
+      "importance": 5,
+      "seo": {
+        "title": "Vibhīṣaṇa — Hindu encyclopedia",
+        "description": "Vibhīṣaṇa, son of Viśravas and Kaikasī, counsels dharma, defects to Rāma, and is crowned king of Laṅkā after Rāvaṇa's fall."
+      },
+      "externalRefs": {
+        "genealogyId": "vibhishana"
+      },
+      "variantTraditions": [],
+      "status": "published",
+      "schemaVersion": 1
+    },
+    {
+      "id": "person.vichitravirya",
+      "slug": "vichitravirya",
+      "kind": "king",
+      "name": "Vicitravīrya",
+      "englishName": "Vichitravirya",
+      "iastName": "Vicitravīrya",
+      "sanskritName": "विचित्रवीर्य",
+      "aliases": [],
+      "gender": "male",
+      "era": "dvapara-yuga",
+      "epithet": "Son of Śaṃtanu and Satyavatī",
+      "summary": "Son of Śaṃtanu and Satyavatī",
+      "description": "Vicitravīrya marries Ambikā and Ambālikā but dies childless; Vyāsa raises heirs by niyoga.",
+      "primaryScripture": "Mahābhārata",
+      "scriptureSources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Ādi Parva",
+          "chapter": "100–105"
+        }
+      ],
+      "tags": [
+        "dynasty:kuru"
+      ],
+      "categories": [
+        "king"
+      ],
+      "importance": 3,
+      "seo": {
+        "title": "Vicitravīrya — Hindu encyclopedia",
+        "description": "Vicitravīrya marries Ambikā and Ambālikā but dies childless; Vyāsa raises heirs by niyoga."
+      },
+      "externalRefs": {
+        "genealogyId": "vichitravirya"
+      },
+      "variantTraditions": [],
+      "status": "published",
+      "schemaVersion": 1
+    },
+    {
+      "id": "person.vidura",
+      "slug": "vidura",
+      "kind": "person",
+      "name": "Vidura",
+      "englishName": "Vidura",
+      "iastName": "Vidura",
+      "sanskritName": "विदुर",
+      "aliases": [],
+      "gender": "male",
+      "era": "dvapara-yuga",
+      "epithet": "Wise counsellor; brother of Dhṛtarāṣṭra and Pāṇḍu",
+      "summary": "Wise counsellor; brother of Dhṛtarāṣṭra and Pāṇḍu",
+      "description": "Vidura, son of Vyāsa and a palace maid, is famed for dharma-counsel in the Mahābhārata.",
+      "primaryScripture": "Mahābhārata",
+      "scriptureSources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Ādi Parva",
+          "chapter": "105–106"
+        }
+      ],
+      "tags": [
+        "dynasty:kuru"
+      ],
+      "categories": [
+        "other"
+      ],
+      "importance": 4,
+      "seo": {
+        "title": "Vidura — Hindu encyclopedia",
+        "description": "Vidura, son of Vyāsa and a palace maid, is famed for dharma-counsel in the Mahābhārata."
+      },
+      "externalRefs": {
+        "genealogyId": "vidura"
+      },
+      "variantTraditions": [],
+      "status": "published",
+      "schemaVersion": 1
+    },
+    {
+      "id": "person.vipracitti",
+      "slug": "vipracitti",
+      "kind": "danava",
+      "name": "Vipracitti",
+      "englishName": "Vipracitti",
+      "iastName": "Vipracitti",
+      "sanskritName": "विप्रचित्ति",
+      "aliases": [
+        "Viprachitti"
+      ],
+      "gender": "male",
+      "era": "satya-yuga",
+      "epithet": "Dānava; husband of Siṃhikā; father of Rāhu",
+      "summary": "Dānava; husband of Siṃhikā; father of Rāhu",
+      "description": "Vipracitti, a son of Danu, married Siṃhikā and fathered Rāhu.",
+      "primaryScripture": "Bhāgavata Purāṇa",
+      "scriptureSources": [
+        {
+          "work": "Bhāgavata Purāṇa",
+          "section": "Skandha 6",
+          "chapter": "6"
+        },
+        {
+          "work": "Bhāgavata Purāṇa",
+          "section": "Skandha 6",
+          "chapter": "18"
+        }
+      ],
+      "tags": [
+        "dynasty:danava"
+      ],
+      "categories": [
+        "danava"
+      ],
+      "importance": 4,
+      "seo": {
+        "title": "Vipracitti — Hindu encyclopedia",
+        "description": "Vipracitti, a son of Danu, married Siṃhikā and fathered Rāhu."
+      },
+      "externalRefs": {
+        "genealogyId": "vipracitti"
+      },
+      "variantTraditions": [],
+      "status": "published",
+      "schemaVersion": 1
+    },
+    {
+      "id": "person.virocana",
+      "slug": "virocana",
+      "kind": "daitya",
+      "name": "Virocana",
+      "englishName": "Virocana",
+      "iastName": "Virocana",
+      "sanskritName": "विरोचन",
+      "aliases": [],
+      "gender": "male",
+      "era": "satya-yuga",
+      "epithet": "Son of Prahlāda; father of Bali",
+      "summary": "Son of Prahlāda; father of Bali",
+      "description": "Virocana is the son of Prahlāda and father of the generous Daitya king Bali (Mahābali).",
+      "primaryScripture": "Bhāgavata Purāṇa",
+      "scriptureSources": [
+        {
+          "work": "Bhāgavata Purāṇa",
+          "section": "Skandha 8",
+          "chapter": "15"
+        },
+        {
+          "work": "Viṣṇu Purāṇa",
+          "section": "Aṃśa 1",
+          "chapter": "21"
+        }
+      ],
+      "tags": [
+        "dynasty:daitya"
+      ],
+      "categories": [
+        "daitya"
+      ],
+      "importance": 3,
+      "seo": {
+        "title": "Virocana — Hindu encyclopedia",
+        "description": "Virocana is the son of Prahlāda and father of the generous Daitya king Bali (Mahābali)."
+      },
+      "externalRefs": {
+        "genealogyId": "virocana"
+      },
+      "variantTraditions": [],
+      "status": "published",
+      "schemaVersion": 1
+    },
+    {
+      "id": "person.vishnu",
+      "slug": "vishnu",
+      "kind": "deity",
+      "name": "Viṣṇu",
+      "englishName": "Vishnu",
+      "iastName": "Viṣṇu",
+      "sanskritName": "विष्णु",
+      "aliases": [
+        "Narayana",
+        "Nārāyaṇa",
+        "Hari",
+        "Vasudeva",
+        "Vāsudeva"
+      ],
+      "gender": "divine",
+      "era": "eternal",
+      "epithet": "The preserver; source of the daśāvatāra",
+      "summary": "The preserver; source of the daśāvatāra",
+      "description": "Viṣṇu sustains the cosmos and descends as avatāra whenever dharma declines. In the Bhāgavata creation narrative, Brahmā appears on the lotus rising from Viṣṇu's navel.",
+      "primaryScripture": "Bhāgavata Purāṇa",
+      "scriptureSources": [
+        {
+          "work": "Bhāgavata Purāṇa",
+          "section": "Skandha 3",
+          "chapter": "8–12"
+        },
+        {
+          "work": "Viṣṇu Purāṇa",
+          "section": "Aṃśa 1"
+        },
+        {
+          "work": "Bhagavad Gītā",
+          "chapter": "10"
+        }
+      ],
+      "tags": [],
+      "categories": [
+        "trimurti"
+      ],
+      "importance": 5,
+      "image": {
+        "placeholder": "🌀"
+      },
+      "seo": {
+        "title": "Viṣṇu — Hindu encyclopedia",
+        "description": "Viṣṇu sustains the cosmos and descends as avatāra whenever dharma declines. In the Bhāgavata creation narrative, Brahmā appears on the lotus rising from Viṣṇu's"
+      },
+      "externalRefs": {
+        "genealogyId": "vishnu"
+      },
+      "variantTraditions": [],
+      "status": "published",
+      "schemaVersion": 1
+    },
+    {
+      "id": "person.visravas",
+      "slug": "visravas",
+      "kind": "sage",
+      "name": "Viśravas",
+      "englishName": "Visravas",
+      "iastName": "Viśravas",
+      "sanskritName": "विश्रवस्",
+      "aliases": [
+        "Visrava",
+        "Vishravas"
+      ],
+      "gender": "male",
+      "era": "treta-yuga",
+      "epithet": "Son of Pulastya; father of Kubera and Rāvaṇa",
+      "summary": "Son of Pulastya; father of Kubera and Rāvaṇa",
+      "description": "Viśravas, son of Pulastya, fathers Kubera by Ilavilā (Devavarṇinī) and Rāvaṇa, Kumbhakarṇa, Vibhīṣaṇa and Śūrpaṇakhā by Kaikasī.",
+      "primaryScripture": "Rāmāyaṇa",
+      "scriptureSources": [
+        {
+          "work": "Rāmāyaṇa",
+          "section": "Uttara Kāṇḍa",
+          "chapter": "2–9"
+        }
+      ],
+      "tags": [
+        "dynasty:rakshasa"
+      ],
+      "categories": [
+        "rishi"
+      ],
+      "importance": 5,
+      "seo": {
+        "title": "Viśravas — Hindu encyclopedia",
+        "description": "Viśravas, son of Pulastya, fathers Kubera by Ilavilā (Devavarṇinī) and Rāvaṇa, Kumbhakarṇa, Vibhīṣaṇa and Śūrpaṇakhā by Kaikasī."
+      },
+      "externalRefs": {
+        "genealogyId": "visravas"
+      },
+      "variantTraditions": [],
+      "status": "published",
+      "schemaVersion": 1
+    },
+    {
+      "id": "person.vivasvan",
+      "slug": "vivasvan",
+      "kind": "deva",
+      "name": "Vivasvān",
+      "englishName": "Vivasvan",
+      "iastName": "Vivasvān",
+      "sanskritName": "विवस्वन्",
+      "aliases": [
+        "Vivasvat",
+        "Surya",
+        "Sūrya",
+        "Aditya"
+      ],
+      "gender": "male",
+      "era": "eternal",
+      "epithet": "The Sun; an Āditya; source of the Solar Dynasty",
+      "summary": "The Sun; an Āditya; source of the Solar Dynasty",
+      "description": "Vivasvān is an Āditya, son of Kaśyapa and Aditi. Through him descends Vaivasvata Manu and the Solar (Sūryavaṃśa) line. The Gītā recalls that Kṛṣṇa taught yoga to Vivasvān.",
+      "primaryScripture": "Bhagavad Gītā",
+      "scriptureSources": [
+        {
+          "work": "Bhāgavata Purāṇa",
+          "section": "Skandha 6",
+          "chapter": "6"
+        },
+        {
+          "work": "Bhagavad Gītā",
+          "chapter": "4"
+        },
+        {
+          "work": "Viṣṇu Purāṇa",
+          "section": "Aṃśa 3",
+          "chapter": "1"
+        }
+      ],
+      "tags": [
+        "dynasty:suryavamsa"
+      ],
+      "categories": [
+        "deva"
+      ],
+      "importance": 5,
+      "image": {
+        "placeholder": "☀️"
+      },
+      "seo": {
+        "title": "Vivasvān — Hindu encyclopedia",
+        "description": "Vivasvān is an Āditya, son of Kaśyapa and Aditi. Through him descends Vaivasvata Manu and the Solar (Sūryavaṃśa) line. The Gītā recalls that Kṛṣṇa taught yoga t"
+      },
+      "externalRefs": {
+        "genealogyId": "vivasvan"
+      },
+      "variantTraditions": [],
+      "status": "published",
+      "schemaVersion": 1
+    },
+    {
+      "id": "person.vyasa",
+      "slug": "vyasa",
+      "kind": "sage",
+      "name": "Vyāsa",
+      "englishName": "Vyasa",
+      "iastName": "Vyāsa",
+      "sanskritName": "व्यास",
+      "aliases": [
+        "Veda Vyasa",
+        "Krishna Dvaipayana",
+        "Kṛṣṇa-Dvaipāyana",
+        "Dvaipayana"
+      ],
+      "gender": "male",
+      "era": "dvapara-yuga",
+      "epithet": "Compiler of the Vedas; author of the Mahābhārata",
+      "summary": "Compiler of the Vedas; author of the Mahābhārata",
+      "description": "Kṛṣṇa-Dvaipāyana Vyāsa, son of Parāśara and Satyavatī, sires Dhṛtarāṣṭra, Pāṇḍu and Vidura by niyoga for Vicitravīrya's widows.",
+      "primaryScripture": "Mahābhārata",
+      "scriptureSources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Ādi Parva",
+          "chapter": "57–106"
+        }
+      ],
+      "tags": [
+        "dynasty:kuru"
+      ],
+      "categories": [
+        "rishi"
+      ],
+      "importance": 5,
+      "seo": {
+        "title": "Vyāsa — Hindu encyclopedia",
+        "description": "Kṛṣṇa-Dvaipāyana Vyāsa, son of Parāśara and Satyavatī, sires Dhṛtarāṣṭra, Pāṇḍu and Vidura by niyoga for Vicitravīrya's widows."
+      },
+      "externalRefs": {
+        "genealogyId": "vyasa"
+      },
+      "variantTraditions": [],
+      "status": "published",
+      "schemaVersion": 1
+    },
+    {
+      "id": "person.yadu",
+      "slug": "yadu",
+      "kind": "king",
+      "name": "Yadu",
+      "englishName": "Yadu",
+      "iastName": "Yadu",
+      "sanskritName": "यदु",
+      "aliases": [],
+      "gender": "male",
+      "era": "treta-yuga",
+      "epithet": "Eponym of the Yādavas",
+      "summary": "Eponym of the Yādavas",
+      "description": "Yadu, son of Yayāti, founds the Yadu line from which Vṛṣṇi, Vāsudeva and Kṛṣṇa descend.",
+      "primaryScripture": "Bhāgavata Purāṇa",
+      "scriptureSources": [
+        {
+          "work": "Bhāgavata Purāṇa",
+          "section": "Skandha 9",
+          "chapter": "18–24"
+        }
+      ],
+      "tags": [
+        "dynasty:yadu"
+      ],
+      "categories": [
+        "dynasty-founder"
+      ],
+      "importance": 5,
+      "seo": {
+        "title": "Yadu — Hindu encyclopedia",
+        "description": "Yadu, son of Yayāti, founds the Yadu line from which Vṛṣṇi, Vāsudeva and Kṛṣṇa descend."
+      },
+      "externalRefs": {
+        "genealogyId": "yadu"
+      },
+      "variantTraditions": [],
+      "status": "published",
+      "schemaVersion": 1
+    },
+    {
+      "id": "person.yashoda",
+      "slug": "yashoda",
+      "kind": "person",
+      "name": "Yaśodā",
+      "englishName": "Yashoda",
+      "iastName": "Yaśodā",
+      "sanskritName": "यशोदा",
+      "aliases": [
+        "Yashoda",
+        "Yasoda"
+      ],
+      "gender": "female",
+      "era": "dvapara-yuga",
+      "epithet": "Foster-mother of Kṛṣṇa",
+      "summary": "Foster-mother of Kṛṣṇa",
+      "description": "Yaśodā raises Kṛṣṇa in Gokula; the Bhāgavata recounts her maternal love and the vision of the universal form in his mouth.",
+      "primaryScripture": "Bhāgavata Purāṇa",
+      "scriptureSources": [
+        {
+          "work": "Bhāgavata Purāṇa",
+          "section": "Skandha 10",
+          "chapter": "5–8"
+        }
+      ],
+      "tags": [
+        "dynasty:yadu"
+      ],
+      "categories": [
+        "other"
+      ],
+      "importance": 5,
+      "seo": {
+        "title": "Yaśodā — Hindu encyclopedia",
+        "description": "Yaśodā raises Kṛṣṇa in Gokula; the Bhāgavata recounts her maternal love and the vision of the universal form in his mouth."
+      },
+      "externalRefs": {
+        "genealogyId": "yashoda"
+      },
+      "variantTraditions": [],
+      "status": "published",
+      "schemaVersion": 1
+    },
+    {
+      "id": "person.yayati",
+      "slug": "yayati",
+      "kind": "king",
+      "name": "Yayāti",
+      "englishName": "Yayati",
+      "iastName": "Yayāti",
+      "sanskritName": "ययाति",
+      "aliases": [],
+      "gender": "male",
+      "era": "treta-yuga",
+      "epithet": "Ancestor of Yadu and Puru lines",
+      "summary": "Ancestor of Yadu and Puru lines",
+      "description": "Yayāti divides his kingdom among sons; Yadu and Puru become heads of the Yādava and Paurava branches of the Lunar Dynasty.",
+      "primaryScripture": "Bhāgavata Purāṇa",
+      "scriptureSources": [
+        {
+          "work": "Bhāgavata Purāṇa",
+          "section": "Skandha 9",
+          "chapter": "18–19"
+        },
+        {
+          "work": "Mahābhārata",
+          "section": "Ādi Parva",
+          "chapter": "75–85"
+        }
+      ],
+      "tags": [
+        "dynasty:chandravamsa"
+      ],
+      "categories": [
+        "king"
+      ],
+      "importance": 5,
+      "seo": {
+        "title": "Yayāti — Hindu encyclopedia",
+        "description": "Yayāti divides his kingdom among sons; Yadu and Puru become heads of the Yādava and Paurava branches of the Lunar Dynasty."
+      },
+      "externalRefs": {
+        "genealogyId": "yayati"
+      },
+      "variantTraditions": [],
+      "status": "published",
+      "schemaVersion": 1
+    },
+    {
+      "id": "person.yudhishthira",
+      "slug": "yudhishthira",
+      "kind": "king",
+      "name": "Yudhiṣṭhira",
+      "englishName": "Yudhishthira",
+      "iastName": "Yudhiṣṭhira",
+      "sanskritName": "युधिष्ठिर",
+      "aliases": [
+        "Dharmaraja",
+        "Dharmarāja",
+        "Ajatashatru"
+      ],
+      "gender": "male",
+      "era": "dvapara-yuga",
+      "epithet": "Eldest Pāṇḍava; son of Dharma",
+      "summary": "Eldest Pāṇḍava; son of Dharma",
+      "description": "Yudhiṣṭhira, born of Dharma through Kuntī, is the dharmic eldest of the five brothers and victor of the Kurukṣetra war.",
+      "primaryScripture": "Mahābhārata",
+      "scriptureSources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Ādi Parva",
+          "chapter": "123"
+        },
+        {
+          "work": "Mahābhārata",
+          "section": "Sabhā Parva"
+        }
+      ],
+      "tags": [
+        "dynasty:kuru"
+      ],
+      "categories": [
+        "king"
+      ],
+      "importance": 5,
+      "seo": {
+        "title": "Yudhiṣṭhira — Hindu encyclopedia",
+        "description": "Yudhiṣṭhira, born of Dharma through Kuntī, is the dharmic eldest of the five brothers and victor of the Kurukṣetra war."
+      },
+      "externalRefs": {
+        "genealogyId": "yudhishthira"
+      },
+      "variantTraditions": [],
+      "status": "published",
+      "schemaVersion": 1
+    }
+  ]
+}

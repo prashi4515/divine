@@ -64,7 +64,7 @@ export function ChaptersTable({ chapters }: ChaptersTableProps) {
                     </td>
                     <td className="px-6 py-3 tabular-nums">{chapter.number}</td>
                     <td className="text-muted-foreground px-6 py-3">
-                      {chapter.title ?? "—"}
+                      {chapter.title ?? " - "}
                     </td>
                     <td className="px-6 py-3 tabular-nums">{chapter.verseCount}</td>
                     <td className="px-6 py-3">

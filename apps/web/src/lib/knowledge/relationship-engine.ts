@@ -1,0 +1,30 @@
+/**
+ * Re-export the shared relationship engine for the web app.
+ */
+export {
+  createRelationshipIndex,
+  getRelationships,
+  getParents,
+  getChildren,
+  findAncestors,
+  findDescendants,
+  traverseRelationships,
+  findRelatedByTypes,
+  findBattlesInvolving,
+  findPlacesRuledBy,
+  findDynastyMembers,
+  dedupeRelations,
+  relationDedupeKey,
+  toRelationshipObject,
+  isChildToParentType,
+  isParentToChildType,
+  BATTLE_EDGE_TYPES,
+  CHILD_TO_PARENT_EDGE_TYPES,
+  PARENT_EDGE_TYPES,
+  RULE_EDGE_TYPES,
+  type RelationshipHop,
+  type RelationshipIndex,
+  type TraverseOptions,
+  type LineageHit,
+  type RelatedMatch,
+} from "@divine/types";

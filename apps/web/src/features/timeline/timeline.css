@@ -1,0 +1,16 @@
+/* Timeline interactive surface — lightweight motion, respects reduced motion. */
+
+.timeline-scroller {
+  scrollbar-width: thin;
+  scroll-snap-type: x proximity;
+}
+
+.timeline-scroller > section {
+  scroll-snap-align: start;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .timeline-scroller {
+    scroll-behavior: auto;
+  }
+}

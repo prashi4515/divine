@@ -23,13 +23,13 @@ const MODULE_GROUPS: Array<{
     id: "asura-lineages",
     title: "Asura lineages",
     blurb:
-      "Daityas (Diti) and Dānavas (Danu) are the Asura houses. Rākṣasas are listed next — a separate race, never merged.",
+      "Daityas (Diti) and Danavas (Danu) are the Asura houses. Raksasas are listed next - a separate race, never merged.",
     slugs: ["asuras", "daityas", "danavas", "rakshasas"],
   },
   {
     id: "divine",
     title: "Divinity & creation",
-    blurb: "Trimūrti, Devīs, Prajāpatis, Manus, Saptarṣis and Devas.",
+    blurb: "Trimurti, Devis, Prajapatis, Manus, Saptarsis and Devas.",
     slugs: [
       "cosmic-creation",
       "trimurti",
@@ -42,7 +42,7 @@ const MODULE_GROUPS: Array<{
   },
   {
     id: "other-races",
-    title: "Nāgas, Yakṣas & Gandharvas",
+    title: "Nagas, Yaksas & Gandharvas",
     blurb: "Separate celestial and subterranean races.",
     slugs: ["nagas", "yakshas", "gandharvas"],
   },
@@ -61,21 +61,21 @@ const MODULE_GROUPS: Array<{
   {
     id: "epic-families",
     title: "Epic families",
-    blurb: "Pāṇḍavas, Kauravas, Kṛṣṇa and Rāma.",
+    blurb: "Pandavas, Kauravas, Krsna and Rama.",
     slugs: ["pandavas", "kauravas", "krishna-family", "rama-family"],
   },
   {
     id: "indexes",
     title: "Indexes",
-    blurb: "Cross-cutting ṛṣis and kings.",
+    blurb: "Cross-cutting rsis and kings.",
     slugs: ["major-rishis", "major-kings"],
   },
 ];
 
 export const metadata: Metadata = {
-  title: "Genealogy — Hindu family trees, dynasties and lineages",
+  title: "Genealogy - Hindu family trees, dynasties and lineages",
   description:
-    "Interactive Hindu genealogy: Asuras (Daityas & Dānavas), Rākṣasas, Devas, Solar and Lunar dynasties, Pāṇḍavas, Kṛṣṇa and Rāma — every relationship cited to scripture.",
+    "Interactive Hindu genealogy: Asuras (Daityas & Danavas), Raksasas, Devas, Solar and Lunar dynasties, Pandavas, Krsna and Rama - every relationship cited to scripture.",
   keywords: [
     "Hindu genealogy",
     "Asuras",
@@ -86,7 +86,7 @@ export const metadata: Metadata = {
     "Prahlada",
     "Mahabali",
     "Ravana",
-    "Ikṣvāku dynasty",
+    "Iksvaku dynasty",
     "Solar Dynasty",
     "Lunar Dynasty",
     "Pandavas family tree",
@@ -94,17 +94,17 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: "/genealogy" },
   openGraph: {
-    title: "Genealogy — Hindu family trees, dynasties and lineages",
+    title: "Genealogy - Hindu family trees, dynasties and lineages",
     description:
-      "Asuras, Daityas, Dānavas, Rākṣasas, Devas, Solar and Lunar dynasties — interactive, cited family trees.",
+      "Asuras, Daityas, Danavas, Raksasas, Devas, Solar and Lunar dynasties - interactive, cited family trees.",
     url: `${SITE_URL}/genealogy`,
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Hindu Genealogy — interactive family trees",
+    title: "Hindu Genealogy - interactive family trees",
     description:
-      "Asuras (Daityas & Dānavas), Rākṣasas, dynasties, Kṛṣṇa and Rāma — every relationship cited.",
+      "Asuras (Daityas & Danavas), Raksasas, dynasties, Krsna and Rama - every relationship cited.",
   },
 };
 
@@ -159,8 +159,7 @@ export default async function GenealogyLandingPage() {
         <GenealogyHeader
           eyebrow="Divine Genealogy"
           title="The interactive family trees of Hindu tradition"
-          sanskritTitle="वंशावली"
-          description="Asuras (Daityas & Dānavas), Rākṣasas, Devas, dynasties and epic families — every relationship cited to Mahābhārata, Rāmāyaṇa, Bhāgavata, Viṣṇu Purāṇa and Harivaṃśa. Start with Asuras if you are looking for Hiraṇyakaśipu, Prahlāda or Bali."
+          description="Asuras (Daityas & Danavas), Raksasas, Devas, dynasties and epic families - every relationship cited to Mahabharata, Ramayana, Bhagavata, Visnu Purana and Harivamsa. Start with Asuras if you are looking for Hiranyakasipu, Prahlada or Bali."
           breadcrumbs={[
             { href: "/", label: "Home" },
             { label: "Genealogy" },

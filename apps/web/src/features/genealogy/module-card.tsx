@@ -67,11 +67,6 @@ export function ModuleCard({
       <h2 className="text-foreground mt-3 font-serif text-xl leading-tight tracking-tight sm:text-[1.35rem]">
         {mod.title}
       </h2>
-      {mod.sanskritTitle && (
-        <p className="indic-display text-muted-foreground mt-0.5 font-serif text-sm">
-          {mod.sanskritTitle}
-        </p>
-      )}
 
       <p className="text-muted-foreground mt-3 flex-1 text-sm leading-relaxed">
         {mod.summary}

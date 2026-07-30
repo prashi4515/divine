@@ -46,7 +46,7 @@ export function ChapterHero({
   const intro = workCode === "bg" ? t.chapterIntro(number) : chapterIntro(number);
   const verseLabel =
     verses === 1 ? `1 ${t.verseSingular}` : `${verses} ${t.verses}`;
-  const readLabel = minutes === null ? "—" : t.minutes(minutes);
+  const readLabel = minutes === null ? " - " : t.minutes(minutes);
   const localizedWork =
     workCode != null
       ? (t.workTitles[workCode] ?? workTitle)

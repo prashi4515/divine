@@ -1,0 +1,153 @@
+{
+  "schemaVersion": 1,
+  "relations": [
+    {
+      "id": "rel.person.yudhishthira.king-of.city.indraprastha",
+      "fromId": "person.yudhishthira",
+      "toId": "city.indraprastha",
+      "type": "king-of",
+      "confidence": "verified",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Sabhā Parva"
+        }
+      ]
+    },
+    {
+      "id": "rel.person.krishna.king-of.city.dvaraka",
+      "fromId": "person.krishna",
+      "toId": "city.dvaraka",
+      "type": "king-of",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Bhāgavata Purāṇa",
+          "section": "Skandha 10"
+        },
+        {
+          "work": "Harivaṃśa"
+        }
+      ],
+      "note": "Yadu lord of Dvārakā after leaving Mathurā."
+    },
+    {
+      "id": "rel.person.krishna.resident-of.place.vrindavana",
+      "fromId": "person.krishna",
+      "toId": "place.vrindavana",
+      "type": "resident-of",
+      "confidence": "verified",
+      "sources": [
+        {
+          "work": "Bhāgavata Purāṇa",
+          "section": "Skandha 10"
+        }
+      ]
+    },
+    {
+      "id": "rel.person.krishna.resident-of.place.gokula",
+      "fromId": "person.krishna",
+      "toId": "place.gokula",
+      "type": "resident-of",
+      "confidence": "verified",
+      "sources": [
+        {
+          "work": "Bhāgavata Purāṇa",
+          "section": "Skandha 10"
+        }
+      ]
+    },
+    {
+      "id": "rel.person.draupadi.resident-of.kingdom.pancala",
+      "fromId": "person.draupadi",
+      "toId": "kingdom.pancala",
+      "type": "resident-of",
+      "confidence": "verified",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Ādi Parva"
+        }
+      ]
+    },
+    {
+      "id": "rel.person.gandhari.resident-of.kingdom.gandhara",
+      "fromId": "person.gandhari",
+      "toId": "kingdom.gandhara",
+      "type": "resident-of",
+      "confidence": "verified",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Ādi Parva"
+        }
+      ]
+    },
+    {
+      "id": "rel.person.bhima.fought.kingdom.magadha",
+      "fromId": "person.bhima",
+      "toId": "kingdom.magadha",
+      "type": "fought",
+      "confidence": "verified",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Sabhā Parva"
+        }
+      ],
+      "note": "Slays Jarāsandha at Girivraja."
+    },
+    {
+      "id": "rel.person.arjuna.visited.kingdom.virata",
+      "fromId": "person.arjuna",
+      "toId": "kingdom.virata",
+      "type": "visited",
+      "confidence": "verified",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Virāṭa Parva"
+        }
+      ]
+    },
+    {
+      "id": "rel.person.yudhishthira.visited.forest.kamyaka",
+      "fromId": "person.yudhishthira",
+      "toId": "forest.kamyaka",
+      "type": "visited",
+      "confidence": "verified",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Vana Parva"
+        }
+      ]
+    },
+    {
+      "id": "rel.person.yudhishthira.visited.forest.dvaita",
+      "fromId": "person.yudhishthira",
+      "toId": "forest.dvaita",
+      "type": "visited",
+      "confidence": "verified",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Vana Parva"
+        }
+      ]
+    },
+    {
+      "id": "rel.place.kurukshetra.mentioned-in.verse.bg.1.1",
+      "fromId": "place.kurukshetra",
+      "toId": "verse.bg.1.1",
+      "type": "mentioned-in",
+      "confidence": "verified",
+      "sources": [
+        {
+          "work": "Bhagavad Gītā",
+          "chapter": "1"
+        }
+      ]
+    }
+  ]
+}

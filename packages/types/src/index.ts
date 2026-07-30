@@ -36,6 +36,14 @@ export {
   verseSearchResponseSchema,
   searchSuggestionSchema,
   searchSuggestResponseSchema,
+  KNOWLEDGE_SEARCH_GROUPS,
+  KNOWLEDGE_SEARCH_GROUP_LABELS,
+  KNOWLEDGE_SEARCH_SURFACES,
+  knowledgeSearchDocumentSchema,
+  knowledgeSearchIndexSchema,
+  knowledgeSearchHitSchema,
+  knowledgeSearchGroupBucketSchema,
+  knowledgeSearchResponseSchema,
   relatedVerseSchema,
   relatedContentResponseSchema,
   trendingSearchesResponseSchema,
@@ -44,6 +52,13 @@ export {
   type VerseSearchResult,
   type VerseSearchResponse,
   type SearchSuggestion,
+  type KnowledgeSearchGroup,
+  type KnowledgeSearchSurface,
+  type KnowledgeSearchDocument,
+  type KnowledgeSearchIndex,
+  type KnowledgeSearchHit,
+  type KnowledgeSearchGroupBucket,
+  type KnowledgeSearchResponse,
   type RelatedVerse,
 } from "./search";
 export {
@@ -67,3 +82,5 @@ export {
   type UpdateReadingPreferenceInput,
   type UpdateProfileInput,
 } from "./auth";
+
+export * from "./knowledge";

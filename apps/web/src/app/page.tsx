@@ -12,14 +12,14 @@ import { SiteHeader } from "@/features/reading/site-header";
 import { getVerseOfTheDay } from "@/lib/reading/verse-of-the-day";
 
 export const metadata: Metadata = {
-  title: "Bhagavad Gita — The Song of God",
+  title: "Bhagavad Gita - The Song of God",
   description:
-    "A calm, multilingual home for reading the Bhagavad Gita. Sanskrit shlokas, word-by-word meanings, translations and commentary in eight languages — presented for slow, unhurried reading.",
+    "A calm, multilingual home for reading the Bhagavad Gita. Sanskrit shlokas, word-by-word meanings, translations and commentary in eight languages - presented for slow, unhurried reading.",
   alternates: { canonical: "/" },
   openGraph: {
-    title: "Bhagavad Gita — The Song of God",
+    title: "Bhagavad Gita - The Song of God",
     description:
-      "Sanskrit shlokas, word-by-word meanings, translations and commentary — in eight Indian languages.",
+      "Sanskrit shlokas, word-by-word meanings, translations and commentary - in eight Indian languages.",
     type: "website",
   },
 };

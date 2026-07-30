@@ -93,7 +93,7 @@ export function SessionsPanel() {
                   ) : null}
                 </p>
                 <p className="text-muted-foreground text-xs">
-                  {session.ip ?? "—"} · created{" "}
+                  {session.ip ?? " - "} · created{" "}
                   {new Date(session.createdAt).toLocaleString()}
                 </p>
               </div>

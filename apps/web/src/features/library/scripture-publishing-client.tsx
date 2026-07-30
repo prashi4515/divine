@@ -86,7 +86,7 @@ export function ScripturePublishingClient({ scriptureId }: { scriptureId: string
         </div>
         <div>
           <dt className="text-muted-foreground">Linked work</dt>
-          <dd className="font-mono text-xs">{scripture.workCode ?? "—"}</dd>
+          <dd className="font-mono text-xs">{scripture.workCode ?? " - "}</dd>
         </div>
       </dl>
 

@@ -7,6 +7,7 @@ import {
   loadContentCorrections,
 } from "@/lib/reading/apply-content-corrections";
 import { repairIndicOrthography } from "@/lib/reading/repair-indic-orthography";
+import { toIast } from "@/lib/reading/shloka-script";
 import type { GitaChapterSnapshot } from "@/lib/reading/gita-static-schema";
 
 export type GitaCommentaryEntry = {
@@ -82,27 +83,30 @@ export const getStaticGitaChapter = cache(
     const corrections = await loadContentCorrections(dir);
     const withFixes: GitaChapterSnapshot = {
       ...json,
-      verses: json.verses.map((verse) => ({
-        ...verse,
-        sanskritText: repairIndicOrthography(verse.sanskritText),
-        transliteration: verse.transliteration
-          ? repairIndicOrthography(verse.transliteration)
-          : verse.transliteration,
-        meaning: verse.meaning
-          ? repairIndicOrthography(verse.meaning)
-          : verse.meaning,
-        commentary: verse.commentary
-          ? repairIndicOrthography(verse.commentary)
-          : verse.commentary,
-        translations: applyTranslationCorrections(
-          verse.publicId,
-          verse.translations.map((row) => ({
-            ...row,
-            text: repairIndicOrthography(row.text),
-          })),
-          corrections,
-        ),
-      })),
+      verses: json.verses.map((verse) => {
+        const sanskritText = repairIndicOrthography(verse.sanskritText);
+        return {
+          ...verse,
+          sanskritText,
+          transliteration:
+            toIast(sanskritText, verse.transliteration) ||
+            verse.transliteration,
+          meaning: verse.meaning
+            ? repairIndicOrthography(verse.meaning)
+            : verse.meaning,
+          commentary: verse.commentary
+            ? repairIndicOrthography(verse.commentary)
+            : verse.commentary,
+          translations: applyTranslationCorrections(
+            verse.publicId,
+            verse.translations.map((row) => ({
+              ...row,
+              text: repairIndicOrthography(row.text),
+            })),
+            corrections,
+          ),
+        };
+      }),
     };
 
     chapterMemo.set(chapterNumber, withFixes);

@@ -1,0 +1,104 @@
+{
+  "schemaVersion": 1,
+  "relations": [
+    {
+      "id": "rel.person.bhishma.mother.river.ganga",
+      "fromId": "person.bhishma",
+      "toId": "river.ganga",
+      "type": "mother",
+      "confidence": "verified",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Ādi Parva",
+          "chapter": "96–100"
+        }
+      ],
+      "note": "Gaṅgā is mother of Bhīṣma."
+    },
+    {
+      "id": "rel.person.shantanu.spouse.river.ganga",
+      "fromId": "person.shantanu",
+      "toId": "river.ganga",
+      "type": "spouse",
+      "confidence": "verified",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Ādi Parva",
+          "chapter": "96–100"
+        }
+      ]
+    },
+    {
+      "id": "rel.person.dhritarashtra.king-of.city.hastinapura",
+      "fromId": "person.dhritarashtra",
+      "toId": "city.hastinapura",
+      "type": "king-of",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Ādi Parva"
+        }
+      ]
+    },
+    {
+      "id": "rel.person.rama.king-of.city.ayodhya",
+      "fromId": "person.rama",
+      "toId": "city.ayodhya",
+      "type": "king-of",
+      "confidence": "verified",
+      "sources": [
+        {
+          "work": "Rāmāyaṇa",
+          "section": "Yuddha Kāṇḍa"
+        }
+      ]
+    },
+    {
+      "id": "rel.person.kamsa.king-of.city.mathura",
+      "fromId": "person.kamsa",
+      "toId": "city.mathura",
+      "type": "king-of",
+      "confidence": "verified",
+      "sources": [
+        {
+          "work": "Bhāgavata Purāṇa",
+          "section": "Skandha 10",
+          "chapter": "1"
+        }
+      ]
+    },
+    {
+      "id": "rel.person.arjuna.fought-in.place.kurukshetra",
+      "fromId": "person.arjuna",
+      "toId": "place.kurukshetra",
+      "type": "fought-in",
+      "confidence": "verified",
+      "sources": [
+        {
+          "work": "Bhagavad Gītā",
+          "chapter": "1"
+        },
+        {
+          "work": "Mahābhārata",
+          "section": "Bhīṣma Parva"
+        }
+      ]
+    },
+    {
+      "id": "rel.person.krishna.appears-in.place.kurukshetra",
+      "fromId": "person.krishna",
+      "toId": "place.kurukshetra",
+      "type": "appears-in",
+      "confidence": "verified",
+      "sources": [
+        {
+          "work": "Bhagavad Gītā",
+          "chapter": "1"
+        }
+      ]
+    }
+  ]
+}
