@@ -2,6 +2,7 @@
 
 import * as React from "react";
 import { Languages } from "lucide-react";
+import { useReadingHydrated } from "@/lib/i18n/use-messages";
 import { READING_LANGUAGES } from "@/lib/reading/languages";
 import { useReadingStore } from "@/lib/stores/reading-store";
 
@@ -12,11 +13,9 @@ import { useReadingStore } from "@/lib/stores/reading-store";
 export function LanguageSwitcher() {
   const preferredLanguage = useReadingStore((s) => s.preferredLanguage);
   const setPreferredLanguage = useReadingStore((s) => s.setPreferredLanguage);
-  const [mounted, setMounted] = React.useState(false);
+  const hydrated = useReadingHydrated();
 
-  React.useEffect(() => setMounted(true), []);
-
-  const value = mounted ? preferredLanguage : "en";
+  const value = hydrated ? preferredLanguage : "en";
 
   return (
     <label className="relative inline-flex items-center gap-1">
@@ -28,9 +27,11 @@ export function LanguageSwitcher() {
       <select
         className="border-input bg-background text-foreground h-8 max-w-[5.5rem] cursor-pointer rounded-md border px-1.5 pr-5 text-xs sm:max-w-[9rem] sm:px-2 sm:pr-6 sm:text-sm"
         value={value}
-        onChange={(event) => setPreferredLanguage(event.target.value)}
+        onChange={(event) => {
+          setPreferredLanguage(event.target.value);
+        }}
         aria-label="Translation language"
-        disabled={!mounted}
+        disabled={!hydrated}
       >
         {READING_LANGUAGES.map((lang) => (
           <option

@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useMessages } from "@/lib/i18n/use-messages";
 
 /**
- * Localized primary nav — isolated so SiteHeader can stay a Server Component.
+ * Localized primary nav — desktop row; mobile uses MobileNav.
  */
 export function HeaderNav() {
   const t = useMessages();
@@ -15,19 +15,20 @@ export function HeaderNav() {
     { href: "/events", label: t.navEvents },
     { href: "/kingdoms", label: t.navKingdoms },
     { href: "/weapons", label: t.navWeapons },
-    { href: "/concepts", label: t.navConcepts },
-    { href: "/timeline", label: t.navTimeline },
     { href: "/encyclopedia", label: t.navEncyclopedia },
     { href: "/genealogy", label: t.navGenealogy },
   ] as const;
 
   return (
-    <nav className="hidden items-center gap-1 md:flex" aria-label="Primary">
+    <nav
+      className="hidden max-w-[min(58vw,40rem)] items-center gap-0.5 overflow-x-auto overscroll-x-contain [-ms-overflow-style:none] [scrollbar-width:none] lg:flex [&::-webkit-scrollbar]:hidden"
+      aria-label="Primary"
+    >
       {items.map((item) => (
         <Link
           key={item.href}
           href={item.href}
-          className="text-muted-foreground hover:text-foreground hover:bg-muted/60 transition-divine rounded-md px-3 py-1.5 text-sm"
+          className="text-muted-foreground hover:text-foreground hover:bg-muted/60 transition-divine shrink-0 whitespace-nowrap rounded-md px-2 py-1.5 text-xs xl:px-2.5 xl:text-sm"
         >
           {item.label}
         </Link>

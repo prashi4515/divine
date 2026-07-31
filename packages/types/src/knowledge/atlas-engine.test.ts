@@ -61,6 +61,8 @@ const dataset: AtlasDataset = {
       maxLevel: 5,
     },
   ],
+  rivers: [],
+  events: [],
   cluster: { maxClusterLevel: 2, cellSize: 48, minPoints: 2 },
   baseMapProviderId: "placeholder",
 };
@@ -136,12 +138,17 @@ describe("atlas engine", () => {
       dataset,
       places,
       camera: { x: 0, y: 0, k: 2.5 },
-      filters: { activeRouteId: "route.test" },
+      filters: {
+        activeRouteId: "route.test",
+        layerVisibility: new Map([["layer.kingdoms", true]]),
+      },
     });
     expect(scene.schemaVersion).toBe(2);
     expect(scene.polygons.length).toBe(1);
     expect(scene.paths.some((p) => p.active)).toBe(true);
     expect(scene.markers.length + scene.clusters.length).toBeGreaterThan(0);
+    expect(scene.rivers).toEqual([]);
+    expect(scene.events).toEqual([]);
     expect(scene.layers.every((l) => typeof l.visible === "boolean")).toBe(true);
   });
 });

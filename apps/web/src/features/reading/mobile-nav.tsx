@@ -14,9 +14,7 @@ import {
   Menu,
   Search,
   Shield,
-  Sparkles,
   Swords,
-  Timer,
   UserRound,
   X,
 } from "lucide-react";
@@ -24,8 +22,7 @@ import { useMessages } from "@/lib/i18n/use-messages";
 import { cn } from "@/lib/utils";
 
 /**
- * Mobile hamburger — slide-in nav sheet with primary destinations.
- * Rendered only on <md; desktop uses HeaderNav.
+ * Mobile hamburger — slide-in nav below `lg`; desktop uses HeaderNav.
  */
 export function MobileNav() {
   const pathname = usePathname();
@@ -64,18 +61,6 @@ export function MobileNav() {
       match: (p: string) => p.startsWith("/weapons"),
     },
     {
-      href: "/concepts",
-      label: t.navConcepts,
-      icon: Sparkles,
-      match: (p: string) => p.startsWith("/concepts"),
-    },
-    {
-      href: "/timeline",
-      label: t.navTimeline,
-      icon: Timer,
-      match: (p: string) => p.startsWith("/timeline"),
-    },
-    {
       href: "/encyclopedia",
       label: t.navEncyclopedia,
       icon: Library,
@@ -91,7 +76,7 @@ export function MobileNav() {
       <DialogPrimitive.Trigger asChild>
         <button
           type="button"
-          className="text-muted-foreground hover:bg-muted/60 hover:text-foreground focus-visible:ring-ring inline-flex h-9 w-9 items-center justify-center rounded-md transition-divine focus-visible:outline-none focus-visible:ring-2 md:hidden"
+          className="text-muted-foreground hover:bg-muted/60 hover:text-foreground focus-visible:ring-ring inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-md transition-divine focus-visible:outline-none focus-visible:ring-2 lg:hidden"
           aria-label={t.navMenu}
         >
           <Menu className="h-5 w-5" aria-hidden />

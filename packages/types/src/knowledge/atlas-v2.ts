@@ -2,8 +2,9 @@
  * Atlas 2.0 — data contracts.
  *
  * Locations remain Knowledge Graph entities (`entity.atlas` lat/lng).
- * Polygons, routes, layers, and icon tokens live in atlas JSON packs.
- * Renderers consume a projected `AtlasScene` — never raw artwork assets.
+ * Polygons, routes, rivers, events, layers, and icon tokens live in atlas JSON packs.
+ * The illustrated base plate is a separate, swappable artwork asset — renderers
+ * must never invent coastlines or kingdom boundaries from code.
  */
 import { z } from "zod";
 import { scriptureReferenceSchema } from "./entity";
@@ -91,6 +92,8 @@ export const ATLAS_LAYER_KINDS = [
   "kingdoms",
   "places",
   "routes",
+  "rivers",
+  "events",
   "labels",
   "custom",
 ] as const;
@@ -256,6 +259,124 @@ export const atlasProjectionSchema = z.object({
 });
 export type AtlasProjection = z.infer<typeof atlasProjectionSchema>;
 
+/**
+ * Placement certainty for overlay geometry and atlas markers.
+ * Never present Approximate / Traditional locations as surveyed fact.
+ */
+export const ATLAS_CERTAINTY_LEVELS = [
+  "verified",
+  "traditional",
+  "approximate",
+] as const;
+export type AtlasCertainty = (typeof ATLAS_CERTAINTY_LEVELS)[number];
+
+/**
+ * Swappable illustrated base plate. Application logic must not assume pixels —
+ * only `src` + georeferenced `projection`. Replace the file / id to swap art.
+ */
+export const atlasBaseMapSchema = z.object({
+  id: z.string().min(1),
+  title: z.string().min(1),
+  /** Public URL path (e.g. `/images/atlas/ancient-bharata.jpg`). */
+  src: z.string().min(1),
+  credit: z.string().optional(),
+  /** Intrinsic pixel size of the artwork (informational). */
+  intrinsicWidth: z.number().positive().optional(),
+  intrinsicHeight: z.number().positive().optional(),
+  /** Georeference frame — usually matches dataset.projection. */
+  projection: atlasProjectionSchema.optional(),
+});
+export type AtlasBaseMap = z.infer<typeof atlasBaseMapSchema>;
+
+/** Interactive river polyline overlay (not coastline artwork). */
+export const atlasRiverSchema = z.object({
+  id: z.string().min(1),
+  slug: z.string().min(1).regex(/^[a-z0-9]+(?:-[a-z0-9]+)*$/),
+  name: z.string().min(1),
+  iastName: z.string().optional(),
+  entityId: z.string().optional(),
+  layerId: z.string().min(1).default("layer.rivers"),
+  /** Open polyline [lat, lng][]. Educational / traditional placement. */
+  points: atlasRingSchema,
+  width: z.number().positive().default(2),
+  certainty: z.enum(ATLAS_CERTAINTY_LEVELS).default("traditional"),
+  summary: z.string().optional(),
+  order: z.number().int().default(100),
+  minLevel: z
+    .union([
+      z.literal(1),
+      z.literal(2),
+      z.literal(3),
+      z.literal(4),
+      z.literal(5),
+    ])
+    .default(1),
+  maxLevel: z
+    .union([
+      z.literal(1),
+      z.literal(2),
+      z.literal(3),
+      z.literal(4),
+      z.literal(5),
+    ])
+    .default(5),
+});
+export type AtlasRiver = z.infer<typeof atlasRiverSchema>;
+
+export const atlasRiverBundleSchema = z.object({
+  generatedAt: z.string().optional(),
+  schemaVersion: z.literal(2).default(2),
+  rivers: z.array(atlasRiverSchema),
+});
+export type AtlasRiverBundle = z.infer<typeof atlasRiverBundleSchema>;
+
+/** Map-pinned Mahābhārata event (overlay marker). */
+export const atlasEventSchema = z.object({
+  id: z.string().min(1),
+  slug: z.string().min(1).regex(/^[a-z0-9]+(?:-[a-z0-9]+)*$/),
+  name: z.string().min(1),
+  iastName: z.string().optional(),
+  summary: z.string().min(1),
+  description: z.string().min(1),
+  latitude: z.number().min(-90).max(90),
+  longitude: z.number().min(-180).max(180),
+  certainty: z.enum(ATLAS_CERTAINTY_LEVELS).default("traditional"),
+  placeId: z.string().optional(),
+  relatedPeople: z.array(z.string()).default([]),
+  relatedPlaces: z.array(z.string()).default([]),
+  relatedVerses: z.array(z.string()).default([]),
+  sources: z.array(scriptureReferenceSchema).default([]),
+  importance: z.number().min(0).max(1).default(0.7),
+  layerId: z.string().min(1).default("layer.events"),
+  order: z.number().int().default(100),
+  minLevel: z
+    .union([
+      z.literal(1),
+      z.literal(2),
+      z.literal(3),
+      z.literal(4),
+      z.literal(5),
+    ])
+    .default(2),
+  maxLevel: z
+    .union([
+      z.literal(1),
+      z.literal(2),
+      z.literal(3),
+      z.literal(4),
+      z.literal(5),
+    ])
+    .default(5),
+});
+export type AtlasEvent = z.infer<typeof atlasEventSchema>;
+
+export const atlasEventBundleSchema = z.object({
+  generatedAt: z.string().optional(),
+  schemaVersion: z.literal(2).default(2),
+  events: z.array(atlasEventSchema),
+});
+export type AtlasEventBundle = z.infer<typeof atlasEventBundleSchema>;
+
 export const atlasClusterConfigSchema = z.object({
   /** Enable grid clustering below this semantic level (inclusive). */
   maxClusterLevel: z
@@ -274,8 +395,9 @@ export const atlasClusterConfigSchema = z.object({
 export type AtlasClusterConfig = z.infer<typeof atlasClusterConfigSchema>;
 
 /**
- * Full Atlas 2.0 dataset (polygons / layers / icons / routes / projection).
+ * Full Atlas 2.0 dataset.
  * Place markers still resolve from KG entities with `entity.atlas`.
+ * Base artwork is referenced via `baseMap` — never procedurally invented.
  */
 export const atlasDatasetSchema = z.object({
   schemaVersion: z.literal(2),
@@ -284,21 +406,36 @@ export const atlasDatasetSchema = z.object({
   projection: atlasProjectionSchema,
   layers: z.array(atlasLayerSchema),
   icons: z.array(atlasIconDefinitionSchema),
-  polygons: z.array(atlasPolygonSchema),
+  polygons: z.array(atlasPolygonSchema).default([]),
+  rivers: z.array(atlasRiverSchema).default([]),
+  events: z.array(atlasEventSchema).default([]),
   routes: z.array(atlasRouteSchema),
   cluster: atlasClusterConfigSchema.default({}),
-  /** Optional base-map provider id for illustrated swap (renderer chooses). */
-  baseMapProviderId: z.string().default("placeholder"),
+  /** Illustrated plate metadata (src + optional credit). */
+  baseMap: atlasBaseMapSchema.optional(),
+  /** Renderer id — `illustrated` draws the plate; overlays stay data-driven. */
+  baseMapProviderId: z.string().default("illustrated"),
 });
 export type AtlasDataset = z.infer<typeof atlasDatasetSchema>;
 
+/** Matches the Ancient Bhārata plate aspect (~872×1024). */
 export const DEFAULT_ATLAS_PROJECTION: AtlasProjection = {
   minLat: 6.5,
   maxLat: 37.5,
   minLng: 66.5,
   maxLng: 97.5,
   viewBoxWidth: 1000,
-  viewBoxHeight: 1180,
+  viewBoxHeight: 1174,
+};
+
+export const DEFAULT_ATLAS_BASE_MAP: AtlasBaseMap = {
+  id: "basemap.ancient-bharata",
+  title: "Ancient Bhārata — Mahābhārata era (reference plate)",
+  src: "/images/atlas/ancient-bharata-map.jpg",
+  credit:
+    "Educational reference plate. Artwork is display-only — not clickable data.",
+  intrinsicWidth: 872,
+  intrinsicHeight: 1024,
 };
 
 export const DEFAULT_ATLAS_ICONS: AtlasIconDefinition[] = [
@@ -333,10 +470,22 @@ export const DEFAULT_ATLAS_LAYERS: AtlasLayer[] = [
     title: "Kingdoms",
     kind: "kingdoms",
     zIndex: 10,
+    /** Kingdom boundaries live on the illustrated plate — markers only. */
+    defaultVisible: false,
+    minLevel: 1,
+    maxLevel: 5,
+    styleToken: "kingdoms.markers",
+  },
+  {
+    id: "layer.rivers",
+    slug: "rivers",
+    title: "Rivers",
+    kind: "rivers",
+    zIndex: 15,
     defaultVisible: true,
     minLevel: 1,
     maxLevel: 5,
-    styleToken: "kingdoms.fill",
+    styleToken: "rivers.overlay",
   },
   {
     id: "layer.routes",
@@ -348,6 +497,17 @@ export const DEFAULT_ATLAS_LAYERS: AtlasLayer[] = [
     minLevel: 2,
     maxLevel: 5,
     styleToken: "routes.travel",
+  },
+  {
+    id: "layer.events",
+    slug: "events",
+    title: "Events",
+    kind: "events",
+    zIndex: 25,
+    defaultVisible: true,
+    minLevel: 2,
+    maxLevel: 5,
+    styleToken: "events.markers",
   },
   {
     id: "layer.places",

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Suspense } from "react";
-import { GenealogyHeader } from "@/features/genealogy/genealogy-header";
+import { LocalizedModuleHeader } from "@/features/reading/localized-module-header";
 import { TimelineExplorer } from "@/features/timeline/timeline-explorer";
 import { SiteFooter } from "@/features/reading/site-footer";
 import { SiteHeader } from "@/features/reading/site-header";
@@ -51,39 +51,13 @@ export default async function TimelinePage() {
     <div className="relative flex min-h-svh flex-col">
       <SiteHeader />
       <main className="flex-1">
-        <GenealogyHeader
-          eyebrow="Signature experience"
-          title="Mahabharata Timeline"
-          description="Scroll through eras, filter battles and discourses, and open any moment in Events, Encyclopedia, Genealogy, Atlas, or the Gita."
-          breadcrumbs={[
-            { href: "/", label: "Home" },
-            { label: "Timeline" },
+        <LocalizedModuleHeader
+          module="timeline"
+          actionLinks={[
+            { href: "/events", labelKey: "eventsHub" },
+            { href: "/atlas", labelKey: "navAtlas" },
+            { href: "/genealogy", labelKey: "navGenealogy" },
           ]}
-          actions={
-            <>
-              <Link
-                href="/events"
-                className="border-border bg-background/80 hover:border-saffron/40 inline-flex rounded-full border px-3.5 py-1.5 text-xs transition-divine"
-                prefetch
-              >
-                Events hub
-              </Link>
-              <Link
-                href="/atlas"
-                className="border-border bg-background/80 hover:border-saffron/40 inline-flex rounded-full border px-3.5 py-1.5 text-xs transition-divine"
-                prefetch
-              >
-                Atlas
-              </Link>
-              <Link
-                href="/genealogy"
-                className="border-border bg-background/80 hover:border-saffron/40 inline-flex rounded-full border px-3.5 py-1.5 text-xs transition-divine"
-                prefetch
-              >
-                Genealogy
-              </Link>
-            </>
-          }
         />
 
         <section className="page-gutter pb-8 pt-2">

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { GenealogyHeader } from "@/features/genealogy/genealogy-header";
+import { LocalizedModuleHeader } from "@/features/reading/localized-module-header";
 import { WeaponCard } from "@/features/weapons/weapon-card";
 import { SiteFooter } from "@/features/reading/site-footer";
 import { SiteHeader } from "@/features/reading/site-header";
@@ -60,32 +60,12 @@ export default async function WeaponsIndexPage() {
     <div className="relative flex min-h-svh flex-col">
       <SiteHeader />
       <main className="flex-1">
-        <GenealogyHeader
-          eyebrow="Signature experience"
-          title="Weapons"
-          description="Arms of the Mahabharata - astras, bows, maces, swords, spears, conches, chariots, and sacred objects. A few weapons from the wider Hindu tradition are listed separately."
-          breadcrumbs={[
-            { href: "/", label: "Home" },
-            { label: "Weapons" },
+        <LocalizedModuleHeader
+          module="weapons"
+          actionLinks={[
+            { href: "/events", labelKey: "navEvents" },
+            { href: "/encyclopedia/weapon", labelKey: "navEncyclopedia" },
           ]}
-          actions={
-            <>
-              <Link
-                href="/events"
-                className="border-border bg-background/80 hover:border-saffron/40 inline-flex rounded-full border px-3.5 py-1.5 text-xs transition-divine"
-                prefetch
-              >
-                Events
-              </Link>
-              <Link
-                href="/encyclopedia/weapon"
-                className="border-border bg-background/80 hover:border-saffron/40 inline-flex rounded-full border px-3.5 py-1.5 text-xs transition-divine"
-                prefetch
-              >
-                Encyclopedia
-              </Link>
-            </>
-          }
         />
 
         <section className="page-gutter pb-16 pt-4">

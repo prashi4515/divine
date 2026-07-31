@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { BookOpen, ScrollText } from "lucide-react";
-import { GenealogyHeader } from "@/features/genealogy/genealogy-header";
+import { ScrollText } from "lucide-react";
+import { LocalizedModuleHeader } from "@/features/reading/localized-module-header";
 import { ModuleCard } from "@/features/genealogy/module-card";
 import { SiteFooter } from "@/features/reading/site-footer";
 import { SiteHeader } from "@/features/reading/site-header";
@@ -156,31 +156,12 @@ export default async function GenealogyLandingPage() {
     <div className="relative flex min-h-svh flex-col">
       <SiteHeader />
       <main className="flex-1">
-        <GenealogyHeader
-          eyebrow="Divine Genealogy"
-          title="The interactive family trees of Hindu tradition"
-          description="Asuras (Daityas & Danavas), Raksasas, Devas, dynasties and epic families - every relationship cited to Mahabharata, Ramayana, Bhagavata, Visnu Purana and Harivamsa. Start with Asuras if you are looking for Hiranyakasipu, Prahlada or Bali."
-          breadcrumbs={[
-            { href: "/", label: "Home" },
-            { label: "Genealogy" },
+        <LocalizedModuleHeader
+          module="genealogy"
+          actionLinks={[
+            { href: "/encyclopedia", labelKey: "navEncyclopedia" },
+            { href: "/bhagavad-gita", labelKey: "allChapters" },
           ]}
-          actions={
-            <>
-              <Link
-                href="/genealogy/asuras"
-                className="cta-saffron inline-flex items-center gap-1.5 rounded-full px-3.5 py-1.5 text-xs text-white"
-              >
-                Open Asuras
-              </Link>
-              <Link
-                href="/bhagavad-gita"
-                className="border-border bg-background/80 text-foreground hover:border-saffron/40 inline-flex items-center gap-1.5 rounded-full border px-3.5 py-1.5 text-xs transition-divine"
-              >
-                <BookOpen className="h-3.5 w-3.5" aria-hidden />
-                Read the Bhagavad Gītā
-              </Link>
-            </>
-          }
         />
 
         <section

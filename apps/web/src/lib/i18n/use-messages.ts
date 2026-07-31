@@ -6,32 +6,51 @@ import { getMessages, type Messages } from "@/lib/i18n/messages";
 import { useReadingStore } from "@/lib/stores/reading-store";
 
 /**
- * UI copy for the active reading language. Falls back to English until hydrated.
+ * True after client mount / persist rehydrate.
+ * Safe when `persist` API is briefly unavailable during HMR.
  */
-export function useMessages(): Messages {
-  const preferredLanguage = useReadingStore((s) => s.preferredLanguage);
-  const [mounted, setMounted] = React.useState(false);
-
-  React.useEffect(() => setMounted(true), []);
+export function useReadingHydrated(): boolean {
+  const [hydrated, setHydrated] = React.useState(false);
 
   React.useEffect(() => {
-    if (!mounted) return;
-    document.documentElement.lang = preferredLanguage === "sa" ? "sa" : preferredLanguage;
-  }, [mounted, preferredLanguage]);
+    const api = useReadingStore.persist;
+    if (!api) {
+      setHydrated(true);
+      return;
+    }
+    setHydrated(api.hasHydrated());
+    return api.onFinishHydration(() => {
+      setHydrated(true);
+    });
+  }, []);
 
-  return getMessages(mounted ? preferredLanguage : "en");
+  return hydrated;
 }
 
 /**
- * Landing-page copy for the active reading language (English until hydrated).
+ * UI copy for the active reading language.
+ */
+export function useMessages(): Messages {
+  const preferredLanguage = useReadingStore((s) => s.preferredLanguage);
+  const hydrated = useReadingHydrated();
+
+  React.useEffect(() => {
+    if (!hydrated) return;
+    document.documentElement.lang =
+      preferredLanguage === "sa" ? "sa" : preferredLanguage;
+  }, [hydrated, preferredLanguage]);
+
+  return getMessages(hydrated ? preferredLanguage : "en");
+}
+
+/**
+ * Landing-page copy for the active reading language.
  */
 export function useHomeMessages(): HomeMessages {
   const preferredLanguage = useReadingStore((s) => s.preferredLanguage);
-  const [mounted, setMounted] = React.useState(false);
+  const hydrated = useReadingHydrated();
 
-  React.useEffect(() => setMounted(true), []);
-
-  return getHomeMessages(mounted ? preferredLanguage : "en");
+  return getHomeMessages(hydrated ? preferredLanguage : "en");
 }
 
 export function localizeWorkTitle(

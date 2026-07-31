@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { ArrowRight, BookOpen } from "lucide-react";
-import { useHomeMessages } from "@/lib/i18n/use-messages";
+import { useHomeMessages, useMessages } from "@/lib/i18n/use-messages";
 import { useReadingStore } from "@/lib/stores/reading-store";
 import {
   dailyVerseMeaning,
@@ -11,7 +11,6 @@ import {
 } from "@/lib/reading/verse-of-the-day";
 import { isReadingLanguageCode } from "@/lib/reading/languages";
 import { shlokaFontClass } from "@/lib/reading/reader-fonts";
-import { formatGitaVerseLabel } from "@/lib/reading/verse-label";
 import { cn } from "@/lib/utils";
 
 type FeaturedVerseProps = {
@@ -25,6 +24,7 @@ type FeaturedVerseProps = {
  */
 export function FeaturedVerse({ verse: verseProp }: FeaturedVerseProps) {
   const h = useHomeMessages();
+  const t = useMessages();
   const preferredLanguage = useReadingStore((s) => s.preferredLanguage);
   const verse = verseProp ?? getVerseOfTheDay();
   const language = isReadingLanguageCode(preferredLanguage)
@@ -97,7 +97,8 @@ export function FeaturedVerse({ verse: verseProp }: FeaturedVerseProps) {
           <figcaption className="mt-8 flex flex-col items-center gap-4 sm:mt-10">
             <cite className="border-maroon/25 bg-background/70 text-maroon inline-flex items-center gap-1.5 rounded-full border px-3 py-1 text-[11px] not-italic tracking-wide sm:text-xs">
               <BookOpen className="h-3 w-3" aria-hidden />
-              {formatGitaVerseLabel(verse.chapter, verse.verse)}
+              {t.chapterFallback(verse.chapter)}, {t.verseSingular}{" "}
+              {verse.verse}
             </cite>
             <Link
               href={href}

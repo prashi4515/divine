@@ -3,7 +3,11 @@
 import Link from "next/link";
 import { ArrowRight, BookOpen } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { useHomeMessages, useMessages } from "@/lib/i18n/use-messages";
+import {
+  useHomeMessages,
+  useMessages,
+  useReadingHydrated,
+} from "@/lib/i18n/use-messages";
 import {
   gitaChapterIntro,
   GITA_CHAPTER_TITLES,
@@ -27,10 +31,12 @@ const CHAPTER_NUMBERS = Array.from({ length: 18 }, (_, i) => i + 1);
 export function HomeChaptersPreview() {
   const t = useMessages();
   const h = useHomeMessages();
+  const hydrated = useReadingHydrated();
   const preferredLanguage = useReadingStore((s) => s.preferredLanguage);
-  const lang: ReadingLanguageCode = isReadingLanguageCode(preferredLanguage)
-    ? preferredLanguage
-    : "en";
+  const lang: ReadingLanguageCode =
+    hydrated && isReadingLanguageCode(preferredLanguage)
+      ? preferredLanguage
+      : "en";
   const titleFont = readerFontClass(lang);
 
   return (
@@ -64,7 +70,7 @@ export function HomeChaptersPreview() {
             lang === "sa"
               ? GITA_CHAPTER_TITLES.en[n]
               : GITA_CHAPTER_TITLES.sa[n];
-          const description = gitaChapterIntro(lang, n);
+          const description = gitaChapterIntro(lang, n) || t.gitaBlurb;
           const verseCount = TRADITIONAL_VERSE_COUNTS[n] ?? 0;
 
           return (

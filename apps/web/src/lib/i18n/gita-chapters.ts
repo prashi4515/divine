@@ -1,4 +1,6 @@
 import type { ReadingLanguageCode } from "@/lib/reading/languages";
+import { INTRO_TA } from "@/lib/i18n/gita-chapter-intros-indic";
+import { INTRO_ML } from "@/lib/i18n/gita-chapter-intros-ml";
 
 /** Traditional Gita chapter yoga names by reading language. */
 export const GITA_CHAPTER_TITLES: Record<
@@ -247,6 +249,8 @@ export const GITA_CHAPTER_INTROS: Partial<
   en: INTRO_EN,
   hi: INTRO_HI,
   te: INTRO_TE,
+  ta: INTRO_TA,
+  ml: INTRO_ML,
 };
 
 export function gitaChapterTitle(
@@ -274,5 +278,8 @@ export function gitaChapterIntro(
     const hi = GITA_CHAPTER_INTROS.hi?.[number];
     if (hi) return hi;
   }
+  // Never leak English chapter prose into Indic UIs — callers should show a
+  // localized short blurb (e.g. messages.gitaBlurb) when this is empty.
+  if (lang !== "en") return "";
   return GITA_CHAPTER_INTROS.en?.[number] ?? "";
 }

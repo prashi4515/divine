@@ -263,6 +263,12 @@ export const entityAtlasSchema = z.object({
       "sacred",
     ])
     .optional(),
+  /**
+   * Placement certainty for the lat/lng pin.
+   * Approximate / Traditional must never be presented as surveyed fact.
+   */
+  /** Omit or leave unset → treat as traditional in UI. */
+  certainty: z.enum(["verified", "traditional", "approximate"]).optional(),
 });
 export type EntityAtlas = z.infer<typeof entityAtlasSchema>;
 

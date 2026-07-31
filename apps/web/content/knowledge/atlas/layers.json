@@ -10,8 +10,8 @@
       "defaultVisible": true,
       "minLevel": 1,
       "maxLevel": 5,
-      "styleToken": "base.default",
-      "summary": "Swappable base — placeholder frame or future illustrated plate."
+      "styleToken": "base.illustrated",
+      "summary": "Swappable illustrated plate — never invent coastlines in code."
     },
     {
       "id": "layer.kingdoms",
@@ -19,22 +19,44 @@
       "title": "Kingdoms",
       "kind": "kingdoms",
       "zIndex": 10,
+      "defaultVisible": false,
+      "minLevel": 1,
+      "maxLevel": 5,
+      "styleToken": "kingdoms.markers",
+      "summary": "Optional polygon overlays. Boundaries are on the illustrated plate."
+    },
+    {
+      "id": "layer.rivers",
+      "slug": "rivers",
+      "title": "Rivers",
+      "kind": "rivers",
+      "zIndex": 15,
       "defaultVisible": true,
       "minLevel": 1,
       "maxLevel": 5,
-      "styleToken": "kingdoms.fill",
-      "summary": "Kingdom polygon fills from atlas/polygons.json."
+      "styleToken": "rivers.overlay"
     },
     {
       "id": "layer.routes",
       "slug": "routes",
-      "title": "Travel paths",
+      "title": "Travel Routes",
       "kind": "routes",
       "zIndex": 20,
       "defaultVisible": true,
       "minLevel": 2,
       "maxLevel": 5,
       "styleToken": "routes.travel"
+    },
+    {
+      "id": "layer.events",
+      "slug": "events",
+      "title": "Events",
+      "kind": "events",
+      "zIndex": 25,
+      "defaultVisible": true,
+      "minLevel": 2,
+      "maxLevel": 5,
+      "styleToken": "events.markers"
     },
     {
       "id": "layer.places",

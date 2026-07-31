@@ -2,13 +2,17 @@ import "server-only";
 import fs from "node:fs/promises";
 import path from "node:path";
 import {
+  DEFAULT_ATLAS_BASE_MAP,
   DEFAULT_ATLAS_ICONS,
   DEFAULT_ATLAS_LAYERS,
   DEFAULT_ATLAS_PROJECTION,
+  atlasBaseMapSchema,
   atlasDatasetSchema,
+  atlasEventBundleSchema,
   atlasIconBundleSchema,
   atlasLayerBundleSchema,
   atlasPolygonBundleSchema,
+  atlasRiverBundleSchema,
   atlasRouteBundleSchema,
   type AtlasDataset,
   type AtlasRoute,
@@ -24,17 +28,30 @@ async function readJson(file: string): Promise<unknown> {
 }
 
 /**
- * Load Atlas 2.0 dataset (layers, polygons, routes, icons, projection).
+ * Load Atlas dataset (base plate, layers, rivers, events, routes, icons).
  * Place markers still come from KG entities via getAtlasPlaces().
  */
 export async function getAtlasDataset(): Promise<AtlasDataset> {
   if (!datasetCache) {
     datasetCache = (async () => {
-      const [layersRaw, polygonsRaw, routesRaw, iconsRaw] = await Promise.all([
+      const [
+        layersRaw,
+        polygonsRaw,
+        routesRaw,
+        iconsRaw,
+        riversRaw,
+        eventsRaw,
+        baseMapRaw,
+      ] = await Promise.all([
         readJson("layers.json").catch(() => null),
-        readJson("polygons.json").catch(() => null),
+        readJson("overlays/kingdoms.json")
+          .catch(() => readJson("polygons.json"))
+          .catch(() => null),
         readJson("routes.json"),
         readJson("icons.json").catch(() => null),
+        readJson("rivers.json").catch(() => null),
+        readJson("events.json").catch(() => null),
+        readJson("base-map.json").catch(() => null),
       ]);
 
       const layers = layersRaw
@@ -47,6 +64,22 @@ export async function getAtlasDataset(): Promise<AtlasDataset> {
       const icons = iconsRaw
         ? atlasIconBundleSchema.parse(iconsRaw).icons
         : DEFAULT_ATLAS_ICONS;
+      const rivers = riversRaw
+        ? atlasRiverBundleSchema.parse(riversRaw).rivers
+        : [];
+      const events = eventsRaw
+        ? atlasEventBundleSchema.parse(eventsRaw).events
+        : [];
+
+      let baseMap = DEFAULT_ATLAS_BASE_MAP;
+      if (baseMapRaw && typeof baseMapRaw === "object" && baseMapRaw !== null) {
+        const wrapped = baseMapRaw as { baseMap?: unknown };
+        if (wrapped.baseMap) {
+          baseMap = atlasBaseMapSchema.parse(wrapped.baseMap);
+        } else {
+          baseMap = atlasBaseMapSchema.parse(baseMapRaw);
+        }
+      }
 
       return atlasDatasetSchema.parse({
         schemaVersion: 2,
@@ -56,13 +89,16 @@ export async function getAtlasDataset(): Promise<AtlasDataset> {
         layers,
         icons,
         polygons,
+        rivers,
+        events,
         routes,
         cluster: {
           maxClusterLevel: 2,
           cellSize: 48,
           minPoints: 2,
         },
-        baseMapProviderId: "placeholder",
+        baseMap,
+        baseMapProviderId: "illustrated",
       });
     })().catch((err: unknown) => {
       datasetCache = null;

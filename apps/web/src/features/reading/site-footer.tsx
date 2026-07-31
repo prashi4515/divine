@@ -2,53 +2,43 @@
 
 import Link from "next/link";
 import { BookOpen, Languages, Search } from "lucide-react";
+import { READING_LANGUAGES } from "@/lib/reading/languages";
 import { useHomeMessages, useMessages } from "@/lib/i18n/use-messages";
+import { useReadingStore } from "@/lib/stores/reading-store";
+import { cn } from "@/lib/utils";
 
 /**
- * Site-wide footer — brand, explore / reading / account columns, languages.
+ * Site-wide footer — brand, explore / reading / account columns, live languages.
  */
 export function SiteFooter() {
   const t = useMessages();
   const h = useHomeMessages();
+  const preferredLanguage = useReadingStore((s) => s.preferredLanguage);
+  const setPreferredLanguage = useReadingStore((s) => s.setPreferredLanguage);
   const year = new Date().getFullYear();
 
   const explore = [
     { href: "/", label: t.home },
     { href: "/bhagavad-gita", label: t.allChapters },
-    { href: "/atlas", label: "Atlas" },
-    { href: "/events", label: "Events" },
-    { href: "/kingdoms", label: "Kingdoms" },
-    { href: "/weapons", label: "Weapons" },
-    { href: "/concepts", label: "Concepts" },
-    { href: "/timeline", label: "Timeline" },
-    { href: "/encyclopedia", label: "Encyclopedia" },
-    { href: "/genealogy", label: "Genealogy" },
+    { href: "/atlas", label: t.navAtlas },
+    { href: "/events", label: t.navEvents },
+    { href: "/kingdoms", label: t.navKingdoms },
+    { href: "/weapons", label: t.navWeapons },
+    { href: "/encyclopedia", label: t.navEncyclopedia },
+    { href: "/genealogy", label: t.navGenealogy },
     { href: "/search", label: h.searchVerses },
   ];
 
   const reading = [
-    { href: "/bhagavad-gita/chapter-1", label: `${t.chapterFallback(1)}` },
+    { href: "/bhagavad-gita/chapter-1", label: t.chapterFallback(1) },
     { href: "/bhagavad-gita/chapter-2", label: t.chapterTitle(2) },
     { href: "/bhagavad-gita/chapter-12", label: t.chapterTitle(12) },
-    { href: "/search?q=dharma", label: "Dharma" },
-    { href: "/search?q=karma", label: "Karma" },
   ];
 
   const account = [
-    { href: "/login", label: "Sign in" },
-    { href: "/signup", label: "Create account" },
-    { href: "/account/history", label: "Reading history" },
-  ];
-
-  const languages = [
-    "English",
-    "हिन्दी",
-    "తెలుగు",
-    "ಕನ್ನಡ",
-    "தமிழ்",
-    "മലയാളം",
-    "ଓଡ଼ିଆ",
-    "संस्कृतम्",
+    { href: "/login", label: t.signIn },
+    { href: "/signup", label: t.createAccount },
+    { href: "/account/history", label: t.readingHistory },
   ];
 
   return (
@@ -81,15 +71,14 @@ export function SiteFooter() {
                 </span>
               </span>
               <span className="font-serif text-xl tracking-tight">
-                Bhagavad Gita
+                {t.gitaTitle}
               </span>
             </Link>
             <p className="text-muted-foreground text-sm leading-relaxed">
               {t.footer}
             </p>
             <p className="text-muted-foreground/90 text-xs leading-relaxed">
-              Eighteen chapters · seven hundred verses · calm typography for
-              unhurried reading.
+              {t.footerBlurb}
             </p>
             <div className="flex flex-wrap gap-2 pt-1">
               <Link
@@ -109,9 +98,9 @@ export function SiteFooter() {
             </div>
           </div>
 
-          <FooterColumn title="Explore" links={explore} />
-          <FooterColumn title="Reading" links={reading} />
-          <FooterColumn title="Account" links={account} />
+          <FooterColumn title={t.footerExplore} links={explore} />
+          <FooterColumn title={t.footerReading} links={reading} />
+          <FooterColumn title={t.footerAccount} links={account} />
         </div>
 
         <div className="border-border/70 mx-auto mt-12 max-w-6xl border-t pt-8">
@@ -121,19 +110,35 @@ export function SiteFooter() {
                 className="text-saffron mt-0.5 h-4 w-4 shrink-0 sm:mt-0"
                 aria-hidden
               />
-              <ul className="flex flex-wrap gap-x-3 gap-y-1.5" aria-label="Languages">
-                {languages.map((lang) => (
-                  <li
-                    key={lang}
-                    className="text-muted-foreground text-xs tracking-wide"
-                  >
-                    {lang}
-                  </li>
-                ))}
+              <ul
+                className="flex flex-wrap gap-x-1 gap-y-1.5"
+                aria-label={t.language}
+              >
+                {READING_LANGUAGES.map((lang) => {
+                  const active = preferredLanguage === lang.code;
+                  return (
+                    <li key={lang.code}>
+                      <button
+                        type="button"
+                        onClick={() => setPreferredLanguage(lang.code)}
+                        className={cn(
+                          "rounded-md px-2 py-1 text-xs tracking-wide transition-divine",
+                          active
+                            ? "bg-saffron/15 text-foreground font-medium"
+                            : "text-muted-foreground hover:text-foreground hover:bg-muted/60",
+                        )}
+                        aria-pressed={active}
+                        lang={lang.code === "sa" ? "sa" : lang.code}
+                      >
+                        {lang.nativeName}
+                      </button>
+                    </li>
+                  );
+                })}
               </ul>
             </div>
             <p className="text-muted-foreground text-xs">
-              © {year} Bhagavad Gita · Read with reverence
+              © {year} {t.gitaTitle} · {t.footerCopyright}
             </p>
           </div>
         </div>

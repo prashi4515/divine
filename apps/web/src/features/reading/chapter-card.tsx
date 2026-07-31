@@ -3,7 +3,7 @@
 import Link from "next/link";
 import type { Chapter } from "@divine/types";
 import { ArrowRight, BookOpen } from "lucide-react";
-import { useMessages } from "@/lib/i18n/use-messages";
+import { useMessages, useReadingHydrated } from "@/lib/i18n/use-messages";
 import {
   gitaChapterIntro,
   GITA_CHAPTER_TITLES,
@@ -37,10 +37,12 @@ function chapterHref(chapter: Chapter, basePath?: string): string {
  */
 export function ChapterCard({ chapter, basePath }: ChapterCardProps) {
   const t = useMessages();
+  const hydrated = useReadingHydrated();
   const preferredLanguage = useReadingStore((s) => s.preferredLanguage);
-  const lang: ReadingLanguageCode = isReadingLanguageCode(preferredLanguage)
-    ? preferredLanguage
-    : "en";
+  const lang: ReadingLanguageCode =
+    hydrated && isReadingLanguageCode(preferredLanguage)
+      ? preferredLanguage
+      : "en";
   const titleFont = readerFontClass(lang);
 
   const href = chapterHref(chapter, basePath);
@@ -55,7 +57,7 @@ export function ChapterCard({ chapter, basePath }: ChapterCardProps) {
       : GITA_CHAPTER_TITLES.sa[chapter.number]
     : null;
   const description = isGita
-    ? gitaChapterIntro(lang, chapter.number)
+    ? gitaChapterIntro(lang, chapter.number) || t.gitaBlurb
     : chapterIntro(chapter.number);
   const verseCount = chapter.verseCount;
   const verseLabel =

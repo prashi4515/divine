@@ -2,14 +2,13 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowUpRight, BookOpen, Library, MapPin } from "lucide-react";
-import { GenealogyHeader } from "@/features/genealogy/genealogy-header";
+import { LocalizedAtlasPlaceHeader } from "@/features/atlas/localized-atlas-place-header";
 import { AtlasExplorer } from "@/features/atlas/atlas-explorer";
 import { SiteFooter } from "@/features/reading/site-footer";
 import { SiteHeader } from "@/features/reading/site-header";
 import { RelatedContentSection } from "@/features/knowledge/related-content-section";
 import {
   atlasCategoryFor,
-  ATLAS_FILTER_LABELS,
   atlasHref,
   buildRelatedPeopleMap,
   getAtlasDataset,
@@ -97,32 +96,11 @@ export default async function AtlasPlacePage({ params }: PageProps) {
     <div className="relative flex min-h-svh flex-col">
       <SiteHeader />
       <main className="flex-1">
-        <GenealogyHeader
-          eyebrow={ATLAS_FILTER_LABELS[atlasCategoryFor(place)]}
+        <LocalizedAtlasPlaceHeader
+          category={atlasCategoryFor(place)}
           title={place.name}
           description={place.summary}
-          breadcrumbs={[
-            { href: "/", label: "Home" },
-            { href: "/atlas", label: "Atlas" },
-            { label: place.name },
-          ]}
-          actions={
-            <>
-              <Link
-                href={entityHref(place)}
-                className="cta-saffron inline-flex items-center gap-1.5 rounded-full px-3.5 py-1.5 text-xs text-white"
-              >
-                Encyclopedia
-                <ArrowUpRight className="h-3.5 w-3.5" aria-hidden />
-              </Link>
-              <Link
-                href="/atlas"
-                className="border-border bg-background/80 hover:border-saffron/40 inline-flex rounded-full border px-3.5 py-1.5 text-xs transition-divine"
-              >
-                Full Atlas
-              </Link>
-            </>
-          }
+          encyclopediaHref={entityHref(place)}
         />
 
         <section className="page-gutter pb-8 pt-4">

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { GenealogyHeader } from "@/features/genealogy/genealogy-header";
+import { LocalizedModuleHeader } from "@/features/reading/localized-module-header";
 import { ConceptCard } from "@/features/concepts/concept-card";
 import { SiteFooter } from "@/features/reading/site-footer";
 import { SiteHeader } from "@/features/reading/site-header";
@@ -32,36 +32,12 @@ export default async function ConceptsIndexPage() {
     <div className="relative flex min-h-svh flex-col">
       <SiteHeader />
       <main className="flex-1">
-        <GenealogyHeader
-          eyebrow="Signature experience"
-          title="Concepts"
-          description="Core ideas of the Bhagavad Gita from the shared Knowledge Graph - each page resolves definition, meaning, etymology, related verses and chapters, characters, events, examples, related concepts, and search aliases from existing JSON. Encyclopedia explains; Search finds aliases."
-          breadcrumbs={[
-            { href: "/", label: "Home" },
-            { label: "Concepts" },
+        <LocalizedModuleHeader
+          module="concepts"
+          actionLinks={[
+            { href: "/bhagavad-gita", labelKey: "allChapters" },
+            { href: "/encyclopedia", labelKey: "navEncyclopedia" },
           ]}
-          actions={
-            <>
-              <Link
-                href="/bhagavad-gita"
-                className="border-border bg-background/80 hover:border-saffron/40 inline-flex rounded-full border px-3.5 py-1.5 text-xs transition-divine"
-              >
-                Bhagavad Gita
-              </Link>
-              <Link
-                href="/search"
-                className="border-border bg-background/80 hover:border-saffron/40 inline-flex rounded-full border px-3.5 py-1.5 text-xs transition-divine"
-              >
-                Search
-              </Link>
-              <Link
-                href="/encyclopedia/concept"
-                className="border-border bg-background/80 hover:border-saffron/40 inline-flex rounded-full border px-3.5 py-1.5 text-xs transition-divine"
-              >
-                Encyclopedia
-              </Link>
-            </>
-          }
         />
 
         <section className="page-gutter pb-16 pt-4">

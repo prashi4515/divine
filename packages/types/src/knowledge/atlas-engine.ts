@@ -48,8 +48,14 @@ export type AtlasSceneFilters = {
   layerVisibility?: ReadonlyMap<string, boolean>;
   /** Highlight a single route. */
   activeRouteId?: string | null;
+  /** Active stop index along the highlighted route (for play). */
+  activeRouteStopIndex?: number | null;
   /** Selected place slug. */
   selectedSlug?: string | null;
+  /** Selected river id. */
+  selectedRiverId?: string | null;
+  /** Selected event id. */
+  selectedEventId?: string | null;
 };
 
 export type SceneLayer = AtlasLayer & { visible: boolean };
@@ -57,6 +63,8 @@ export type SceneLayer = AtlasLayer & { visible: boolean };
 export type ScenePolygon = {
   id: string;
   title: string;
+  /** Place slug for selection / deep links when the polygon maps to a KG place. */
+  slug?: string;
   entityId?: string;
   layerId: string;
   styleToken?: string;
@@ -94,6 +102,30 @@ export type ScenePath = {
   active: boolean;
   /** Projected polyline (places + waypoints interleaved by engine order). */
   points: ProjectedPoint[];
+  /** Highlighted stop along an active route (play head). */
+  activeStopIndex?: number | null;
+};
+
+export type SceneRiver = {
+  id: string;
+  slug: string;
+  name: string;
+  entityId?: string;
+  layerId: string;
+  width: number;
+  certainty: "verified" | "traditional" | "approximate";
+  selected: boolean;
+  points: ProjectedPoint[];
+};
+
+export type SceneEvent = {
+  id: string;
+  slug: string;
+  name: string;
+  point: ProjectedPoint;
+  selected: boolean;
+  importance: number;
+  placeId?: string;
 };
 
 export type AtlasScene = {
@@ -102,11 +134,15 @@ export type AtlasScene = {
   projection: AtlasProjection;
   layers: SceneLayer[];
   polygons: ScenePolygon[];
+  rivers: SceneRiver[];
+  events: SceneEvent[];
   markers: SceneMarker[];
   clusters: SceneCluster[];
   paths: ScenePath[];
-  /** Provider hint for optional illustrated base (renderer may ignore). */
+  /** Provider hint for illustrated base (renderer chooses artwork). */
   baseMapProviderId: string;
+  /** Swappable plate src when present. */
+  baseMapSrc?: string;
 };
 
 export function projectLatLng(
@@ -281,6 +317,7 @@ export function buildAtlasScene(input: BuildAtlasSceneInput): AtlasScene {
       polygons.push({
         id: poly.id,
         title: poly.title,
+        ...(poly.slug ? { slug: poly.slug } : {}),
         ...(poly.entityId ? { entityId: poly.entityId } : {}),
         layerId: poly.layerId,
         ...(poly.styleToken ? { styleToken: poly.styleToken } : {}),
@@ -324,15 +361,32 @@ export function buildAtlasScene(input: BuildAtlasSceneInput): AtlasScene {
     clusters = [];
   }
 
-  // Label budget by semantic level
+  // Label budget + simple collision (greedy by importance)
   const maxLabels =
     level <= 1 ? 8 : level === 2 ? 16 : level === 3 ? 28 : level === 4 ? 48 : 80;
   const labelEligible = [...visiblePlaces].sort(
     (a, b) => b.importance - a.importance,
   );
-  const labeled = new Set(
-    labelsVisible ? labelEligible.slice(0, maxLabels).map((p) => p.id) : [],
-  );
+  const labeled = new Set<string>();
+  if (labelsVisible) {
+    const occupied: Array<{ x: number; y: number; w: number; h: number }> = [];
+    for (const p of labelEligible) {
+      if (labeled.size >= maxLabels) break;
+      const w = Math.min(90, 8 + p.name.length * 5.2);
+      const h = 12;
+      const box = { x: p.point.x - w / 2, y: p.point.y + 6, w, h };
+      const hit = occupied.some(
+        (o) =>
+          box.x < o.x + o.w &&
+          box.x + box.w > o.x &&
+          box.y < o.y + o.h &&
+          box.y + box.h > o.y,
+      );
+      if (hit) continue;
+      occupied.push(box);
+      labeled.add(p.id);
+    }
+  }
 
   const markers: SceneMarker[] = visiblePlaces.map((p) => ({
     id: p.id,
@@ -347,19 +401,64 @@ export function buildAtlasScene(input: BuildAtlasSceneInput): AtlasScene {
     labelVisible: labeled.has(p.id),
   }));
 
+  const riversVisible =
+    layers.find((l) => l.id === "layer.rivers")?.visible ?? true;
+  const rivers: SceneRiver[] = [];
+  if (riversVisible) {
+    for (const river of dataset.rivers ?? []) {
+      if (!levelInRange(level, river.minLevel, river.maxLevel)) continue;
+      if (river.points.length < 2) continue;
+      rivers.push({
+        id: river.id,
+        slug: river.slug,
+        name: river.name,
+        ...(river.entityId ? { entityId: river.entityId } : {}),
+        layerId: river.layerId,
+        width: river.width,
+        certainty: river.certainty,
+        selected: filters?.selectedRiverId === river.id,
+        points: river.points.map(([lat, lng]) =>
+          projectLatLng(projection, lat, lng),
+        ),
+      });
+    }
+  }
+
+  const eventsVisible =
+    layers.find((l) => l.id === "layer.events")?.visible ?? true;
+  const events: SceneEvent[] = [];
+  if (eventsVisible) {
+    for (const ev of dataset.events ?? []) {
+      if (!levelInRange(level, ev.minLevel, ev.maxLevel)) continue;
+      events.push({
+        id: ev.id,
+        slug: ev.slug,
+        name: ev.name,
+        point: projectLatLng(projection, ev.latitude, ev.longitude),
+        selected: filters?.selectedEventId === ev.id,
+        importance: ev.importance,
+        ...(ev.placeId ? { placeId: ev.placeId } : {}),
+      });
+    }
+  }
+
   const paths: ScenePath[] = [];
   if (routesVisible) {
     for (const route of dataset.routes) {
       if (!levelInRange(level, route.minLevel, route.maxLevel)) continue;
       const points = resolveRoutePoints(projection, route, placesById);
       if (points.length < 2) continue;
+      const active = filters?.activeRouteId === route.id;
       paths.push({
         id: route.id,
         title: route.title,
         layerId: route.layerId,
         styleToken: route.styleToken ?? route.stroke,
-        active: filters?.activeRouteId === route.id,
+        active,
         points,
+        activeStopIndex: active
+          ? (filters?.activeRouteStopIndex ?? null)
+          : null,
       });
     }
   }
@@ -370,10 +469,13 @@ export function buildAtlasScene(input: BuildAtlasSceneInput): AtlasScene {
     projection,
     layers,
     polygons,
+    rivers,
+    events,
     markers,
     clusters,
     paths,
     baseMapProviderId: dataset.baseMapProviderId,
+    ...(dataset.baseMap?.src ? { baseMapSrc: dataset.baseMap.src } : {}),
   };
 }
 

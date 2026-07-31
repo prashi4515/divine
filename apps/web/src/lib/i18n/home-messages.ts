@@ -1,4 +1,11 @@
 import type { ReadingLanguageCode } from "@/lib/reading/languages";
+import hiLanding from "./landing/hi.json";
+import saLanding from "./landing/sa.json";
+import teLanding from "./landing/te.json";
+import knLanding from "./landing/kn.json";
+import taLanding from "./landing/ta.json";
+import mlLanding from "./landing/ml.json";
+import orLanding from "./landing/or.json";
 
 /**
  * Copy for the redesigned public landing page sections.
@@ -316,9 +323,24 @@ const HOME_CATALOG: Record<ReadingLanguageCode, HomeMessages> = {
   or,
 };
 
+/** Optional landing extras (UTF-8 JSON) — keeps long Indic copy out of this TS file. */
+const LANDING_EXTRAS: Partial<
+  Record<ReadingLanguageCode, Partial<HomeMessages>>
+> = {
+  hi: hiLanding,
+  sa: saLanding,
+  te: teLanding,
+  kn: knLanding,
+  ta: taLanding,
+  ml: mlLanding,
+  or: orLanding,
+};
+
 export function getHomeMessages(code: string): HomeMessages {
-  const override = HOME_CATALOG[code as ReadingLanguageCode];
+  const lang = code as ReadingLanguageCode;
+  const override = HOME_CATALOG[lang];
+  const extras = LANDING_EXTRAS[lang] ?? {};
   // Non-English variants inherit any new landing keys from English until
   // translations are added — no missing UI strings, no stale copy either.
-  return override ? { ...en, ...override } : en;
+  return override ? { ...en, ...override, ...extras } : en;
 }

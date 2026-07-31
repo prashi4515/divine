@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { GenealogyHeader } from "@/features/genealogy/genealogy-header";
+import { LocalizedModuleHeader } from "@/features/reading/localized-module-header";
 import { EntityCard } from "@/features/encyclopedia/entity-card";
 import { SiteFooter } from "@/features/reading/site-footer";
 import { SiteHeader } from "@/features/reading/site-header";
@@ -43,30 +43,12 @@ export default async function EncyclopediaLandingPage() {
     <div className="relative flex min-h-svh flex-col">
       <SiteHeader />
       <main className="flex-1">
-        <GenealogyHeader
-          eyebrow="Knowledge Graph"
-          title="Encyclopedia"
-          description="Every figure, place and idea is a first-class entity - linked to genealogy, scripture and concepts with citations. This is the foundation Atlas, Timeline and Learning Center will share."
-          breadcrumbs={[
-            { href: "/", label: "Home" },
-            { label: "Encyclopedia" },
+        <LocalizedModuleHeader
+          module="encyclopedia"
+          actionLinks={[
+            { href: "/genealogy", labelKey: "navGenealogy" },
+            { href: "/atlas", labelKey: "navAtlas" },
           ]}
-          actions={
-            <>
-              <Link
-                href="/genealogy"
-                className="border-border bg-background/80 hover:border-saffron/40 inline-flex rounded-full border px-3.5 py-1.5 text-xs transition-divine"
-              >
-                Genealogy explorer
-              </Link>
-              <Link
-                href="/bhagavad-gita"
-                className="cta-saffron inline-flex rounded-full px-3.5 py-1.5 text-xs text-white"
-              >
-                Bhagavad Gītā
-              </Link>
-            </>
-          }
         />
 
         <section className="page-gutter py-10" aria-labelledby="sections">

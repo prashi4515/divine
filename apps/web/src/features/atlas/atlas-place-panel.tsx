@@ -11,12 +11,13 @@ import {
 } from "lucide-react";
 import type { AtlasPlace } from "@/lib/atlas/geo";
 import {
-  ATLAS_FILTER_LABELS,
   atlasCategoryFor,
   atlasHref,
 } from "@/lib/atlas/geo";
 import { entityHref } from "@/lib/knowledge/search";
 import { formatCitation } from "@/lib/knowledge/types";
+import { atlasFilterLabel } from "@/lib/atlas/i18n-labels";
+import { useMessages } from "@/lib/i18n/use-messages";
 
 type Related = Array<{
   id: string;
@@ -37,6 +38,7 @@ export function AtlasPlacePanel({
   related: Related;
   onClose: () => void;
 }) {
+  const t = useMessages();
   const cat = atlasCategoryFor(place);
 
   return (
@@ -66,7 +68,7 @@ export function AtlasPlacePanel({
         </button>
         <div className="absolute bottom-4 left-5 right-5">
           <p className="text-[10px] font-medium uppercase tracking-[0.2em] text-white/80">
-            {ATLAS_FILTER_LABELS[cat]}
+            {atlasFilterLabel(t, cat)}
           </p>
           <h2 className="mt-1 font-serif text-2xl tracking-tight text-white drop-shadow">
             {place.name}
@@ -102,12 +104,23 @@ export function AtlasPlacePanel({
         <section className="rounded-2xl border border-[#c4a574]/40 bg-[#efe0c0]/55 p-4">
           <p className="flex items-center gap-1.5 text-[10px] font-medium uppercase tracking-[0.16em] text-[#8a6a3a]">
             <MapPin className="h-3.5 w-3.5" aria-hidden />
-            Approximate modern location
+            Modern equivalent
           </p>
           <p className="mt-2 font-medium">{place.atlas.modernLocation}</p>
           <p className="mt-2 text-[11px] text-[#6a4b1e]/75">
             {place.atlas.latitude.toFixed(2)}°N,{" "}
-            {place.atlas.longitude.toFixed(2)}°E · educational context only
+            {place.atlas.longitude.toFixed(2)}°E
+          </p>
+          <p className="mt-2 text-[10px] font-medium uppercase tracking-[0.14em] text-amber-900/80">
+            Certainty:{" "}
+            {place.atlas.certainty === "verified"
+              ? "Verified"
+              : place.atlas.certainty === "approximate"
+                ? "Approximate"
+                : "Traditional"}
+          </p>
+          <p className="mt-1 text-[11px] leading-relaxed text-[#6a4b1e]/75">
+            Educational context only — not a surveyed archaeological pin.
           </p>
         </section>
 

@@ -1,0 +1,11 @@
+{
+  "schemaVersion": 2,
+  "baseMap": {
+    "id": "basemap.ancient-bharata",
+    "title": "Ancient Bhārata — Mahābhārata era (reference plate)",
+    "src": "/images/atlas/ancient-bharata-map.jpg",
+    "credit": "Educational reference plate. Artwork is display-only — not clickable data. Swap this file to replace the plate without changing application logic.",
+    "intrinsicWidth": 872,
+    "intrinsicHeight": 1024
+  }
+}

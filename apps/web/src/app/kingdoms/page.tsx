@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { GenealogyHeader } from "@/features/genealogy/genealogy-header";
+import { LocalizedModuleHeader } from "@/features/reading/localized-module-header";
 import { KingdomCard } from "@/features/kingdoms/kingdom-card";
 import { SiteFooter } from "@/features/reading/site-footer";
 import { SiteHeader } from "@/features/reading/site-header";
@@ -32,36 +32,12 @@ export default async function KingdomsIndexPage() {
     <div className="relative flex min-h-svh flex-col">
       <SiteHeader />
       <main className="flex-1">
-        <GenealogyHeader
-          eyebrow="Signature experience"
-          title="Kingdoms"
-          description="Mahabharata-era kingdoms from the shared Knowledge Graph - each page resolves capital, rulers, dynasty, cities, battles, timeline, atlas, genealogy, characters, events, and verses from existing JSON. Encyclopedia explains; Atlas maps."
-          breadcrumbs={[
-            { href: "/", label: "Home" },
-            { label: "Kingdoms" },
+        <LocalizedModuleHeader
+          module="kingdoms"
+          actionLinks={[
+            { href: "/atlas", labelKey: "navAtlas" },
+            { href: "/encyclopedia", labelKey: "navEncyclopedia" },
           ]}
-          actions={
-            <>
-              <Link
-                href="/atlas"
-                className="border-border bg-background/80 hover:border-saffron/40 inline-flex rounded-full border px-3.5 py-1.5 text-xs transition-divine"
-              >
-                Atlas
-              </Link>
-              <Link
-                href="/events"
-                className="border-border bg-background/80 hover:border-saffron/40 inline-flex rounded-full border px-3.5 py-1.5 text-xs transition-divine"
-              >
-                Events
-              </Link>
-              <Link
-                href="/encyclopedia/kingdom"
-                className="border-border bg-background/80 hover:border-saffron/40 inline-flex rounded-full border px-3.5 py-1.5 text-xs transition-divine"
-              >
-                Encyclopedia
-              </Link>
-            </>
-          }
         />
 
         <section className="page-gutter pb-16 pt-4">
