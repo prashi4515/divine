@@ -64,7 +64,6 @@ export default async function BhagavadGitaPage() {
         id="main-content"
         className="page-gutter w-full flex-1 pb-14 pt-2 sm:pb-16 md:pb-20 md:pt-3"
       >
-        <Breadcrumbs items={crumbs} className="mb-4" />
         <GitaIndexHeader />
 
         <section className="mt-8 md:mt-10" aria-label="Chapters">

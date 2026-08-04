@@ -190,9 +190,9 @@ export function AtlasOverlayLayers({
           filter={["!=", ["get", "category"], "active"]}
           paint={{
             "line-color": "#8a5a2b",
-            "line-width": 2.5,
-            "line-opacity": 0.75,
-            "line-dasharray": [1.5, 1.5],
+            "line-width": 3,
+            "line-opacity": 0.8,
+            "line-dasharray": [3, 3],
           }}
         />
         <Layer
@@ -206,9 +206,9 @@ export function AtlasOverlayLayers({
           filter={["==", ["get", "category"], "active"]}
           paint={{
             "line-color": "#e37400",
-            "line-width": 4,
-            "line-opacity": 0.95,
-            "line-dasharray": [2, 1.25],
+            "line-width": 5,
+            "line-opacity": 1,
+            "line-dasharray": [3, 3],
           }}
         />
       </Source>

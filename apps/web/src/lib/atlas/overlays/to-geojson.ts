@@ -154,13 +154,18 @@ export function routesToGeoJson(
   visible: boolean,
 ): FeatureCollection {
   if (!visible && !activeRouteId) return emptyFc();
-  const byId = new Map(places.map((p) => [p.id, p] as const));
+  const byId = new Map<string, AtlasPlace>();
+  for (const p of places) {
+    byId.set(p.id, p);
+    byId.set(p.slug, p);
+  }
   const features: FeatureCollection["features"] = [];
 
   for (const route of dataset.routes) {
     const coords: [number, number][] = [];
     for (const pid of route.placeIds) {
-      const p = byId.get(pid);
+      const bare = pid.replace(/^[a-z]+\./, "");
+      const p = byId.get(pid) ?? byId.get(bare);
       if (!p) continue;
       coords.push([p.atlas.longitude, p.atlas.latitude]);
     }

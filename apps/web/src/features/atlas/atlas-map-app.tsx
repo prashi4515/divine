@@ -37,6 +37,7 @@ import {
   traditionalLabelsToGeoJson,
 } from "@/lib/atlas/overlays/to-geojson";
 import { syncAtlasOverlays } from "@/lib/atlas/renderer/sync-overlays";
+import { AtlasOverlayLayers } from "@/lib/atlas/renderer/overlay-layers";
 import type { AtlasSearchResult } from "@/lib/atlas/search/atlas-search-engine";
 import { AtlasDomMarkers } from "@/features/atlas/atlas-dom-markers";
 import { AtlasPlacePanel } from "@/features/atlas/atlas-place-panel";
@@ -649,6 +650,26 @@ export function AtlasMapApp({
               OVERLAY_LAYER_IDS.kingdomsFill,
             ]}
           >
+            <AtlasOverlayLayers
+              places={placesFc}
+              rivers={riversFc}
+              routes={routesFc}
+              routeStops={routeStopsFc}
+              events={eventsFc}
+              kingdoms={kingdomsFc}
+              kingdomsSelected={kingdomsSelectedFc}
+              traditionalLabels={traditionalLabelsFc}
+              showLabels={visibility.labels}
+              showRoutes={visibility.routes}
+              activeRouteId={activeRouteId}
+              showEvents={visibility.events}
+              showRivers={visibility.rivers}
+              showKingdoms={visibility.kingdoms}
+              selectedPlaceSlug={selectedSlug}
+              selectedRiverId={selectedRiver?.id ?? null}
+              hoveredRiverId={hoveredRiverId}
+              hoveredKingdomId={hoveredKingdomId}
+            />
             <AtlasDomMarkers
               places={placesFc}
               labels={traditionalLabelsFc}
