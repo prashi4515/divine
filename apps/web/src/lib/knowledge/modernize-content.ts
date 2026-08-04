@@ -46,7 +46,7 @@ export function modernizeKnowledgeEntity(
     description: toModernEnglish(entity.description),
     aliases: modernizeStrings(entity.aliases),
     primaryScripture: toModernEnglish(entity.primaryScripture),
-    scriptureSources: entity.scriptureSources.map(modernizeCitation),
+    scriptureSources: (entity.scriptureSources ?? []).map(modernizeCitation),
     notes: modernizeOptional(entity.notes),
     seo: entity.seo
       ? {
@@ -82,11 +82,11 @@ export function modernizeKnowledgeEntity(
           counters: modernizeStrings(entity.weapon.counters),
         }
       : entity.weapon,
-    variantTraditions: entity.variantTraditions.map((v) => ({
+    variantTraditions: (entity.variantTraditions ?? []).map((v) => ({
       ...v,
       label: toModernEnglish(v.label),
       description: toModernEnglish(v.description),
-      sources: v.sources.map(modernizeCitation),
+      sources: (v.sources ?? []).map(modernizeCitation),
     })),
   };
 }
@@ -97,7 +97,7 @@ export function modernizeKnowledgeRelation(
   return {
     ...relation,
     note: modernizeOptional(relation.note),
-    sources: relation.sources.map(modernizeCitation),
+    sources: (relation.sources ?? []).map(modernizeCitation),
   };
 }
 
@@ -110,7 +110,7 @@ export function modernizeKnowledgeCollection(
     eyebrow: modernizeOptional(collection.eyebrow),
     summary: toModernEnglish(collection.summary),
     description: toModernEnglish(collection.description),
-    scriptureSources: collection.scriptureSources.map(modernizeCitation),
+    scriptureSources: (collection.scriptureSources ?? []).map(modernizeCitation),
     faq: collection.faq?.map((item) => ({
       question: toModernEnglish(item.question),
       answer: toModernEnglish(item.answer),

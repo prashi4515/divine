@@ -26,7 +26,7 @@ export const revalidate = false;
 type PageProps = { params: Promise<{ slug: string }> };
 
 export async function generateStaticParams() {
-  const concepts = await getConcepts();
+  const concepts = await getConcepts().catch(() => []);
   return concepts.map((c) => ({ slug: c.slug }));
 }
 
