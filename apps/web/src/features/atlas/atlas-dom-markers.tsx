@@ -28,6 +28,7 @@ type AtlasDomMarkersProps = {
   routeStops: FeatureCollection;
   showLabels: boolean;
   showRoutes: boolean;
+  activeRouteId?: string | null;
   selectedSlug: string | null;
   onPlaceClick: (slug: string) => void;
 };
@@ -38,6 +39,7 @@ export function AtlasDomMarkers({
   routeStops,
   showLabels,
   showRoutes,
+  activeRouteId,
   selectedSlug,
   onPlaceClick,
 }: AtlasDomMarkersProps) {
@@ -116,7 +118,7 @@ export function AtlasDomMarkers({
           })
         : null}
 
-      {showRoutes
+      {showRoutes || Boolean(activeRouteId)
         ? routeStops.features.map((f) => {
             if (f.geometry.type !== "Point") return null;
             const props = f.properties as {

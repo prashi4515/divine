@@ -29,6 +29,7 @@ type OverlayLayersProps = {
   traditionalLabels: Fc;
   showLabels: boolean;
   showRoutes: boolean;
+  activeRouteId?: string | null;
   showEvents: boolean;
   showRivers: boolean;
   showKingdoms: boolean;
@@ -49,6 +50,7 @@ export function AtlasOverlayLayers({
   traditionalLabels,
   showLabels,
   showRoutes,
+  activeRouteId,
   showEvents,
   showRivers,
   showKingdoms,
@@ -181,7 +183,7 @@ export function AtlasOverlayLayers({
           id={OVERLAY_LAYER_IDS.routes}
           type="line"
           layout={{
-            visibility: showRoutes ? "visible" : "none",
+            visibility: showRoutes || Boolean(activeRouteId) ? "visible" : "none",
             "line-cap": "round",
             "line-join": "round",
           }}
@@ -197,7 +199,7 @@ export function AtlasOverlayLayers({
           id={OVERLAY_LAYER_IDS.routesActive}
           type="line"
           layout={{
-            visibility: showRoutes ? "visible" : "none",
+            visibility: showRoutes || Boolean(activeRouteId) ? "visible" : "none",
             "line-cap": "round",
             "line-join": "round",
           }}

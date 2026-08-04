@@ -204,7 +204,8 @@ export function AtlasMapApp({
         },
         {
           showLabels: false,
-          showRoutes: visibility.routes,
+          showRoutes: visibility.routes || Boolean(activeRouteId),
+          activeRouteId,
           showEvents: visibility.events,
           showRivers: visibility.rivers,
           showKingdoms: visibility.kingdoms,
@@ -483,11 +484,35 @@ export function AtlasMapApp({
     setRouteStopIndex(routeId ? 0 : null);
     if (routeId) {
       setVisibility((v) => ({ ...v, routes: true }));
-      const route = dataset.routes.find((r) => r.id === routeId);
-      const first = route
-        ? places.find((p) => p.id === route.placeIds[0])
-        : undefined;
-      if (first) focusPlace(first, 6.5);
+      const route = dataset.routes.find(
+        (r) => r.id === routeId || r.slug === routeId,
+      );
+      if (route) {
+        const routePlaces = route.placeIds
+          .map((id) => places.find((p) => p.id === id))
+          .filter((p): p is AtlasPlace => Boolean(p));
+
+        const map = mapRef.current?.getMap();
+        if (map && routePlaces.length > 0) {
+          let minLng = Infinity;
+          let minLat = Infinity;
+          let maxLng = -Infinity;
+          let maxLat = -Infinity;
+          for (const p of routePlaces) {
+            minLng = Math.min(minLng, p.atlas.longitude);
+            maxLng = Math.max(maxLng, p.atlas.longitude);
+            minLat = Math.min(minLat, p.atlas.latitude);
+            maxLat = Math.max(maxLat, p.atlas.latitude);
+          }
+          map.fitBounds(
+            [
+              [minLng, minLat],
+              [maxLng, maxLat],
+            ],
+            { padding: 80, duration: 900, maxZoom: 7.5 },
+          );
+        }
+      }
     }
   }
 
@@ -630,6 +655,7 @@ export function AtlasMapApp({
               routeStops={routeStopsFc}
               showLabels={visibility.labels}
               showRoutes={visibility.routes}
+              activeRouteId={activeRouteId}
               selectedSlug={selectedSlug}
               onPlaceClick={(slug) => {
                 const place = places.find((p) => p.slug === slug);

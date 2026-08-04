@@ -28,6 +28,7 @@ export type AtlasOverlayBundles = {
 export type AtlasOverlayVis = {
   showLabels: boolean;
   showRoutes: boolean;
+  activeRouteId?: string | null;
   showEvents: boolean;
   showRivers: boolean;
   showKingdoms: boolean;
@@ -45,7 +46,8 @@ export function buildFullAtlasStyle(
   const base = buildCleanMapStyle(credit);
   const kingdomVis = vis.showKingdoms ? "visible" : "none";
   const riverVis = vis.showRivers ? "visible" : "none";
-  const routeVis = vis.showRoutes ? "visible" : "none";
+  const routeVis =
+    vis.showRoutes || Boolean(vis.activeRouteId) ? "visible" : "none";
   const eventVis = vis.showEvents ? "visible" : "none";
   const labelVis = vis.showLabels ? "visible" : "none";
 

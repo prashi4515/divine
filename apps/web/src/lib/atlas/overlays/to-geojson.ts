@@ -153,7 +153,7 @@ export function routesToGeoJson(
   activeRouteId: string | null,
   visible: boolean,
 ): FeatureCollection {
-  if (!visible) return emptyFc();
+  if (!visible && !activeRouteId) return emptyFc();
   const byId = new Map(places.map((p) => [p.id, p] as const));
   const features: FeatureCollection["features"] = [];
 
@@ -165,6 +165,9 @@ export function routesToGeoJson(
       coords.push([p.atlas.longitude, p.atlas.latitude]);
     }
     if (coords.length < 2) continue;
+    const isActive =
+      Boolean(activeRouteId) &&
+      (activeRouteId === route.id || activeRouteId === route.slug);
     features.push({
       type: "Feature",
       id: route.id,
@@ -174,7 +177,7 @@ export function routesToGeoJson(
         slug: route.slug,
         name: route.title,
         kind: "route",
-        category: activeRouteId === route.id ? "active" : "idle",
+        category: isActive ? "active" : "idle",
         certainty: route.confidence === "variant" ? "approximate" : route.confidence,
       },
     });
