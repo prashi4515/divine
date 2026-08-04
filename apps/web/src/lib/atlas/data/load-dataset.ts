@@ -18,14 +18,36 @@ import {
   type AtlasRoute,
 } from "@divine/types";
 
-const ATLAS_ROOT = path.join(process.cwd(), "content", "knowledge", "atlas");
+const ATLAS_ROOT_CANDIDATES = [
+  path.join(process.cwd(), "content", "knowledge", "atlas"),
+  path.join(process.cwd(), "apps", "web", "content", "knowledge", "atlas"),
+];
 
-let datasetCache: Promise<AtlasDataset> | null = null;
+let resolvedAtlasRoot: string | null = null;
+
+async function atlasContentRoot(): Promise<string> {
+  if (resolvedAtlasRoot) return resolvedAtlasRoot;
+  for (const candidate of ATLAS_ROOT_CANDIDATES) {
+    try {
+      await fs.access(path.join(candidate, "routes.json"));
+      resolvedAtlasRoot = candidate;
+      return candidate;
+    } catch {
+      // try next
+    }
+  }
+  throw new Error(
+    `[atlas] routes.json not found (looked in ${ATLAS_ROOT_CANDIDATES.join(", ")})`,
+  );
+}
 
 async function readJson(file: string): Promise<unknown> {
-  const raw = await fs.readFile(path.join(ATLAS_ROOT, file), "utf8");
+  const root = await atlasContentRoot();
+  const raw = await fs.readFile(path.join(root, file), "utf8");
   return JSON.parse(raw);
 }
+
+let datasetCache: Promise<AtlasDataset> | null = null;
 
 /**
  * Load Atlas dataset (base plate, layers, rivers, events, routes, icons).

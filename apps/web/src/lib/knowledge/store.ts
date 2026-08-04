@@ -38,7 +38,61 @@ import {
   modernizeKnowledgeRelation,
 } from "@/lib/knowledge/modernize-content";
 
-const CONTENT_ROOT = path.join(process.cwd(), "content", "knowledge");
+const CONTENT_CANDIDATES = [
+  path.join(process.cwd(), "content", "knowledge"),
+  path.join(process.cwd(), "apps", "web", "content", "knowledge"),
+];
+
+let resolvedContentRoot: string | null = null;
+
+async function knowledgeContentRoot(): Promise<string> {
+  if (resolvedContentRoot) return resolvedContentRoot;
+  for (const candidate of CONTENT_CANDIDATES) {
+    try {
+      await fs.access(path.join(candidate, "entities.json"));
+      resolvedContentRoot = candidate;
+      return candidate;
+    } catch {
+      // try next
+    }
+  }
+  throw new Error(
+    `[knowledge] entities.json not found (looked in ${CONTENT_CANDIDATES.join(", ")})`,
+  );
+}
+
+function asEntityList(json: unknown): KnowledgeEntity[] {
+  if (
+    json &&
+    typeof json === "object" &&
+    Array.isArray((json as { entities?: unknown }).entities)
+  ) {
+    return (json as { entities: KnowledgeEntity[] }).entities;
+  }
+  throw new Error("[knowledge] entities.json missing entities[]");
+}
+
+function asRelationList(json: unknown): KnowledgeRelation[] {
+  if (
+    json &&
+    typeof json === "object" &&
+    Array.isArray((json as { relations?: unknown }).relations)
+  ) {
+    return (json as { relations: KnowledgeRelation[] }).relations;
+  }
+  throw new Error("[knowledge] relations.json missing relations[]");
+}
+
+function asCollectionList(json: unknown): KnowledgeCollection[] {
+  if (
+    json &&
+    typeof json === "object" &&
+    Array.isArray((json as { collections?: unknown }).collections)
+  ) {
+    return (json as { collections: KnowledgeCollection[] }).collections;
+  }
+  throw new Error("[knowledge] collections.json missing collections[]");
+}
 
 export type RelatedEdge = {
   relation: KnowledgeRelation;
@@ -80,29 +134,32 @@ function setStoreCache(value: Promise<Store> | undefined): void {
 }
 
 async function loadStore(): Promise<Store> {
+  const root = await knowledgeContentRoot();
   const [entitiesRaw, relationsRaw, collectionsRaw] = await Promise.all([
-    fs.readFile(path.join(CONTENT_ROOT, "entities.json"), "utf8"),
-    fs.readFile(path.join(CONTENT_ROOT, "relations.json"), "utf8"),
-    fs.readFile(path.join(CONTENT_ROOT, "collections.json"), "utf8"),
+    fs.readFile(path.join(root, "entities.json"), "utf8"),
+    fs.readFile(path.join(root, "relations.json"), "utf8"),
+    fs.readFile(path.join(root, "collections.json"), "utf8"),
   ]);
 
   const entitiesJson: unknown = JSON.parse(entitiesRaw);
   const relationsJson: unknown = JSON.parse(relationsRaw);
   const collectionsJson: unknown = JSON.parse(collectionsRaw);
 
-  // Zod validates the content boundary in development; production trusts build-time JSON.
-  const { entities: rawEntities } =
+  // Zod validates the content boundary in development; production still
+  // requires arrays to exist (never destructure blindly — Vercel build
+  // previously crashed on undefined.map when shape/path was wrong).
+  const rawEntities =
     process.env.NODE_ENV === "production"
-      ? (entitiesJson as { entities: KnowledgeEntity[] })
-      : knowledgeEntityCollectionSchema.parse(entitiesJson);
-  const { relations: parsedRelations } =
+      ? asEntityList(entitiesJson)
+      : knowledgeEntityCollectionSchema.parse(entitiesJson).entities;
+  const parsedRelations =
     process.env.NODE_ENV === "production"
-      ? (relationsJson as { relations: KnowledgeRelation[] })
-      : knowledgeRelationCollectionSchema.parse(relationsJson);
-  const { collections: rawCollections } =
+      ? asRelationList(relationsJson)
+      : knowledgeRelationCollectionSchema.parse(relationsJson).relations;
+  const rawCollections =
     process.env.NODE_ENV === "production"
-      ? (collectionsJson as { collections: KnowledgeCollection[] })
-      : knowledgeCollectionBundleSchema.parse(collectionsJson);
+      ? asCollectionList(collectionsJson)
+      : knowledgeCollectionBundleSchema.parse(collectionsJson).collections;
 
   // Reader-facing modern English — strip IAST / fancy punctuation once for all modules.
   const entities = rawEntities.map(modernizeKnowledgeEntity);
@@ -233,7 +290,9 @@ export async function getCollectionsForEntity(
   entityId: string,
 ): Promise<KnowledgeCollection[]> {
   const store = await getStore();
-  return store.collections.filter((c) => c.entityIds.includes(entityId));
+  return store.collections.filter((c) =>
+    Array.isArray(c.entityIds) ? c.entityIds.includes(entityId) : false,
+  );
 }
 
 export async function getEntitiesByKind(
@@ -538,7 +597,7 @@ export async function getEntityBundle(
   if (rest.length) grouped.push({ title: "Other", items: rest });
 
   const collections = store.collections.filter((c) =>
-    c.entityIds.includes(id),
+    Array.isArray(c.entityIds) ? c.entityIds.includes(id) : false,
   );
 
   return { entity, related, grouped, collections };

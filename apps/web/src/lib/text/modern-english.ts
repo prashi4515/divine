@@ -52,7 +52,8 @@ export function stripDiacritics(text: string): string {
  * Normalize for reader-facing English: no diacritics, no fancy punctuation,
  * no soft hyphens / zero-width junk that can render as "~" or odd marks.
  */
-export function toModernEnglish(text: string): string {
+export function toModernEnglish(text: string | undefined | null): string {
+  if (text == null) return "";
   return (
     stripDiacritics(text)
       // Soft hyphen, zero-width, BOM — often look like "~" or gaps

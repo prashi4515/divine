@@ -135,7 +135,7 @@ function collectionToModule(c: KnowledgeCollection): GenealogyModule {
     summary: c.summary,
     description: c.description,
     status: c.status,
-    personIds: c.entityIds
+    personIds: (c.entityIds ?? [])
       .filter((id) => id.startsWith("person."))
       .map((id) => id.replace(/^person\./, "")),
     rootPersonId: c.rootEntityId?.replace(/^person\./, ""),

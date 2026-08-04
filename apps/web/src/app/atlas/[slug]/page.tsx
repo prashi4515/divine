@@ -31,7 +31,7 @@ export const revalidate = false;
 type PageProps = { params: Promise<{ slug: string }> };
 
 export async function generateStaticParams() {
-  const places = await getAtlasPlaces();
+  const places = await getAtlasPlaces().catch(() => []);
   return places.map((p) => ({ slug: p.slug }));
 }
 
