@@ -89,7 +89,7 @@ export function traditionalLabelsToGeoJson(
 ): FeatureCollection {
   return {
     type: "FeatureCollection",
-    features: labels
+    features: (labels ?? [])
       .filter((label) => {
         if (!visibility) return true;
         if (label.kind === "river") return visibility.rivers !== false;

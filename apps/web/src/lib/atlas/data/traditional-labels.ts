@@ -12,14 +12,40 @@ import {
 
 export type { TraditionalAtlasLabel };
 
-const FILE = path.join(
-  process.cwd(),
-  "content",
-  "knowledge",
-  "atlas",
-  "overlays",
-  "traditional-labels.json",
-);
+const TRADITIONAL_LABELS_CANDIDATES = [
+  path.join(
+    process.cwd(),
+    "content",
+    "knowledge",
+    "atlas",
+    "overlays",
+    "traditional-labels.json",
+  ),
+  path.join(
+    process.cwd(),
+    "apps",
+    "web",
+    "content",
+    "knowledge",
+    "atlas",
+    "overlays",
+    "traditional-labels.json",
+  ),
+];
+
+async function resolveTraditionalLabelsFile(): Promise<string> {
+  for (const candidate of TRADITIONAL_LABELS_CANDIDATES) {
+    try {
+      await fs.access(candidate);
+      return candidate;
+    } catch {
+      // try next
+    }
+  }
+  throw new Error(
+    `[atlas] traditional-labels.json not found (looked in ${TRADITIONAL_LABELS_CANDIDATES.join(", ")})`,
+  );
+}
 
 let cache: Promise<readonly TraditionalAtlasLabel[]> | null = null;
 
@@ -28,9 +54,10 @@ export async function getTraditionalAtlasLabels(): Promise<
 > {
   if (!cache) {
     cache = (async () => {
-      const raw = await fs.readFile(FILE, "utf8");
+      const file = await resolveTraditionalLabelsFile();
+      const raw = await fs.readFile(file, "utf8");
       const parsed = traditionalLabelBundleSchema.parse(JSON.parse(raw));
-      return parsed.labels;
+      return parsed.labels ?? [];
     })().catch((err: unknown) => {
       cache = null;
       throw err;
@@ -38,3 +65,4 @@ export async function getTraditionalAtlasLabels(): Promise<
   }
   return cache;
 }
+

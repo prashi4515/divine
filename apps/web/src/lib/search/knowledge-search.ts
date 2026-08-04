@@ -17,12 +17,31 @@ import {
   type KnowledgeSearchResponse,
 } from "@divine/types";
 
-const INDEX_PATH = path.join(
-  process.cwd(),
-  "content",
-  "search",
-  "knowledge-index.json",
-);
+const INDEX_PATH_CANDIDATES = [
+  path.join(process.cwd(), "content", "search", "knowledge-index.json"),
+  path.join(
+    process.cwd(),
+    "apps",
+    "web",
+    "content",
+    "search",
+    "knowledge-index.json",
+  ),
+];
+
+async function resolveIndexPath(): Promise<string> {
+  for (const candidate of INDEX_PATH_CANDIDATES) {
+    try {
+      await fs.access(candidate);
+      return candidate;
+    } catch {
+      // try next
+    }
+  }
+  throw new Error(
+    `[knowledge-search] knowledge-index.json not found (looked in ${INDEX_PATH_CANDIDATES.join(", ")})`,
+  );
+}
 
 let cache: Promise<readonly KnowledgeSearchDocument[]> | null = null;
 
@@ -205,9 +224,10 @@ function scoreDocument(
 async function loadDocuments(): Promise<readonly KnowledgeSearchDocument[]> {
   if (!cache) {
     cache = (async () => {
-      const raw = await fs.readFile(INDEX_PATH, "utf8");
+      const indexPath = await resolveIndexPath();
+      const raw = await fs.readFile(indexPath, "utf8");
       const parsed = knowledgeSearchIndexSchema.parse(JSON.parse(raw));
-      return parsed.documents;
+      return parsed.documents ?? [];
     })().catch((err: unknown) => {
       cache = null;
       throw err;
