@@ -4,7 +4,6 @@ import { GitaIndexHeader } from "@/features/reading/gita-index-header";
 import { ReadingError } from "@/features/reading/reading-error";
 import { SiteFooter } from "@/features/reading/site-footer";
 import { SiteHeader } from "@/features/reading/site-header";
-import { Breadcrumbs } from "@/components/breadcrumbs";
 import { JsonLd } from "@/components/json-ld";
 import { getStaticGitaChaptersIndex } from "@/lib/reading/gita-static";
 import {
