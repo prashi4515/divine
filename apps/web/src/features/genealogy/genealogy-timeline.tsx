@@ -1,7 +1,9 @@
 "use client";
 
 import * as React from "react";
-import { CATEGORY_LABELS, CATEGORY_TOKENS, type Era, type Person } from "@/lib/genealogy/types";
+import { CATEGORY_TOKENS, type Era, type Person } from "@/lib/genealogy/types";
+import { localizedPersonCategoryLabel } from "@/lib/i18n/knowledge-labels";
+import { useUiLanguage } from "@/lib/i18n/use-messages";
 import { cn } from "@/lib/utils";
 
 const ERA_ORDER: Era[] = [
@@ -39,6 +41,7 @@ export function GenealogyTimeline({
   selectedId: string | null;
   onSelect: (id: string) => void;
 }) {
+  const lang = useUiLanguage();
   const groups = React.useMemo(() => {
     const map = new Map<Era, Person[]>();
     for (const era of ERA_ORDER) map.set(era, []);
@@ -103,7 +106,7 @@ export function GenealogyTimeline({
                             {person.name}
                           </span>
                           <span className="text-muted-foreground block truncate text-[11px]">
-                            {CATEGORY_LABELS[person.category]}
+                            {localizedPersonCategoryLabel(person.category, lang)}
                             {person.sanskritName
                               ? ` · ${person.sanskritName}`
                               : ""}

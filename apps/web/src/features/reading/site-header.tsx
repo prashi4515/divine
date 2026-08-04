@@ -5,6 +5,7 @@ import { LanguageSwitcher } from "@/features/reading/language-switcher";
 import { MobileNav } from "@/features/reading/mobile-nav";
 import { SiteBrand } from "@/features/reading/site-brand";
 import { ThemeToggle } from "@/components/theme-toggle";
+import { PUBLIC_AUTH_UI_ENABLED } from "@/lib/auth/config";
 
 const HeaderSearch = dynamic(
   () =>
@@ -42,7 +43,7 @@ export function SiteHeader(_props: SiteHeaderProps) {
           <HeaderSearch />
           <LanguageSwitcher />
           <ThemeToggle />
-          <AccountLink />
+          {PUBLIC_AUTH_UI_ENABLED ? <AccountLink /> : null}
         </div>
       </div>
     </header>

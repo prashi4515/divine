@@ -1,65 +1,56 @@
 import type { Metadata } from "next";
-import { AtlasArchitectureNote } from "@/features/atlas/atlas-architecture-note";
 import { AtlasExplorer } from "@/features/atlas/atlas-explorer";
-import { LocalizedModuleHeader } from "@/features/reading/localized-module-header";
-import { SiteFooter } from "@/features/reading/site-footer";
 import { SiteHeader } from "@/features/reading/site-header";
+import { JsonLd } from "@/components/json-ld";
+import { getTraditionalAtlasLabels } from "@/lib/atlas/data/traditional-labels";
 import {
   buildRelatedPeopleMap,
   getAtlasDataset,
   getAtlasPlaces,
 } from "@/lib/atlas/store";
+import {
+  atlasIndexSeo,
+  breadcrumbJsonLd,
+  buildPageMetadata,
+  collectionPageJsonLd,
+} from "@/lib/seo";
 
-export const dynamic = "force-static";
-export const revalidate = false;
+export const dynamic = "force-dynamic";
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://divine.app";
-
-export const metadata: Metadata = {
-  title: "Ancient Bharata Atlas - Mahabharata Era",
-  description:
-    "Explore the Mahābhārata world on a modern slippy map — places, rivers, events, and journeys. Tile artwork is swappable.",
-  alternates: { canonical: "/atlas" },
-  openGraph: {
-    title: "Ancient Bharata Atlas - Mahabharata Era",
-    description:
-      "Google Maps–class interaction for the Mahābhārata atlas — pan, zoom, search, layers, and animated routes.",
-    url: `${SITE_URL}/atlas`,
-    type: "website",
-  },
-};
+export const metadata: Metadata = buildPageMetadata(atlasIndexSeo());
 
 export default async function AtlasPage() {
-  const [dataset, places] = await Promise.all([
+  const [dataset, places, traditionalLabels] = await Promise.all([
     getAtlasDataset(),
     getAtlasPlaces(),
+    getTraditionalAtlasLabels(),
   ]);
   const relatedByPlaceId = await buildRelatedPeopleMap(places);
 
   return (
-    <div className="relative flex min-h-svh flex-col">
+    <div className="relative flex h-svh flex-col overflow-hidden">
       <SiteHeader />
-      <main className="flex-1">
-        <LocalizedModuleHeader
-          module="atlas"
-          actionLinks={[
-            { href: "/encyclopedia/section/places", labelKey: "encyclopediaPlaces" },
-            { href: "/genealogy", labelKey: "navGenealogy" },
-          ]}
+      <main id="main-content" className="min-h-0 flex-1">
+        <AtlasExplorer
+          dataset={dataset}
+          places={places}
+          traditionalLabels={traditionalLabels}
+          relatedByPlaceId={relatedByPlaceId}
         />
-
-        <section className="page-gutter pb-12 pt-2">
-          <div className="mx-auto max-w-[1400px]">
-            <AtlasExplorer
-              dataset={dataset}
-              places={places}
-              relatedByPlaceId={relatedByPlaceId}
-            />
-            <AtlasArchitectureNote />
-          </div>
-        </section>
       </main>
-      <SiteFooter />
+      <JsonLd
+        data={[
+          breadcrumbJsonLd([
+            { name: "Home", href: "/" },
+            { name: "Atlas" },
+          ]),
+          collectionPageJsonLd({
+            name: "Ancient Bharata Atlas",
+            description: atlasIndexSeo().description,
+            path: "/atlas",
+          }),
+        ]}
+      />
     </div>
   );
 }

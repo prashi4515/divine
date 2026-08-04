@@ -2,39 +2,64 @@ import type { Metadata } from "next";
 import type { KnowledgeEntity } from "@/lib/knowledge/types";
 import { ENTITY_KIND_LABELS } from "@/lib/knowledge/types";
 import { entityHref } from "@/lib/knowledge/search";
+import {
+  absoluteUrl,
+  articleJsonLd,
+  breadcrumbJsonLd,
+  buildPageMetadata,
+  clampDescription,
+  clampTitle,
+  ogImageFor,
+  personJsonLd,
+  placeJsonLd,
+} from "@/lib/seo";
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://divine.app";
+export { breadcrumbJsonLd };
 
 export function entityMetadata(entity: KnowledgeEntity): Metadata {
+  const kindLabel = ENTITY_KIND_LABELS[entity.kind] ?? entity.kind;
   const title =
     entity.seo?.title ??
-    `${entity.name} — ${ENTITY_KIND_LABELS[entity.kind]} | Divine Encyclopedia`;
-  const description =
-    entity.seo?.description ?? entity.summary.slice(0, 160);
-  const url = `${SITE_URL}${entityHref(entity)}`;
-  return {
+    clampTitle(`${entity.name} – ${kindLabel}`);
+  const description = clampDescription(
+    entity.seo?.description ?? entity.summary,
+  );
+  const path = entityHref(entity);
+  const isPerson = [
+    "person",
+    "king",
+    "queen",
+    "sage",
+    "warrior",
+    "avatar",
+    "deity",
+    "deva",
+    "devi",
+  ].includes(entity.kind);
+
+  return buildPageMetadata({
     title,
     description,
-    alternates: { canonical: entityHref(entity) },
-    openGraph: {
-      title,
-      description,
-      url,
-      type: "article",
-      images: entity.seo?.ogImage ? [{ url: entity.seo.ogImage }] : undefined,
-    },
-    twitter: {
-      card: "summary_large_image",
-      title,
-      description,
-    },
-  };
+    path,
+    type: isPerson ? "profile" : "article",
+    image:
+      entity.seo?.ogImage ??
+      ogImageFor({
+        title: entity.name,
+        subtitle: kindLabel,
+        eyebrow: "Encyclopedia",
+      }),
+    imageAlt: entity.name,
+  });
 }
 
 export function entityJsonLd(entity: KnowledgeEntity) {
-  const url = `${SITE_URL}${entityHref(entity)}`;
+  const path = entityHref(entity);
   const kind = entity.kind;
-  let type = "Thing";
+  const alternateName = [entity.englishName, ...(entity.aliases ?? [])].filter(
+    Boolean,
+  );
+
   if (
     kind === "person" ||
     kind === "king" ||
@@ -46,44 +71,43 @@ export function entityJsonLd(entity: KnowledgeEntity) {
     kind === "deva" ||
     kind === "devi"
   ) {
-    type = "Person";
-  } else if (
+    return personJsonLd({
+      name: entity.name,
+      description: entity.description,
+      path,
+      alternateName,
+    });
+  }
+
+  if (
     kind === "city" ||
     kind === "kingdom" ||
     kind === "river" ||
     kind === "mountain" ||
     kind === "forest" ||
     kind === "temple" ||
-    kind === "pilgrimage"
+    kind === "pilgrimage" ||
+    kind === "battlefield" ||
+    kind === "ashrama"
   ) {
-    type = "Place";
-  } else if (kind === "concept") {
-    type = "DefinedTerm";
-  } else if (kind === "event" || kind === "battle") {
-    type = "Event";
+    return placeJsonLd({
+      name: entity.name,
+      description: entity.description,
+      path,
+      latitude: entity.atlas?.latitude,
+      longitude: entity.atlas?.longitude,
+    });
   }
 
-  return {
-    "@context": "https://schema.org",
-    "@type": type,
-    name: entity.name,
-    alternateName: [entity.englishName, ...(entity.aliases ?? [])],
+  return articleJsonLd({
+    headline: entity.name,
     description: entity.description,
-    url,
-  };
+    path,
+    image: entity.seo?.ogImage,
+  });
 }
 
-export function breadcrumbJsonLd(
-  crumbs: Array<{ name: string; href?: string }>,
-) {
-  return {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: crumbs.map((c, i) => ({
-      "@type": "ListItem",
-      position: i + 1,
-      name: c.name,
-      ...(c.href ? { item: `${SITE_URL}${c.href}` } : {}),
-    })),
-  };
+/** @deprecated Prefer absoluteUrl from @/lib/seo — kept for call sites during migration. */
+export function siteAbsoluteUrl(path: string): string {
+  return absoluteUrl(path);
 }

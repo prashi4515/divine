@@ -1,7 +1,14 @@
+"use client";
+
 import Link from "next/link";
-import type { KnowledgeConcept } from "@/lib/concepts/store";
-import { conceptHref } from "@/lib/concepts/store";
-import { displayEnglishName } from "@/lib/text/modern-english";
+import { conceptHref, type KnowledgeConcept } from "@/lib/concepts/helpers";
+import { localizedKnowledgeChrome } from "@/lib/i18n/knowledge-labels";
+import {
+  displayLocalizedName,
+  displayLocalizedSummary,
+} from "@/lib/i18n/localize-entity";
+import { useUiLanguage } from "@/lib/i18n/use-messages";
+import { toModernEnglish } from "@/lib/text/modern-english";
 import { cn } from "@/lib/utils";
 
 export function ConceptCard({
@@ -11,6 +18,21 @@ export function ConceptCard({
   concept: KnowledgeConcept;
   index?: number;
 }) {
+  const lang = useUiLanguage();
+  const chrome = localizedKnowledgeChrome(lang);
+  const body =
+    lang === "en"
+      ? (concept.concept?.definition ?? concept.summary)
+      : displayLocalizedSummary(
+          {
+            id: concept.id,
+            summary: concept.concept?.definition ?? concept.summary,
+            name: concept.name,
+            iastName: concept.iastName,
+          },
+          lang,
+        );
+
   return (
     <Link
       href={conceptHref(concept)}
@@ -27,17 +49,17 @@ export function ConceptCard({
       />
       <div className="flex flex-wrap items-center gap-2">
         <span className="text-[10px] font-medium uppercase tracking-[0.16em] text-[#4d6a86]">
-          Concept
+          {chrome.concept}
         </span>
       </div>
       <h3 className="text-foreground mt-2 font-serif text-lg leading-tight tracking-tight">
-        {displayEnglishName(concept)}
+        {displayLocalizedName(concept, lang)}
       </h3>
       <p className="text-muted-foreground mt-2 flex-1 text-sm leading-relaxed">
-        {concept.concept?.definition ?? concept.summary}
+        {body}
       </p>
       <p className="text-muted-foreground mt-3 text-[11px]">
-        {concept.primaryScripture}
+        {toModernEnglish(concept.primaryScripture)}
       </p>
     </Link>
   );

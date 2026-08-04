@@ -101,6 +101,32 @@
       ],
       "stroke": "#4d6a86",
       "order": 40
+    },
+    {
+      "id": "route.ashvamedha",
+      "slug": "ashvamedha-horse",
+      "title": "Ashvamedha Horse",
+      "iastTitle": "Aśvamedha",
+      "summary": "Indicative circuit of the horse of Yudhiṣṭhira's Aśvamedha.",
+      "description": "A simplified educational path for the post-war Aśvamedha horse — Indraprastha outward through principal kingdoms named in tradition. Not a surveyed itinerary.",
+      "placeIds": [
+        "city.indraprastha",
+        "kingdom.pancala",
+        "kingdom.magadha",
+        "kingdom.videha",
+        "kingdom.kashi",
+        "kingdom.cedi",
+        "city.indraprastha"
+      ],
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "section": "Aśvamedhika Parva"
+        }
+      ],
+      "stroke": "#8a6a20",
+      "order": 50
     }
   ]
 }

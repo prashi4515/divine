@@ -98,7 +98,11 @@ export async function getAtlasDataset(): Promise<AtlasDataset> {
           minPoints: 2,
         },
         baseMap,
-        baseMapProviderId: "illustrated",
+        baseMapProviderId: baseMap.tiles
+          ? "bharata-tiles"
+          : baseMap.src
+            ? "illustrated-fallback"
+            : "clean-map",
       });
     })().catch((err: unknown) => {
       datasetCache = null;

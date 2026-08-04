@@ -4,9 +4,10 @@ import * as React from "react";
 import { Handle, Position, type NodeProps } from "@xyflow/react";
 import type { Person } from "@/lib/genealogy/types";
 import {
-  CATEGORY_LABELS,
   CATEGORY_TOKENS,
 } from "@/lib/genealogy/types";
+import { localizedPersonCategoryLabel } from "@/lib/i18n/knowledge-labels";
+import { useUiLanguage } from "@/lib/i18n/use-messages";
 import { cn } from "@/lib/utils";
 
 /**
@@ -28,6 +29,7 @@ function PersonNodeInner({
   data,
   selected,
 }: NodeProps & { data: PersonNodeData }) {
+  const lang = useUiLanguage();
   const { person, onOpen, isDimmed, isHighlighted, isRoot } = data;
   const tokens = CATEGORY_TOKENS[person.category];
   const placeholder = person.imagePlaceholder ?? "◈";
@@ -36,7 +38,7 @@ function PersonNodeInner({
     <button
       type="button"
       onClick={() => onOpen(person.id)}
-      aria-label={`${person.name} — ${CATEGORY_LABELS[person.category]}`}
+      aria-label={`${person.name} — ${localizedPersonCategoryLabel(person.category, lang)}`}
       className={cn(
         "group border-border/80 bg-card/95 relative flex w-[200px] flex-col items-start gap-1.5 rounded-xl border px-3 py-2.5 text-left shadow-xs transition-divine",
         "backdrop-blur-sm",
@@ -108,7 +110,7 @@ function PersonNodeInner({
             color: tokens.accent,
           }}
         >
-          {CATEGORY_LABELS[person.category]}
+          {localizedPersonCategoryLabel(person.category, lang)}
         </span>
         <span className="flex items-center gap-1">
           {hasVerifiedEdge(person) && (

@@ -5,6 +5,7 @@
 
 import nextDynamic from "next/dynamic";
 import type { AtlasDataset } from "@divine/types";
+import type { TraditionalAtlasLabel } from "@/lib/atlas/data/traditional-label-types";
 import type { AtlasPlace } from "@/lib/atlas/geo";
 
 const AtlasMapApp = nextDynamic(
@@ -13,7 +14,7 @@ const AtlasMapApp = nextDynamic(
   {
     ssr: false,
     loading: () => (
-      <div className="border-border bg-muted/30 flex h-[min(78vh,820px)] min-h-[480px] items-center justify-center rounded-3xl border text-sm text-muted-foreground">
+      <div className="bg-muted/30 text-muted-foreground flex h-full min-h-[520px] items-center justify-center text-sm">
         Loading map…
       </div>
     ),
@@ -23,6 +24,7 @@ const AtlasMapApp = nextDynamic(
 export type AtlasExplorerProps = {
   dataset: AtlasDataset;
   places: AtlasPlace[];
+  traditionalLabels?: readonly TraditionalAtlasLabel[];
   initialSlug?: string;
   relatedByPlaceId?: Record<
     string,

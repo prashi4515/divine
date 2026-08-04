@@ -11,11 +11,11 @@ import {
   getGenealogyModules,
   getPeopleForModule,
 } from "@/lib/genealogy/store";
+import { getSiteUrl } from "@/lib/seo";
 
 export const dynamic = "force-static";
 export const revalidate = false;
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://divine.app";
 
 /** Old slugs from the pre-split corpus → current modules. */
 const SLUG_REDIRECTS: Record<string, string> = {
@@ -42,7 +42,7 @@ export async function generateMetadata({
   if (!mod) return { title: "Genealogy module not found" };
   const title = `${mod.title} — Hindu genealogy explorer`;
   const description = mod.description;
-  const url = `${SITE_URL}/genealogy/${mod.slug}`;
+  const url = `${getSiteUrl()}/genealogy/${mod.slug}`;
   return {
     title,
     description,
@@ -88,18 +88,18 @@ export default async function GenealogyModulePage({ params }: PageProps) {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
+      { "@type": "ListItem", position: 1, name: "Home", item: getSiteUrl() },
       {
         "@type": "ListItem",
         position: 2,
         name: "Genealogy",
-        item: `${SITE_URL}/genealogy`,
+        item: `${getSiteUrl()}/genealogy`,
       },
       {
         "@type": "ListItem",
         position: 3,
         name: mod.title,
-        item: `${SITE_URL}/genealogy/${mod.slug}`,
+        item: `${getSiteUrl()}/genealogy/${mod.slug}`,
       },
     ],
   };
@@ -110,14 +110,14 @@ export default async function GenealogyModulePage({ params }: PageProps) {
     headline: mod.title,
     description: mod.description,
     inLanguage: "en",
-    mainEntityOfPage: `${SITE_URL}/genealogy/${mod.slug}`,
+    mainEntityOfPage: `${getSiteUrl()}/genealogy/${mod.slug}`,
     author: { "@type": "Organization", name: "Divine" },
     publisher: { "@type": "Organization", name: "Divine" },
     about: people.map((p) => ({
       "@type": "Person",
       name: p.name,
       alternateName: p.sanskritName,
-      url: `${SITE_URL}/genealogy/person/${p.id}`,
+      url: `${getSiteUrl()}/genealogy/person/${p.id}`,
     })),
     citation: mod.scriptureSources.map((s) => ({
       "@type": "CreativeWork",

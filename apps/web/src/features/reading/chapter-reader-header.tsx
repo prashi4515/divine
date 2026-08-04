@@ -4,6 +4,7 @@ import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { AccountLink } from "@/features/reading/account-link";
+import { PUBLIC_AUTH_UI_ENABLED } from "@/lib/auth/config";
 import { LanguageSwitcher } from "@/features/reading/language-switcher";
 import { HeaderSearch } from "@/features/search/header-search";
 import { localizeWorkTitle, useMessages } from "@/lib/i18n/use-messages";
@@ -45,7 +46,7 @@ export function ChapterReaderHeader({
 
         <div className="flex min-w-0 shrink-0 items-center gap-1 sm:gap-1.5">
           <HeaderSearch />
-          <AccountLink />
+          {PUBLIC_AUTH_UI_ENABLED ? <AccountLink /> : null}
           <LanguageSwitcher />
           <ThemeToggle />
         </div>

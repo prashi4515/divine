@@ -1,14 +1,33 @@
 import type { MetadataRoute } from "next";
-
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://divine.app";
+import { absoluteUrl, getSiteUrl } from "@/lib/seo/site";
 
 export default function robots(): MetadataRoute.Robots {
+  const host = getSiteUrl().replace(/^https?:\/\//, "");
   return {
-    rules: {
-      userAgent: "*",
-      allow: "/",
-      disallow: ["/admin", "/api/", "/account", "/login", "/signup"],
-    },
-    sitemap: `${SITE_URL}/sitemap.xml`,
+    rules: [
+      {
+        userAgent: "*",
+        allow: "/",
+        disallow: [
+          "/admin",
+          "/admin/",
+          "/api/",
+          "/account",
+          "/account/",
+          "/login",
+          "/signup",
+          "/logout",
+          "/forgot-password",
+          "/reset-password",
+          "/verify-email",
+          "/bookmarks",
+          "/history",
+          "/profile",
+          "/settings",
+        ],
+      },
+    ],
+    sitemap: absoluteUrl("/sitemap.xml"),
+    host,
   };
 }

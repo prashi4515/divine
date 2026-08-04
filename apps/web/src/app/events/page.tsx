@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { buildPageMetadata, hubIndexSeo } from "@/lib/seo";
 import Link from "next/link";
 import { LocalizedModuleHeader } from "@/features/reading/localized-module-header";
 import { EventCard } from "@/features/events/event-card";
@@ -6,24 +7,11 @@ import { SiteFooter } from "@/features/reading/site-footer";
 import { SiteHeader } from "@/features/reading/site-header";
 import { getEvents } from "@/lib/events/store";
 
-export const dynamic = "force-static";
-export const revalidate = false;
+export const dynamic = "force-dynamic";
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://divine.app";
 
-export const metadata: Metadata = {
-  title: "Mahabharata Events - Knowledge Graph Timeline",
-  description:
-    "Major Mahabharata events as a Knowledge Graph hub - people, places, kingdoms, weapons, Gita chapters, and verses linked from structured JSON.",
-  alternates: { canonical: "/events" },
-  openGraph: {
-    title: "Mahabharata Events",
-    description:
-      "Timeline hub connecting the Divine Knowledge Graph across people, places, and scripture.",
-    url: `${SITE_URL}/events`,
-    type: "website",
-  },
-};
+export const metadata: Metadata = buildPageMetadata(hubIndexSeo("events"));
+
 
 export default async function EventsIndexPage() {
   const events = await getEvents();

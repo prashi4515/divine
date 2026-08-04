@@ -1,8 +1,16 @@
 "use client";
 
 import * as React from "react";
+import { getGenealogyUiMessages } from "@/lib/i18n/genealogy-ui-messages";
 import { getHomeMessages, type HomeMessages } from "@/lib/i18n/home-messages";
+import { getHubUiMessages } from "@/lib/i18n/hub-ui-messages";
 import { getMessages, type Messages } from "@/lib/i18n/messages";
+import { readingLanguageCookieWrite } from "@/lib/i18n/reading-language-cookie";
+import { useServerUiLanguage } from "@/lib/i18n/ui-language-context";
+import {
+  DEFAULT_READING_LANGUAGE,
+  type ReadingLanguageCode,
+} from "@/lib/reading/languages";
 import { useReadingStore } from "@/lib/stores/reading-store";
 
 /**
@@ -10,6 +18,8 @@ import { useReadingStore } from "@/lib/stores/reading-store";
  * Safe when `persist` API is briefly unavailable during HMR.
  */
 export function useReadingHydrated(): boolean {
+  // Always start false so SSR HTML matches the client's first paint
+  // (reading hasHydrated() in useState caused disabled/value mismatches).
   const [hydrated, setHydrated] = React.useState(false);
 
   React.useEffect(() => {
@@ -18,7 +28,10 @@ export function useReadingHydrated(): boolean {
       setHydrated(true);
       return;
     }
-    setHydrated(api.hasHydrated());
+    if (api.hasHydrated()) {
+      setHydrated(true);
+      return;
+    }
     return api.onFinishHydration(() => {
       setHydrated(true);
     });
@@ -28,9 +41,13 @@ export function useReadingHydrated(): boolean {
 }
 
 /**
- * UI copy for the active reading language.
+ * Active UI language: store after hydrate, else SSR cookie (no English flash).
  */
-export function useMessages(): Messages {
+export function useUiLanguage(
+  initialLanguage?: ReadingLanguageCode,
+): ReadingLanguageCode {
+  const serverLanguage = useServerUiLanguage();
+  const fallback = initialLanguage ?? serverLanguage ?? DEFAULT_READING_LANGUAGE;
   const preferredLanguage = useReadingStore((s) => s.preferredLanguage);
   const hydrated = useReadingHydrated();
 
@@ -38,19 +55,34 @@ export function useMessages(): Messages {
     if (!hydrated) return;
     document.documentElement.lang =
       preferredLanguage === "sa" ? "sa" : preferredLanguage;
+    document.cookie = readingLanguageCookieWrite(preferredLanguage);
   }, [hydrated, preferredLanguage]);
 
-  return getMessages(hydrated ? preferredLanguage : "en");
+  return hydrated ? preferredLanguage : fallback;
+}
+
+/**
+ * UI copy for the active reading language.
+ */
+export function useMessages(initialLanguage?: ReadingLanguageCode): Messages {
+  return getMessages(useUiLanguage(initialLanguage));
 }
 
 /**
  * Landing-page copy for the active reading language.
  */
-export function useHomeMessages(): HomeMessages {
-  const preferredLanguage = useReadingStore((s) => s.preferredLanguage);
-  const hydrated = useReadingHydrated();
+export function useHomeMessages(
+  initialLanguage?: ReadingLanguageCode,
+): HomeMessages {
+  return getHomeMessages(useUiLanguage(initialLanguage));
+}
 
-  return getHomeMessages(hydrated ? preferredLanguage : "en");
+export function useHubUiMessages(initialLanguage?: ReadingLanguageCode) {
+  return getHubUiMessages(useUiLanguage(initialLanguage));
+}
+
+export function useGenealogyUiMessages(initialLanguage?: ReadingLanguageCode) {
+  return getGenealogyUiMessages(useUiLanguage(initialLanguage));
 }
 
 export function localizeWorkTitle(

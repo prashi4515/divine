@@ -271,19 +271,42 @@ export const ATLAS_CERTAINTY_LEVELS = [
 export type AtlasCertainty = (typeof ATLAS_CERTAINTY_LEVELS)[number];
 
 /**
- * Swappable illustrated base plate. Application logic must not assume pixels —
- * only `src` + georeferenced `projection`. Replace the file / id to swap art.
+ * XYZ raster tile source for an optional future illustrated plate.
+ * Tiles are Web Mercator; overlay JSON stays independent of artwork.
+ */
+export const atlasTileSourceSchema = z.object({
+  /** Template URL: `/tiles/ancient-bharata/{z}/{x}/{y}.webp` */
+  url: z.string().min(1),
+  tileSize: z.union([z.literal(256), z.literal(512)]).default(256),
+  minZoom: z.number().int().min(0).max(22).default(3),
+  maxZoom: z.number().int().min(0).max(22).default(10),
+  scheme: z.enum(["xyz", "tms"]).default("xyz"),
+  attribution: z.string().optional(),
+});
+export type AtlasTileSource = z.infer<typeof atlasTileSourceSchema>;
+
+/**
+ * Swappable basemap. Default is an inline clean Google Maps–like raster style
+ * (no modern labels). Optional `tiles` / `src` for a future illustrated plate.
+ * Optional `styleUrl` for a remote MapLibre style.
  */
 export const atlasBaseMapSchema = z.object({
   id: z.string().min(1),
   title: z.string().min(1),
-  /** Public URL path (e.g. `/images/atlas/ancient-bharata.jpg`). */
-  src: z.string().min(1),
+  /**
+   * Optional remote MapLibre style URL. Prefer omitting this — the app builds
+   * a reliable inline clean style by default.
+   */
+  styleUrl: z.string().url().optional(),
+  /** Optional future XYZ plate pyramid (not the default). */
+  tiles: atlasTileSourceSchema.optional(),
+  /** Legacy single-image plate (not the default). */
+  src: z.string().min(1).optional(),
   credit: z.string().optional(),
-  /** Intrinsic pixel size of the artwork (informational). */
   intrinsicWidth: z.number().positive().optional(),
   intrinsicHeight: z.number().positive().optional(),
-  /** Georeference frame — usually matches dataset.projection. */
+  masterWidth: z.number().positive().optional(),
+  masterHeight: z.number().positive().optional(),
   projection: atlasProjectionSchema.optional(),
 });
 export type AtlasBaseMap = z.infer<typeof atlasBaseMapSchema>;
@@ -411,14 +434,14 @@ export const atlasDatasetSchema = z.object({
   events: z.array(atlasEventSchema).default([]),
   routes: z.array(atlasRouteSchema),
   cluster: atlasClusterConfigSchema.default({}),
-  /** Illustrated plate metadata (src + optional credit). */
+  /** Basemap metadata (clean styleUrl preferred). */
   baseMap: atlasBaseMapSchema.optional(),
-  /** Renderer id — `illustrated` draws the plate; overlays stay data-driven. */
-  baseMapProviderId: z.string().default("illustrated"),
+  /** Renderer id — `clean-map` = Google Maps–like canvas; overlays are JSON. */
+  baseMapProviderId: z.string().default("clean-map"),
 });
 export type AtlasDataset = z.infer<typeof atlasDatasetSchema>;
 
-/** Matches the Ancient Bhārata plate aspect (~872×1024). */
+/** Educational frame focused on Ancient Bhārata. */
 export const DEFAULT_ATLAS_PROJECTION: AtlasProjection = {
   minLat: 6.5,
   maxLat: 37.5,
@@ -429,13 +452,10 @@ export const DEFAULT_ATLAS_PROJECTION: AtlasProjection = {
 };
 
 export const DEFAULT_ATLAS_BASE_MAP: AtlasBaseMap = {
-  id: "basemap.ancient-bharata",
-  title: "Ancient Bhārata — Mahābhārata era (reference plate)",
-  src: "/images/atlas/ancient-bharata-map.jpg",
+  id: "basemap.clean-bharata",
+  title: "Ancient Bhārata — clean map canvas",
   credit:
-    "Educational reference plate. Artwork is display-only — not clickable data.",
-  intrinsicWidth: 872,
-  intrinsicHeight: 1024,
+    "© CARTO © OpenStreetMap — ancient names from Divine overlays only",
 };
 
 export const DEFAULT_ATLAS_ICONS: AtlasIconDefinition[] = [

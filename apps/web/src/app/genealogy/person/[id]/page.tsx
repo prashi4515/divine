@@ -7,9 +7,10 @@ import { SiteFooter } from "@/features/reading/site-footer";
 import { SiteHeader } from "@/features/reading/site-header";
 import { RelatedContentSection } from "@/features/knowledge/related-content-section";
 import {
-  getAllGenealogyPeople,
+  getGenealogyPeopleByIds,
   getGenealogyPerson,
   getModulesForPerson,
+  listAllGenealogyPersonIds,
 } from "@/lib/genealogy/store";
 import { resolveEntityId } from "@/lib/knowledge/store";
 import {
@@ -19,17 +20,17 @@ import {
   RELATIONSHIP_LABELS,
   type Relationship,
 } from "@/lib/genealogy/types";
+import { getSiteUrl } from "@/lib/seo";
 
 export const dynamic = "force-static";
 export const revalidate = false;
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://divine.app";
 
 type PageProps = { params: Promise<{ id: string }> };
 
 export async function generateStaticParams() {
-  const people = await getAllGenealogyPeople();
-  return people.map((p) => ({ id: p.id }));
+  const ids = await listAllGenealogyPersonIds();
+  return ids.map((id) => ({ id }));
 }
 
 export async function generateMetadata({
@@ -47,7 +48,7 @@ export async function generateMetadata({
     openGraph: {
       title,
       description,
-      url: `${SITE_URL}/genealogy/person/${person.id}`,
+      url: `${getSiteUrl()}/genealogy/person/${person.id}`,
       type: "profile",
     },
     twitter: { card: "summary_large_image", title, description },
@@ -59,25 +60,26 @@ export default async function PersonPage({ params }: PageProps) {
   const person = await getGenealogyPerson(id);
   if (!person) notFound();
 
-  const [modules, allPeople, entityId] = await Promise.all([
+  const neighborIds = person.relationships.map((r) => r.personId);
+  const [modules, neighbors, entityId] = await Promise.all([
     getModulesForPerson(id),
-    getAllGenealogyPeople(),
+    getGenealogyPeopleByIds(neighborIds),
     resolveEntityId(id),
   ]);
-  const byId = new Map(allPeople.map((p) => [p.id, p]));
+  const byId = new Map(neighbors.map((p) => [p.id, p]));
 
   const tokens = CATEGORY_TOKENS[person.category];
 
   const personLd = {
     "@context": "https://schema.org",
     "@type": "Person",
-    "@id": `${SITE_URL}/genealogy/person/${person.id}`,
+    "@id": `${getSiteUrl()}/genealogy/person/${person.id}`,
     name: person.name,
     alternateName: [person.sanskritName, ...(person.aliases ?? [])].filter(
       Boolean,
     ),
     description: person.description,
-    url: `${SITE_URL}/genealogy/person/${person.id}`,
+    url: `${getSiteUrl()}/genealogy/person/${person.id}`,
     gender: person.gender === "male" || person.gender === "female"
       ? person.gender
       : undefined,
@@ -91,14 +93,14 @@ export default async function PersonPage({ params }: PageProps) {
       .map((r) => ({
         "@type": "Person",
         name: byId.get(r.personId)?.name ?? r.personId,
-        url: `${SITE_URL}/genealogy/person/${r.personId}`,
+        url: `${getSiteUrl()}/genealogy/person/${r.personId}`,
       })),
     spouse: person.relationships
       .filter((r) => r.type === "spouse" || r.type === "consort")
       .map((r) => ({
         "@type": "Person",
         name: byId.get(r.personId)?.name ?? r.personId,
-        url: `${SITE_URL}/genealogy/person/${r.personId}`,
+        url: `${getSiteUrl()}/genealogy/person/${r.personId}`,
       })),
     children: person.relationships
       .filter(
@@ -110,7 +112,7 @@ export default async function PersonPage({ params }: PageProps) {
       .map((r) => ({
         "@type": "Person",
         name: byId.get(r.personId)?.name ?? r.personId,
-        url: `${SITE_URL}/genealogy/person/${r.personId}`,
+        url: `${getSiteUrl()}/genealogy/person/${r.personId}`,
       })),
   };
 
@@ -118,18 +120,18 @@ export default async function PersonPage({ params }: PageProps) {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
+      { "@type": "ListItem", position: 1, name: "Home", item: getSiteUrl() },
       {
         "@type": "ListItem",
         position: 2,
         name: "Genealogy",
-        item: `${SITE_URL}/genealogy`,
+        item: `${getSiteUrl()}/genealogy`,
       },
       {
         "@type": "ListItem",
         position: 3,
         name: person.name,
-        item: `${SITE_URL}/genealogy/person/${person.id}`,
+        item: `${getSiteUrl()}/genealogy/person/${person.id}`,
       },
     ],
   };

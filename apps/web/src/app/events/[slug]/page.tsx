@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { getSiteUrl } from "@/lib/seo";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Suspense } from "react";
@@ -8,12 +9,11 @@ import { RelatedContentSection } from "@/features/knowledge/related-content-sect
 import { SiteFooter } from "@/features/reading/site-footer";
 import { SiteHeader } from "@/features/reading/site-header";
 import {
-  eventHref,
-  eventTypeLabel,
   getEventBySlug,
   getEvents,
   resolveEventLinks,
 } from "@/lib/events/store";
+import { eventHref, eventTypeLabel } from "@/lib/events/helpers";
 import { getEntityBundle } from "@/lib/knowledge/store";
 import { breadcrumbJsonLd } from "@/lib/knowledge/seo";
 import { formatCitation } from "@/lib/knowledge/types";
@@ -22,7 +22,6 @@ import { toModernEnglish } from "@/lib/text/modern-english";
 export const dynamic = "force-static";
 export const revalidate = false;
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://divine.app";
 
 type PageProps = { params: Promise<{ slug: string }> };
 
@@ -42,7 +41,7 @@ export async function generateMetadata({
   const description = toModernEnglish(
     event.seo?.description ?? event.summary.slice(0, 160),
   );
-  const url = `${SITE_URL}${eventHref(event)}`;
+  const url = `${getSiteUrl()}${eventHref(event)}`;
   return {
     title,
     description,
@@ -79,7 +78,7 @@ export default async function EventDetailPage({ params }: PageProps) {
     name: event.name,
     alternateName: [event.englishName, event.iastName, ...(event.aliases ?? [])],
     description: event.description,
-    url: `${SITE_URL}${eventHref(event)}`,
+    url: `${getSiteUrl()}${eventHref(event)}`,
     about: event.summary,
     isPartOf: {
       "@type": "CreativeWork",

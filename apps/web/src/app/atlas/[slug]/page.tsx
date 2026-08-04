@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { getSiteUrl } from "@/lib/seo";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowUpRight, BookOpen, Library, MapPin } from "lucide-react";
@@ -7,6 +8,7 @@ import { AtlasExplorer } from "@/features/atlas/atlas-explorer";
 import { SiteFooter } from "@/features/reading/site-footer";
 import { SiteHeader } from "@/features/reading/site-header";
 import { RelatedContentSection } from "@/features/knowledge/related-content-section";
+import { getTraditionalAtlasLabels } from "@/lib/atlas/data/traditional-labels";
 import {
   atlasCategoryFor,
   atlasHref,
@@ -25,7 +27,6 @@ import { formatCitation } from "@/lib/knowledge/types";
 export const dynamic = "force-static";
 export const revalidate = false;
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://divine.app";
 
 type PageProps = { params: Promise<{ slug: string }> };
 
@@ -52,7 +53,7 @@ export async function generateMetadata({
     openGraph: {
       title,
       description,
-      url: `${SITE_URL}${atlasHref(place)}`,
+      url: `${getSiteUrl()}${atlasHref(place)}`,
       type: "article",
     },
     twitter: { card: "summary_large_image", title, description },
@@ -65,9 +66,10 @@ export default async function AtlasPlacePage({ params }: PageProps) {
   if (!bundle) notFound();
 
   const { place, related, collections } = bundle;
-  const [places, dataset] = await Promise.all([
+  const [places, dataset, traditionalLabels] = await Promise.all([
     getAtlasPlaces(),
     getAtlasDataset(),
+    getTraditionalAtlasLabels(),
   ]);
   const relatedByPlaceId = await buildRelatedPeopleMap([place]);
 
@@ -108,6 +110,7 @@ export default async function AtlasPlacePage({ params }: PageProps) {
             <AtlasExplorer
               dataset={dataset}
               places={places}
+              traditionalLabels={traditionalLabels}
               initialSlug={place.slug}
               relatedByPlaceId={relatedByPlaceId}
             />

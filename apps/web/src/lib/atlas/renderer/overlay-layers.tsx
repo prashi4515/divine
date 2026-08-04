@@ -1,7 +1,7 @@
 /**
  * MapLibre overlay sources + layers.
  * Knows only GeoJSON + layer ids — nothing about Mahābhārata content.
- * Base artwork is never redrawn here.
+ * Basemap is never redrawn here.
  */
 "use client";
 
@@ -12,6 +12,7 @@ import {
   OVERLAY_SOURCE_IDS,
 } from "@/lib/atlas/overlays/layer-catalog";
 
+/** demotiles.maplibre.org provides Noto Sans (Open Sans 404s). */
 const LABEL_FONT = ["Noto Sans Regular"] as const;
 const LABEL_FONT_BOLD = ["Noto Sans Bold"] as const;
 
@@ -24,12 +25,17 @@ type OverlayLayersProps = {
   routeStops: Fc;
   events: Fc;
   kingdoms: Fc;
+  kingdomsSelected: Fc;
+  traditionalLabels: Fc;
   showLabels: boolean;
   showRoutes: boolean;
   showEvents: boolean;
   showRivers: boolean;
+  showKingdoms: boolean;
   selectedPlaceSlug: string | null;
   selectedRiverId: string | null;
+  hoveredRiverId: string | null;
+  hoveredKingdomId: string | null;
 };
 
 export function AtlasOverlayLayers({
@@ -39,12 +45,17 @@ export function AtlasOverlayLayers({
   routeStops,
   events,
   kingdoms,
+  kingdomsSelected,
+  traditionalLabels,
   showLabels,
   showRoutes,
   showEvents,
   showRivers,
+  showKingdoms,
   selectedPlaceSlug,
   selectedRiverId,
+  hoveredRiverId,
+  hoveredKingdomId,
 }: OverlayLayersProps) {
   return (
     <>
@@ -52,18 +63,55 @@ export function AtlasOverlayLayers({
         <Layer
           id={OVERLAY_LAYER_IDS.kingdomsFill}
           type="fill"
+          layout={{ visibility: showKingdoms ? "visible" : "none" }}
           paint={{
             "fill-color": "#c47848",
-            "fill-opacity": 0.22,
+            "fill-opacity": 0.1,
           }}
         />
         <Layer
           id={OVERLAY_LAYER_IDS.kingdomsLine}
           type="line"
+          layout={{ visibility: showKingdoms ? "visible" : "none" }}
+          paint={{
+            "line-color": "#a85a28",
+            "line-width": 1.5,
+            "line-opacity": 0.65,
+            "line-dasharray": [2, 1.5],
+          }}
+        />
+        <Layer
+          id={OVERLAY_LAYER_IDS.kingdomsHover}
+          type="fill"
+          layout={{ visibility: showKingdoms ? "visible" : "none" }}
+          filter={["==", ["get", "id"], hoveredKingdomId ?? ""]}
+          paint={{
+            "fill-color": "#c47848",
+            "fill-opacity": 0.3,
+          }}
+        />
+      </Source>
+
+      <Source
+        id={OVERLAY_SOURCE_IDS.kingdomsSelected}
+        type="geojson"
+        data={kingdomsSelected}
+      >
+        <Layer
+          id={`${OVERLAY_LAYER_IDS.kingdomsFill}-selected`}
+          type="fill"
+          paint={{
+            "fill-color": "#c47848",
+            "fill-opacity": 0.28,
+          }}
+        />
+        <Layer
+          id={`${OVERLAY_LAYER_IDS.kingdomsLine}-selected`}
+          type="line"
           paint={{
             "line-color": "#a85a28",
             "line-width": 2.5,
-            "line-opacity": 0.9,
+            "line-opacity": 0.95,
           }}
         />
       </Source>
@@ -83,17 +131,32 @@ export function AtlasOverlayLayers({
             "line-join": "round",
           }}
           paint={{
-            "line-color": "#1a6a9a",
+            "line-color": "#1a73e8",
             "line-width": [
               "interpolate",
               ["linear"],
               ["zoom"],
               3,
-              1.5,
+              2,
               8,
-              3.2,
+              4,
             ],
-            "line-opacity": 0.85,
+            "line-opacity": 0.9,
+          }}
+        />
+        <Layer
+          id={OVERLAY_LAYER_IDS.riversHover}
+          type="line"
+          layout={{
+            visibility: showRivers ? "visible" : "none",
+            "line-cap": "round",
+            "line-join": "round",
+          }}
+          filter={["==", ["get", "id"], hoveredRiverId ?? ""]}
+          paint={{
+            "line-color": "#174ea6",
+            "line-width": 6,
+            "line-opacity": 0.95,
           }}
         />
         <Layer
@@ -106,9 +169,9 @@ export function AtlasOverlayLayers({
           }}
           filter={["==", ["get", "id"], selectedRiverId ?? ""]}
           paint={{
-            "line-color": "#0a8ad0",
-            "line-width": 6,
-            "line-opacity": 0.95,
+            "line-color": "#0b57d0",
+            "line-width": 7,
+            "line-opacity": 1,
           }}
         />
       </Source>
@@ -125,9 +188,9 @@ export function AtlasOverlayLayers({
           filter={["!=", ["get", "category"], "active"]}
           paint={{
             "line-color": "#8a5a2b",
-            "line-width": 2,
-            "line-opacity": 0.4,
-            "line-dasharray": [2, 2],
+            "line-width": 2.5,
+            "line-opacity": 0.75,
+            "line-dasharray": [1.5, 1.5],
           }}
         />
         <Layer
@@ -140,9 +203,10 @@ export function AtlasOverlayLayers({
           }}
           filter={["==", ["get", "category"], "active"]}
           paint={{
-            "line-color": "#c47848",
-            "line-width": 4.5,
+            "line-color": "#e37400",
+            "line-width": 4,
             "line-opacity": 0.95,
+            "line-dasharray": [2, 1.25],
           }}
         />
       </Source>
@@ -168,7 +232,7 @@ export function AtlasOverlayLayers({
               "#c47848",
             ],
             "circle-stroke-width": 2,
-            "circle-stroke-color": "#fff8f0",
+            "circle-stroke-color": "#ffffff",
           }}
         />
       </Source>
@@ -178,8 +242,8 @@ export function AtlasOverlayLayers({
         type="geojson"
         data={places}
         cluster
-        clusterMaxZoom={10}
-        clusterRadius={52}
+        clusterMaxZoom={9}
+        clusterRadius={42}
       >
         <Layer
           id={OVERLAY_LAYER_IDS.placesClusters}
@@ -189,15 +253,15 @@ export function AtlasOverlayLayers({
             "circle-color": [
               "step",
               ["get", "point_count"],
-              "#c4a060",
+              "#f9ab00",
               8,
-              "#a87840",
+              "#e37400",
               20,
-              "#8a5a2b",
+              "#c5221f",
             ],
             "circle-radius": ["step", ["get", "point_count"], 16, 8, 20, 20, 26],
             "circle-stroke-width": 2,
-            "circle-stroke-color": "#fff8f0",
+            "circle-stroke-color": "#ffffff",
           }}
         />
         <Layer
@@ -210,7 +274,7 @@ export function AtlasOverlayLayers({
             "text-font": [...LABEL_FONT_BOLD],
             "text-allow-overlap": true,
           }}
-          paint={{ "text-color": "#1a1208" }}
+          paint={{ "text-color": "#202124" }}
         />
         <Layer
           id={OVERLAY_LAYER_IDS.places}
@@ -222,33 +286,35 @@ export function AtlasOverlayLayers({
               ["linear"],
               ["zoom"],
               3,
-              3.5,
+              4.5,
               6,
-              5.5,
+              7,
               9,
-              8,
+              9,
             ],
             "circle-color": [
               "match",
               ["get", "category"],
               "kingdom",
-              "#c47848",
+              "#e37400",
               "city",
-              "#3d6a8a",
+              "#1a73e8",
               "forest",
-              "#3d6a40",
+              "#188038",
               "battlefield",
-              "#8a3030",
+              "#c5221f",
               "ashrama",
-              "#6a4a8a",
+              "#9334e6",
               "river",
-              "#1a6a9a",
+              "#039be5",
               "mountain",
-              "#5a4030",
-              "#8a6a40",
+              "#5f6368",
+              "pilgrimage",
+              "#f9ab00",
+              "#80868b",
             ],
-            "circle-stroke-width": 1.5,
-            "circle-stroke-color": "#fff8f0",
+            "circle-stroke-width": 2,
+            "circle-stroke-color": "#ffffff",
             "circle-opacity": 0.95,
           }}
         />
@@ -268,21 +334,30 @@ export function AtlasOverlayLayers({
               4,
               14,
               9,
-              20,
+              22,
             ],
-            "circle-color": "#e89040",
-            "circle-opacity": 0.28,
+            "circle-color": "#1a73e8",
+            "circle-opacity": 0.22,
             "circle-stroke-width": 2.5,
-            "circle-stroke-color": "#e89040",
+            "circle-stroke-color": "#1a73e8",
           }}
         />
+        {/* Place names for cities, forests, ashramas, etc. */}
         <Layer
           id={OVERLAY_LAYER_IDS.placesLabels}
           type="symbol"
           filter={[
             "all",
             ["!", ["has", "point_count"]],
-            [">=", ["get", "importance"], 3],
+            [
+              "any",
+              ["==", ["get", "category"], "city"],
+              ["==", ["get", "category"], "forest"],
+              ["==", ["get", "category"], "ashrama"],
+              ["==", ["get", "category"], "battlefield"],
+              ["==", ["get", "category"], "pilgrimage"],
+              ["==", ["get", "category"], "mountain"],
+            ],
           ]}
           layout={{
             visibility: showLabels ? "visible" : "none",
@@ -298,56 +373,97 @@ export function AtlasOverlayLayers({
               11,
               14,
             ],
-            "text-offset": [0, 1.15],
+            "text-offset": [0, 1.2],
             "text-anchor": "top",
-            "text-optional": true,
-            "text-padding": 4,
+            "text-optional": false,
+            "text-padding": 2,
             "text-font": [...LABEL_FONT],
             "text-allow-overlap": false,
-            "text-ignore-placement": false,
             "symbol-sort-key": ["-", ["get", "importance"]],
           }}
           paint={{
-            "text-color": "#1a1208",
-            "text-halo-color": "rgba(255,248,230,0.92)",
-            "text-halo-width": 1.6,
-            "text-opacity": [
-              "interpolate",
-              ["linear"],
-              ["zoom"],
-              3.8,
-              0,
-              4.4,
-              1,
-            ],
+            "text-color": "#202124",
+            "text-halo-color": "rgba(255,255,255,0.95)",
+            "text-halo-width": 1.8,
           }}
           minzoom={4}
         />
+      </Source>
+
+      {/* Plate toponyms — kingdoms, rivers, regions from the old illustrated map */}
+      <Source
+        id={OVERLAY_SOURCE_IDS.traditionalLabels}
+        type="geojson"
+        data={traditionalLabels}
+      >
         <Layer
-          id={`${OVERLAY_LAYER_IDS.placesLabels}-detail`}
+          id={OVERLAY_LAYER_IDS.traditionalLabels}
           type="symbol"
-          filter={[
-            "all",
-            ["!", ["has", "point_count"]],
-            ["<", ["get", "importance"], 3],
-          ]}
           layout={{
             visibility: showLabels ? "visible" : "none",
             "text-field": ["get", "name"],
-            "text-size": 11,
-            "text-offset": [0, 1.15],
-            "text-anchor": "top",
-            "text-optional": true,
-            "text-padding": 6,
-            "text-font": [...LABEL_FONT],
-            "text-allow-overlap": false,
+            "text-size": [
+              "match",
+              ["get", "kind"],
+              "sea",
+              13,
+              "river",
+              11,
+              "forest",
+              11,
+              "mountain",
+              11,
+              "city",
+              12,
+              12,
+            ],
+            "text-font": [...LABEL_FONT_BOLD],
+            "text-anchor": "center",
+            "text-optional": false,
+            "text-padding": 1,
+            "text-allow-overlap": true,
+            "text-ignore-placement": true,
+            "symbol-sort-key": [
+              "match",
+              ["get", "kind"],
+              "sea",
+              0,
+              "kingdom",
+              1,
+              "region",
+              1,
+              "city",
+              2,
+              "river",
+              3,
+              "forest",
+              4,
+              "mountain",
+              5,
+              6,
+            ],
           }}
           paint={{
-            "text-color": "#2a2010",
-            "text-halo-color": "rgba(255,248,230,0.9)",
-            "text-halo-width": 1.4,
+            "text-color": [
+              "match",
+              ["get", "kind"],
+              "river",
+              "#1a73e8",
+              "forest",
+              "#188038",
+              "mountain",
+              "#5f6368",
+              "sea",
+              "#1967d2",
+              "city",
+              "#202124",
+              "#b06000",
+            ],
+            "text-halo-color": "rgba(255,255,255,0.96)",
+            "text-halo-width": 2,
+            "text-opacity": 1,
           }}
-          minzoom={7}
+          minzoom={3}
         />
       </Source>
 
@@ -366,7 +482,7 @@ export function AtlasOverlayLayers({
               9,
               16,
             ],
-            "circle-color": "#c04030",
+            "circle-color": "#c5221f",
             "circle-opacity": 0.22,
             "circle-stroke-width": 0,
           }}
@@ -376,10 +492,10 @@ export function AtlasOverlayLayers({
           type="circle"
           layout={{ visibility: showEvents ? "visible" : "none" }}
           paint={{
-            "circle-radius": 6.5,
-            "circle-color": "#c04030",
+            "circle-radius": 7,
+            "circle-color": "#c5221f",
             "circle-stroke-width": 2,
-            "circle-stroke-color": "#fff8f0",
+            "circle-stroke-color": "#ffffff",
           }}
         />
       </Source>

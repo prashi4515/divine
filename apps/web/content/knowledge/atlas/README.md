@@ -1,13 +1,11 @@
-# Atlas content packs (Atlas 2.0)
-
-Locations remain Knowledge Graph entities (`entity.atlas`).
+# Atlas content packs
 
 | File | Role |
 |------|------|
-| `layers.json` | Layer stack (base, kingdoms, routes, places, labels) |
-| `polygons.json` | Kingdom polygon rings (data, not artwork) |
-| `routes.json` | Travel / campaign paths (`placeIds` + optional waypoints) |
-| `icons.json` | Icon **tokens** only — artwork lives in the renderer |
+| `base-map.json` | Clean MapLibre `styleUrl` (no plate image) |
+| `overlays/traditional-labels.json` | Multilingual ancient toponyms |
+| `overlays/kingdoms.json` | Kingdom polygons |
+| `rivers.json` / `events.json` / `routes.json` | Overlay vectors |
+| Places | Knowledge Graph entities |
 
-The active renderer is chosen by `dataset.baseMapProviderId` (`placeholder` today).
-An illustrated plate can register a new renderer without changing these packs.
+Default basemap is a **no-labels** Google Maps–like style. Names are never baked into artwork.

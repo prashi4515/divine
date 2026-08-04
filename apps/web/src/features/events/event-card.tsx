@@ -1,11 +1,20 @@
+"use client";
+
 import Link from "next/link";
-import type { KnowledgeEvent } from "@/lib/events/store";
-import { eventHref, eventTypeLabel } from "@/lib/events/store";
-import { displayEnglishName } from "@/lib/text/modern-english";
+import { eventHref, type KnowledgeEvent } from "@/lib/events/helpers";
+import {
+  localizedEventTypeLabel,
+  localizedKnowledgeChrome,
+} from "@/lib/i18n/knowledge-labels";
+import {
+  displayLocalizedName,
+  displayLocalizedSummary,
+} from "@/lib/i18n/localize-entity";
+import { useUiLanguage } from "@/lib/i18n/use-messages";
 import { cn } from "@/lib/utils";
 
 /**
- * Timeline card — data-driven from KnowledgeEvent JSON (no hardcoded copy).
+ * Timeline card — follows the UI language switcher.
  */
 export function EventCard({
   event,
@@ -14,6 +23,9 @@ export function EventCard({
   event: KnowledgeEvent;
   index?: number;
 }) {
+  const lang = useUiLanguage();
+  const chrome = localizedKnowledgeChrome(lang);
+
   return (
     <Link
       href={eventHref(event)}
@@ -30,21 +42,21 @@ export function EventCard({
       />
       <div className="flex flex-wrap items-center gap-2">
         <span className="text-[10px] font-medium uppercase tracking-[0.16em] text-[#6a4530]">
-          {eventTypeLabel(event.event.eventType)}
+          {localizedEventTypeLabel(event.event.eventType, lang)}
         </span>
         <span className="text-muted-foreground text-[10px] uppercase tracking-[0.14em]">
-          · Timeline {event.event.timelineOrder}
+          · {chrome.timeline} {event.event.timelineOrder}
         </span>
       </div>
       <h3 className="text-foreground mt-2 font-serif text-lg leading-tight tracking-tight">
-        {displayEnglishName(event)}
+        {displayLocalizedName(event, lang)}
       </h3>
       <p className="text-muted-foreground mt-2 flex-1 text-sm leading-relaxed">
-        {event.summary}
+        {displayLocalizedSummary(event, lang)}
       </p>
       <p className="text-muted-foreground mt-3 text-[11px]">
-        {event.event.participants.length} people · {event.event.places.length}{" "}
-        places
+        {event.event.participants.length} {chrome.people} ·{" "}
+        {event.event.places.length} {chrome.places}
       </p>
     </Link>
   );

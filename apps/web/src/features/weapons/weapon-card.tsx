@@ -1,10 +1,17 @@
+"use client";
+
 import Link from "next/link";
-import type { KnowledgeWeapon } from "@/lib/weapons/store";
-import { weaponHref } from "@/lib/weapons/store";
+import { weaponHref, type KnowledgeWeapon } from "@/lib/weapons/helpers";
 import {
-  displayEnglishName,
-  toModernEnglish,
-} from "@/lib/text/modern-english";
+  localizedKnowledgeChrome,
+  localizedWeaponCategoryLabel,
+} from "@/lib/i18n/knowledge-labels";
+import {
+  displayLocalizedName,
+  displayLocalizedSummary,
+} from "@/lib/i18n/localize-entity";
+import { useUiLanguage } from "@/lib/i18n/use-messages";
+import { toModernEnglish } from "@/lib/text/modern-english";
 import { cn } from "@/lib/utils";
 
 export function WeaponCard({
@@ -14,10 +21,12 @@ export function WeaponCard({
   weapon: KnowledgeWeapon;
   index?: number;
 }) {
-  const title = displayEnglishName(weapon);
+  const lang = useUiLanguage();
+  const chrome = localizedKnowledgeChrome(lang);
+  const title = displayLocalizedName(weapon, lang);
   const category = weapon.weapon?.category
-    ? toModernEnglish(weapon.weapon.category.replace(/-/g, " "))
-    : "Weapon";
+    ? localizedWeaponCategoryLabel(weapon.weapon.category, lang)
+    : chrome.weapon;
 
   return (
     <Link
@@ -39,7 +48,7 @@ export function WeaponCard({
         </span>
         {weapon.weapon?.focus === "broader-hindu" ? (
           <span className="text-muted-foreground text-[10px] uppercase tracking-[0.14em]">
-            · Broader tradition
+            · {chrome.broaderTradition}
           </span>
         ) : null}
       </div>
@@ -47,7 +56,7 @@ export function WeaponCard({
         {title}
       </h3>
       <p className="text-muted-foreground mt-2 flex-1 text-sm leading-relaxed">
-        {toModernEnglish(weapon.summary)}
+        {displayLocalizedSummary(weapon, lang)}
       </p>
       <p className="text-muted-foreground mt-3 text-[11px]">
         {toModernEnglish(weapon.primaryScripture)}

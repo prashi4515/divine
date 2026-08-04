@@ -5,9 +5,11 @@ import {
   getCollection,
   getCollections,
   getCollectionsForEntity,
+  getEntitiesByIdsOrAliases,
   getEntitiesForCollection,
   getEntity,
   getRelated,
+  getRelatedMany,
   resolveEntityId,
 } from "@/lib/knowledge/store";
 import type { KnowledgeEntity, KnowledgeCollection } from "@/lib/knowledge/types";
@@ -19,6 +21,7 @@ import type {
   RelationshipType,
 } from "@/lib/genealogy/types";
 import { RELATIONSHIP_TYPES } from "@/lib/genealogy/types";
+import type { RelatedEdge } from "@/lib/knowledge/store";
 
 const KIND_TO_CATEGORY: Record<string, PersonCategory> = {
   deity: "trimurti",
@@ -58,8 +61,10 @@ function isPersonLike(entity: KnowledgeEntity): boolean {
   );
 }
 
-async function entityToPerson(entity: KnowledgeEntity): Promise<Person> {
-  const related = await getRelated(entity.id);
+function entityToPersonFromRelated(
+  entity: KnowledgeEntity,
+  related: RelatedEdge[],
+): Person {
   const outRels: Relationship[] = [];
   const relatedVerses: Person["relatedVerses"] = [];
   for (const edge of related) {
@@ -116,6 +121,11 @@ async function entityToPerson(entity: KnowledgeEntity): Promise<Person> {
   };
 }
 
+async function entityToPerson(entity: KnowledgeEntity): Promise<Person> {
+  const related = await getRelated(entity.id);
+  return entityToPersonFromRelated(entity, related);
+}
+
 function collectionToModule(c: KnowledgeCollection): GenealogyModule {
   return {
     slug: c.slug,
@@ -161,13 +171,36 @@ export async function getGenealogyModuleFromKnowledge(
 export async function getPeopleForGenealogyModule(
   slug: string,
 ): Promise<Person[]> {
-  const entities = await getEntitiesForCollection(slug);
-  const people: Person[] = [];
-  for (const entity of entities) {
-    if (!isPersonLike(entity)) continue;
-    people.push(await entityToPerson(entity));
+  const entities = (await getEntitiesForCollection(slug)).filter(isPersonLike);
+  if (entities.length === 0) return [];
+  const relatedMap = await getRelatedMany(entities.map((e) => e.id));
+  return entities.map((entity) =>
+    entityToPersonFromRelated(entity, relatedMap.get(entity.id) ?? []),
+  );
+}
+
+/** Legacy person ids only — cheap for generateStaticParams. */
+export async function listGenealogyPersonIds(): Promise<string[]> {
+  const modules = await getGenealogyModulesFromKnowledge();
+  const ids = new Set<string>();
+  for (const mod of modules) {
+    for (const id of mod.personIds) ids.add(id);
   }
-  return people;
+  return [...ids];
+}
+
+/** Resolve a small set of people by legacy id (neighbors on a person page). */
+export async function getGenealogyPeopleByLegacyIds(
+  legacyIds: readonly string[],
+): Promise<Person[]> {
+  const unique = [...new Set(legacyIds)];
+  if (unique.length === 0) return [];
+  const entities = (await getEntitiesByIdsOrAliases(unique)).filter(isPersonLike);
+  if (entities.length === 0) return [];
+  const relatedMap = await getRelatedMany(entities.map((e) => e.id));
+  return entities.map((entity) =>
+    entityToPersonFromRelated(entity, relatedMap.get(entity.id) ?? []),
+  );
 }
 
 export async function getGenealogyPersonFromKnowledge(

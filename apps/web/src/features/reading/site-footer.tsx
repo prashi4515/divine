@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { BookOpen, Languages, Search } from "lucide-react";
+import { PUBLIC_AUTH_UI_ENABLED } from "@/lib/auth/config";
 import { READING_LANGUAGES } from "@/lib/reading/languages";
 import { useHomeMessages, useMessages } from "@/lib/i18n/use-messages";
 import { useReadingStore } from "@/lib/stores/reading-store";
@@ -100,7 +101,9 @@ export function SiteFooter() {
 
           <FooterColumn title={t.footerExplore} links={explore} />
           <FooterColumn title={t.footerReading} links={reading} />
-          <FooterColumn title={t.footerAccount} links={account} />
+          {PUBLIC_AUTH_UI_ENABLED ? (
+            <FooterColumn title={t.footerAccount} links={account} />
+          ) : null}
         </div>
 
         <div className="border-border/70 mx-auto mt-12 max-w-6xl border-t pt-8">

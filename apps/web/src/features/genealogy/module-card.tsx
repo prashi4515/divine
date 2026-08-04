@@ -1,19 +1,32 @@
+"use client";
+
 import Link from "next/link";
 import { ArrowUpRight, Sparkles } from "lucide-react";
 import type { GenealogyModule } from "@/lib/genealogy/types";
+import { localizeGenealogyModule } from "@/lib/i18n/genealogy-module-messages";
+import {
+  useGenealogyUiMessages,
+  useUiLanguage,
+} from "@/lib/i18n/use-messages";
+import type { ReadingLanguageCode } from "@/lib/reading/languages";
 import { cn } from "@/lib/utils";
 
 /**
- * Premium module card used on the /genealogy landing.
- * Server component — no interactivity, purely presentational.
+ * Localized genealogy module card — follows the UI language switcher.
  */
 export function ModuleCard({
   module: mod,
   index,
+  initialLanguage,
 }: {
   module: GenealogyModule;
   index: number;
+  initialLanguage?: ReadingLanguageCode;
 }) {
+  const t = useGenealogyUiMessages(initialLanguage);
+  const lang = useUiLanguage(initialLanguage);
+  const copy = localizeGenealogyModule(mod, lang);
+
   const isAvailable = mod.status === "available";
   const accent = mod.color?.accent ?? "#8b6d2c";
   const tint = mod.color?.tint ?? "#f8ecc9";
@@ -45,12 +58,8 @@ export function ModuleCard({
       />
 
       <div className="flex items-start justify-between gap-4">
-        <span
-          className={cn(
-            "text-saffron text-[10px] font-medium uppercase tracking-[0.18em]",
-          )}
-        >
-          {mod.eyebrow ?? "Module"}
+        <span className="text-saffron text-[10px] font-medium uppercase tracking-[0.18em]">
+          {copy.eyebrow || t.moduleFallback}
         </span>
         {isAvailable ? (
           <ArrowUpRight
@@ -59,32 +68,32 @@ export function ModuleCard({
           />
         ) : (
           <span className="text-muted-foreground bg-muted rounded-full px-2 py-0.5 text-[10px] tracking-wide">
-            Coming soon
+            {t.comingSoon}
           </span>
         )}
       </div>
 
       <h2 className="text-foreground mt-3 font-serif text-xl leading-tight tracking-tight sm:text-[1.35rem]">
-        {mod.title}
+        {copy.title}
       </h2>
 
       <p className="text-muted-foreground mt-3 flex-1 text-sm leading-relaxed">
-        {mod.summary}
+        {copy.summary}
       </p>
 
       <div className="border-border/60 mt-5 flex items-center justify-between border-t pt-4">
         <span className="text-muted-foreground/90 inline-flex items-center gap-1.5 text-xs">
           <Sparkles className="h-3 w-3" aria-hidden />
-          {personCount === 0
-            ? "In preparation"
-            : `${personCount} figures`}
+          {personCount === 0 ? t.inPreparation : t.figures(personCount)}
         </span>
         {isAvailable ? (
           <span className="text-foreground text-xs font-medium underline-offset-4 group-hover:underline">
-            Explore
+            {t.explore}
           </span>
         ) : (
-          <span className="text-muted-foreground/80 text-xs">In preparation</span>
+          <span className="text-muted-foreground/80 text-xs">
+            {t.inPreparation}
+          </span>
         )}
       </div>
     </>

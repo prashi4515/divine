@@ -8,14 +8,24 @@ import { SearchPageClient } from "@/features/search";
 import { SearchSkeleton } from "@/features/search/search-skeleton";
 import { SiteFooter } from "@/features/reading/site-footer";
 import { SiteHeader } from "@/features/reading/site-header";
+import { Breadcrumbs } from "@/components/breadcrumbs";
+import { JsonLd } from "@/components/json-ld";
 import { warmKnowledgeSearchIndex } from "@/lib/search/knowledge-search";
+import {
+  breadcrumbJsonLd,
+  buildPageMetadata,
+  searchSeo,
+  websiteJsonLd,
+} from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Knowledge Search - Divine",
-  description:
-    "Search people, places, events, kingdoms, weapons, concepts, genealogy, atlas, and Bhagavad Gita verses. Aliases, Sanskrit, and fuzzy matching over a static knowledge index.",
-  alternates: { canonical: "/search" },
-};
+export async function generateMetadata({
+  searchParams,
+}: {
+  searchParams: Promise<{ q?: string }>;
+}): Promise<Metadata> {
+  const sp = await searchParams;
+  return buildPageMetadata(searchSeo(sp.q));
+}
 
 void warmKnowledgeSearchIndex().catch(() => undefined);
 
@@ -42,6 +52,11 @@ async function SearchBody({ searchParams }: SearchPageProps) {
 }
 
 export default function SearchPage(props: SearchPageProps) {
+  const crumbs = [
+    { name: "Home", href: "/" },
+    { name: "Search" },
+  ];
+
   return (
     <div className="relative flex min-h-svh flex-col">
       <div
@@ -55,12 +70,17 @@ export default function SearchPage(props: SearchPageProps) {
         }}
       />
       <SiteHeader />
-      <main className="page-gutter w-full flex-1 pb-14 pt-4 sm:pb-16 md:pb-20 md:pt-6">
+      <main
+        id="main-content"
+        className="page-gutter w-full flex-1 pb-14 pt-4 sm:pb-16 md:pb-20 md:pt-6"
+      >
+        <Breadcrumbs items={crumbs} className="mb-4" />
         <Suspense fallback={<SearchSkeleton />}>
           <SearchBody searchParams={props.searchParams} />
         </Suspense>
       </main>
       <SiteFooter />
+      <JsonLd data={[breadcrumbJsonLd(crumbs), websiteJsonLd()]} />
     </div>
   );
 }

@@ -1,29 +1,15 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import { buildPageMetadata, hubIndexSeo } from "@/lib/seo";
 import { LocalizedModuleHeader } from "@/features/reading/localized-module-header";
 import { ConceptCard } from "@/features/concepts/concept-card";
+import { HubCountLine } from "@/features/knowledge/hub-count-line";
 import { SiteFooter } from "@/features/reading/site-footer";
 import { SiteHeader } from "@/features/reading/site-header";
 import { getConcepts } from "@/lib/concepts/store";
 
-export const dynamic = "force-static";
-export const revalidate = false;
+export const dynamic = "force-dynamic";
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://divine.app";
-
-export const metadata: Metadata = {
-  title: "Concepts - Dharma, Karma, Yoga & more",
-  description:
-    "Philosophical concepts from the Knowledge Graph - definition, meaning, etymology, verses, chapters, characters, events, and related ideas.",
-  alternates: { canonical: "/concepts" },
-  openGraph: {
-    title: "Concepts - Dharma, Karma, Yoga & more",
-    description:
-      "Explore Gita concepts as a dedicated module over the shared Knowledge Graph.",
-    url: `${SITE_URL}/concepts`,
-    type: "website",
-  },
-};
+export const metadata: Metadata = buildPageMetadata(hubIndexSeo("concepts"));
 
 export default async function ConceptsIndexPage() {
   const concepts = await getConcepts();
@@ -42,9 +28,7 @@ export default async function ConceptsIndexPage() {
 
         <section className="page-gutter pb-16 pt-4">
           <div className="mx-auto max-w-6xl">
-            <p className="text-muted-foreground mb-6 text-sm">
-              {concepts.length} concepts
-            </p>
+            <HubCountLine count={concepts.length} kind="concepts" />
             <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
               {concepts.map((concept, i) => (
                 <li key={concept.id}>

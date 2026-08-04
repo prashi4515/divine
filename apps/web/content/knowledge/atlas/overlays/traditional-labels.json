@@ -1,0 +1,1294 @@
+{
+  "schemaVersion": 1,
+  "labels": [
+    {
+      "id": "label.kingdom.himalaya",
+      "kind": "region",
+      "lat": 29.8,
+      "lng": 80.5,
+      "iast": "himalaya",
+      "name": {
+        "en": "Himalaya",
+        "hi": "हिमलय",
+        "sa": "हिमलय",
+        "te": "హిమలయ",
+        "ta": "ஹிமலய",
+        "kn": "ಹಿಮಲಯ",
+        "ml": "ഹിമലയ",
+        "or": "ହିମଲଯ"
+      }
+    },
+    {
+      "id": "label.kingdom.nepa",
+      "kind": "kingdom",
+      "lat": 28.2,
+      "lng": 84.2,
+      "iast": "nepa",
+      "name": {
+        "en": "Nepa",
+        "hi": "नेप",
+        "sa": "नेप",
+        "te": "నేప",
+        "ta": "நேப",
+        "kn": "ನೇಪ",
+        "ml": "നേപ",
+        "or": "ନେପ"
+      }
+    },
+    {
+      "id": "label.kingdom.kirata",
+      "kind": "kingdom",
+      "lat": 27,
+      "lng": 91,
+      "iast": "kirata",
+      "name": {
+        "en": "Kirata",
+        "hi": "किरत",
+        "sa": "किरत",
+        "te": "కిరత",
+        "ta": "கிரத",
+        "kn": "ಕಿರತ",
+        "ml": "കിരത",
+        "or": "କିରତ"
+      }
+    },
+    {
+      "id": "label.kingdom.pragjyotisha",
+      "kind": "kingdom",
+      "lat": 26.2,
+      "lng": 91.8,
+      "iast": "pragjyotisa",
+      "name": {
+        "en": "Pragjyotisha",
+        "hi": "प्रग्ज्योतिस",
+        "sa": "प्रग्ज्योतिस",
+        "te": "ప్రగ్జ్యోతిస",
+        "ta": "ப்ரக்ஜ்யோதிஸ",
+        "kn": "ಪ್ರಗ್ಜ್ಯೋತಿಸ",
+        "ml": "പ്രഗ്ജ്യോതിസ",
+        "or": "ପ୍ରଗ୍ଜ୍ଯୋତିସ"
+      }
+    },
+    {
+      "id": "label.kingdom.lauhitya",
+      "kind": "region",
+      "lat": 26,
+      "lng": 90.5,
+      "iast": "lauhitya",
+      "name": {
+        "en": "Lauhitya",
+        "hi": "लौहित्य",
+        "sa": "लौहित्य",
+        "te": "లౌహిత్య",
+        "ta": "லௌஹித்ய",
+        "kn": "ಲೌಹಿತ್ಯ",
+        "ml": "ലൌഹിത്യ",
+        "or": "ଲୌହିତ୍ଯ"
+      }
+    },
+    {
+      "id": "label.kingdom.sonita",
+      "kind": "kingdom",
+      "lat": 26.5,
+      "lng": 89.2,
+      "iast": "sonita",
+      "name": {
+        "en": "Sonita",
+        "hi": "सोनित",
+        "sa": "सोनित",
+        "te": "సోనిత",
+        "ta": "ஸோநித",
+        "kn": "ಸೋನಿತ",
+        "ml": "സോനിത",
+        "or": "ସୋନିତ"
+      }
+    },
+    {
+      "id": "label.kingdom.videha",
+      "kind": "kingdom",
+      "lat": 26.6,
+      "lng": 85.9,
+      "iast": "videha",
+      "name": {
+        "en": "Videha",
+        "hi": "विदेह",
+        "sa": "विदेह",
+        "te": "విదేహ",
+        "ta": "விதேஹ",
+        "kn": "ವಿದೇಹ",
+        "ml": "വിദേഹ",
+        "or": "ଵିଦେହ"
+      }
+    },
+    {
+      "id": "label.kingdom.malla",
+      "kind": "kingdom",
+      "lat": 27,
+      "lng": 83.5,
+      "iast": "malla",
+      "name": {
+        "en": "Malla",
+        "hi": "मल्ल",
+        "sa": "मल्ल",
+        "te": "మల్ల",
+        "ta": "மல்ல",
+        "kn": "ಮಲ್ಲ",
+        "ml": "മല്ല",
+        "or": "ମଲ୍ଲ"
+      }
+    },
+    {
+      "id": "label.kingdom.kosala",
+      "kind": "kingdom",
+      "lat": 26.8,
+      "lng": 82.2,
+      "iast": "kosala",
+      "name": {
+        "en": "Kosala",
+        "hi": "कोसल",
+        "sa": "कोसल",
+        "te": "కోసల",
+        "ta": "கோஸல",
+        "kn": "ಕೋಸಲ",
+        "ml": "കോസല",
+        "or": "କୋସଲ"
+      }
+    },
+    {
+      "id": "label.kingdom.kasi",
+      "kind": "kingdom",
+      "lat": 25.3,
+      "lng": 83,
+      "iast": "kasi",
+      "name": {
+        "en": "Kasi",
+        "hi": "कसि",
+        "sa": "कसि",
+        "te": "కసి",
+        "ta": "கஸி",
+        "kn": "ಕಸಿ",
+        "ml": "കസി",
+        "or": "କସି"
+      }
+    },
+    {
+      "id": "label.kingdom.vatsa",
+      "kind": "kingdom",
+      "lat": 25.4,
+      "lng": 81.9,
+      "iast": "vatsa",
+      "name": {
+        "en": "Vatsa",
+        "hi": "वत्स",
+        "sa": "वत्स",
+        "te": "వత్స",
+        "ta": "வத்ஸ",
+        "kn": "ವತ್ಸ",
+        "ml": "വത്സ",
+        "or": "ଵତ୍ସ"
+      }
+    },
+    {
+      "id": "label.kingdom.magadha",
+      "kind": "kingdom",
+      "lat": 25,
+      "lng": 85.2,
+      "iast": "magadha",
+      "name": {
+        "en": "Magadha",
+        "hi": "मगध",
+        "sa": "मगधः",
+        "te": "మగధ",
+        "ta": "மகதம்",
+        "kn": "ಮಗಧ",
+        "ml": "മഗധ",
+        "or": "ମଗଧ"
+      }
+    },
+    {
+      "id": "label.kingdom.anga",
+      "kind": "kingdom",
+      "lat": 25.2,
+      "lng": 86.8,
+      "iast": "anga",
+      "name": {
+        "en": "Anga",
+        "hi": "अन्ग",
+        "sa": "अन्ग",
+        "te": "అన్గ",
+        "ta": "அந்க",
+        "kn": "ಅನ್ಗ",
+        "ml": "അന്ഗ",
+        "or": "ଅନ୍ଗ"
+      }
+    },
+    {
+      "id": "label.kingdom.pundra",
+      "kind": "kingdom",
+      "lat": 24.8,
+      "lng": 88.5,
+      "iast": "pundra",
+      "name": {
+        "en": "Pundra",
+        "hi": "पुन्द्र",
+        "sa": "पुन्द्र",
+        "te": "పున్ద్ర",
+        "ta": "புந்த்ர",
+        "kn": "ಪುನ್ದ್ರ",
+        "ml": "പുന്ദ്ര",
+        "or": "ପୁନ୍ଦ୍ର"
+      }
+    },
+    {
+      "id": "label.kingdom.suhma",
+      "kind": "kingdom",
+      "lat": 22.8,
+      "lng": 88,
+      "iast": "suhma",
+      "name": {
+        "en": "Suhma",
+        "hi": "सुह्म",
+        "sa": "सुह्म",
+        "te": "సుహ్మ",
+        "ta": "ஸுஹ்ம",
+        "kn": "ಸುಹ್ಮ",
+        "ml": "സുഹ്മ",
+        "or": "ସୁହ୍ମ"
+      }
+    },
+    {
+      "id": "label.kingdom.vanga",
+      "kind": "kingdom",
+      "lat": 23.2,
+      "lng": 90,
+      "iast": "vanga",
+      "name": {
+        "en": "Vanga",
+        "hi": "वन्ग",
+        "sa": "वन्ग",
+        "te": "వన్గ",
+        "ta": "வந்க",
+        "kn": "ವನ್ಗ",
+        "ml": "വന്ഗ",
+        "or": "ଵନ୍ଗ"
+      }
+    },
+    {
+      "id": "label.kingdom.odra",
+      "kind": "kingdom",
+      "lat": 21.5,
+      "lng": 86,
+      "iast": "odra",
+      "name": {
+        "en": "Odra",
+        "hi": "ओद्र",
+        "sa": "ओद्र",
+        "te": "ఓద్ర",
+        "ta": "ஓத்ர",
+        "kn": "ಓದ್ರ",
+        "ml": "ഓദ്ര",
+        "or": "ଓଦ୍ର"
+      }
+    },
+    {
+      "id": "label.kingdom.utkala",
+      "kind": "kingdom",
+      "lat": 20.5,
+      "lng": 85.5,
+      "iast": "utkala",
+      "name": {
+        "en": "Utkala",
+        "hi": "उत्कल",
+        "sa": "उत्कल",
+        "te": "ఉత్కల",
+        "ta": "உத்கல",
+        "kn": "ಉತ್ಕಲ",
+        "ml": "ഉത്കല",
+        "or": "ଉତ୍କଲ"
+      }
+    },
+    {
+      "id": "label.kingdom.kalinga",
+      "kind": "kingdom",
+      "lat": 19.5,
+      "lng": 84.5,
+      "iast": "kalinga",
+      "name": {
+        "en": "Kalinga",
+        "hi": "कलिन्ग",
+        "sa": "कलिन्ग",
+        "te": "కలిన్గ",
+        "ta": "கலிந்க",
+        "kn": "ಕಲಿನ್ಗ",
+        "ml": "കലിന്ഗ",
+        "or": "କଲିନ୍ଗ"
+      }
+    },
+    {
+      "id": "label.kingdom.panchala-n",
+      "kind": "kingdom",
+      "lat": 28.2,
+      "lng": 79.2,
+      "iast": "panchala",
+      "name": {
+        "en": "Panchala (N)",
+        "hi": "पन्छल",
+        "sa": "पन्छल",
+        "te": "పన్ఛల",
+        "ta": "பந்சல",
+        "kn": "ಪನ್ಛಲ",
+        "ml": "പന്ഛല",
+        "or": "ପନ୍ଛଲ"
+      }
+    },
+    {
+      "id": "label.kingdom.panchala-s",
+      "kind": "kingdom",
+      "lat": 27,
+      "lng": 79.5,
+      "iast": "panchala",
+      "name": {
+        "en": "Panchala (S)",
+        "hi": "पन्छल",
+        "sa": "पन्छल",
+        "te": "పన్ఛల",
+        "ta": "பந்சல",
+        "kn": "ಪನ್ಛಲ",
+        "ml": "പന്ഛല",
+        "or": "ପନ୍ଛଲ"
+      }
+    },
+    {
+      "id": "label.forest.naimisha",
+      "kind": "forest",
+      "lat": 27.4,
+      "lng": 80.6,
+      "iast": "naimisa",
+      "name": {
+        "en": "Naimisha",
+        "hi": "नैमिस",
+        "sa": "नैमिस",
+        "te": "నైమిస",
+        "ta": "நைமிஸ",
+        "kn": "ನೈಮಿಸ",
+        "ml": "നൈമിസ",
+        "or": "ନୈମିସ"
+      }
+    },
+    {
+      "id": "label.kingdom.kuru-e",
+      "kind": "kingdom",
+      "lat": 29,
+      "lng": 77.5,
+      "iast": "kuru",
+      "name": {
+        "en": "Kuru (E)",
+        "hi": "कुरु",
+        "sa": "कुरु",
+        "te": "కురు",
+        "ta": "குரு",
+        "kn": "ಕುರು",
+        "ml": "കുരു",
+        "or": "କୁରୁ"
+      }
+    },
+    {
+      "id": "label.kingdom.kuru-w",
+      "kind": "kingdom",
+      "lat": 29.5,
+      "lng": 76.5,
+      "iast": "kuru",
+      "name": {
+        "en": "Kuru (W)",
+        "hi": "कुरु",
+        "sa": "कुरु",
+        "te": "కురు",
+        "ta": "குரு",
+        "kn": "ಕುರು",
+        "ml": "കുരു",
+        "or": "କୁରୁ"
+      }
+    },
+    {
+      "id": "label.kingdom.matsya",
+      "kind": "kingdom",
+      "lat": 27,
+      "lng": 76.5,
+      "iast": "matsya",
+      "name": {
+        "en": "Matsya",
+        "hi": "मत्स्य",
+        "sa": "मत्स्य",
+        "te": "మత్స్య",
+        "ta": "மத்ஸ்ய",
+        "kn": "ಮತ್ಸ್ಯ",
+        "ml": "മത്സ്യ",
+        "or": "ମତ୍ସ୍ଯ"
+      }
+    },
+    {
+      "id": "label.kingdom.surasena",
+      "kind": "kingdom",
+      "lat": 27.5,
+      "lng": 77.7,
+      "iast": "surasena",
+      "name": {
+        "en": "Surasena",
+        "hi": "सुरसेन",
+        "sa": "सुरसेन",
+        "te": "సురసేన",
+        "ta": "ஸுரஸேந",
+        "kn": "ಸುರಸೇನ",
+        "ml": "സുരസേന",
+        "or": "ସୁରସେନ"
+      }
+    },
+    {
+      "id": "label.kingdom.salwa",
+      "kind": "kingdom",
+      "lat": 28,
+      "lng": 75.5,
+      "iast": "salwa",
+      "name": {
+        "en": "Salwa",
+        "hi": "सल्wअ",
+        "sa": "सल्wअ",
+        "te": "సల్wఅ",
+        "ta": "ஸல்wஅ",
+        "kn": "ಸಲ್wಅ",
+        "ml": "സല്wഅ",
+        "or": "ସଲ୍wଅ"
+      }
+    },
+    {
+      "id": "label.kingdom.kunti",
+      "kind": "kingdom",
+      "lat": 24.5,
+      "lng": 76,
+      "iast": "kunti",
+      "name": {
+        "en": "Kunti",
+        "hi": "कुन्ति",
+        "sa": "कुन्ति",
+        "te": "కున్తి",
+        "ta": "குந்தி",
+        "kn": "ಕುನ್ತಿ",
+        "ml": "കുന്തി",
+        "or": "କୁନ୍ତି"
+      }
+    },
+    {
+      "id": "label.kingdom.chedi",
+      "kind": "kingdom",
+      "lat": 24.2,
+      "lng": 80.5,
+      "iast": "chedi",
+      "name": {
+        "en": "Chedi",
+        "hi": "छेदि",
+        "sa": "छेदि",
+        "te": "ఛేది",
+        "ta": "சேதி",
+        "kn": "ಛೇದಿ",
+        "ml": "ഛേദി",
+        "or": "ଛେଦି"
+      }
+    },
+    {
+      "id": "label.kingdom.dasarna",
+      "kind": "kingdom",
+      "lat": 23.5,
+      "lng": 78.5,
+      "iast": "dasarna",
+      "name": {
+        "en": "Dasarna",
+        "hi": "दसर्न",
+        "sa": "दसर्न",
+        "te": "దసర్న",
+        "ta": "தஸர்ந",
+        "kn": "ದಸರ್ನ",
+        "ml": "ദസര്ന",
+        "or": "ଦସର୍ନ"
+      }
+    },
+    {
+      "id": "label.kingdom.nishadha",
+      "kind": "kingdom",
+      "lat": 23,
+      "lng": 77,
+      "iast": "nisadha",
+      "name": {
+        "en": "Nishadha",
+        "hi": "निसध",
+        "sa": "निसध",
+        "te": "నిసధ",
+        "ta": "நிஸத",
+        "kn": "ನಿಸಧ",
+        "ml": "നിസധ",
+        "or": "ନିସଧ"
+      }
+    },
+    {
+      "id": "label.mountain.riksha",
+      "kind": "mountain",
+      "lat": 22.5,
+      "lng": 79.5,
+      "iast": "riksa",
+      "name": {
+        "en": "Riksha",
+        "hi": "रिक्स",
+        "sa": "रिक्स",
+        "te": "రిక్స",
+        "ta": "ரிக்ஸ",
+        "kn": "ರಿಕ್ಸ",
+        "ml": "രിക്സ",
+        "or": "ରିକ୍ସ"
+      }
+    },
+    {
+      "id": "label.kingdom.vidarbha",
+      "kind": "kingdom",
+      "lat": 21,
+      "lng": 78.5,
+      "iast": "vidarbha",
+      "name": {
+        "en": "Vidarbha",
+        "hi": "विदर्भ",
+        "sa": "विदर्भ",
+        "te": "విదర్భ",
+        "ta": "விதர்ப",
+        "kn": "ವಿದರ್ಭ",
+        "ml": "വിദര്ഭ",
+        "or": "ଵିଦର୍ଭ"
+      }
+    },
+    {
+      "id": "label.kingdom.sindhu",
+      "kind": "kingdom",
+      "lat": 26,
+      "lng": 68.5,
+      "iast": "sindhu",
+      "name": {
+        "en": "Sindhu",
+        "hi": "सिन्धु",
+        "sa": "सिन्धु",
+        "te": "సిన్ధు",
+        "ta": "ஸிந்து",
+        "kn": "ಸಿನ್ಧು",
+        "ml": "സിന്ധു",
+        "or": "ସିନ୍ଧୁ"
+      }
+    },
+    {
+      "id": "label.kingdom.amvastha",
+      "kind": "kingdom",
+      "lat": 30.5,
+      "lng": 73.5,
+      "iast": "amvastha",
+      "name": {
+        "en": "Amvastha",
+        "hi": "अम्वस्थ",
+        "sa": "अम्वस्थ",
+        "te": "అమ్వస్థ",
+        "ta": "அம்வஸ்த",
+        "kn": "ಅಮ್ವಸ್ಥ",
+        "ml": "അമ്വസ്ഥ",
+        "or": "ଅମ୍ଵସ୍ଥ"
+      }
+    },
+    {
+      "id": "label.kingdom.sivi",
+      "kind": "kingdom",
+      "lat": 30,
+      "lng": 72.5,
+      "iast": "sivi",
+      "name": {
+        "en": "Sivi",
+        "hi": "सिवि",
+        "sa": "सिवि",
+        "te": "సివి",
+        "ta": "ஸிவி",
+        "kn": "ಸಿವಿ",
+        "ml": "സിവി",
+        "or": "ସିଵି"
+      }
+    },
+    {
+      "id": "label.forest.kamyaka",
+      "kind": "forest",
+      "lat": 29,
+      "lng": 73.5,
+      "iast": "kamyaka",
+      "name": {
+        "en": "Kamyaka",
+        "hi": "कम्यक",
+        "sa": "कम्यक",
+        "te": "కమ్యక",
+        "ta": "கம்யக",
+        "kn": "ಕಮ್ಯಕ",
+        "ml": "കമ്യക",
+        "or": "କମ୍ଯକ"
+      }
+    },
+    {
+      "id": "label.city.dwarka",
+      "kind": "city",
+      "lat": 22.24,
+      "lng": 68.97,
+      "iast": "dvaraka",
+      "name": {
+        "en": "Dwarka",
+        "hi": "द्वारका",
+        "sa": "द्वारका",
+        "te": "ద్వారక",
+        "ta": "துவாரகை",
+        "kn": "ದ್ವಾರಕ",
+        "ml": "ദ്വാരക",
+        "or": "ଦ୍ୱାରକା"
+      }
+    },
+    {
+      "id": "label.kingdom.gurjara",
+      "kind": "kingdom",
+      "lat": 23.5,
+      "lng": 72,
+      "iast": "gurjara",
+      "name": {
+        "en": "Gurjara",
+        "hi": "गुर्जर",
+        "sa": "गुर्जर",
+        "te": "గుర్జర",
+        "ta": "குர்ஜர",
+        "kn": "ಗುರ್ಜರ",
+        "ml": "ഗുര്ജര",
+        "or": "ଗୁର୍ଜର"
+      }
+    },
+    {
+      "id": "label.mountain.arbuda",
+      "kind": "mountain",
+      "lat": 24.6,
+      "lng": 72.7,
+      "iast": "arbuda",
+      "name": {
+        "en": "Arbuda",
+        "hi": "अर्बुद",
+        "sa": "अर्बुद",
+        "te": "అర్బుద",
+        "ta": "அர்புத",
+        "kn": "ಅರ್ಬುದ",
+        "ml": "അര്ബുദ",
+        "or": "ଅର୍ବୁଦ"
+      }
+    },
+    {
+      "id": "label.kingdom.malava",
+      "kind": "kingdom",
+      "lat": 23.2,
+      "lng": 75.8,
+      "iast": "malava",
+      "name": {
+        "en": "Malava",
+        "hi": "मलव",
+        "sa": "मलव",
+        "te": "మలవ",
+        "ta": "மலவ",
+        "kn": "ಮಲವ",
+        "ml": "മലവ",
+        "or": "ମଲଵ"
+      }
+    },
+    {
+      "id": "label.kingdom.anarta",
+      "kind": "kingdom",
+      "lat": 22.3,
+      "lng": 70.8,
+      "iast": "anarta",
+      "name": {
+        "en": "Anarta",
+        "hi": "अनर्त",
+        "sa": "अनर्त",
+        "te": "అనర్త",
+        "ta": "அநர்த",
+        "kn": "ಅನರ್ತ",
+        "ml": "അനര്ത",
+        "or": "ଅନର୍ତ"
+      }
+    },
+    {
+      "id": "label.kingdom.avanti",
+      "kind": "kingdom",
+      "lat": 23.2,
+      "lng": 75.8,
+      "iast": "avanti",
+      "name": {
+        "en": "Avanti",
+        "hi": "अवन्ति",
+        "sa": "अवन्ति",
+        "te": "అవన్తి",
+        "ta": "அவந்தி",
+        "kn": "ಅವನ್ತಿ",
+        "ml": "അവന്തി",
+        "or": "ଅଵନ୍ତି"
+      }
+    },
+    {
+      "id": "label.kingdom.heyaya",
+      "kind": "kingdom",
+      "lat": 22,
+      "lng": 76.5,
+      "iast": "heyaya",
+      "name": {
+        "en": "Heyaya",
+        "hi": "हेयय",
+        "sa": "हेयय",
+        "te": "హేయయ",
+        "ta": "ஹேயய",
+        "kn": "ಹೇಯಯ",
+        "ml": "ഹേയയ",
+        "or": "ହେଯଯ"
+      }
+    },
+    {
+      "id": "label.kingdom.asmaka",
+      "kind": "kingdom",
+      "lat": 19,
+      "lng": 77,
+      "iast": "asmaka",
+      "name": {
+        "en": "Asmaka",
+        "hi": "अस्मक",
+        "sa": "अस्मक",
+        "te": "అస్మక",
+        "ta": "அஸ்மக",
+        "kn": "ಅಸ್ಮಕ",
+        "ml": "അസ്മക",
+        "or": "ଅସ୍ମକ"
+      }
+    },
+    {
+      "id": "label.forest.dandaka",
+      "kind": "forest",
+      "lat": 20,
+      "lng": 78,
+      "iast": "dandaka",
+      "name": {
+        "en": "Dandaka",
+        "hi": "दन्दक",
+        "sa": "दन्दक",
+        "te": "దన్దక",
+        "ta": "தந்தக",
+        "kn": "ದನ್ದಕ",
+        "ml": "ദന്ദക",
+        "or": "ଦନ୍ଦକ"
+      }
+    },
+    {
+      "id": "label.kingdom.telinga",
+      "kind": "kingdom",
+      "lat": 17.5,
+      "lng": 79.5,
+      "iast": "telinga",
+      "name": {
+        "en": "Telinga",
+        "hi": "तेलिन्ग",
+        "sa": "तेलिन्ग",
+        "te": "తేలిన్గ",
+        "ta": "தேலிந்க",
+        "kn": "ತೇಲಿನ್ಗ",
+        "ml": "തേലിന്ഗ",
+        "or": "ତେଲିନ୍ଗ"
+      }
+    },
+    {
+      "id": "label.kingdom.andhra",
+      "kind": "kingdom",
+      "lat": 16.5,
+      "lng": 80.5,
+      "iast": "andhra",
+      "name": {
+        "en": "Andhra",
+        "hi": "अन्ध्र",
+        "sa": "अन्ध्र",
+        "te": "అన్ధ్ర",
+        "ta": "அந்த்ர",
+        "kn": "ಅನ್ಧ್ರ",
+        "ml": "അന്ധ്ര",
+        "or": "ଅନ୍ଧ୍ର"
+      }
+    },
+    {
+      "id": "label.mountain.mahendra",
+      "kind": "mountain",
+      "lat": 18.5,
+      "lng": 83.5,
+      "iast": "mahendra",
+      "name": {
+        "en": "Mahendra",
+        "hi": "महेन्द्र",
+        "sa": "महेन्द्र",
+        "te": "మహేన్ద్ర",
+        "ta": "மஹேந்த்ர",
+        "kn": "ಮಹೇನ್ದ್ರ",
+        "ml": "മഹേന്ദ്ര",
+        "or": "ମହେନ୍ଦ୍ର"
+      }
+    },
+    {
+      "id": "label.kingdom.gandhara",
+      "kind": "kingdom",
+      "lat": 34,
+      "lng": 71.5,
+      "iast": "gandhara",
+      "name": {
+        "en": "Gandhara",
+        "hi": "गन्धर",
+        "sa": "गन्धर",
+        "te": "గన్ధర",
+        "ta": "கந்தர",
+        "kn": "ಗನ್ಧರ",
+        "ml": "ഗന്ധര",
+        "or": "ଗନ୍ଧର"
+      }
+    },
+    {
+      "id": "label.kingdom.kamboja",
+      "kind": "kingdom",
+      "lat": 34.5,
+      "lng": 70,
+      "iast": "kamboja",
+      "name": {
+        "en": "Kamboja",
+        "hi": "कम्बोज",
+        "sa": "कम्बोज",
+        "te": "కమ్బోజ",
+        "ta": "கம்போஜ",
+        "kn": "ಕಮ್ಬೋಜ",
+        "ml": "കമ്ബോജ",
+        "or": "କମ୍ବୋଜ"
+      }
+    },
+    {
+      "id": "label.forest.madhu",
+      "kind": "forest",
+      "lat": 28.5,
+      "lng": 77.2,
+      "iast": "madhu",
+      "name": {
+        "en": "Madhu",
+        "hi": "मधु",
+        "sa": "मधु",
+        "te": "మధు",
+        "ta": "மது",
+        "kn": "ಮಧು",
+        "ml": "മധു",
+        "or": "ମଧୁ"
+      }
+    },
+    {
+      "id": "label.mountain.vindhya",
+      "kind": "mountain",
+      "lat": 23.5,
+      "lng": 80,
+      "iast": "vindhya",
+      "name": {
+        "en": "Vindhya",
+        "hi": "विन्ध्य",
+        "sa": "विन्ध्य",
+        "te": "విన్ధ్య",
+        "ta": "விந்த்ய",
+        "kn": "ವಿನ್ಧ್ಯ",
+        "ml": "വിന്ധ്യ",
+        "or": "ଵିନ୍ଧ୍ଯ"
+      }
+    },
+    {
+      "id": "label.mountain.paripatra",
+      "kind": "mountain",
+      "lat": 24.5,
+      "lng": 74.5,
+      "iast": "paripatra",
+      "name": {
+        "en": "Paripatra",
+        "hi": "परिपत्र",
+        "sa": "परिपत्र",
+        "te": "పరిపత్ర",
+        "ta": "பரிபத்ர",
+        "kn": "ಪರಿಪತ್ರ",
+        "ml": "പരിപത്ര",
+        "or": "ପରିପତ୍ର"
+      }
+    },
+    {
+      "id": "label.river.drisadvati",
+      "kind": "river",
+      "lat": 29.5,
+      "lng": 76,
+      "iast": "drisadvati",
+      "name": {
+        "en": "Drisadvati",
+        "hi": "द्रिसद्वति",
+        "sa": "द्रिसद्वति",
+        "te": "ద్రిసద్వతి",
+        "ta": "த்ரிஸத்வதி",
+        "kn": "ದ್ರಿಸದ್ವತಿ",
+        "ml": "ദ്രിസദ്വതി",
+        "or": "ଦ୍ରିସଦ୍ଵତି"
+      }
+    },
+    {
+      "id": "label.river.yamuna",
+      "kind": "river",
+      "lat": 27.5,
+      "lng": 78,
+      "iast": "yamuna",
+      "name": {
+        "en": "Yamuna",
+        "hi": "यमुन",
+        "sa": "यमुन",
+        "te": "యమున",
+        "ta": "யமுந",
+        "kn": "ಯಮುನ",
+        "ml": "യമുന",
+        "or": "ଯମୁନ"
+      }
+    },
+    {
+      "id": "label.river.ganga",
+      "kind": "river",
+      "lat": 25.5,
+      "lng": 83,
+      "iast": "ganga",
+      "name": {
+        "en": "Ganga",
+        "hi": "गंगा",
+        "sa": "गङ्गा",
+        "te": "గంగా",
+        "ta": "கங்கை",
+        "kn": "ಗಂಗಾ",
+        "ml": "ഗംഗാ",
+        "or": "ଗଙ୍ଗା"
+      }
+    },
+    {
+      "id": "label.river.gandaki",
+      "kind": "river",
+      "lat": 27.2,
+      "lng": 84.5,
+      "iast": "gandaki",
+      "name": {
+        "en": "Gandaki",
+        "hi": "गन्दकि",
+        "sa": "गन्दकि",
+        "te": "గన్దకి",
+        "ta": "கந்தகி",
+        "kn": "ಗನ್ದಕಿ",
+        "ml": "ഗന്ദകി",
+        "or": "ଗନ୍ଦକି"
+      }
+    },
+    {
+      "id": "label.river.sarayu",
+      "kind": "river",
+      "lat": 26.9,
+      "lng": 82,
+      "iast": "sarayu",
+      "name": {
+        "en": "Sarayu",
+        "hi": "सरयु",
+        "sa": "सरयु",
+        "te": "సరయు",
+        "ta": "ஸரயு",
+        "kn": "ಸರಯು",
+        "ml": "സരയു",
+        "or": "ସରଯୁ"
+      }
+    },
+    {
+      "id": "label.river.kausaki",
+      "kind": "river",
+      "lat": 26.5,
+      "lng": 87,
+      "iast": "kausaki",
+      "name": {
+        "en": "Kausaki",
+        "hi": "कौसकि",
+        "sa": "कौसकि",
+        "te": "కౌసకి",
+        "ta": "கௌஸகி",
+        "kn": "ಕೌಸಕಿ",
+        "ml": "കൌസകി",
+        "or": "କୌସକି"
+      }
+    },
+    {
+      "id": "label.river.saraswati",
+      "kind": "river",
+      "lat": 28.5,
+      "lng": 75,
+      "iast": "sarasvati",
+      "name": {
+        "en": "Saraswati",
+        "hi": "सरस्वति",
+        "sa": "सरस्वति",
+        "te": "సరస్వతి",
+        "ta": "ஸரஸ்வதி",
+        "kn": "ಸರಸ್ವತಿ",
+        "ml": "സരസ്വതി",
+        "or": "ସରସ୍ଵତି"
+      }
+    },
+    {
+      "id": "label.river.charmanvati",
+      "kind": "river",
+      "lat": 25,
+      "lng": 76.5,
+      "iast": "charmanvati",
+      "name": {
+        "en": "Charmanvati",
+        "hi": "छर्मन्वति",
+        "sa": "छर्मन्वति",
+        "te": "ఛర్మన్వతి",
+        "ta": "சர்மந்வதி",
+        "kn": "ಛರ್ಮನ್ವತಿ",
+        "ml": "ഛര്മന്വതി",
+        "or": "ଛର୍ମନ୍ଵତି"
+      }
+    },
+    {
+      "id": "label.river.narmada",
+      "kind": "river",
+      "lat": 22.5,
+      "lng": 78,
+      "iast": "narmada",
+      "name": {
+        "en": "Narmada",
+        "hi": "नर्मद",
+        "sa": "नर्मद",
+        "te": "నర్మద",
+        "ta": "நர்மத",
+        "kn": "ನರ್ಮದ",
+        "ml": "നര്മദ",
+        "or": "ନର୍ମଦ"
+      }
+    },
+    {
+      "id": "label.river.suktimati",
+      "kind": "river",
+      "lat": 23.8,
+      "lng": 80.2,
+      "iast": "suktimati",
+      "name": {
+        "en": "Suktimati",
+        "hi": "सुक्तिमति",
+        "sa": "सुक्तिमति",
+        "te": "సుక్తిమతి",
+        "ta": "ஸுக்திமதி",
+        "kn": "ಸುಕ್ತಿಮತಿ",
+        "ml": "സുക്തിമതി",
+        "or": "ସୁକ୍ତିମତି"
+      }
+    },
+    {
+      "id": "label.river.vaitarani",
+      "kind": "river",
+      "lat": 21,
+      "lng": 86,
+      "iast": "vaitarani",
+      "name": {
+        "en": "Vaitarani",
+        "hi": "वैतरनि",
+        "sa": "वैतरनि",
+        "te": "వైతరని",
+        "ta": "வைதரநி",
+        "kn": "ವೈತರನಿ",
+        "ml": "വൈതരനി",
+        "or": "ଵୈତରନି"
+      }
+    },
+    {
+      "id": "label.river.mahanadi",
+      "kind": "river",
+      "lat": 20.5,
+      "lng": 84,
+      "iast": "mahanadi",
+      "name": {
+        "en": "Mahanadi",
+        "hi": "महनदि",
+        "sa": "महनदि",
+        "te": "మహనది",
+        "ta": "மஹநதி",
+        "kn": "ಮಹನದಿ",
+        "ml": "മഹനദി",
+        "or": "ମହନଦି"
+      }
+    },
+    {
+      "id": "label.river.godavari",
+      "kind": "river",
+      "lat": 18,
+      "lng": 78.5,
+      "iast": "godavari",
+      "name": {
+        "en": "Godavari",
+        "hi": "गोदवरि",
+        "sa": "गोदवरि",
+        "te": "గోదవరి",
+        "ta": "கோதவரி",
+        "kn": "ಗೋದವರಿ",
+        "ml": "ഗോദവരി",
+        "or": "ଗୋଦଵରି"
+      }
+    },
+    {
+      "id": "label.river.krishna",
+      "kind": "river",
+      "lat": 16.5,
+      "lng": 78,
+      "iast": "krsna",
+      "name": {
+        "en": "Krishna",
+        "hi": "क्र्स्न",
+        "sa": "क्र्स्न",
+        "te": "క్ర్స్న",
+        "ta": "க்ர்ஸ்ந",
+        "kn": "ಕ್ರ್ಸ್ನ",
+        "ml": "ക്ര്സ്ന",
+        "or": "କ୍ର୍ସ୍ନ"
+      }
+    },
+    {
+      "id": "label.river.tapati",
+      "kind": "river",
+      "lat": 21.2,
+      "lng": 74.5,
+      "iast": "tapati",
+      "name": {
+        "en": "Tapati",
+        "hi": "तपति",
+        "sa": "तपति",
+        "te": "తపతి",
+        "ta": "தபதி",
+        "kn": "ತಪತಿ",
+        "ml": "തപതി",
+        "or": "ତପତି"
+      }
+    },
+    {
+      "id": "label.river.sindhu",
+      "kind": "river",
+      "lat": 28,
+      "lng": 69.5,
+      "iast": "sindhu",
+      "name": {
+        "en": "Sindhu",
+        "hi": "सिन्धु",
+        "sa": "सिन्धु",
+        "te": "సిన్ధు",
+        "ta": "ஸிந்து",
+        "kn": "ಸಿನ್ಧು",
+        "ml": "സിന്ധു",
+        "or": "ସିନ୍ଧୁ"
+      }
+    },
+    {
+      "id": "label.river.lavanavati",
+      "kind": "river",
+      "lat": 27,
+      "lng": 72,
+      "iast": "lavanavati",
+      "name": {
+        "en": "Lavanavati",
+        "hi": "लवनवति",
+        "sa": "लवनवति",
+        "te": "లవనవతి",
+        "ta": "லவநவதி",
+        "kn": "ಲವನವತಿ",
+        "ml": "ലവനവതി",
+        "or": "ଲଵନଵତି"
+      }
+    },
+    {
+      "id": "label.sea.arabian",
+      "kind": "sea",
+      "lat": 18,
+      "lng": 68,
+      "name": {
+        "en": "Arabian Sea",
+        "hi": "अरब सागर",
+        "sa": "अरबसागरः",
+        "te": "అరేబియా సముద్రం",
+        "ta": "அரபிக்கடல்",
+        "kn": "ಅರಬ್ಬೀ ಸಮುದ್ರ",
+        "ml": "അറബിക്കടൽ",
+        "or": "ଆରବ ସାଗର"
+      }
+    },
+    {
+      "id": "label.sea.bengal",
+      "kind": "sea",
+      "lat": 16,
+      "lng": 88,
+      "name": {
+        "en": "Bay of Bengal",
+        "hi": "बंगाल की खाड़ी",
+        "sa": "वङ्गोपसागरः",
+        "te": "బంగాళాఖాతం",
+        "ta": "வங்காள விரிகுடா",
+        "kn": "ಬಂಗಾಳ ಕೊಲ್ಲಿ",
+        "ml": "ബംഗാൾ ഉൾക്കടൽ",
+        "or": "ବଙ୍ଗୋପସାଗର"
+      }
+    },
+    {
+      "id": "label.sea.indian",
+      "kind": "sea",
+      "lat": 8.5,
+      "lng": 78,
+      "name": {
+        "en": "Indian Ocean",
+        "hi": "हिन्द महासागर",
+        "sa": "हिन्दुमहासागरः",
+        "te": "హిందూ మహాసముద్రం",
+        "ta": "இந்தியப் பெருங்கடல்",
+        "kn": "ಹಿಂದೂ ಮಹಾಸಾಗರ",
+        "ml": "ഇന്ത്യൻ മഹാസമുദ്രം",
+        "or": "ହିନ୍ଦୁ ମହାସାଗର"
+      }
+    },
+    {
+      "id": "label.city.hastinapura",
+      "kind": "city",
+      "lat": 29.16,
+      "lng": 78.02,
+      "iast": "hastinapura",
+      "name": {
+        "en": "Hastinapura",
+        "hi": "हस्तिनापुर",
+        "sa": "हस्तिनपुरम्",
+        "te": "హస్తినాపురం",
+        "ta": "ஹஸ்தினாபுரம்",
+        "kn": "ಹಸ್ತಿನಾಪುರ",
+        "ml": "ഹസ്തിനാപുരം",
+        "or": "ହସ୍ତିନାପୁର"
+      }
+    },
+    {
+      "id": "label.city.kurukshetra",
+      "kind": "city",
+      "lat": 29.97,
+      "lng": 76.85,
+      "iast": "kuruksetra",
+      "name": {
+        "en": "Kurukshetra",
+        "hi": "कुरुक्षेत्र",
+        "sa": "कुरुक्षेत्रम्",
+        "te": "కురుక్షేత్రం",
+        "ta": "குருக்ஷேத்திரம்",
+        "kn": "ಕುರುಕ್ಷೇತ್ರ",
+        "ml": "കുരുക്ഷേത്രം",
+        "or": "କୁରୁକ୍ଷେତ୍ର"
+      }
+    }
+  ]
+}

@@ -8,55 +8,48 @@ import Map, {
 } from "react-map-gl/maplibre";
 import type { GeoJSONSource, MapLayerMouseEvent } from "maplibre-gl";
 import "maplibre-gl/dist/maplibre-gl.css";
-import {
-  Layers,
-  Maximize2,
-  Minimize2,
-  Pause,
-  Play,
-  RotateCcw,
-  SkipBack,
-  SkipForward,
-  Route as RouteIcon,
-} from "lucide-react";
 import type { AtlasDataset, AtlasEvent, AtlasRiver } from "@divine/types";
+import type { TraditionalAtlasLabel } from "@/lib/atlas/data/traditional-label-types";
 import type { AtlasPlace } from "@/lib/atlas/geo";
 import {
-  ACTIVE_TILE_PROVIDER,
   ATLAS_MAX_ZOOM,
   ATLAS_MIN_ZOOM,
   atlasDefaultView,
   atlasMaxBounds,
-  buildIllustratedStyle,
+  buildCleanMapStyle,
   loadStoredViewport,
   saveStoredViewport,
 } from "@/lib/atlas/tiles/tile-style";
 import {
   OVERLAY_LAYER_IDS,
   OVERLAY_SOURCE_IDS,
-  OVERLAY_TOGGLES,
   defaultOverlayVisibility,
   type OverlayToggleId,
 } from "@/lib/atlas/overlays/layer-catalog";
 import {
   eventsToGeoJson,
+  kingdomsToGeoJson,
   placesToGeoJson,
   riversToGeoJson,
   routeStopsToGeoJson,
   routesToGeoJson,
   selectedKingdomToGeoJson,
+  traditionalLabelsToGeoJson,
 } from "@/lib/atlas/overlays/to-geojson";
-import { AtlasOverlayLayers } from "@/lib/atlas/renderer/overlay-layers";
+import { syncAtlasOverlays } from "@/lib/atlas/renderer/sync-overlays";
 import type { AtlasSearchResult } from "@/lib/atlas/search/atlas-search-engine";
-import { AtlasMapSearch } from "@/features/atlas/atlas-map-search";
+import { AtlasDomMarkers } from "@/features/atlas/atlas-dom-markers";
 import { AtlasPlacePanel } from "@/features/atlas/atlas-place-panel";
-import { useMessages } from "@/lib/i18n/use-messages";
+import { AtlasSidebar } from "@/features/atlas/atlas-sidebar";
+import { AtlasToolbar } from "@/features/atlas/atlas-toolbar";
+import { useReadingStore } from "@/lib/stores/reading-store";
 import { cn } from "@/lib/utils";
 import "@/features/atlas/atlas.css";
 
 type AtlasMapAppProps = {
   dataset: AtlasDataset;
   places: AtlasPlace[];
+  traditionalLabels?: readonly TraditionalAtlasLabel[];
   initialSlug?: string;
   relatedByPlaceId?: Record<
     string,
@@ -65,23 +58,20 @@ type AtlasMapAppProps = {
 };
 
 /**
- * Illustrated Ancient Bhārata Atlas — MapLibre interaction over one plate.
- * Artwork is never treated as data. Overlays come from JSON / KG only.
+ * Google Maps–style Ancient Bhārata Atlas.
+ * Controls live outside the map; MapLibre owns pan/zoom/flyTo only.
  */
 export function AtlasMapApp({
   dataset,
   places,
+  traditionalLabels = [],
   initialSlug,
   relatedByPlaceId = {},
 }: AtlasMapAppProps) {
-  const t = useMessages();
+  const lang = useReadingStore((s) => s.preferredLanguage);
   const mapRef = React.useRef<MapRef>(null);
   const projection = dataset.projection;
   const baseMap = dataset.baseMap;
-  const mapStyle = React.useMemo(
-    () => buildIllustratedStyle(baseMap, projection),
-    [baseMap, projection],
-  );
   const maxBounds = React.useMemo(
     () => atlasMaxBounds(projection),
     [projection],
@@ -92,7 +82,9 @@ export function AtlasMapApp({
   );
   const [initialView] = React.useState(() => loadStoredViewport() ?? defaultView);
 
-  const [visibility, setVisibility] = React.useState(defaultOverlayVisibility);
+  const [visibility, setVisibility] = React.useState(() =>
+    defaultOverlayVisibility(),
+  );
   const [selectedSlug, setSelectedSlug] = React.useState<string | null>(
     initialSlug ?? null,
   );
@@ -109,14 +101,47 @@ export function AtlasMapApp({
   const [routePlaying, setRoutePlaying] = React.useState(false);
   const [fullscreen, setFullscreen] = React.useState(false);
   const [cursor, setCursor] = React.useState<string>("grab");
+  const [mobileSidebarOpen, setMobileSidebarOpen] = React.useState(false);
+  const [hoveredRiverId, setHoveredRiverId] = React.useState<string | null>(
+    null,
+  );
+  const [hoveredKingdomId, setHoveredKingdomId] = React.useState<string | null>(
+    null,
+  );
 
   const selected = places.find((p) => p.slug === selectedSlug) ?? null;
   const activeRoute =
     dataset.routes.find((r) => r.id === activeRouteId) ?? null;
 
+  const relatedPeople = React.useMemo(() => {
+    const out: Array<{
+      id: string;
+      name: string;
+      placeSlug: string;
+      longitude: number;
+      latitude: number;
+    }> = [];
+    const seen = new Set<string>();
+    for (const place of places) {
+      const related = relatedByPlaceId[place.id] ?? [];
+      for (const person of related) {
+        if (!person.id.startsWith("person.") || seen.has(person.id)) continue;
+        seen.add(person.id);
+        out.push({
+          id: person.id,
+          name: person.name,
+          placeSlug: place.slug,
+          longitude: place.atlas.longitude,
+          latitude: place.atlas.latitude,
+        });
+      }
+    }
+    return out;
+  }, [places, relatedByPlaceId]);
+
   const placesFc = React.useMemo(
-    () => placesToGeoJson(places, visibility),
-    [places, visibility],
+    () => placesToGeoJson(places, visibility, lang),
+    [places, visibility, lang],
   );
   const riversFc = React.useMemo(
     () => riversToGeoJson(dataset.rivers, visibility.rivers),
@@ -135,12 +160,80 @@ export function AtlasMapApp({
     [dataset.events, visibility.events],
   );
   const kingdomsFc = React.useMemo(
-    () =>
-      visibility.kingdoms
-        ? selectedKingdomToGeoJson(dataset.polygons, selected)
-        : { type: "FeatureCollection" as const, features: [] },
-    [dataset.polygons, selected, visibility.kingdoms],
+    () => kingdomsToGeoJson(dataset.polygons, visibility.kingdoms),
+    [dataset.polygons, visibility.kingdoms],
   );
+  const kingdomsSelectedFc = React.useMemo(
+    () => selectedKingdomToGeoJson(dataset.polygons, selected),
+    [dataset.polygons, selected],
+  );
+  const traditionalLabelsFc = React.useMemo(
+    () => traditionalLabelsToGeoJson(traditionalLabels, lang, visibility),
+    [traditionalLabels, lang, visibility],
+  );
+
+  // Basemap style is frozen for the map lifetime. Overlays are React
+  // children (Source/Layer + DOM Markers) — never baked into mapStyle.
+  const mapStyle = React.useMemo(
+    () => buildCleanMapStyle(baseMap?.credit),
+    [baseMap?.credit],
+  );
+
+  const emptyFc = React.useMemo(
+    () => ({ type: "FeatureCollection" as const, features: [] }),
+    [],
+  );
+
+  // Line overlays via imperative API (DOM Markers cover points/labels).
+  const [mapReady, setMapReady] = React.useState(false);
+  React.useEffect(() => {
+    const map = mapRef.current?.getMap();
+    if (!map || !mapReady) return;
+    try {
+      syncAtlasOverlays(
+        map,
+        {
+          places: emptyFc,
+          rivers: riversFc,
+          routes: routesFc,
+          routeStops: emptyFc,
+          events: eventsFc,
+          kingdoms: kingdomsFc,
+          kingdomsSelected: kingdomsSelectedFc,
+          traditionalLabels: emptyFc,
+        },
+        {
+          showLabels: false,
+          showRoutes: visibility.routes,
+          showEvents: visibility.events,
+          showRivers: visibility.rivers,
+          showKingdoms: visibility.kingdoms,
+          selectedPlaceSlug: selectedSlug,
+          selectedRiverId: selectedRiver?.id ?? null,
+          hoveredRiverId,
+          hoveredKingdomId,
+        },
+      );
+    } catch (err) {
+      console.error("[atlas] line overlay sync failed", err);
+    }
+  }, [
+    mapReady,
+    emptyFc,
+    riversFc,
+    routesFc,
+    eventsFc,
+    kingdomsFc,
+    kingdomsSelectedFc,
+    visibility.routes,
+    visibility.events,
+    visibility.rivers,
+    visibility.kingdoms,
+    selectedSlug,
+    selectedRiver?.id,
+    hoveredRiverId,
+    hoveredKingdomId,
+  ]);
 
   const flyTo = React.useCallback(
     (lng: number, lat: number, zoom = 7.5) => {
@@ -193,7 +286,7 @@ export function AtlasMapApp({
         [minLng, minLat],
         [maxLng, maxLat],
       ],
-      { padding: 64, duration: 900, maxZoom: 6.5 },
+      { padding: 72, duration: 900, maxZoom: 6.5 },
     );
   }, [places]);
 
@@ -206,7 +299,6 @@ export function AtlasMapApp({
     }
   }, [initialSlug, places, focusPlace]);
 
-  // Route play — stop-by-stop
   React.useEffect(() => {
     if (!routePlaying || !activeRoute) return;
     const stops = activeRoute.placeIds;
@@ -223,6 +315,7 @@ export function AtlasMapApp({
   }, [routePlaying, routeStopIndex, activeRouteId]);
 
   function onSearchSelect(hit: AtlasSearchResult) {
+    setMobileSidebarOpen(false);
     if (hit.routeId) {
       setActiveRouteId(hit.routeId);
       setRouteStopIndex(0);
@@ -247,6 +340,40 @@ export function AtlasMapApp({
       }
     }
     flyTo(hit.longitude, hit.latitude, hit.zoom);
+  }
+
+  function onMapMouseMove(e: MapLayerMouseEvent) {
+    const map = mapRef.current?.getMap();
+    if (!map) return;
+    const hoverLayers = [
+      OVERLAY_LAYER_IDS.rivers,
+      OVERLAY_LAYER_IDS.kingdomsFill,
+      OVERLAY_LAYER_IDS.places,
+      OVERLAY_LAYER_IDS.events,
+    ].filter((id) => Boolean(map.getLayer(id)));
+    if (hoverLayers.length === 0) return;
+    const feats = map.queryRenderedFeatures(e.point, { layers: hoverLayers });
+    const f = feats[0];
+    if (!f) {
+      setHoveredRiverId(null);
+      setHoveredKingdomId(null);
+      setCursor("grab");
+      return;
+    }
+    setCursor("pointer");
+    const props = f.properties as Record<string, string> | null;
+    if (f.layer.id === OVERLAY_LAYER_IDS.rivers) {
+      setHoveredRiverId(props?.id ?? null);
+      setHoveredKingdomId(null);
+      return;
+    }
+    if (f.layer.id === OVERLAY_LAYER_IDS.kingdomsFill) {
+      setHoveredKingdomId(props?.id ?? null);
+      setHoveredRiverId(null);
+      return;
+    }
+    setHoveredRiverId(null);
+    setHoveredKingdomId(null);
   }
 
   function onMapClick(e: MapLayerMouseEvent) {
@@ -293,6 +420,24 @@ export function AtlasMapApp({
     const props = f.properties as Record<string, string> | null;
     if (!props) return;
 
+    if (f.layer.id === OVERLAY_LAYER_IDS.kingdomsFill) {
+      const poly = dataset.polygons.find((p) => p.id === props.id);
+      if (poly?.entityId) {
+        const place = places.find((p) => p.id === poly.entityId);
+        if (place) {
+          focusPlace(place, Math.max(map.getZoom(), 6.5));
+          return;
+        }
+      }
+      if (poly?.slug) {
+        const place = places.find(
+          (p) => p.slug === poly.slug || p.id === `kingdom.${poly.slug}`,
+        );
+        if (place) focusPlace(place, Math.max(map.getZoom(), 6.5));
+      }
+      return;
+    }
+
     if (f.layer.id === OVERLAY_LAYER_IDS.rivers) {
       const river = dataset.rivers.find((r) => r.id === props.id) ?? null;
       setSelectedRiver(river);
@@ -332,6 +477,20 @@ export function AtlasMapApp({
     setVisibility((v) => ({ ...v, [id]: !v[id] }));
   }
 
+  function selectRoute(routeId: string | null) {
+    setActiveRouteId(routeId);
+    setRoutePlaying(false);
+    setRouteStopIndex(routeId ? 0 : null);
+    if (routeId) {
+      setVisibility((v) => ({ ...v, routes: true }));
+      const route = dataset.routes.find((r) => r.id === routeId);
+      const first = route
+        ? places.find((p) => p.id === route.placeIds[0])
+        : undefined;
+      if (first) focusPlace(first, 6.5);
+    }
+  }
+
   function stepRoute(delta: number) {
     if (!activeRoute) return;
     setRoutePlaying(false);
@@ -347,283 +506,146 @@ export function AtlasMapApp({
     });
   }
 
+  const sidebar = (
+    <AtlasSidebar
+      places={places}
+      dataset={dataset}
+      traditionalLabels={traditionalLabels}
+      relatedPeople={relatedPeople}
+      visibility={visibility}
+      onToggle={toggle}
+      onSearchSelect={onSearchSelect}
+      activeRouteId={activeRouteId}
+      activeRoute={activeRoute}
+      routeStopIndex={routeStopIndex}
+      routePlaying={routePlaying}
+      onSelectRoute={selectRoute}
+      onStepRoute={stepRoute}
+      onTogglePlay={() => {
+        if (routePlaying) setRoutePlaying(false);
+        else {
+          setRouteStopIndex((i) => i ?? 0);
+          setRoutePlaying(true);
+        }
+      }}
+      onRestartRoute={() => {
+        if (!activeRoute) return;
+        setRouteStopIndex(0);
+        setRoutePlaying(false);
+        const first = places.find((p) => p.id === activeRoute.placeIds[0]);
+        if (first) focusPlace(first, 6.5);
+      }}
+      selectedRiver={selectedRiver}
+      selectedEvent={selectedEvent}
+    />
+  );
+
   return (
     <div
       className={cn(
-        "atlas-shell border-border relative flex h-[min(78vh,820px)] min-h-[480px] flex-col overflow-hidden rounded-3xl border shadow-sm",
-        fullscreen && "fixed inset-0 z-50 h-svh min-h-svh rounded-none border-0",
+        "atlas-shell bg-background flex h-full min-h-0 w-full overflow-hidden",
+        fullscreen && "fixed inset-0 z-50 h-svh min-h-svh",
       )}
     >
-      <div
-        data-atlas-ui
-        className="pointer-events-none absolute inset-x-0 top-0 z-30 flex items-start gap-2 p-3"
-      >
-        <div className="pointer-events-auto max-w-full">
-          <AtlasMapSearch
-            places={places}
-            dataset={dataset}
-            placeholder={t.searchPlaces}
-            onSelect={onSearchSelect}
-          />
-        </div>
-        <div className="pointer-events-none ml-auto hidden rounded-md bg-background/85 px-2 py-1 text-[11px] text-muted-foreground backdrop-blur sm:block">
-          {ACTIVE_TILE_PROVIDER.label}
-        </div>
-      </div>
+      {/* Desktop sidebar */}
+      <div className="hidden h-full md:flex">{sidebar}</div>
 
-      <Map
-        ref={mapRef}
-        mapLib={import("maplibre-gl")}
-        initialViewState={initialView}
-        style={{ width: "100%", height: "100%", flex: 1 }}
-        mapStyle={mapStyle}
-        maxBounds={maxBounds}
-        minZoom={ATLAS_MIN_ZOOM}
-        maxZoom={ATLAS_MAX_ZOOM}
-        cursor={cursor}
-        dragRotate={false}
-        pitchWithRotate={false}
-        attributionControl={{ compact: true }}
-        onClick={onMapClick}
-        onMouseEnter={() => setCursor("pointer")}
-        onMouseLeave={() => setCursor("grab")}
-        onMoveEnd={(e) => {
-          const { longitude, latitude, zoom } = e.viewState;
-          saveStoredViewport({ longitude, latitude, zoom });
-        }}
-        interactiveLayerIds={[
-          OVERLAY_LAYER_IDS.places,
-          OVERLAY_LAYER_IDS.placesClusters,
-          OVERLAY_LAYER_IDS.events,
-          OVERLAY_LAYER_IDS.rivers,
-          OVERLAY_LAYER_IDS.routeStops,
-        ]}
-      >
-        <NavigationControl position="bottom-right" showCompass={false} />
-        <ScaleControl position="bottom-left" maxWidth={120} unit="metric" />
-
-        <AtlasOverlayLayers
-          places={placesFc}
-          rivers={riversFc}
-          routes={routesFc}
-          routeStops={routeStopsFc}
-          events={eventsFc}
-          kingdoms={kingdomsFc}
-          showLabels={visibility.labels}
-          showRoutes={visibility.routes}
-          showEvents={visibility.events}
-          showRivers={visibility.rivers}
-          selectedPlaceSlug={selectedSlug}
-          selectedRiverId={selectedRiver?.id ?? null}
-        />
-      </Map>
-
-      <div
-        data-atlas-ui
-        className="absolute bottom-28 right-3 z-30 flex flex-col gap-2"
-      >
-        <button
-          type="button"
-          aria-label="Reset view"
-          className="border-border bg-background inline-flex h-10 w-10 items-center justify-center rounded-md border shadow-sm"
-          onClick={resetCamera}
-        >
-          <RotateCcw className="h-4 w-4" />
-        </button>
-        <button
-          type="button"
-          aria-label={fullscreen ? "Exit fullscreen" : "Fullscreen"}
-          className="border-border bg-background inline-flex h-10 w-10 items-center justify-center rounded-md border shadow-sm"
-          onClick={() => setFullscreen((v) => !v)}
-        >
-          {fullscreen ? (
-            <Minimize2 className="h-4 w-4" />
-          ) : (
-            <Maximize2 className="h-4 w-4" />
-          )}
-        </button>
-      </div>
-
-      <aside
-        data-atlas-ui
-        className="atlas-sidebar border-border bg-background/94 absolute bottom-4 left-3 top-20 z-30 hidden w-56 flex-col overflow-hidden rounded-xl border shadow-sm backdrop-blur-md sm:flex"
-        onWheel={(e) => e.stopPropagation()}
-        onPointerDown={(e) => e.stopPropagation()}
-      >
-        <div className="min-h-0 flex-1 overflow-y-auto overscroll-contain p-3">
-          <p className="text-muted-foreground mb-2 flex items-center gap-1.5 text-[10px] font-medium uppercase tracking-[0.16em]">
-            <Layers className="h-3.5 w-3.5" aria-hidden />
-            {t.layers}
-          </p>
-          <ul className="mb-4 space-y-1">
-            {OVERLAY_TOGGLES.map((layer) => (
-              <li key={layer.id}>
-                <button
-                  type="button"
-                  onClick={() => toggle(layer.id)}
-                  className={cn(
-                    "flex h-9 w-full items-center rounded-md px-2 text-left text-xs",
-                    visibility[layer.id]
-                      ? "bg-foreground text-background"
-                      : "text-muted-foreground hover:bg-muted",
-                  )}
-                >
-                  {layer.label}
-                </button>
-              </li>
-            ))}
-          </ul>
-
-          <p className="text-muted-foreground mb-2 flex items-center gap-1.5 text-[10px] font-medium uppercase tracking-[0.16em]">
-            <RouteIcon className="h-3.5 w-3.5" aria-hidden />
-            {t.travelPaths}
-          </p>
-          <ul className="space-y-1">
-            <li>
-              <button
-                type="button"
-                onClick={() => {
-                  setActiveRouteId(null);
-                  setRoutePlaying(false);
-                  setRouteStopIndex(null);
-                }}
-                className={cn(
-                  "flex h-9 w-full items-center rounded-md px-2 text-left text-xs",
-                  !activeRouteId
-                    ? "bg-foreground text-background"
-                    : "text-muted-foreground hover:bg-muted",
-                )}
-              >
-                {t.layerNone}
-              </button>
-            </li>
-            {dataset.routes.map((r) => (
-              <li key={r.id}>
-                <button
-                  type="button"
-                  onClick={() => {
-                    const next = activeRouteId === r.id ? null : r.id;
-                    setActiveRouteId(next);
-                    setRoutePlaying(false);
-                    setRouteStopIndex(next ? 0 : null);
-                    if (next) {
-                      setVisibility((v) => ({ ...v, routes: true }));
-                      const first = places.find((p) => p.id === r.placeIds[0]);
-                      if (first) focusPlace(first, 6.5);
-                    }
-                  }}
-                  className={cn(
-                    "flex h-9 w-full items-center rounded-md px-2 text-left text-xs",
-                    activeRouteId === r.id
-                      ? "bg-foreground text-background"
-                      : "text-muted-foreground hover:bg-muted",
-                  )}
-                >
-                  {r.title}
-                </button>
-              </li>
-            ))}
-          </ul>
-
-          {activeRoute ? (
-            <div className="border-border mt-3 space-y-2 border-t pt-3">
-              <p className="text-muted-foreground text-[11px] leading-relaxed">
-                {activeRoute.summary}
-              </p>
-              <div className="grid grid-cols-4 gap-1">
-                <button
-                  type="button"
-                  aria-label="Previous stop"
-                  className="border-border inline-flex h-9 items-center justify-center rounded-md border"
-                  onClick={() => stepRoute(-1)}
-                >
-                  <SkipBack className="h-3.5 w-3.5" />
-                </button>
-                <button
-                  type="button"
-                  className="bg-foreground text-background col-span-2 inline-flex h-9 items-center justify-center gap-1.5 rounded-md text-xs"
-                  onClick={() => {
-                    if (routePlaying) setRoutePlaying(false);
-                    else {
-                      setRouteStopIndex((i) => i ?? 0);
-                      setRoutePlaying(true);
-                    }
-                  }}
-                >
-                  {routePlaying ? (
-                    <>
-                      <Pause className="h-3.5 w-3.5" /> Pause
-                    </>
-                  ) : (
-                    <>
-                      <Play className="h-3.5 w-3.5" /> Play
-                    </>
-                  )}
-                </button>
-                <button
-                  type="button"
-                  aria-label="Next stop"
-                  className="border-border inline-flex h-9 items-center justify-center rounded-md border"
-                  onClick={() => stepRoute(1)}
-                >
-                  <SkipForward className="h-3.5 w-3.5" />
-                </button>
-              </div>
-              <button
-                type="button"
-                className="text-muted-foreground hover:text-foreground w-full text-center text-[11px] underline-offset-2 hover:underline"
-                onClick={() => {
-                  setRouteStopIndex(0);
-                  setRoutePlaying(false);
-                  const first = places.find(
-                    (p) => p.id === activeRoute.placeIds[0],
-                  );
-                  if (first) focusPlace(first, 6.5);
-                }}
-              >
-                Restart
-              </button>
-              {routeStopIndex != null ? (
-                <p className="text-muted-foreground text-[11px]">
-                  Stop {routeStopIndex + 1} / {activeRoute.placeIds.length}
-                </p>
-              ) : null}
-            </div>
-          ) : null}
-
-          {selectedRiver ? (
-            <div className="border-border mt-3 space-y-1 border-t pt-3">
-              <p className="font-serif text-sm">{selectedRiver.name}</p>
-              <p className="text-[10px] uppercase tracking-wider text-sky-900/70">
-                {selectedRiver.certainty}
-              </p>
-              <p className="text-muted-foreground text-[11px] leading-relaxed">
-                {selectedRiver.summary}
-              </p>
-            </div>
-          ) : null}
-
-          {selectedEvent ? (
-            <div className="border-border mt-3 space-y-1 border-t pt-3">
-              <p className="font-serif text-sm">{selectedEvent.name}</p>
-              <p className="text-[10px] uppercase tracking-wider text-amber-800/80">
-                {selectedEvent.certainty}
-              </p>
-              <p className="text-muted-foreground text-[11px] leading-relaxed">
-                {selectedEvent.summary}
-              </p>
-            </div>
-          ) : null}
-
+      {/* Mobile sidebar drawer */}
+      {mobileSidebarOpen ? (
+        <div className="fixed inset-0 z-40 flex md:hidden">
           <button
             type="button"
-            className="text-muted-foreground hover:text-foreground mt-4 w-full text-left text-[11px] underline-offset-2 hover:underline"
-            onClick={fitAllPlaces}
-          >
-            Fit all places
-          </button>
+            aria-label="Close layers"
+            className="absolute inset-0 bg-black/40"
+            onClick={() => setMobileSidebarOpen(false)}
+          />
+          <div className="relative z-10 flex h-full w-[min(100%,340px)] shadow-xl">
+            {sidebar}
+          </div>
         </div>
-      </aside>
+      ) : null}
+
+      <div className="flex min-w-0 flex-1 flex-col">
+        <div className="flex items-center gap-2 border-b md:border-0">
+          <button
+            type="button"
+            className="border-border text-muted-foreground hover:text-foreground m-2 inline-flex h-9 items-center rounded-md border px-3 text-xs md:hidden"
+            onClick={() => setMobileSidebarOpen(true)}
+          >
+            Search & layers
+          </button>
+          <div className="min-w-0 flex-1">
+            <AtlasToolbar
+              visibility={visibility}
+              onToggle={toggle}
+              onResetView={resetCamera}
+              onFitIndia={fitAllPlaces}
+              fullscreen={fullscreen}
+              onToggleFullscreen={() => setFullscreen((v) => !v)}
+            />
+          </div>
+        </div>
+
+        <div className="relative min-h-0 flex-1">
+          <Map
+            ref={mapRef}
+            mapLib={import("maplibre-gl")}
+            initialViewState={initialView}
+            style={{ width: "100%", height: "100%" }}
+            mapStyle={mapStyle}
+            maxBounds={maxBounds}
+            minZoom={ATLAS_MIN_ZOOM}
+            maxZoom={ATLAS_MAX_ZOOM}
+            cursor={cursor}
+            dragRotate={false}
+            pitchWithRotate={false}
+            attributionControl={{ compact: true }}
+            onClick={onMapClick}
+            onMouseMove={onMapMouseMove}
+            onMouseLeave={() => {
+              setCursor("grab");
+              setHoveredRiverId(null);
+              setHoveredKingdomId(null);
+            }}
+            onMoveEnd={(e) => {
+              const { longitude, latitude, zoom } = e.viewState;
+              saveStoredViewport({ longitude, latitude, zoom });
+            }}
+            onLoad={() => {
+              mapRef.current?.getMap().resize();
+              setMapReady(true);
+            }}
+            onError={(e) => {
+              console.error("[atlas]", e.error);
+            }}
+            interactiveLayerIds={[
+              OVERLAY_LAYER_IDS.events,
+              OVERLAY_LAYER_IDS.rivers,
+              OVERLAY_LAYER_IDS.kingdomsFill,
+            ]}
+          >
+            <AtlasDomMarkers
+              places={placesFc}
+              labels={traditionalLabelsFc}
+              routeStops={routeStopsFc}
+              showLabels={visibility.labels}
+              showRoutes={visibility.routes}
+              selectedSlug={selectedSlug}
+              onPlaceClick={(slug) => {
+                const place = places.find((p) => p.slug === slug);
+                if (place) {
+                  focusPlace(
+                    place,
+                    Math.max(mapRef.current?.getZoom() ?? 6, 6.8),
+                  );
+                }
+              }}
+            />
+            <NavigationControl position="bottom-right" showCompass={false} />
+            <ScaleControl position="bottom-left" maxWidth={120} unit="metric" />
+          </Map>
+        </div>
+      </div>
 
       {selected ? (
         <AtlasPlacePanel

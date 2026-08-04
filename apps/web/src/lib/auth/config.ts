@@ -7,6 +7,13 @@
 export const AUTH_ENABLED =
   process.env.NEXT_PUBLIC_DIVINE_ADMIN_AUTH_ENABLED !== "false";
 
+/**
+ * Public Sign in / Account chrome. Hidden until auth UX is ready for readers.
+ * Admin auth is unaffected (`AUTH_ENABLED` + `/admin`).
+ */
+export const PUBLIC_AUTH_UI_ENABLED =
+  process.env.NEXT_PUBLIC_DIVINE_PUBLIC_AUTH_UI === "true";
+
 /** Cookie the middleware checks to guard `/admin/*`. Set by the login flow. */
 export const SESSION_COOKIE = "divine_admin_session";
 

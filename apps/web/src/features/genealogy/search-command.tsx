@@ -3,11 +3,10 @@
 import * as React from "react";
 import { Search } from "lucide-react";
 import type { Person } from "@/lib/genealogy/types";
-import {
-  CATEGORY_LABELS,
-  CATEGORY_TOKENS,
-  personSearchKeys,
-} from "@/lib/genealogy/types";
+import { CATEGORY_TOKENS,
+  personSearchKeys } from "@/lib/genealogy/types";
+import { localizedPersonCategoryLabel } from "@/lib/i18n/knowledge-labels";
+import { useUiLanguage } from "@/lib/i18n/use-messages";
 import { cn } from "@/lib/utils";
 
 /** Fold IAST diacritics so "Krsna" matches "Krsna". */
@@ -34,6 +33,7 @@ export function SearchCommand({
   onSelect: (id: string) => void;
   moduleTitle: string;
 }) {
+  const lang = useUiLanguage();
   const [open, setOpen] = React.useState(false);
   const [query, setQuery] = React.useState("");
   const [activeIndex, setActiveIndex] = React.useState(0);
@@ -226,7 +226,7 @@ export function SearchCommand({
                       className="text-[10px] uppercase tracking-wider"
                       style={{ color: CATEGORY_TOKENS[p.category].accent }}
                     >
-                      {CATEGORY_LABELS[p.category]}
+                      {localizedPersonCategoryLabel(p.category, lang)}
                     </span>
                   </button>
                 </li>

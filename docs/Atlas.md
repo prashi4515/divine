@@ -1,65 +1,43 @@
 # Mahābhārata Atlas
 
-Interactive atlas of Ancient Bhārata. One **illustrated plate** is the permanent
-visual foundation. Application logic never invents coastlines or kingdom
-boundaries from code — overlays are data-driven JSON above the artwork.
+Interactive atlas of Ancient Bhārata — **Google Maps–style** MapLibre canvas.
+Place names are **JSON overlays only**. The old illustrated plate image is not used.
 
-Interaction uses **MapLibre GL** (smooth pan/zoom/gestures/`flyTo`) with the
-plate as a georeferenced image source — not OpenStreetMap tiles.
-
-## Pipeline
+## Architecture
 
 ```
-Illustrated plate (baseMap.src)  ─┐
-KG entities (lat/lng)            ├─► GeoJSON overlays ─► MapLibre GL ─► UI
-atlas/rivers.json                │
-atlas/events.json                │
-atlas/routes.json                │
-atlas/overlays/kingdoms.json     ┘   (selected highlight only)
+Clean basemap (Carto Positron, no labels)  ─┐
+KG + atlas/*.json overlays                 ├─► MapLibre GL ─► UI
+(traditional-labels, rivers, events, …)    ┘
 ```
 
 | Concern | Module |
 | ------- | ------ |
-| Contracts | `packages/types/src/knowledge/atlas-v2.ts` |
+| Contracts | `packages/types` (`AtlasBaseMap.styleUrl`) |
 | Dataset load | `apps/web/src/lib/atlas/data/load-dataset.ts` |
-| Illustrated style | `apps/web/src/lib/atlas/tiles/tile-style.ts` |
-| Overlay catalog | `apps/web/src/lib/atlas/overlays/layer-catalog.ts` |
-| GeoJSON adapters | `apps/web/src/lib/atlas/overlays/to-geojson.ts` |
-| MapLibre layers | `apps/web/src/lib/atlas/renderer/overlay-layers.tsx` |
-| Search | `apps/web/src/lib/atlas/search/atlas-search-engine.ts` |
+| Basemap style | `apps/web/src/lib/atlas/tiles/tile-style.ts` |
+| Toponyms | `content/knowledge/atlas/overlays/traditional-labels.json` |
+| Overlay layers | `apps/web/src/lib/atlas/renderer/overlay-layers.tsx` |
 | Shell UI | `apps/web/src/features/atlas/atlas-map-app.tsx` |
-| Artwork | `apps/web/public/images/atlas/ancient-bharata-map.jpg` |
-
-## Swapping the illustrated map
-
-1. Replace the image under `public/images/atlas/` (or add a new file).
-2. Update `content/knowledge/atlas/base-map.json` (`src`, credit, intrinsic size).
-3. Adjust `projection` only if georeference bounds change.
-4. Do **not** change overlay JSON or rendering code for artwork alone.
-
-The renderer must not care what the plate depicts — only that it has a URL and
-a lat/lng frame.
 
 ## Rules
 
-- The base artwork is **not** data and is **not** clickable.
-- Do not procedurally draw India, coastlines, or permanent kingdom borders.
-- Kingdom extents (when curated) appear only on selection / layer intent.
-- Labels are dynamic overlays — never burned into the image as the source of truth.
+- **No educational plate image** as the default map.
+- **No SVG atlas.** No procedural coastlines invented as “the map.”
+- **Names come from JSON** (`traditional-labels.json` + KG places), not from basemap pixels.
+- Basemap is a clean no-labels style so modern city names do not compete.
+- Optional future illustrated plate can still use `baseMap.tiles` — never required for overlays.
 
-## Certainty
+## Swapping the basemap
 
-- **verified** — strong traditional + geographic consensus
-- **traditional** — named in the epic; location follows tradition
-- **approximate** — epic does not fix a modern site precisely
+Default is an **inline** clean light map (Carto `light_nolabels` raster tiles).
+Ancient names come from overlay JSON only.
 
-Never present approximate or traditional pins as surveyed historical fact.
+To use a custom remote style, set `styleUrl` in `base-map.json`.
+To use a future illustrated plate, set `tiles` or `src` — overlays stay unchanged.
 
-## Capabilities
+## Interaction
 
-- Illustrated plate basemap (never re-mounted for overlay updates)
-- Smooth pan / wheel zoom / pinch / double-click / flyTo / fit / reset
-- Viewport memory (`localStorage`)
-- River vectors, event markers, travel routes (play / pause / step / restart)
-- Marker clustering + collision-aware labels
-- Search (English, IAST, aliases) with keyboard navigation
+Pan, wheel/pinch/double-click zoom, `flyTo`, Fit India, fullscreen.
+Search → fly + highlight + right drawer.
+Labels follow the site language.

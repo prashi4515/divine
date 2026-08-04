@@ -5,8 +5,10 @@ import {
   getGenealogyModulesForPerson,
   getGenealogyModulesFromKnowledge,
   getGenealogyPersonFromKnowledge,
+  getGenealogyPeopleByLegacyIds,
   getPeopleForGenealogyModule,
   getEncyclopediaHrefForGenealogyId,
+  listGenealogyPersonIds,
 } from "@/lib/knowledge/adapters/genealogy";
 /**
  * Genealogy store — prefers the shared Knowledge Graph adapter.
@@ -29,14 +31,27 @@ export async function getGenealogyPerson(
   return getGenealogyPersonFromKnowledge(id);
 }
 
+/** Prefer listGenealogyPersonIds() for params; this expands full Person graphs. */
 export async function getAllGenealogyPeople(): Promise<readonly Person[]> {
   const modules = await getGenealogyModulesFromKnowledge();
   const byId = new Map<string, Person>();
-  for (const mod of modules) {
-    const people = await getPeopleForGenealogyModule(mod.slug);
-    for (const p of people) byId.set(p.id, p);
-  }
+  await Promise.all(
+    modules.map(async (mod) => {
+      const people = await getPeopleForGenealogyModule(mod.slug);
+      for (const p of people) byId.set(p.id, p);
+    }),
+  );
   return [...byId.values()];
+}
+
+export async function listAllGenealogyPersonIds(): Promise<readonly string[]> {
+  return listGenealogyPersonIds();
+}
+
+export async function getGenealogyPeopleByIds(
+  ids: readonly string[],
+): Promise<readonly Person[]> {
+  return getGenealogyPeopleByLegacyIds(ids);
 }
 
 export async function getPeopleForModule(

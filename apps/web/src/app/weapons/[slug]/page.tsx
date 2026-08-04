@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { getSiteUrl } from "@/lib/seo";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { GenealogyHeader } from "@/features/genealogy/genealogy-header";
@@ -23,7 +24,6 @@ import {
 export const dynamic = "force-static";
 export const revalidate = false;
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://divine.app";
 
 type PageProps = { params: Promise<{ slug: string }> };
 
@@ -50,7 +50,7 @@ export async function generateMetadata({
     openGraph: {
       ...base.openGraph,
       title: `${title} - Weapons | Divine`,
-      url: `${SITE_URL}${weaponHref(weapon)}`,
+      url: `${getSiteUrl()}${weaponHref(weapon)}`,
     },
   };
 }

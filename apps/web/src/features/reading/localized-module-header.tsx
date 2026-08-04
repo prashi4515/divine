@@ -5,6 +5,7 @@ import type { ReactNode } from "react";
 import { GenealogyHeader } from "@/features/genealogy/genealogy-header";
 import { useMessages } from "@/lib/i18n/use-messages";
 import type { Messages } from "@/lib/i18n/messages";
+import type { ReadingLanguageCode } from "@/lib/reading/languages";
 
 export type KnowledgeModuleId =
   | "atlas"
@@ -57,12 +58,14 @@ export function LocalizedModuleHeader({
   module,
   actionLinks,
   actions,
+  initialLanguage,
 }: {
   module: KnowledgeModuleId;
   actionLinks?: Array<{ href: string; labelKey: MessageKey }>;
   actions?: ReactNode;
+  initialLanguage?: ReadingLanguageCode;
 }) {
-  const t = useMessages();
+  const t = useMessages(initialLanguage);
   const copy = moduleCopy(module, t);
 
   const resolvedActions =

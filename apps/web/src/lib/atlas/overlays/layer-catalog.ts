@@ -7,8 +7,11 @@ export const OVERLAY_SOURCE_IDS = {
   places: "atlas-src-places",
   rivers: "atlas-src-rivers",
   routes: "atlas-src-routes",
+  routeStops: "atlas-src-route-stops",
   events: "atlas-src-events",
   kingdoms: "atlas-src-kingdoms",
+  kingdomsSelected: "atlas-src-kingdoms-selected",
+  traditionalLabels: "atlas-src-traditional-labels",
 } as const;
 
 export const OVERLAY_LAYER_IDS = {
@@ -18,6 +21,7 @@ export const OVERLAY_LAYER_IDS = {
   placesHighlight: "atlas-lyr-places-highlight",
   placesLabels: "atlas-lyr-places-labels",
   rivers: "atlas-lyr-rivers",
+  riversHover: "atlas-lyr-rivers-hover",
   riversHighlight: "atlas-lyr-rivers-highlight",
   routes: "atlas-lyr-routes",
   routesActive: "atlas-lyr-routes-active",
@@ -26,6 +30,8 @@ export const OVERLAY_LAYER_IDS = {
   eventsPulse: "atlas-lyr-events-pulse",
   kingdomsFill: "atlas-lyr-kingdoms-fill",
   kingdomsLine: "atlas-lyr-kingdoms-line",
+  kingdomsHover: "atlas-lyr-kingdoms-hover",
+  traditionalLabels: "atlas-lyr-traditional-labels",
 } as const;
 
 export type OverlayToggleId =

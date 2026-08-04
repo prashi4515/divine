@@ -1,6 +1,7 @@
 import "server-only";
 import {
   getCollection,
+  getEntitiesByIdsOrAliases,
   getEntity,
   getEntityBundle,
   getRelated,
@@ -25,13 +26,10 @@ export async function getAtlasRoutes(): Promise<readonly AtlasRoute[]> {
 export async function getAtlasPlaces(): Promise<AtlasPlace[]> {
   const col = await getCollection("mahabharata");
   if (!col) return [];
-  const places: AtlasPlace[] = [];
-  for (const id of col.entityIds) {
-    const e = await getEntity(id);
-    if (e && isAtlasPlace(e) && e.status === "published") {
-      places.push(e as AtlasPlace);
-    }
-  }
+  const entities = await getEntitiesByIdsOrAliases(col.entityIds);
+  const places = entities.filter(
+    (e): e is AtlasPlace => isAtlasPlace(e) && e.status === "published",
+  );
   return places.sort(
     (a, b) => b.importance - a.importance || a.name.localeCompare(b.name),
   );
@@ -72,12 +70,16 @@ export async function buildRelatedPeopleMap(
 ): Promise<
   Record<string, Array<{ id: string; name: string; kind: string; href: string }>>
 > {
+  const { getRelatedMany } = await import("@/lib/knowledge/store");
+  const relatedMap = await getRelatedMany(places.map((p) => p.id));
   const out: Record<
     string,
     Array<{ id: string; name: string; kind: string; href: string }>
   > = {};
   for (const p of places) {
-    const people = await getAtlasRelatedPeople(p.id);
+    const people = (relatedMap.get(p.id) ?? []).filter((r) =>
+      r.other.id.startsWith("person."),
+    );
     out[p.id] = people.map((r) => ({
       id: r.other.id,
       name: r.other.name,

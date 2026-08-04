@@ -15,8 +15,11 @@ import type {
 } from "geojson";
 import type { AtlasPlace } from "@/lib/atlas/geo";
 import { markerKindFor } from "@/lib/atlas/geo";
+import { resolveLocalizedName } from "@/lib/atlas/data/localized-name";
+import type { TraditionalAtlasLabel } from "@/lib/atlas/data/traditional-label-types";
 import type { OverlayToggleId } from "@/lib/atlas/overlays/layer-catalog";
 import { OVERLAY_TOGGLES } from "@/lib/atlas/overlays/layer-catalog";
+import { displayLocalizedName } from "@/lib/i18n/localize-entity";
 
 export type AtlasFeatureProps = {
   id: string;
@@ -48,6 +51,7 @@ function placeCategoryAllowed(
 export function placesToGeoJson(
   places: readonly AtlasPlace[],
   visibility: Record<OverlayToggleId, boolean>,
+  lang = "en",
 ): FeatureCollection {
   const features: FeatureCollection["features"] = [];
   for (const p of places) {
@@ -63,7 +67,7 @@ export function placesToGeoJson(
       properties: {
         id: p.id,
         slug: p.slug,
-        name: p.name,
+        name: displayLocalizedName(p, lang),
         kind: "place",
         category,
         importance: p.importance,
@@ -72,6 +76,47 @@ export function placesToGeoJson(
     });
   }
   return { type: "FeatureCollection", features };
+}
+
+/**
+ * Traditional plate toponyms — independent of KG place markers so the
+ * basemap artwork can be swapped without losing names.
+ */
+export function traditionalLabelsToGeoJson(
+  labels: readonly TraditionalAtlasLabel[],
+  lang = "en",
+  visibility?: Record<OverlayToggleId, boolean>,
+): FeatureCollection {
+  return {
+    type: "FeatureCollection",
+    features: labels
+      .filter((label) => {
+        if (!visibility) return true;
+        if (label.kind === "river") return visibility.rivers !== false;
+        if (label.kind === "forest") return visibility.forests !== false;
+        if (label.kind === "mountain") return visibility.mountains !== false;
+        if (label.kind === "city") return visibility.cities !== false;
+        if (label.kind === "kingdom" || label.kind === "region") {
+          return visibility.kingdoms !== false;
+        }
+        return visibility.labels !== false;
+      })
+      .map((label) => ({
+        type: "Feature" as const,
+        id: label.id,
+        geometry: {
+          type: "Point" as const,
+          coordinates: [label.lng, label.lat] as [number, number],
+        },
+        properties: {
+          id: label.id,
+          slug: label.id,
+          name: resolveLocalizedName(label.name, lang, label.iast),
+          kind: label.kind,
+          category: label.kind,
+        },
+      })),
+  };
 }
 
 export function riversToGeoJson(
@@ -194,8 +239,41 @@ export function eventsToGeoJson(
   };
 }
 
+function polygonToFeature(poly: AtlasPolygon) {
+  const rings = poly.geometry.rings.map((ring) =>
+    ring.map(([lat, lng]) => [lng, lat] as [number, number]),
+  );
+  return {
+    type: "Feature" as const,
+    id: poly.id,
+    geometry: { type: "Polygon" as const, coordinates: rings },
+    properties: {
+      id: poly.id,
+      slug: poly.slug,
+      name: poly.title,
+      kind: "kingdom",
+      certainty: poly.confidence,
+    },
+  };
+}
+
 /**
- * Selected kingdom extent only — never paint all borders permanently.
+ * All curated kingdom extents (JSON only — never procedural coastlines).
+ * Shown faintly when the Kingdoms layer is on; hover/selection emphasize one.
+ */
+export function kingdomsToGeoJson(
+  polygons: readonly AtlasPolygon[],
+  visible: boolean,
+): FeatureCollection {
+  if (!visible || polygons.length === 0) return emptyFc();
+  return {
+    type: "FeatureCollection",
+    features: polygons.map(polygonToFeature),
+  };
+}
+
+/**
+ * Selected kingdom extent highlight.
  * Polygon rings in the dataset are [lat, lng]; GeoJSON needs [lng, lat].
  */
 export function selectedKingdomToGeoJson(
@@ -210,24 +288,8 @@ export function selectedKingdomToGeoJson(
       p.entityId === `kingdom.${selectedPlace.slug}`,
   );
   if (!match) return emptyFc();
-  const rings = match.geometry.rings.map((ring) =>
-    ring.map(([lat, lng]) => [lng, lat] as [number, number]),
-  );
   return {
     type: "FeatureCollection",
-    features: [
-      {
-        type: "Feature",
-        id: match.id,
-        geometry: { type: "Polygon", coordinates: rings },
-        properties: {
-          id: match.id,
-          slug: match.slug,
-          name: match.title,
-          kind: "kingdom",
-          certainty: match.confidence,
-        },
-      },
-    ],
+    features: [polygonToFeature(match)],
   };
 }

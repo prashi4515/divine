@@ -13,6 +13,7 @@ const nextConfig: NextConfig = {
     "/api/gita/commentary/[publicId]": ["./content/gita/commentary/**/*"],
     "/bhagavad-gita": ["./content/gita/**/*"],
     "/bhagavad-gita/[slug]": ["./content/gita/**/*"],
+    "/verse/[chapter]/[verse]": ["./content/gita/**/*"],
   },
   async redirects() {
     return [
@@ -41,8 +42,26 @@ const nextConfig: NextConfig = {
         destination: "/account",
         permanent: false,
       },
+      // Clean URL aliases → canonical routes (do not break existing URLs)
+      {
+        source: "/chapter/:number(\\d+)",
+        destination: "/bhagavad-gita/chapter-:number",
+        permanent: true,
+      },
+      {
+        source: "/characters/:slug",
+        destination: "/encyclopedia/person/:slug",
+        permanent: true,
+      },
+      {
+        source: "/character/:slug",
+        destination: "/encyclopedia/person/:slug",
+        permanent: true,
+      },
     ];
   },
+  // No trailing slashes — keep one canonical form
+  trailingSlash: false,
 };
 
 export default nextConfig;

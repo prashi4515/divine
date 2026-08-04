@@ -66,7 +66,18 @@ type Store = {
   collectionsBySlug: ReadonlyMap<string, KnowledgeCollection>;
 };
 
-let cache: Promise<Store> | null = null;
+type GlobalKg = typeof globalThis & {
+  __divineKnowledgeStore?: Promise<Store>;
+};
+
+/** Survives HMR module re-evals so hubs don't re-parse ~800KB JSON every edit. */
+function getStoreCache(): Promise<Store> | undefined {
+  return (globalThis as GlobalKg).__divineKnowledgeStore;
+}
+
+function setStoreCache(value: Promise<Store> | undefined): void {
+  (globalThis as GlobalKg).__divineKnowledgeStore = value;
+}
 
 async function loadStore(): Promise<Store> {
   const [entitiesRaw, relationsRaw, collectionsRaw] = await Promise.all([
@@ -75,15 +86,23 @@ async function loadStore(): Promise<Store> {
     fs.readFile(path.join(CONTENT_ROOT, "collections.json"), "utf8"),
   ]);
 
-  const { entities: rawEntities } = knowledgeEntityCollectionSchema.parse(
-    JSON.parse(entitiesRaw),
-  );
-  const { relations: parsedRelations } = knowledgeRelationCollectionSchema.parse(
-    JSON.parse(relationsRaw),
-  );
-  const { collections: rawCollections } = knowledgeCollectionBundleSchema.parse(
-    JSON.parse(collectionsRaw),
-  );
+  const entitiesJson: unknown = JSON.parse(entitiesRaw);
+  const relationsJson: unknown = JSON.parse(relationsRaw);
+  const collectionsJson: unknown = JSON.parse(collectionsRaw);
+
+  // Zod validates the content boundary in development; production trusts build-time JSON.
+  const { entities: rawEntities } =
+    process.env.NODE_ENV === "production"
+      ? (entitiesJson as { entities: KnowledgeEntity[] })
+      : knowledgeEntityCollectionSchema.parse(entitiesJson);
+  const { relations: parsedRelations } =
+    process.env.NODE_ENV === "production"
+      ? (relationsJson as { relations: KnowledgeRelation[] })
+      : knowledgeRelationCollectionSchema.parse(relationsJson);
+  const { collections: rawCollections } =
+    process.env.NODE_ENV === "production"
+      ? (collectionsJson as { collections: KnowledgeCollection[] })
+      : knowledgeCollectionBundleSchema.parse(collectionsJson);
 
   // Reader-facing modern English — strip IAST / fancy punctuation once for all modules.
   const entities = rawEntities.map(modernizeKnowledgeEntity);
@@ -136,8 +155,33 @@ async function loadStore(): Promise<Store> {
 }
 
 function getStore(): Promise<Store> {
-  if (!cache) cache = loadStore();
-  return cache;
+  const existing = getStoreCache();
+  if (existing) return existing;
+  const pending = loadStore().catch((err: unknown) => {
+    setStoreCache(undefined);
+    throw err;
+  });
+  setStoreCache(pending);
+  return pending;
+}
+
+/** Batch entity lookup by id / slug / genealogy alias — one store load. */
+export async function getEntitiesByIdsOrAliases(
+  ids: readonly string[],
+): Promise<KnowledgeEntity[]> {
+  const store = await getStore();
+  const out: KnowledgeEntity[] = [];
+  const seen = new Set<string>();
+  for (const id of ids) {
+    const resolved = store.aliases.get(id) ?? id;
+    if (seen.has(resolved)) continue;
+    const entity = store.entitiesById.get(resolved);
+    if (entity) {
+      seen.add(resolved);
+      out.push(entity);
+    }
+  }
+  return out;
 }
 
 export async function getRelationshipIndex(): Promise<RelationshipIndex> {
@@ -234,6 +278,22 @@ export async function getRelated(
   const store = await getStore();
   const hops = getRelationships(store.relationshipIndex, entityId, types);
   return hopsToRelatedEdges(store, hops);
+}
+
+/**
+ * Batch related-edge lookup — one store load, no per-entity await waterfall.
+ */
+export async function getRelatedMany(
+  entityIds: readonly string[],
+  types?: RelationType[],
+): Promise<Map<string, RelatedEdge[]>> {
+  const store = await getStore();
+  const out = new Map<string, RelatedEdge[]>();
+  for (const id of entityIds) {
+    const hops = getRelationships(store.relationshipIndex, id, types);
+    out.set(id, hopsToRelatedEdges(store, hops));
+  }
+  return out;
 }
 
 /** Direction-aware parents via the shared relationship engine. */

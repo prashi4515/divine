@@ -1,15 +1,16 @@
 # Atlas overlays
 
-Interactive data lives here (or in sibling atlas JSON files). The illustrated
-base plate under `/public/images/atlas/` is **not** data — the renderer never
-reads geography from pixels.
+Interactive data lives in JSON. The illustrated plate is served as XYZ tiles
+under `/public/tiles/ancient-bharata/` — **not** data. The renderer never reads
+geography from pixels.
 
 | File | Role |
 | ---- | ---- |
-| `kingdoms.json` | Kingdom extents — drawn only when selected (currently empty until curated) |
-| `../rivers.json` | River vector paths |
+| `kingdoms.json` | Kingdom extents (hover / selection) |
+| `traditional-labels.json` | Multilingual plate toponyms |
+| `../rivers.json` | River vectors |
 | `../events.json` | Event markers |
 | `../routes.json` | Travel routes |
-| Places / cities | Knowledge Graph entities (`content/knowledge/entities/`) |
+| Places / cities | Knowledge Graph entities |
 
 Do not invent coastlines or permanent painted borders in code.

@@ -1,9 +1,15 @@
+"use client";
+
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import type { KnowledgeEntity } from "@/lib/knowledge/types";
-import { ENTITY_KIND_LABELS } from "@/lib/knowledge/types";
 import { entityHref } from "@/lib/knowledge/search";
-import { displayEnglishName } from "@/lib/text/modern-english";
+import {
+  displayLocalizedKind,
+  displayLocalizedName,
+} from "@/lib/i18n/localize-entity";
+import { localizedKnowledgeChrome } from "@/lib/i18n/knowledge-labels";
+import { useMessages, useUiLanguage } from "@/lib/i18n/use-messages";
 
 /**
  * Chapter-level encyclopedia cross-links for Gita readers.
@@ -15,6 +21,10 @@ export function RelatedEntitiesRail({
   entities: KnowledgeEntity[];
   chapterNumber: number;
 }) {
+  const lang = useUiLanguage();
+  const t = useMessages();
+  const chrome = localizedKnowledgeChrome(lang);
+
   if (entities.length === 0) return null;
 
   return (
@@ -26,11 +36,8 @@ export function RelatedEntitiesRail({
         id="related-entities"
         className="text-saffron text-[10px] font-medium uppercase tracking-[0.18em]"
       >
-        Encyclopedia · Chapter {chapterNumber}
+        {chrome.encyclopedia} · {t.chapterFallback(chapterNumber)}
       </h2>
-      <p className="text-muted-foreground mt-2 text-sm leading-relaxed">
-        Persons, places and concepts linked to verses in this chapter.
-      </p>
       <ul className="mt-5 grid gap-2 sm:grid-cols-2">
         {entities.slice(0, 12).map((entity) => (
           <li key={entity.id}>
@@ -40,10 +47,10 @@ export function RelatedEntitiesRail({
             >
               <span className="min-w-0">
                 <span className="text-muted-foreground block text-[10px] uppercase tracking-wider">
-                  {ENTITY_KIND_LABELS[entity.kind]}
+                  {displayLocalizedKind(entity.kind, lang)}
                 </span>
                 <span className="text-foreground mt-0.5 block text-sm font-medium group-hover:underline">
-                  {displayEnglishName(entity)}
+                  {displayLocalizedName(entity, lang)}
                 </span>
               </span>
               <ArrowUpRight
@@ -59,7 +66,7 @@ export function RelatedEntitiesRail({
           href="/encyclopedia"
           className="text-muted-foreground hover:text-foreground text-xs underline-offset-2 hover:underline"
         >
-          Browse the full encyclopedia
+          {chrome.encyclopedia}
         </Link>
       </p>
     </section>

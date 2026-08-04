@@ -1,9 +1,12 @@
 "use client";
 
-import * as React from "react";
 import { Languages } from "lucide-react";
-import { useReadingHydrated } from "@/lib/i18n/use-messages";
-import { READING_LANGUAGES } from "@/lib/reading/languages";
+import { readingLanguageCookieWrite } from "@/lib/i18n/reading-language-cookie";
+import { useUiLanguage } from "@/lib/i18n/use-messages";
+import {
+  isReadingLanguageCode,
+  READING_LANGUAGES,
+} from "@/lib/reading/languages";
 import { useReadingStore } from "@/lib/stores/reading-store";
 
 /**
@@ -11,11 +14,8 @@ import { useReadingStore } from "@/lib/stores/reading-store";
  * Preference is persisted and applied to chrome, Gita reader, and nav labels.
  */
 export function LanguageSwitcher() {
-  const preferredLanguage = useReadingStore((s) => s.preferredLanguage);
   const setPreferredLanguage = useReadingStore((s) => s.setPreferredLanguage);
-  const hydrated = useReadingHydrated();
-
-  const value = hydrated ? preferredLanguage : "en";
+  const value = useUiLanguage();
 
   return (
     <label className="relative inline-flex items-center gap-1">
@@ -28,10 +28,14 @@ export function LanguageSwitcher() {
         className="border-input bg-background text-foreground h-8 max-w-[5.5rem] cursor-pointer rounded-md border px-1.5 pr-5 text-xs sm:max-w-[9rem] sm:px-2 sm:pr-6 sm:text-sm"
         value={value}
         onChange={(event) => {
-          setPreferredLanguage(event.target.value);
+          const code = event.target.value;
+          if (!isReadingLanguageCode(code)) return;
+          // Cookie first so the next SSR paint matches (no English flash).
+          document.cookie = readingLanguageCookieWrite(code);
+          document.documentElement.lang = code === "sa" ? "sa" : code;
+          setPreferredLanguage(code);
         }}
         aria-label="Translation language"
-        disabled={!hydrated}
       >
         {READING_LANGUAGES.map((lang) => (
           <option

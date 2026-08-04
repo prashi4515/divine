@@ -1,61 +1,60 @@
 # SEO
 
-> Search-engine optimization strategy for the Divine website. SEO is a
-> first-class architectural concern, not an afterthought.
+Production SEO for the Divine Bhagavad Gita platform (Next.js App Router).
 
-## 1. Goals
+## Principles
 
-- Rank for verse, chapter, and theme queries across multiple Indian languages.
-- Fast, crawlable, shareable pages for every verse.
-- _TODO — target keywords and priority locales._
+- Never hardcode a production domain. Use `NEXT_PUBLIC_SITE_URL` via `getSiteUrl()` / `absoluteUrl()`.
+- One shared SEO module: `apps/web/src/lib/seo/`.
+- Server Components + Metadata API only — no client-rendered meta tags.
+- Preserve existing routes; clean aliases redirect to canonicals.
 
-## 2. Rendering Strategy
+## Central module
 
-- **SSG/ISR** for public content (verses, chapters) — fast TTFB, cacheable.
-- **SSR** only where dynamic.
-- **CSR** reserved for interactive, authenticated UI.
-- _TODO — per-route rendering matrix._
+| File | Role |
+| ---- | ---- |
+| `lib/seo/site.ts` | Site URL helpers |
+| `lib/seo/config.ts` | Global defaults (`rootMetadata`) |
+| `lib/seo/metadata.ts` | `buildPageMetadata` |
+| `lib/seo/titles.ts` | Page-type titles/descriptions |
+| `lib/seo/json-ld.ts` | Schema.org builders |
+| `components/json-ld.tsx` | JSON-LD script |
+| `components/breadcrumbs.tsx` | Visible breadcrumbs |
 
-## 3. URL Structure
+## Canonical routes (do not break)
 
-- Locale-first: `/{locale}/chapter/{chapter}/verse/{verse}`.
-- Stable verse identifiers independent of language.
-- _TODO — finalize slug rules and trailing-slash policy._
+| Surface | URL |
+| ------- | --- |
+| Home | `/` |
+| Gita | `/bhagavad-gita` |
+| Chapter | `/bhagavad-gita/chapter-{n}` |
+| Verse (indexable) | `/verse/{chapter}/{verse}` |
+| Search | `/search` (query does not create new canonicals) |
+| Encyclopedia | `/encyclopedia/{kind}/{slug}` |
+| Atlas / Events / … | `/{hub}`, `/{hub}/{slug}` |
 
-## 4. Internationalization & hreflang
+### Aliases (308/301 → canonical)
 
-- `hreflang` tags for every locale variant of a page.
-- Canonical URLs to avoid duplicate-content penalties.
-- _TODO — locale list and default/fallback behavior._
+- `/chapter/2` → `/bhagavad-gita/chapter-2`
+- `/characters/krishna` → `/encyclopedia/person/krishna`
 
-## 5. Metadata
+## Sitemaps & robots
 
-- Next.js Metadata API per page: title, description, canonical, Open Graph, Twitter cards.
-- _TODO — metadata templates per page type._
+- Split sitemaps via `generateSitemaps()` in `app/sitemap.ts`
+- `app/robots.ts` references `absoluteUrl('/sitemap.xml')`
 
-## 6. Structured Data (Schema.org)
+## Dynamic OG images
 
-- _TODO — JSON-LD for articles/quotations/breadcrumbs._
+`/og?title=&subtitle=&eyebrow=` — referenced from metadata helpers.
 
-## 7. Sitemaps & robots.txt
+## Verification
 
-- Per-locale sitemaps, sitemap index.
-- _TODO — generation approach and `robots.txt` rules._
+Set optional env vars:
 
-## 8. Performance & Core Web Vitals
+- `NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION`
+- `NEXT_PUBLIC_BING_SITE_VERIFICATION`
+- `NEXT_PUBLIC_YANDEX_SITE_VERIFICATION`
 
-- Targets: LCP, CLS, INP within "good" thresholds.
-- Font strategy: `next/font` with `display: swap` (already configured).
-- _TODO — image optimization and budget definitions._
+## Trailing slash
 
-## 9. Social Sharing
-
-- _TODO — OG image generation for verses._
-
-## 10. Measurement
-
-- _TODO — Search Console, analytics, indexing monitoring._
-
-## References
-
-- See [Architecture](./Architecture.md), [UI](./UI.md).
+`trailingSlash: false` in `next.config.ts`. Middleware lowercases paths and collapses `//`.

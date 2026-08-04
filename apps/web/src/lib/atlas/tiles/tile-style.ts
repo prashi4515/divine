@@ -1,7 +1,9 @@
 /**
- * Illustrated Ancient Bhārata basemap — MapLibre image source.
- * Artwork is display-only. Overlays come from JSON / KG, never from pixels.
- * Swap `baseMap.src` (or ACTIVE artwork path) without changing the engine.
+ * Atlas basemap — Google Maps–like light canvas (no modern place labels).
+ *
+ * Uses an inline MapLibre style + Carto light_nolabels raster tiles so the
+ * map always loads without depending on a remote style.json. Ancient names
+ * come only from overlay JSON.
  */
 import type { StyleSpecification } from "maplibre-gl";
 import type { AtlasBaseMap, AtlasProjection } from "@divine/types";
@@ -10,33 +12,125 @@ import {
   DEFAULT_ATLAS_PROJECTION,
 } from "@divine/types";
 
-export type AtlasTileProviderId = "illustrated" | "bharata-tiles";
+export type AtlasTileProviderId =
+  | "clean-map"
+  | "bharata-tiles"
+  | "illustrated-fallback";
 
 export type AtlasTileProvider = {
   id: AtlasTileProviderId;
   label: string;
 };
 
-/** Active provider label for UI chrome. */
 export const ACTIVE_TILE_PROVIDER: AtlasTileProvider = {
-  id: "illustrated",
-  label: "Ancient Bhārata plate",
+  id: "clean-map",
+  label: "Clean map",
 };
 
+export type AtlasMapStyle = string | StyleSpecification;
+
+/** Light Google Maps–like raster tiles without place names. */
+const CLEAN_RASTER_TILES = [
+  "https://a.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}.png",
+  "https://b.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}.png",
+  "https://c.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}.png",
+] as const;
+
 /**
- * Build a MapLibre style that shows one illustrated plate georeferenced to
- * the educational projection. No OSM. No procedural coastlines.
+ * Self-contained clean basemap. Prefer this over remote style.json so glyphs
+ * and layers are under our control and overlays always paint.
  */
-export function buildIllustratedStyle(
-  baseMap: AtlasBaseMap = DEFAULT_ATLAS_BASE_MAP,
-  projection: AtlasProjection = DEFAULT_ATLAS_PROJECTION,
+export function buildCleanMapStyle(
+  attribution =
+    "© CARTO © OpenStreetMap — ancient names from Divine overlays",
 ): StyleSpecification {
+  return {
+    version: 8,
+    name: "divine-atlas-clean",
+    glyphs: "https://demotiles.maplibre.org/font/{fontstack}/{range}.pbf",
+    sources: {
+      "atlas-basemap": {
+        type: "raster",
+        tiles: [...CLEAN_RASTER_TILES],
+        tileSize: 256,
+        attribution,
+        maxzoom: 19,
+      },
+    },
+    layers: [
+      {
+        id: "atlas-bg",
+        type: "background",
+        paint: { "background-color": "#e8eaed" },
+      },
+      {
+        id: "atlas-basemap",
+        type: "raster",
+        source: "atlas-basemap",
+        paint: {
+          "raster-opacity": 1,
+          "raster-fade-duration": 100,
+        },
+      },
+    ],
+  };
+}
+
+function buildRasterTileStyle(
+  baseMap: AtlasBaseMap,
+  projection: AtlasProjection,
+): StyleSpecification {
+  const tiles = baseMap.tiles!;
   const proj = baseMap.projection ?? projection;
-  const src = baseMap.src;
+  const attribution =
+    tiles.attribution ?? baseMap.credit ?? "Ancient Bhārata";
 
   return {
     version: 8,
-    name: "ancient-bharata-illustrated",
+    name: "ancient-bharata-tiles",
+    glyphs: "https://demotiles.maplibre.org/font/{fontstack}/{range}.pbf",
+    sources: {
+      "atlas-tiles": {
+        type: "raster",
+        tiles: [tiles.url],
+        tileSize: tiles.tileSize,
+        minzoom: tiles.minZoom,
+        maxzoom: tiles.maxZoom,
+        scheme: tiles.scheme === "tms" ? "tms" : "xyz",
+        bounds: [proj.minLng, proj.minLat, proj.maxLng, proj.maxLat],
+        attribution,
+      },
+    },
+    layers: [
+      {
+        id: "atlas-bg",
+        type: "background",
+        paint: { "background-color": "#e8eaed" },
+      },
+      {
+        id: "atlas-tiles",
+        type: "raster",
+        source: "atlas-tiles",
+        paint: {
+          "raster-opacity": 1,
+          "raster-fade-duration": 150,
+          "raster-resampling": "linear",
+        },
+      },
+    ],
+  };
+}
+
+function buildImageFallbackStyle(
+  baseMap: AtlasBaseMap,
+  projection: AtlasProjection,
+): StyleSpecification {
+  const proj = baseMap.projection ?? projection;
+  const src = baseMap.src!;
+
+  return {
+    version: 8,
+    name: "ancient-bharata-image-fallback",
     glyphs: "https://demotiles.maplibre.org/font/{fontstack}/{range}.pbf",
     sources: {
       "atlas-artwork": {
@@ -54,7 +148,7 @@ export function buildIllustratedStyle(
       {
         id: "atlas-bg",
         type: "background",
-        paint: { "background-color": "#1c1810" },
+        paint: { "background-color": "#e8eaed" },
       },
       {
         id: "atlas-artwork",
@@ -70,11 +164,35 @@ export function buildIllustratedStyle(
   };
 }
 
+/**
+ * Build the MapLibre style for the Atlas canvas.
+ * Default: inline clean raster map (Google Maps–like, no modern labels).
+ */
+export function buildAtlasStyle(
+  baseMap: AtlasBaseMap = DEFAULT_ATLAS_BASE_MAP,
+  projection: AtlasProjection = DEFAULT_ATLAS_PROJECTION,
+): AtlasMapStyle {
+  if (baseMap.tiles?.url) {
+    return buildRasterTileStyle(baseMap, projection);
+  }
+  if (baseMap.src) {
+    return buildImageFallbackStyle(baseMap, projection);
+  }
+  // Remote style.json is optional; inline clean map is the reliable default.
+  if (baseMap.styleUrl) {
+    return baseMap.styleUrl;
+  }
+  return buildCleanMapStyle(baseMap.credit);
+}
+
+/** @deprecated Prefer `buildAtlasStyle`. */
+export const buildIllustratedStyle = buildAtlasStyle;
+
 export function atlasMaxBounds(
   projection: AtlasProjection = DEFAULT_ATLAS_PROJECTION,
 ): [number, number, number, number] {
-  const padLng = (projection.maxLng - projection.minLng) * 0.08;
-  const padLat = (projection.maxLat - projection.minLat) * 0.08;
+  const padLng = (projection.maxLng - projection.minLng) * 0.15;
+  const padLat = (projection.maxLat - projection.minLat) * 0.15;
   return [
     projection.minLng - padLng,
     projection.minLat - padLat,
@@ -89,7 +207,7 @@ export function atlasDefaultView(
   return {
     longitude: (projection.minLng + projection.maxLng) / 2,
     latitude: (projection.minLat + projection.maxLat) / 2,
-    zoom: 4.35,
+    zoom: 4.6,
     bearing: 0,
     pitch: 0,
   } as const;
@@ -98,10 +216,10 @@ export function atlasDefaultView(
 export const ATLAS_DEFAULT_VIEW = atlasDefaultView();
 export const ATLAS_MAX_BOUNDS = atlasMaxBounds();
 
-export const ATLAS_MIN_ZOOM = 3.2;
-export const ATLAS_MAX_ZOOM = 11.5;
+export const ATLAS_MIN_ZOOM = 3;
+export const ATLAS_MAX_ZOOM = 14;
 
-const VIEWPORT_KEY = "divine.atlas.viewport.v2";
+const VIEWPORT_KEY = "divine.atlas.viewport.v5";
 
 export type StoredAtlasViewport = {
   longitude: number;

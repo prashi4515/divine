@@ -1,7 +1,13 @@
+"use client";
+
 import Link from "next/link";
-import type { KnowledgeKingdom } from "@/lib/kingdoms/store";
-import { kingdomHref } from "@/lib/kingdoms/store";
-import { displayEnglishName } from "@/lib/text/modern-english";
+import { kingdomHref, type KnowledgeKingdom } from "@/lib/kingdoms/helpers";
+import { localizedKnowledgeChrome } from "@/lib/i18n/knowledge-labels";
+import {
+  displayLocalizedName,
+  displayLocalizedSummary,
+} from "@/lib/i18n/localize-entity";
+import { useUiLanguage } from "@/lib/i18n/use-messages";
 import { cn } from "@/lib/utils";
 
 export function KingdomCard({
@@ -11,6 +17,9 @@ export function KingdomCard({
   kingdom: KnowledgeKingdom;
   index?: number;
 }) {
+  const lang = useUiLanguage();
+  const chrome = localizedKnowledgeChrome(lang);
+
   return (
     <Link
       href={kingdomHref(kingdom)}
@@ -27,7 +36,7 @@ export function KingdomCard({
       />
       <div className="flex flex-wrap items-center gap-2">
         <span className="text-[10px] font-medium uppercase tracking-[0.16em] text-[#6a4530]">
-          Kingdom
+          {chrome.kingdom}
         </span>
         {kingdom.atlas?.kingdom ? (
           <span className="text-muted-foreground text-[10px] uppercase tracking-[0.14em]">
@@ -36,10 +45,10 @@ export function KingdomCard({
         ) : null}
       </div>
       <h3 className="text-foreground mt-2 font-serif text-lg leading-tight tracking-tight">
-        {displayEnglishName(kingdom)}
+        {displayLocalizedName(kingdom, lang)}
       </h3>
       <p className="text-muted-foreground mt-2 flex-1 text-sm leading-relaxed">
-        {kingdom.summary}
+        {displayLocalizedSummary(kingdom, lang)}
       </p>
       {kingdom.atlas?.modernLocation ? (
         <p className="text-muted-foreground mt-3 text-[11px]">

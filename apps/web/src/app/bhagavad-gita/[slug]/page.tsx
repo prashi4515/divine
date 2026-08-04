@@ -5,9 +5,17 @@ import { ChapterReaderHeader } from "@/features/reading/chapter-reader-header";
 import { VerseReaderClient } from "@/features/reading/verse-reader-client";
 import { RelatedEntitiesRail } from "@/features/encyclopedia/related-entities-rail";
 import { SiteFooter } from "@/features/reading/site-footer";
+import { Breadcrumbs } from "@/components/breadcrumbs";
+import { JsonLd } from "@/components/json-ld";
 import { gitaChapterTitle } from "@/lib/i18n/gita-chapters";
 import { getStaticGitaChapter } from "@/lib/reading/gita-static";
 import { getEntitiesForGitaChapter } from "@/lib/knowledge/store";
+import {
+  breadcrumbJsonLd,
+  buildPageMetadata,
+  chapterBookJsonLd,
+  chapterSeo,
+} from "@/lib/seo";
 
 type ChapterPageProps = {
   params: Promise<{ slug: string }>;
@@ -44,13 +52,7 @@ export async function generateMetadata({
   if (n === null) return { title: "Chapter" };
 
   const title = gitaChapterTitle("en", n);
-  return {
-    title: `Chapter ${n} — ${title}`,
-    description: `Read Chapter ${n} of the Bhagavad Gita — ${title}. A calm, typography-first reading experience.`,
-    alternates: {
-      canonical: `/bhagavad-gita/chapter-${n}`,
-    },
-  };
+  return buildPageMetadata(chapterSeo(n, title));
 }
 
 const LANGUAGE_ORDER = [
@@ -94,6 +96,13 @@ export default async function ChapterPage({ params }: ChapterPageProps) {
 
   const readerLanguages = orderLanguages(snapshot.languages);
   const relatedEntities = await getEntitiesForGitaChapter(n).catch(() => []);
+  const chapterTitle = gitaChapterTitle("en", n);
+  const seo = chapterSeo(n, chapterTitle);
+  const crumbs = [
+    { name: "Home", href: "/" },
+    { name: "Bhagavad Gita", href: "/bhagavad-gita" },
+    { name: `Chapter ${n}` },
+  ];
 
   return (
     <div className="relative flex min-h-svh flex-col">
@@ -111,7 +120,11 @@ export default async function ChapterPage({ params }: ChapterPageProps) {
 
       <ChapterReaderHeader />
 
-      <main className="page-gutter w-full max-w-none flex-1 pb-14 pt-6 sm:pb-16 md:pb-20 md:pt-8">
+      <main
+        id="main-content"
+        className="page-gutter w-full max-w-none flex-1 pb-14 pt-6 sm:pb-16 md:pb-20 md:pt-8"
+      >
+        <Breadcrumbs items={crumbs} className="mx-auto mb-6 max-w-3xl" />
         <VerseReaderClient
           chapterNumber={snapshot.chapter.number}
           verses={snapshot.verses}
@@ -135,6 +148,17 @@ export default async function ChapterPage({ params }: ChapterPageProps) {
       </main>
 
       <SiteFooter />
+      <JsonLd
+        data={[
+          breadcrumbJsonLd(crumbs),
+          chapterBookJsonLd({
+            chapterNumber: n,
+            title: chapterTitle,
+            description: seo.description,
+            path: seo.path,
+          }),
+        ]}
+      />
     </div>
   );
 }

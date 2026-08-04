@@ -14,14 +14,13 @@ import type {
   Relationship,
   ScriptureReference,
 } from "@/lib/genealogy/types";
-import {
-  CATEGORY_LABELS,
-  CATEGORY_TOKENS,
+import { CATEGORY_TOKENS,
   CONFIDENCE_LABELS,
   RELATIONSHIP_LABELS,
   formatCitation,
-  type ConfidenceLevel,
-} from "@/lib/genealogy/types";
+  type ConfidenceLevel } from "@/lib/genealogy/types";
+import { localizedPersonCategoryLabel } from "@/lib/i18n/knowledge-labels";
+import { useUiLanguage } from "@/lib/i18n/use-messages";
 import { cn } from "@/lib/utils";
 
 /**
@@ -93,6 +92,7 @@ function PersonDrawerBody({
   onNavigateToPerson?: (id: string) => void;
   peopleById?: ReadonlyMap<string, Person>;
 }) {
+  const lang = useUiLanguage();
   const tokens = CATEGORY_TOKENS[person.category];
 
   const grouped = React.useMemo(() => groupRelationships(person.relationships), [
@@ -118,7 +118,7 @@ function PersonDrawerBody({
               className="text-[10px] font-medium uppercase tracking-[0.18em]"
               style={{ color: tokens.accent }}
             >
-              {CATEGORY_LABELS[person.category]}
+              {localizedPersonCategoryLabel(person.category, lang)}
             </p>
             <DialogPrimitive.Title asChild>
               <h2 className="text-foreground mt-1 font-serif text-2xl leading-tight tracking-tight">

@@ -1,11 +1,15 @@
+"use client";
+
 import Link from "next/link";
 import type { KnowledgeEntity } from "@/lib/knowledge/types";
-import { ENTITY_KIND_LABELS, ENTITY_KIND_TOKENS } from "@/lib/knowledge/types";
+import { ENTITY_KIND_TOKENS } from "@/lib/knowledge/types";
 import { entityHref } from "@/lib/knowledge/search";
 import {
-  displayEnglishName,
-  toModernEnglish,
-} from "@/lib/text/modern-english";
+  displayLocalizedKind,
+  displayLocalizedName,
+  displayLocalizedSummary,
+} from "@/lib/i18n/localize-entity";
+import { useUiLanguage } from "@/lib/i18n/use-messages";
 import { cn } from "@/lib/utils";
 
 export function EntityCard({
@@ -15,8 +19,9 @@ export function EntityCard({
   entity: KnowledgeEntity;
   index?: number;
 }) {
+  const lang = useUiLanguage();
   const tokens = ENTITY_KIND_TOKENS[entity.kind];
-  const title = displayEnglishName(entity);
+  const title = displayLocalizedName(entity, lang);
   return (
     <Link
       href={entityHref(entity)}
@@ -36,13 +41,13 @@ export function EntityCard({
         className="text-[10px] font-medium uppercase tracking-[0.16em]"
         style={{ color: tokens.accent }}
       >
-        {ENTITY_KIND_LABELS[entity.kind]}
+        {displayLocalizedKind(entity.kind, lang)}
       </p>
       <h3 className="text-foreground mt-2 font-serif text-lg leading-tight tracking-tight">
         {title}
       </h3>
       <p className="text-muted-foreground mt-2 flex-1 text-sm leading-relaxed">
-        {toModernEnglish(entity.summary)}
+        {displayLocalizedSummary(entity, lang)}
       </p>
     </Link>
   );

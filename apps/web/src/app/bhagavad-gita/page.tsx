@@ -4,16 +4,18 @@ import { GitaIndexHeader } from "@/features/reading/gita-index-header";
 import { ReadingError } from "@/features/reading/reading-error";
 import { SiteFooter } from "@/features/reading/site-footer";
 import { SiteHeader } from "@/features/reading/site-header";
+import { Breadcrumbs } from "@/components/breadcrumbs";
+import { JsonLd } from "@/components/json-ld";
 import { getStaticGitaChaptersIndex } from "@/lib/reading/gita-static";
+import {
+  bookSeriesJsonLd,
+  breadcrumbJsonLd,
+  buildPageMetadata,
+  collectionPageJsonLd,
+  gitaIndexSeo,
+} from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Bhagavad Gita",
-  description:
-    "Explore all 18 chapters of the Bhagavad Gita - a calm, chapter-by-chapter reading path.",
-  alternates: {
-    canonical: "/bhagavad-gita",
-  },
-};
+export const metadata: Metadata = buildPageMetadata(gitaIndexSeo());
 
 /** Static index — no API round-trip. */
 export const dynamic = "force-static";
@@ -29,13 +31,18 @@ export default async function BhagavadGitaPage() {
     return (
       <div className="relative flex min-h-svh flex-col">
         <SiteHeader workCode="bg" eyebrow="Bhagavad Gita" />
-        <main className="page-gutter w-full flex-1 py-10">
+        <main id="main-content" className="page-gutter w-full flex-1 py-10">
           <ReadingError title="Unable to load chapters" message={message} />
         </main>
         <SiteFooter />
       </div>
     );
   }
+
+  const crumbs = [
+    { name: "Home", href: "/" },
+    { name: "Bhagavad Gita" },
+  ];
 
   return (
     <div className="relative flex min-h-svh flex-col">
@@ -53,7 +60,11 @@ export default async function BhagavadGitaPage() {
 
       <SiteHeader workCode="bg" eyebrow="Bhagavad Gita" />
 
-      <main className="page-gutter w-full flex-1 pb-14 pt-2 sm:pb-16 md:pb-20 md:pt-3">
+      <main
+        id="main-content"
+        className="page-gutter w-full flex-1 pb-14 pt-2 sm:pb-16 md:pb-20 md:pt-3"
+      >
+        <Breadcrumbs items={crumbs} className="mb-4" />
         <GitaIndexHeader />
 
         <section className="mt-8 md:mt-10" aria-label="Chapters">
@@ -62,6 +73,21 @@ export default async function BhagavadGitaPage() {
       </main>
 
       <SiteFooter />
+      <JsonLd
+        data={[
+          breadcrumbJsonLd(crumbs),
+          bookSeriesJsonLd(),
+          collectionPageJsonLd({
+            name: "Bhagavad Gita — All 18 Chapters",
+            description: gitaIndexSeo().description,
+            path: "/bhagavad-gita",
+            items: chapters.map((ch) => ({
+              name: `Chapter ${ch.number}`,
+              path: `/bhagavad-gita/chapter-${ch.number}`,
+            })),
+          }),
+        ]}
+      />
     </div>
   );
 }

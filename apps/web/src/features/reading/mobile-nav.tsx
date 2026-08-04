@@ -18,6 +18,7 @@ import {
   UserRound,
   X,
 } from "lucide-react";
+import { PUBLIC_AUTH_UI_ENABLED } from "@/lib/auth/config";
 import { useMessages } from "@/lib/i18n/use-messages";
 import { cn } from "@/lib/utils";
 
@@ -68,8 +69,10 @@ export function MobileNav() {
     },
     { href: "/genealogy", label: t.navGenealogy, icon: GitBranch },
     { href: "/search", label: t.navSearch, icon: Search },
-    { href: "/account", label: t.navAccount, icon: UserRound },
-  ] as const;
+    ...(PUBLIC_AUTH_UI_ENABLED
+      ? [{ href: "/account", label: t.navAccount, icon: UserRound }]
+      : []),
+  ];
 
   return (
     <DialogPrimitive.Root open={open} onOpenChange={setOpen}>

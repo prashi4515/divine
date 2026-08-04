@@ -1,8 +1,13 @@
+/**
+ * Atlas search — autocomplete, keyboard nav, scrollable results.
+ * Sidebar layout keeps the dropdown outside the map surface.
+ */
 "use client";
 
 import * as React from "react";
 import { Search, X } from "lucide-react";
 import type { AtlasDataset } from "@divine/types";
+import type { TraditionalAtlasLabel } from "@/lib/atlas/data/traditional-label-types";
 import type { AtlasPlace } from "@/lib/atlas/geo";
 import {
   SEARCH_GROUP_LABELS,
@@ -11,13 +16,23 @@ import {
   type AtlasSearchGroup,
   type AtlasSearchResult,
 } from "@/lib/atlas/search/atlas-search-engine";
+import { useReadingStore } from "@/lib/stores/reading-store";
 import { cn } from "@/lib/utils";
 
 type AtlasMapSearchProps = {
   places: readonly AtlasPlace[];
   dataset: AtlasDataset;
+  traditionalLabels?: readonly TraditionalAtlasLabel[];
+  relatedPeople?: ReadonlyArray<{
+    id: string;
+    name: string;
+    placeSlug: string;
+    longitude: number;
+    latitude: number;
+  }>;
   placeholder: string;
   onSelect: (hit: AtlasSearchResult) => void;
+  layout?: "floating" | "sidebar";
 };
 
 function groupResults(
@@ -29,6 +44,7 @@ function groupResults(
     "rivers",
     "events",
     "routes",
+    "people",
   ];
   const map = new Map<AtlasSearchGroup, AtlasSearchResult[]>();
   for (const r of results) {
@@ -41,30 +57,38 @@ function groupResults(
     .map((g) => [g, map.get(g)!]);
 }
 
-/**
- * Google Maps–style search: floating card, keyboard nav, grouped results.
- */
 export function AtlasMapSearch({
   places,
   dataset,
+  traditionalLabels = [],
+  relatedPeople = [],
   placeholder,
   onSelect,
+  layout = "sidebar",
 }: AtlasMapSearchProps) {
+  const lang = useReadingStore((s) => s.preferredLanguage);
   const [query, setQuery] = React.useState("");
   const [debounced, setDebounced] = React.useState("");
   const [open, setOpen] = React.useState(false);
   const [active, setActive] = React.useState(0);
   const wrapRef = React.useRef<HTMLDivElement>(null);
+  const listRef = React.useRef<HTMLDivElement>(null);
   const inputRef = React.useRef<HTMLInputElement>(null);
 
   React.useEffect(() => {
-    const t = window.setTimeout(() => setDebounced(query), 100);
+    const t = window.setTimeout(() => setDebounced(query), 80);
     return () => window.clearTimeout(t);
   }, [query]);
 
   const results = React.useMemo(
-    () => searchAtlas(debounced, places, dataset, 16),
-    [debounced, places, dataset],
+    () =>
+      searchAtlas(debounced, places, dataset, {
+        limit: 20,
+        lang,
+        traditionalLabels,
+        people: relatedPeople,
+      }),
+    [debounced, places, dataset, lang, traditionalLabels, relatedPeople],
   );
   const grouped = React.useMemo(() => groupResults(results), [results]);
   const flat = results;
@@ -80,6 +104,14 @@ export function AtlasMapSearch({
     document.addEventListener("mousedown", onDoc);
     return () => document.removeEventListener("mousedown", onDoc);
   }, []);
+
+  React.useEffect(() => {
+    if (!open || !listRef.current) return;
+    const el = listRef.current.querySelector<HTMLElement>(
+      `[data-atlas-search-idx="${active}"]`,
+    );
+    el?.scrollIntoView({ block: "nearest" });
+  }, [active, open]);
 
   function choose(hit: AtlasSearchResult) {
     pushRecentSearch(hit);
@@ -119,18 +151,19 @@ export function AtlasMapSearch({
   return (
     <div
       ref={wrapRef}
-      data-atlas-ui
-      className="relative z-[60] w-[min(100%,22rem)] min-w-0"
-      onWheel={(e) => e.stopPropagation()}
+      className={cn(
+        "relative w-full min-w-0",
+        layout === "floating" && "z-[60] w-[min(100%,22rem)]",
+      )}
     >
-      <div className="border-border bg-background relative flex h-12 items-center rounded-xl border shadow-md">
+      <div className="border-border bg-background relative flex h-11 items-center rounded-lg border shadow-sm">
         <Search
-          className="text-muted-foreground pointer-events-none absolute left-3.5 top-1/2 h-4 w-4 -translate-y-1/2"
+          className="text-muted-foreground pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2"
           aria-hidden
         />
         <input
           ref={inputRef}
-          type="text"
+          type="search"
           value={query}
           onChange={(e) => {
             setQuery(e.target.value);
@@ -139,7 +172,7 @@ export function AtlasMapSearch({
           onFocus={() => setOpen(true)}
           onKeyDown={onKeyDown}
           placeholder={placeholder}
-          className="h-full w-full rounded-xl bg-transparent py-2 pl-10 pr-10 text-sm outline-none"
+          className="h-full w-full rounded-lg bg-transparent py-2 pl-10 pr-10 text-sm outline-none"
           aria-label={placeholder}
           aria-autocomplete="list"
           aria-expanded={showList}
@@ -166,14 +199,14 @@ export function AtlasMapSearch({
 
       {showList ? (
         <div
+          ref={listRef}
           id="atlas-map-search-results"
           role="listbox"
-          className="border-border bg-background absolute left-0 right-0 top-full z-[70] mt-2 max-h-80 overflow-y-auto overscroll-contain rounded-xl border py-1 shadow-lg"
-          onWheel={(e) => e.stopPropagation()}
+          className="border-border bg-background absolute left-0 right-0 top-[calc(100%+6px)] z-50 max-h-72 overflow-y-auto overscroll-contain rounded-lg border py-1 shadow-lg"
         >
           {grouped.map(([group, items]) => (
             <div key={group}>
-              <p className="text-muted-foreground px-4 py-1.5 text-[10px] font-medium uppercase tracking-[0.14em]">
+              <p className="text-muted-foreground px-3 py-1.5 text-[10px] font-medium uppercase tracking-[0.14em]">
                 {SEARCH_GROUP_LABELS[group]}
               </p>
               <ul>
@@ -181,22 +214,16 @@ export function AtlasMapSearch({
                   flatIndex += 1;
                   const idx = flatIndex;
                   return (
-                    <li
-                      key={h.id}
-                      role="option"
-                      aria-selected={idx === active}
-                    >
+                    <li key={h.id} role="option" aria-selected={idx === active}>
                       <button
                         type="button"
+                        data-atlas-search-idx={idx}
                         className={cn(
-                          "flex h-11 w-full items-center justify-between gap-2 px-4 text-left text-sm",
+                          "flex h-10 w-full items-center justify-between gap-2 px-3 text-left text-sm",
                           idx === active ? "bg-muted" : "hover:bg-muted/70",
                         )}
                         onMouseEnter={() => setActive(idx)}
-                        onMouseDown={(e) => {
-                          // Prevent input blur before click selects.
-                          e.preventDefault();
-                        }}
+                        onMouseDown={(e) => e.preventDefault()}
                         onClick={() => choose(h)}
                       >
                         <span className="truncate font-medium">{h.label}</span>
