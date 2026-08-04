@@ -609,7 +609,7 @@ export async function getEntitiesForCollection(
   const store = await getStore();
   const col = store.collectionsBySlug.get(slug);
   if (!col) return [];
-  return col.entityIds
+  return (col.entityIds ?? [])
     .map((id) => store.entitiesById.get(id))
     .filter((e): e is KnowledgeEntity => Boolean(e));
 }
