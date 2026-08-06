@@ -97,6 +97,7 @@ export type Messages = {
   routeKrishnaJourney: string;
   routeArjunaDigvijaya: string;
   routeBalaramaPilgrimage: string;
+  routeAshvamedha: string;
   atlasArchitectureNote: string;
   conceptDharma: string;
   conceptKarma: string;
@@ -226,6 +227,7 @@ const en = build("en", {
   routeKrishnaJourney: "Krishna's Journey",
   routeArjunaDigvijaya: "Arjuna's Digvijaya",
   routeBalaramaPilgrimage: "Balarama's Pilgrimage",
+  routeAshvamedha: "Ashvamedha Horse",
   atlasArchitectureNote: "Mahābhārata Atlas · Illustrated plate · JSON overlays · Traditional placement certainty",
   conceptDharma: "Dharma",
   conceptKarma: "Karma",
@@ -347,6 +349,7 @@ const hi = build("hi", {
   routeKrishnaJourney: "कृष्ण की यात्रा",
   routeArjunaDigvijaya: "अर्जुन का दिग्विजय",
   routeBalaramaPilgrimage: "बलराम की तीर्थयात्रा",
+  routeAshvamedha: "अश्वमेध अश्व",
   atlasArchitectureNote: "महाभारत एटलास · चर्मपत्र मानचित्र",
   conceptDharma: "धर्म",
   conceptKarma: "कर्म",
@@ -468,6 +471,7 @@ const te = build("te", {
   routeKrishnaJourney: "కృష్ణుని ప్రయాణం",
   routeArjunaDigvijaya: "అర్జునుని దిగ్విజయం",
   routeBalaramaPilgrimage: "బలరాముని తీర్థయాత్ర",
+  routeAshvamedha: "అశ్వమేధ గుర్రం",
   atlasArchitectureNote: "మహాభారత అట్లాస్ · పార్చ్‌మెంట్ మ్యాప్",
   conceptDharma: "ధర్మం",
   conceptKarma: "కర్మ",
@@ -589,6 +593,7 @@ const kn = build("kn", {
   routeKrishnaJourney: "ಕೃಷ್ಣನ ಪ್ರಯಾಣ",
   routeArjunaDigvijaya: "ಅರ್ಜುನನ ದಿಗ್ವಿಜಯ",
   routeBalaramaPilgrimage: "ಬಲರಾಮನ ತೀರ್ಥಯಾತ್ರೆ",
+  routeAshvamedha: "ಅಶ್ವಮೇಧ ಕುದುರೆ",
   atlasArchitectureNote: "ಮಹಾಭಾರತ ಅಟ್ಲಾಸ್ · ಪಾರ್ಚ್‌ಮೆಂಟ್ ನಕ್ಷೆ",
   conceptDharma: "ಧರ್ಮ",
   conceptKarma: "ಕರ್ಮ",
@@ -710,6 +715,7 @@ const ta = build("ta", {
   routeKrishnaJourney: "கிருஷ்ணரின் பயணம்",
   routeArjunaDigvijaya: "அர்ஜுனனின் திக்விஜயம்",
   routeBalaramaPilgrimage: "பலராமரின் தீர்த்தயாத்திரை",
+  routeAshvamedha: "அஸ்வமேத குதிரை",
   atlasArchitectureNote: "மகாபாரத அட்லஸ் · பார்த்மெண்ட் வரைபடம்",
   conceptDharma: "தர்மம்",
   conceptKarma: "கர்மா",
@@ -831,6 +837,7 @@ const ml = build("ml", {
   routeKrishnaJourney: "കൃഷ്ണന്റെ യാത്ര",
   routeArjunaDigvijaya: "അർജുനന്റെ ദിഗ്വിജയം",
   routeBalaramaPilgrimage: "ബലരാമന്റെ തീർത്ഥയാത്ര",
+  routeAshvamedha: "അശ്വമേധ കുതിര",
   atlasArchitectureNote: "മഹാഭാരത അറ്റ്ലസ് · പാർച്ച്മെന്റ് ഭൂപടം",
   conceptDharma: "ധർമ്മം",
   conceptKarma: "കർമ്മം",
@@ -952,6 +959,7 @@ const or = build("or", {
   routeKrishnaJourney: "କୃଷ୍ଣଙ୍କ ଯାତ୍ରା",
   routeArjunaDigvijaya: "ଅର୍ଜୁନଙ୍କ ଦିଗ୍ୱିଜୟ",
   routeBalaramaPilgrimage: "ବଲରାମଙ୍କ ତୀର୍ଥଯାତ୍ରା",
+  routeAshvamedha: "ଅଶ୍ୱମେଧ ଘୋଡ଼ା",
   atlasArchitectureNote: "ମହାଭାରତ ଆଟଲାସ୍ · ପାର୍ଚମେଣ୍ଟ ମାନଚିତ୍ର",
   conceptDharma: "ଧର୍ମ",
   conceptKarma: "କର୍ମ",
@@ -1068,6 +1076,7 @@ const sa = build("sa", {
   routeKrishnaJourney: "कृष्णस्य यात्रा",
   routeArjunaDigvijaya: "अर्जुनस्य दिग्विजयः",
   routeBalaramaPilgrimage: "बलरामस्य तीर्थयात्रा",
+  routeAshvamedha: "अश्वमेधहयः",
   atlasArchitectureNote: "महाभारतस्य मानचित्रम् · चर्मपत्रशैली",
   conceptDharma: "धर्मः",
   conceptKarma: "कर्म",

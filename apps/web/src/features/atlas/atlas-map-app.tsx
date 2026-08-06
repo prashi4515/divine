@@ -6,6 +6,7 @@ import Map, {
   ScaleControl,
   type MapRef,
 } from "react-map-gl/maplibre";
+import { Layers, Search, X } from "lucide-react";
 import type { GeoJSONSource, MapLayerMouseEvent } from "maplibre-gl";
 import "maplibre-gl/dist/maplibre-gl.css";
 import type { AtlasDataset, AtlasEvent, AtlasRiver } from "@divine/types";
@@ -578,34 +579,45 @@ export function AtlasMapApp({
 
       {/* Mobile sidebar drawer */}
       {mobileSidebarOpen ? (
-        <div className="fixed inset-0 z-40 flex md:hidden">
+        <div className="fixed inset-0 z-50 flex md:hidden">
           <button
             type="button"
             aria-label="Close layers"
-            className="absolute inset-0 bg-black/40"
+            className="absolute inset-0 bg-black/60 backdrop-blur-xs transition-opacity"
             onClick={() => setMobileSidebarOpen(false)}
           />
-          <div className="relative z-10 flex h-full w-[min(100%,340px)] shadow-xl">
-            {sidebar}
+          <div className="relative z-10 flex h-full w-[min(100%,320px)] flex-col shadow-2xl">
+            <div className="bg-background flex items-center justify-between border-b border-border px-3 py-2">
+              <span className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+                Search & Layers
+              </span>
+              <button
+                type="button"
+                aria-label="Close menu"
+                onClick={() => setMobileSidebarOpen(false)}
+                className="inline-flex h-8 w-8 items-center justify-center rounded-md border border-border text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
+              >
+                <X className="h-4 w-4" />
+              </button>
+            </div>
+            <div className="min-h-0 flex-1 overflow-hidden">{sidebar}</div>
           </div>
         </div>
       ) : null}
 
       <div className="flex min-w-0 flex-1 flex-col">
-        <div className="flex items-center gap-2 border-b md:border-0">
+        <div className="flex items-center justify-between border-b border-border bg-background px-3 py-2">
           <button
             type="button"
-            className="border-border text-muted-foreground hover:text-foreground m-2 inline-flex h-9 items-center rounded-md border px-3 text-xs md:hidden"
+            className="inline-flex h-8 items-center justify-center gap-1.5 rounded-md border border-border bg-background px-3 text-xs font-medium text-foreground shadow-2xs transition-colors hover:bg-muted md:hidden"
             onClick={() => setMobileSidebarOpen(true)}
           >
-            Search & layers
+            <Layers className="h-3.5 w-3.5 text-muted-foreground" />
+            <span>Search & layers</span>
           </button>
-          <div className="min-w-0 flex-1">
+          <div className="flex items-center justify-end flex-1">
             <AtlasToolbar
-              visibility={visibility}
-              onToggle={toggle}
               onResetView={resetCamera}
-              onFitIndia={fitAllPlaces}
               fullscreen={fullscreen}
               onToggleFullscreen={() => setFullscreen((v) => !v)}
             />

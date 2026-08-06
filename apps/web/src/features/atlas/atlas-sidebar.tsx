@@ -21,6 +21,7 @@ import type {
   AtlasSearchResult,
 } from "@/lib/atlas/search/atlas-search-engine";
 import { AtlasMapSearch } from "@/features/atlas/atlas-map-search";
+import { atlasRouteLabel } from "@/lib/atlas/i18n-labels";
 import { useMessages } from "@/lib/i18n/use-messages";
 import { cn } from "@/lib/utils";
 
@@ -180,7 +181,7 @@ export function AtlasSidebar({
                       : "text-muted-foreground hover:bg-muted",
                   )}
                 >
-                  {r.title}
+                  {atlasRouteLabel(t, r)}
                 </button>
               </li>
             ))}

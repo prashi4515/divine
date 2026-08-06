@@ -61,7 +61,7 @@ export function atlasRouteLabel(
     case "route.balarama-pilgrimage":
       return t.routeBalaramaPilgrimage;
     case "route.ashvamedha":
-      return "Ashvamedha Horse";
+      return t.routeAshvamedha;
     default:
       return route.title;
   }
