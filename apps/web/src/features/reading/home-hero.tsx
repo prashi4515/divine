@@ -29,29 +29,28 @@ export function HomeHero() {
           fill
           priority
           sizes="100vw"
-          className="object-cover object-[72%_center] sm:object-right"
+          className="object-cover object-[72%_center] brightness-[1.08] contrast-[1.05] saturate-[1.05] sm:object-right"
         />
-        {/* Desktop: soft fade only on the left third so the art stays fully
-            visible on the right. Mobile: heavier veil for legibility. */}
+        {/* Soft edge fade for left text reading legibility without obscuring the artwork */}
         <div
           className="absolute inset-0 hidden sm:block"
           style={{
             background:
-              "linear-gradient(90deg, hsl(var(--background)) 0%, hsl(var(--background) / 0.9) 30%, hsl(var(--background) / 0.35) 55%, transparent 78%)",
+              "linear-gradient(90deg, hsl(var(--background) / 0.88) 0%, hsl(var(--background) / 0.55) 30%, hsl(var(--background) / 0.15) 55%, transparent 75%)",
           }}
         />
         <div
           className="absolute inset-0 sm:hidden"
           style={{
             background:
-              "linear-gradient(180deg, hsl(var(--background) / 0.94) 0%, hsl(var(--background) / 0.82) 40%, hsl(var(--background) / 0.62) 68%, hsl(var(--background) / 0.9) 100%)",
+              "linear-gradient(180deg, hsl(var(--background) / 0.75) 0%, hsl(var(--background) / 0.45) 45%, hsl(var(--background) / 0.7) 100%)",
           }}
         />
         <div
           className="absolute inset-0"
           style={{
             background:
-              "linear-gradient(0deg, hsl(var(--background)) 0%, transparent 28%)",
+              "linear-gradient(0deg, hsl(var(--background)) 0%, transparent 22%)",
           }}
         />
       </div>

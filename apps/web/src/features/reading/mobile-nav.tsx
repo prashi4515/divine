@@ -95,9 +95,9 @@ export function MobileNav() {
         <DialogPrimitive.Content
           aria-describedby={undefined}
           className={cn(
-            "bg-background border-border fixed right-0 top-0 z-50 flex h-svh w-full max-w-xs flex-col overflow-hidden border-l shadow-2xl",
+            "bg-background border-border fixed left-0 top-0 z-50 flex h-svh w-full max-w-xs flex-col overflow-hidden border-r shadow-2xl",
             "data-[state=open]:animate-in data-[state=closed]:animate-out",
-            "data-[state=closed]:slide-out-to-right data-[state=open]:slide-in-from-right",
+            "data-[state=closed]:slide-out-to-left data-[state=open]:slide-in-from-left",
             "duration-200",
           )}
         >
