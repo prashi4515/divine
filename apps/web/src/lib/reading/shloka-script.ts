@@ -150,16 +150,154 @@ export function isIndicScriptLanguage(language: string): boolean {
   return ["te", "kn", "ta", "ml", "or"].includes(language);
 }
 
+const HINDI_GLOSS_MAP: Record<string, string> = {
+  "whence": "कहाँ से",
+  "upon thee": "तुझमें / तुम्हें",
+  "unto thee": "तुझसे / तुम्हें",
+  "dejection": "विषाद / मोह",
+  "this": "यह",
+  "in perilous strait": "विषम परिस्थिति में",
+  "in difficulty": "विपत्ति में",
+  "comes": "प्राप्त हुआ",
+  "unworthy": "अश्रेष्ठ (अनार्य योग्य)",
+  "unaryanlike": "अनार्य जैसा",
+  "heavenexcluding": "अस्वर्ग्य (स्वर्ग न देने वाला)",
+  "disgraceful": "अकीर्तिकर (अपयशकारी)",
+  "o arjuna": "हे अर्जुन",
+  "arjuna": "अर्जुन",
+  "said": "बोले",
+  "spoke": "कहा / बोले",
+  "spoke these words": "यह वचन बोले",
+  "to him": "उनसे",
+  "him": "उसको",
+  "thus": "इस प्रकार",
+  "overcome": "व्याप्त / आविष्ट",
+  "pity": "करुणा / दया",
+  "compassion": "दया / करुणा",
+  "despondent": "शोकाकुल / दुःखी",
+  "with eyes": "नेत्रों से",
+  "filled with tears": "अश्रुपूरित / आँसुओं से भरे",
+  "agitated": "व्याकुल",
+  "destroyer of madhu": "मधुसूदन",
+  "krishna": "श्रीकृष्ण",
+  "lord": "श्री भगवान्",
+  "fear": "भय",
+  "grief": "शोक",
+  "duty": "कर्तव्य / धर्म",
+  "soul": "आत्मा",
+  "self": "आत्मा",
+  "body": "शरीर",
+  "action": "कर्म",
+  "actions": "कर्म",
+  "work": "कर्म",
+  "mind": "मन",
+  "wisdom": "ज्ञान",
+  "knowledge": "ज्ञान",
+  "devotion": "भक्ति",
+  "renunciation": "संन्यास / त्याग",
+  "yoga": "योग",
+  "yogi": "योगी",
+  "peace": "शान्ति",
+  "truth": "सत्य",
+  "delusion": "मोह",
+  "sin": "पाप",
+  "virtue": "पुण्य",
+  "free from": "रहित",
+  "attainment": "प्राप्ति",
+  "supreme": "परम",
+  "highest": "सर्वोच्च",
+  "unmanifest": "अव्यक्त",
+  "manifest": "व्यक्त",
+  "eternal": "नित्य / सनातन",
+  "imperishable": "अविनाशी",
+  "perishable": "नाशवान्",
+  "born": "उत्पन्न",
+  "death": "मृत्यु",
+  "slain": "मारा गया",
+  "slayer": "मारने वाला",
+  "weapons": "शस्त्र",
+  "fire": "अग्नि",
+  "water": "जल",
+  "wind": "वायु",
+  "indestructible": "अविनाशी",
+  "impenetrable": "अछेद्य",
+  "unchangeable": "अविकारी",
+  "immortal": "अमर",
+  "intellect": "बुद्धि",
+  "desire": "कामना / इच्छा",
+  "anger": "क्रोध",
+  "attachment": "आसक्ति",
+  "fruit": "फल",
+  "renouncing": "त्यागकर",
+  "offering": "अर्पण",
+  "sacrifice": "यज्ञ",
+  "austerity": "तप",
+  "charity": "दान",
+  "faith": "श्रद्धा",
+  "devotee": "भक्त",
+  "friend": "मित्र",
+  "teacher": "गुरु",
+  "enemy": "शत्रु",
+  "battle": "युद्ध",
+  "field of battle": "रणभूमि",
+  "victory": "विजय",
+  "defeat": "पराजय",
+  "pleasure": "सुख",
+  "pain": "दुःख",
+  "gain": "लाभ",
+  "loss": "हानि",
+};
+
+export function translateEnglishGlossToHindi(gloss: string): string {
+  const normalized = gloss.trim().toLowerCase().replace(/[(),.]/g, "");
+  if (HINDI_GLOSS_MAP[normalized]) {
+    return HINDI_GLOSS_MAP[normalized]!;
+  }
+  let translated = gloss;
+  for (const [enKey, hiValue] of Object.entries(HINDI_GLOSS_MAP)) {
+    const reg = new RegExp(`\\b${enKey}\\b`, "gi");
+    if (reg.test(translated)) {
+      translated = translated.replace(reg, hiValue);
+    }
+  }
+  return translated;
+}
+
 /**
- * Convert Devanagari lemmas in a padacheda string ("word — gloss; …") into the
- * reading language script so kn/ta/ml tables resemble Telugu word meanings.
+ * Convert Devanagari/IAST lemmas and translate glosses into the active reading language.
  */
 export function localizePadachedaLemmas(
   text: string,
   language: string,
 ): string {
   const scheme = LANGUAGE_SCHEME[language];
-  if (!scheme || scheme === "devanagari" || scheme === "iast") return text;
+
+  if (language === "hi") {
+    return text
+      .split(/[;|]+/)
+      .map((chunk) => chunk.trim())
+      .filter(Boolean)
+      .map((chunk) => {
+        const emDash = chunk.match(/^(.+?)\s+([—–-])\s+(.+)$/u);
+        if (emDash) {
+          const word = emDash[1]!.trim();
+          const gloss = emDash[3]!.trim();
+          let devWord = word;
+          try {
+            if (/^[a-zA-Zāīūṛṝḷēōṁḥṅñṭḍṇśṣ\s]+$/u.test(word)) {
+              devWord = Sanscript.t(word, "iast", "devanagari");
+            }
+          } catch {
+            // keep word
+          }
+          return `${devWord} — ${translateEnglishGlossToHindi(gloss)}`;
+        }
+        return chunk;
+      })
+      .join("; ");
+  }
+
+  if (!scheme || scheme === "iast") return text;
 
   return text
     .split(/[;|]+/)
@@ -171,13 +309,17 @@ export function localizePadachedaLemmas(
         const word = emDash[1]!.trim();
         const gloss = emDash[3]!.trim();
         try {
-          let converted = stripForeignIndicMarks(
-            Sanscript.t(
+          let converted = word;
+          if (/^[a-zA-Zāīūṛṝḷēōṁḥṅñṭḍṇśṣ\s]+$/u.test(word)) {
+            converted = Sanscript.t(word, "iast", scheme);
+          } else {
+            converted = Sanscript.t(
               normalizeDevanagariForRescript(word),
               "devanagari",
               scheme,
-            ),
-          );
+            );
+          }
+          converted = stripForeignIndicMarks(converted);
           if (scheme === "telugu") {
             converted = normalizeTeluguShlokaOrthography(converted);
           }
