@@ -24,22 +24,24 @@ export function AtlasToolbar({
   const t = useMessages();
 
   return (
-    <div className="flex shrink-0 items-center justify-end gap-2 border-b border-border bg-background px-3 py-2">
+    <div className="flex items-center gap-1 rounded-lg border border-border/80 bg-background/95 p-1 backdrop-blur-md shadow-lg pointer-events-auto">
       <button
         type="button"
         onClick={onResetView}
-        className="inline-flex h-8 items-center justify-center gap-1.5 rounded-md border border-border px-3 text-xs font-medium text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
+        className="inline-flex h-7 items-center justify-center gap-1.5 rounded-md px-2.5 text-xs font-medium text-muted-foreground transition-colors hover:bg-muted hover:text-foreground active:scale-95"
       >
         <RotateCcw className="h-3.5 w-3.5" />
         <span>{t.resetView}</span>
       </button>
+
+      <div className="h-4 w-px bg-border/60" aria-hidden />
 
       <button
         type="button"
         aria-label={fullscreen ? t.exitFullscreen : t.fullscreen}
         title={fullscreen ? t.exitFullscreen : t.fullscreen}
         onClick={onToggleFullscreen}
-        className="inline-flex h-8 w-8 items-center justify-center rounded-md border border-border text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
+        className="inline-flex h-7 w-7 items-center justify-center rounded-md text-muted-foreground transition-colors hover:bg-muted hover:text-foreground active:scale-95"
       >
         {fullscreen ? (
           <Minimize2 className="h-3.5 w-3.5" />

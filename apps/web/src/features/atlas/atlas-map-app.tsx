@@ -6,7 +6,7 @@ import Map, {
   ScaleControl,
   type MapRef,
 } from "react-map-gl/maplibre";
-import { Layers, Search, X } from "lucide-react";
+import { Layers, X } from "lucide-react";
 import type { GeoJSONSource, MapLayerMouseEvent } from "maplibre-gl";
 import "maplibre-gl/dist/maplibre-gl.css";
 import type { AtlasDataset, AtlasEvent, AtlasRiver } from "@divine/types";
@@ -605,27 +605,27 @@ export function AtlasMapApp({
         </div>
       ) : null}
 
-      <div className="flex min-w-0 flex-1 flex-col">
-        <div className="flex items-center justify-between border-b border-border bg-background px-3 py-2">
-          <button
-            type="button"
-            className="inline-flex h-8 items-center justify-center gap-1.5 rounded-md border border-border bg-background px-3 text-xs font-medium text-foreground shadow-2xs transition-colors hover:bg-muted md:hidden"
-            onClick={() => setMobileSidebarOpen(true)}
-          >
-            <Layers className="h-3.5 w-3.5 text-muted-foreground" />
-            <span>Search & layers</span>
-          </button>
-          <div className="flex items-center justify-end flex-1">
-            <AtlasToolbar
-              onResetView={resetCamera}
-              fullscreen={fullscreen}
-              onToggleFullscreen={() => setFullscreen((v) => !v)}
-            />
-          </div>
+      <div className="relative min-w-0 flex-1 h-full w-full overflow-hidden">
+        {/* Floating top-right controls (Reset + Fullscreen) */}
+        <div className="absolute top-3 right-3 z-30 pointer-events-none">
+          <AtlasToolbar
+            onResetView={resetCamera}
+            fullscreen={fullscreen}
+            onToggleFullscreen={() => setFullscreen((v) => !v)}
+          />
         </div>
 
-        <div className="relative min-h-0 flex-1">
-          <Map
+        {/* Floating mobile Search & Layers button */}
+        <button
+          type="button"
+          className="absolute top-3 left-3 z-30 inline-flex h-9 items-center justify-center gap-2 rounded-lg border border-border/80 bg-background/95 backdrop-blur-md px-3 text-xs font-medium text-foreground shadow-lg transition-all hover:bg-muted active:scale-95 md:hidden"
+          onClick={() => setMobileSidebarOpen(true)}
+        >
+          <Layers className="h-3.5 w-3.5 text-muted-foreground" />
+          <span>Search & layers</span>
+        </button>
+
+        <Map
             ref={mapRef}
             mapLib={import("maplibre-gl")}
             initialViewState={initialView}
@@ -704,7 +704,6 @@ export function AtlasMapApp({
             <ScaleControl position="bottom-left" maxWidth={120} unit="metric" />
           </Map>
         </div>
-      </div>
 
       {selected ? (
         <AtlasPlacePanel
