@@ -27,6 +27,7 @@ import { atlasHref, isAtlasPlace } from "@/lib/atlas/geo";
 import { formatCitation } from "@/lib/knowledge/types";
 import type { KnowledgeEntity } from "@/lib/knowledge/types";
 import { LazyEntityGraph } from "@/features/encyclopedia/lazy-entity-graph";
+import { localizeEntityTitle } from "@/lib/reading/shloka-script";
 import type { EntityBundle } from "@/lib/knowledge/store";
 
 function EntityLinkList({
@@ -42,6 +43,7 @@ function EntityLinkList({
   extraHref?: (e: KnowledgeEntity) => { href: string; label: string } | null;
   entityLinkHref?: (e: KnowledgeEntity) => string;
 }) {
+  const lang = useUiLanguage();
   if (entities.length === 0) {
     return empty ? (
       <section>
@@ -67,7 +69,7 @@ function EntityLinkList({
                 href={entityLinkHref?.(e) ?? entityHref(e)}
                 className="border-border/70 bg-card hover:border-saffron/40 inline-flex items-center gap-1.5 rounded-full border px-3 py-1.5 text-sm transition-divine"
               >
-                {e.name}
+                {localizeEntityTitle(e.name, lang)}
                 <Library className="text-muted-foreground h-3 w-3" aria-hidden />
               </Link>
               {extra ? (
@@ -193,18 +195,18 @@ export function EventPageBody({
               href={eventHref(links.prev)}
               className="text-muted-foreground hover:text-foreground underline-offset-2 hover:underline"
             >
-              ← {links.prev.name}
+              ← {localizeEntityTitle(links.prev.name, lang)}
             </Link>
           ) : (
             <span className="text-muted-foreground">{labels.startTimeline}</span>
           )}
-          <span className="text-foreground font-medium">{event.name}</span>
+          <span className="text-foreground font-medium">{localizeEntityTitle(event.name, lang)}</span>
           {links.next ? (
             <Link
               href={eventHref(links.next)}
               className="text-muted-foreground hover:text-foreground underline-offset-2 hover:underline"
             >
-              {links.next.name} →
+              {localizeEntityTitle(links.next.name, lang)} →
             </Link>
           ) : (
             <span className="text-muted-foreground">{labels.endTimeline}</span>

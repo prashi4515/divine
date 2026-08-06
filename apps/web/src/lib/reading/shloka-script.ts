@@ -150,6 +150,135 @@ export function isIndicScriptLanguage(language: string): boolean {
   return ["te", "kn", "ta", "ml", "or"].includes(language);
 }
 
+const ENTITY_TRANSLATIONS: Record<string, Record<string, string>> = {
+  "Creation": {
+    te: "సృష్టి (Creation)",
+    hi: "सृष्टि",
+    sa: "सृष्टिः",
+    kn: "ಸೃಷ್ಟಿ (Creation)",
+    ta: "சிருஷ்டி (Creation)",
+    ml: "സൃഷ്ടി (Creation)",
+    or: "ସୃଷ୍ଟି (Creation)",
+  },
+  "Major Dynasties": {
+    te: "ప్రధాన రాజవంశాలు (Major Dynasties)",
+    hi: "प्रमुख राजवंश",
+    sa: "प्रधानाः राजवंशः",
+    kn: "ಪ್ರಮುಖ ರಾಜವಂಶಗಳು (Major Dynasties)",
+    ta: "முக்கிய வம்சங்கள் (Major Dynasties)",
+    ml: "പ്രധാന രാജവംശങ്ങൾ (Major Dynasties)",
+    or: "ପ୍ରମୁଖ ରାଜବଂଶ (Major Dynasties)",
+  },
+  "Birth of Krishna": {
+    te: "కృష్ణ జన్మ (Birth of Krishna)",
+    hi: "कृष्ण जन्म",
+    sa: "कृष्णजन्म",
+    kn: "ಕೃಷ್ಣ ಜನ್ಮ (Birth of Krishna)",
+    ta: "கிருஷ்ண ஜனனம் (Birth of Krishna)",
+    ml: "കൃഷ്ണ ജനനം (Birth of Krishna)",
+    or: "କୃଷ୍ଣ ଜନ୍ମ (Birth of Krishna)",
+  },
+  "Pandava Exile": {
+    te: "పాండవుల వనవాసం (Pandava Exile)",
+    hi: "पांडव वनवास",
+    sa: "पाण्डववनवासः",
+    kn: "ಪಾಂಡವರ ವನವಾಸ (Pandava Exile)",
+    ta: "பாண்டவர் வனவாசம் (Pandava Exile)",
+    ml: "പാണ്ഡവ വനവാസം (Pandava Exile)",
+    or: "ପାଣ୍ଡବ ବନବାସ (Pandava Exile)",
+  },
+  "Kurukshetra War": {
+    te: "కురుక్షేత్ర యుద్ధం (Kurukshetra War)",
+    hi: "कुरुक्षेत्र युद्ध",
+    sa: "कुरुक्षेत्रयुद्धम्",
+    kn: "ಕುರುಕ್ಷೇತ್ರ ಯುದ್ಧ (Kurukshetra War)",
+    ta: "குருக்ஷேத்திர போர் (Kurukshetra War)",
+    ml: "കുരുക്ഷേത്ര യുദ്ധം (Kurukshetra War)",
+    or: "କୁରୁକ୍ଷେତ୍ର ଯୁଦ୍ଧ (Kurukshetra War)",
+  },
+  "Kuru": {
+    te: "కురు (Kuru)",
+    hi: "कुरु",
+    sa: "कुरुः",
+    kn: "ಕುರು",
+    ta: "குரு",
+    ml: "കുരു",
+    or: "କୁରୁ",
+  },
+  "Bharata": {
+    te: "భరత (Bharata)",
+    hi: "भरत",
+    sa: "भरतः",
+    kn: "ಭರತ",
+    ta: "பரதன்",
+    ml: "ഭരതൻ",
+    or: "ଭରତ",
+  },
+  "Ikshvaku": {
+    te: "ఇక్ష్వాకు (Ikshvaku)",
+    hi: "इक्ष्वाकु",
+    sa: "इक्ष्वाकुः",
+    kn: "ಇಕ್ಷ್ವಾಕು",
+    ta: "இக்ஷ்வாகு",
+    ml: "ഇക്ഷ്വാകു",
+    or: "ଇକ୍ଷାକୂ",
+  },
+  "Brahmastra": {
+    te: "బ్రహ్మాస్త్రం (Brahmastra)",
+    hi: "ब्रह्मास्त्र",
+    sa: "ब्रह्मास्त्रम्",
+    kn: "ಬ್ರಹ್ಮಾಸ್ತ್ರ",
+    ta: "பிரம்மாஸ்திரம்",
+    ml: "ബ്രഹ്മാസ്ത്രം",
+    or: "ବ୍ରହ୍ମାସ୍ତ୍ର",
+  },
+  "Pashupatastra": {
+    te: "పాశుపతాస్త్రం (Pashupatastra)",
+    hi: "पाशुपतास्त्र",
+    sa: "पाशुपतास्त्रम्",
+    kn: "ಪಾಶುಪತಾಸ್ತ್ರ",
+    ta: "பாசுபதாஸ்திரம்",
+    ml: "പാശുപതാസ്ത്രം",
+    or: "ପାଶୁపతాସ୍ତ୍ର",
+  },
+  "Hastinapura": {
+    te: "హస్తినాపురం (Hastinapura)",
+    hi: "हस्तिनापुर",
+    sa: "हस्तिनापुरम्",
+    kn: "ಹಸ್ತಿನಾಪುರ",
+    ta: "ஹஸ்தினாபுரம்",
+    ml: "ഹസ്തിനപുരം",
+    or: "ହସ୍ତିନାପୁର",
+  },
+  "Indraprastha": {
+    te: "ఇంద్రప్రస్థం (Indraprastha)",
+    hi: "इंद्रप्रस्थ",
+    sa: "इन्द्रप्रस्थम्",
+    kn: "ಇಂದ್ರಪ್ರಸ್ಥ",
+    ta: "இந்திரபிரஸ்தம்",
+    ml: "ഇന്ദ്രപ്രസ്ഥം",
+    or: "ଇନ୍ଦ୍ରପ୍ରସ୍ଥ",
+  },
+};
+
+export function localizeEntityTitle(title: string, language: string): string {
+  if (language === "en" || !title) return title;
+  const match = ENTITY_TRANSLATIONS[title.trim()];
+  if (match?.[language]) return match[language]!;
+  if (["te", "kn", "ta", "ml", "or", "hi", "sa"].includes(language)) {
+    try {
+      const scheme = LANGUAGE_SCHEME[language] ?? "devanagari";
+      if (/^[\u0900-\u097F\s]+$/u.test(title)) {
+        return devanagariToReadingScript(title, language);
+      }
+      return Sanscript.t(title, "iast", scheme);
+    } catch {
+      return title;
+    }
+  }
+  return title;
+}
+
 const HINDI_GLOSS_MAP: Record<string, string> = {
   "whence": "कहाँ से",
   "upon thee": "तुझमें / तुम्हें",

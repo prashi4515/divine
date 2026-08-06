@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import type { ReactNode } from "react";
 import {
@@ -7,6 +9,8 @@ import {
   ScrollText,
   Swords,
 } from "lucide-react";
+import { useMessages, useUiLanguage } from "@/lib/i18n/use-messages";
+import { localizeEntityTitle } from "@/lib/reading/shloka-script";
 import type {
   WeaponResolvedLinks,
   KnowledgeWeapon,
@@ -63,6 +67,7 @@ function EntityChips({
   hrefFor?: (e: KnowledgeEntity) => string;
   extraHref?: (e: KnowledgeEntity) => { href: string; label: string } | null;
 }) {
+  const lang = useUiLanguage();
   if (entities.length === 0) return null;
   return (
     <Section id={id} title={title}>
@@ -76,7 +81,7 @@ function EntityChips({
                 className="border-border/70 bg-card hover:border-saffron/40 inline-flex items-center gap-1.5 rounded-full border px-3 py-1.5 text-sm transition-divine"
                 prefetch
               >
-                {displayEnglishName(e)}
+                {localizeEntityTitle(displayEnglishName(e), lang)}
                 <Library className="text-muted-foreground h-3 w-3" aria-hidden />
               </Link>
               {extra ? (

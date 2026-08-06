@@ -3,7 +3,10 @@
 import Link from "next/link";
 import { ChevronRight, GitBranch } from "lucide-react";
 import { useMessages, useUiLanguage } from "@/lib/i18n/use-messages";
-import { devanagariToReadingScript } from "@/lib/reading/shloka-script";
+import {
+  devanagariToReadingScript,
+  localizeEntityTitle,
+} from "@/lib/reading/shloka-script";
 import { cn } from "@/lib/utils";
 
 export type Breadcrumb = { href?: string; label: string };
@@ -40,10 +43,7 @@ export function GenealogyHeader({
     if (norm === "genealogy") return t.navGenealogy;
     if (norm === "atlas") return t.navAtlas;
     if (norm === "search") return t.search;
-    if (["te", "kn", "ta", "ml", "or"].includes(lang) && sanskritTitle) {
-      return devanagariToReadingScript(sanskritTitle, lang);
-    }
-    return label;
+    return localizeEntityTitle(label, lang);
   };
 
   const translateEyebrow = (eb?: string): string | undefined => {
@@ -57,10 +57,7 @@ export function GenealogyHeader({
     return eb;
   };
 
-  const displayTitle =
-    ["te", "kn", "ta", "ml", "or"].includes(lang) && sanskritTitle
-      ? devanagariToReadingScript(sanskritTitle, lang)
-      : title;
+  const displayTitle = localizeEntityTitle(title, lang);
 
   return (
     <div className="relative overflow-hidden">
