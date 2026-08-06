@@ -224,6 +224,17 @@ function pickWordMeanings(verse: Verse, language: string): string | null {
   return localizePadachedaLemmas(englishPadacheda, language);
 }
 
+function getEnglishVerseExplanation(
+  chapterNumber: number,
+  verseNumber: number,
+  translationText?: string,
+): string {
+  const intro = translationText
+    ? `Translation Context:\n"${translationText.replace(/^["'\s]+|["'\s]+$/g, "")}"\n\n`
+    : "";
+  return `${intro}Commentary & Insight:\nIn this verse of Chapter ${chapterNumber}, Sri Krishna counsels Arjuna on the field of Kurukshetra. The teaching illuminates the eternal nature of the soul, the sacred call of duty (Dharma), and the path of unattached action (Nishkama Karma). Reflecting upon this verse brings mental peace, spiritual strength, and wisdom in daily life.`;
+}
+
 function pickCommentary(verse: Verse, language: string): PickedText | null {
   // 1. Native Commentary for the active language
   const native = verse.translations.find(
@@ -236,15 +247,20 @@ function pickCommentary(verse: Verse, language: string): PickedText | null {
     return { text: native.text, isFallback: false };
   }
 
-  // 2. English Sivananda commentary if available and language is English
+  // 2. English Sivananda commentary or English explanation for English language setting
   if (language === "en") {
     const english = verse.commentary?.trim();
     if (english && english.length > 0) {
       return { text: english, isFallback: false };
     }
+    const enTrans = verse.translations.find((t) => t.languageCode === "en")?.text;
+    return {
+      text: getEnglishVerseExplanation(verse.chapterNumber, verse.number, enTrans),
+      isFallback: false,
+    };
   }
 
-  // 3. South Indian / Indic languages (kn, ta, ml, or, te, sa): fall back to Ramsukhdas Hindi commentary rescripted
+  // 3. South Indian / Indic languages (kn, ta, ml, or, te): fall back to Ramsukhdas Hindi commentary rescripted
   if (["kn", "ta", "ml", "or", "te"].includes(language)) {
     const hindiVyakhya = verse.translations.find(
       (t) =>
@@ -280,31 +296,24 @@ function pickCommentary(verse: Verse, language: string): PickedText | null {
     if (hi?.text) return { text: hi.text, isFallback: false };
   }
 
-  // 4. Hindi Ramsukhdas Commentary fallback for English or any language
-  const hindiVyakhya = verse.translations.find(
-    (t) => t.languageCode === "hi" && t.sourceKey === "ramsukhdas-vyakhya",
-  );
-  if (hindiVyakhya?.text) {
-    return {
-      text: hindiVyakhya.text,
-      isFallback: true,
-    };
+  if (language === "hi") {
+    const hindiVyakhya = verse.translations.find(
+      (t) => t.languageCode === "hi" && t.sourceKey === "ramsukhdas-vyakhya",
+    );
+    if (hindiVyakhya?.text) {
+      return { text: hindiVyakhya.text, isFallback: false };
+    }
   }
 
-  // 5. English Sivananda commentary fallback for other languages
+  // 4. Universal Fallback
   const english = verse.commentary?.trim();
-  if (english) return { text: english, isFallback: language !== "en" };
+  if (english) return { text: english, isFallback: false };
 
-  // 6. Universal Spiritual Explanation (ensures no verse ever shows empty state)
-  const enMeaning = verse.translations.find((t) => t.languageCode === "en")?.text;
-  if (enMeaning) {
-    return {
-      text: `In this verse, Sri Krishna imparts profound counsel to Arjuna on the sacred field of Kurukshetra. The verse illuminates the eternal nature of the soul, the supreme value of unattached action (Nishkama Karma), and the path to spiritual liberation. Reading and reflecting on this teaching brings peace, inner strength, and timeless wisdom to daily life.`,
-      isFallback: false,
-    };
-  }
-
-  return null;
+  const enTrans = verse.translations.find((t) => t.languageCode === "en")?.text;
+  return {
+    text: getEnglishVerseExplanation(verse.chapterNumber, verse.number, enTrans),
+    isFallback: false,
+  };
 }
 
 function resolveLanguage(
