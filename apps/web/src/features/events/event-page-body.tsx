@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import {
   ArrowUpRight,
@@ -8,6 +10,7 @@ import {
   ScrollText,
   Swords,
 } from "lucide-react";
+import { useMessages, useUiLanguage } from "@/lib/i18n/use-messages";
 import type {
   KnowledgeEvent,
   ResolvedEventLinks,
@@ -96,6 +99,49 @@ export function EventPageBody({
   links: ResolvedEventLinks;
   bundle: EntityBundle;
 }) {
+  const lang = useUiLanguage();
+  const t = useMessages();
+
+  const labels = {
+    overview:
+      lang === "te" ? "అవలోకనం" : lang === "hi" ? "अवलोकन" : lang === "sa" ? "अवलोकनम्" : "Overview",
+    timelinePosition:
+      lang === "te"
+        ? "కాలక్రమ స్థానం"
+        : lang === "hi"
+          ? "समय-रेखा स्थिति"
+          : lang === "sa"
+            ? "कालक्रमस्थितिः"
+            : "Timeline position",
+    peopleInvolved:
+      lang === "te"
+        ? "పాల్గొన్న వ్యక్తులు"
+        : lang === "hi"
+          ? "संबंधित व्यक्ति"
+          : lang === "sa"
+            ? "సంబంధితాః జనాః"
+            : "People involved",
+    placesInvolved:
+      lang === "te"
+        ? "పాల్గొన్న ప్రదేశాలు"
+        : lang === "hi"
+          ? "संबंधित स्थान"
+          : lang === "sa"
+            ? "సంబంధిత స్థానాని"
+            : "Places involved",
+    kingdoms: t.navKingdoms,
+    relatedGitaChapters:
+      lang === "te"
+        ? "సంబంధిత గీతా అధ్యాయాలు"
+        : lang === "hi"
+          ? "संबंधित गीता अध्याय"
+          : "Related Gītā chapters",
+    startTimeline:
+      lang === "te" ? "కాలక్రమం ప్రారంభం" : lang === "hi" ? "समयरेखा का प्रारंभ" : "Start of hub timeline",
+    endTimeline:
+      lang === "te" ? "కాలక్రమం ముగింపు" : lang === "hi" ? "समयरेखा का अंत" : "End of hub timeline",
+  };
+
   const graphNeighbors = bundle.related
     .slice(0, 24)
     .map((r) => ({ entity: r.other, relation: r.relation }));
@@ -107,7 +153,7 @@ export function EventPageBody({
           {eventTypeLabel(event.event.eventType)}
         </span>
         <span className="border-border/70 rounded-full border px-2.5 py-0.5 text-[11px]">
-          Timeline · {event.event.timelineOrder}
+          {labels.timelinePosition} · {event.event.timelineOrder}
         </span>
         <span className="border-border/70 rounded-full border px-2.5 py-0.5 text-[11px]">
           {event.primaryScripture}
@@ -127,7 +173,7 @@ export function EventPageBody({
           id="overview"
           className="text-saffron mb-3 text-[10px] font-medium uppercase tracking-[0.18em]"
         >
-          Overview
+          {labels.overview}
         </h2>
         <p className="text-foreground/90 text-base leading-relaxed">
           {event.description}
@@ -139,7 +185,7 @@ export function EventPageBody({
           id="timeline-position"
           className="text-saffron mb-3 text-[10px] font-medium uppercase tracking-[0.18em]"
         >
-          Timeline position
+          {labels.timelinePosition}
         </h2>
         <div className="border-border/70 bg-card flex flex-wrap items-center gap-3 rounded-2xl border p-4 text-sm">
           {links.prev ? (
@@ -150,7 +196,7 @@ export function EventPageBody({
               ← {links.prev.name}
             </Link>
           ) : (
-            <span className="text-muted-foreground">Start of hub timeline</span>
+            <span className="text-muted-foreground">{labels.startTimeline}</span>
           )}
           <span className="text-foreground font-medium">{event.name}</span>
           {links.next ? (
@@ -161,31 +207,31 @@ export function EventPageBody({
               {links.next.name} →
             </Link>
           ) : (
-            <span className="text-muted-foreground">End of hub timeline</span>
+            <span className="text-muted-foreground">{labels.endTimeline}</span>
           )}
         </div>
       </section>
 
       <EntityLinkList
-        title="People involved"
+        title={labels.peopleInvolved}
         entities={links.participants}
         extraHref={(e) => {
           const href = genealogyPersonHref(e);
-          return href ? { href, label: "Genealogy" } : null;
+          return href ? { href, label: t.navGenealogy } : null;
         }}
       />
 
       <EntityLinkList
-        title="Places involved"
+        title={labels.placesInvolved}
         entities={links.places}
         extraHref={(e) =>
           isAtlasPlace(e)
-            ? { href: atlasHref(e), label: "Atlas" }
+            ? { href: atlasHref(e), label: t.navAtlas }
             : null
         }
       />
 
-      <EntityLinkList title="Kingdoms" entities={links.kingdoms} />
+      <EntityLinkList title={labels.kingdoms} entities={links.kingdoms} />
 
       {links.chapters.length > 0 ? (
         <section aria-labelledby="gita-chapters">
@@ -193,7 +239,7 @@ export function EventPageBody({
             id="gita-chapters"
             className="text-saffron mb-3 text-[10px] font-medium uppercase tracking-[0.18em]"
           >
-            Related Gītā chapters
+            {labels.relatedGitaChapters}
           </h2>
           <ul className="flex flex-wrap gap-2">
             {links.chapters.map((n) => (
