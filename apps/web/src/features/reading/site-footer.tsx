@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { BookOpen, Languages, Search } from "lucide-react";
 import { PUBLIC_AUTH_UI_ENABLED } from "@/lib/auth/config";
@@ -9,7 +10,7 @@ import { useReadingStore } from "@/lib/stores/reading-store";
 import { cn } from "@/lib/utils";
 
 /**
- * Site-wide footer — brand, explore / reading / account columns, live languages.
+ * Site-wide footer — brand artwork backdrop, explore links, live languages.
  */
 export function SiteFooter() {
   const t = useMessages();
@@ -30,12 +31,6 @@ export function SiteFooter() {
     { href: "/search", label: h.searchVerses },
   ];
 
-  const reading = [
-    { href: "/bhagavad-gita/chapter-1", label: t.chapterFallback(1) },
-    { href: "/bhagavad-gita/chapter-2", label: t.chapterTitle(2) },
-    { href: "/bhagavad-gita/chapter-12", label: t.chapterTitle(12) },
-  ];
-
   const account = [
     { href: "/login", label: t.signIn },
     { href: "/signup", label: t.createAccount },
@@ -44,21 +39,28 @@ export function SiteFooter() {
 
   return (
     <footer className="border-border relative mt-auto overflow-hidden border-t">
-      <div
-        className="pointer-events-none absolute inset-0 -z-10"
-        aria-hidden
-        style={{
-          background: `
-            radial-gradient(ellipse 70% 80% at 10% 0%, hsl(var(--saffron) / 0.08), transparent 55%),
-            radial-gradient(ellipse 50% 60% at 95% 100%, hsl(var(--gold) / 0.07), transparent 50%),
-            hsl(var(--muted) / 0.35)
-          `,
-        }}
-      />
+      {/* Footer background artwork with gradient overlay */}
+      <div className="absolute inset-0 -z-10 overflow-hidden">
+        <Image
+          src="/images/hero-krishna-arjuna.jpg"
+          alt="Sacred Kurukshetra landscape artwork"
+          fill
+          priority={false}
+          sizes="100vw"
+          className="object-cover object-bottom opacity-[0.18] brightness-90 saturate-150 mix-blend-luminosity"
+        />
+        <div
+          className="absolute inset-0"
+          style={{
+            background:
+              "linear-gradient(180deg, hsl(var(--background) / 0.82) 0%, hsl(var(--background) / 0.92) 60%, hsl(var(--background)) 100%)",
+          }}
+        />
+      </div>
 
       <div className="page-gutter w-full py-12 sm:py-14 md:py-16">
-        <div className="mx-auto grid max-w-6xl gap-10 md:grid-cols-[minmax(0,1.35fr)_repeat(3,minmax(0,1fr))] md:gap-8 lg:gap-12">
-          <div className="max-w-sm space-y-4">
+        <div className="mx-auto grid max-w-6xl gap-10 md:grid-cols-[minmax(0,1.8fr)_minmax(0,1fr)] md:gap-12 lg:gap-16">
+          <div className="max-w-md space-y-4">
             <Link
               href="/"
               className="inline-flex items-center gap-2.5 rounded-md focus-visible:outline-none"
@@ -100,7 +102,6 @@ export function SiteFooter() {
           </div>
 
           <FooterColumn title={t.footerExplore} links={explore} />
-          <FooterColumn title={t.footerReading} links={reading} />
           {PUBLIC_AUTH_UI_ENABLED ? (
             <FooterColumn title={t.footerAccount} links={account} />
           ) : null}

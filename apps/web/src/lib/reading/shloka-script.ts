@@ -297,6 +297,31 @@ export function localizePadachedaLemmas(
       .join("; ");
   }
 
+  if (language === "sa") {
+    return text
+      .split(/[;|]+/)
+      .map((chunk) => chunk.trim())
+      .filter(Boolean)
+      .map((chunk) => {
+        const emDash = chunk.match(/^(.+?)\s+([—–-])\s+(.+)$/u);
+        if (emDash) {
+          const word = emDash[1]!.trim();
+          const gloss = emDash[3]!.trim();
+          let devWord = word;
+          try {
+            if (/^[a-zA-Zāīūṛṝḷēōṁḥṅñṭḍṇśṣ\s]+$/u.test(word)) {
+              devWord = Sanscript.t(word, "iast", "devanagari");
+            }
+          } catch {
+            // keep word
+          }
+          return `${devWord} — ${gloss}`;
+        }
+        return chunk;
+      })
+      .join("; ");
+  }
+
   if (!scheme || scheme === "iast") return text;
 
   return text
