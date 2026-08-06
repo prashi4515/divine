@@ -111,7 +111,7 @@ function pickTranslation(verse: Verse, language: string): PickedText | null {
     return { text: verse.sanskritText, isFallback: false };
   }
 
-  // Prefer a real native meaning (en / hi / te / or).
+  // Prefer a real native meaning (en / hi / te / or / kn / ta / ml).
   const native = verse.translations.find(
     (t) =>
       t.languageCode === language &&
@@ -123,8 +123,8 @@ function pickTranslation(verse: Verse, language: string): PickedText | null {
     return { text: formatTranslationText(native.text), isFallback: false };
   }
 
-  // kn/ta/ml: re-letter Hindi meaning into the reader's script (clean nukta).
-  if (language === "kn" || language === "ta" || language === "ml") {
+  // kn/ta/ml/or: re-letter Hindi meaning into the reader's script (clean nukta).
+  if (["kn", "ta", "ml", "or"].includes(language)) {
     const hindi = verse.translations.find(
       (t) =>
         t.languageCode === "hi" &&
@@ -163,8 +163,8 @@ function pickTranslation(verse: Verse, language: string): PickedText | null {
       !VYAKHYA_SOURCES.has(t.sourceKey) &&
       !W2W_SOURCES.has(t.sourceKey),
   );
-  if (english?.text && language === "en") {
-    return { text: formatTranslationText(english.text), isFallback: false };
+  if (english?.text) {
+    return { text: formatTranslationText(english.text), isFallback: language !== "en" };
   }
   return null;
 }
@@ -181,44 +181,63 @@ function cleanScriptProxyText(text: string): string {
 }
 
 function pickWordMeanings(verse: Verse, language: string): string | null {
+  // 1. Native W2W translation matching target language
   const localized = verse.translations.find(
     (t) => t.languageCode === language && W2W_SOURCES.has(t.sourceKey),
   );
-  if (localized?.text) return localized.text;
+  if (localized?.text && localized.text.trim().length > 0) {
+    return localized.text;
+  }
 
-  const targetScheme = readingLanguageScheme(language);
-  if (
-    targetScheme &&
-    targetScheme !== "iast" &&
-    language !== "te" &&
-    language !== "en"
-  ) {
+  // 2. For Indic/Dravidian script languages (kn, ta, ml, or), attempt rescripting Telugu W2W if available
+  if (["kn", "ta", "ml", "or"].includes(language)) {
+    const targetScheme = readingLanguageScheme(language);
     const teluguW2w = verse.translations.find(
       (t) => t.languageCode === "te" && W2W_SOURCES.has(t.sourceKey),
     );
-    if (teluguW2w?.text) {
-      return rescriptPadacheda(teluguW2w.text, "telugu", targetScheme);
+    if (teluguW2w?.text && targetScheme) {
+      const rescripted = rescriptPadacheda(teluguW2w.text, "telugu", targetScheme);
+      if (
+        rescripted &&
+        !rescripted.includes("-- --") &&
+        rescripted.replace(/[-—–\s;(),.]/g, "").length > 5
+      ) {
+        return rescripted;
+      }
     }
   }
 
+  // 3. For Telugu (te), return teluguW2w if native wasn't already caught above
+  if (language === "te") {
+    const teluguW2w = verse.translations.find(
+      (t) => t.languageCode === "te" && W2W_SOURCES.has(t.sourceKey),
+    );
+    if (teluguW2w?.text) return teluguW2w.text;
+  }
+
+  // 4. Universal Fallback: English/Devanagari padacheda from verse.meaning
   const englishPadacheda = verse.meaning?.trim();
   if (!englishPadacheda) return null;
-  if (language === "en" || language === "sa") {
+  if (language === "en") {
     return englishPadacheda;
   }
   return localizePadachedaLemmas(englishPadacheda, language);
 }
 
 function pickCommentary(verse: Verse, language: string): PickedText | null {
+  // 1. Native Commentary for the active language
   const native = verse.translations.find(
     (t) =>
       t.languageCode === language &&
       VYAKHYA_SOURCES.has(t.sourceKey) &&
       !SCRIPT_PROXY_VYAKHYA.has(t.sourceKey),
   );
-  if (native?.text) return { text: native.text, isFallback: false };
+  if (native?.text && native.text.trim().length > 0) {
+    return { text: native.text, isFallback: false };
+  }
 
-  if (language === "kn" || language === "ta" || language === "ml" || language === "or") {
+  // 2. South Indian / Indic languages (kn, ta, ml, or, te, sa): fall back to Ramsukhdas Hindi commentary rescripted
+  if (["kn", "ta", "ml", "or", "te"].includes(language)) {
     const hindiVyakhya = verse.translations.find(
       (t) =>
         t.languageCode === "hi" && t.sourceKey === "ramsukhdas-vyakhya",
@@ -253,12 +272,9 @@ function pickCommentary(verse: Verse, language: string): PickedText | null {
     if (hi?.text) return { text: hi.text, isFallback: false };
   }
 
-  if (language === "en") {
-    const english = verse.commentary?.trim();
-    if (english) return { text: english, isFallback: false };
-    // Do not fall back to Hindi — English readers should see an empty state.
-    return null;
-  }
+  // 3. Fallback to English Sivananda commentary
+  const english = verse.commentary?.trim();
+  if (english) return { text: english, isFallback: language !== "en" };
 
   return null;
 }

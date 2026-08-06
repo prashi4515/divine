@@ -245,12 +245,19 @@ export function rescriptPadacheda(
         let word = stripForeignIndicMarks(
           Sanscript.t(emDash[1]!.trim(), fromScheme, toScheme),
         );
-        let gloss = stripForeignIndicMarks(
-          Sanscript.t(emDash[3]!.trim(), fromScheme, toScheme),
-        );
+        let gloss = emDash[3]!.trim();
+        try {
+          const rescriptedGloss = stripForeignIndicMarks(
+            Sanscript.t(gloss, fromScheme, toScheme),
+          );
+          if (rescriptedGloss.replace(/[-—–\s;(),.]/g, "").length > 0) {
+            gloss = rescriptedGloss;
+          }
+        } catch {
+          // keep original gloss if rescripting fails
+        }
         if (toScheme === "telugu") {
           word = normalizeTeluguShlokaOrthography(word);
-          gloss = normalizeTeluguShlokaOrthography(gloss);
         }
         return `${word} — ${gloss}`;
       } catch {
