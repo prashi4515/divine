@@ -20,7 +20,7 @@ import {
   eventTypeLabel,
   genealogyPersonHref,
   gitaChapterHref,
-} from "@/lib/events/store";
+} from "@/lib/events/helpers";
 import { entityHref } from "@/lib/knowledge/search";
 import { weaponHref } from "@/lib/weapons/helpers";
 import { atlasHref, isAtlasPlace } from "@/lib/atlas/geo";
