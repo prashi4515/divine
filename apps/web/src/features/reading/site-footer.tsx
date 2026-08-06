@@ -47,13 +47,20 @@ export function SiteFooter() {
           fill
           priority={false}
           sizes="100vw"
-          className="object-cover object-bottom opacity-[0.18] brightness-90 saturate-150 mix-blend-luminosity"
+          className="object-cover object-[85%_center] opacity-45 dark:opacity-35 brightness-105 contrast-105 saturate-110 sm:object-right"
         />
         <div
-          className="absolute inset-0"
+          className="absolute inset-0 hidden sm:block"
           style={{
             background:
-              "linear-gradient(180deg, hsl(var(--background) / 0.82) 0%, hsl(var(--background) / 0.92) 60%, hsl(var(--background)) 100%)",
+              "linear-gradient(90deg, hsl(var(--background)) 0%, hsl(var(--background) / 0.88) 35%, hsl(var(--background) / 0.4) 65%, transparent 95%)",
+          }}
+        />
+        <div
+          className="absolute inset-0 sm:hidden"
+          style={{
+            background:
+              "linear-gradient(180deg, hsl(var(--background) / 0.9) 0%, hsl(var(--background) / 0.6) 55%, hsl(var(--background) / 0.88) 100%)",
           }}
         />
       </div>
