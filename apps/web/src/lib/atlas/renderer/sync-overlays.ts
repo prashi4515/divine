@@ -238,6 +238,22 @@ export function syncAtlasOverlays(
     },
   });
   upsertLayer(map, {
+    id: `${OVERLAY_LAYER_IDS.routesActive}-casing`,
+    type: "line",
+    source: OVERLAY_SOURCE_IDS.routes,
+    layout: {
+      visibility: routeVis,
+      "line-cap": "round",
+      "line-join": "round",
+    },
+    filter: ["==", ["get", "category"], "active"],
+    paint: {
+      "line-color": "#ffffff",
+      "line-width": 8,
+      "line-opacity": 0.9,
+    },
+  });
+  upsertLayer(map, {
     id: OVERLAY_LAYER_IDS.routesActive,
     type: "line",
     source: OVERLAY_SOURCE_IDS.routes,
@@ -248,10 +264,10 @@ export function syncAtlasOverlays(
     },
     filter: ["==", ["get", "category"], "active"],
     paint: {
-      "line-color": "#e37400",
+      "line-color": "#ea580c",
       "line-width": 5,
       "line-opacity": 1,
-      "line-dasharray": [3, 3],
+      "line-dasharray": [2, 2],
     },
   });
   upsertLayer(map, {

@@ -192,51 +192,9 @@ export function AtlasSidebar({
               <p className="text-muted-foreground text-[11px] leading-relaxed">
                 {activeRoute.summary}
               </p>
-              <div className="grid grid-cols-4 gap-1">
-                <button
-                  type="button"
-                  aria-label="Previous stop"
-                  className="border-border inline-flex h-9 items-center justify-center rounded-md border"
-                  onClick={() => onStepRoute(-1)}
-                >
-                  <SkipBack className="h-3.5 w-3.5" />
-                </button>
-                <button
-                  type="button"
-                  className="bg-foreground text-background col-span-2 inline-flex h-9 items-center justify-center gap-1.5 rounded-md text-xs"
-                  onClick={onTogglePlay}
-                >
-                  {routePlaying ? (
-                    <>
-                      <Pause className="h-3.5 w-3.5" /> Pause
-                    </>
-                  ) : (
-                    <>
-                      <Play className="h-3.5 w-3.5" /> Play
-                    </>
-                  )}
-                </button>
-                <button
-                  type="button"
-                  aria-label="Next stop"
-                  className="border-border inline-flex h-9 items-center justify-center rounded-md border"
-                  onClick={() => onStepRoute(1)}
-                >
-                  <SkipForward className="h-3.5 w-3.5" />
-                </button>
-              </div>
-              <button
-                type="button"
-                className="text-muted-foreground hover:text-foreground w-full text-center text-[11px] underline-offset-2 hover:underline"
-                onClick={onRestartRoute}
-              >
-                Restart
-              </button>
-              {routeStopIndex != null ? (
-                <p className="text-muted-foreground text-[11px]">
-                  Stop {routeStopIndex + 1} / {activeRoute.placeIds.length}
-                </p>
-              ) : null}
+              <p className="text-muted-foreground text-[11px]">
+                {activeRoute.placeIds.length} stops along the ancient path
+              </p>
             </div>
           ) : null}
         </section>

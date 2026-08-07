@@ -147,6 +147,44 @@ export function riversToGeoJson(
   };
 }
 
+const KNOWN_ROUTE_COORDS: Record<string, [number, number]> = {
+  "city.indraprastha": [77.25, 28.61],
+  "indraprastha": [77.25, 28.61],
+  "forest.kamyaka": [76.30, 29.80],
+  "kamyaka": [76.30, 29.80],
+  "forest.dvaita": [75.80, 29.30],
+  "dvaita": [75.80, 29.30],
+  "kingdom.virata": [76.85, 26.90],
+  "virata": [76.85, 26.90],
+  "matsya": [76.85, 26.90],
+  "city.hastinapura": [78.02, 29.17],
+  "hastinapura": [78.02, 29.17],
+  "place.kurukshetra": [76.82, 29.96],
+  "kurukshetra": [76.82, 29.96],
+  "place.gokula": [77.72, 27.43],
+  "gokula": [77.72, 27.43],
+  "place.vrindavana": [77.70, 27.58],
+  "vrindavana": [77.70, 27.58],
+  "city.mathura": [77.67, 27.49],
+  "mathura": [77.67, 27.49],
+  "city.dvaraka": [68.96, 22.24],
+  "dvaraka": [68.96, 22.24],
+  "kingdom.pancala": [79.40, 28.35],
+  "pancala": [79.40, 28.35],
+  "kingdom.kashi": [83.00, 25.31],
+  "kashi": [83.00, 25.31],
+  "kingdom.magadha": [85.30, 24.80],
+  "magadha": [85.30, 24.80],
+  "river.sarasvati": [76.50, 29.50],
+  "sarasvati": [76.50, 29.50],
+  "river.yamuna": [77.50, 28.50],
+  "yamuna": [77.50, 28.50],
+  "river.ganga": [78.50, 28.00],
+  "ganga": [78.50, 28.00],
+  "forest.naimisharanya": [80.48, 27.35],
+  "naimisharanya": [80.48, 27.35],
+};
+
 export function routesToGeoJson(
   dataset: AtlasDataset,
   places: readonly AtlasPlace[],
@@ -166,8 +204,11 @@ export function routesToGeoJson(
     for (const pid of route.placeIds) {
       const bare = pid.replace(/^[a-z]+\./, "");
       const p = byId.get(pid) ?? byId.get(bare);
-      if (!p) continue;
-      coords.push([p.atlas.longitude, p.atlas.latitude]);
+      if (p) {
+        coords.push([p.atlas.longitude, p.atlas.latitude]);
+      } else if (KNOWN_ROUTE_COORDS[pid] || KNOWN_ROUTE_COORDS[bare]) {
+        coords.push(KNOWN_ROUTE_COORDS[pid] ?? KNOWN_ROUTE_COORDS[bare]!);
+      }
     }
     if (coords.length < 2) continue;
     const isActive =
