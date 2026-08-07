@@ -21,7 +21,7 @@ export function HeaderNav() {
 
   return (
     <nav
-      className="hidden max-w-[min(58vw,40rem)] items-center gap-0.5 overflow-x-auto overscroll-x-contain [-ms-overflow-style:none] [scrollbar-width:none] lg:flex [&::-webkit-scrollbar]:hidden"
+      className="hidden max-w-[min(65vw,42rem)] items-center gap-0.5 overflow-x-auto overscroll-x-contain [-ms-overflow-style:none] [scrollbar-width:none] md:flex [&::-webkit-scrollbar]:hidden"
       aria-label="Primary"
     >
       {items.map((item) => (

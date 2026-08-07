@@ -134,7 +134,7 @@ export function HeaderSearch() {
           spellCheck={false}
           value={value}
           placeholder="Search…"
-          className="placeholder:text-muted-foreground/60 w-full min-w-0 bg-transparent text-sm outline-none"
+          className="placeholder:text-muted-foreground/60 border-none outline-none focus:outline-none focus:ring-0 focus-visible:ring-0 focus-visible:outline-none ring-0 shadow-none w-full min-w-0 bg-transparent text-sm"
           onChange={(e) => setValue(e.target.value)}
           onKeyDown={(e) => {
             if (e.key === "ArrowDown") {
