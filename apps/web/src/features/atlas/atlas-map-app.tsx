@@ -113,7 +113,9 @@ export function AtlasMapApp({
 
   const selected = places.find((p) => p.slug === selectedSlug) ?? null;
   const activeRoute =
-    dataset.routes.find((r) => r.id === activeRouteId) ?? null;
+    dataset.routes.find(
+      (r) => r.id === activeRouteId || r.slug === activeRouteId,
+    ) ?? null;
 
   const relatedPeople = React.useMemo(() => {
     const out: Array<{
@@ -236,6 +238,7 @@ export function AtlasMapApp({
     selectedRiver?.id,
     hoveredRiverId,
     hoveredKingdomId,
+    activeRouteId,
   ]);
 
   const flyTo = React.useCallback(
