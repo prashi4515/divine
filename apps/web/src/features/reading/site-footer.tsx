@@ -39,22 +39,22 @@ export function SiteFooter() {
 
   return (
     <footer className="border-border relative mt-auto overflow-hidden border-t">
-      {/* Vivid Footer Artwork Backdrop */}
+      {/* Dedicated Sunset & Sacred Banyan Footer Artwork */}
       <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
         <img
-          src="/images/hero-krishna-arjuna.jpg"
-          alt="Sacred Kurukshetra divine artwork"
-          className="h-full w-full object-cover object-[80%_center] opacity-60 contrast-110 saturate-125 dark:opacity-45"
+          src="/images/footer-backdrop.svg"
+          alt="Sacred sunset and banyan tree divine artwork"
+          className="h-full w-full object-cover opacity-85 contrast-105 saturate-110 dark:opacity-75"
         />
         <div
           className="absolute inset-0"
           style={{
             background:
-              "linear-gradient(90deg, hsl(var(--background)) 0%, hsl(var(--background) / 0.75) 30%, hsl(var(--background) / 0.3) 70%, transparent 100%)",
+              "linear-gradient(90deg, hsl(var(--background)) 0%, hsl(var(--background) / 0.7) 35%, hsl(var(--background) / 0.2) 75%, transparent 100%)",
           }}
         />
         <div
-          className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background/40"
+          className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background/30"
         />
       </div>
 

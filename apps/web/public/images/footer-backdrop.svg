@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 650" width="1600" height="650" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <!-- Rich Sunset & Golden Radiance Gradients -->
+    <radialGradient id="skyRadiance" cx="82%" cy="25%" r="75%">
+      <stop offset="0%" stop-color="#fef3c7" stop-opacity="0.95"/>
+      <stop offset="25%" stop-color="#fde047" stop-opacity="0.8"/>
+      <stop offset="55%" stop-color="#f59e0b" stop-opacity="0.6"/>
+      <stop offset="80%" stop-color="#d97706" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#7c2d12" stop-opacity="0.1"/>
+    </radialGradient>
+
+    <radialGradient id="banyanGlow" cx="25%" cy="75%" r="65%">
+      <stop offset="0%" stop-color="#ca8a04" stop-opacity="0.5"/>
+      <stop offset="50%" stop-color="#854d0e" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+
+    <linearGradient id="divineBeam" x1="100%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fffbeb" stop-opacity="0.4"/>
+      <stop offset="40%" stop-color="#fbbf24" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#d97706" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Sacred Mandala Pattern -->
+    <pattern id="sacredGrid" width="160" height="160" patternUnits="userSpaceOnUse">
+      <circle cx="80" cy="80" r="64" fill="none" stroke="#f59e0b" stroke-opacity="0.12" stroke-width="1.5" stroke-dasharray="6 4"/>
+      <circle cx="80" cy="80" r="44" fill="none" stroke="#d97706" stroke-opacity="0.09" stroke-width="1"/>
+      <polygon points="80,24 96,64 136,64 104,88 116,128 80,104 44,128 56,88 24,64 64,64" fill="none" stroke="#fbbf24" stroke-opacity="0.1" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <!-- Deep Sacred Base Canvas -->
+  <rect width="1600" height="650" fill="#18120c"/>
+  <rect width="1600" height="650" fill="url(#banyanGlow)"/>
+  <rect width="1600" height="650" fill="url(#skyRadiance)"/>
+  <rect width="1600" height="650" fill="url(#sacredGrid)"/>
+
+  <!-- Divine Beams radiating from top right -->
+  <g opacity="0.7">
+    <polygon points="1600,0 1000,650 1600,650" fill="url(#divineBeam)"/>
+    <polygon points="1350,0 550,650 900,650" fill="url(#divineBeam)" opacity="0.6"/>
+    <polygon points="950,0 150,650 450,650" fill="url(#divineBeam)" opacity="0.35"/>
+  </g>
+
+  <!-- Sacred Banyan Tree Silhouette at Left Background -->
+  <g opacity="0.3" fill="#451a03">
+    <!-- Trunk & Hanging Roots -->
+    <path d="M 280,650 C 270,520 250,450 200,380 C 160,320 120,280 80,250 C 130,260 180,290 220,330 C 260,300 310,270 370,250 C 320,290 280,340 270,410 C 310,460 330,540 340,650 Z"/>
+    <path d="M 120,650 L 130,420 L 140,650 Z" opacity="0.5"/>
+    <path d="M 220,650 L 225,380 L 230,650 Z" opacity="0.5"/>
+    <path d="M 310,650 L 315,440 L 320,650 Z" opacity="0.5"/>
+    <!-- Foliage Canopy -->
+    <circle cx="200" cy="220" r="140" fill="#78350f" opacity="0.4"/>
+    <circle cx="320" cy="200" r="120" fill="#92400e" opacity="0.35"/>
+    <circle cx="100" cy="240" r="110" fill="#451a03" opacity="0.45"/>
+  </g>
+
+  <!-- Glowing Sun / Divine Light Disc at Right -->
+  <g transform="translate(1300, 200)">
+    <circle cx="0" cy="0" r="90" fill="#fef3c7" opacity="0.95"/>
+    <circle cx="0" cy="0" r="130" fill="none" stroke="#fde047" stroke-width="3" opacity="0.6" stroke-dasharray="12 8"/>
+    <circle cx="0" cy="0" r="180" fill="none" stroke="#f59e0b" stroke-width="2" opacity="0.4"/>
+    <circle cx="0" cy="0" r="240" fill="none" stroke="#ea580c" stroke-width="1.5" opacity="0.25" stroke-dasharray="6 6"/>
+  </g>
+
+  <!-- Sacred Om Vibration Mandala Motif on Right -->
+  <g transform="translate(1300, 200)" fill="#78350f" opacity="0.35">
+    <text x="0" y="38" font-family="Georgia, serif" font-size="110" text-anchor="middle" font-weight="bold" fill="#78350f">ॐ</text>
+  </g>
+
+  <!-- Golden Diya (Oil Lamp) Flame Motifs along bottom right -->
+  <g transform="translate(1100, 520)">
+    <!-- Diya Base -->
+    <path d="M -40,20 C -20,40 20,40 40,20 C 50,10 30,0 0,0 C -30,0 -50,10 -40,20 Z" fill="#b45309" opacity="0.7"/>
+    <!-- Glowing Flame -->
+    <path d="M 0,0 C -12,-20 -15,-40 0,-65 C 15,-40 12,-20 0,0 Z" fill="#fde047" opacity="0.9"/>
+    <path d="M 0,-5 C -6,-18 -8,-32 0,-48 C 8,-32 6,-18 0,-5 Z" fill="#ef4444" opacity="0.8"/>
+  </g>
+
+  <g transform="translate(1420, 550)">
+    <path d="M -30,15 C -15,30 15,30 30,15 C 40,8 24,0 0,0 C -24,0 -40,8 -30,15 Z" fill="#b45309" opacity="0.7"/>
+    <path d="M 0,0 C -9,-15 -12,-30 0,-50 C 12,-30 9,-15 0,0 Z" fill="#fde047" opacity="0.9"/>
+  </g>
+</svg>
