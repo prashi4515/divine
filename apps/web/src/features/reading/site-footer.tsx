@@ -44,17 +44,14 @@ export function SiteFooter() {
         <img
           src="/images/footer-backdrop.svg"
           alt="Sacred sunset and banyan tree divine artwork"
-          className="h-full w-full object-cover opacity-85 contrast-105 saturate-110 dark:opacity-75"
+          className="h-full w-full object-cover opacity-100 contrast-105 saturate-115"
         />
         <div
           className="absolute inset-0"
           style={{
             background:
-              "linear-gradient(90deg, hsl(var(--background)) 0%, hsl(var(--background) / 0.7) 35%, hsl(var(--background) / 0.2) 75%, transparent 100%)",
+              "linear-gradient(90deg, hsl(var(--background) / 0.65) 0%, hsl(var(--background) / 0.35) 30%, transparent 65%)",
           }}
-        />
-        <div
-          className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background/30"
         />
       </div>
 
