@@ -41,6 +41,7 @@ import { syncAtlasOverlays } from "@/lib/atlas/renderer/sync-overlays";
 import { AtlasOverlayLayers } from "@/lib/atlas/renderer/overlay-layers";
 import type { AtlasSearchResult } from "@/lib/atlas/search/atlas-search-engine";
 import { AtlasDomMarkers } from "@/features/atlas/atlas-dom-markers";
+import { AtlasRouteSvg } from "@/features/atlas/atlas-route-svg";
 import { AtlasPlacePanel } from "@/features/atlas/atlas-place-panel";
 import { AtlasSidebar } from "@/features/atlas/atlas-sidebar";
 import { AtlasToolbar } from "@/features/atlas/atlas-toolbar";
@@ -684,6 +685,11 @@ export function AtlasMapApp({
               selectedRiverId={selectedRiver?.id ?? null}
               hoveredRiverId={hoveredRiverId}
               hoveredKingdomId={hoveredKingdomId}
+            />
+            <AtlasRouteSvg
+              map={mapRef.current?.getMap() ?? null}
+              activeRoute={activeRoute}
+              places={places}
             />
             <AtlasDomMarkers
               places={placesFc}
