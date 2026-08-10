@@ -5,11 +5,7 @@
 
 import {
   Layers,
-  Pause,
-  Play,
   Route as RouteIcon,
-  SkipBack,
-  SkipForward,
 } from "lucide-react";
 import type { AtlasDataset, AtlasEvent, AtlasRiver, AtlasRoute } from "@divine/types";
 import type { TraditionalAtlasLabel } from "@/lib/atlas/data/traditional-label-types";
@@ -35,12 +31,12 @@ type AtlasSidebarProps = {
   onSearchSelect: (hit: AtlasSearchResult) => void;
   activeRouteId: string | null;
   activeRoute: AtlasRoute | null;
-  routeStopIndex: number | null;
-  routePlaying: boolean;
+  routeStopIndex?: number | null;
+  routePlaying?: boolean;
   onSelectRoute: (routeId: string | null) => void;
-  onStepRoute: (delta: number) => void;
-  onTogglePlay: () => void;
-  onRestartRoute: () => void;
+  onStepRoute?: (delta: number) => void;
+  onTogglePlay?: () => void;
+  onRestartRoute?: () => void;
   selectedRiver: AtlasRiver | null;
   selectedEvent: AtlasEvent | null;
 };
@@ -209,7 +205,7 @@ export function AtlasSidebar({
             </div>
           </div>
 
-          {/* Active Route Step Playback & Source Info Panel */}
+          {/* Active Route Detail Card */}
           {activeRoute ? (
             <div className="border-border mt-4 space-y-3 border-t pt-3">
               <div>
@@ -219,101 +215,40 @@ export function AtlasSidebar({
                 </p>
               </div>
 
-              {/* Playback Step Controls */}
-              <div className="space-y-2 rounded-lg border border-border/80 bg-muted/30 p-2.5">
-                <div className="flex items-center justify-between">
-                  <span className="text-[10px] font-medium uppercase tracking-wider text-muted-foreground">
-                    Progressive Narrative
-                  </span>
-                  <span className="text-[11px] font-medium text-foreground">
-                    Stop {(routeStopIndex ?? 0) + 1} / {activeRoute.stops?.length ?? activeRoute.placeIds.length}
-                  </span>
-                </div>
+              {/* Journey Stops Overview */}
+              {activeRoute.stops && activeRoute.stops.length > 0 ? (
+                <div className="space-y-2">
+                  <div className="flex items-center justify-between text-[10px] font-medium uppercase tracking-wider text-muted-foreground">
+                    <span>Journey Sequence</span>
+                    <span>{activeRoute.stops.length} Stops</span>
+                  </div>
 
-                <div className="grid grid-cols-4 gap-1.5 pt-1">
-                  <button
-                    type="button"
-                    aria-label="Previous stop"
-                    className="border-border hover:bg-muted inline-flex h-8 items-center justify-center rounded-md border text-muted-foreground hover:text-foreground transition-divine"
-                    onClick={() => onStepRoute(-1)}
-                  >
-                    <SkipBack className="h-3.5 w-3.5" />
-                  </button>
-                  <button
-                    type="button"
-                    className="bg-foreground text-background col-span-2 inline-flex h-8 items-center justify-center gap-1.5 rounded-md text-xs font-medium transition-divine hover:opacity-90 active:scale-95"
-                    onClick={onTogglePlay}
-                  >
-                    {routePlaying ? (
-                      <>
-                        <Pause className="h-3.5 w-3.5" /> Pause
-                      </>
-                    ) : (
-                      <>
-                        <Play className="h-3.5 w-3.5" /> Play Step
-                      </>
-                    )}
-                  </button>
-                  <button
-                    type="button"
-                    aria-label="Next stop"
-                    className="border-border hover:bg-muted inline-flex h-8 items-center justify-center rounded-md border text-muted-foreground hover:text-foreground transition-divine"
-                    onClick={() => onStepRoute(1)}
-                  >
-                    <SkipForward className="h-3.5 w-3.5" />
-                  </button>
-                </div>
-              </div>
-
-              {/* Active Stop Source-Backed Detail Card */}
-              {activeRoute.stops && activeRoute.stops[routeStopIndex ?? 0] ? (
-                (() => {
-                  const currentStop = activeRoute.stops[routeStopIndex ?? 0]!;
-                  return (
-                    <div className="space-y-2 rounded-lg border border-saffron/30 bg-saffron/5 p-2.5">
-                      <div className="flex items-start justify-between gap-2">
-                        <div>
-                          <p className="text-xs font-semibold text-foreground">
-                            {currentStop.ancientName}
-                          </p>
-                          {currentStop.modernName ? (
-                            <p className="text-[11px] text-muted-foreground">
-                              {currentStop.modernName}
-                            </p>
-                          ) : null}
-                        </div>
-                        <span className="cta-saffron shrink-0 rounded px-1.5 py-0.5 text-[9px] font-semibold text-white uppercase tracking-wider">
-                          {currentStop.locationType ?? "stop"}
-                        </span>
-                      </div>
-
-                      {currentStop.narrative ? (
-                        <p className="text-[11px] text-muted-foreground leading-relaxed italic">
-                          "{currentStop.narrative}"
-                        </p>
-                      ) : null}
-
-                      <div className="border-border/60 pt-1.5 border-t text-[10px] space-y-1">
-                        <div className="flex items-center justify-between text-muted-foreground">
-                          <span>Geo Confidence:</span>
-                          <span className="font-medium text-foreground capitalize">
-                            {currentStop.coordinateConfidence}
+                  <div className="space-y-1.5 max-h-56 overflow-y-auto pr-1">
+                    {activeRoute.stops.map((stop, idx) => (
+                      <div
+                        key={stop.id || idx}
+                        className="rounded-md border border-border/80 bg-muted/20 p-2 text-xs space-y-1"
+                      >
+                        <div className="flex items-center justify-between gap-1">
+                          <span className="font-medium text-foreground truncate">
+                            {idx + 1}. {stop.ancientName}
+                          </span>
+                          <span className="cta-saffron shrink-0 rounded px-1.5 py-0.2 text-[8px] font-semibold text-white uppercase">
+                            {stop.locationType ?? "stop"}
                           </span>
                         </div>
-                        {currentStop.sourceRefs && currentStop.sourceRefs.length > 0 ? (
-                          <div className="text-muted-foreground">
-                            <span className="font-medium text-foreground">Textual Source: </span>
-                            {currentStop.sourceRefs[0]?.work}
-                            {currentStop.sourceRefs[0]?.section ? ` (${currentStop.sourceRefs[0].section})` : ""}
-                            {currentStop.sourceRefs[0]?.chapter ? ` — Ch. ${currentStop.sourceRefs[0].chapter}` : ""}
-                            {currentStop.sourceRefs[0]?.verse ? `, v. ${currentStop.sourceRefs[0].verse}` : ""}
-                            {currentStop.sourceRefs[0]?.note ? ` (${currentStop.sourceRefs[0].note})` : ""}
-                          </div>
+                        {stop.modernName ? (
+                          <p className="text-[10px] text-muted-foreground">{stop.modernName}</p>
+                        ) : null}
+                        {stop.narrative ? (
+                          <p className="text-[10px] text-muted-foreground italic leading-tight">
+                            "{stop.narrative}"
+                          </p>
                         ) : null}
                       </div>
-                    </div>
-                  );
-                })()
+                    ))}
+                  </div>
+                </div>
               ) : null}
             </div>
           ) : null}

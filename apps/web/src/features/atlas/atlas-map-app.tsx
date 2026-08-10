@@ -306,21 +306,6 @@ export function AtlasMapApp({
     }
   }, [initialSlug, places, focusPlace]);
 
-  React.useEffect(() => {
-    if (!routePlaying || !activeRoute) return;
-    const stops = activeRoute.placeIds;
-    const idx = routeStopIndex ?? 0;
-    const place = places.find((p) => p.id === stops[idx]);
-    if (place) focusPlace(place, 7.5);
-    if (idx >= stops.length - 1) {
-      setRoutePlaying(false);
-      return;
-    }
-    const timer = window.setTimeout(() => setRouteStopIndex(idx + 1), 2200);
-    return () => window.clearTimeout(timer);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [routePlaying, routeStopIndex, activeRouteId]);
-
   function onSearchSelect(hit: AtlasSearchResult) {
     setMobileSidebarOpen(false);
     if (hit.routeId) {

@@ -17,6 +17,7 @@ export type PageMetadataInput = {
   image?: string;
   imageAlt?: string;
   noIndex?: boolean;
+  noindex?: boolean;
   keywords?: string[];
   /** If true, do not apply root title template (use title as-is). */
   absoluteTitle?: boolean;
@@ -67,6 +68,8 @@ export function buildPageMetadata(input: PageMetadataInput): Metadata {
       ? "article"
       : "website";
 
+  const isNoIndex = Boolean(input.noIndex || input.noindex);
+
   return {
     title: input.absoluteTitle
       ? { absolute: title }
@@ -74,7 +77,7 @@ export function buildPageMetadata(input: PageMetadataInput): Metadata {
     description,
     keywords: input.keywords,
     alternates: { canonical: path },
-    robots: input.noIndex
+    robots: isNoIndex
       ? { index: false, follow: false }
       : { index: true, follow: true },
     openGraph: {

@@ -87,8 +87,8 @@ export function searchSeo(query?: string): PageMetadataInput {
       description: clampDescription(
         `Search results for “${q}” across the Bhagavad Gita, characters, places, concepts, and more.`,
       ),
-      // Canonical stays /search — query variants are not separate indexable URLs
       path: "/search",
+      noindex: true,
       image: ogImageFor({ title: "Search", subtitle: q, eyebrow: "Divine" }),
     };
   }
@@ -97,9 +97,10 @@ export function searchSeo(query?: string): PageMetadataInput {
     description:
       "Search people, places, events, kingdoms, weapons, concepts, genealogy, Atlas, and Bhagavad Gita verses.",
     path: "/search",
+    noindex: true,
     image: ogImageFor({
       title: "Search",
-      subtitle: "Gita, characters, Atlas & more",
+      subtitle: "Bhagavad Gita & Knowledge",
       eyebrow: "Divine",
     }),
   };

@@ -31,6 +31,26 @@ export default async function AtlasPage() {
     <div className="relative flex h-svh flex-col overflow-hidden">
       <SiteHeader />
       <main id="main-content" className="min-h-0 flex-1">
+        <div className="sr-only">
+          <h1>Ancient Bharata Atlas — Sacred Places, Kingdoms & Epic Journeys</h1>
+          <p>{atlasIndexSeo().description}</p>
+          <h2>Featured Ancient Places & Realms</h2>
+          <ul>
+            {places.slice(0, 60).map((p) => (
+              <li key={p.id}>
+                <strong>{p.name}</strong> ({p.categories?.[0] ?? "place"}) — {p.summary}
+              </li>
+            ))}
+          </ul>
+          <h2>Historical Travel Routes & Pilgrimages</h2>
+          <ul>
+            {dataset.routes.map((r) => (
+              <li key={r.id}>
+                <strong>{r.title}</strong> — {r.summary}
+              </li>
+            ))}
+          </ul>
+        </div>
         <AtlasExplorer
           dataset={dataset}
           places={places}

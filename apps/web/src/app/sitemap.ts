@@ -66,7 +66,6 @@ export default async function sitemap(props: {
     return [
       entry("/", { changeFrequency: "weekly", priority: 1 }),
       entry("/bhagavad-gita", { changeFrequency: "weekly", priority: 0.98 }),
-      entry("/search", { changeFrequency: "daily", priority: 0.8 }),
       entry("/atlas", { changeFrequency: "weekly", priority: 0.95 }),
       entry("/events", { changeFrequency: "weekly", priority: 0.9 }),
       entry("/kingdoms", { changeFrequency: "weekly", priority: 0.9 }),
