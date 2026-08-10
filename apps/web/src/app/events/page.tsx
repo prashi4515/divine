@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { buildPageMetadata, hubIndexSeo } from "@/lib/seo";
-import Link from "next/link";
 import { LocalizedModuleHeader } from "@/features/reading/localized-module-header";
 import { EventCard } from "@/features/events/event-card";
 import { SiteFooter } from "@/features/reading/site-footer";

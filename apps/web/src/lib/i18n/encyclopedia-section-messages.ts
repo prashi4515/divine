@@ -1,7 +1,6 @@
 /**
  * Localized encyclopedia section cards.
  */
-import type { ReadingLanguageCode } from "@/lib/reading/languages";
 import { devanagariToReadingScript } from "@/lib/reading/shloka-script";
 
 export type SectionCopy = {

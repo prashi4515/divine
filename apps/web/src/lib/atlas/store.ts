@@ -2,7 +2,6 @@ import "server-only";
 import {
   getCollection,
   getEntitiesByIdsOrAliases,
-  getEntity,
   getEntityBundle,
   getRelated,
   type EntityBundle,

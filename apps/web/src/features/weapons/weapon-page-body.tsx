@@ -9,7 +9,7 @@ import {
   ScrollText,
   Swords,
 } from "lucide-react";
-import { useMessages, useUiLanguage } from "@/lib/i18n/use-messages";
+import { useUiLanguage } from "@/lib/i18n/use-messages";
 import { localizeEntityTitle } from "@/lib/reading/shloka-script";
 import type {
   WeaponResolvedLinks,

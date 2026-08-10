@@ -275,7 +275,7 @@ export function AtlasMapApp({
     });
   }, [defaultView]);
 
-  const fitAllPlaces = React.useCallback(() => {
+  const _fitAllPlaces = React.useCallback(() => {
     const map = mapRef.current?.getMap();
     if (!map || places.length === 0) return;
     let minLng = Infinity;

@@ -130,7 +130,7 @@ const hi: GenealogyUiMessages = {
   interactiveCount: (a, u) => `${a} इंटरैक्टिव · ${u} तैयारी में`,
   figures: (n) => `${n} व्यक्ति`,
 };
-const CATALOG: Partial<Record<ReadingLanguageCode, GenealogyUiMessages>> = {
+export const CATALOG: Partial<Record<ReadingLanguageCode, GenealogyUiMessages>> = {
   en,
   te,
   hi,

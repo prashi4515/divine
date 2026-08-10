@@ -424,7 +424,7 @@ export function VerseReader({
     if (window.location.hash !== next) {
       window.history.replaceState(null, "", next);
     }
-  }, [verse?.number]);
+  }, [verse]);
 
   /**
    * Commentaries are stripped from the chapter list (keeps HTML small).

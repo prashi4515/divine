@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { BookOpen, Languages, Search } from "lucide-react";
 import { PUBLIC_AUTH_UI_ENABLED } from "@/lib/auth/config";

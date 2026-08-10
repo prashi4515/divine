@@ -17,7 +17,6 @@ import type {
   AtlasSearchResult,
 } from "@/lib/atlas/search/atlas-search-engine";
 import { AtlasMapSearch } from "@/features/atlas/atlas-map-search";
-import { atlasRouteLabel } from "@/lib/atlas/i18n-labels";
 import { useMessages } from "@/lib/i18n/use-messages";
 import { cn } from "@/lib/utils";
 
@@ -31,12 +30,7 @@ type AtlasSidebarProps = {
   onSearchSelect: (hit: AtlasSearchResult) => void;
   activeRouteId: string | null;
   activeRoute: AtlasRoute | null;
-  routeStopIndex?: number | null;
-  routePlaying?: boolean;
   onSelectRoute: (routeId: string | null) => void;
-  onStepRoute?: (delta: number) => void;
-  onTogglePlay?: () => void;
-  onRestartRoute?: () => void;
   selectedRiver: AtlasRiver | null;
   selectedEvent: AtlasEvent | null;
 };
@@ -92,12 +86,7 @@ export function AtlasSidebar({
   onSearchSelect,
   activeRouteId,
   activeRoute,
-  routeStopIndex,
-  routePlaying,
   onSelectRoute,
-  onStepRoute,
-  onTogglePlay,
-  onRestartRoute,
   selectedRiver,
   selectedEvent,
 }: AtlasSidebarProps) {
@@ -242,7 +231,7 @@ export function AtlasSidebar({
                         ) : null}
                         {stop.narrative ? (
                           <p className="text-[10px] text-muted-foreground italic leading-tight">
-                            "{stop.narrative}"
+                            &ldquo;{stop.narrative}&rdquo;
                           </p>
                         ) : null}
                       </div>

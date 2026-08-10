@@ -74,7 +74,7 @@ const hi: HubUiMessages = {
   explore: "अन्वेषण करें",
 };
 
-const CATALOG: Partial<Record<ReadingLanguageCode, HubUiMessages>> = {
+export const CATALOG: Partial<Record<ReadingLanguageCode, HubUiMessages>> = {
   en,
   te,
   hi,

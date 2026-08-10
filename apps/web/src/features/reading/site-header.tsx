@@ -20,16 +20,13 @@ const HeaderSearch = dynamic(
   },
 );
 
-type SiteHeaderProps = {
-  workCode?: string;
-  eyebrow?: string;
-};
+
 
 /**
  * Public site chrome — brand left; nav + actions right.
  * Hamburger only below `lg`; desktop keeps the inline link row.
  */
-export function SiteHeader(_props: SiteHeaderProps) {
+export function SiteHeader() {
   return (
     <header className="border-border bg-background/90 sticky top-0 z-40 border-b backdrop-blur-sm">
       <div className="page-gutter flex w-full items-center gap-2 py-2.5 sm:gap-3 lg:py-3">
