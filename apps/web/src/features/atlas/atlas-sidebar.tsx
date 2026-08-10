@@ -30,7 +30,12 @@ type AtlasSidebarProps = {
   onSearchSelect: (hit: AtlasSearchResult) => void;
   activeRouteId: string | null;
   activeRoute: AtlasRoute | null;
+  routeStopIndex?: number | null;
+  routePlaying?: boolean;
   onSelectRoute: (routeId: string | null) => void;
+  onStepRoute?: (dir: -1 | 1) => void;
+  onTogglePlay?: () => void;
+  onRestartRoute?: () => void;
   selectedRiver: AtlasRiver | null;
   selectedEvent: AtlasEvent | null;
 };
