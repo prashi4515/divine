@@ -19,13 +19,13 @@ import {
   weaponCategoryLabel,
   weaponFocusLabel,
   weaponHref,
-} from "@/lib/weapons/store";
+  isKnowledgeWeapon,
+} from "@/lib/weapons/helpers";
 import { entityHref } from "@/lib/knowledge/search";
 import { eventHref, eventTypeLabel, genealogyPersonHref } from "@/lib/events/helpers";
 import { formatCitation } from "@/lib/knowledge/types";
 import type { KnowledgeEntity } from "@/lib/knowledge/types";
 import { isCharacterEntity } from "@/lib/encyclopedia/character-kinds";
-import { isKnowledgeWeapon } from "@/lib/weapons/helpers";
 import { LazyEntityGraph } from "@/features/encyclopedia/lazy-entity-graph";
 import {
   displayEnglishName,
