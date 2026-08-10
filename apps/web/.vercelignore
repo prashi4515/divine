@@ -1,0 +1,8 @@
+# Exclude packages and temporary directories not needed for Next.js web build
+../api
+../../tooling
+../../docs
+../../.cursor
+../../playwright-report
+../../test-results
+../../coverage
