@@ -1,47 +1,716 @@
 {
-  "generatedAt": "2026-07-30T11:41:55.552Z",
-  "schemaVersion": 1,
+  "generatedAt": "2026-08-10T12:00:00.000Z",
+  "schemaVersion": 2,
   "routes": [
     {
-      "id": "route.pandava-exile",
-      "slug": "pandava-exile",
-      "title": "Pāṇḍava Exile",
-      "iastTitle": "Pāṇḍava-vanavāsa",
-      "summary": "Forest wanderings of the Pāṇḍavas during the twelve-year exile.",
-      "description": "A simplified path through principal exile landscapes named in the Vana Parva — Kāmyaka and Dvaita — toward the year in disguise at Virāṭa.",
-      "placeIds": [
-        "city.indraprastha",
-        "forest.kamyaka",
-        "forest.dvaita",
-        "kingdom.virata"
-      ],
-      "confidence": "traditional",
+      "id": "route.pandavas-departure",
+      "slug": "pandavas-departure",
+      "title": "Pandavas — Departure from Hastinapura",
+      "iastTitle": "Pāṇḍava-vanavāsa-prārambha",
+      "summary": "Initial departure from Hastināpura to Kāmyaka forest following the loss at dice.",
+      "description": "The Mahābhārata describes the Pāṇḍavas leaving Hastināpura after the fateful dice game, travelling three days and nights to establish their first forest refuge at Kāmyaka.",
+      "period": "12-Year Exile — Year 1",
+      "category": "initial-exile",
+      "parentCategory": "pandava-exile",
+      "confidence": "verified",
       "sources": [
         {
           "work": "Mahābhārata",
-          "section": "Vana Parva"
-        },
-        {
-          "work": "Mahābhārata",
-          "section": "Virāṭa Parva"
+          "parva": "Vana Parva",
+          "section": "Kīrmīravadha Parva",
+          "reference": "Sections 1–11"
         }
       ],
-      "stroke": "#8a5a2b",
+      "placeIds": [
+        "city.hastinapura",
+        "forest.kamyaka"
+      ],
+      "stops": [
+        {
+          "id": "stop.departure-hastinapura",
+          "sequence": 1,
+          "placeId": "city.hastinapura",
+          "ancientName": "Hastināpura",
+          "modernName": "Hastinapur, Meerut (Uttar Pradesh)",
+          "latitude": 29.17,
+          "longitude": 78.02,
+          "coordinateConfidence": "high",
+          "sourceType": "primary-text",
+          "locationType": "residence",
+          "sourceRefs": [
+            {
+              "work": "Mahābhārata",
+              "parva": "Vana Parva",
+              "section": "Kīrmīravadha Parva",
+              "reference": "Section 1"
+            }
+          ],
+          "narrative": "Yudhiṣṭhira, Draupadī, and the brothers leave the Kuru capital amidst the lamentations of citizens and faithful Brahmanas.",
+          "orderConfidence": "high"
+        },
+        {
+          "id": "stop.departure-kamyaka",
+          "sequence": 2,
+          "placeId": "forest.kamyaka",
+          "ancientName": "Kāmyaka Forest",
+          "modernName": "Sarasvatī Basin / Western Kurukṣetra Border",
+          "latitude": 29.80,
+          "longitude": 76.30,
+          "coordinateConfidence": "traditional/approximate",
+          "sourceType": "primary-text",
+          "locationType": "residence",
+          "sourceRefs": [
+            {
+              "work": "Mahābhārata",
+              "parva": "Vana Parva",
+              "section": "Kīrmīravadha Parva",
+              "reference": "Section 3"
+            }
+          ],
+          "narrative": "After traveling for three days and nights, the Pāṇḍavas reach Kāmyaka-vana on the banks of the Sarasvatī river.",
+          "orderConfidence": "high"
+        }
+      ],
       "order": 10
+    },
+    {
+      "id": "route.pandavas-forest-residences",
+      "slug": "pandavas-forest-residences",
+      "title": "Pandavas — Forest Residences",
+      "iastTitle": "Pāṇḍava-vanavāsa-sthānāni",
+      "summary": "Principal forest encampments occupied during the 12-year exile.",
+      "description": "Chronological progression of the Pāṇḍavas' forest residences recorded in the Vana Parva: Kāmyaka, Dvaitavana, and Badarikāśrama.",
+      "period": "12-Year Exile — Years 1 to 12",
+      "category": "forest-residences",
+      "parentCategory": "pandava-exile",
+      "confidence": "verified",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "parva": "Vana Parva",
+          "reference": "Sections 12–36, 175–182"
+        }
+      ],
+      "placeIds": [
+        "forest.kamyaka",
+        "forest.dvaita",
+        "place.badarika"
+      ],
+      "stops": [
+        {
+          "id": "stop.residence-kamyaka-1",
+          "sequence": 1,
+          "placeId": "forest.kamyaka",
+          "ancientName": "Kāmyaka-vana",
+          "modernName": "Sarasvatī Basin",
+          "latitude": 29.80,
+          "longitude": 76.30,
+          "coordinateConfidence": "traditional/approximate",
+          "sourceType": "primary-text",
+          "locationType": "residence",
+          "sourceRefs": [
+            {
+              "work": "Mahābhārata",
+              "parva": "Vana Parva",
+              "section": "Kīrmīravadha Parva",
+              "reference": "Section 3"
+            }
+          ],
+          "narrative": "First encampment on the Sarasvatī. Vidura, Sañjaya, and Lord Kṛṣṇa visit the Pāṇḍavas here.",
+          "orderConfidence": "high"
+        },
+        {
+          "id": "stop.residence-dvaitavana",
+          "sequence": 2,
+          "placeId": "forest.dvaita",
+          "ancientName": "Dvaitavana",
+          "modernName": "Dvaitavana Lake Tract (Southern Punjab / Sarasvatī Basin)",
+          "latitude": 29.30,
+          "longitude": 75.80,
+          "coordinateConfidence": "traditional/approximate",
+          "sourceType": "primary-text",
+          "locationType": "residence",
+          "sourceRefs": [
+            {
+              "work": "Mahābhārata",
+              "parva": "Vana Parva",
+              "section": "Dvaitavana Parva",
+              "reference": "Section 24"
+            }
+          ],
+          "narrative": "Second forest residence surrounding the sacred lotus lake of Dvaitavana.",
+          "orderConfidence": "high"
+        },
+        {
+          "id": "stop.residence-badarika",
+          "sequence": 3,
+          "placeId": "place.badarika",
+          "ancientName": "Badarikāśrama",
+          "modernName": "Badrinath Region (Uttarakhand Himalayas)",
+          "latitude": 30.74,
+          "longitude": 79.49,
+          "coordinateConfidence": "traditional/approximate",
+          "sourceType": "primary-text",
+          "locationType": "residence",
+          "sourceRefs": [
+            {
+              "work": "Mahābhārata",
+              "parva": "Vana Parva",
+              "section": "Tīrthayātrā Parva",
+              "reference": "Section 145"
+            }
+          ],
+          "narrative": "High Himalayan hermitage occupied during the reunion with Arjuna after his celestial quest.",
+          "orderConfidence": "high"
+        }
+      ],
+      "order": 20
+    },
+    {
+      "id": "route.pandavas-tirtha-yatra",
+      "slug": "pandavas-tirtha-yatra",
+      "title": "Pandavas — Tirtha Yatra",
+      "iastTitle": "Pāṇḍava-tīrthayātrā",
+      "summary": "Sacred pilgrimage circuit led by Sage Dhaumya and King Yudhiṣṭhira.",
+      "description": "Sequential pilgrimage across sacred rivers, hermitages, and coastal sanctuaries documented in the Tīrthayātrā Parva of the Vana Parva.",
+      "period": "12-Year Exile — Years 4 to 9",
+      "category": "tirtha-yatra",
+      "parentCategory": "pandava-exile",
+      "confidence": "verified",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "parva": "Vana Parva",
+          "section": "Tīrthayātrā Parva",
+          "reference": "Sections 80–156"
+        }
+      ],
+      "placeIds": [
+        "forest.naimisharanya",
+        "place.prayaga",
+        "place.kausiki",
+        "place.gaya",
+        "mountain.mahendra",
+        "river.godavari",
+        "river.kaveri",
+        "place.gokarna",
+        "place.prabhasa"
+      ],
+      "stops": [
+        {
+          "id": "stop.tirtha-naimisha",
+          "sequence": 1,
+          "placeId": "forest.naimisharanya",
+          "ancientName": "Naimiṣāraṇya",
+          "modernName": "Nimsar, Sitapur (Uttar Pradesh)",
+          "latitude": 27.35,
+          "longitude": 80.48,
+          "coordinateConfidence": "high",
+          "sourceType": "primary-text",
+          "locationType": "tirtha",
+          "sourceRefs": [
+            {
+              "work": "Mahābhārata",
+              "parva": "Vana Parva",
+              "section": "Tīrthayātrā Parva",
+              "reference": "Section 84"
+            }
+          ],
+          "narrative": "Sacred forest assembly on the Gomatī river where ancient sages perform rites.",
+          "orderConfidence": "high"
+        },
+        {
+          "id": "stop.tirtha-prayaga",
+          "sequence": 2,
+          "placeId": "place.prayaga",
+          "ancientName": "Prayāga",
+          "modernName": "Prayagraj (Uttar Pradesh)",
+          "latitude": 25.43,
+          "longitude": 81.88,
+          "coordinateConfidence": "high",
+          "sourceType": "primary-text",
+          "locationType": "tirtha",
+          "sourceRefs": [
+            {
+              "work": "Mahābhārata",
+              "parva": "Vana Parva",
+              "section": "Tīrthayātrā Parva",
+              "reference": "Section 85"
+            }
+          ],
+          "narrative": "The king of tīrthas at the sacred confluence of Gaṅgā and Yamunā.",
+          "orderConfidence": "high"
+        },
+        {
+          "id": "stop.tirtha-kausiki",
+          "sequence": 3,
+          "placeId": "place.kausiki",
+          "ancientName": "Kauśikī",
+          "modernName": "Kosi River Basin (Bihar)",
+          "latitude": 25.40,
+          "longitude": 87.10,
+          "coordinateConfidence": "medium",
+          "sourceType": "primary-text",
+          "locationType": "tirtha",
+          "sourceRefs": [
+            {
+              "work": "Mahābhārata",
+              "parva": "Vana Parva",
+              "section": "Tīrthayātrā Parva",
+              "reference": "Section 84"
+            }
+          ],
+          "narrative": "Eastern sacred river associated with Sage Viśvāmitra's penances.",
+          "orderConfidence": "high"
+        },
+        {
+          "id": "stop.tirtha-gaya",
+          "sequence": 4,
+          "placeId": "place.gaya",
+          "ancientName": "Gayā",
+          "modernName": "Gaya (Bihar)",
+          "latitude": 24.79,
+          "longitude": 85.00,
+          "coordinateConfidence": "high",
+          "sourceType": "primary-text",
+          "locationType": "tirtha",
+          "sourceRefs": [
+            {
+              "work": "Mahābhārata",
+              "parva": "Vana Parva",
+              "section": "Tīrthayātrā Parva",
+              "reference": "Section 87"
+            }
+          ],
+          "narrative": "Sacred ground of King Gaya and ancestral offerings.",
+          "orderConfidence": "high"
+        },
+        {
+          "id": "stop.tirtha-mahendra",
+          "sequence": 5,
+          "placeId": "mountain.mahendra",
+          "ancientName": "Mahendra-giri",
+          "modernName": "Eastern Ghats (Odisha / Andhra Border)",
+          "latitude": 18.95,
+          "longitude": 84.35,
+          "coordinateConfidence": "medium",
+          "sourceType": "primary-text",
+          "locationType": "tirtha",
+          "sourceRefs": [
+            {
+              "work": "Mahābhārata",
+              "parva": "Vana Parva",
+              "section": "Tīrthayātrā Parva",
+              "reference": "Section 85"
+            }
+          ],
+          "narrative": "Sacred eastern mountain sanctuary of Parashurāma.",
+          "orderConfidence": "high"
+        },
+        {
+          "id": "stop.tirtha-godavari",
+          "sequence": 6,
+          "placeId": "river.godavari",
+          "ancientName": "Godāvarī",
+          "modernName": "Godavari River Basin",
+          "latitude": 17.00,
+          "longitude": 81.78,
+          "coordinateConfidence": "high",
+          "sourceType": "primary-text",
+          "locationType": "tirtha",
+          "sourceRefs": [
+            {
+              "work": "Mahābhārata",
+              "parva": "Vana Parva",
+              "section": "Tīrthayātrā Parva",
+              "reference": "Section 88"
+            }
+          ],
+          "narrative": "Southern holy river bath associated with ascetic penances.",
+          "orderConfidence": "high"
+        },
+        {
+          "id": "stop.tirtha-kaveri",
+          "sequence": 7,
+          "placeId": "river.kaveri",
+          "ancientName": "Kāverī",
+          "modernName": "Kaveri River Basin (Tamil Nadu)",
+          "latitude": 10.88,
+          "longitude": 78.90,
+          "coordinateConfidence": "high",
+          "sourceType": "primary-text",
+          "locationType": "tirtha",
+          "sourceRefs": [
+            {
+              "work": "Mahābhārata",
+              "parva": "Vana Parva",
+              "section": "Tīrthayātrā Parva",
+              "reference": "Section 88"
+            }
+          ],
+          "narrative": "Sacred southern river bath during the Dravidian pilgrimage leg.",
+          "orderConfidence": "high"
+        },
+        {
+          "id": "stop.tirtha-gokarna",
+          "sequence": 8,
+          "placeId": "place.gokarna",
+          "ancientName": "Gokarṇa",
+          "modernName": "Gokarna (Karnataka)",
+          "latitude": 14.54,
+          "longitude": 74.31,
+          "coordinateConfidence": "high",
+          "sourceType": "primary-text",
+          "locationType": "tirtha",
+          "sourceRefs": [
+            {
+              "work": "Mahābhārata",
+              "parva": "Vana Parva",
+              "section": "Tīrthayātrā Parva",
+              "reference": "Section 88"
+            }
+          ],
+          "narrative": "Western ocean sanctuary dedicated to Lord Śiva.",
+          "orderConfidence": "high"
+        },
+        {
+          "id": "stop.tirtha-prabhasa",
+          "sequence": 9,
+          "placeId": "place.prabhasa",
+          "ancientName": "Prabhāsa",
+          "modernName": "Somnath (Gujarat)",
+          "latitude": 20.88,
+          "longitude": 70.40,
+          "coordinateConfidence": "high",
+          "sourceType": "primary-text",
+          "locationType": "tirtha",
+          "sourceRefs": [
+            {
+              "work": "Mahābhārata",
+              "parva": "Vana Parva",
+              "section": "Tīrthayātrā Parva",
+              "reference": "Section 119"
+            }
+          ],
+          "narrative": "Western coastal tīrtha where Balarāma and Kṛṣṇa meet the Pāṇḍavas.",
+          "orderConfidence": "high"
+        }
+      ],
+      "order": 30
+    },
+    {
+      "id": "route.arjuna-indrakila-quest",
+      "slug": "arjuna-indrakila-quest",
+      "title": "Arjuna — Indrakila & Celestial Quest",
+      "iastTitle": "Arjuna-indrakīla-yātrā",
+      "summary": "Arjuna's solitary expedition for divine weapons from Śiva and Indra.",
+      "description": "Solitary journey from Kāmyaka camp to the Himalayan Indrakīla peak to perform penance, combat Lord Śiva as a Kirāta, and ascend to Indra's celestial realm.",
+      "period": "12-Year Exile — Year 5",
+      "category": "individual-journeys",
+      "parentCategory": "pandava-exile",
+      "confidence": "verified",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "parva": "Vana Parva",
+          "section": "Kairāta & Indralokagamana Parva",
+          "reference": "Sections 37–42"
+        }
+      ],
+      "placeIds": [
+        "forest.kamyaka",
+        "mountain.indrakila",
+        "celestial.indraloka"
+      ],
+      "stops": [
+        {
+          "id": "stop.arjuna-kamyaka",
+          "sequence": 1,
+          "placeId": "forest.kamyaka",
+          "ancientName": "Kāmyaka Camp",
+          "modernName": "Sarasvatī Basin",
+          "latitude": 29.80,
+          "longitude": 76.30,
+          "coordinateConfidence": "traditional/approximate",
+          "sourceType": "primary-text",
+          "locationType": "residence",
+          "sourceRefs": [
+            {
+              "work": "Mahābhārata",
+              "parva": "Vana Parva",
+              "section": "Kairāta Parva",
+              "reference": "Section 37"
+            }
+          ],
+          "narrative": "Arjuna receives the Pratismiṛti mantra from Vyāsa and sets out northernward alone.",
+          "orderConfidence": "high"
+        },
+        {
+          "id": "stop.arjuna-indrakila",
+          "sequence": 2,
+          "placeId": "mountain.indrakila",
+          "ancientName": "Indrakīla Peak",
+          "modernName": "Himalayan Garhwal Ridge",
+          "latitude": 31.00,
+          "longitude": 78.50,
+          "coordinateConfidence": "traditional/approximate",
+          "sourceType": "primary-text",
+          "locationType": "individual-journey",
+          "sourceRefs": [
+            {
+              "work": "Mahābhārata",
+              "parva": "Vana Parva",
+              "section": "Kairāta Parva",
+              "reference": "Section 39"
+            }
+          ],
+          "narrative": "Arjuna performs severe penance, combats Śiva disguised as a Kirāta hunter, and receives the Pāśupatāstra.",
+          "orderConfidence": "high"
+        },
+        {
+          "id": "stop.arjuna-indraloka",
+          "sequence": 3,
+          "placeId": "celestial.indraloka",
+          "ancientName": "Indraloka / Amarāvatī",
+          "modernName": "Celestial / Mythic Realm (Non-Earthly)",
+          "latitude": 31.50,
+          "longitude": 78.50,
+          "coordinateConfidence": "low",
+          "sourceType": "primary-text",
+          "locationType": "celestial",
+          "sourceRefs": [
+            {
+              "work": "Mahābhārata",
+              "parva": "Vana Parva",
+              "section": "Indralokagamana Parva",
+              "reference": "Section 42"
+            }
+          ],
+          "narrative": "Mātali arrives with Indra's chariot; Arjuna spends five years mastering divine astras and celestial arts.",
+          "orderConfidence": "high"
+        }
+      ],
+      "order": 40
+    },
+    {
+      "id": "route.bhima-gandhamadana-quest",
+      "slug": "bhima-gandhamadana-quest",
+      "title": "Bhima — Gandhamadana Quest",
+      "iastTitle": "Bhīma-gandhamādana-yātrā",
+      "summary": "Bhīma's mountain expedition for the fragrant Saugandhikā lotus.",
+      "description": "Expedition from Badari hermitage into the high Gandhamādana peaks to collect Saugandhikā lotuses for Draupadī, encountering his divine brother Hanumān.",
+      "period": "12-Year Exile — Year 9",
+      "category": "individual-journeys",
+      "parentCategory": "pandava-exile",
+      "confidence": "verified",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "parva": "Vana Parva",
+          "section": "Saugandhikāharana Parva",
+          "reference": "Sections 146–155"
+        }
+      ],
+      "placeIds": [
+        "place.badarika",
+        "mountain.gandhamadana",
+        "place.saugandhika"
+      ],
+      "stops": [
+        {
+          "id": "stop.bhima-badari",
+          "sequence": 1,
+          "placeId": "place.badarika",
+          "ancientName": "Badari Hermitage",
+          "modernName": "Badrinath Region",
+          "latitude": 30.74,
+          "longitude": 79.49,
+          "coordinateConfidence": "traditional/approximate",
+          "sourceType": "primary-text",
+          "locationType": "residence",
+          "sourceRefs": [
+            {
+              "work": "Mahābhārata",
+              "parva": "Vana Parva",
+              "section": "Saugandhikāharana Parva",
+              "reference": "Section 146"
+            }
+          ],
+          "narrative": "A wind carries a lotus of celestial fragrance; Draupadī requests Bhīma fetch more for her.",
+          "orderConfidence": "high"
+        },
+        {
+          "id": "stop.bhima-gandhamadana",
+          "sequence": 2,
+          "placeId": "mountain.gandhamadana",
+          "ancientName": "Gandhamādana Ridge",
+          "modernName": "High Garhwal Himalaya",
+          "latitude": 30.90,
+          "longitude": 79.60,
+          "coordinateConfidence": "traditional/approximate",
+          "sourceType": "primary-text",
+          "locationType": "individual-journey",
+          "sourceRefs": [
+            {
+              "work": "Mahābhārata",
+              "parva": "Vana Parva",
+              "section": "Saugandhikāharana Parva",
+              "reference": "Section 147"
+            }
+          ],
+          "narrative": "Bhīma encounters Hanumān lying across his path, attempts to lift his tail, and receives blessings and prophecy.",
+          "orderConfidence": "high"
+        },
+        {
+          "id": "stop.bhima-saugandhika",
+          "sequence": 3,
+          "placeId": "place.saugandhika",
+          "ancientName": "Saugandhikā Lake",
+          "modernName": "High Himalayan Glacial Lake (Kubera's Realm)",
+          "latitude": 31.05,
+          "longitude": 79.75,
+          "coordinateConfidence": "traditional/approximate",
+          "sourceType": "primary-text",
+          "locationType": "individual-journey",
+          "sourceRefs": [
+            {
+              "work": "Mahābhārata",
+              "parva": "Vana Parva",
+              "section": "Saugandhikāharana Parva",
+              "reference": "Section 152"
+            }
+          ],
+          "narrative": "Bhīma overcomes Yakṣa and Krodhavaśa guardians at Kubera's lake to gather the Saugandhikā lotuses.",
+          "orderConfidence": "high"
+        }
+      ],
+      "order": 50
+    },
+    {
+      "id": "route.pandavas-journey-matsya",
+      "slug": "pandavas-journey-matsya",
+      "title": "Pandavas — Journey to Matsya",
+      "iastTitle": "Pāṇḍava-matsya-yātrā",
+      "summary": "Movement from Dvaitavana into concealment at Virāṭanagara for the 13th year.",
+      "description": "The Virāṭa Parva details the Pāṇḍavas' journey along the Yamunā southern bank into Matsya kingdom, concealing their bow cases in a Śamī tree, and their post-concealment gathering at Upaplavya.",
+      "period": "13th Year in Disguise",
+      "category": "virata-year",
+      "parentCategory": "pandava-exile",
+      "confidence": "verified",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "parva": "Virāṭa Parva",
+          "reference": "Sections 1–5, 72"
+        }
+      ],
+      "placeIds": [
+        "forest.dvaita",
+        "river.yamuna",
+        "kingdom.virata",
+        "city.upaplavya"
+      ],
+      "stops": [
+        {
+          "id": "stop.matsya-dvaita",
+          "sequence": 1,
+          "placeId": "forest.dvaita",
+          "ancientName": "Dvaitavana",
+          "modernName": "Sarasvatī Basin",
+          "latitude": 29.30,
+          "longitude": 75.80,
+          "coordinateConfidence": "traditional/approximate",
+          "sourceType": "primary-text",
+          "locationType": "residence",
+          "sourceRefs": [
+            {
+              "work": "Mahābhārata",
+              "parva": "Virāṭa Parva",
+              "section": "Pandavapravesha Parva",
+              "reference": "Section 1"
+            }
+          ],
+          "narrative": "The Pāṇḍavas wrap their weapons and depart Dvaitavana as their 12th year of forest exile ends.",
+          "orderConfidence": "high"
+        },
+        {
+          "id": "stop.matsya-yamuna",
+          "sequence": 2,
+          "placeId": "river.yamuna",
+          "ancientName": "Yamunā Southern Bank",
+          "modernName": "Yamuna Tract (Śūrasena / Dasārṇa Border)",
+          "latitude": 28.20,
+          "longitude": 77.40,
+          "coordinateConfidence": "medium",
+          "sourceType": "primary-text",
+          "locationType": "visited",
+          "sourceRefs": [
+            {
+              "work": "Mahābhārata",
+              "parva": "Virāṭa Parva",
+              "section": "Pandavapravesha Parva",
+              "reference": "Section 5"
+            }
+          ],
+          "narrative": "Traveling along the southern bank of the Yamunā, they pass through Śūrasena territory toward Matsya.",
+          "orderConfidence": "high"
+        },
+        {
+          "id": "stop.matsya-virata",
+          "sequence": 3,
+          "placeId": "kingdom.virata",
+          "ancientName": "Virāṭanagara",
+          "modernName": "Bairat, Jaipur District (Rajasthan)",
+          "latitude": 26.90,
+          "longitude": 76.85,
+          "coordinateConfidence": "high",
+          "sourceType": "primary-text",
+          "locationType": "residence",
+          "sourceRefs": [
+            {
+              "work": "Mahābhārata",
+              "parva": "Virāṭa Parva",
+              "section": "Pandavapravesha Parva",
+              "reference": "Section 5"
+            }
+          ],
+          "narrative": "They hide their weapons in a Śamī tree near a cremation ground and enter King Virāṭa's court in disguise.",
+          "orderConfidence": "high"
+        },
+        {
+          "id": "stop.matsya-upaplavya",
+          "sequence": 4,
+          "placeId": "city.upaplavya",
+          "ancientName": "Upaplavya",
+          "modernName": "Matsya Border City",
+          "latitude": 27.10,
+          "longitude": 76.95,
+          "coordinateConfidence": "medium",
+          "sourceType": "primary-text",
+          "locationType": "visited",
+          "sourceRefs": [
+            {
+              "work": "Mahābhārata",
+              "parva": "Virāṭa Parva",
+              "section": "Vaivahika Parva",
+              "reference": "Section 72"
+            }
+          ],
+          "narrative": "After the 13th year expires, the Pāṇḍavas assemble at Upaplavya where Abhimanyu and Uttarā's wedding is celebrated.",
+          "orderConfidence": "high"
+        }
+      ],
+      "order": 60
     },
     {
       "id": "route.krishna-journey",
       "slug": "krishna-journey",
       "title": "Krishna's Journey",
       "iastTitle": "Kṛṣṇa-yātrā",
-      "summary": "From Vraja and Mathurā to the ocean capital Dvārakā.",
-      "description": "Educational path linking Gokula–Vṛndāvana–Mathurā with Dvārakā after Kaṃsa's fall — a traditional narrative arc, not a surveyed itinerary.",
-      "placeIds": [
-        "place.gokula",
-        "place.vrindavana",
-        "city.mathura",
-        "city.dvaraka"
-      ],
+      "summary": "From Vraja and Mathurā to the western ocean capital Dvārakā.",
+      "description": "Educational narrative path linking Gokula, Vṛndāvana, Mathurā, and the western capital Dvārakā after Kaṃsa's overthrow.",
+      "period": "Early Life to Dvaraka Migration",
+      "category": "epic-campaigns",
       "confidence": "traditional",
       "sources": [
         {
@@ -52,81 +721,387 @@
           "work": "Harivaṃśa"
         }
       ],
-      "stroke": "#6b3a5a",
-      "order": 20
+      "placeIds": [
+        "place.gokula",
+        "place.vrindavana",
+        "city.mathura",
+        "city.dvaraka"
+      ],
+      "stops": [
+        {
+          "id": "stop.krishna-gokula",
+          "sequence": 1,
+          "placeId": "place.gokula",
+          "ancientName": "Gokula",
+          "modernName": "Gokul, Mathura (Uttar Pradesh)",
+          "latitude": 27.43,
+          "longitude": 77.72,
+          "coordinateConfidence": "high",
+          "sourceType": "secondary-text",
+          "locationType": "residence",
+          "sourceRefs": [
+            {
+              "work": "Bhāgavata Purāṇa",
+              "section": "Skandha 10, Adhyāya 3"
+            }
+          ],
+          "narrative": "Childhood sanctuary of Kṛṣṇa in the pastoral realm of Nanda Mahārāja.",
+          "orderConfidence": "high"
+        },
+        {
+          "id": "stop.krishna-vrindavana",
+          "sequence": 2,
+          "placeId": "place.vrindavana",
+          "ancientName": "Vṛndāvana",
+          "modernName": "Vrindavan (Uttar Pradesh)",
+          "latitude": 27.58,
+          "longitude": 77.70,
+          "coordinateConfidence": "high",
+          "sourceType": "secondary-text",
+          "locationType": "residence",
+          "sourceRefs": [
+            {
+              "work": "Bhāgavata Purāṇa",
+              "section": "Skandha 10, Adhyāya 11"
+            }
+          ],
+          "narrative": "Pastoral forests of Govardhana, Yamunā banks, and Rāsaklīḍā.",
+          "orderConfidence": "high"
+        },
+        {
+          "id": "stop.krishna-mathura",
+          "sequence": 3,
+          "placeId": "city.mathura",
+          "ancientName": "Mathurā",
+          "modernName": "Mathura (Uttar Pradesh)",
+          "latitude": 27.49,
+          "longitude": 77.67,
+          "coordinateConfidence": "high",
+          "sourceType": "primary-text",
+          "locationType": "visited",
+          "sourceRefs": [
+            {
+              "work": "Bhāgavata Purāṇa",
+              "section": "Skandha 10, Adhyāya 44"
+            }
+          ],
+          "narrative": "Overthrow of Kaṃsa and restoration of Ugrasena to the Śūrasena throne.",
+          "orderConfidence": "high"
+        },
+        {
+          "id": "stop.krishna-dvaraka",
+          "sequence": 4,
+          "placeId": "city.dvaraka",
+          "ancientName": "Dvārakā",
+          "modernName": "Dwarka (Gujarat)",
+          "latitude": 22.24,
+          "longitude": 68.96,
+          "coordinateConfidence": "high",
+          "sourceType": "primary-text",
+          "locationType": "residence",
+          "sourceRefs": [
+            {
+              "work": "Mahābhārata",
+              "parva": "Sabhā Parva",
+              "section": "Section 14"
+            }
+          ],
+          "narrative": "Fortified western ocean capital founded by Viśvakarmā for the Yādavas.",
+          "orderConfidence": "high"
+        }
+      ],
+      "order": 70
     },
     {
       "id": "route.arjuna-digvijaya",
       "slug": "arjuna-digvijaya",
       "title": "Arjuna's Digvijaya",
       "iastTitle": "Arjuna-digvijaya",
-      "summary": "Indicative northern–eastern arc of Arjuna's conquest circuit.",
-      "description": "A schematic digvijaya spine for Atlas visualization — Indraprastha outward toward Magadha and the Gaṅgā lands — not a complete itinerary of every campaign.",
+      "summary": "Northern conquest circuit for Yudhiṣṭhira's Rājasūya sacrifice.",
+      "description": "Schematic digvijaya campaign linking Indraprastha, Pañcāla, Kāśī, and Magadha.",
+      "period": "Pre-War Imperial Consecration",
+      "category": "epic-campaigns",
+      "confidence": "traditional",
+      "sources": [
+        {
+          "work": "Mahābhārata",
+          "parva": "Sabhā Parva",
+          "section": "Digvijaya Parva",
+          "reference": "Sections 25–32"
+        }
+      ],
       "placeIds": [
         "city.indraprastha",
         "kingdom.pancala",
         "kingdom.kashi",
         "kingdom.magadha"
       ],
-      "confidence": "traditional",
-      "sources": [
+      "stops": [
         {
-          "work": "Mahābhārata",
-          "section": "Sabhā Parva"
+          "id": "stop.digvijaya-indraprastha",
+          "sequence": 1,
+          "placeId": "city.indraprastha",
+          "ancientName": "Indraprastha",
+          "modernName": "Delhi",
+          "latitude": 28.61,
+          "longitude": 77.25,
+          "coordinateConfidence": "high",
+          "sourceType": "primary-text",
+          "locationType": "residence",
+          "sourceRefs": [
+            {
+              "work": "Mahābhārata",
+              "parva": "Sabhā Parva",
+              "reference": "Section 25"
+            }
+          ],
+          "narrative": "Arjuna marches out from the Pāṇḍava capital heading northernward.",
+          "orderConfidence": "high"
+        },
+        {
+          "id": "stop.digvijaya-pancala",
+          "sequence": 2,
+          "placeId": "kingdom.pancala",
+          "ancientName": "Pañcāla",
+          "modernName": "Ahichchhatra / Kampilya (Western UP)",
+          "latitude": 28.35,
+          "longitude": 79.40,
+          "coordinateConfidence": "high",
+          "sourceType": "primary-text",
+          "locationType": "visited",
+          "sourceRefs": [
+            {
+              "work": "Mahābhārata",
+              "parva": "Sabhā Parva",
+              "reference": "Section 26"
+            }
+          ],
+          "narrative": "Allied kingdom of Drupada providing forces and passage.",
+          "orderConfidence": "high"
+        },
+        {
+          "id": "stop.digvijaya-kashi",
+          "sequence": 3,
+          "placeId": "kingdom.kashi",
+          "ancientName": "Kāśī",
+          "modernName": "Varanasi (Uttar Pradesh)",
+          "latitude": 25.31,
+          "longitude": 83.00,
+          "coordinateConfidence": "high",
+          "sourceType": "primary-text",
+          "locationType": "visited",
+          "sourceRefs": [
+            {
+              "work": "Mahābhārata",
+              "parva": "Sabhā Parva",
+              "reference": "Section 29"
+            }
+          ],
+          "narrative": "Sacred eastern realm brought under Pāṇḍava alliance.",
+          "orderConfidence": "high"
+        },
+        {
+          "id": "stop.digvijaya-magadha",
+          "sequence": 4,
+          "placeId": "kingdom.magadha",
+          "ancientName": "Magadha",
+          "modernName": "Rajgir (Bihar)",
+          "latitude": 24.80,
+          "longitude": 85.30,
+          "coordinateConfidence": "high",
+          "sourceType": "primary-text",
+          "locationType": "visited",
+          "sourceRefs": [
+            {
+              "work": "Mahābhārata",
+              "parva": "Sabhā Parva",
+              "reference": "Section 30"
+            }
+          ],
+          "narrative": "Eastern imperial realm following Jarāsandha's fall.",
+          "orderConfidence": "high"
         }
       ],
-      "stroke": "#3d5c3a",
-      "order": 30
+      "order": 80
     },
     {
       "id": "route.balarama-pilgrimage",
       "slug": "balarama-pilgrimage",
       "title": "Balarāma's Pilgrimage",
       "iastTitle": "Balarāma-tīrthayātrā",
-      "summary": "Pilgrim path associated with Balarāma during the war.",
-      "description": "Traditional accounts have Balarāma leave the Kurukṣetra war for a tīrtha-yātrā along sacred rivers. This Atlas path is a respectful simplification for exploration.",
-      "placeIds": [
-        "place.kurukshetra",
-        "river.sarasvati",
-        "river.yamuna",
-        "river.ganga",
-        "forest.naimisharanya"
-      ],
+      "summary": "Neutral pilgrimage circuit along the sacred Sarasvatī river during the war.",
+      "description": "During the 18-day Kurukṣetra war, Balarāma refuses to side with either army and undertakes a neutral pilgrimage along the Sarasvatī river.",
+      "period": "Kurukshetra War Period",
+      "category": "epic-campaigns",
       "confidence": "traditional",
       "sources": [
         {
           "work": "Mahābhārata",
-          "section": "Śalya Parva"
+          "parva": "Śalya Parva",
+          "section": "Tīrthayātrā Parva",
+          "reference": "Sections 34–54"
         }
       ],
-      "stroke": "#4d6a86",
-      "order": 40
+      "placeIds": [
+        "place.prabhasa",
+        "river.sarasvati",
+        "place.kurukshetra"
+      ],
+      "stops": [
+        {
+          "id": "stop.balarama-prabhasa",
+          "sequence": 1,
+          "placeId": "place.prabhasa",
+          "ancientName": "Prabhāsa",
+          "modernName": "Somnath (Gujarat)",
+          "latitude": 20.88,
+          "longitude": 70.40,
+          "coordinateConfidence": "high",
+          "sourceType": "primary-text",
+          "locationType": "tirtha",
+          "sourceRefs": [
+            {
+              "work": "Mahābhārata",
+              "parva": "Śalya Parva",
+              "reference": "Section 34"
+            }
+          ],
+          "narrative": "Balarāma departs Prabhāsa as war preparations reach their climax.",
+          "orderConfidence": "high"
+        },
+        {
+          "id": "stop.balarama-sarasvati",
+          "sequence": 2,
+          "placeId": "river.sarasvati",
+          "ancientName": "Sarasvatī Banks",
+          "modernName": "Sacred Sarasvati Basin",
+          "latitude": 29.50,
+          "longitude": 76.50,
+          "coordinateConfidence": "traditional/approximate",
+          "sourceType": "primary-text",
+          "locationType": "tirtha",
+          "sourceRefs": [
+            {
+              "work": "Mahābhārata",
+              "parva": "Śalya Parva",
+              "reference": "Section 35"
+            }
+          ],
+          "narrative": "Upstream journey along the sacred Sarasvatī bathing at forty-two tīrthas.",
+          "orderConfidence": "high"
+        },
+        {
+          "id": "stop.balarama-kurukshetra",
+          "sequence": 3,
+          "placeId": "place.kurukshetra",
+          "ancientName": "Kurukṣetra",
+          "modernName": "Kurukshetra (Haryana)",
+          "latitude": 29.96,
+          "longitude": 76.82,
+          "coordinateConfidence": "high",
+          "sourceType": "primary-text",
+          "locationType": "visited",
+          "sourceRefs": [
+            {
+              "work": "Mahābhārata",
+              "parva": "Śalya Parva",
+              "reference": "Section 54"
+            }
+          ],
+          "narrative": "Balarāma arrives at Kurukṣetra on the 18th day to witness the mace duel between Bhīma and Duryodhana.",
+          "orderConfidence": "high"
+        }
+      ],
+      "order": 90
     },
     {
-      "id": "route.ashvamedha",
-      "slug": "ashvamedha-horse",
-      "title": "Ashvamedha Horse",
-      "iastTitle": "Aśvamedha",
-      "summary": "Indicative circuit of the horse of Yudhiṣṭhira's Aśvamedha.",
-      "description": "A simplified educational path for the post-war Aśvamedha horse — Indraprastha outward through principal kingdoms named in tradition. Not a surveyed itinerary.",
-      "placeIds": [
-        "city.indraprastha",
-        "kingdom.pancala",
-        "kingdom.magadha",
-        "kingdom.videha",
-        "kingdom.kashi",
-        "kingdom.cedi",
-        "city.indraprastha"
-      ],
+      "id": "route.ashvamedha-campaign",
+      "slug": "ashvamedha-campaign",
+      "title": "Ashvamedha Campaign",
+      "iastTitle": "Aśvamedha-digvijaya",
+      "summary": "Arjuna escorting the imperial sacrificial horse across ancient realms.",
+      "description": "Post-war royal horse sacrifice circuit where Arjuna protects the sacred steed through Trigarta, Prāgjyotiṣa, Saindhava, and Maṇipura before returning to Hastināpura.",
+      "period": "Post-War Imperial Consecration",
+      "category": "epic-campaigns",
       "confidence": "traditional",
       "sources": [
         {
           "work": "Mahābhārata",
-          "section": "Aśvamedhika Parva"
+          "parva": "Āśvamedhika Parva",
+          "reference": "Sections 73–85"
         }
       ],
-      "stroke": "#8a6a20",
-      "order": 50
+      "placeIds": [
+        "city.indraprastha",
+        "kingdom.trigarta",
+        "city.hastinapura"
+      ],
+      "stops": [
+        {
+          "id": "stop.ashvamedha-indraprastha",
+          "sequence": 1,
+          "placeId": "city.indraprastha",
+          "ancientName": "Indraprastha",
+          "modernName": "Delhi",
+          "latitude": 28.61,
+          "longitude": 77.25,
+          "coordinateConfidence": "high",
+          "sourceType": "primary-text",
+          "locationType": "residence",
+          "sourceRefs": [
+            {
+              "work": "Mahābhārata",
+              "parva": "Āśvamedhika Parva",
+              "reference": "Section 73"
+            }
+          ],
+          "narrative": "The royal sacrificial steed is set free to roam for one year escorted by Arjuna.",
+          "orderConfidence": "high"
+        },
+        {
+          "id": "stop.ashvamedha-trigarta",
+          "sequence": 2,
+          "placeId": "kingdom.trigarta",
+          "ancientName": "Trigarta",
+          "modernName": "Kangra Valley (Himachal Pradesh)",
+          "latitude": 32.10,
+          "longitude": 76.27,
+          "coordinateConfidence": "high",
+          "sourceType": "primary-text",
+          "locationType": "visited",
+          "sourceRefs": [
+            {
+              "work": "Mahābhārata",
+              "parva": "Āśvamedhika Parva",
+              "reference": "Section 74"
+            }
+          ],
+          "narrative": "Arjuna defeats Suryavarma and the Trigarta warriors challenging the horse.",
+          "orderConfidence": "high"
+        },
+        {
+          "id": "stop.ashvamedha-hastinapura",
+          "sequence": 3,
+          "placeId": "city.hastinapura",
+          "ancientName": "Hastināpura",
+          "modernName": "Hastinapur (Uttar Pradesh)",
+          "latitude": 29.17,
+          "longitude": 78.02,
+          "coordinateConfidence": "high",
+          "sourceType": "primary-text",
+          "locationType": "residence",
+          "sourceRefs": [
+            {
+              "work": "Mahābhārata",
+              "parva": "Āśvamedhika Parva",
+              "reference": "Section 85"
+            }
+          ],
+          "narrative": "Return of the sacrificial steed and grand celebration of the Aśvamedha sacrifice.",
+          "orderConfidence": "high"
+        }
+      ],
+      "order": 100
     }
   ]
 }

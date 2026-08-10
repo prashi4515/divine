@@ -175,8 +175,40 @@ export const ATLAS_PATH_KINDS = [
 export type AtlasPathKind = (typeof ATLAS_PATH_KINDS)[number];
 
 /**
- * Travel / campaign path.
- * Prefer `placeIds` resolved against KG entities; optional `waypoints` for
+ * Structured stop along a route or journey.
+ */
+export const atlasRouteStopSchema = z.object({
+  id: z.string().min(1),
+  journeyId: z.string().optional(),
+  sequence: z.number().int().min(1),
+  placeId: z.string().min(1),
+  ancientName: z.string().min(1),
+  modernName: z.string().nullable().optional(),
+  latitude: z.number(),
+  longitude: z.number(),
+  coordinateConfidence: z
+    .enum(["high", "medium", "low", "traditional/approximate"])
+    .default("traditional/approximate"),
+  sourceType: z
+    .enum([
+      "primary-text",
+      "secondary-text",
+      "traditional-identification",
+      "modern-identification",
+      "uncertain",
+    ])
+    .default("primary-text"),
+  locationType: z
+    .enum(["residence", "visited", "tirtha", "individual-journey", "celestial"])
+    .default("visited"),
+  sourceRefs: z.array(scriptureReferenceSchema).default([]),
+  narrative: z.string().optional(),
+  orderConfidence: z.enum(["high", "medium", "low"]).default("high"),
+});
+export type AtlasRouteStop = z.infer<typeof atlasRouteStopSchema>;
+
+/**
+ * An overlay path line (trade route, pilgrimage circuit, campaign path) linking places or
  * intermediate geography not modeled as places.
  */
 export const atlasRouteSchema = z.object({
@@ -186,10 +218,15 @@ export const atlasRouteSchema = z.object({
   iastTitle: z.string().optional(),
   summary: z.string().min(1),
   description: z.string().min(1),
+  period: z.string().optional(),
+  category: z.string().default("epic-campaigns"),
+  parentCategory: z.string().optional(),
   pathKind: z.enum(ATLAS_PATH_KINDS).default("travel"),
   layerId: z.string().min(1).default("layer.routes"),
   /** Ordered place entity ids along the path. */
   placeIds: z.array(z.string()).min(2),
+  /** Structured stop sequence with sources and coordinates. */
+  stops: z.array(atlasRouteStopSchema).default([]),
   /** Optional intermediate lat/lng between places. */
   waypoints: z.array(atlasLatLngSchema).default([]),
   confidence: z.enum(["verified", "traditional", "variant"]),

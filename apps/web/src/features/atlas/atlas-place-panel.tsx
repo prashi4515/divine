@@ -1,5 +1,6 @@
 "use client";
 
+import * as React from "react";
 import Link from "next/link";
 import {
   ArrowUpRight,
@@ -9,6 +10,8 @@ import {
   MapPin,
   X,
 } from "lucide-react";
+import type { AtlasDataset, AtlasRoute, AtlasRouteStop } from "@divine/types";
+import type { AtlasSearchPerson } from "@/lib/atlas/search/atlas-search-engine";
 import type { AtlasPlace } from "@/lib/atlas/geo";
 import {
   atlasCategoryFor,
@@ -21,27 +24,42 @@ import { displayLocalizedName } from "@/lib/i18n/localize-entity";
 import { useMessages } from "@/lib/i18n/use-messages";
 import { useReadingStore } from "@/lib/stores/reading-store";
 
-type Related = Array<{
+type RelatedPerson = {
   id: string;
   name: string;
-  kind: string;
-  href: string;
-}>;
+  kind?: string;
+  href?: string;
+  placeSlug?: string;
+};
+
+export type AtlasPlacePanelProps = {
+  place: AtlasPlace;
+  related?: readonly (RelatedPerson | AtlasSearchPerson)[];
+  dataset?: AtlasDataset;
+  onClose: () => void;
+};
 
 /**
  * Premium place side panel — overview, modern context, relationships.
  */
 export function AtlasPlacePanel({
   place,
-  related,
+  related = [],
+  dataset,
   onClose,
-}: {
-  place: AtlasPlace;
-  related: Related;
-  onClose: () => void;
-}) {
+}: AtlasPlacePanelProps) {
   const t = useMessages();
   const lang = useReadingStore((s) => s.preferredLanguage);
+  
+  const matchingJourneys = React.useMemo(() => {
+    if (!dataset?.routes) return [];
+    return dataset.routes.filter((r: AtlasRoute) =>
+      r.placeIds.includes(place.id) ||
+      r.placeIds.includes(place.slug) ||
+      r.stops?.some((s: AtlasRouteStop) => s.placeId === place.id || s.placeId === place.slug || s.ancientName.toLowerCase().includes(place.name.toLowerCase())),
+    );
+  }, [dataset, place]);
+
   const cat = atlasCategoryFor(place);
   const localizedName = displayLocalizedName(place, lang);
 
@@ -125,6 +143,22 @@ export function AtlasPlacePanel({
           </p>
         </section>
 
+        {matchingJourneys.length > 0 && (
+          <section>
+            <p className="text-muted-foreground text-[10px] font-medium uppercase tracking-[0.16em]">
+              Used in Journeys
+            </p>
+            <ul className="mt-2 space-y-1.5">
+              {matchingJourneys.map((j: AtlasRoute) => (
+                <li key={j.id} className="text-xs text-foreground flex items-center gap-2">
+                  <span className="h-1.5 w-1.5 rounded-full bg-saffron inline-block shrink-0" />
+                  <span className="font-medium">{j.title}</span>
+                </li>
+              ))}
+            </ul>
+          </section>
+        )}
+
         {related.length > 0 && (
           <section>
             <p className="text-muted-foreground text-[10px] font-medium uppercase tracking-[0.16em]">
@@ -134,7 +168,7 @@ export function AtlasPlacePanel({
               {related.slice(0, 10).map((r) => (
                 <li key={r.id}>
                   <Link
-                    href={r.href}
+                    href={"href" in r && r.href ? r.href : `/genealogy/${r.id}`}
                     className="text-foreground underline-offset-2 hover:underline"
                   >
                     {r.name}

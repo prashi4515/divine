@@ -42,7 +42,7 @@ export function GenealogyHeader({
     if (norm === "encyclopedia") return t.navEncyclopedia;
     if (norm === "genealogy") return t.navGenealogy;
     if (norm === "atlas") return t.navAtlas;
-    if (norm === "search") return t.search;
+    if (norm === "search") return t.navSearch;
     return localizeEntityTitle(label, lang);
   };
 

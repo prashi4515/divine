@@ -249,8 +249,8 @@ export function syncAtlasOverlays(
     filter: ["==", ["get", "category"], "active"],
     paint: {
       "line-color": "#ffffff",
-      "line-width": 8,
-      "line-opacity": 0.9,
+      "line-width": ["interpolate", ["linear"], ["zoom"], 4, 3, 10, 5],
+      "line-opacity": 0.6,
     },
   });
   upsertLayer(map, {
@@ -264,10 +264,10 @@ export function syncAtlasOverlays(
     },
     filter: ["==", ["get", "category"], "active"],
     paint: {
-      "line-color": "#ea580c",
-      "line-width": 5,
+      "line-color": "#d97706",
+      "line-width": ["interpolate", ["linear"], ["zoom"], 4, 1.5, 10, 2.5],
       "line-opacity": 1,
-      "line-dasharray": [2, 2],
+      "line-dasharray": [4, 3],
     },
   });
   upsertLayer(map, {

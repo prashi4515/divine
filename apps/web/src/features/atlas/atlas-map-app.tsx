@@ -718,6 +718,7 @@ export function AtlasMapApp({
         <AtlasPlacePanel
           place={selected}
           related={relatedByPlaceId[selected.id] ?? []}
+          dataset={dataset}
           onClose={() => setSelectedSlug(null)}
         />
       ) : null}

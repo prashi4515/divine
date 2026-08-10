@@ -29,6 +29,12 @@ export type AtlasFeatureProps = {
   category?: string;
   importance?: number;
   certainty?: string;
+  locationType?: string;
+  coordinateConfidence?: string;
+  sourceType?: string;
+  modernName?: string;
+  narrative?: string;
+  sourceRefs?: unknown[];
 };
 
 type FeatureCollection = GeoFeatureCollection<Geometry, AtlasFeatureProps>;
@@ -201,13 +207,19 @@ export function routesToGeoJson(
 
   for (const route of dataset.routes) {
     const coords: [number, number][] = [];
-    for (const pid of route.placeIds) {
-      const bare = pid.replace(/^[a-z]+\./, "");
-      const p = byId.get(pid) ?? byId.get(bare);
-      if (p) {
-        coords.push([p.atlas.longitude, p.atlas.latitude]);
-      } else if (KNOWN_ROUTE_COORDS[pid] || KNOWN_ROUTE_COORDS[bare]) {
-        coords.push(KNOWN_ROUTE_COORDS[pid] ?? KNOWN_ROUTE_COORDS[bare]!);
+    if (route.stops && route.stops.length >= 2) {
+      for (const stop of route.stops) {
+        coords.push([stop.longitude, stop.latitude]);
+      }
+    } else {
+      for (const pid of route.placeIds) {
+        const bare = pid.replace(/^[a-z]+\./, "");
+        const p = byId.get(pid) ?? byId.get(bare);
+        if (p) {
+          coords.push([p.atlas.longitude, p.atlas.latitude]);
+        } else if (KNOWN_ROUTE_COORDS[pid] || KNOWN_ROUTE_COORDS[bare]) {
+          coords.push(KNOWN_ROUTE_COORDS[pid] ?? KNOWN_ROUTE_COORDS[bare]!);
+        }
       }
     }
     if (coords.length < 2) continue;
@@ -239,6 +251,35 @@ export function routeStopsToGeoJson(
   if (!route) return emptyFc();
   const byId = new Map(places.map((p) => [p.id, p] as const));
   const features: FeatureCollection["features"] = [];
+
+  if (route.stops && route.stops.length > 0) {
+    route.stops.forEach((stop, i) => {
+      features.push({
+        type: "Feature",
+        id: `${route.id}-stop-${i}`,
+        geometry: {
+          type: "Point",
+          coordinates: [stop.longitude, stop.latitude],
+        },
+        properties: {
+          id: stop.id,
+          slug: stop.placeId.replace(/^[a-z]+\./, ""),
+          name: stop.ancientName,
+          kind: "route-stop",
+          category: activeStopIndex === i ? "active" : "stop",
+          importance: i + 1,
+          locationType: stop.locationType ?? "visited",
+          coordinateConfidence: stop.coordinateConfidence ?? "traditional/approximate",
+          sourceType: stop.sourceType ?? "primary-text",
+          modernName: stop.modernName ?? "",
+          narrative: stop.narrative ?? "",
+          sourceRefs: stop.sourceRefs ?? [],
+        },
+      });
+    });
+    return { type: "FeatureCollection", features };
+  }
+
   route.placeIds.forEach((pid, i) => {
     const p = byId.get(pid);
     if (!p) return;

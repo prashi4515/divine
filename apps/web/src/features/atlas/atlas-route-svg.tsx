@@ -80,23 +80,34 @@ export function AtlasRouteSvg({ map, activeRoute, places }: AtlasRouteSvgProps) 
 
   const points: Array<{ x: number; y: number }> = [];
 
-  for (const pid of activeRoute.placeIds) {
-    const bare = pid.replace(/^[a-z]+\./, "");
-    const p = byId.get(pid) ?? byId.get(bare);
-    let coords: [number, number] | undefined;
-
-    if (p) {
-      coords = [p.atlas.longitude, p.atlas.latitude];
-    } else if (KNOWN_ROUTE_COORDS[pid] || KNOWN_ROUTE_COORDS[bare]) {
-      coords = KNOWN_ROUTE_COORDS[pid] ?? KNOWN_ROUTE_COORDS[bare];
-    }
-
-    if (coords) {
+  if (activeRoute.stops && activeRoute.stops.length >= 2) {
+    for (const stop of activeRoute.stops) {
       try {
-        const pt = map.project(coords);
+        const pt = map.project([stop.longitude, stop.latitude]);
         points.push({ x: pt.x, y: pt.y });
       } catch {
-        /* map project ignore */
+        /* ignore map project error */
+      }
+    }
+  } else {
+    for (const pid of activeRoute.placeIds) {
+      const bare = pid.replace(/^[a-z]+\./, "");
+      const p = byId.get(pid) ?? byId.get(bare);
+      let coords: [number, number] | undefined;
+
+      if (p) {
+        coords = [p.atlas.longitude, p.atlas.latitude];
+      } else if (KNOWN_ROUTE_COORDS[pid] || KNOWN_ROUTE_COORDS[bare]) {
+        coords = KNOWN_ROUTE_COORDS[pid] ?? KNOWN_ROUTE_COORDS[bare];
+      }
+
+      if (coords) {
+        try {
+          const pt = map.project(coords);
+          points.push({ x: pt.x, y: pt.y });
+        } catch {
+          /* map project ignore */
+        }
       }
     }
   }
@@ -111,30 +122,30 @@ export function AtlasRouteSvg({ map, activeRoute, places }: AtlasRouteSvgProps) 
     <svg className="pointer-events-none absolute inset-0 z-10 h-full w-full overflow-visible">
       <defs>
         <filter id="routeGlow" x="-20%" y="-20%" width="140%" height="140%">
-          <feDropShadow dx="0" dy="1" stdDeviation="2" floodColor="#000000" floodOpacity="0.4" />
+          <feDropShadow dx="0" dy="1" stdDeviation="1.5" floodColor="#000000" floodOpacity="0.25" />
         </filter>
       </defs>
-      {/* Outer White Casing */}
+      {/* Soft Casing Glow */}
       <path
         d={d}
         fill="none"
         stroke="#ffffff"
-        strokeWidth="9"
+        strokeWidth="4.5"
         strokeLinecap="round"
         strokeLinejoin="round"
-        opacity="0.9"
+        opacity="0.65"
         filter="url(#routeGlow)"
       />
-      {/* Vivid Saffron Dotted Line */}
+      {/* Refined 2px Historical Dashed Line */}
       <path
         d={d}
         fill="none"
-        stroke="#ea580c"
-        strokeWidth="5"
-        strokeDasharray="8 6"
+        stroke="#d97706"
+        strokeWidth="2.25"
+        strokeDasharray="6 4"
         strokeLinecap="round"
         strokeLinejoin="round"
-        opacity="1"
+        opacity="0.95"
       />
     </svg>
   );
