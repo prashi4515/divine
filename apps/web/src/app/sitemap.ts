@@ -19,29 +19,6 @@ import { getPublishedChapters } from "@/lib/api/chapters";
 import { publicChapterPath, publicWorkPath } from "@/lib/reading/work-paths";
 import { absoluteUrl } from "@/lib/seo/site";
 
-type SitemapId =
-  | "static"
-  | "chapters"
-  | "verses"
-  | "encyclopedia"
-  | "atlas"
-  | "knowledge"
-  | "genealogy"
-  | "scriptures";
-
-export async function generateSitemaps() {
-  return [
-    { id: "static" },
-    { id: "chapters" },
-    { id: "verses" },
-    { id: "encyclopedia" },
-    { id: "atlas" },
-    { id: "knowledge" },
-    { id: "genealogy" },
-    { id: "scriptures" },
-  ] satisfies Array<{ id: SitemapId }>;
-}
-
 function entry(
   path: string,
   opts: {
@@ -59,181 +36,177 @@ function entry(
 }
 
 /**
- * Split sitemaps for scale — Next serves /sitemap/{id}.xml and an index at /sitemap.xml.
+ * Single consolidated sitemap — Next App Router outputs /sitemap.xml directly.
  */
-export default async function sitemap(props: {
-  id: Promise<string> | string;
-}): Promise<MetadataRoute.Sitemap> {
-  const id = (await props.id) as SitemapId;
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const now = new Date();
 
-  if (id === "static") {
-    return [
-      entry("/", { changeFrequency: "weekly", priority: 1 }),
-      entry("/bhagavad-gita", { changeFrequency: "weekly", priority: 0.98 }),
-      entry("/atlas", { changeFrequency: "weekly", priority: 0.95 }),
-      entry("/events", { changeFrequency: "weekly", priority: 0.9 }),
-      entry("/kingdoms", { changeFrequency: "weekly", priority: 0.9 }),
-      entry("/weapons", { changeFrequency: "weekly", priority: 0.9 }),
-      entry("/concepts", { changeFrequency: "weekly", priority: 0.9 }),
-      entry("/timeline", { changeFrequency: "weekly", priority: 0.9 }),
-      entry("/encyclopedia", { changeFrequency: "weekly", priority: 0.9 }),
-      entry("/genealogy", { changeFrequency: "weekly", priority: 0.9 }),
-    ];
-  }
+  // 1. Static landing pages
+  const staticRoutes: MetadataRoute.Sitemap = [
+    entry("/", { changeFrequency: "weekly", priority: 1 }),
+    entry("/bhagavad-gita", { changeFrequency: "weekly", priority: 0.98 }),
+    entry("/atlas", { changeFrequency: "weekly", priority: 0.95 }),
+    entry("/events", { changeFrequency: "weekly", priority: 0.9 }),
+    entry("/kingdoms", { changeFrequency: "weekly", priority: 0.9 }),
+    entry("/weapons", { changeFrequency: "weekly", priority: 0.9 }),
+    entry("/concepts", { changeFrequency: "weekly", priority: 0.9 }),
+    entry("/timeline", { changeFrequency: "weekly", priority: 0.9 }),
+    entry("/encyclopedia", { changeFrequency: "weekly", priority: 0.9 }),
+    entry("/genealogy", { changeFrequency: "weekly", priority: 0.9 }),
+  ];
 
-  if (id === "chapters") {
-    const chapters = await getStaticGitaChaptersIndex().catch(() => []);
-    return chapters.map((ch) =>
-      entry(`/bhagavad-gita/chapter-${ch.number}`, {
-        lastModified: now,
-        changeFrequency: "monthly",
-        priority: 0.9,
-      }),
-    );
-  }
+  // 2. Gita Chapters & Verses
+  const chapters = await getStaticGitaChaptersIndex().catch(() => []);
+  const chapterRoutes: MetadataRoute.Sitemap = chapters.map((ch) =>
+    entry(`/bhagavad-gita/chapter-${ch.number}`, {
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.9,
+    }),
+  );
 
-  if (id === "verses") {
-    const chapters = await getStaticGitaChaptersIndex().catch(() => []);
-    const routes: MetadataRoute.Sitemap = [];
-    for (const ch of chapters) {
-      const snap = await getStaticGitaChapter(ch.number).catch(() => null);
-      if (!snap) continue;
-      for (const v of snap.verses) {
-        routes.push(
-          entry(`/verse/${ch.number}/${v.number}`, {
-            lastModified: now,
-            changeFrequency: "monthly",
-            priority: 0.75,
-          }),
-        );
-      }
+  const verseRoutes: MetadataRoute.Sitemap = [];
+  for (const ch of chapters) {
+    const snap = await getStaticGitaChapter(ch.number).catch(() => null);
+    if (!snap) continue;
+    for (const v of snap.verses) {
+      verseRoutes.push(
+        entry(`/verse/${ch.number}/${v.number}`, {
+          lastModified: now,
+          changeFrequency: "monthly",
+          priority: 0.75,
+        }),
+      );
     }
-    return routes;
   }
 
-  if (id === "encyclopedia") {
-    const [entities, collections] = await Promise.all([
-      getAllEntities().catch(() => []),
-      getCollections().catch(() => []),
-    ]);
-    const kinds = new Set(
-      entities.filter((e) => e.status === "published").map((e) => e.kind),
-    );
-    const kindRoutes = [...kinds].map((kind) =>
-      entry(`/encyclopedia/${kind}`, {
-        changeFrequency: "weekly",
-        priority: 0.7,
-      }),
-    );
-    const sections = collections
-      .filter((c) => c.kind === "encyclopedia-section")
-      .map((c) =>
-        entry(`/encyclopedia/section/${c.slug}`, {
-          changeFrequency: "weekly",
-          priority: 0.85,
-        }),
-      );
-    const entityRoutes = entities
-      .filter((e) => e.status === "published")
-      .map((e) =>
-        entry(entityHref(e), {
-          priority: Math.min(0.9, 0.5 + e.importance * 0.08),
-        }),
-      );
-    return [...kindRoutes, ...sections, ...entityRoutes];
-  }
-
-  if (id === "atlas") {
-    const places = await getAtlasPlaces().catch(() => []);
-    return places.map((p) =>
-      entry(atlasHref(p), {
-        priority: Math.min(0.9, 0.55 + p.importance * 0.07),
-      }),
-    );
-  }
-
-  if (id === "knowledge") {
-    const [events, kingdoms, weapons, concepts] = await Promise.all([
-      getEvents().catch(() => []),
-      getKingdoms().catch(() => []),
-      getWeapons().catch(() => []),
-      getConcepts().catch(() => []),
-    ]);
-    return [
-      ...events.map((e) =>
-        entry(eventHref(e), {
-          priority: Math.min(0.92, 0.6 + e.importance * 0.06),
-        }),
-      ),
-      ...kingdoms.map((k) =>
-        entry(kingdomHref(k), {
-          priority: Math.min(0.92, 0.55 + k.importance * 0.07),
-        }),
-      ),
-      ...weapons.map((w) =>
-        entry(weaponHref(w), {
-          priority: Math.min(0.92, 0.55 + w.importance * 0.07),
-        }),
-      ),
-      ...concepts.map((c) =>
-        entry(conceptHref(c), {
-          priority: Math.min(0.92, 0.55 + c.importance * 0.07),
-        }),
-      ),
-    ];
-  }
-
-  if (id === "genealogy") {
-    const [modules, people] = await Promise.all([
-      getGenealogyModules().catch(() => []),
-      getAllGenealogyPeople().catch(() => []),
-    ]);
-    return [
-      ...modules
-        .filter((m) => m.status === "available")
-        .map((m) =>
-          entry(`/genealogy/${m.slug}`, {
-            changeFrequency: "weekly",
-            priority: 0.85,
-          }),
-        ),
-      ...people.map((p) =>
-        entry(`/genealogy/person/${p.id}`, {
-          priority: Math.min(0.8, 0.4 + p.importance * 0.08),
-        }),
-      ),
-    ];
-  }
-
-  if (id === "scriptures") {
-    const [works, chapters] = await Promise.all([
-      getPublishedWorks().catch(() => []),
-      getPublishedChapters().catch(() => []),
-    ]);
-    const nonGitaWorks = works.filter((w) => w.code !== "bg");
-    const workRoutes = nonGitaWorks.map((w) =>
-      entry(publicWorkPath(w), {
+  // 3. Encyclopedia
+  const [entities, collections] = await Promise.all([
+    getAllEntities().catch(() => []),
+    getCollections().catch(() => []),
+  ]);
+  const kinds = new Set(
+    entities.filter((e) => e.status === "published").map((e) => e.kind),
+  );
+  const kindRoutes = [...kinds].map((kind) =>
+    entry(`/encyclopedia/${kind}`, {
+      changeFrequency: "weekly",
+      priority: 0.7,
+    }),
+  );
+  const sectionRoutes = collections
+    .filter((c) => c.kind === "encyclopedia-section")
+    .map((c) =>
+      entry(`/encyclopedia/section/${c.slug}`, {
         changeFrequency: "weekly",
         priority: 0.85,
       }),
     );
-    const chapterRoutes = chapters
-      .filter((ch) => nonGitaWorks.some((w) => w.code === ch.work.code))
-      .map((ch) =>
-        entry(
-          publicChapterPath(
-            { code: ch.work.code, slug: ch.work.slug },
-            ch.number,
-          ),
-          {
-            changeFrequency: "monthly",
-            priority: 0.75,
-          },
-        ),
-      );
-    return [...workRoutes, ...chapterRoutes];
-  }
+  const entityRoutes = entities
+    .filter((e) => e.status === "published")
+    .map((e) =>
+      entry(entityHref(e), {
+        priority: Math.min(0.9, 0.5 + e.importance * 0.08),
+      }),
+    );
 
-  return [];
+  // 4. Atlas
+  const places = await getAtlasPlaces().catch(() => []);
+  const atlasRoutes = places.map((p) =>
+    entry(atlasHref(p), {
+      priority: Math.min(0.9, 0.55 + p.importance * 0.07),
+    }),
+  );
+
+  // 5. Knowledge (Events, Kingdoms, Weapons, Concepts)
+  const [events, kingdoms, weapons, concepts] = await Promise.all([
+    getEvents().catch(() => []),
+    getKingdoms().catch(() => []),
+    getWeapons().catch(() => []),
+    getConcepts().catch(() => []),
+  ]);
+  const knowledgeRoutes: MetadataRoute.Sitemap = [
+    ...events.map((e) =>
+      entry(eventHref(e), {
+        priority: Math.min(0.92, 0.6 + e.importance * 0.06),
+      }),
+    ),
+    ...kingdoms.map((k) =>
+      entry(kingdomHref(k), {
+        priority: Math.min(0.92, 0.55 + k.importance * 0.07),
+      }),
+    ),
+    ...weapons.map((w) =>
+      entry(weaponHref(w), {
+        priority: Math.min(0.92, 0.55 + w.importance * 0.07),
+      }),
+    ),
+    ...concepts.map((c) =>
+      entry(conceptHref(c), {
+        priority: Math.min(0.92, 0.55 + c.importance * 0.07),
+      }),
+    ),
+  ];
+
+  // 6. Genealogy
+  const [modules, people] = await Promise.all([
+    getGenealogyModules().catch(() => []),
+    getAllGenealogyPeople().catch(() => []),
+  ]);
+  const genealogyRoutes: MetadataRoute.Sitemap = [
+    ...modules
+      .filter((m) => m.status === "available")
+      .map((m) =>
+        entry(`/genealogy/${m.slug}`, {
+          changeFrequency: "weekly",
+          priority: 0.85,
+        }),
+      ),
+    ...people.map((p) =>
+      entry(`/genealogy/person/${p.id}`, {
+        priority: Math.min(0.8, 0.4 + p.importance * 0.08),
+      }),
+    ),
+  ];
+
+  // 7. Other Scriptures
+  const [works, scriptureChapters] = await Promise.all([
+    getPublishedWorks().catch(() => []),
+    getPublishedChapters().catch(() => []),
+  ]);
+  const nonGitaWorks = works.filter((w) => w.code !== "bg");
+  const scriptureWorkRoutes = nonGitaWorks.map((w) =>
+    entry(publicWorkPath(w), {
+      changeFrequency: "weekly",
+      priority: 0.85,
+    }),
+  );
+  const scriptureChapterRoutes = scriptureChapters
+    .filter((ch) => nonGitaWorks.some((w) => w.code === ch.work.code))
+    .map((ch) =>
+      entry(
+        publicChapterPath(
+          { code: ch.work.code, slug: ch.work.slug },
+          ch.number,
+        ),
+        {
+          changeFrequency: "monthly",
+          priority: 0.75,
+        },
+      ),
+    );
+
+  return [
+    ...staticRoutes,
+    ...chapterRoutes,
+    ...verseRoutes,
+    ...kindRoutes,
+    ...sectionRoutes,
+    ...entityRoutes,
+    ...atlasRoutes,
+    ...knowledgeRoutes,
+    ...genealogyRoutes,
+    ...scriptureWorkRoutes,
+    ...scriptureChapterRoutes,
+  ];
 }
