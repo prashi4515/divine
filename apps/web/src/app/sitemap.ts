@@ -14,6 +14,9 @@ import {
   getStaticGitaChapter,
   getStaticGitaChaptersIndex,
 } from "@/lib/reading/gita-static";
+import { getPublishedWorks } from "@/lib/api/works";
+import { getPublishedChapters } from "@/lib/api/chapters";
+import { publicChapterPath, publicWorkPath } from "@/lib/reading/work-paths";
 import { absoluteUrl } from "@/lib/seo/site";
 
 type SitemapId =
@@ -23,7 +26,8 @@ type SitemapId =
   | "encyclopedia"
   | "atlas"
   | "knowledge"
-  | "genealogy";
+  | "genealogy"
+  | "scriptures";
 
 export async function generateSitemaps() {
   return [
@@ -34,6 +38,7 @@ export async function generateSitemaps() {
     { id: "atlas" },
     { id: "knowledge" },
     { id: "genealogy" },
+    { id: "scriptures" },
   ] satisfies Array<{ id: SitemapId }>;
 }
 
@@ -54,7 +59,7 @@ function entry(
 }
 
 /**
- * Split sitemaps for scale — Next serves /sitemap/{id}.xml and an index.
+ * Split sitemaps for scale — Next serves /sitemap/{id}.xml and an index at /sitemap.xml.
  */
 export default async function sitemap(props: {
   id: Promise<string> | string;
@@ -199,6 +204,35 @@ export default async function sitemap(props: {
         }),
       ),
     ];
+  }
+
+  if (id === "scriptures") {
+    const [works, chapters] = await Promise.all([
+      getPublishedWorks().catch(() => []),
+      getPublishedChapters().catch(() => []),
+    ]);
+    const nonGitaWorks = works.filter((w) => w.code !== "bg");
+    const workRoutes = nonGitaWorks.map((w) =>
+      entry(publicWorkPath(w), {
+        changeFrequency: "weekly",
+        priority: 0.85,
+      }),
+    );
+    const chapterRoutes = chapters
+      .filter((ch) => nonGitaWorks.some((w) => w.code === ch.work.code))
+      .map((ch) =>
+        entry(
+          publicChapterPath(
+            { code: ch.work.code, slug: ch.work.slug },
+            ch.number,
+          ),
+          {
+            changeFrequency: "monthly",
+            priority: 0.75,
+          },
+        ),
+      );
+    return [...workRoutes, ...chapterRoutes];
   }
 
   return [];

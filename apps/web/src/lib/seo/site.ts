@@ -14,7 +14,7 @@ export function getSiteUrl(): string {
     return `https://${stripTrailingSlash(host)}`;
   }
 
-  return "http://localhost:3000";
+  return "https://bagavadgitaonline.com";
 }
 
 export function stripTrailingSlash(url: string): string {
