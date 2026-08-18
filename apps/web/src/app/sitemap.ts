@@ -196,7 +196,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       ),
     );
 
-  return [
+  const allRoutes = [
     ...staticRoutes,
     ...chapterRoutes,
     ...verseRoutes,
@@ -209,4 +209,11 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     ...scriptureWorkRoutes,
     ...scriptureChapterRoutes,
   ];
+
+  const seen = new Set<string>();
+  return allRoutes.filter((r) => {
+    if (!r.url || seen.has(r.url)) return false;
+    seen.add(r.url);
+    return true;
+  });
 }

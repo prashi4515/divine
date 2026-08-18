@@ -1,6 +1,9 @@
+export const CANONICAL_SITE_URL = "https://bagavadgitaonline.com";
+
 /**
- * Absolute site URL — never hardcode a production domain.
- * Prefer NEXT_PUBLIC_SITE_URL; fall back to Vercel preview URL or localhost.
+ * Absolute site URL — hardcoded canonical production domain.
+ * Overridable ONLY via explicit NEXT_PUBLIC_SITE_URL (e.g. for local dev testing).
+ * Never derives from VERCEL_URL or preview deployment host environment variables.
  */
 export function getSiteUrl(): string {
   const configured = process.env.NEXT_PUBLIC_SITE_URL?.trim();
@@ -8,13 +11,7 @@ export function getSiteUrl(): string {
     return stripTrailingSlash(configured);
   }
 
-  const vercel = process.env.VERCEL_URL?.trim();
-  if (vercel) {
-    const host = vercel.replace(/^https?:\/\//i, "");
-    return `https://${stripTrailingSlash(host)}`;
-  }
-
-  return "https://bagavadgitaonline.com";
+  return CANONICAL_SITE_URL;
 }
 
 export function stripTrailingSlash(url: string): string {
