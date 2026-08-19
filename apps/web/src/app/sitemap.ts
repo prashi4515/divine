@@ -53,6 +53,10 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     entry("/timeline", { changeFrequency: "weekly", priority: 0.9 }),
     entry("/encyclopedia", { changeFrequency: "weekly", priority: 0.9 }),
     entry("/genealogy", { changeFrequency: "weekly", priority: 0.9 }),
+    entry("/about", { changeFrequency: "monthly", priority: 0.7 }),
+    entry("/contact", { changeFrequency: "monthly", priority: 0.7 }),
+    entry("/privacy", { changeFrequency: "monthly", priority: 0.5 }),
+    entry("/terms", { changeFrequency: "monthly", priority: 0.5 }),
   ];
 
   // 2. Gita Chapters & Verses

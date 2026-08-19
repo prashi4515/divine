@@ -30,6 +30,13 @@ export function SiteFooter() {
     { href: "/search", label: h.searchVerses },
   ];
 
+  const legal = [
+    { href: "/about", label: t.about ?? "About Us" },
+    { href: "/contact", label: t.contact ?? "Contact Us" },
+    { href: "/privacy", label: t.privacy ?? "Privacy Policy" },
+    { href: "/terms", label: t.terms ?? "Terms of Use" },
+  ];
+
   const account = [
     { href: "/login", label: t.signIn },
     { href: "/signup", label: t.createAccount },
@@ -55,8 +62,8 @@ export function SiteFooter() {
       </div>
 
       <div className="page-gutter w-full py-12 sm:py-14 md:py-16">
-        <div className="mx-auto grid max-w-6xl gap-10 md:grid-cols-[minmax(0,1.8fr)_minmax(0,1fr)] md:gap-12 lg:gap-16">
-          <div className="max-w-md space-y-4">
+        <div className="mx-auto grid max-w-6xl gap-10 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-[minmax(0,1.8fr)_repeat(3,minmax(0,1fr))] md:gap-10 lg:gap-12">
+          <div className="max-w-md space-y-4 sm:col-span-2 md:col-span-1">
             <Link
               href="/"
               className="inline-flex items-center gap-2.5 rounded-md focus-visible:outline-none"
@@ -98,6 +105,7 @@ export function SiteFooter() {
           </div>
 
           <FooterColumn title={t.footerExplore} links={explore} />
+          <FooterColumn title={t.footerLegal ?? "Information & Legal"} links={legal} />
           {PUBLIC_AUTH_UI_ENABLED ? (
             <FooterColumn title={t.footerAccount} links={account} />
           ) : null}

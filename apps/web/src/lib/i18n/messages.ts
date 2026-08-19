@@ -48,6 +48,11 @@ export type Messages = {
   signIn: string;
   createAccount: string;
   readingHistory: string;
+  about?: string;
+  contact?: string;
+  privacy?: string;
+  terms?: string;
+  footerLegal?: string;
   footerExplore: string;
   footerReading: string;
   footerAccount: string;
@@ -178,6 +183,11 @@ const en = build("en", {
   signIn: "Sign in",
   createAccount: "Create account",
   readingHistory: "Reading history",
+  about: "About Us",
+  contact: "Contact Us",
+  privacy: "Privacy Policy",
+  terms: "Terms of Use",
+  footerLegal: "About & Legal",
   footerExplore: "Explore",
   footerReading: "Reading",
   footerAccount: "Account",
@@ -300,6 +310,11 @@ const hi = build("hi", {
   signIn: "साइन इन",
   createAccount: "खाता बनाएँ",
   readingHistory: "पठन इतिहास",
+  about: "अस्मद्विषये",
+  contact: "सम्पर्कः",
+  privacy: "गोपनीयतानीतिः",
+  terms: "उपयोगनियमाः",
+  footerLegal: "माहिती तथा नियमाः",
   footerExplore: "अन्वेषण",
   footerReading: "पठन",
   footerAccount: "खाता",
