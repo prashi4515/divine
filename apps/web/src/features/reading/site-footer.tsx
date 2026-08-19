@@ -1,9 +1,12 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { BookOpen, Languages, Search } from "lucide-react";
 import { PUBLIC_AUTH_UI_ENABLED } from "@/lib/auth/config";
 import { READING_LANGUAGES } from "@/lib/reading/languages";
+import { readingLanguageCookieWrite } from "@/lib/i18n/reading-language-cookie";
+import { localizePath } from "@/lib/i18n/locales";
 import { useHomeMessages, useMessages } from "@/lib/i18n/use-messages";
 import { useReadingStore } from "@/lib/stores/reading-store";
 import { cn } from "@/lib/utils";
@@ -14,6 +17,7 @@ import { cn } from "@/lib/utils";
 export function SiteFooter() {
   const t = useMessages();
   const h = useHomeMessages();
+  const pathname = usePathname();
   const preferredLanguage = useReadingStore((s) => s.preferredLanguage);
   const setPreferredLanguage = useReadingStore((s) => s.setPreferredLanguage);
   const year = new Date().getFullYear();
@@ -124,22 +128,26 @@ export function SiteFooter() {
               >
                 {READING_LANGUAGES.map((lang) => {
                   const active = preferredLanguage === lang.code;
+                  const targetHref = localizePath(pathname || "/", lang.code);
                   return (
                     <li key={lang.code}>
-                      <button
-                        type="button"
-                        onClick={() => setPreferredLanguage(lang.code)}
+                      <Link
+                        href={targetHref}
+                        onClick={() => {
+                          document.cookie = readingLanguageCookieWrite(lang.code);
+                          setPreferredLanguage(lang.code);
+                        }}
                         className={cn(
                           "rounded-md px-2 py-1 text-xs tracking-wide transition-divine",
                           active
                             ? "bg-saffron/15 text-foreground font-medium"
                             : "text-muted-foreground hover:text-foreground hover:bg-muted/60",
                         )}
-                        aria-pressed={active}
-                        lang={lang.code === "sa" ? "sa" : lang.code}
+                        aria-current={active ? "page" : undefined}
+                        lang={lang.code}
                       >
                         {lang.nativeName}
-                      </button>
+                      </Link>
                     </li>
                   );
                 })}

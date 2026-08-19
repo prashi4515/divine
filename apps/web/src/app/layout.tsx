@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { cookies } from "next/headers";
+import { cookies, headers } from "next/headers";
 import { Fredoka } from "next/font/google";
 import { Providers } from "@/components/providers";
 import { JsonLd } from "@/components/json-ld";
@@ -8,7 +8,7 @@ import {
   parseReadingLanguageCookie,
   READING_LANGUAGE_COOKIE,
 } from "@/lib/i18n/reading-language-cookie";
-import { DEFAULT_READING_LANGUAGE } from "@/lib/reading/languages";
+import { DEFAULT_READING_LANGUAGE, isReadingLanguageCode } from "@/lib/reading/languages";
 import { readerFontVariableClass } from "@/lib/reading/reader-font-vars";
 import {
   organizationJsonLd,
@@ -40,12 +40,15 @@ export default async function RootLayout({
   children: React.ReactNode;
 }) {
   const cookieStore = await cookies();
+  const headerList = await headers();
+  const headerLocale = headerList.get("x-locale");
   const hasSessionHint = cookieStore.has(SESSION_COOKIE);
   const initialLanguage =
+    (headerLocale && isReadingLanguageCode(headerLocale) ? headerLocale : undefined) ??
     parseReadingLanguageCookie(
       cookieStore.get(READING_LANGUAGE_COOKIE)?.value,
     ) ?? DEFAULT_READING_LANGUAGE;
-  const htmlLang = initialLanguage === "sa" ? "sa" : initialLanguage;
+  const htmlLang = initialLanguage;
 
   return (
     <html lang={htmlLang} suppressHydrationWarning>
