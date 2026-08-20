@@ -73,9 +73,9 @@ export function ModuleCard({
         )}
       </div>
 
-      <h2 className="text-foreground mt-3 font-serif text-xl leading-tight tracking-tight sm:text-[1.35rem]">
+      <h4 className="text-foreground mt-3 font-serif text-xl leading-tight tracking-tight sm:text-[1.35rem]">
         {copy.title}
-      </h2>
+      </h4>
 
       <p className="text-muted-foreground mt-3 flex-1 text-sm leading-relaxed">
         {copy.summary}

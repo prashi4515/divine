@@ -135,13 +135,13 @@ export function timelineSeo(): PageMetadataInput {
 
 export function genealogyIndexSeo(): PageMetadataInput {
   return {
-    title: "Genealogy | Family Trees",
+    title: "Bhagavad Gita Family Tree & Mahabharata Lineages",
     description:
-      "Explore Mahābhārata and Purāṇic genealogy — family trees for Krishna, the Pāṇḍavas, Kauravas, and more.",
+      "Explore the complete Bhagavad Gita family tree — interactive, cited lineages for the Pandavas, Kauravas, Krishna, Kuru dynasty, and Purāṇic sages.",
     path: "/genealogy",
     image: ogImageFor({
-      title: "Genealogy",
-      subtitle: "Family trees of the epic",
+      title: "Bhagavad Gita Family Tree",
+      subtitle: "Lineages of the Mahabharata & Purāṇas",
       eyebrow: "Lineage",
     }),
   };

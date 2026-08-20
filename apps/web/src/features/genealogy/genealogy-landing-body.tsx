@@ -15,8 +15,18 @@ const MODULE_GROUP_SLUGS: Array<{
   slugs: string[];
 }> = [
   {
-    id: "asura-lineages",
-    slugs: ["asuras", "daityas", "danavas", "rakshasas"],
+    id: "epic-families",
+    slugs: ["pandavas", "kauravas", "krishna-family", "rama-family"],
+  },
+  {
+    id: "dynasties",
+    slugs: [
+      "solar-dynasty",
+      "lunar-dynasty",
+      "raghu-dynasty",
+      "yadu-dynasty",
+      "kuru-dynasty",
+    ],
   },
   {
     id: "divine",
@@ -31,22 +41,12 @@ const MODULE_GROUP_SLUGS: Array<{
     ],
   },
   {
+    id: "asura-lineages",
+    slugs: ["asuras", "daityas", "danavas", "rakshasas"],
+  },
+  {
     id: "other-races",
     slugs: ["nagas", "yakshas", "gandharvas"],
-  },
-  {
-    id: "dynasties",
-    slugs: [
-      "solar-dynasty",
-      "lunar-dynasty",
-      "raghu-dynasty",
-      "yadu-dynasty",
-      "kuru-dynasty",
-    ],
-  },
-  {
-    id: "epic-families",
-    slugs: ["pandavas", "kauravas", "krishna-family", "rama-family"],
   },
   {
     id: "indexes",
