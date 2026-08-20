@@ -171,11 +171,94 @@ export function WeaponPageBody({
         </Link>
       </div>
 
-      <Section id="description" title="Description">
-        <p className="text-foreground/90 text-base leading-relaxed">
-          {toModernEnglish(links.overview.description)}
-        </p>
-      </Section>
+      {weapon.slug === "panchajanya" ? (
+        <>
+          <Section id="what-is-panchajanya" title="What is Panchajanya?">
+            <p className="text-foreground/90 text-base leading-relaxed">
+              Panchajanya (also written as <em>Pancajanya</em> or <em>Pāñcajanya</em>) is the sacred conch shell (<em>shankh</em> or <em>Panchajanya shankh</em>) of Lord Krishna (Hrishikesha). In ancient Indian epic tradition and Vedic literature, the conch shell represents the divine sound (<em>nāda-brahman</em>) that awakens righteousness, proclaims cosmic order, and strikes terror into the forces of unrighteousness (<em>adharma</em>). As Lord Krishna&apos;s personal conch, Panchajanya is one of the most revered sacred objects in the Mahābhārata and Bhagavad Gītā.
+            </p>
+          </Section>
+
+          <Section id="panchajanya-gita-1-15" title="Panchajanya in Bhagavad Gita 1.15">
+            <div className="space-y-3 text-foreground/90 text-base leading-relaxed">
+              <p>
+                Panchajanya makes its most famous appearance at the opening of the Kurukshetra war in Chapter 1, Verse 15 of the Bhagavad Gita. Standing upon their grand chariot yoked with white horses, Lord Krishna and Arjuna sounded their conches to announce the battle for dharma:
+              </p>
+              <blockquote className="border-saffron/40 bg-card/60 rounded-r-lg border-l-4 p-4 font-serif text-sm italic">
+                “पाञ्चजन्यं हृषीकेशो देवदत्तं धनञ्जयः |<br />
+                पौण्ड्रं दध्मौ महाशङ्खं भीमकर्मा वृकोदरः ||”
+                <span className="text-muted-foreground mt-2 block not-italic text-xs font-sans">
+                  “Hrishikesha (Krishna) blew His conch, Panchajanya; Dhananjaya (Arjuna) blew Devadatta; and Bhima, the doer of fearsome deeds, blew his great conch Paundra.” — Bhagavad Gita 1.15
+                </span>
+              </blockquote>
+              <p>
+                The reverberation of Panchajanya alongside the Pandava hero conches echoed through sky and earth, shattering the confidence of Dhritarashtra&apos;s sons.
+              </p>
+              <div className="pt-1">
+                <Link
+                  href="/verse/1/15"
+                  className="border-border/70 bg-card hover:border-saffron/40 inline-flex items-center gap-2 rounded-full border px-4 py-2 text-xs font-medium transition-divine"
+                  prefetch
+                >
+                  <BookOpen className="h-3.5 w-3.5 text-saffron" aria-hidden />
+                  Panchajanya in Bhagavad Gita 1.15
+                  <ArrowUpRight className="h-3.5 w-3.5 text-muted-foreground" aria-hidden />
+                </Link>
+              </div>
+            </div>
+          </Section>
+
+          <Section id="meaning-of-panchajanya" title="Meaning of Panchajanya">
+            <p className="text-foreground/90 text-base leading-relaxed">
+              The name <em>Pāñcajanya</em> (पाञ्चजन्य) carries a profound dual scriptural meaning. First, it literally signifies “originating from or belonging to Panchajana” (<em>Pāñcajana</em>)—the ocean demon who dwelt inside a giant conch shell at Prabhasa. Second, etymologically it relates to the <em>Pañca-Jana</em> (the five classes of beings: devas, pitris, gandharvas, nagas, and humans), symbolizing a divine sound that resonates through all five realms of creation.
+            </p>
+          </Section>
+
+          <Section id="origin-story" title="Origin & Story of Panchajanya">
+            <p className="text-foreground/90 text-base leading-relaxed">
+              According to Purāṇic traditions (including the <em>Śrīmad Bhāgavata Purāṇa</em> Canto 10 and <em>Vishnu Purana</em>), when Krishna and Balarama completed their studies at the ashram of Guru Sandipani in Avanti, they offered to pay <em>guru-dakshiṇā</em>. Sandipani Muni asked for the restoration of his young son, who had drowned in the sea at Prabhasa. Krishna descended into the ocean depths, defeated the sea demon Panchajana who lived inside a gigantic conch shell, rescued his guru&apos;s son, and claimed the demon&apos;s shell as his personal shankh—naming it <em>Panchajanya</em> in memory of the encounter.
+            </p>
+          </Section>
+
+          <Section id="significance" title="Significance of Panchajanya">
+            <p className="text-foreground/90 text-base leading-relaxed">
+              In Sanatana iconography, Panchajanya is one of the four principal emblems held in Lord Vishnu&apos;s four arms (<em>Chaturbhuja</em>: Shankha, Chakra, Gada, Padma). As a sacred weapon and battle horn, Panchajanya symbolizes divine sovereignty, cosmic order, and the awakening call of truth. Its sound inspires spiritual courage in seekers while dispelling the darkness of <em>adharma</em>.
+            </p>
+          </Section>
+
+          <Section id="other-conches" title="Other Conches Mentioned in Bhagavad Gita Chapter 1">
+            <p className="text-foreground/90 mb-3 text-base leading-relaxed">
+              Bhagavad Gita Chapter 1 (verses 1.15 to 1.18) explicitly names the individual conches sounded by the principal leaders on the battlefield:
+            </p>
+            <ul className="text-foreground/90 grid gap-2.5 sm:grid-cols-2 text-sm">
+              <li className="border-border/60 bg-card/40 rounded-lg border p-3">
+                <strong className="text-foreground">Panchajanya</strong> (<em>Pāñcajanya</em>) — Blown by Lord Krishna (Hrishikesha)
+              </li>
+              <li className="border-border/60 bg-card/40 rounded-lg border p-3">
+                <strong className="text-foreground">Devadatta</strong> (<em>Devadatta</em>) — Blown by Arjuna (Dhananjaya)
+              </li>
+              <li className="border-border/60 bg-card/40 rounded-lg border p-3">
+                <strong className="text-foreground">Paundra</strong> (<em>Pauṇḍra</em>) — Blown by Bhima (Vrikodara)
+              </li>
+              <li className="border-border/60 bg-card/40 rounded-lg border p-3">
+                <strong className="text-foreground">Anantavijaya</strong> (<em>Anantavijaya</em>) — Blown by King Yudhishthira
+              </li>
+              <li className="border-border/60 bg-card/40 rounded-lg border p-3">
+                <strong className="text-foreground">Sughosha</strong> (<em>Sughoṣa</em>) — Blown by Nakula
+              </li>
+              <li className="border-border/60 bg-card/40 rounded-lg border p-3">
+                <strong className="text-foreground">Manipushpaka</strong> (<em>Maṇipuṣpaka</em>) — Blown by Sahadeva
+              </li>
+            </ul>
+          </Section>
+        </>
+      ) : (
+        <Section id="description" title="Description">
+          <p className="text-foreground/90 text-base leading-relaxed">
+            {toModernEnglish(links.overview.description)}
+          </p>
+        </Section>
+      )}
 
       <EntityChips
         id="owners"

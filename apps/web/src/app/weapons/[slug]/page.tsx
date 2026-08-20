@@ -38,18 +38,18 @@ export async function generateMetadata({
   const { slug } = await params;
   const weapon = await getWeaponBySlug(slug);
   if (!weapon) return { title: "Weapon not found" };
-  const title = displayEnglishName(weapon);
+  const pageTitle = weapon.seo?.title ?? `${displayEnglishName(weapon)} - Weapons | Divine`;
   const base = entityMetadata(weapon);
   return {
     ...base,
-    title: `${title} - Weapons | Divine`,
+    title: pageTitle,
     description: toModernEnglish(
       weapon.seo?.description ?? weapon.summary,
     ),
     alternates: { canonical: weaponHref(weapon) },
     openGraph: {
       ...base.openGraph,
-      title: `${title} - Weapons | Divine`,
+      title: pageTitle,
       url: `${getSiteUrl()}${weaponHref(weapon)}`,
     },
   };

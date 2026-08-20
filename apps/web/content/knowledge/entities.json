@@ -13905,8 +13905,8 @@
       "name": "Pāñcajanya",
       "englishName": "Panchajanya",
       "iastName": "Pāñcajanya",
-      "summary": "Kṛṣṇa's conch, sounded on the field of dharma.",
-      "description": "Pāñcajanya is Kṛṣṇa's conch. The Bhagavad Gītā opens the war with the sounding of conches; Pāñcajanya answers from Kṛṣṇa's chariot beside Arjuna.",
+      "summary": "Krishna's sacred conch shell (Panchajanya shankh), sounded on the field of Kurukshetra to declare the battle of dharma.",
+      "description": "Panchajanya (Pāñcajanya) is the divine conch shell (shankh) of Lord Krishna (Hrishikesha). In Bhagavad Gita Chapter 1 Verse 15, Lord Krishna blows Panchajanya from his chariot beside Arjuna to signal the awakening of righteousness. The conch takes its name from the sea demon Panchajana (Pāñcajana), whom Krishna defeated in the ocean at Prabhasa to retrieve his guru Sandipani Muni's lost son, taking the shell as his sacred shankh. In the Mahabharata, the sounding of Panchajanya filled the hearts of the Kaurava army with terror and proclaimed the triumph of dharma.",
       "primaryScripture": "Bhagavad Gītā",
       "status": "published",
       "era": "dvapara-yuga",
@@ -13915,23 +13915,34 @@
       "sanskritName": "पाञ्चजन्य",
       "aliases": [
         "Panchajanya conch",
-        "Krishna's conch"
+        "Pancajanya",
+        "Panchajanya shankh",
+        "Krishna's conch",
+        "Pāñcajanya"
       ],
       "scriptureSources": [
         {
           "work": "Bhagavad Gītā",
-          "chapter": "1"
+          "chapter": "1",
+          "verse": "15"
         },
         {
           "work": "Mahābhārata",
           "section": "Bhīṣma Parva"
+        },
+        {
+          "work": "Śrīmad Bhāgavata Purāṇa",
+          "section": "Canto 10"
         }
       ],
       "tags": [
         "conch",
+        "shankh",
         "krishna",
         "gita",
-        "mahabharata"
+        "mahabharata",
+        "pancajanya",
+        "panchajanya"
       ],
       "categories": [
         "weapon",
@@ -13939,17 +13950,20 @@
       ],
       "importance": 5,
       "seo": {
-        "title": "Pāñcajanya",
-        "description": "Kṛṣṇa's conch in the Bhagavad Gītā."
+        "title": "Panchajanya (Pāñcajanya): Krishna's Conch, Meaning & Story",
+        "description": "Learn about Panchajanya, Krishna's sacred conch: its meaning, origin, Mahabharata story, significance, and appearance in Bhagavad Gita 1.15."
       },
       "weapon": {
         "category": "conch",
         "focus": "mahabharata",
         "powers": [
-          "Battle signal of the Lord"
+          "Divine battle signal of Lord Krishna",
+          "Instills fear in forces of adharma",
+          "Proclaims cosmic order and victory of dharma"
         ],
         "notableUses": [
-          "Sounded at the opening of Kurukṣetra (Gītā 1)"
+          "Sounded by Krishna at Kurukshetra (Bhagavad Gita 1.15)",
+          "Obtained after defeating the demon Panchajana at Prabhasa"
         ],
         "counters": []
       }

@@ -414,7 +414,7 @@ function groupRelationships(
 function verseHref(workCode: string, publicId: string): string {
   if (workCode === "bg") {
     const m = /^(?:bg\.)?(\d{1,2})\.(\d{1,3})$/i.exec(publicId);
-    if (m) return `/bhagavad-gita/chapter-${m[1]}#verse-${m[2]}`;
+    if (m) return `/verse/${m[1]}/${m[2]}`;
   }
   return `/bhagavad-gita`;
 }

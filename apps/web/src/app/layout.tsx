@@ -76,15 +76,7 @@ export default async function RootLayout({
             gtag('config', 'G-F0HCN0CLF8');
           `}
         </Script>
-        {/*
-          One-time sync: older sessions only had localStorage. Promote to cookie
-          and reload once so SSR already paints the chosen language (no English flash).
-        */}
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `(function(){try{var r=localStorage.getItem("divine.reading");if(!r)return;var lang=JSON.parse(r).state&&JSON.parse(r).state.preferredLanguage;if(!lang||lang==="en")return;var m=document.cookie.match(/(?:^|; )divine\\.reading-lang=([^;]*)/);var c=m?decodeURIComponent(m[1]):"";if(c===lang)return;document.cookie="divine.reading-lang="+encodeURIComponent(lang)+"; Path=/; Max-Age=31536000; SameSite=Lax";if(sessionStorage.getItem("divine.lang-synced")==="1")return;sessionStorage.setItem("divine.lang-synced","1");location.replace(location.href);}catch(e){}})();`,
-          }}
-        />
+
         <a
           href="#main-content"
           className="bg-foreground text-background focus:ring-ring sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[100] focus:rounded-md focus:px-4 focus:py-2 focus:ring-2"
