@@ -11,6 +11,7 @@ import {
   Swords,
 } from "lucide-react";
 import { useMessages, useUiLanguage } from "@/lib/i18n/use-messages";
+import { getLocalizedEntityContent } from "@/lib/knowledge/localize-content";
 import type {
   KnowledgeEvent,
   ResolvedEventLinks,
@@ -103,6 +104,7 @@ export function EventPageBody({
 }) {
   const lang = useUiLanguage();
   const t = useMessages();
+  const localized = getLocalizedEntityContent(event, lang);
 
   const labels = {
     overview:
@@ -178,7 +180,7 @@ export function EventPageBody({
           {labels.overview}
         </h2>
         <p className="text-foreground/90 text-base leading-relaxed">
-          {event.description}
+          {localized.description || event.description}
         </p>
       </section>
 

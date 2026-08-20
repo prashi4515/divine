@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import type { ReactNode } from "react";
 import {
@@ -85,6 +87,12 @@ function EntityChips({
   );
 }
 
+import { useUiLanguage } from "@/lib/i18n/use-messages";
+import {
+  getKnowledgeSectionLabel,
+  getLocalizedEntityContent,
+} from "@/lib/knowledge/localize-content";
+
 /**
  * Concept detail — every section from resolveConceptLinks (shared KG JSON).
  */
@@ -95,6 +103,9 @@ export function ConceptPageBody({
   concept: KnowledgeConcept;
   links: ConceptResolvedLinks;
 }) {
+  const lang = useUiLanguage();
+  const localized = getLocalizedEntityContent(concept, lang);
+
   const graphNeighbors = links.relatedEdges.slice(0, 24).map((r) => ({
     entity: r.other,
     relation: r.relation,
@@ -137,9 +148,9 @@ export function ConceptPageBody({
         </Link>
       </div>
 
-      <Section id="definition" title="Definition">
+      <Section id="definition" title={getKnowledgeSectionLabel("description", lang)}>
         <p className="text-foreground/90 text-base leading-relaxed">
-          {links.definition}
+          {localized.description || links.definition}
         </p>
       </Section>
 

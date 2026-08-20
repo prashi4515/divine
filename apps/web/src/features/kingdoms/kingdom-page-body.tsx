@@ -95,6 +95,11 @@ function EntityChips({
 /**
  * Kingdom detail — every section from resolveKingdomLinks (shared KG JSON).
  */
+import {
+  getKnowledgeSectionLabel,
+  getLocalizedEntityContent,
+} from "@/lib/knowledge/localize-content";
+
 export function KingdomPageBody({
   kingdom,
   links,
@@ -102,6 +107,9 @@ export function KingdomPageBody({
   kingdom: KnowledgeKingdom;
   links: KingdomResolvedLinks;
 }) {
+  const lang = useUiLanguage();
+  const localized = getLocalizedEntityContent(kingdom, lang);
+
   const graphNeighbors = links.relatedEdges.slice(0, 24).map((r) => ({
     entity: r.other,
     relation: r.relation,
@@ -158,9 +166,9 @@ export function KingdomPageBody({
         ) : null}
       </div>
 
-      <Section id="overview" title="Overview">
+      <Section id="overview" title={getKnowledgeSectionLabel("overview", lang)}>
         <p className="text-foreground/90 text-base leading-relaxed">
-          {links.overview.description}
+          {localized.description || links.overview.description}
         </p>
         {links.overview.modernLocation ? (
           <p className="text-muted-foreground mt-3 text-sm">

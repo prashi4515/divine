@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import { ArrowUpRight, BookOpen, MapPinned, ScrollText } from "lucide-react";
 import type { EntityBundle } from "@/lib/knowledge/store";
@@ -14,6 +16,8 @@ import { weaponHref, isKnowledgeWeapon } from "@/lib/weapons/helpers";
 import { conceptHref, isKnowledgeConcept } from "@/lib/concepts/helpers";
 import { LazyEntityGraph } from "@/features/encyclopedia/lazy-entity-graph";
 import { cn } from "@/lib/utils";
+import { useUiLanguage } from "@/lib/i18n/use-messages";
+import { getLocalizedEntityContent } from "@/lib/knowledge/localize-content";
 
 function verseHref(publicId: string): string {
   const m = /^(?:bg\.)?(\d{1,2})\.(\d{1,3})$/i.exec(publicId);
@@ -23,6 +27,8 @@ function verseHref(publicId: string): string {
 
 export function EntityPageBody({ bundle }: { bundle: EntityBundle }) {
   const { entity, grouped, collections, related } = bundle;
+  const lang = useUiLanguage();
+  const localized = getLocalizedEntityContent(entity, lang);
 
   const graphNeighbors = related
     .filter((r) => r.direction === "out" || r.direction === "in")
@@ -94,8 +100,8 @@ export function EntityPageBody({ bundle }: { bundle: EntityBundle }) {
             <ArrowUpRight className="h-3.5 w-3.5" aria-hidden />
           </Link>
           <p className="text-muted-foreground mt-2 text-xs">
-            Events is the timeline hub linking people, places, and scripture for
-            this episode.
+            Events is the dedicated hub for participants, locations, chapters,
+            and timeline — Encyclopedia explains.
           </p>
         </section>
       )}
@@ -136,7 +142,7 @@ export function EntityPageBody({ bundle }: { bundle: EntityBundle }) {
 
       <section>
         <p className="text-foreground/90 text-base leading-relaxed">
-          {entity.description}
+          {localized.description || entity.description}
         </p>
       </section>
 

@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import type { ReactNode } from "react";
 import {
@@ -288,11 +290,16 @@ function VersesBlock({ verses }: { verses: CharacterVerseLink[] }) {
   );
 }
 
+import { useUiLanguage } from "@/lib/i18n/use-messages";
+import { getLocalizedEntityContent } from "@/lib/knowledge/localize-content";
+
 /**
  * Complete character encyclopedia — every section from the shared graph.
  */
 export function CharacterPageBody({ profile }: { profile: CharacterProfile }) {
   const { entity, biography } = profile;
+  const lang = useUiLanguage();
+  const localized = getLocalizedEntityContent(entity, lang);
 
   return (
     <div className="page-gutter mx-auto max-w-4xl space-y-10 pb-16 pt-8">
@@ -348,7 +355,7 @@ export function CharacterPageBody({ profile }: { profile: CharacterProfile }) {
 
       <Section id="biography" title="Biography">
         <p className="text-foreground/90 text-base leading-relaxed">
-          {biography.description}
+          {localized.description || biography.description}
         </p>
       </Section>
 

@@ -9,6 +9,10 @@ import {
   ScrollText,
   Swords,
 } from "lucide-react";
+import {
+  getKnowledgeSectionLabel,
+  getLocalizedEntityContent,
+} from "@/lib/knowledge/localize-content";
 import { useUiLanguage } from "@/lib/i18n/use-messages";
 import { localizeEntityTitle } from "@/lib/reading/shloka-script";
 import type {
@@ -120,6 +124,9 @@ export function WeaponPageBody({
   weapon: KnowledgeWeapon;
   links: WeaponResolvedLinks;
 }) {
+  const lang = useUiLanguage();
+  const localized = getLocalizedEntityContent(weapon, lang);
+
   const graphNeighbors = links.relatedEdges.slice(0, 24).map((r) => ({
     entity: r.other,
     relation: r.relation,
@@ -171,7 +178,21 @@ export function WeaponPageBody({
         </Link>
       </div>
 
-      {weapon.slug === "panchajanya" ? (
+      {localized.sections && localized.sections.length > 0 ? (
+        localized.sections.map((sec) => (
+          <Section key={sec.id} id={sec.id} title={sec.title}>
+            {Array.isArray(sec.body) ? (
+              <div className="space-y-3 text-foreground/90 text-base leading-relaxed">
+                {sec.body.map((p, i) => (
+                  <p key={i}>{p}</p>
+                ))}
+              </div>
+            ) : (
+              <p className="text-foreground/90 text-base leading-relaxed">{sec.body}</p>
+            )}
+          </Section>
+        ))
+      ) : weapon.slug === "panchajanya" ? (
         <>
           <Section id="what-is-panchajanya" title="What is Panchajanya?">
             <p className="text-foreground/90 text-base leading-relaxed">
@@ -253,16 +274,16 @@ export function WeaponPageBody({
           </Section>
         </>
       ) : (
-        <Section id="description" title="Description">
+        <Section id="description" title={getKnowledgeSectionLabel("description", lang)}>
           <p className="text-foreground/90 text-base leading-relaxed">
-            {toModernEnglish(links.overview.description)}
+            {toModernEnglish(localized.description || links.overview.description)}
           </p>
         </Section>
       )}
 
       <EntityChips
         id="owners"
-        title="Owners"
+        title={getKnowledgeSectionLabel("owners", lang)}
         entities={links.owners}
         extraHref={(e) => {
           const g = genealogyPersonHref(e);

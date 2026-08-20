@@ -55,13 +55,24 @@ export async function generateMetadata({
   };
 }
 
+import { getLocalizedEntityContent } from "@/lib/knowledge/localize-content";
+
 export default async function PersonPage({ params }: PageProps) {
   const { id } = await params;
   const person = await getGenealogyPerson(id);
-  if (!person) notFound();
 
-  const neighborIds = person.relationships.map((r) => r.personId);
-  const [modules, neighbors, entityId] = await Promise.all([
+  if (!person) {
+    notFound();
+  }
+
+  const localized = getLocalizedEntityContent(person, "en");
+  const displayName = localized.name || person.name;
+  const displayDescription = localized.description || person.description;
+
+  const neighborIds = Array.from(
+    new Set(person.relationships.map((r) => r.personId)),
+  );
+  const [modules, neighbors, linkedEntityId] = await Promise.all([
     getModulesForPerson(id),
     getGenealogyPeopleByIds(neighborIds),
     resolveEntityId(id),
@@ -74,7 +85,7 @@ export default async function PersonPage({ params }: PageProps) {
     "@context": "https://schema.org",
     "@type": "Person",
     "@id": `${getSiteUrl()}/genealogy/person/${person.id}`,
-    name: person.name,
+    name: displayName,
     alternateName: [person.sanskritName, ...(person.aliases ?? [])].filter(
       Boolean,
     ),
@@ -130,7 +141,7 @@ export default async function PersonPage({ params }: PageProps) {
       {
         "@type": "ListItem",
         position: 3,
-        name: person.name,
+        name: displayName,
         item: `${getSiteUrl()}/genealogy/person/${person.id}`,
       },
     ],
@@ -144,12 +155,12 @@ export default async function PersonPage({ params }: PageProps) {
       <main className="flex-1">
         <GenealogyHeader
           eyebrow={CATEGORY_LABELS[person.category]}
-          title={person.name}
-          description={person.description}
+          title={displayName}
+          description={displayDescription}
           breadcrumbs={[
             { href: "/", label: "Home" },
             { href: "/genealogy", label: "Genealogy" },
-            { label: person.name },
+            { label: displayName },
           ]}
           actions={
             <>
@@ -364,7 +375,7 @@ export default async function PersonPage({ params }: PageProps) {
             </aside>
           </div>
         </section>
-        {entityId ? <RelatedContentSection entityId={entityId} /> : null}
+        {linkedEntityId ? <RelatedContentSection entityId={linkedEntityId} /> : null}
       </main>
       <SiteFooter />
 
