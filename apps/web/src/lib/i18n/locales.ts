@@ -17,6 +17,19 @@ export function isSupportedLocale(value: string): value is SupportedLocale {
   return (SUPPORTED_LOCALES as readonly string[]).includes(value);
 }
 
+/** Get language code from a URL pathname if present (e.g. `/hi/bhagavad-gita` -> `hi`). */
+export function getLocaleFromPathname(
+  pathname?: string | null,
+): ReadingLanguageCode | null {
+  if (!pathname) return null;
+  const raw = pathname.split("?")[0].split("#")[0];
+  const segments = raw.split("/").filter(Boolean);
+  if (segments.length > 0 && isSupportedLocale(segments[0])) {
+    return segments[0] as ReadingLanguageCode;
+  }
+  return null;
+}
+
 /** Get localized path prefix for a route (empty string for 'en'). */
 export function getLocalePathPrefix(lang: ReadingLanguageCode): string {
   if (lang === "en" || !isSupportedLocale(lang)) return "";

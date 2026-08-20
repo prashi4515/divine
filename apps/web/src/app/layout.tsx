@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { cookies, headers } from "next/headers";
 import { Fredoka } from "next/font/google";
+import Script from "next/script";
 import { Providers } from "@/components/providers";
 import { JsonLd } from "@/components/json-ld";
 import { SESSION_COOKIE } from "@/lib/auth/config";
@@ -62,6 +63,19 @@ export default async function RootLayout({
       <body
         className={`${fredoka.variable} ${readerFontVariableClass} bg-background text-foreground min-h-svh font-sans antialiased`}
       >
+        {/* Google Analytics GA4 (gtag.js) */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-F0HCN0CLF8"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){window.dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-F0HCN0CLF8');
+          `}
+        </Script>
         {/*
           One-time sync: older sessions only had localStorage. Promote to cookie
           and reload once so SSR already paints the chosen language (no English flash).

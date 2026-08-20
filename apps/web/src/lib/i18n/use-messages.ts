@@ -1,10 +1,12 @@
 "use client";
 
 import * as React from "react";
+import { usePathname } from "next/navigation";
 import { getGenealogyUiMessages } from "@/lib/i18n/genealogy-ui-messages";
 import { getHomeMessages, type HomeMessages } from "@/lib/i18n/home-messages";
 import { getHubUiMessages } from "@/lib/i18n/hub-ui-messages";
 import { getMessages, type Messages } from "@/lib/i18n/messages";
+import { getLocaleFromPathname } from "@/lib/i18n/locales";
 import { readingLanguageCookieWrite } from "@/lib/i18n/reading-language-cookie";
 import { useServerUiLanguage } from "@/lib/i18n/ui-language-context";
 import {
@@ -18,8 +20,6 @@ import { useReadingStore } from "@/lib/stores/reading-store";
  * Safe when `persist` API is briefly unavailable during HMR.
  */
 export function useReadingHydrated(): boolean {
-  // Always start false so SSR HTML matches the client's first paint
-  // (reading hasHydrated() in useState caused disabled/value mismatches).
   const [hydrated, setHydrated] = React.useState(false);
 
   React.useEffect(() => {
@@ -41,24 +41,39 @@ export function useReadingHydrated(): boolean {
 }
 
 /**
- * Active UI language: store after hydrate, else SSR cookie (no English flash).
+ * Active UI language determination:
+ * 1. URL language prefix (`/hi`, `/te`, `/sa`, etc.) ALWAYS takes top priority.
+ * 2. `initialLanguage` argument if explicitly provided.
+ * 3. `serverLanguage` from React context (SSR).
+ * 4. User's client store preference for clean English URLs (`/`).
  */
 export function useUiLanguage(
   initialLanguage?: ReadingLanguageCode,
 ): ReadingLanguageCode {
+  const pathname = usePathname();
+  const urlLocale = getLocaleFromPathname(pathname);
   const serverLanguage = useServerUiLanguage();
-  const fallback = initialLanguage ?? serverLanguage ?? DEFAULT_READING_LANGUAGE;
   const preferredLanguage = useReadingStore((s) => s.preferredLanguage);
   const hydrated = useReadingHydrated();
+
+  // If URL explicitly encodes a language, it ALWAYS wins over cookies/localStorage
+  const activeLanguage =
+    urlLocale ??
+    initialLanguage ??
+    (serverLanguage && serverLanguage !== "en" ? serverLanguage : undefined) ??
+    (hydrated ? preferredLanguage : serverLanguage ?? DEFAULT_READING_LANGUAGE);
 
   React.useEffect(() => {
     if (!hydrated) return;
     document.documentElement.lang =
-      preferredLanguage === "sa" ? "sa" : preferredLanguage;
-    document.cookie = readingLanguageCookieWrite(preferredLanguage);
-  }, [hydrated, preferredLanguage]);
+      activeLanguage === "sa" ? "sa" : activeLanguage;
+    // Only update cookie preference if user is on a clean URL or explicitly selected language
+    if (!urlLocale) {
+      document.cookie = readingLanguageCookieWrite(preferredLanguage);
+    }
+  }, [hydrated, activeLanguage, urlLocale, preferredLanguage]);
 
-  return hydrated ? preferredLanguage : fallback;
+  return activeLanguage;
 }
 
 /**

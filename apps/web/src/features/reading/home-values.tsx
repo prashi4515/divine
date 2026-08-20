@@ -1,7 +1,7 @@
 "use client";
 
 import { Feather, Languages, ListTree, type LucideIcon } from "lucide-react";
-import { useHomeMessages } from "@/lib/i18n/use-messages";
+import { useHomeMessages, useUiLanguage } from "@/lib/i18n/use-messages";
 
 type Value = {
   icon: LucideIcon;
@@ -14,7 +14,8 @@ type Value = {
  * from lucide, no images, negligible client weight.
  */
 export function HomeValues() {
-  const h = useHomeMessages();
+  const lang = useUiLanguage();
+  const h = useHomeMessages(lang);
 
   const items: Value[] = [
     {

@@ -6,19 +6,15 @@ import { Button } from "@/components/ui/button";
 import {
   useHomeMessages,
   useMessages,
-  useReadingHydrated,
+  useUiLanguage,
 } from "@/lib/i18n/use-messages";
 import {
   gitaChapterIntro,
   GITA_CHAPTER_TITLES,
 } from "@/lib/i18n/gita-chapters";
-import {
-  isReadingLanguageCode,
-  type ReadingLanguageCode,
-} from "@/lib/reading/languages";
 import { readerFontClass } from "@/lib/reading/reader-fonts";
 import { TRADITIONAL_VERSE_COUNTS } from "@/features/reading/chapter-reading";
-import { useReadingStore } from "@/lib/stores/reading-store";
+import { localizePath } from "@/lib/i18n/locales";
 import { cn } from "@/lib/utils";
 
 const CHAPTER_NUMBERS = Array.from({ length: 18 }, (_, i) => i + 1);
@@ -29,14 +25,9 @@ const CHAPTER_NUMBERS = Array.from({ length: 18 }, (_, i) => i + 1);
  * per-card scroll animations) so the grid stays calm while scrolling.
  */
 export function HomeChaptersPreview() {
-  const t = useMessages();
-  const h = useHomeMessages();
-  const hydrated = useReadingHydrated();
-  const preferredLanguage = useReadingStore((s) => s.preferredLanguage);
-  const lang: ReadingLanguageCode =
-    hydrated && isReadingLanguageCode(preferredLanguage)
-      ? preferredLanguage
-      : "en";
+  const lang = useUiLanguage();
+  const t = useMessages(lang);
+  const h = useHomeMessages(lang);
   const titleFont = readerFontClass(lang);
 
   return (
@@ -72,11 +63,12 @@ export function HomeChaptersPreview() {
               : GITA_CHAPTER_TITLES.sa[n];
           const description = gitaChapterIntro(lang, n) || t.gitaBlurb;
           const verseCount = TRADITIONAL_VERSE_COUNTS[n] ?? 0;
+          const chapterHref = localizePath(`/bhagavad-gita/chapter-${n}`, lang);
 
           return (
             <li key={n} className="h-full">
               <Link
-                href={`/bhagavad-gita/chapter-${n}`}
+                href={chapterHref}
                 className={cn(
                   "group border-border/70 bg-card hover:border-saffron/40 transition-divine relative flex h-full flex-col overflow-hidden rounded-2xl border p-6 shadow-xs hover:shadow-md sm:p-7",
                 )}
@@ -149,7 +141,7 @@ export function HomeChaptersPreview() {
 
       <div className="mt-10 flex justify-center sm:mt-12">
         <Button asChild variant="outline" size="lg" className="border-border">
-          <Link href="/bhagavad-gita">
+          <Link href={localizePath("/bhagavad-gita", lang)}>
             {h.viewAllChapters ?? t.allChapters ?? "Explore all chapters"}
             <ArrowRight className="h-4 w-4" aria-hidden />
           </Link>

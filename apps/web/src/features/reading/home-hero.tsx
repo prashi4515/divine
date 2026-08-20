@@ -4,9 +4,13 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { useHomeMessages, useMessages } from "@/lib/i18n/use-messages";
+import {
+  useHomeMessages,
+  useMessages,
+  useUiLanguage,
+} from "@/lib/i18n/use-messages";
 import { readerFontClass } from "@/lib/reading/reader-fonts";
-import { useReadingStore } from "@/lib/stores/reading-store";
+import { localizePath } from "@/lib/i18n/locales";
 import { cn } from "@/lib/utils";
 
 /**
@@ -15,10 +19,11 @@ import { cn } from "@/lib/utils";
  * Scales down to 320px (art fades under a strong veil).
  */
 export function HomeHero() {
-  const t = useMessages();
-  const h = useHomeMessages();
-  const preferredLanguage = useReadingStore((s) => s.preferredLanguage);
-  const titleFont = readerFontClass(preferredLanguage);
+  const lang = useUiLanguage();
+  const t = useMessages(lang);
+  const h = useHomeMessages(lang);
+  const titleFont = readerFontClass(lang);
+  const startReadingHref = localizePath("/bhagavad-gita", lang);
 
   return (
     <section className="relative isolate w-full overflow-hidden">
@@ -74,6 +79,7 @@ export function HomeHero() {
               "text-brand-display indic-display mt-6 text-4xl leading-[1.05] sm:mt-7 sm:text-6xl md:text-7xl lg:text-[5.25rem]",
               titleFont,
             )}
+            lang={lang}
           >
             {t.gitaTitle}
           </h1>
@@ -83,6 +89,7 @@ export function HomeHero() {
               "text-foreground/80 mt-6 max-w-xl text-pretty text-base leading-relaxed sm:mt-7 sm:text-lg md:text-xl",
               titleFont,
             )}
+            lang={lang}
           >
             {h.heroSubtitle ?? t.tagline}
           </p>
@@ -96,7 +103,7 @@ export function HomeHero() {
                 titleFont,
               )}
             >
-              <Link href="/bhagavad-gita">
+              <Link href={startReadingHref}>
                 {h.startReading}
                 <ArrowRight className="h-4 w-4" aria-hidden />
               </Link>

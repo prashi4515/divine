@@ -16,7 +16,7 @@ import { QuickJumpPanel } from "@/features/reading/quick-jump-panel";
 import { VerseNumberGrid } from "@/features/reading/verse-number-grid";
 import { WordMeaningList } from "@/features/reading/word-meaning-list";
 import { RelatedReading } from "@/features/search/related-reading";
-import { useMessages } from "@/lib/i18n/use-messages";
+import { useMessages, useUiLanguage } from "@/lib/i18n/use-messages";
 import {
   devanagariToReadingScript,
   formatShlokaDisplay,
@@ -29,7 +29,10 @@ import {
   toIast,
 } from "@/lib/reading/shloka-script";
 import { repairIndicOrthography } from "@/lib/reading/repair-indic-orthography";
-import { isReadingLanguageCode } from "@/lib/reading/languages";
+import {
+  isReadingLanguageCode,
+  type ReadingLanguageCode,
+} from "@/lib/reading/languages";
 import {
   readerFontClass,
   shlokaFontClass,
@@ -340,7 +343,6 @@ export function VerseReader({
   hero,
 }: VerseReaderProps) {
   const t = useMessages();
-  const preferredLanguage = useReadingStore((s) => s.preferredLanguage);
   const [mounted, setMounted] = React.useState(false);
   const [index, setIndex] = React.useState(0);
   const [bookmark, setBookmark] = React.useState(false);
@@ -374,8 +376,9 @@ export function VerseReader({
     });
   }, [verses]);
 
+  const uiLanguage = useUiLanguage(initialLanguage as ReadingLanguageCode);
   const language = resolveLanguage(
-    mounted ? preferredLanguage : initialLanguage,
+    uiLanguage,
     languages,
     initialLanguage,
   );

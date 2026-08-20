@@ -2,15 +2,18 @@
 
 import Link from "next/link";
 import { ArrowRight, BookOpen } from "lucide-react";
-import { useHomeMessages, useMessages } from "@/lib/i18n/use-messages";
-import { useReadingStore } from "@/lib/stores/reading-store";
+import {
+  useHomeMessages,
+  useMessages,
+  useUiLanguage,
+} from "@/lib/i18n/use-messages";
 import {
   dailyVerseMeaning,
   getVerseOfTheDay,
   type DailyVerse,
 } from "@/lib/reading/verse-of-the-day";
-import { isReadingLanguageCode } from "@/lib/reading/languages";
 import { shlokaFontClass } from "@/lib/reading/reader-fonts";
+import { localizePath } from "@/lib/i18n/locales";
 import { cn } from "@/lib/utils";
 
 type FeaturedVerseProps = {
@@ -23,15 +26,15 @@ type FeaturedVerseProps = {
  * curated catalog (no API call, so the landing page stays instant).
  */
 export function FeaturedVerse({ verse: verseProp }: FeaturedVerseProps) {
-  const h = useHomeMessages();
-  const t = useMessages();
-  const preferredLanguage = useReadingStore((s) => s.preferredLanguage);
+  const lang = useUiLanguage();
+  const h = useHomeMessages(lang);
+  const t = useMessages(lang);
   const verse = verseProp ?? getVerseOfTheDay();
-  const language = isReadingLanguageCode(preferredLanguage)
-    ? preferredLanguage
-    : "en";
-  const meaning = dailyVerseMeaning(verse, language);
-  const href = `/bhagavad-gita/chapter-${verse.chapter}#verse-${verse.verse}`;
+  const meaning = dailyVerseMeaning(verse, lang);
+  const href = localizePath(
+    `/bhagavad-gita/chapter-${verse.chapter}#verse-${verse.verse}`,
+    lang,
+  );
 
   return (
     <section
@@ -89,7 +92,7 @@ export function FeaturedVerse({ verse: verseProp }: FeaturedVerseProps) {
               className="bg-border/70 mx-auto mt-6 h-px w-16 sm:mt-8"
               aria-hidden
             />
-            <p className="text-foreground/90 mx-auto mt-6 max-w-2xl text-pretty text-lg leading-relaxed sm:mt-8 sm:text-xl">
+            <p className="text-foreground/90 mx-auto mt-6 max-w-2xl text-pretty text-lg leading-relaxed sm:mt-8 sm:text-xl" lang={lang}>
               {meaning}
             </p>
           </blockquote>

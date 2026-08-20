@@ -1,14 +1,18 @@
 "use client";
 
 import Link from "next/link";
-import { useMessages } from "@/lib/i18n/use-messages";
+import { useUiLanguage, useMessages } from "@/lib/i18n/use-messages";
+import { localizePath } from "@/lib/i18n/locales";
 
 /** Live-translated brand mark for the site header. */
 export function SiteBrand() {
-  const t = useMessages();
+  const lang = useUiLanguage();
+  const t = useMessages(lang);
+  const homeHref = localizePath("/", lang);
+
   return (
     <Link
-      href="/"
+      href={homeHref}
       className="group flex min-w-0 max-w-full items-center gap-2 rounded-md focus-visible:outline-none"
     >
       <span

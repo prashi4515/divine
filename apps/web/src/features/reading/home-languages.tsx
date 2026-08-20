@@ -1,6 +1,6 @@
 "use client";
 
-import { useHomeMessages } from "@/lib/i18n/use-messages";
+import { useHomeMessages, useUiLanguage } from "@/lib/i18n/use-messages";
 import { READING_LANGUAGES } from "@/lib/reading/languages";
 import { readerFontClass } from "@/lib/reading/reader-fonts";
 import { cn } from "@/lib/utils";
@@ -22,7 +22,8 @@ const GREETINGS: Record<string, string> = {
 };
 
 export function HomeLanguages() {
-  const h = useHomeMessages();
+  const currentLang = useUiLanguage();
+  const h = useHomeMessages(currentLang);
 
   return (
     <section

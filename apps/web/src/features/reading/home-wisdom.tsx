@@ -1,6 +1,6 @@
 "use client";
 
-import { useHomeMessages } from "@/lib/i18n/use-messages";
+import { useHomeMessages, useUiLanguage } from "@/lib/i18n/use-messages";
 
 type Wisdom = {
   quote: string;
@@ -41,7 +41,8 @@ const WISDOM: readonly Wisdom[] = [
 ];
 
 export function HomeWisdom() {
-  const h = useHomeMessages();
+  const lang = useUiLanguage();
+  const h = useHomeMessages(lang);
 
   return (
     <section className="page-gutter relative w-full py-16 sm:py-20 md:py-24">

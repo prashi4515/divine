@@ -8,8 +8,13 @@ import {
   Sunrise,
   type LucideIcon,
 } from "lucide-react";
-import { useHomeMessages, useMessages } from "@/lib/i18n/use-messages";
+import {
+  useHomeMessages,
+  useMessages,
+  useUiLanguage,
+} from "@/lib/i18n/use-messages";
 import { getVerseOfTheDay } from "@/lib/reading/verse-of-the-day";
+import { localizePath } from "@/lib/i18n/locales";
 import { cn } from "@/lib/utils";
 
 type Path = {
@@ -24,10 +29,14 @@ type Path = {
  * "Three ways to begin" — a soft, numbered set of on-ramps into the reader.
  */
 export function HomeJourney() {
-  const t = useMessages();
-  const h = useHomeMessages();
+  const lang = useUiLanguage();
+  const t = useMessages(lang);
+  const h = useHomeMessages(lang);
   const today = getVerseOfTheDay();
-  const todayHref = `/bhagavad-gita/chapter-${today.chapter}#verse-${today.verse}`;
+  const todayHref = localizePath(
+    `/bhagavad-gita/chapter-${today.chapter}#verse-${today.verse}`,
+    lang,
+  );
 
   const paths: Path[] = [
     {
@@ -36,7 +45,7 @@ export function HomeJourney() {
       body:
         h.pathChapterBody ??
         "Eighteen chapters, each a complete teaching. Move at your own pace.",
-      href: "/bhagavad-gita",
+      href: localizePath("/bhagavad-gita", lang),
       cta: t.allChapters ?? "All chapters",
     },
     {
@@ -54,7 +63,7 @@ export function HomeJourney() {
       body:
         h.pathSearchBody ??
         "Duty, devotion, dispassion, doubt - find verses that meet your question.",
-      href: "/search",
+      href: localizePath("/search", lang),
       cta: h.searchVerses,
     },
   ];

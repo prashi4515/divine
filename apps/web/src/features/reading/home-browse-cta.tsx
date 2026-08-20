@@ -3,17 +3,27 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { useHomeMessages, useMessages } from "@/lib/i18n/use-messages";
+import {
+  useHomeMessages,
+  useMessages,
+  useUiLanguage,
+} from "@/lib/i18n/use-messages";
 import { getVerseOfTheDay } from "@/lib/reading/verse-of-the-day";
+import { localizePath } from "@/lib/i18n/locales";
 
 /**
  * Closing call-to-action steering readers into the Gita chapter index.
  */
 export function HomeBrowseCta() {
-  const t = useMessages();
-  const h = useHomeMessages();
+  const lang = useUiLanguage();
+  const t = useMessages(lang);
+  const h = useHomeMessages(lang);
   const today = getVerseOfTheDay();
-  const todayHref = `/bhagavad-gita/chapter-${today.chapter}#verse-${today.verse}`;
+  const todayHref = localizePath(
+    `/bhagavad-gita/chapter-${today.chapter}#verse-${today.verse}`,
+    lang,
+  );
+  const browseHref = localizePath("/bhagavad-gita", lang);
 
   return (
     <section className="page-gutter w-full pb-16 pt-4 sm:pb-24 md:pb-28">
@@ -53,7 +63,7 @@ export function HomeBrowseCta() {
             size="lg"
             className="cta-saffron h-12 border-0 px-7 text-base shadow-md hover:shadow-lg"
           >
-            <Link href="/bhagavad-gita">
+            <Link href={browseHref}>
               {t.allChapters}
               <ArrowRight className="h-4 w-4" aria-hidden />
             </Link>

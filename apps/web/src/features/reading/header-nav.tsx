@@ -1,23 +1,25 @@
 "use client";
 
 import Link from "next/link";
-import { useMessages } from "@/lib/i18n/use-messages";
+import { useUiLanguage, useMessages } from "@/lib/i18n/use-messages";
+import { localizePath } from "@/lib/i18n/locales";
 
 /**
  * Localized primary nav — desktop row; mobile uses MobileNav.
  */
 export function HeaderNav() {
-  const t = useMessages();
+  const lang = useUiLanguage();
+  const t = useMessages(lang);
 
   const items = [
-    { href: "/bhagavad-gita", label: t.allChapters },
-    { href: "/atlas", label: t.navAtlas },
-    { href: "/events", label: t.navEvents },
-    { href: "/kingdoms", label: t.navKingdoms },
-    { href: "/weapons", label: t.navWeapons },
-    { href: "/encyclopedia", label: t.navEncyclopedia },
-    { href: "/genealogy", label: t.navGenealogy },
-  ] as const;
+    { href: localizePath("/bhagavad-gita", lang), label: t.allChapters },
+    { href: localizePath("/atlas", lang), label: t.navAtlas },
+    { href: localizePath("/events", lang), label: t.navEvents },
+    { href: localizePath("/kingdoms", lang), label: t.navKingdoms },
+    { href: localizePath("/weapons", lang), label: t.navWeapons },
+    { href: localizePath("/encyclopedia", lang), label: t.navEncyclopedia },
+    { href: localizePath("/genealogy", lang), label: t.navGenealogy },
+  ];
 
   return (
     <nav
