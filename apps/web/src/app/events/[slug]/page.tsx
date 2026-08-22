@@ -15,7 +15,7 @@ import {
 } from "@/lib/events/store";
 import { eventHref, eventTypeLabel } from "@/lib/events/helpers";
 import { getEntityBundle } from "@/lib/knowledge/store";
-import { breadcrumbJsonLd } from "@/lib/knowledge/seo";
+import { breadcrumbJsonLd, entityJsonLd } from "@/lib/knowledge/seo";
 import { formatCitation } from "@/lib/knowledge/types";
 import { toModernEnglish } from "@/lib/text/modern-english";
 
@@ -72,20 +72,6 @@ export default async function EventDetailPage({ params }: PageProps) {
     { name: event.name },
   ];
 
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Event",
-    name: event.name,
-    alternateName: [event.englishName, event.iastName, ...(event.aliases ?? [])],
-    description: event.description,
-    url: `${getSiteUrl()}${eventHref(event)}`,
-    about: event.summary,
-    isPartOf: {
-      "@type": "CreativeWork",
-      name: "Mahabharata",
-    },
-  };
-
   return (
     <div className="relative flex min-h-svh flex-col">
       <SiteHeader />
@@ -132,7 +118,9 @@ export default async function EventDetailPage({ params }: PageProps) {
       <SiteFooter />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(entityJsonLd(event, eventHref(event))),
+        }}
       />
       <script
         type="application/ld+json"

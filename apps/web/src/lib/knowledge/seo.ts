@@ -53,8 +53,8 @@ export function entityMetadata(entity: KnowledgeEntity): Metadata {
   });
 }
 
-export function entityJsonLd(entity: KnowledgeEntity) {
-  const path = entityHref(entity);
+export function entityJsonLd(entity: KnowledgeEntity, overridePath?: string) {
+  const path = overridePath ?? entityHref(entity);
   const kind = entity.kind;
   const alternateName = [entity.englishName, ...(entity.aliases ?? [])].filter(
     Boolean,
