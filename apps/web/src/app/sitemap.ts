@@ -93,10 +93,21 @@ function localizedEntries(
   return entries;
 }
 
+function isValidSitemapUrl(url: unknown): url is string {
+  if (typeof url !== "string" || !url.trim()) return false;
+  if (url.includes("undefined") || url.includes("null") || url.includes("NaN")) return false;
+  try {
+    const parsed = new URL(url);
+    return parsed.protocol === "http:" || parsed.protocol === "https:";
+  } catch {
+    return false;
+  }
+}
+
 function deduplicateAndSort(routes: MetadataRoute.Sitemap): MetadataRoute.Sitemap {
   const seen = new Set<string>();
   const unique = routes.filter((r) => {
-    if (!r.url || seen.has(r.url)) return false;
+    if (!r || !isValidSitemapUrl(r.url) || seen.has(r.url)) return false;
     seen.add(r.url);
     return true;
   });
@@ -111,6 +122,70 @@ async function safeFetch<T>(name: string, fetcher: () => Promise<T>, fallback: T
     console.error(`[sitemap] Error loading ${name} data for sitemap generation:`, err);
     return fallback;
   }
+}
+
+function buildScriptureRoutes(
+  works: unknown[],
+  scriptureChapters: unknown[],
+): MetadataRoute.Sitemap {
+  const validWorks = works.filter((w): w is { code: string; slug: string } => {
+    if (!w || typeof w !== "object") return false;
+    const candidate = w as { code?: unknown; slug?: unknown };
+    return (
+      typeof candidate.code === "string" &&
+      candidate.code.trim().length > 0 &&
+      typeof candidate.slug === "string" &&
+      candidate.slug.trim().length > 0 &&
+      candidate.slug !== "undefined" &&
+      candidate.slug !== "null"
+    );
+  });
+
+  const effectiveWorks =
+    validWorks.length > 0
+      ? validWorks
+      : [{ code: "bg", slug: "bhagavad-gita" }];
+
+  const scriptureWorkRoutes = effectiveWorks.flatMap((w) =>
+    localizedEntries(publicWorkPath(w), {
+      changeFrequency: "weekly",
+      priority: 0.85,
+    }),
+  );
+
+  const nonGitaWorks = effectiveWorks.filter((w) => w.code !== "bg");
+  const scriptureChapterRoutes = scriptureChapters
+    .filter((ch): ch is { work: { code: string; slug: string }; number: number } => {
+      if (!ch || typeof ch !== "object") return false;
+      const candidate = ch as { work?: { code?: unknown; slug?: unknown }; number?: unknown };
+      if (!candidate.work || typeof candidate.work !== "object") return false;
+      const workCode = candidate.work.code;
+      const workSlug = candidate.work.slug;
+      const chNum = candidate.number;
+      return (
+        typeof workCode === "string" &&
+        nonGitaWorks.some((w) => w.code === workCode) &&
+        typeof workSlug === "string" &&
+        workSlug.trim().length > 0 &&
+        typeof chNum === "number" &&
+        Number.isFinite(chNum) &&
+        chNum > 0
+      );
+    })
+    .flatMap((ch) =>
+      localizedEntries(
+        publicChapterPath(
+          { code: ch.work.code, slug: ch.work.slug },
+          ch.number,
+        ),
+        {
+          changeFrequency: "monthly",
+          priority: 0.75,
+        },
+      ),
+    );
+
+  return [...scriptureWorkRoutes, ...scriptureChapterRoutes];
 }
 
 type Props = {
@@ -291,28 +366,7 @@ export default async function sitemap(props?: Props): Promise<MetadataRoute.Site
       safeFetch("scripture works", () => getPublishedWorks(), []),
       safeFetch("scripture chapters", () => getPublishedChapters(), []),
     ]);
-    const nonGitaWorks = works.filter((w) => w.code !== "bg");
-    const scriptureWorkRoutes = nonGitaWorks.flatMap((w) =>
-      localizedEntries(publicWorkPath(w), {
-        changeFrequency: "weekly",
-        priority: 0.85,
-      }),
-    );
-    const scriptureChapterRoutes = scriptureChapters
-      .filter((ch) => nonGitaWorks.some((w) => w.code === ch.work.code))
-      .flatMap((ch) =>
-        localizedEntries(
-          publicChapterPath(
-            { code: ch.work.code, slug: ch.work.slug },
-            ch.number,
-          ),
-          {
-            changeFrequency: "monthly",
-            priority: 0.75,
-          },
-        ),
-      );
-    const scriptureRoutes = [...scriptureWorkRoutes, ...scriptureChapterRoutes];
+    const scriptureRoutes = buildScriptureRoutes(works, scriptureChapters);
     if (id === "scriptures") return deduplicateAndSort(scriptureRoutes);
   }
 
@@ -453,27 +507,7 @@ export default async function sitemap(props?: Props): Promise<MetadataRoute.Site
     safeFetch("scripture works", () => getPublishedWorks(), []),
     safeFetch("scripture chapters", () => getPublishedChapters(), []),
   ]);
-  const nonGitaWorks = works.filter((w) => w.code !== "bg");
-  const scriptureWorkRoutes = nonGitaWorks.flatMap((w) =>
-    localizedEntries(publicWorkPath(w), {
-      changeFrequency: "weekly",
-      priority: 0.85,
-    }),
-  );
-  const scriptureChapterRoutes = scriptureChapters
-    .filter((ch) => nonGitaWorks.some((w) => w.code === ch.work.code))
-    .flatMap((ch) =>
-      localizedEntries(
-        publicChapterPath(
-          { code: ch.work.code, slug: ch.work.slug },
-          ch.number,
-        ),
-        {
-          changeFrequency: "monthly",
-          priority: 0.75,
-        },
-      ),
-    );
+  const scriptureRoutes = buildScriptureRoutes(works, scriptureChapters);
 
   const allRoutes = [
     ...staticRoutes,
@@ -485,8 +519,7 @@ export default async function sitemap(props?: Props): Promise<MetadataRoute.Site
     ...atlasRoutes,
     ...knowledgeRoutes,
     ...genealogyRoutes,
-    ...scriptureWorkRoutes,
-    ...scriptureChapterRoutes,
+    ...scriptureRoutes,
   ];
 
   return deduplicateAndSort(allRoutes);
