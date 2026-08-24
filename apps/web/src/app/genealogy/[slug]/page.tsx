@@ -11,7 +11,7 @@ import {
   getGenealogyModules,
   getPeopleForModule,
 } from "@/lib/genealogy/store";
-import { getSiteUrl } from "@/lib/seo";
+import { buildPageMetadata, getSiteUrl } from "@/lib/seo";
 
 export const dynamic = "force-static";
 export const revalidate = false;
@@ -42,22 +42,12 @@ export async function generateMetadata({
   if (!mod) return { title: "Genealogy module not found" };
   const title = `${mod.title} — Hindu genealogy explorer`;
   const description = mod.description;
-  const url = `${getSiteUrl()}/genealogy/${mod.slug}`;
-  return {
+  return buildPageMetadata({
     title,
     description,
-    alternates: { canonical: `/genealogy/${mod.slug}` },
-    openGraph: {
-      title,
-      description,
-      url,
-      type: "article",
-    },
-    twitter: {
-      card: "summary_large_image",
-      title,
-      description,
-    },
+    path: `/genealogy/${mod.slug}`,
+    lang: "en",
+    type: "article",
     keywords: [
       mod.title,
       mod.sanskritTitle ?? "",
@@ -66,7 +56,7 @@ export async function generateMetadata({
       "dynasty",
       "Divine genealogy explorer",
     ].filter(Boolean),
-  };
+  });
 }
 
 export default async function GenealogyModulePage({ params }: PageProps) {

@@ -23,17 +23,20 @@ export async function generateStaticParams() {
     .map((c) => ({ slug: c.slug }));
 }
 
+import { buildPageMetadata } from "@/lib/seo";
+
 export async function generateMetadata({
   params,
 }: PageProps): Promise<Metadata> {
   const { slug } = await params;
   const col = await getCollection(slug);
   if (!col) return { title: "Section not found" };
-  return {
+  return buildPageMetadata({
     title: `${col.title} — Encyclopedia`,
     description: col.summary,
-    alternates: { canonical: `/encyclopedia/section/${slug}` },
-  };
+    path: `/encyclopedia/section/${slug}`,
+    lang: "en",
+  });
 }
 
 export default async function EncyclopediaSectionPage({ params }: PageProps) {

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { getSiteUrl } from "@/lib/seo";
+import { buildPageMetadata } from "@/lib/seo";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { GenealogyHeader } from "@/features/genealogy/genealogy-header";
@@ -18,7 +18,6 @@ import { displayEnglishName, toModernEnglish } from "@/lib/text/modern-english";
 import {
   breadcrumbJsonLd,
   entityJsonLd,
-  entityMetadata,
 } from "@/lib/knowledge/seo";
 
 export const dynamic = "force-static";
@@ -39,20 +38,15 @@ export async function generateMetadata({
   const weapon = await getWeaponBySlug(slug);
   if (!weapon) return { title: "Weapon not found" };
   const pageTitle = weapon.seo?.title ?? `${displayEnglishName(weapon)} - Weapons | Divine`;
-  const base = entityMetadata(weapon);
-  return {
-    ...base,
+  return buildPageMetadata({
     title: pageTitle,
     description: toModernEnglish(
       weapon.seo?.description ?? weapon.summary,
     ),
-    alternates: { canonical: weaponHref(weapon) },
-    openGraph: {
-      ...base.openGraph,
-      title: pageTitle,
-      url: `${getSiteUrl()}${weaponHref(weapon)}`,
-    },
-  };
+    path: weaponHref(weapon),
+    lang: "en",
+    type: "article",
+  });
 }
 
 export default async function WeaponDetailPage({ params }: PageProps) {

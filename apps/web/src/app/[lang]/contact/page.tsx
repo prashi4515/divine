@@ -21,6 +21,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description:
       "Get in touch with Bhagavad Gita Online. Contact us for questions, content corrections, broken links, or site feedback.",
     path: `/${lang}/contact`,
+    canonicalUrl: "/contact",
     lang: lang as ReadingLanguageCode,
   });
 }

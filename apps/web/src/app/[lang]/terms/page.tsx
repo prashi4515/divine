@@ -21,6 +21,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description:
       "Terms of Use for Bhagavad Gita Online. Guidelines for accessing and using our educational scripture platform, atlas, and reference tools.",
     path: `/${lang}/terms`,
+    canonicalUrl: "/terms",
     lang: lang as ReadingLanguageCode,
   });
 }

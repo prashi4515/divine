@@ -22,22 +22,30 @@ export async function generateStaticParams() {
   return ENTITY_KINDS.map((kind) => ({ kind }));
 }
 
+import { buildPageMetadata } from "@/lib/seo";
+
 export async function generateMetadata({
   params,
 }: PageProps): Promise<Metadata> {
   const { kind } = await params;
   if (kind === "section") {
-    return { title: "Encyclopedia sections" };
+    return buildPageMetadata({
+      title: "Encyclopedia sections",
+      description: "Browse sections in the Divine knowledge graph.",
+      path: "/encyclopedia/section",
+      lang: "en",
+    });
   }
   if (!(ENTITY_KINDS as readonly string[]).includes(kind)) {
     return { title: "Not found" };
   }
   const label = ENTITY_KIND_LABELS[kind as EntityKind];
-  return {
+  return buildPageMetadata({
     title: `${label} — Encyclopedia`,
     description: `Browse ${label} entities in the Divine knowledge graph.`,
-    alternates: { canonical: `/encyclopedia/${kind}` },
-  };
+    path: `/encyclopedia/${kind}`,
+    lang: "en",
+  });
 }
 
 export default async function EncyclopediaKindPage({ params }: PageProps) {

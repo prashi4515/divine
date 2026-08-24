@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { getSiteUrl } from "@/lib/seo";
+import { buildPageMetadata } from "@/lib/seo";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { GenealogyHeader } from "@/features/genealogy/genealogy-header";
@@ -16,7 +16,6 @@ import { conceptHref } from "@/lib/concepts/helpers";
 import {
   breadcrumbJsonLd,
   entityJsonLd,
-  entityMetadata,
 } from "@/lib/knowledge/seo";
 
 export const dynamic = "force-static";
@@ -36,16 +35,15 @@ export async function generateMetadata({
   const { slug } = await params;
   const concept = await getConceptBySlug(slug);
   if (!concept) return { title: "Concept not found" };
-  const base = entityMetadata(concept);
-  return {
-    ...base,
-    title: concept.seo?.title ?? `${concept.name} — Concepts | Divine`,
-    alternates: { canonical: conceptHref(concept) },
-    openGraph: {
-      ...base.openGraph,
-      url: `${getSiteUrl()}${conceptHref(concept)}`,
-    },
-  };
+  const title = concept.seo?.title ?? `${concept.name} — Concepts | Divine`;
+  const description = concept.seo?.description ?? concept.summary;
+  return buildPageMetadata({
+    title,
+    description,
+    path: conceptHref(concept),
+    lang: "en",
+    type: "article",
+  });
 }
 
 export default async function ConceptDetailPage({ params }: PageProps) {

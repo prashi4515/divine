@@ -58,8 +58,8 @@ export default function TermsPage() {
           <section className="space-y-4">
             <p className="text-muted-foreground leading-relaxed text-sm sm:text-base">
               Welcome to <strong>Bhagavad Gita Online</strong> (accessible at{" "}
-              <a href="https://www.bagavadgitaonline.com" className="text-saffron font-medium hover:underline">
-                https://www.bagavadgitaonline.com
+              <a href="https://bagavadgitaonline.com" className="text-saffron font-medium hover:underline">
+                https://bagavadgitaonline.com
               </a>
               ). By accessing or using this website, you agree to comply with and be bound by the following Terms of Use. Please review them carefully before using our services.
             </p>

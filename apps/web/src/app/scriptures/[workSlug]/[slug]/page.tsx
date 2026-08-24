@@ -27,6 +27,8 @@ function parseChapterNumber(slug: string): number | null {
   return n;
 }
 
+import { buildPageMetadata } from "@/lib/seo";
+
 export async function generateMetadata({
   params,
 }: ChapterPageProps): Promise<Metadata> {
@@ -39,13 +41,12 @@ export async function generateMetadata({
     if (!work || work.code === "bg") return { title: "Chapter" };
     const chapter = await getPublishedChapter(`${work.code}.${n}`);
     const title = chapterTitleDisplay(chapter.number, chapter.title);
-    return {
+    return buildPageMetadata({
       title: `Chapter ${chapter.number} — ${title}`,
       description: `Read Chapter ${chapter.number} of ${work.title}.`,
-      alternates: {
-        canonical: publicChapterPath(work, chapter.number),
-      },
-    };
+      path: publicChapterPath(work, chapter.number),
+      lang: "en",
+    });
   } catch {
     return { title: `Chapter ${n}` };
   }

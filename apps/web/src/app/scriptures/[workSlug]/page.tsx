@@ -16,15 +16,18 @@ type PageProps = {
   params: Promise<{ workSlug: string }>;
 };
 
+import { buildPageMetadata } from "@/lib/seo";
+
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { workSlug } = await params;
   const work = await getPublishedWorkBySlug(workSlug);
   if (!work) return { title: "Scripture" };
-  return {
+  return buildPageMetadata({
     title: work.title,
-    description: work.description ?? `Read ${work.title} on Bhagavad Gita.`,
-    alternates: { canonical: publicWorkPath(work) },
-  };
+    description: work.description ?? `Read ${work.title} on Divine.`,
+    path: publicWorkPath(work),
+    lang: "en",
+  });
 }
 
 async function ChaptersSection({

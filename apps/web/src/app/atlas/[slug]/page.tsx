@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { getSiteUrl } from "@/lib/seo";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowUpRight, BookOpen, Library, MapPin } from "lucide-react";
@@ -28,6 +27,8 @@ export const dynamic = "force-static";
 export const revalidate = false;
 
 
+import { buildPageMetadata } from "@/lib/seo";
+
 type PageProps = { params: Promise<{ slug: string }> };
 
 export async function generateStaticParams() {
@@ -46,18 +47,13 @@ export async function generateMetadata({
   const description =
     place.seo?.description ??
     `${place.summary} Approximate modern location: ${place.atlas.modernLocation}.`;
-  return {
+  return buildPageMetadata({
     title,
     description,
-    alternates: { canonical: atlasHref(place) },
-    openGraph: {
-      title,
-      description,
-      url: `${getSiteUrl()}${atlasHref(place)}`,
-      type: "article",
-    },
-    twitter: { card: "summary_large_image", title, description },
-  };
+    path: atlasHref(place),
+    lang: "en",
+    type: "article",
+  });
 }
 
 export default async function AtlasPlacePage({ params }: PageProps) {

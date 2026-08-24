@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { getSiteUrl } from "@/lib/seo";
+import { buildPageMetadata } from "@/lib/seo";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { GenealogyHeader } from "@/features/genealogy/genealogy-header";
@@ -16,11 +16,7 @@ import { kingdomHref } from "@/lib/kingdoms/helpers";
 import {
   breadcrumbJsonLd,
   entityJsonLd,
-  entityMetadata,
 } from "@/lib/knowledge/seo";
-
-export const dynamic = "force-static";
-export const revalidate = false;
 
 
 type PageProps = { params: Promise<{ slug: string }> };
@@ -36,16 +32,15 @@ export async function generateMetadata({
   const { slug } = await params;
   const kingdom = await getKingdomBySlug(slug);
   if (!kingdom) return { title: "Kingdom not found" };
-  const base = entityMetadata(kingdom);
-  return {
-    ...base,
-    title: kingdom.seo?.title ?? `${kingdom.name} — Kingdoms | Divine`,
-    alternates: { canonical: kingdomHref(kingdom) },
-    openGraph: {
-      ...base.openGraph,
-      url: `${getSiteUrl()}${kingdomHref(kingdom)}`,
-    },
-  };
+  const title = kingdom.seo?.title ?? `${kingdom.name} — Kingdoms | Divine`;
+  const description = kingdom.seo?.description ?? kingdom.summary;
+  return buildPageMetadata({
+    title,
+    description,
+    path: kingdomHref(kingdom),
+    lang: "en",
+    type: "article",
+  });
 }
 
 export default async function KingdomDetailPage({ params }: PageProps) {

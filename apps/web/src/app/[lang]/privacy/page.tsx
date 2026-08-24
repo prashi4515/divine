@@ -21,6 +21,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description:
       "Privacy Policy for Bhagavad Gita Online. Learn how visitor information, cookies, analytics, and advertising preferences are handled.",
     path: `/${lang}/privacy`,
+    canonicalUrl: "/privacy",
     lang: lang as ReadingLanguageCode,
   });
 }

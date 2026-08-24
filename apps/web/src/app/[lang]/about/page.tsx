@@ -21,6 +21,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description:
       "Learn about Bhagavad Gita Online — an open, independent digital resource for exploring the Bhagavad Gita, Sanskrit shlokas, translations, Mahabharata events, Ancient Bharata Atlas, and genealogy.",
     path: `/${lang}/about`,
+    canonicalUrl: "/about",
     lang: lang as ReadingLanguageCode,
   });
 }

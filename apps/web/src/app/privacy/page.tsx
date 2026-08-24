@@ -58,8 +58,8 @@ export default function PrivacyPolicyPage() {
           <section className="space-y-4">
             <p className="text-muted-foreground leading-relaxed text-sm sm:text-base">
               At <strong>Bhagavad Gita Online</strong> (accessible from{" "}
-              <a href="https://www.bagavadgitaonline.com" className="text-saffron font-medium hover:underline">
-                https://www.bagavadgitaonline.com
+              <a href="https://bagavadgitaonline.com" className="text-saffron font-medium hover:underline">
+                https://bagavadgitaonline.com
               </a>
               ), we prioritize the privacy and trust of our visitors. This Privacy Policy document outlines the types of information collected and recorded by Bhagavad Gita Online and how we use it.
             </p>

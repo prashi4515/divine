@@ -20,11 +20,7 @@ import {
   RELATIONSHIP_LABELS,
   type Relationship,
 } from "@/lib/genealogy/types";
-import { getSiteUrl } from "@/lib/seo";
-
-export const dynamic = "force-static";
-export const revalidate = false;
-
+import { buildPageMetadata, getSiteUrl } from "@/lib/seo";
 
 type PageProps = { params: Promise<{ id: string }> };
 
@@ -41,18 +37,13 @@ export async function generateMetadata({
   if (!person) return { title: "Person not found" };
   const title = `${person.name} (${CATEGORY_LABELS[person.category]}) — Hindu genealogy`;
   const description = person.description.slice(0, 220);
-  return {
+  return buildPageMetadata({
     title,
     description,
-    alternates: { canonical: `/genealogy/person/${person.id}` },
-    openGraph: {
-      title,
-      description,
-      url: `${getSiteUrl()}/genealogy/person/${person.id}`,
-      type: "profile",
-    },
-    twitter: { card: "summary_large_image", title, description },
-  };
+    path: `/genealogy/person/${person.id}`,
+    lang: "en",
+    type: "profile",
+  });
 }
 
 import { getLocalizedEntityContent } from "@/lib/knowledge/localize-content";

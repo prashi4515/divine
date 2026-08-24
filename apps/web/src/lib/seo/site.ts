@@ -1,4 +1,4 @@
-export const CANONICAL_SITE_URL = "https://www.bagavadgitaonline.com";
+export const CANONICAL_SITE_URL = "https://bagavadgitaonline.com";
 
 /**
  * Absolute site URL — hardcoded canonical production domain.

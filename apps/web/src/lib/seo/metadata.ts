@@ -13,6 +13,8 @@ export type PageMetadataInput = {
   description: string;
   /** Path only, e.g. `/atlas` or `/hi/atlas`. */
   path: string;
+  /** Optional canonical path/URL override (e.g. `/privacy` for duplicate legal pages). */
+  canonicalUrl?: string;
   /** Language for canonical, locale, and hreflang tagging. Defaults to 'en'. */
   lang?: ReadingLanguageCode;
   /** Override Open Graph type. */
@@ -71,7 +73,9 @@ export function clampDescription(description: string, max = 170): string {
 export function buildPageMetadata(input: PageMetadataInput): Metadata {
   const lang = input.lang ?? "en";
   const cleanPath = normalizeCleanPath(input.path);
-  const canonicalPath = localizePath(cleanPath, lang);
+  const canonicalPath = input.canonicalUrl
+    ? normalizeCleanPath(input.canonicalUrl)
+    : localizePath(cleanPath, lang);
   const canonicalUrl = absoluteUrl(canonicalPath);
 
   const title = clampTitle(input.title);
@@ -86,13 +90,14 @@ export function buildPageMetadata(input: PageMetadataInput): Metadata {
 
   const isNoIndex = Boolean(input.noIndex || input.noindex);
 
-  return {
-    title: input.absoluteTitle ? { absolute: title } : title,
-    description,
-    keywords: input.keywords,
-    alternates: {
-      canonical: canonicalUrl,
-      languages: {
+  const isScriptureRoute = cleanPath.startsWith("/scriptures");
+
+  const languages = isScriptureRoute
+    ? {
+        en: absoluteUrl(cleanPath),
+        "x-default": absoluteUrl(cleanPath),
+      }
+    : {
         en: absoluteUrl(cleanPath),
         sa: absoluteUrl(localizePath(cleanPath, "sa")),
         hi: absoluteUrl(localizePath(cleanPath, "hi")),
@@ -102,7 +107,15 @@ export function buildPageMetadata(input: PageMetadataInput): Metadata {
         ml: absoluteUrl(localizePath(cleanPath, "ml")),
         or: absoluteUrl(localizePath(cleanPath, "or")),
         "x-default": absoluteUrl(cleanPath),
-      },
+      };
+
+  return {
+    title: input.absoluteTitle ? { absolute: title } : title,
+    description,
+    keywords: input.keywords,
+    alternates: {
+      canonical: canonicalUrl,
+      languages,
     },
     robots: isNoIndex
       ? { index: false, follow: false }

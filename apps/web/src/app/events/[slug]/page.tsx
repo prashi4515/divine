@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { getSiteUrl } from "@/lib/seo";
+import { buildPageMetadata } from "@/lib/seo";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Suspense } from "react";
@@ -18,9 +18,6 @@ import { getEntityBundle } from "@/lib/knowledge/store";
 import { breadcrumbJsonLd, entityJsonLd } from "@/lib/knowledge/seo";
 import { formatCitation } from "@/lib/knowledge/types";
 import { toModernEnglish } from "@/lib/text/modern-english";
-
-export const dynamic = "force-static";
-export const revalidate = false;
 
 
 type PageProps = { params: Promise<{ slug: string }> };
@@ -41,18 +38,13 @@ export async function generateMetadata({
   const description = toModernEnglish(
     event.seo?.description ?? event.summary.slice(0, 160),
   );
-  const url = `${getSiteUrl()}${eventHref(event)}`;
-  return {
+  return buildPageMetadata({
     title,
     description,
-    alternates: { canonical: eventHref(event) },
-    openGraph: {
-      title,
-      description,
-      url,
-      type: "article",
-    },
-  };
+    path: eventHref(event),
+    lang: "en",
+    type: "article",
+  });
 }
 
 export default async function EventDetailPage({ params }: PageProps) {
