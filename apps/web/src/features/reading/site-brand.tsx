@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useUiLanguage, useMessages } from "@/lib/i18n/use-messages";
 import { localizePath } from "@/lib/i18n/locales";
 
@@ -13,14 +14,16 @@ export function SiteBrand() {
   return (
     <Link
       href={homeHref}
-      className="group flex min-w-0 max-w-full items-center gap-2 rounded-md focus-visible:outline-none"
+      className="group flex min-w-0 max-w-full items-center gap-2 sm:gap-2.5 rounded-md focus-visible:outline-none"
     >
-      <span
-        className="cta-saffron flex h-8 w-8 shrink-0 items-center justify-center rounded-lg shadow-xs transition-divine group-hover:shadow-sm"
-        aria-hidden
-      >
-        <span className="font-serif text-base leading-none text-white">ॐ</span>
-      </span>
+      <Image
+        src="/brand/logo.webp"
+        alt="Bhagavad Gita Online Logo"
+        width={36}
+        height={36}
+        className="h-8 w-8 sm:h-9 sm:w-9 shrink-0 rounded-full object-contain drop-shadow-xs transition-transform duration-200 group-hover:scale-105"
+        priority
+      />
       <span className="indic-display truncate font-serif text-base sm:text-lg md:text-xl">
         <span className="sm:hidden">Gita</span>
         <span className="hidden sm:inline">{t.gitaTitle}</span>

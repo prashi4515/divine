@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { BookOpen, Languages, Search } from "lucide-react";
 import { PUBLIC_AUTH_UI_ENABLED } from "@/lib/auth/config";
@@ -70,16 +71,15 @@ export function SiteFooter() {
           <div className="max-w-md space-y-4 sm:col-span-2 md:col-span-1">
             <Link
               href="/"
-              className="inline-flex items-center gap-2.5 rounded-md focus-visible:outline-none"
+              className="group inline-flex items-center gap-2.5 rounded-md focus-visible:outline-none"
             >
-              <span
-                className="cta-saffron flex h-9 w-9 items-center justify-center rounded-lg shadow-xs"
-                aria-hidden
-              >
-                <span className="font-serif text-base leading-none text-white">
-                  ॐ
-                </span>
-              </span>
+              <Image
+                src="/brand/logo.webp"
+                alt="Bhagavad Gita Online Logo"
+                width={40}
+                height={40}
+                className="h-9 w-9 sm:h-10 sm:w-10 shrink-0 rounded-full object-contain drop-shadow-xs transition-transform duration-200 group-hover:scale-105"
+              />
               <span className="font-serif text-xl tracking-tight">
                 {t.gitaTitle}
               </span>

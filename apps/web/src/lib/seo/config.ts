@@ -28,8 +28,8 @@ export const DEFAULT_KEYWORDS = [
   "Bhagavad Gita translation",
 ] as const;
 
-/** Default OG/Twitter image path (dynamic OG can override per page). */
-export const DEFAULT_OG_IMAGE_PATH = "/og?title=Bhagavad%20Gita%20Online";
+/** Default OG/Twitter image path. */
+export const DEFAULT_OG_IMAGE_PATH = "/brand/og-image.png";
 
 export const SEO_VERIFICATION = {
   google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION?.trim() || undefined,
@@ -115,10 +115,11 @@ export function rootMetadata(): Metadata {
     },
     icons: {
       icon: [
-        { url: "/icon.svg", type: "image/svg+xml" },
-        { url: "/favicon.png", sizes: "32x32", type: "image/png" },
+        { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+        { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+        { url: "/favicon.ico", type: "image/x-icon" },
       ],
-      apple: [{ url: "/apple-touch-icon.png", sizes: "180x180" }],
+      apple: [{ url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }],
     },
     manifest: "/manifest.webmanifest",
   };
