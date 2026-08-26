@@ -60,24 +60,41 @@ export function verseSeo(
   chapterNumber: number,
   verseNumber: number,
   snippet?: string,
+  chapterTitle?: string,
 ): PageMetadataInput {
-  const title = `Bhagavad Gita ${chapterNumber}.${verseNumber} – Verse & Meaning`;
+  const title = chapterTitle
+    ? clampTitle(
+        `Bhagavad Gita ${chapterNumber}.${verseNumber} – Sanskrit, English Meaning & Translation (${chapterTitle})`,
+      )
+    : `Bhagavad Gita ${chapterNumber}.${verseNumber} – Sanskrit, English Meaning & Translation`;
+
+  const descriptionSnippet = snippet
+    ? snippet.replace(/\s+/g, " ").trim()
+    : undefined;
+
+  const description = clampDescription(
+    descriptionSnippet
+      ? `Read Bhagavad Gita ${chapterNumber}.${verseNumber}${
+          chapterTitle ? ` (${chapterTitle})` : ""
+        } in Sanskrit with English translation, word-by-word meaning, and explanation: “${descriptionSnippet}”`
+      : `Read Bhagavad Gita ${chapterNumber}.${verseNumber}${
+          chapterTitle ? ` from ${chapterTitle}` : ""
+        } in Sanskrit with English translation, word-by-word meaning, and commentary.`,
+  );
+
   return {
     title,
-    description: clampDescription(
-      snippet
-        ? `${snippet} — Bhagavad Gita ${chapterNumber}.${verseNumber}: Sanskrit, translation, and word meaning.`
-        : `Bhagavad Gita ${chapterNumber}.${verseNumber}: read the verse with Sanskrit, translation, word-by-word meaning, and commentary.`,
-    ),
+    description,
     path: `/verse/${chapterNumber}/${verseNumber}`,
     type: "article",
     image: ogImageFor({
-      title: `Gita ${chapterNumber}.${verseNumber}`,
-      subtitle: "Verse, translation & meaning",
+      title: `Bhagavad Gita ${chapterNumber}.${verseNumber}`,
+      subtitle: chapterTitle || "Sanskrit, translation & meaning",
       eyebrow: "Bhagavad Gita",
     }),
   };
 }
+
 
 export function searchSeo(query?: string): PageMetadataInput {
   const q = query?.trim();
