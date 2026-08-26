@@ -40,5 +40,5 @@ export async function generateMetadata({
 export default async function LocalizedEventDetailPage({ params }: PageProps) {
   const { lang, slug } = await params;
   if (!isSupportedLocale(lang)) notFound();
-  return <EventDetailPage params={Promise.resolve({ slug })} />;
+  return <EventDetailPage params={Promise.resolve({ slug })} lang={lang} />;
 }

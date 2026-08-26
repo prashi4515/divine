@@ -19,8 +19,10 @@ import { breadcrumbJsonLd, entityJsonLd } from "@/lib/knowledge/seo";
 import { formatCitation } from "@/lib/knowledge/types";
 import { toModernEnglish } from "@/lib/text/modern-english";
 
-
-type PageProps = { params: Promise<{ slug: string }> };
+type PageProps = {
+  params: Promise<{ slug: string }>;
+  lang?: string;
+};
 
 export async function generateStaticParams() {
   const events = await getEvents();
@@ -47,10 +49,15 @@ export async function generateMetadata({
   });
 }
 
-export default async function EventDetailPage({ params }: PageProps) {
+export default async function EventDetailPage({ params, lang }: PageProps) {
   const { slug } = await params;
   const event = await getEventBySlug(slug);
   if (!event) notFound();
+
+  const currentLang = lang && lang !== "en" ? lang : undefined;
+  const canonicalPath = currentLang ? `/${currentLang}/events/${slug}` : `/events/${slug}`;
+  const eventsHubHref = currentLang ? `/${currentLang}/events` : "/events";
+  const homeHref = currentLang ? `/${currentLang}` : "/";
 
   const [links, bundle] = await Promise.all([
     resolveEventLinks(event),
@@ -59,8 +66,8 @@ export default async function EventDetailPage({ params }: PageProps) {
   if (!bundle) notFound();
 
   const crumbs = [
-    { name: "Home", href: "/" },
-    { name: "Events", href: "/events" },
+    { name: "Home", href: homeHref },
+    { name: "Events", href: eventsHubHref },
     { name: event.name },
   ];
 
@@ -73,21 +80,21 @@ export default async function EventDetailPage({ params }: PageProps) {
           title={event.name}
           description={event.summary}
           breadcrumbs={[
-            { href: "/", label: "Home" },
-            { href: "/events", label: "Events" },
+            { href: homeHref, label: "Home" },
+            { href: eventsHubHref, label: "Events" },
             { label: event.name },
           ]}
           actions={
             <>
               <Link
-                href="/events"
+                href={eventsHubHref}
                 className="border-border bg-background/80 hover:border-saffron/40 inline-flex rounded-full border px-3.5 py-1.5 text-xs transition-divine"
               >
                 All events
               </Link>
               {links.next ? (
                 <Link
-                  href={eventHref(links.next)}
+                  href={currentLang ? `/${currentLang}${eventHref(links.next)}` : eventHref(links.next)}
                   className="border-border bg-background/80 hover:border-saffron/40 inline-flex rounded-full border px-3.5 py-1.5 text-xs transition-divine"
                 >
                   Next · {links.next.englishName}
@@ -111,7 +118,7 @@ export default async function EventDetailPage({ params }: PageProps) {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(entityJsonLd(event, eventHref(event))),
+          __html: JSON.stringify(entityJsonLd(event, canonicalPath)),
         }}
       />
       <script

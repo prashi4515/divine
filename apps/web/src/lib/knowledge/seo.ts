@@ -99,6 +99,16 @@ export function entityJsonLd(entity: KnowledgeEntity, overridePath?: string) {
     });
   }
 
+  if (kind === "event" || kind === "battle") {
+    // Historical/mythological epic events are knowledge articles, NOT modern bookable physical events.
+    return articleJsonLd({
+      headline: entity.name,
+      description: entity.description,
+      path,
+      image: entity.seo?.ogImage,
+    });
+  }
+
   return articleJsonLd({
     headline: entity.name,
     description: entity.description,
