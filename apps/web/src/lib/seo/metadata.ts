@@ -49,22 +49,59 @@ function resolveImage(image?: string): string {
   return absoluteUrl(image);
 }
 
-export function clampTitle(title: string, max = 70): string {
-  const t = title.trim();
+function clampWithoutEllipsis(text: string, max: number): string {
+  const t = text.trim();
   if (t.length <= max) return t;
-  const cut = t.slice(0, max - 1);
+  const cut = t.slice(0, max);
   const lastSpace = cut.lastIndexOf(" ");
-  if (lastSpace > max * 0.6) return `${cut.slice(0, lastSpace)}…`;
-  return `${cut}…`;
+  if (lastSpace > max * 0.5) {
+    return cut.slice(0, lastSpace).trim();
+  }
+  return cut.trim();
+}
+
+/**
+ * Format and pre-evaluate title tag as a complete string including site brand suffix.
+ * Prevents ellipses (…), double-clamping, and duplicated site names in HTML output.
+ */
+export function formatCleanTitle(
+  pageTitle: string,
+  opts: { absoluteTitle?: boolean; siteName?: string; maxTotalLength?: number } = {},
+): { title: { absolute: string }; fullTitleString: string } {
+  const siteName = opts.siteName ?? SITE_NAME;
+  const brandSuffix = ` · ${siteName}`;
+  const maxTotal = opts.maxTotalLength ?? 65;
+
+  let raw = pageTitle.trim();
+  if (raw.endsWith(brandSuffix)) {
+    raw = raw.slice(0, -brandSuffix.length).trim();
+  } else if (raw.endsWith(` - ${siteName}`)) {
+    raw = raw.slice(0, -(` - ${siteName}`.length)).trim();
+  }
+
+  if (opts.absoluteTitle) {
+    const finalTitle = clampWithoutEllipsis(raw, maxTotal);
+    return { title: { absolute: finalTitle }, fullTitleString: finalTitle };
+  }
+
+  const full = `${raw}${brandSuffix}`;
+  if (full.length <= maxTotal) {
+    return { title: { absolute: full }, fullTitleString: full };
+  }
+
+  const availableForPage = Math.max(15, maxTotal - brandSuffix.length);
+  const clampedPage = clampWithoutEllipsis(raw, availableForPage);
+  const finalFull = `${clampedPage}${brandSuffix}`;
+  return { title: { absolute: finalFull }, fullTitleString: finalFull };
+}
+
+export function clampTitle(title: string, max = 70): string {
+  return clampWithoutEllipsis(title, max);
 }
 
 export function clampDescription(description: string, max = 170): string {
   const d = description.trim().replace(/\s+/g, " ");
-  if (d.length <= max) return d;
-  const cut = d.slice(0, max - 1);
-  const lastSpace = cut.lastIndexOf(" ");
-  if (lastSpace > max * 0.7) return `${cut.slice(0, lastSpace)}…`;
-  return `${cut}…`;
+  return clampWithoutEllipsis(d, max);
 }
 
 /**
@@ -78,10 +115,13 @@ export function buildPageMetadata(input: PageMetadataInput): Metadata {
     : localizePath(cleanPath, lang);
   const canonicalUrl = absoluteUrl(canonicalPath);
 
-  const title = clampTitle(input.title);
+  const titleObj = formatCleanTitle(input.title, {
+    absoluteTitle: input.absoluteTitle,
+  });
+
   const description = clampDescription(input.description);
   const image = resolveImage(input.image);
-  const imageAlt = input.imageAlt ?? title;
+  const imageAlt = input.imageAlt ?? titleObj.fullTitleString;
 
   const ogType =
     input.type === "article" || input.type === "profile" || input.type === "book"
@@ -110,7 +150,7 @@ export function buildPageMetadata(input: PageMetadataInput): Metadata {
       };
 
   return {
-    title: input.absoluteTitle ? { absolute: title } : title,
+    title: titleObj.title,
     description,
     keywords: input.keywords,
     alternates: {
@@ -121,7 +161,7 @@ export function buildPageMetadata(input: PageMetadataInput): Metadata {
       ? { index: false, follow: false }
       : { index: true, follow: true },
     openGraph: {
-      title,
+      title: titleObj.fullTitleString,
       description,
       url: canonicalUrl,
       siteName: SITE_NAME,
@@ -134,7 +174,7 @@ export function buildPageMetadata(input: PageMetadataInput): Metadata {
     },
     twitter: {
       card: "summary_large_image",
-      title,
+      title: titleObj.fullTitleString,
       description,
       images: [image],
     },

@@ -62,11 +62,7 @@ export function verseSeo(
   snippet?: string,
   chapterTitle?: string,
 ): PageMetadataInput {
-  const title = chapterTitle
-    ? clampTitle(
-        `Bhagavad Gita ${chapterNumber}.${verseNumber} – Sanskrit, English Meaning & Translation (${chapterTitle})`,
-      )
-    : `Bhagavad Gita ${chapterNumber}.${verseNumber} – Sanskrit, English Meaning & Translation`;
+  const title = `Bhagavad Gita ${chapterNumber}.${verseNumber} – Meaning & Translation`;
 
   const descriptionSnippet = snippet
     ? snippet.replace(/\s+/g, " ").trim()
@@ -76,7 +72,7 @@ export function verseSeo(
     descriptionSnippet
       ? `Read Bhagavad Gita ${chapterNumber}.${verseNumber}${
           chapterTitle ? ` (${chapterTitle})` : ""
-        } in Sanskrit with English translation, word-by-word meaning, and explanation: “${descriptionSnippet}”`
+        } in Sanskrit with English translation, word-by-word meaning, and commentary: “${descriptionSnippet}”`
       : `Read Bhagavad Gita ${chapterNumber}.${verseNumber}${
           chapterTitle ? ` from ${chapterTitle}` : ""
         } in Sanskrit with English translation, word-by-word meaning, and commentary.`,
@@ -94,7 +90,6 @@ export function verseSeo(
     }),
   };
 }
-
 
 export function searchSeo(query?: string): PageMetadataInput {
   const q = query?.trim();

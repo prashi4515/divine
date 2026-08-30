@@ -100,13 +100,16 @@ export default async function VersePage({ params }: PageProps) {
     verseRow.translations.find((t) => t.languageCode === "en")?.text ?? "";
   const sanskritText = verseRow.sanskritText || "";
   const transliteration = verseRow.transliteration || "";
+  const firstTransliterationLine = transliteration
+    ? transliteration.split("\n")[0].trim()
+    : "";
   const wordMeanings = parseWordMeanings(verseRow.meaning);
 
   const commentaryFile = await getStaticGitaVerseCommentary(c, v).catch(() => null);
   const commentaryText = commentaryFile?.commentary || verseRow.commentary || "";
 
   const readerHref = `/bhagavad-gita/chapter-${c}#verse-${v}`;
-  
+
   // Previous & Next navigation logic
   let prevHref: string | null = null;
   let prevLabel: string | null = null;
@@ -173,7 +176,7 @@ export default async function VersePage({ params }: PageProps) {
           </p>
 
           <p className="text-sm leading-relaxed text-muted-foreground/90 pt-1">
-            <strong>Bhagavad Gita {c}.{v}</strong> (also cited as <em>BG {c}.{v}</em>, <em>Gita {c}:{v}</em>, or <em>Bhagavad Gita Chapter {c} Verse {v}</em>) is a sacred verse from Chapter {c} ({chapterTitle}). Explore the original Sanskrit shloka, Romanized transliteration, English translation, word-by-word meaning, and spiritual commentary below.
+            <strong>Bhagavad Gita {c}.{v}</strong>{firstTransliterationLine ? ` (“${firstTransliterationLine}…”)` : ""} is a verse from Chapter {c} ({chapterTitle}), commonly cited as <em>BG {c}.{v}</em> or <em>Gita {c}.{v}</em>. Explore the original Sanskrit shloka, Romanized IAST transliteration, English translation, word-by-word meaning, and spiritual commentary below.
           </p>
         </section>
 
@@ -259,27 +262,52 @@ export default async function VersePage({ params }: PageProps) {
         {/* Chapter Context & Links */}
         <section className="mt-8 rounded-2xl bg-muted/30 p-6 border border-border/60">
           <h2 className="text-base font-semibold tracking-tight text-foreground mb-2 flex items-center gap-2">
-            <Layers className="h-4 w-4 text-primary" aria-hidden />
-            Chapter {c} Context & Navigation
+            <Layers className="h-4 w-4 text-primary" aria-hidden="true" />
+            <span>Chapter {c} Context & Verses</span>
           </h2>
           <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
-            This verse is part of <strong>Chapter {c} ({chapterTitle})</strong> of the Bhagavad Gita. Continue studying the remaining verses of this chapter or open the full interactive chapter reader.
+            This verse is part of <strong>Chapter {c} ({chapterTitle})</strong> of the Bhagavad Gita. Continue studying the remaining verses of this chapter or open the full chapter reader.
           </p>
-          <div className="flex flex-wrap gap-3">
+          <div className="flex flex-wrap gap-3 mb-6">
             <Link
               href={readerHref}
               className="bg-foreground text-background inline-flex h-10 items-center gap-2 rounded-full px-4 text-xs font-medium hover:opacity-90 transition-opacity"
             >
-              <BookOpen className="h-3.5 w-3.5" aria-hidden />
+              <BookOpen className="h-3.5 w-3.5" aria-hidden="true" />
               Open in Chapter Reader
             </Link>
             <Link
               href={`/bhagavad-gita/chapter-${c}`}
               className="bg-secondary text-secondary-foreground hover:bg-secondary/80 inline-flex h-10 items-center gap-2 rounded-full px-4 text-xs font-medium transition-colors"
             >
-              <List className="h-3.5 w-3.5" aria-hidden />
+              <List className="h-3.5 w-3.5" aria-hidden="true" />
               View All Verses in Chapter {c}
             </Link>
+          </div>
+
+          <div className="border-t border-border/40 pt-4">
+            <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-3">
+              All Verses in Chapter {c}
+            </p>
+            <div className="flex flex-wrap gap-1.5">
+              {snap.verses.map((vItem) => {
+                const isCurrent = vItem.number === v;
+                return (
+                  <Link
+                    key={vItem.number}
+                    href={`/verse/${c}/${vItem.number}`}
+                    className={`inline-flex h-8 w-8 items-center justify-center rounded-md text-xs font-mono transition-colors ${
+                      isCurrent
+                        ? "bg-primary text-primary-foreground font-bold"
+                        : "bg-background text-muted-foreground hover:bg-secondary hover:text-foreground border border-border/50"
+                    }`}
+                    title={`Bhagavad Gita ${c}.${vItem.number}`}
+                  >
+                    {vItem.number}
+                  </Link>
+                );
+              })}
+            </div>
           </div>
         </section>
 
@@ -328,7 +356,7 @@ export default async function VersePage({ params }: PageProps) {
               href={prevHref}
               className="text-muted-foreground hover:text-foreground inline-flex items-center gap-2 text-sm font-medium transition-colors"
             >
-              <ArrowLeft className="h-4 w-4" aria-hidden />
+              <ArrowLeft className="h-4 w-4" aria-hidden="true" />
               <span>{prevLabel}</span>
             </Link>
           ) : (
@@ -348,7 +376,7 @@ export default async function VersePage({ params }: PageProps) {
               className="text-muted-foreground hover:text-foreground inline-flex items-center gap-2 text-sm font-medium transition-colors"
             >
               <span>{nextLabel}</span>
-              <ArrowRight className="h-4 w-4" aria-hidden />
+              <ArrowRight className="h-4 w-4" aria-hidden="true" />
             </Link>
           ) : (
             <span />
