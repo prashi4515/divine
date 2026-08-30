@@ -1,0 +1,301 @@
+{
+  "iastCorrections": [
+    {
+      "name": "Akshara",
+      "old": "Akshara",
+      "new": "Akṣara",
+      "reason": "Corrected IAST transliteration to match retroflex/vowel markers"
+    },
+    {
+      "name": "Ananda",
+      "old": "Ananda",
+      "new": "Ānanda",
+      "reason": "Corrected IAST transliteration to match retroflex/vowel markers"
+    },
+    {
+      "name": "Ananya",
+      "old": "Ananya",
+      "new": "Ananyā",
+      "reason": "Corrected IAST transliteration to match retroflex/vowel markers"
+    },
+    {
+      "name": "Anasuya",
+      "old": "Anasuya",
+      "new": "Anasūyā",
+      "reason": "Corrected IAST transliteration to match retroflex/vowel markers"
+    },
+    {
+      "name": "Arnav",
+      "old": "Arnav",
+      "new": "Arṇava",
+      "reason": "Corrected IAST transliteration to match retroflex/vowel markers"
+    },
+    {
+      "name": "Bhimsen",
+      "old": "Bhimsen",
+      "new": "Bhīmasena",
+      "reason": "Corrected IAST transliteration to match retroflex/vowel markers"
+    },
+    {
+      "name": "Bhrigu",
+      "old": "Bhrigu",
+      "new": "Bhṛgu",
+      "reason": "Corrected IAST transliteration to match retroflex/vowel markers"
+    },
+    {
+      "name": "Chanakya",
+      "old": "Chanakya",
+      "new": "Cāṇakya",
+      "reason": "Corrected IAST transliteration to match retroflex/vowel markers"
+    },
+    {
+      "name": "Chitrangada",
+      "old": "Chitrangada",
+      "new": "Citrāṅgadā",
+      "reason": "Corrected IAST transliteration to match retroflex/vowel markers"
+    },
+    {
+      "name": "Damodara",
+      "old": "Damodara",
+      "new": "Dāmodara",
+      "reason": "Corrected IAST transliteration to match retroflex/vowel markers"
+    },
+    {
+      "name": "Draupadi",
+      "old": "Draupadi",
+      "new": "Draupadī",
+      "reason": "Corrected IAST transliteration to match retroflex/vowel markers"
+    },
+    {
+      "name": "Gargi",
+      "old": "Gargi",
+      "new": "Gārgī",
+      "reason": "Corrected IAST transliteration to match retroflex/vowel markers"
+    },
+    {
+      "name": "Lakshmana",
+      "old": "Lakshmana",
+      "new": "Lakṣmaṇa",
+      "reason": "Corrected IAST transliteration to match retroflex/vowel markers"
+    },
+    {
+      "name": "Maitreyi",
+      "old": "Maitreyi",
+      "new": "Maitreyī",
+      "reason": "Corrected IAST transliteration to match retroflex/vowel markers"
+    },
+    {
+      "name": "Partha",
+      "old": "Partha",
+      "new": "Pārtha",
+      "reason": "Corrected IAST transliteration to match retroflex/vowel markers"
+    },
+    {
+      "name": "Rukmini",
+      "old": "Rukmini",
+      "new": "Rukmiṇī",
+      "reason": "Corrected IAST transliteration to match retroflex/vowel markers"
+    },
+    {
+      "name": "Sita",
+      "old": "Sita",
+      "new": "Sītā",
+      "reason": "Corrected IAST transliteration to match retroflex/vowel markers"
+    },
+    {
+      "name": "Urmila",
+      "old": "Urmila",
+      "new": "Ūrmilā",
+      "reason": "Corrected IAST transliteration to match retroflex/vowel markers"
+    },
+    {
+      "name": "Yudhishthira",
+      "old": "Yudhishthira",
+      "new": "Yudhiṣṭhira",
+      "reason": "Corrected IAST transliteration to match retroflex/vowel markers"
+    }
+  ],
+  "devanagariCorrections": [
+    {
+      "name": "Agastya",
+      "old": "नाम",
+      "new": "अगस्त्य",
+      "reason": "Corrected Devanagari spelling to match classical text"
+    },
+    {
+      "name": "Agni",
+      "old": "नाम",
+      "new": "अग्नि",
+      "reason": "Corrected Devanagari spelling to match classical text"
+    },
+    {
+      "name": "Akshara",
+      "old": "नाम",
+      "new": "अक्षर",
+      "reason": "Corrected Devanagari spelling to match classical text"
+    },
+    {
+      "name": "Ananda",
+      "old": "नाम",
+      "new": "आनन्द",
+      "reason": "Corrected Devanagari spelling to match classical text"
+    },
+    {
+      "name": "Ananya",
+      "old": "नाम",
+      "new": "अनन्या",
+      "reason": "Corrected Devanagari spelling to match classical text"
+    },
+    {
+      "name": "Aniruddha",
+      "old": "नाम",
+      "new": "अनिरुद्ध",
+      "reason": "Corrected Devanagari spelling to match classical text"
+    },
+    {
+      "name": "Anasuya",
+      "old": "नाम",
+      "new": "अनसूया",
+      "reason": "Corrected Devanagari spelling to match classical text"
+    },
+    {
+      "name": "Aryaman",
+      "old": "नाम",
+      "new": "अर्यमन्",
+      "reason": "Corrected Devanagari spelling to match classical text"
+    },
+    {
+      "name": "Arnav",
+      "old": "नाम",
+      "new": "अर्णव",
+      "reason": "Corrected Devanagari spelling to match classical text"
+    },
+    {
+      "name": "Bharata",
+      "old": "नाम",
+      "new": "भरत",
+      "reason": "Corrected Devanagari spelling to match classical text"
+    },
+    {
+      "name": "Bhimsen",
+      "old": "नाम",
+      "new": "भीमसेन",
+      "reason": "Corrected Devanagari spelling to match classical text"
+    },
+    {
+      "name": "Bhrigu",
+      "old": "नाम",
+      "new": "भृगु",
+      "reason": "Corrected Devanagari spelling to match classical text"
+    },
+    {
+      "name": "Chanakya",
+      "old": "नाम",
+      "new": "चाणक्य",
+      "reason": "Corrected Devanagari spelling to match classical text"
+    },
+    {
+      "name": "Chitrangada",
+      "old": "नाम",
+      "new": "चित्राङ्गदा",
+      "reason": "Corrected Devanagari spelling to match classical text"
+    },
+    {
+      "name": "Damodara",
+      "old": "नाम",
+      "new": "दामोदर",
+      "reason": "Corrected Devanagari spelling to match classical text"
+    },
+    {
+      "name": "Devavrata",
+      "old": "नाम",
+      "new": "देवव्रत",
+      "reason": "Corrected Devanagari spelling to match classical text"
+    },
+    {
+      "name": "Dhruva",
+      "old": "नाम",
+      "new": "ध्रुव",
+      "reason": "Corrected Devanagari spelling to match classical text"
+    },
+    {
+      "name": "Draupadi",
+      "old": "नाम",
+      "new": "द्रौपदी",
+      "reason": "Corrected Devanagari spelling to match classical text"
+    },
+    {
+      "name": "Gargi",
+      "old": "नाम",
+      "new": "गागी",
+      "reason": "Corrected Devanagari spelling to match classical text"
+    },
+    {
+      "name": "Janaka",
+      "old": "नाम",
+      "new": "जनक",
+      "reason": "Corrected Devanagari spelling to match classical text"
+    },
+    {
+      "name": "Lakshmana",
+      "old": "नाम",
+      "new": "लक्ष्मण",
+      "reason": "Corrected Devanagari spelling to match classical text"
+    },
+    {
+      "name": "Maitreyi",
+      "old": "नाम",
+      "new": "मैत्रेयी",
+      "reason": "Corrected Devanagari spelling to match classical text"
+    },
+    {
+      "name": "Nakula",
+      "old": "नाम",
+      "new": "नकुल",
+      "reason": "Corrected Devanagari spelling to match classical text"
+    },
+    {
+      "name": "Partha",
+      "old": "नाम",
+      "new": "पार्थ",
+      "reason": "Corrected Devanagari spelling to match classical text"
+    },
+    {
+      "name": "Pradyumna",
+      "old": "नाम",
+      "new": "प्रद्युम्न",
+      "reason": "Corrected Devanagari spelling to match classical text"
+    },
+    {
+      "name": "Rukmini",
+      "old": "नाम",
+      "new": "रुक्मिणी",
+      "reason": "Corrected Devanagari spelling to match classical text"
+    },
+    {
+      "name": "Sahadeva",
+      "old": "नाम",
+      "new": "सहदेव",
+      "reason": "Corrected Devanagari spelling to match classical text"
+    },
+    {
+      "name": "Sita",
+      "old": "नाम",
+      "new": "सीता",
+      "reason": "Corrected Devanagari spelling to match classical text"
+    },
+    {
+      "name": "Urmila",
+      "old": "नाम",
+      "new": "उर्मिला",
+      "reason": "Corrected Devanagari spelling to match classical text"
+    },
+    {
+      "name": "Yudhishthira",
+      "old": "नाम",
+      "new": "युधिष्ठिर",
+      "reason": "Corrected Devanagari spelling to match classical text"
+    }
+  ],
+  "duplicatesRemoved": []
+}

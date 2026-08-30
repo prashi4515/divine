@@ -1,16 +1,3 @@
 {
-  "candidates": [
-    {
-      "name": "Myra",
-      "reason": "Non-Sanskrit English poetic creation by Fulke Greville"
-    },
-    {
-      "name": "Kiara",
-      "reason": "Non-Sanskrit Italian/Irish origin"
-    },
-    {
-      "name": "Ayaan",
-      "reason": "Persian/Arabic origin homophone"
-    }
-  ]
+  "candidates": []
 }
