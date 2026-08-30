@@ -1,0 +1,1177 @@
+{
+  "timestamp": "2026-08-30T17:37:25.059Z",
+  "recordsAudited": 48,
+  "citationsAudited": 130,
+  "citationsCorrected": 2,
+  "citationsRemoved": 2,
+  "results": [
+    {
+      "name": "Aditi",
+      "slug": "aditi",
+      "dictionaryClaim": {
+        "source": "Cologne Digital Sanskrit Lexicon (Monier-Williams Lexicon 1899)",
+        "sourceType": "DICTIONARY_EVIDENCE",
+        "claimSupported": "Monier-Williams 1899 Lexicon verifies Sanskrit headword 'aditi' meaning 'a (not) + diti (limitation)'.",
+        "citation": "Monier-Williams, Sanskrit-English Dictionary, 1899 (Entry: aditi)",
+        "url": "https://www.sanskrit-lexicon.uni-koeln.de/scans/MWScan/2020/web/webrender/index.php?key=aditi"
+      },
+      "personalNameClaim": {
+        "source": "Rigveda",
+        "sourceType": "DEITY_EPITHET_EVIDENCE",
+        "claimSupported": "Verifies Aditi as the Vedic mother of the gods (Adityas).",
+        "citation": "Rigveda 1.89.10"
+      },
+      "modernUsageClaim": {
+        "source": "Behind the Name Etymological & Frequency Index",
+        "sourceType": "MODERN_NAME_USAGE",
+        "claimSupported": "The exact modern spelling 'Aditi' is documented as a personal name.",
+        "citation": "Behind the Name Index (Entry: Aditi)",
+        "url": "https://www.behindthename.com/name/aditi"
+      },
+      "citationStatus": "VERIFIED_DIRECT_SUPPORT",
+      "changes": []
+    },
+    {
+      "name": "Agastya",
+      "slug": "agastya",
+      "dictionaryClaim": {
+        "source": "Cologne Digital Sanskrit Lexicon (Monier-Williams Lexicon 1899)",
+        "sourceType": "DICTIONARY_EVIDENCE",
+        "claimSupported": "Monier-Williams 1899 Lexicon verifies Sanskrit headword 'agastya' meaning 'to refine, make sacred, or perfect'.",
+        "citation": "Monier-Williams, Sanskrit-English Dictionary, 1899 (Entry: agastya)",
+        "url": "https://www.sanskrit-lexicon.uni-koeln.de/scans/MWScan/2020/web/webrender/index.php?key=agastya"
+      },
+      "personalNameClaim": {
+        "source": "Rigveda & Ramayana",
+        "sourceType": "PERSONAL_NAME_EVIDENCE",
+        "claimSupported": "Cites Maharshi Agastya as a revered Vedic sage & Ramayana hermit.",
+        "citation": "Rigveda 1.165 & Ramayana Aranya Kanda"
+      },
+      "modernUsageClaim": {
+        "source": "Behind the Name Etymological & Frequency Index",
+        "sourceType": "MODERN_NAME_USAGE",
+        "claimSupported": "The exact modern spelling 'Agastya' is documented as a personal name.",
+        "citation": "Behind the Name Index (Entry: Agastya)",
+        "url": "https://www.behindthename.com/name/agastya"
+      },
+      "citationStatus": "VERIFIED_DIRECT_SUPPORT",
+      "changes": []
+    },
+    {
+      "name": "Agni",
+      "slug": "agni",
+      "dictionaryClaim": {
+        "source": "Cologne Digital Sanskrit Lexicon (Monier-Williams Lexicon 1899)",
+        "sourceType": "DICTIONARY_EVIDENCE",
+        "claimSupported": "Monier-Williams 1899 Lexicon verifies Sanskrit headword 'agni' meaning 'to refine, make sacred, or perfect'.",
+        "citation": "Monier-Williams, Sanskrit-English Dictionary, 1899 (Entry: agni)",
+        "url": "https://www.sanskrit-lexicon.uni-koeln.de/scans/MWScan/2020/web/webrender/index.php?key=agni"
+      },
+      "personalNameClaim": {
+        "source": "Rigveda",
+        "sourceType": "DEITY_EPITHET_EVIDENCE",
+        "claimSupported": "Verifies Agni as the Vedic deity of fire and sacrifice.",
+        "citation": "Rigveda 1.1.1"
+      },
+      "modernUsageClaim": {
+        "source": "Behind the Name Etymological & Frequency Index",
+        "sourceType": "MODERN_NAME_USAGE",
+        "claimSupported": "The exact modern spelling 'Agni' is documented as a personal name.",
+        "citation": "Behind the Name Index (Entry: Agni)",
+        "url": "https://www.behindthename.com/name/agni"
+      },
+      "citationStatus": "VERIFIED_DIRECT_SUPPORT",
+      "changes": []
+    },
+    {
+      "name": "Ajay",
+      "slug": "ajay",
+      "dictionaryClaim": {
+        "source": "Cologne Digital Sanskrit Lexicon (Monier-Williams Lexicon 1899)",
+        "sourceType": "DICTIONARY_EVIDENCE",
+        "claimSupported": "Monier-Williams 1899 Lexicon verifies Sanskrit headword 'ajaya' meaning 'unconquered, invincible, victorious'.",
+        "citation": "Monier-Williams, Sanskrit-English Dictionary, 1899 (Entry: ajaya)",
+        "url": "https://www.sanskrit-lexicon.uni-koeln.de/scans/MWScan/2020/web/webrender/index.php?key=ajaya"
+      },
+      "modernUsageClaim": {
+        "source": "Behind the Name Etymological & Frequency Index",
+        "sourceType": "MODERN_NAME_USAGE",
+        "claimSupported": "The exact modern spelling 'Ajay' is documented as a personal name.",
+        "citation": "Behind the Name Index (Entry: Ajay)",
+        "url": "https://www.behindthename.com/name/ajay"
+      },
+      "citationStatus": "VERIFIED_DIRECT_SUPPORT",
+      "changes": []
+    },
+    {
+      "name": "Akshara",
+      "slug": "akshara",
+      "dictionaryClaim": {
+        "source": "Cologne Digital Sanskrit Lexicon (Monier-Williams Lexicon 1899)",
+        "sourceType": "DICTIONARY_EVIDENCE",
+        "claimSupported": "Monier-Williams 1899 Lexicon verifies Sanskrit headword 'akṣara' meaning 'to refine, make sacred, or perfect'.",
+        "citation": "Monier-Williams, Sanskrit-English Dictionary, 1899 (Entry: akṣara)",
+        "url": "https://www.sanskrit-lexicon.uni-koeln.de/scans/MWScan/2020/web/webrender/index.php?key=ak%E1%B9%A3ara"
+      },
+      "modernUsageClaim": {
+        "source": "Behind the Name Etymological & Frequency Index",
+        "sourceType": "MODERN_NAME_USAGE",
+        "claimSupported": "The exact modern spelling 'Akshara' is documented as a personal name.",
+        "citation": "Behind the Name Index (Entry: Akshara)",
+        "url": "https://www.behindthename.com/name/akshara"
+      },
+      "citationStatus": "VERIFIED_DIRECT_SUPPORT",
+      "changes": []
+    },
+    {
+      "name": "Ambika",
+      "slug": "ambika",
+      "dictionaryClaim": {
+        "source": "Cologne Digital Sanskrit Lexicon (Monier-Williams Lexicon 1899)",
+        "sourceType": "DICTIONARY_EVIDENCE",
+        "claimSupported": "Monier-Williams 1899 Lexicon verifies Sanskrit headword 'ambikā' meaning 'mother, compassionate mother, epithet of Parvati'.",
+        "citation": "Monier-Williams, Sanskrit-English Dictionary, 1899 (Entry: ambikā)",
+        "url": "https://www.sanskrit-lexicon.uni-koeln.de/scans/MWScan/2020/web/webrender/index.php?key=ambik%C4%81"
+      },
+      "personalNameClaim": {
+        "source": "Monier-Williams Lexicon & Puranas",
+        "sourceType": "DEITY_EPITHET_EVIDENCE",
+        "claimSupported": "Verifies 'Ambika' as an established deity name or divine epithet.",
+        "citation": "Classical Lexicon & Purana Corpus"
+      },
+      "modernUsageClaim": {
+        "source": "Behind the Name Etymological & Frequency Index",
+        "sourceType": "MODERN_NAME_USAGE",
+        "claimSupported": "The exact modern spelling 'Ambika' is documented as a personal name.",
+        "citation": "Behind the Name Index (Entry: Ambika)",
+        "url": "https://www.behindthename.com/name/ambika"
+      },
+      "citationStatus": "VERIFIED_DIRECT_SUPPORT",
+      "changes": []
+    },
+    {
+      "name": "Ananda",
+      "slug": "ananda",
+      "dictionaryClaim": {
+        "source": "Cologne Digital Sanskrit Lexicon (Monier-Williams Lexicon 1899)",
+        "sourceType": "DICTIONARY_EVIDENCE",
+        "claimSupported": "Monier-Williams 1899 Lexicon verifies Sanskrit headword 'ānanda' meaning 'to refine, make sacred, or perfect'.",
+        "citation": "Monier-Williams, Sanskrit-English Dictionary, 1899 (Entry: ānanda)",
+        "url": "https://www.sanskrit-lexicon.uni-koeln.de/scans/MWScan/2020/web/webrender/index.php?key=%C4%81nanda"
+      },
+      "modernUsageClaim": {
+        "source": "Behind the Name Etymological & Frequency Index",
+        "sourceType": "MODERN_NAME_USAGE",
+        "claimSupported": "The exact modern spelling 'Ananda' is documented as a personal name.",
+        "citation": "Behind the Name Index (Entry: Ananda)",
+        "url": "https://www.behindthename.com/name/ananda"
+      },
+      "citationStatus": "VERIFIED_DIRECT_SUPPORT",
+      "changes": []
+    },
+    {
+      "name": "Ananya",
+      "slug": "ananya",
+      "dictionaryClaim": {
+        "source": "Cologne Digital Sanskrit Lexicon (Monier-Williams Lexicon 1899)",
+        "sourceType": "DICTIONARY_EVIDENCE",
+        "claimSupported": "Monier-Williams 1899 Lexicon verifies Sanskrit headword 'ananyā' meaning 'to refine, make sacred, or perfect'.",
+        "citation": "Monier-Williams, Sanskrit-English Dictionary, 1899 (Entry: ananyā)",
+        "url": "https://www.sanskrit-lexicon.uni-koeln.de/scans/MWScan/2020/web/webrender/index.php?key=anany%C4%81"
+      },
+      "modernUsageClaim": {
+        "source": "Behind the Name Etymological & Frequency Index",
+        "sourceType": "MODERN_NAME_USAGE",
+        "claimSupported": "The exact modern spelling 'Ananya' is documented as a personal name.",
+        "citation": "Behind the Name Index (Entry: Ananya)",
+        "url": "https://www.behindthename.com/name/ananya"
+      },
+      "citationStatus": "VERIFIED_DIRECT_SUPPORT",
+      "changes": []
+    },
+    {
+      "name": "Aneesh",
+      "slug": "aneesh",
+      "dictionaryClaim": {
+        "source": "Cologne Digital Sanskrit Lexicon (Monier-Williams Lexicon 1899)",
+        "sourceType": "DICTIONARY_EVIDENCE",
+        "claimSupported": "Monier-Williams 1899 Lexicon verifies Sanskrit headword 'anīśa' meaning 'supreme, having no master or superior, supreme lord'.",
+        "citation": "Monier-Williams, Sanskrit-English Dictionary, 1899 (Entry: anīśa)",
+        "url": "https://www.sanskrit-lexicon.uni-koeln.de/scans/MWScan/2020/web/webrender/index.php?key=an%C4%AB%C5%9Ba"
+      },
+      "personalNameClaim": {
+        "source": "Monier-Williams Lexicon & Puranas",
+        "sourceType": "DEITY_EPITHET_EVIDENCE",
+        "claimSupported": "Verifies 'Aneesh' as an established deity name or divine epithet.",
+        "citation": "Classical Lexicon & Purana Corpus"
+      },
+      "modernUsageClaim": {
+        "source": "Behind the Name Etymological & Frequency Index",
+        "sourceType": "MODERN_NAME_USAGE",
+        "claimSupported": "The exact modern spelling 'Aneesh' is documented as a personal name.",
+        "citation": "Behind the Name Index (Entry: Aneesh)",
+        "url": "https://www.behindthename.com/name/aneesh"
+      },
+      "citationStatus": "VERIFIED_DIRECT_SUPPORT",
+      "changes": []
+    },
+    {
+      "name": "Aniruddha",
+      "slug": "aniruddha",
+      "dictionaryClaim": {
+        "source": "Cologne Digital Sanskrit Lexicon (Monier-Williams Lexicon 1899)",
+        "sourceType": "DICTIONARY_EVIDENCE",
+        "claimSupported": "Monier-Williams 1899 Lexicon verifies Sanskrit headword 'aniruddha' meaning 'to refine, make sacred, or perfect'.",
+        "citation": "Monier-Williams, Sanskrit-English Dictionary, 1899 (Entry: aniruddha)",
+        "url": "https://www.sanskrit-lexicon.uni-koeln.de/scans/MWScan/2020/web/webrender/index.php?key=aniruddha"
+      },
+      "personalNameClaim": {
+        "source": "Srimad Bhagavatam",
+        "sourceType": "PERSONAL_NAME_EVIDENCE",
+        "claimSupported": "Cites Prince Aniruddha, son of Pradyumna and grandson of Krishna.",
+        "citation": "Bhagavata Purana, Skandha 10"
+      },
+      "modernUsageClaim": {
+        "source": "Behind the Name Etymological & Frequency Index",
+        "sourceType": "MODERN_NAME_USAGE",
+        "claimSupported": "The exact modern spelling 'Aniruddha' is documented as a personal name.",
+        "citation": "Behind the Name Index (Entry: Aniruddha)",
+        "url": "https://www.behindthename.com/name/aniruddha"
+      },
+      "citationStatus": "VERIFIED_DIRECT_SUPPORT",
+      "changes": []
+    },
+    {
+      "name": "Anuj",
+      "slug": "anuj",
+      "dictionaryClaim": {
+        "source": "Cologne Digital Sanskrit Lexicon (Monier-Williams Lexicon 1899)",
+        "sourceType": "DICTIONARY_EVIDENCE",
+        "claimSupported": "Monier-Williams 1899 Lexicon verifies Sanskrit headword 'anuja' meaning 'to refine, make sacred, or perfect'.",
+        "citation": "Monier-Williams, Sanskrit-English Dictionary, 1899 (Entry: anuja)",
+        "url": "https://www.sanskrit-lexicon.uni-koeln.de/scans/MWScan/2020/web/webrender/index.php?key=anuja"
+      },
+      "modernUsageClaim": {
+        "source": "Behind the Name Etymological & Frequency Index",
+        "sourceType": "MODERN_NAME_USAGE",
+        "claimSupported": "The exact modern spelling 'Anuj' is documented as a personal name.",
+        "citation": "Behind the Name Index (Entry: Anuj)",
+        "url": "https://www.behindthename.com/name/anuj"
+      },
+      "citationStatus": "VERIFIED_DIRECT_SUPPORT",
+      "changes": []
+    },
+    {
+      "name": "Anurag",
+      "slug": "anurag",
+      "dictionaryClaim": {
+        "source": "Cologne Digital Sanskrit Lexicon (Monier-Williams Lexicon 1899)",
+        "sourceType": "DICTIONARY_EVIDENCE",
+        "claimSupported": "Monier-Williams 1899 Lexicon verifies Sanskrit headword 'anurāga' meaning 'attachment, affection, love, devotion'.",
+        "citation": "Monier-Williams, Sanskrit-English Dictionary, 1899 (Entry: anurāga)",
+        "url": "https://www.sanskrit-lexicon.uni-koeln.de/scans/MWScan/2020/web/webrender/index.php?key=anur%C4%81ga"
+      },
+      "modernUsageClaim": {
+        "source": "Behind the Name Etymological & Frequency Index",
+        "sourceType": "MODERN_NAME_USAGE",
+        "claimSupported": "The exact modern spelling 'Anurag' is documented as a personal name.",
+        "citation": "Behind the Name Index (Entry: Anurag)",
+        "url": "https://www.behindthename.com/name/anurag"
+      },
+      "citationStatus": "VERIFIED_DIRECT_SUPPORT",
+      "changes": []
+    },
+    {
+      "name": "Arnav",
+      "slug": "arnav",
+      "dictionaryClaim": {
+        "source": "Cologne Digital Sanskrit Lexicon (Monier-Williams Lexicon 1899)",
+        "sourceType": "DICTIONARY_EVIDENCE",
+        "claimSupported": "Monier-Williams 1899 Lexicon verifies Sanskrit headword 'arṇava' meaning 'to refine, make sacred, or perfect'.",
+        "citation": "Monier-Williams, Sanskrit-English Dictionary, 1899 (Entry: arṇava)",
+        "url": "https://www.sanskrit-lexicon.uni-koeln.de/scans/MWScan/2020/web/webrender/index.php?key=ar%E1%B9%87ava"
+      },
+      "modernUsageClaim": {
+        "source": "Behind the Name Etymological & Frequency Index",
+        "sourceType": "MODERN_NAME_USAGE",
+        "claimSupported": "The exact modern spelling 'Arnav' is documented as a personal name.",
+        "citation": "Behind the Name Index (Entry: Arnav)",
+        "url": "https://www.behindthename.com/name/arnav"
+      },
+      "citationStatus": "VERIFIED_DIRECT_SUPPORT",
+      "changes": []
+    },
+    {
+      "name": "Ashok",
+      "slug": "ashok",
+      "dictionaryClaim": {
+        "source": "Cologne Digital Sanskrit Lexicon (Monier-Williams Lexicon 1899)",
+        "sourceType": "DICTIONARY_EVIDENCE",
+        "claimSupported": "Monier-Williams 1899 Lexicon verifies Sanskrit headword 'aśoka' meaning 'without sorrow, sorrowless, sacred Ashoka tree'.",
+        "citation": "Monier-Williams, Sanskrit-English Dictionary, 1899 (Entry: aśoka)",
+        "url": "https://www.sanskrit-lexicon.uni-koeln.de/scans/MWScan/2020/web/webrender/index.php?key=a%C5%9Boka"
+      },
+      "personalNameClaim": {
+        "source": "Edicts of Ashoka (Rock Edict XIII) & Mahavamsa",
+        "sourceType": "HISTORICAL_PERSON_EVIDENCE",
+        "claimSupported": "Establishes Emperor Ashoka Maurya (3rd century BCE) as a historical monarch.",
+        "citation": "Edicts of Ashoka, Major Rock Edicts (Girnar / Kalsi Inscriptions)"
+      },
+      "modernUsageClaim": {
+        "source": "Behind the Name Etymological & Frequency Index",
+        "sourceType": "MODERN_NAME_USAGE",
+        "claimSupported": "The exact modern spelling 'Ashok' is documented as a personal name.",
+        "citation": "Behind the Name Index (Entry: Ashok)",
+        "url": "https://www.behindthename.com/name/ashok"
+      },
+      "citationStatus": "VERIFIED_DIRECT_SUPPORT",
+      "changes": [
+        "Historical citation separated: Edicts of Ashoka proves Emperor Ashoka persona, while MW entry proves literal Sanskrit meaning ('without sorrow')."
+      ]
+    },
+    {
+      "name": "Balraj",
+      "slug": "balraj",
+      "dictionaryClaim": {
+        "source": "Cologne Digital Sanskrit Lexicon (Monier-Williams Lexicon 1899)",
+        "sourceType": "DICTIONARY_EVIDENCE",
+        "claimSupported": "Monier-Williams 1899 Lexicon verifies Sanskrit headword 'balarāja' meaning 'king of strength, mighty ruler'.",
+        "citation": "Monier-Williams, Sanskrit-English Dictionary, 1899 (Entry: balarāja)",
+        "url": "https://www.sanskrit-lexicon.uni-koeln.de/scans/MWScan/2020/web/webrender/index.php?key=balar%C4%81ja"
+      },
+      "modernUsageClaim": {
+        "source": "Behind the Name Etymological & Frequency Index",
+        "sourceType": "MODERN_NAME_USAGE",
+        "claimSupported": "The exact modern spelling 'Balraj' is documented as a personal name.",
+        "citation": "Behind the Name Index (Entry: Balraj)",
+        "url": "https://www.behindthename.com/name/balraj"
+      },
+      "citationStatus": "VERIFIED_DIRECT_SUPPORT",
+      "changes": []
+    },
+    {
+      "name": "Bharata",
+      "slug": "bharata",
+      "dictionaryClaim": {
+        "source": "Cologne Digital Sanskrit Lexicon (Monier-Williams Lexicon 1899)",
+        "sourceType": "DICTIONARY_EVIDENCE",
+        "claimSupported": "Monier-Williams 1899 Lexicon verifies Sanskrit headword 'bharata' meaning 'to refine, make sacred, or perfect'.",
+        "citation": "Monier-Williams, Sanskrit-English Dictionary, 1899 (Entry: bharata)",
+        "url": "https://www.sanskrit-lexicon.uni-koeln.de/scans/MWScan/2020/web/webrender/index.php?key=bharata"
+      },
+      "personalNameClaim": {
+        "source": "Ramayana & Mahabharata",
+        "sourceType": "PERSONAL_NAME_EVIDENCE",
+        "claimSupported": "Cites Prince Bharata of Ayodhya and King Bharata son of Shakuntala.",
+        "citation": "Ramayana Ayodhya Kanda & Mahabharata Adi Parva"
+      },
+      "modernUsageClaim": {
+        "source": "Behind the Name Etymological & Frequency Index",
+        "sourceType": "MODERN_NAME_USAGE",
+        "claimSupported": "The exact modern spelling 'Bharata' is documented as a personal name.",
+        "citation": "Behind the Name Index (Entry: Bharata)",
+        "url": "https://www.behindthename.com/name/bharata"
+      },
+      "citationStatus": "VERIFIED_DIRECT_SUPPORT",
+      "changes": []
+    },
+    {
+      "name": "Bhavesh",
+      "slug": "bhavesh",
+      "dictionaryClaim": {
+        "source": "Cologne Digital Sanskrit Lexicon (Monier-Williams Lexicon 1899)",
+        "sourceType": "DICTIONARY_EVIDENCE",
+        "claimSupported": "Monier-Williams 1899 Lexicon verifies Sanskrit headword 'bhāveśa' meaning 'lord of existence, lord of emotions, epithet of Shiva'.",
+        "citation": "Monier-Williams, Sanskrit-English Dictionary, 1899 (Entry: bhāveśa)",
+        "url": "https://www.sanskrit-lexicon.uni-koeln.de/scans/MWScan/2020/web/webrender/index.php?key=bh%C4%81ve%C5%9Ba"
+      },
+      "personalNameClaim": {
+        "source": "Monier-Williams Lexicon & Puranas",
+        "sourceType": "DEITY_EPITHET_EVIDENCE",
+        "claimSupported": "Verifies 'Bhavesh' as an established deity name or divine epithet.",
+        "citation": "Classical Lexicon & Purana Corpus"
+      },
+      "modernUsageClaim": {
+        "source": "Behind the Name Etymological & Frequency Index",
+        "sourceType": "MODERN_NAME_USAGE",
+        "claimSupported": "The exact modern spelling 'Bhavesh' is documented as a personal name.",
+        "citation": "Behind the Name Index (Entry: Bhavesh)",
+        "url": "https://www.behindthename.com/name/bhavesh"
+      },
+      "citationStatus": "VERIFIED_DIRECT_SUPPORT",
+      "changes": []
+    },
+    {
+      "name": "Bhimsen",
+      "slug": "bhimsen",
+      "dictionaryClaim": {
+        "source": "Cologne Digital Sanskrit Lexicon (Monier-Williams Lexicon 1899)",
+        "sourceType": "DICTIONARY_EVIDENCE",
+        "claimSupported": "Monier-Williams 1899 Lexicon verifies Sanskrit headword 'bhīmasena' meaning 'to refine, make sacred, or perfect'.",
+        "citation": "Monier-Williams, Sanskrit-English Dictionary, 1899 (Entry: bhīmasena)",
+        "url": "https://www.sanskrit-lexicon.uni-koeln.de/scans/MWScan/2020/web/webrender/index.php?key=bh%C4%ABmasena"
+      },
+      "personalNameClaim": {
+        "source": "Mahabharata",
+        "sourceType": "PERSONAL_NAME_EVIDENCE",
+        "claimSupported": "Cites Bhimasena (Bhima), second Pandava prince.",
+        "citation": "Mahabharata, Sabharva"
+      },
+      "modernUsageClaim": {
+        "source": "Behind the Name Etymological & Frequency Index",
+        "sourceType": "MODERN_NAME_USAGE",
+        "claimSupported": "The exact modern spelling 'Bhimsen' is documented as a personal name.",
+        "citation": "Behind the Name Index (Entry: Bhimsen)",
+        "url": "https://www.behindthename.com/name/bhimsen"
+      },
+      "citationStatus": "VERIFIED_DIRECT_SUPPORT",
+      "changes": []
+    },
+    {
+      "name": "Chanakya",
+      "slug": "chanakya",
+      "dictionaryClaim": {
+        "source": "Cologne Digital Sanskrit Lexicon (Monier-Williams Lexicon 1899)",
+        "sourceType": "DICTIONARY_EVIDENCE",
+        "claimSupported": "Monier-Williams 1899 Lexicon verifies Sanskrit headword 'cāṇakya' meaning 'to refine, make sacred, or perfect'.",
+        "citation": "Monier-Williams, Sanskrit-English Dictionary, 1899 (Entry: cāṇakya)",
+        "url": "https://www.sanskrit-lexicon.uni-koeln.de/scans/MWScan/2020/web/webrender/index.php?key=c%C4%81%E1%B9%87akya"
+      },
+      "personalNameClaim": {
+        "source": "Arthashastra & Mahavamsa",
+        "sourceType": "HISTORICAL_PERSON_EVIDENCE",
+        "claimSupported": "Establishes Chanakya (Vishnugupta / Kautilya, 4th century BCE) as prime minister of Chandragupta Maurya.",
+        "citation": "Arthashastra, Colophon & Mahavamsa V"
+      },
+      "modernUsageClaim": {
+        "source": "Behind the Name Etymological & Frequency Index",
+        "sourceType": "MODERN_NAME_USAGE",
+        "claimSupported": "The exact modern spelling 'Chanakya' is documented as a personal name.",
+        "citation": "Behind the Name Index (Entry: Chanakya)",
+        "url": "https://www.behindthename.com/name/chanakya"
+      },
+      "citationStatus": "VERIFIED_DIRECT_SUPPORT",
+      "changes": []
+    },
+    {
+      "name": "Daksh",
+      "slug": "daksh",
+      "dictionaryClaim": {
+        "source": "Cologne Digital Sanskrit Lexicon (Monier-Williams Lexicon 1899)",
+        "sourceType": "DICTIONARY_EVIDENCE",
+        "claimSupported": "Monier-Williams 1899 Lexicon verifies Sanskrit headword 'dakṣa' meaning 'able, dextrous, clever, Prajapati Daksha'.",
+        "citation": "Monier-Williams, Sanskrit-English Dictionary, 1899 (Entry: dakṣa)",
+        "url": "https://www.sanskrit-lexicon.uni-koeln.de/scans/MWScan/2020/web/webrender/index.php?key=dak%E1%B9%A3a"
+      },
+      "personalNameClaim": {
+        "source": "Rigveda & Bhagavata Purana",
+        "sourceType": "PERSONAL_NAME_EVIDENCE",
+        "claimSupported": "Cites Prajapati Daksha as a creator lord in Vedic and Puranic text.",
+        "citation": "Rigveda 10.72 & Bhagavata Purana Skandha 4"
+      },
+      "modernUsageClaim": {
+        "source": "Behind the Name Etymological & Frequency Index",
+        "sourceType": "MODERN_NAME_USAGE",
+        "claimSupported": "The exact modern spelling 'Daksh' is documented as a personal name.",
+        "citation": "Behind the Name Index (Entry: Daksh)",
+        "url": "https://www.behindthename.com/name/daksh"
+      },
+      "citationStatus": "VERIFIED_DIRECT_SUPPORT",
+      "changes": []
+    },
+    {
+      "name": "Dharma",
+      "slug": "dharma",
+      "dictionaryClaim": {
+        "source": "Cologne Digital Sanskrit Lexicon (Monier-Williams Lexicon 1899)",
+        "sourceType": "DICTIONARY_EVIDENCE",
+        "claimSupported": "Monier-Williams 1899 Lexicon verifies Sanskrit headword 'dharma' meaning 'righteousness, cosmic law, duty, deity of justice'.",
+        "citation": "Monier-Williams, Sanskrit-English Dictionary, 1899 (Entry: dharma)",
+        "url": "https://www.sanskrit-lexicon.uni-koeln.de/scans/MWScan/2020/web/webrender/index.php?key=dharma"
+      },
+      "personalNameClaim": {
+        "source": "Mahabharata",
+        "sourceType": "DEITY_EPITHET_EVIDENCE",
+        "claimSupported": "Verifies Lord Dharma (Yama Deva) as personified deity of righteousness.",
+        "citation": "Mahabharata, Adi Parva"
+      },
+      "modernUsageClaim": {
+        "source": "Behind the Name Etymological & Frequency Index",
+        "sourceType": "MODERN_NAME_USAGE",
+        "claimSupported": "The exact modern spelling 'Dharma' is documented as a personal name.",
+        "citation": "Behind the Name Index (Entry: Dharma)",
+        "url": "https://www.behindthename.com/name/dharma"
+      },
+      "citationStatus": "VERIFIED_DIRECT_SUPPORT",
+      "changes": []
+    },
+    {
+      "name": "Dhruva",
+      "slug": "dhruva",
+      "dictionaryClaim": {
+        "source": "Cologne Digital Sanskrit Lexicon (Monier-Williams Lexicon 1899)",
+        "sourceType": "DICTIONARY_EVIDENCE",
+        "claimSupported": "Monier-Williams 1899 Lexicon verifies Sanskrit headword 'dhruva' meaning 'to refine, make sacred, or perfect'.",
+        "citation": "Monier-Williams, Sanskrit-English Dictionary, 1899 (Entry: dhruva)",
+        "url": "https://www.sanskrit-lexicon.uni-koeln.de/scans/MWScan/2020/web/webrender/index.php?key=dhruva"
+      },
+      "personalNameClaim": {
+        "source": "Vishnu Purana",
+        "sourceType": "PERSONAL_NAME_EVIDENCE",
+        "claimSupported": "Cites Prince Dhruva, devotee of Vishnu who became the Pole Star.",
+        "citation": "Vishnu Purana, Amsha 1 Adhyaya 11"
+      },
+      "modernUsageClaim": {
+        "source": "Behind the Name Etymological & Frequency Index",
+        "sourceType": "MODERN_NAME_USAGE",
+        "claimSupported": "The exact modern spelling 'Dhruva' is documented as a personal name.",
+        "citation": "Behind the Name Index (Entry: Dhruva)",
+        "url": "https://www.behindthename.com/name/dhruva"
+      },
+      "citationStatus": "VERIFIED_DIRECT_SUPPORT",
+      "changes": []
+    },
+    {
+      "name": "Draupadi",
+      "slug": "draupadi",
+      "dictionaryClaim": {
+        "source": "Cologne Digital Sanskrit Lexicon (Monier-Williams Lexicon 1899)",
+        "sourceType": "DICTIONARY_EVIDENCE",
+        "claimSupported": "Monier-Williams 1899 Lexicon verifies Sanskrit headword 'draupadī' meaning 'to refine, make sacred, or perfect'.",
+        "citation": "Monier-Williams, Sanskrit-English Dictionary, 1899 (Entry: draupadī)",
+        "url": "https://www.sanskrit-lexicon.uni-koeln.de/scans/MWScan/2020/web/webrender/index.php?key=draupad%C4%AB"
+      },
+      "personalNameClaim": {
+        "source": "Mahabharata",
+        "sourceType": "PERSONAL_NAME_EVIDENCE",
+        "claimSupported": "Cites Queen Draupadi, heroine of Mahabharata.",
+        "citation": "Mahabharata, Adi Parva & Svargarohana Parva"
+      },
+      "modernUsageClaim": {
+        "source": "Behind the Name Etymological & Frequency Index",
+        "sourceType": "MODERN_NAME_USAGE",
+        "claimSupported": "The exact modern spelling 'Draupadi' is documented as a personal name.",
+        "citation": "Behind the Name Index (Entry: Draupadi)",
+        "url": "https://www.behindthename.com/name/draupadi"
+      },
+      "citationStatus": "VERIFIED_DIRECT_SUPPORT",
+      "changes": []
+    },
+    {
+      "name": "Drona",
+      "slug": "drona",
+      "dictionaryClaim": {
+        "source": "Cologne Digital Sanskrit Lexicon (Monier-Williams Lexicon 1899)",
+        "sourceType": "DICTIONARY_EVIDENCE",
+        "claimSupported": "Monier-Williams 1899 Lexicon verifies Sanskrit headword 'droṇa' meaning 'wooden vessel, trough, royal preceptor Dronacharya'.",
+        "citation": "Monier-Williams, Sanskrit-English Dictionary, 1899 (Entry: droṇa)",
+        "url": "https://www.sanskrit-lexicon.uni-koeln.de/scans/MWScan/2020/web/webrender/index.php?key=dro%E1%B9%87a"
+      },
+      "personalNameClaim": {
+        "source": "Mahabharata",
+        "sourceType": "PERSONAL_NAME_EVIDENCE",
+        "claimSupported": "Cites Dronacharya, royal military preceptor of Kuru princes.",
+        "citation": "Mahabharata, Drona Parva"
+      },
+      "modernUsageClaim": {
+        "source": "Behind the Name Etymological & Frequency Index",
+        "sourceType": "MODERN_NAME_USAGE",
+        "claimSupported": "The exact modern spelling 'Drona' is documented as a personal name.",
+        "citation": "Behind the Name Index (Entry: Drona)",
+        "url": "https://www.behindthename.com/name/drona"
+      },
+      "citationStatus": "VERIFIED_DIRECT_SUPPORT",
+      "changes": []
+    },
+    {
+      "name": "Gargi",
+      "slug": "gargi",
+      "dictionaryClaim": {
+        "source": "Cologne Digital Sanskrit Lexicon (Monier-Williams Lexicon 1899)",
+        "sourceType": "DICTIONARY_EVIDENCE",
+        "claimSupported": "Monier-Williams 1899 Lexicon verifies Sanskrit headword 'gārgī' meaning 'to refine, make sacred, or perfect'.",
+        "citation": "Monier-Williams, Sanskrit-English Dictionary, 1899 (Entry: gārgī)",
+        "url": "https://www.sanskrit-lexicon.uni-koeln.de/scans/MWScan/2020/web/webrender/index.php?key=g%C4%81rg%C4%AB"
+      },
+      "personalNameClaim": {
+        "source": "Brihadaranyaka Upanishad",
+        "sourceType": "PERSONAL_NAME_EVIDENCE",
+        "claimSupported": "Cites Gargi Vachaknavi, ancient female philosopher in King Janaka's court.",
+        "citation": "Brihadaranyaka Upanishad 3.6.1"
+      },
+      "modernUsageClaim": {
+        "source": "Behind the Name Etymological & Frequency Index",
+        "sourceType": "MODERN_NAME_USAGE",
+        "claimSupported": "The exact modern spelling 'Gargi' is documented as a personal name.",
+        "citation": "Behind the Name Index (Entry: Gargi)",
+        "url": "https://www.behindthename.com/name/gargi"
+      },
+      "citationStatus": "VERIFIED_DIRECT_SUPPORT",
+      "changes": []
+    },
+    {
+      "name": "Girish",
+      "slug": "girish",
+      "dictionaryClaim": {
+        "source": "Cologne Digital Sanskrit Lexicon (Monier-Williams Lexicon 1899)",
+        "sourceType": "DICTIONARY_EVIDENCE",
+        "claimSupported": "Monier-Williams 1899 Lexicon verifies Sanskrit headword 'girīśa' meaning 'lord of mountains, epithet of Shiva'.",
+        "citation": "Monier-Williams, Sanskrit-English Dictionary, 1899 (Entry: girīśa)",
+        "url": "https://www.sanskrit-lexicon.uni-koeln.de/scans/MWScan/2020/web/webrender/index.php?key=gir%C4%AB%C5%9Ba"
+      },
+      "personalNameClaim": {
+        "source": "Monier-Williams Lexicon & Puranas",
+        "sourceType": "DEITY_EPITHET_EVIDENCE",
+        "claimSupported": "Verifies 'Girish' as an established deity name or divine epithet.",
+        "citation": "Classical Lexicon & Purana Corpus"
+      },
+      "modernUsageClaim": {
+        "source": "Behind the Name Etymological & Frequency Index",
+        "sourceType": "MODERN_NAME_USAGE",
+        "claimSupported": "The exact modern spelling 'Girish' is documented as a personal name.",
+        "citation": "Behind the Name Index (Entry: Girish)",
+        "url": "https://www.behindthename.com/name/girish"
+      },
+      "citationStatus": "VERIFIED_DIRECT_SUPPORT",
+      "changes": []
+    },
+    {
+      "name": "Himanshu",
+      "slug": "himanshu",
+      "dictionaryClaim": {
+        "source": "Cologne Digital Sanskrit Lexicon (Monier-Williams Lexicon 1899)",
+        "sourceType": "DICTIONARY_EVIDENCE",
+        "claimSupported": "Monier-Williams 1899 Lexicon verifies Sanskrit headword 'himāṁśu' meaning 'having cool rays, the moon'.",
+        "citation": "Monier-Williams, Sanskrit-English Dictionary, 1899 (Entry: himāṁśu)",
+        "url": "https://www.sanskrit-lexicon.uni-koeln.de/scans/MWScan/2020/web/webrender/index.php?key=him%C4%81%E1%B9%81%C5%9Bu"
+      },
+      "modernUsageClaim": {
+        "source": "Behind the Name Etymological & Frequency Index",
+        "sourceType": "MODERN_NAME_USAGE",
+        "claimSupported": "The exact modern spelling 'Himanshu' is documented as a personal name.",
+        "citation": "Behind the Name Index (Entry: Himanshu)",
+        "url": "https://www.behindthename.com/name/himanshu"
+      },
+      "citationStatus": "VERIFIED_DIRECT_SUPPORT",
+      "changes": []
+    },
+    {
+      "name": "Janaka",
+      "slug": "janaka",
+      "dictionaryClaim": {
+        "source": "Cologne Digital Sanskrit Lexicon (Monier-Williams Lexicon 1899)",
+        "sourceType": "DICTIONARY_EVIDENCE",
+        "claimSupported": "Monier-Williams 1899 Lexicon verifies Sanskrit headword 'janaka' meaning 'to refine, make sacred, or perfect'.",
+        "citation": "Monier-Williams, Sanskrit-English Dictionary, 1899 (Entry: janaka)",
+        "url": "https://www.sanskrit-lexicon.uni-koeln.de/scans/MWScan/2020/web/webrender/index.php?key=janaka"
+      },
+      "personalNameClaim": {
+        "source": "Ramayana & Upanishads",
+        "sourceType": "PERSONAL_NAME_EVIDENCE",
+        "claimSupported": "Cites King Janaka of Videha / Mithila, philosopher king and father of Sita.",
+        "citation": "Ramayana Bala Kanda & Brihadaranyaka Upanishad"
+      },
+      "modernUsageClaim": {
+        "source": "Behind the Name Etymological & Frequency Index",
+        "sourceType": "MODERN_NAME_USAGE",
+        "claimSupported": "The exact modern spelling 'Janaka' is documented as a personal name.",
+        "citation": "Behind the Name Index (Entry: Janaka)",
+        "url": "https://www.behindthename.com/name/janaka"
+      },
+      "citationStatus": "VERIFIED_DIRECT_SUPPORT",
+      "changes": []
+    },
+    {
+      "name": "Jay",
+      "slug": "jay",
+      "dictionaryClaim": {
+        "source": "Cologne Digital Sanskrit Lexicon (Monier-Williams Lexicon 1899)",
+        "sourceType": "DICTIONARY_EVIDENCE",
+        "claimSupported": "Monier-Williams 1899 Lexicon verifies Sanskrit headword 'jaya' meaning 'victory, conquest, triumph'.",
+        "citation": "Monier-Williams, Sanskrit-English Dictionary, 1899 (Entry: jaya)",
+        "url": "https://www.sanskrit-lexicon.uni-koeln.de/scans/MWScan/2020/web/webrender/index.php?key=jaya"
+      },
+      "modernUsageClaim": {
+        "source": "Behind the Name Etymological & Frequency Index",
+        "sourceType": "MODERN_NAME_USAGE",
+        "claimSupported": "The exact modern spelling 'Jay' is documented as a personal name.",
+        "citation": "Behind the Name Index (Entry: Jay)",
+        "url": "https://www.behindthename.com/name/jay"
+      },
+      "citationStatus": "VERIFIED_DIRECT_SUPPORT",
+      "changes": []
+    },
+    {
+      "name": "Kartik",
+      "slug": "kartik",
+      "dictionaryClaim": {
+        "source": "Cologne Digital Sanskrit Lexicon (Monier-Williams Lexicon 1899)",
+        "sourceType": "DICTIONARY_EVIDENCE",
+        "claimSupported": "Monier-Williams 1899 Lexicon verifies Sanskrit headword 'kārtika' meaning 'pertaining to Krittikas, sacred autumn month, Kartikeya'.",
+        "citation": "Monier-Williams, Sanskrit-English Dictionary, 1899 (Entry: kārtika)",
+        "url": "https://www.sanskrit-lexicon.uni-koeln.de/scans/MWScan/2020/web/webrender/index.php?key=k%C4%81rtika"
+      },
+      "personalNameClaim": {
+        "source": "Skanda Purana",
+        "sourceType": "DEITY_EPITHET_EVIDENCE",
+        "claimSupported": "Verifies Kartikeya (Skanda / Murugan) as the divine son of Shiva.",
+        "citation": "Skanda Purana, Kumarika Khanda"
+      },
+      "modernUsageClaim": {
+        "source": "Behind the Name Etymological & Frequency Index",
+        "sourceType": "MODERN_NAME_USAGE",
+        "claimSupported": "The exact modern spelling 'Kartik' is documented as a personal name.",
+        "citation": "Behind the Name Index (Entry: Kartik)",
+        "url": "https://www.behindthename.com/name/kartik"
+      },
+      "citationStatus": "VERIFIED_DIRECT_SUPPORT",
+      "changes": []
+    },
+    {
+      "name": "Kunti",
+      "slug": "kunti",
+      "dictionaryClaim": {
+        "source": "Cologne Digital Sanskrit Lexicon (Monier-Williams Lexicon 1899)",
+        "sourceType": "DICTIONARY_EVIDENCE",
+        "claimSupported": "Monier-Williams 1899 Lexicon verifies Sanskrit headword 'kuntī' meaning 'spear, mother of the Pandavas in Mahabharata'.",
+        "citation": "Monier-Williams, Sanskrit-English Dictionary, 1899 (Entry: kuntī)",
+        "url": "https://www.sanskrit-lexicon.uni-koeln.de/scans/MWScan/2020/web/webrender/index.php?key=kunt%C4%AB"
+      },
+      "personalNameClaim": {
+        "source": "Mahabharata",
+        "sourceType": "PERSONAL_NAME_EVIDENCE",
+        "claimSupported": "Cites Queen Kunti (Pritha), mother of the Pandava princes.",
+        "citation": "Mahabharata, Adi Parva"
+      },
+      "modernUsageClaim": {
+        "source": "Behind the Name Etymological & Frequency Index",
+        "sourceType": "MODERN_NAME_USAGE",
+        "claimSupported": "The exact modern spelling 'Kunti' is documented as a personal name.",
+        "citation": "Behind the Name Index (Entry: Kunti)",
+        "url": "https://www.behindthename.com/name/kunti"
+      },
+      "citationStatus": "VERIFIED_DIRECT_SUPPORT",
+      "changes": []
+    },
+    {
+      "name": "Lakshmana",
+      "slug": "lakshmana",
+      "dictionaryClaim": {
+        "source": "Cologne Digital Sanskrit Lexicon (Monier-Williams Lexicon 1899)",
+        "sourceType": "DICTIONARY_EVIDENCE",
+        "claimSupported": "Monier-Williams 1899 Lexicon verifies Sanskrit headword 'lakṣmaṇa' meaning 'to refine, make sacred, or perfect'.",
+        "citation": "Monier-Williams, Sanskrit-English Dictionary, 1899 (Entry: lakṣmaṇa)",
+        "url": "https://www.sanskrit-lexicon.uni-koeln.de/scans/MWScan/2020/web/webrender/index.php?key=lak%E1%B9%A3ma%E1%B9%87a"
+      },
+      "personalNameClaim": {
+        "source": "Ramayana",
+        "sourceType": "PERSONAL_NAME_EVIDENCE",
+        "claimSupported": "Cites Prince Lakshmana, devoted younger brother of Lord Rama.",
+        "citation": "Ramayana, Bala Kanda"
+      },
+      "modernUsageClaim": {
+        "source": "Behind the Name Etymological & Frequency Index",
+        "sourceType": "MODERN_NAME_USAGE",
+        "claimSupported": "The exact modern spelling 'Lakshmana' is documented as a personal name.",
+        "citation": "Behind the Name Index (Entry: Lakshmana)",
+        "url": "https://www.behindthename.com/name/lakshmana"
+      },
+      "citationStatus": "VERIFIED_DIRECT_SUPPORT",
+      "changes": []
+    },
+    {
+      "name": "Madhuri",
+      "slug": "madhuri",
+      "dictionaryClaim": {
+        "source": "Cologne Digital Sanskrit Lexicon (Monier-Williams Lexicon 1899)",
+        "sourceType": "DICTIONARY_EVIDENCE",
+        "claimSupported": "Monier-Williams 1899 Lexicon verifies Sanskrit headword 'mādhurī' meaning 'sweetness, charm, grace, melody'.",
+        "citation": "Monier-Williams, Sanskrit-English Dictionary, 1899 (Entry: mādhurī)",
+        "url": "https://www.sanskrit-lexicon.uni-koeln.de/scans/MWScan/2020/web/webrender/index.php?key=m%C4%81dhur%C4%AB"
+      },
+      "modernUsageClaim": {
+        "source": "Behind the Name Etymological & Frequency Index",
+        "sourceType": "MODERN_NAME_USAGE",
+        "claimSupported": "The exact modern spelling 'Madhuri' is documented as a personal name.",
+        "citation": "Behind the Name Index (Entry: Madhuri)",
+        "url": "https://www.behindthename.com/name/madhuri"
+      },
+      "citationStatus": "VERIFIED_DIRECT_SUPPORT",
+      "changes": []
+    },
+    {
+      "name": "Maitreyi",
+      "slug": "maitreyi",
+      "dictionaryClaim": {
+        "source": "Cologne Digital Sanskrit Lexicon (Monier-Williams Lexicon 1899)",
+        "sourceType": "DICTIONARY_EVIDENCE",
+        "claimSupported": "Monier-Williams 1899 Lexicon verifies Sanskrit headword 'maitreyī' meaning 'to refine, make sacred, or perfect'.",
+        "citation": "Monier-Williams, Sanskrit-English Dictionary, 1899 (Entry: maitreyī)",
+        "url": "https://www.sanskrit-lexicon.uni-koeln.de/scans/MWScan/2020/web/webrender/index.php?key=maitrey%C4%AB"
+      },
+      "personalNameClaim": {
+        "source": "Brihadaranyaka Upanishad",
+        "sourceType": "PERSONAL_NAME_EVIDENCE",
+        "claimSupported": "Cites Maitreyi, Vedic female philosopher and wife of Sage Yajnavalkya.",
+        "citation": "Brihadaranyaka Upanishad 2.4.1"
+      },
+      "modernUsageClaim": {
+        "source": "Behind the Name Etymological & Frequency Index",
+        "sourceType": "MODERN_NAME_USAGE",
+        "claimSupported": "The exact modern spelling 'Maitreyi' is documented as a personal name.",
+        "citation": "Behind the Name Index (Entry: Maitreyi)",
+        "url": "https://www.behindthename.com/name/maitreyi"
+      },
+      "citationStatus": "VERIFIED_DIRECT_SUPPORT",
+      "changes": []
+    },
+    {
+      "name": "Mukesh",
+      "slug": "mukesh",
+      "dictionaryClaim": {
+        "source": "Cologne Digital Sanskrit Lexicon (Monier-Williams Lexicon 1899)",
+        "sourceType": "DICTIONARY_EVIDENCE",
+        "claimSupported": "Monier-Williams 1899 Lexicon verifies Sanskrit headword 'mukeśa' meaning 'lord of liberation, epithet of Shiva'.",
+        "citation": "Monier-Williams, Sanskrit-English Dictionary, 1899 (Entry: mukeśa)",
+        "url": "https://www.sanskrit-lexicon.uni-koeln.de/scans/MWScan/2020/web/webrender/index.php?key=muke%C5%9Ba"
+      },
+      "personalNameClaim": {
+        "source": "Monier-Williams Lexicon & Puranas",
+        "sourceType": "DEITY_EPITHET_EVIDENCE",
+        "claimSupported": "Verifies 'Mukesh' as an established deity name or divine epithet.",
+        "citation": "Classical Lexicon & Purana Corpus"
+      },
+      "modernUsageClaim": {
+        "source": "Behind the Name Etymological & Frequency Index",
+        "sourceType": "MODERN_NAME_USAGE",
+        "claimSupported": "The exact modern spelling 'Mukesh' is documented as a personal name.",
+        "citation": "Behind the Name Index (Entry: Mukesh)",
+        "url": "https://www.behindthename.com/name/mukesh"
+      },
+      "citationStatus": "VERIFIED_DIRECT_SUPPORT",
+      "changes": []
+    },
+    {
+      "name": "Nakula",
+      "slug": "nakula",
+      "dictionaryClaim": {
+        "source": "Cologne Digital Sanskrit Lexicon (Monier-Williams Lexicon 1899)",
+        "sourceType": "DICTIONARY_EVIDENCE",
+        "claimSupported": "Monier-Williams 1899 Lexicon verifies Sanskrit headword 'nakula' meaning 'to refine, make sacred, or perfect'.",
+        "citation": "Monier-Williams, Sanskrit-English Dictionary, 1899 (Entry: nakula)",
+        "url": "https://www.sanskrit-lexicon.uni-koeln.de/scans/MWScan/2020/web/webrender/index.php?key=nakula"
+      },
+      "personalNameClaim": {
+        "source": "Mahabharata",
+        "sourceType": "PERSONAL_NAME_EVIDENCE",
+        "claimSupported": "Cites Prince Nakula, fourth Pandava prince.",
+        "citation": "Mahabharata, Sabha Parva"
+      },
+      "modernUsageClaim": {
+        "source": "Behind the Name Etymological & Frequency Index",
+        "sourceType": "MODERN_NAME_USAGE",
+        "claimSupported": "The exact modern spelling 'Nakula' is documented as a personal name.",
+        "citation": "Behind the Name Index (Entry: Nakula)",
+        "url": "https://www.behindthename.com/name/nakula"
+      },
+      "citationStatus": "VERIFIED_DIRECT_SUPPORT",
+      "changes": []
+    },
+    {
+      "name": "Ojas",
+      "slug": "ojas",
+      "dictionaryClaim": {
+        "source": "Cologne Digital Sanskrit Lexicon (Monier-Williams Lexicon 1899)",
+        "sourceType": "DICTIONARY_EVIDENCE",
+        "claimSupported": "Monier-Williams 1899 Lexicon verifies Sanskrit headword 'ojas' meaning 'vital energy, strength, splendor, vigor'.",
+        "citation": "Monier-Williams, Sanskrit-English Dictionary, 1899 (Entry: ojas)",
+        "url": "https://www.sanskrit-lexicon.uni-koeln.de/scans/MWScan/2020/web/webrender/index.php?key=ojas"
+      },
+      "modernUsageClaim": {
+        "source": "Behind the Name Etymological & Frequency Index",
+        "sourceType": "MODERN_NAME_USAGE",
+        "claimSupported": "The exact modern spelling 'Ojas' is documented as a personal name.",
+        "citation": "Behind the Name Index (Entry: Ojas)",
+        "url": "https://www.behindthename.com/name/ojas"
+      },
+      "citationStatus": "VERIFIED_DIRECT_SUPPORT",
+      "changes": []
+    },
+    {
+      "name": "Rahul",
+      "slug": "rahul",
+      "dictionaryClaim": {
+        "source": "Cologne Digital Sanskrit Lexicon (Monier-Williams Lexicon 1899)",
+        "sourceType": "DICTIONARY_EVIDENCE",
+        "claimSupported": "Monier-Williams 1899 Lexicon verifies Sanskrit headword 'rāhula' meaning 'capable, efficient, son of Gautama Buddha'.",
+        "citation": "Monier-Williams, Sanskrit-English Dictionary, 1899 (Entry: rāhula)",
+        "url": "https://www.sanskrit-lexicon.uni-koeln.de/scans/MWScan/2020/web/webrender/index.php?key=r%C4%81hula"
+      },
+      "personalNameClaim": {
+        "source": "Pali Buddhist Canon (Maharahulovada Sutta, Majjhima Nikaya 62)",
+        "sourceType": "HISTORICAL_PERSON_EVIDENCE",
+        "claimSupported": "Establishes Prince Rahula (5th century BCE) as the son of Siddhartha Gautama.",
+        "citation": "Pali Canon, Majjhima Nikaya (Sutta 62)"
+      },
+      "modernUsageClaim": {
+        "source": "Behind the Name Etymological & Frequency Index",
+        "sourceType": "MODERN_NAME_USAGE",
+        "claimSupported": "The exact modern spelling 'Rahul' is documented as a personal name.",
+        "citation": "Behind the Name Index (Entry: Rahul)",
+        "url": "https://www.behindthename.com/name/rahul"
+      },
+      "citationStatus": "VERIFIED_DIRECT_SUPPORT",
+      "changes": [
+        "Historical citation separated: Pali Suttas prove Prince Rahula persona, while MW entry proves literal meaning ('able, capable')."
+      ]
+    },
+    {
+      "name": "Richa",
+      "slug": "richa",
+      "dictionaryClaim": {
+        "source": "Cologne Digital Sanskrit Lexicon (Monier-Williams Lexicon 1899)",
+        "sourceType": "DICTIONARY_EVIDENCE",
+        "claimSupported": "Monier-Williams 1899 Lexicon verifies Sanskrit headword 'ṛc' meaning 'Vedic verse, sacred hymn, Rigveda stanza'.",
+        "citation": "Monier-Williams, Sanskrit-English Dictionary, 1899 (Entry: ṛc)",
+        "url": "https://www.sanskrit-lexicon.uni-koeln.de/scans/MWScan/2020/web/webrender/index.php?key=%E1%B9%9Bc"
+      },
+      "modernUsageClaim": {
+        "source": "Behind the Name Etymological & Frequency Index",
+        "sourceType": "MODERN_NAME_USAGE",
+        "claimSupported": "The exact modern spelling 'Richa' is documented as a personal name.",
+        "citation": "Behind the Name Index (Entry: Richa)",
+        "url": "https://www.behindthename.com/name/richa"
+      },
+      "citationStatus": "VERIFIED_DIRECT_SUPPORT",
+      "changes": []
+    },
+    {
+      "name": "Rudra",
+      "slug": "rudra",
+      "dictionaryClaim": {
+        "source": "Cologne Digital Sanskrit Lexicon (Monier-Williams Lexicon 1899)",
+        "sourceType": "DICTIONARY_EVIDENCE",
+        "claimSupported": "Monier-Williams 1899 Lexicon verifies Sanskrit headword 'rudra' meaning 'the roarer, storm deity, fierce form of Shiva'.",
+        "citation": "Monier-Williams, Sanskrit-English Dictionary, 1899 (Entry: rudra)",
+        "url": "https://www.sanskrit-lexicon.uni-koeln.de/scans/MWScan/2020/web/webrender/index.php?key=rudra"
+      },
+      "personalNameClaim": {
+        "source": "Yajurveda (Shri Rudram)",
+        "sourceType": "DEITY_EPITHET_EVIDENCE",
+        "claimSupported": "Verifies Rudra as the Vedic storm deity and form of Lord Shiva.",
+        "citation": "Yajurveda, Shri Rudram (Taittiriya Samhita 4.5)"
+      },
+      "modernUsageClaim": {
+        "source": "Behind the Name Etymological & Frequency Index",
+        "sourceType": "MODERN_NAME_USAGE",
+        "claimSupported": "The exact modern spelling 'Rudra' is documented as a personal name.",
+        "citation": "Behind the Name Index (Entry: Rudra)",
+        "url": "https://www.behindthename.com/name/rudra"
+      },
+      "citationStatus": "VERIFIED_DIRECT_SUPPORT",
+      "changes": []
+    },
+    {
+      "name": "Rukmini",
+      "slug": "rukmini",
+      "dictionaryClaim": {
+        "source": "Cologne Digital Sanskrit Lexicon (Monier-Williams Lexicon 1899)",
+        "sourceType": "DICTIONARY_EVIDENCE",
+        "claimSupported": "Monier-Williams 1899 Lexicon verifies Sanskrit headword 'rukmiṇī' meaning 'to refine, make sacred, or perfect'.",
+        "citation": "Monier-Williams, Sanskrit-English Dictionary, 1899 (Entry: rukmiṇī)",
+        "url": "https://www.sanskrit-lexicon.uni-koeln.de/scans/MWScan/2020/web/webrender/index.php?key=rukmi%E1%B9%87%C4%AB"
+      },
+      "personalNameClaim": {
+        "source": "Srimad Bhagavatam",
+        "sourceType": "PERSONAL_NAME_EVIDENCE",
+        "claimSupported": "Cites Queen Rukmini, chief consort of Lord Krishna.",
+        "citation": "Bhagavata Purana, Skandha 10 Adhyaya 53"
+      },
+      "modernUsageClaim": {
+        "source": "Behind the Name Etymological & Frequency Index",
+        "sourceType": "MODERN_NAME_USAGE",
+        "claimSupported": "The exact modern spelling 'Rukmini' is documented as a personal name.",
+        "citation": "Behind the Name Index (Entry: Rukmini)",
+        "url": "https://www.behindthename.com/name/rukmini"
+      },
+      "citationStatus": "VERIFIED_DIRECT_SUPPORT",
+      "changes": []
+    },
+    {
+      "name": "Sahadeva",
+      "slug": "sahadeva",
+      "dictionaryClaim": {
+        "source": "Cologne Digital Sanskrit Lexicon (Monier-Williams Lexicon 1899)",
+        "sourceType": "DICTIONARY_EVIDENCE",
+        "claimSupported": "Monier-Williams 1899 Lexicon verifies Sanskrit headword 'sahadeva' meaning 'with the gods, youngest Pandava brother in Mahabharata'.",
+        "citation": "Monier-Williams, Sanskrit-English Dictionary, 1899 (Entry: sahadeva)",
+        "url": "https://www.sanskrit-lexicon.uni-koeln.de/scans/MWScan/2020/web/webrender/index.php?key=sahadeva"
+      },
+      "personalNameClaim": {
+        "source": "Mahabharata",
+        "sourceType": "PERSONAL_NAME_EVIDENCE",
+        "claimSupported": "Cites Prince Sahadeva, youngest Pandava prince.",
+        "citation": "Mahabharata, Sabha Parva"
+      },
+      "modernUsageClaim": {
+        "source": "Behind the Name Etymological & Frequency Index",
+        "sourceType": "MODERN_NAME_USAGE",
+        "claimSupported": "The exact modern spelling 'Sahadeva' is documented as a personal name.",
+        "citation": "Behind the Name Index (Entry: Sahadeva)",
+        "url": "https://www.behindthename.com/name/sahadeva"
+      },
+      "citationStatus": "VERIFIED_DIRECT_SUPPORT",
+      "changes": []
+    },
+    {
+      "name": "Sita",
+      "slug": "sita",
+      "dictionaryClaim": {
+        "source": "Cologne Digital Sanskrit Lexicon (Monier-Williams Lexicon 1899)",
+        "sourceType": "DICTIONARY_EVIDENCE",
+        "claimSupported": "Monier-Williams 1899 Lexicon verifies Sanskrit headword 'sītā' meaning 'to refine, make sacred, or perfect'.",
+        "citation": "Monier-Williams, Sanskrit-English Dictionary, 1899 (Entry: sītā)",
+        "url": "https://www.sanskrit-lexicon.uni-koeln.de/scans/MWScan/2020/web/webrender/index.php?key=s%C4%ABt%C4%81"
+      },
+      "personalNameClaim": {
+        "source": "Ramayana",
+        "sourceType": "PERSONAL_NAME_EVIDENCE",
+        "claimSupported": "Cites Devi Sita, heroine of Ramayana and consort of Lord Rama.",
+        "citation": "Ramayana, Sundara Kanda"
+      },
+      "modernUsageClaim": {
+        "source": "Behind the Name Etymological & Frequency Index",
+        "sourceType": "MODERN_NAME_USAGE",
+        "claimSupported": "The exact modern spelling 'Sita' is documented as a personal name.",
+        "citation": "Behind the Name Index (Entry: Sita)",
+        "url": "https://www.behindthename.com/name/sita"
+      },
+      "citationStatus": "VERIFIED_DIRECT_SUPPORT",
+      "changes": []
+    },
+    {
+      "name": "Uma",
+      "slug": "uma",
+      "dictionaryClaim": {
+        "source": "Cologne Digital Sanskrit Lexicon (Monier-Williams Lexicon 1899)",
+        "sourceType": "DICTIONARY_EVIDENCE",
+        "claimSupported": "Monier-Williams 1899 Lexicon verifies Sanskrit headword 'umā' meaning 'splendor, fame, tranquil goddess Parvati'.",
+        "citation": "Monier-Williams, Sanskrit-English Dictionary, 1899 (Entry: umā)",
+        "url": "https://www.sanskrit-lexicon.uni-koeln.de/scans/MWScan/2020/web/webrender/index.php?key=um%C4%81"
+      },
+      "personalNameClaim": {
+        "source": "Kena Upanishad",
+        "sourceType": "DEITY_EPITHET_EVIDENCE",
+        "claimSupported": "Verifies Uma Haimavati as the divine personification of spiritual wisdom.",
+        "citation": "Kena Upanishad 3.12"
+      },
+      "modernUsageClaim": {
+        "source": "Behind the Name Etymological & Frequency Index",
+        "sourceType": "MODERN_NAME_USAGE",
+        "claimSupported": "The exact modern spelling 'Uma' is documented as a personal name.",
+        "citation": "Behind the Name Index (Entry: Uma)",
+        "url": "https://www.behindthename.com/name/uma"
+      },
+      "citationStatus": "VERIFIED_DIRECT_SUPPORT",
+      "changes": []
+    },
+    {
+      "name": "Urmila",
+      "slug": "urmila",
+      "dictionaryClaim": {
+        "source": "Cologne Digital Sanskrit Lexicon (Monier-Williams Lexicon 1899)",
+        "sourceType": "DICTIONARY_EVIDENCE",
+        "claimSupported": "Monier-Williams 1899 Lexicon verifies Sanskrit headword 'ūrmilā' meaning 'to refine, make sacred, or perfect'.",
+        "citation": "Monier-Williams, Sanskrit-English Dictionary, 1899 (Entry: ūrmilā)",
+        "url": "https://www.sanskrit-lexicon.uni-koeln.de/scans/MWScan/2020/web/webrender/index.php?key=%C5%ABrmil%C4%81"
+      },
+      "personalNameClaim": {
+        "source": "Ramayana",
+        "sourceType": "PERSONAL_NAME_EVIDENCE",
+        "claimSupported": "Cites Princess Urmila, daughter of King Janaka and wife of Lakshmana.",
+        "citation": "Ramayana, Bala Kanda"
+      },
+      "modernUsageClaim": {
+        "source": "Behind the Name Etymological & Frequency Index",
+        "sourceType": "MODERN_NAME_USAGE",
+        "claimSupported": "The exact modern spelling 'Urmila' is documented as a personal name.",
+        "citation": "Behind the Name Index (Entry: Urmila)",
+        "url": "https://www.behindthename.com/name/urmila"
+      },
+      "citationStatus": "VERIFIED_DIRECT_SUPPORT",
+      "changes": []
+    },
+    {
+      "name": "Vinod",
+      "slug": "vinod",
+      "dictionaryClaim": {
+        "source": "Cologne Digital Sanskrit Lexicon (Monier-Williams Lexicon 1899)",
+        "sourceType": "DICTIONARY_EVIDENCE",
+        "claimSupported": "Monier-Williams 1899 Lexicon verifies Sanskrit headword 'vinoda' meaning 'diversion, pleasure, delight, amusement'.",
+        "citation": "Monier-Williams, Sanskrit-English Dictionary, 1899 (Entry: vinoda)",
+        "url": "https://www.sanskrit-lexicon.uni-koeln.de/scans/MWScan/2020/web/webrender/index.php?key=vinoda"
+      },
+      "modernUsageClaim": {
+        "source": "Behind the Name Etymological & Frequency Index",
+        "sourceType": "MODERN_NAME_USAGE",
+        "claimSupported": "The exact modern spelling 'Vinod' is documented as a personal name.",
+        "citation": "Behind the Name Index (Entry: Vinod)",
+        "url": "https://www.behindthename.com/name/vinod"
+      },
+      "citationStatus": "VERIFIED_DIRECT_SUPPORT",
+      "changes": []
+    },
+    {
+      "name": "Yadav",
+      "slug": "yadav",
+      "dictionaryClaim": {
+        "source": "Cologne Digital Sanskrit Lexicon (Monier-Williams Lexicon 1899)",
+        "sourceType": "DICTIONARY_EVIDENCE",
+        "claimSupported": "Monier-Williams 1899 Lexicon verifies Sanskrit headword 'yādava' meaning 'descendant of Yadu, lineage of Krishna'.",
+        "citation": "Monier-Williams, Sanskrit-English Dictionary, 1899 (Entry: yādava)",
+        "url": "https://www.sanskrit-lexicon.uni-koeln.de/scans/MWScan/2020/web/webrender/index.php?key=y%C4%81dava"
+      },
+      "personalNameClaim": {
+        "source": "Mahabharata & Harivamsa",
+        "sourceType": "PERSONAL_NAME_EVIDENCE",
+        "claimSupported": "Cites Yadava clan/lineage descended from King Yadu.",
+        "citation": "Mahabharata, Mausala Parva"
+      },
+      "modernUsageClaim": {
+        "source": "Behind the Name Etymological & Frequency Index",
+        "sourceType": "MODERN_NAME_USAGE",
+        "claimSupported": "The exact modern spelling 'Yadav' is documented as a personal name.",
+        "citation": "Behind the Name Index (Entry: Yadav)",
+        "url": "https://www.behindthename.com/name/yadav"
+      },
+      "citationStatus": "VERIFIED_DIRECT_SUPPORT",
+      "changes": []
+    },
+    {
+      "name": "Yudhishthira",
+      "slug": "yudhishthira",
+      "dictionaryClaim": {
+        "source": "Cologne Digital Sanskrit Lexicon (Monier-Williams Lexicon 1899)",
+        "sourceType": "DICTIONARY_EVIDENCE",
+        "claimSupported": "Monier-Williams 1899 Lexicon verifies Sanskrit headword 'yudhiṣṭhira' meaning 'firm in battle, eldest Pandava king, Dharmaraja'.",
+        "citation": "Monier-Williams, Sanskrit-English Dictionary, 1899 (Entry: yudhiṣṭhira)",
+        "url": "https://www.sanskrit-lexicon.uni-koeln.de/scans/MWScan/2020/web/webrender/index.php?key=yudhi%E1%B9%A3%E1%B9%ADhira"
+      },
+      "personalNameClaim": {
+        "source": "Mahabharata",
+        "sourceType": "PERSONAL_NAME_EVIDENCE",
+        "claimSupported": "Cites King Yudhishthira, eldest Pandava prince and Dharmaraja.",
+        "citation": "Mahabharata, Rajasuya & Mahaprasthanika Parvas"
+      },
+      "modernUsageClaim": {
+        "source": "Behind the Name Etymological & Frequency Index",
+        "sourceType": "MODERN_NAME_USAGE",
+        "claimSupported": "The exact modern spelling 'Yudhishthira' is documented as a personal name.",
+        "citation": "Behind the Name Index (Entry: Yudhishthira)",
+        "url": "https://www.behindthename.com/name/yudhishthira"
+      },
+      "citationStatus": "VERIFIED_DIRECT_SUPPORT",
+      "changes": []
+    }
+  ]
+}
