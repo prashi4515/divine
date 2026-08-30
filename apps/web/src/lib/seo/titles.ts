@@ -197,3 +197,71 @@ export function hubIndexSeo(
     image: ogImageFor({ title: entry.title, eyebrow: "Divine" }),
   };
 }
+
+export function babyNameIndexSeo(): PageMetadataInput {
+  return {
+    title: "Ancient Scripture & Sanskrit Baby Names",
+    description:
+      "Explore verified ancient Indian and Sanskrit baby names with etymology, scripture citations, and 4-tier meanings from the Bhagavad Gita, Mahabharata & Ramayana.",
+    path: "/baby-names",
+    image: ogImageFor({
+      title: "Ancient Scripture Baby Names",
+      subtitle: "Sanskrit etymology & scriptural citations",
+      eyebrow: "Names",
+    }),
+  };
+}
+
+export function babyNameSeo(
+  nameEn: string,
+  classification: string,
+  primaryMeaning: string,
+  primaryScripture?: string
+): PageMetadataInput {
+  let title = `${nameEn} – Meaning & Sanskrit Origin`;
+  if (classification === "SCRIPTURAL_ATTESTED" && primaryScripture) {
+    if (primaryScripture.includes("Mahabharata")) {
+      title = `${nameEn} – Meaning & Mahabharata Origin`;
+    } else if (primaryScripture.includes("Bhagavad Gita")) {
+      title = `${nameEn} – Meaning & Gita Significance`;
+    } else if (primaryScripture.includes("Ramayana")) {
+      title = `${nameEn} – Meaning & Ramayana Origin`;
+    }
+  } else if (classification === "TRADITIONALLY_ATTESTED") {
+    title = `${nameEn} – Meaning & Traditional Origin`;
+  }
+
+  const cleanMeaning = primaryMeaning.replace(/^.*meaning\s+“?/i, "").replace(/”\.?$/, "");
+
+  const description = clampDescription(
+    `What does ${nameEn} mean? Discover the Sanskrit etymology, literal root meaning (${cleanMeaning}), scriptural citations, and modern significance of ${nameEn}.`
+  );
+
+  return {
+    title,
+    description,
+    path: `/baby-names/${nameEn.toLowerCase()}`,
+    type: "article",
+    image: ogImageFor({
+      title: `${nameEn} – Name Meaning`,
+      subtitle: primaryMeaning,
+      eyebrow: "Scripture Baby Names",
+    }),
+  };
+}
+
+
+export function babyNameCategorySeo(category: string): PageMetadataInput {
+  const catCap = category.charAt(0).toUpperCase() + category.slice(1);
+  return {
+    title: `${catCap} Ancient Scripture & Sanskrit Baby Names`,
+    description: `Explore verified ${category} baby names from ancient Sanskrit scriptures, Bhagavad Gita, Mahabharata, and Ramayana with literal meanings and citations.`,
+    path: `/baby-names/${category.toLowerCase()}`,
+    image: ogImageFor({
+      title: `${catCap} Baby Names`,
+      subtitle: "Scripture & Sanskrit origin",
+      eyebrow: "Names",
+    }),
+  };
+}
+

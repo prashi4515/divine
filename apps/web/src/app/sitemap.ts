@@ -10,8 +10,10 @@ import { getEvents, eventHref } from "@/lib/events/store";
 import { getKingdoms, kingdomHref } from "@/lib/kingdoms/store";
 import { getWeapons, weaponHref } from "@/lib/weapons/store";
 import { getConcepts, conceptHref } from "@/lib/concepts/store";
+import { getAllBabyNames } from "@/lib/baby-names/store";
 import {
   getStaticGitaChapter,
+
   getStaticGitaChaptersIndex,
 } from "@/lib/reading/gita-static";
 import { getPublishedWorks } from "@/lib/api/works";
@@ -28,7 +30,8 @@ export type SitemapId =
   | "atlas"
   | "knowledge"
   | "genealogy"
-  | "scriptures";
+  | "scriptures"
+  | "babynames";
 
 export async function generateSitemaps() {
   return [
@@ -40,8 +43,10 @@ export async function generateSitemaps() {
     { id: "knowledge" },
     { id: "genealogy" },
     { id: "scriptures" },
+    { id: "babynames" },
   ] satisfies Array<{ id: SitemapId }>;
 }
+
 
 function hreflangLanguages(cleanPath: string) {
   const norm = normalizeCleanPath(cleanPath);
@@ -509,6 +514,22 @@ export default async function sitemap(props?: Props): Promise<MetadataRoute.Site
   ]);
   const scriptureRoutes = buildScriptureRoutes(works, scriptureChapters);
 
+  const babyNamesList = await safeFetch("baby names", () => getAllBabyNames(), []);
+  const babyNameCategoryRoutes = ["boy", "girl", "unisex", "mahabharata", "bhagavad-gita", "ramayana", "sanskrit"].flatMap((cat) =>
+    localizedEntries(`/baby-names/${cat}`, {
+      changeFrequency: "weekly",
+      priority: 0.8,
+    }),
+  );
+  const babyNameIndividualRoutes = babyNamesList.flatMap((item) =>
+    localizedEntries(`/baby-names/${item.slug}`, {
+      changeFrequency: "monthly",
+      priority: 0.85,
+    }),
+  );
+  const babyNameRoutes = [...babyNameCategoryRoutes, ...babyNameIndividualRoutes];
+  if (id === "babynames") return deduplicateAndSort(babyNameRoutes);
+
   const allRoutes = [
     ...staticRoutes,
     ...chapterRoutes,
@@ -520,7 +541,9 @@ export default async function sitemap(props?: Props): Promise<MetadataRoute.Site
     ...knowledgeRoutes,
     ...genealogyRoutes,
     ...scriptureRoutes,
+    ...babyNameRoutes,
   ];
 
   return deduplicateAndSort(allRoutes);
+
 }

@@ -203,3 +203,24 @@ export {
   type AtlasScene,
   type BuildAtlasSceneInput,
 } from "./atlas-engine";
+
+export {
+  NAME_CLASSIFICATIONS,
+  NAME_CLASSIFICATION_LABELS,
+  NAME_GENDERS,
+  scriptureCitationSchema,
+  babyNameMeaningsSchema,
+  babyNameEtymologySchema,
+  babyNameTranslationSchema,
+  babyNameRecordSchema,
+  babyNameCollectionSchema,
+  type NameClassification,
+  type NameGenderUsage,
+  type ScriptureCitation,
+  type BabyNameMeanings,
+  type BabyNameEtymology,
+  type BabyNameTranslation,
+  type BabyNameRecord,
+  type BabyNameCollection,
+} from "./baby-name";
+
