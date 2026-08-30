@@ -109,7 +109,6 @@ export {
   scriptureCitationSchema,
   babyNameMeaningsSchema,
   babyNameEtymologySchema,
-  babyNameTranslationSchema,
   babyNameRecordSchema,
   babyNameCollectionSchema,
   type NameClassification,
@@ -117,7 +116,6 @@ export {
   type ScriptureCitation,
   type BabyNameMeanings,
   type BabyNameEtymology,
-  type BabyNameTranslation,
   type BabyNameRecord,
   type BabyNameCollection,
 } from "@divine/types";

@@ -1,0 +1,44 @@
+{
+  "candidates": [
+    {
+      "name": "Jardan",
+      "candidateMeaning": "Flowing river",
+      "sourceReferences": [
+        "Web baby name sites"
+      ],
+      "reasonForReview": "Sanskrit root unverified in Monier-Williams"
+    },
+    {
+      "name": "Anik",
+      "candidateMeaning": "Army / soldier",
+      "sourceReferences": [
+        "Modern Indian lists"
+      ],
+      "reasonForReview": "Sanskrit anīka requires root verification"
+    },
+    {
+      "name": "Keval",
+      "candidateMeaning": "Only, absolute",
+      "sourceReferences": [
+        "General name lists"
+      ],
+      "reasonForReview": "Sanskrit kevala requires shloka citation"
+    },
+    {
+      "name": "Reyansh",
+      "candidateMeaning": "Ray of light",
+      "sourceReferences": [
+        "Modern lists"
+      ],
+      "reasonForReview": "Modern portmanteau; lacks Purāṇic citation"
+    },
+    {
+      "name": "Vivaan",
+      "candidateMeaning": "Full of life",
+      "sourceReferences": [
+        "Modern lists"
+      ],
+      "reasonForReview": "Modern name; lacks Monier-Williams entry"
+    }
+  ]
+}

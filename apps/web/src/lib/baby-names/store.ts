@@ -87,7 +87,11 @@ export async function getBabyNamesByCategory(
   }
 
   if (cat === "sanskrit") {
-    return all.filter((item) => item.classification === "SANSKRIT_ETYMOLOGICAL");
+    return all.filter(
+      (item) =>
+        item.classification === "SANSKRIT_LEXICAL" ||
+        item.classification === "SANSKRIT_DERIVED_MODERN"
+    );
   }
 
   return all;

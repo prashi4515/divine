@@ -1,7 +1,236 @@
 {
-  "version": "1.0.0",
-  "updatedAt": "2026-08-30T14:20:00Z",
+  "version": "4.0.0",
+  "updatedAt": "2026-08-30T20:15:00Z",
   "names": [
+    {
+      "id": "name.aadhya",
+      "slug": "aadhya",
+      "nameEn": "Aadhya",
+      "nameSaDevanagari": "आद्या",
+      "nameIAST": "Ādyā",
+      "startingLetter": "A",
+      "genderUsage": "girl",
+      "classification": "PURANIC",
+      "meanings": {
+        "primaryMeaning": "Aadhya is a Sanskrit name meaning “first,” “primordial,” “original,” or “unrivaled excellence.”",
+        "literalSanskrit": "First, initial, or original.",
+        "traditionalInterpretation": "Epithet of Goddess Durga/Shakti as the primordial divine power of the universe.",
+        "modernUsageNote": "Popular modern Indian girl's personal name representing leadership and grace."
+      },
+      "etymology": {
+        "sanskritRoot": "आदि (ādi)",
+        "rootMeaning": "beginning, first, or origin",
+        "grammaticalNotes": "Feminine form of ādya (first/initial) derived from ādi + yat suffix.",
+        "confidenceLevel": "high"
+      },
+      "primaryScripture": "Devi Bhagavata Purana",
+      "citations": [
+        {
+          "scriptureId": "purana",
+          "bookOrParva": "Devi Bhagavata Purana",
+          "sectionOrVerse": "Skandha 3, Adhyaya 6",
+          "sanskritSnippetSa": "सर्वकारणकारणात् आद्या शक्तिः",
+          "translationEn": "The primordial power (Ādyā Śakti) is the ultimate cause of all causes.",
+          "verifiableNote": "Attested epithet of the Divine Mother in Purāṇic literature."
+        }
+      ],
+      "themes": ["primordial", "shakti", "first", "divine"],
+      "relatedNameIds": ["name.aditi"],
+      "alternateSpellings": ["Aadya", "Adya"],
+      "verificationStatus": "verified"
+    },
+    {
+      "id": "name.aarav",
+      "slug": "aarav",
+      "nameEn": "Aarav",
+      "nameSaDevanagari": "आरव",
+      "nameIAST": "Ārava",
+      "startingLetter": "A",
+      "genderUsage": "boy",
+      "classification": "SANSKRIT_LEXICAL",
+      "meanings": {
+        "primaryMeaning": "Aarav is a Sanskrit-derived name meaning “peaceful,” “calm sound,” or “melodious resonance.”",
+        "literalSanskrit": "Sound, noise, or musical resonance.",
+        "traditionalInterpretation": "In classical Sanskrit lexicons, ārava denotes a pleasant sound or musical resonance.",
+        "modernUsageNote": "One of the most popular modern Indian names for boys, cherished for its peaceful aura."
+      },
+      "etymology": {
+        "sanskritRoot": "रु (ru)",
+        "rootMeaning": "to sound, hum, or resonate",
+        "grammaticalNotes": "Prefix ā + root ru + ghañ suffix -> ārava (sound/resonance).",
+        "confidenceLevel": "high"
+      },
+      "primaryScripture": "Classical Sanskrit Lexicons",
+      "citations": [
+        {
+          "scriptureId": "classical-sanskrit",
+          "bookOrParva": "Monier-Williams Sanskrit Lexicon",
+          "sectionOrVerse": "Entry: ārava",
+          "translationEn": "Sound, noise, musical resonance.",
+          "verifiableNote": "Sanskrit noun attested in classical lexicons; modernly used as a personal name symbolizing calm melody."
+        }
+      ],
+      "themes": ["peace", "sound", "harmony"],
+      "relatedNameIds": ["name.aarohi"],
+      "alternateSpellings": ["Arav", "Aaravh"],
+      "verificationStatus": "verified"
+    },
+    {
+      "id": "name.abhimanyu",
+      "slug": "abhimanyu",
+      "nameEn": "Abhimanyu",
+      "nameSaDevanagari": "अभिमन्यु",
+      "nameIAST": "Abhimanyu",
+      "startingLetter": "A",
+      "genderUsage": "boy",
+      "classification": "MAHABHARATA",
+      "meanings": {
+        "primaryMeaning": "Abhimanyu is a Sanskrit name literally meaning “heroic,” “passionate,” “courageous,” or “possessing self-respect.”",
+        "literalSanskrit": "Full of spirit, courage, or passion.",
+        "traditionalInterpretation": "A fearless, spirited warrior.",
+        "characterContext": "Son of Arjuna and Subhadra, legendary young hero of the Kurukshetra war in the Mahabharata.",
+        "modernUsageNote": "A classic heroic boy's personal name."
+      },
+      "etymology": {
+        "sanskritRoot": "अभि + मन् (abhi + man)",
+        "rootMeaning": "abhi (towards) + manyu (courage/spirit)",
+        "grammaticalNotes": "Prefix abhi + noun manyu.",
+        "confidenceLevel": "high"
+      },
+      "primaryScripture": "Mahabharata",
+      "citations": [
+        {
+          "scriptureId": "mahabharata",
+          "bookOrParva": "Drona Parva",
+          "sectionOrVerse": "Adhyaya 48",
+          "sanskritSnippetSa": "अभिमन्युर् महाबाहुर् बाल्य एवातिरथिः",
+          "translationEn": "Mighty-armed Abhimanyu was a supreme warrior even in his youth.",
+          "verifiableNote": "Mahabharata Drona Parva recounts Abhimanyu's legendary valor in battle."
+        }
+      ],
+      "associatedEntityId": "person.abhimanyu",
+      "relatedPersonIds": ["person.arjuna", "person.subhadra"],
+      "themes": ["courage", "heroism", "valor"],
+      "relatedNameIds": ["name.arjuna"],
+      "alternateSpellings": ["Abhimanya"],
+      "verificationStatus": "verified"
+    },
+    {
+      "id": "name.acyuta",
+      "slug": "acyuta",
+      "nameEn": "Acyuta",
+      "nameSaDevanagari": "अच्युत",
+      "nameIAST": "Acyuta",
+      "startingLetter": "A",
+      "genderUsage": "boy",
+      "classification": "BHAGAVAD_GITA",
+      "meanings": {
+        "primaryMeaning": "Acyuta is a Sanskrit name literally meaning “infallible,” “imperishable,” or “one who never falls.”",
+        "literalSanskrit": "Not fallen; immovable; imperishable.",
+        "traditionalInterpretation": "An epithet of Sri Krishna in Vishnu Sahasranama indicating unshakeable divine nature.",
+        "characterContext": "Directly invoked by Arjuna in BG 1.21 to position his chariot between the armies.",
+        "modernUsageNote": "A traditional, spiritual boy's personal name."
+      },
+      "etymology": {
+        "sanskritRoot": "अ + च्यु (a + cyu)",
+        "rootMeaning": "a (negation) + cyu (to fall, slip)",
+        "grammaticalNotes": "Negation prefix a + past participle of root cyu.",
+        "confidenceLevel": "high"
+      },
+      "primaryScripture": "Bhagavad Gita",
+      "citations": [
+        {
+          "scriptureId": "bhagavad-gita",
+          "bookOrParva": "Bhagavad Gita",
+          "sectionOrVerse": "BG 1.21",
+          "sanskritSnippetSa": "सेनयोरुभयोर्मध्ये रथं स्थापय मेऽच्युत।",
+          "translationEn": "O Infallible One (Acyuta), please draw my chariot up between the two armies.",
+          "verifiableNote": "Arjuna invokes Krishna as Acyuta in Chapter 1 of the Gita."
+        }
+      ],
+      "associatedDeityId": "deity.krishna",
+      "relatedGitaVerseIds": ["bg.1.21"],
+      "themes": ["infallible", "divine", "steadfast"],
+      "relatedNameIds": ["name.krishna"],
+      "alternateSpellings": ["Achyuta", "Achyut"],
+      "verificationStatus": "verified"
+    },
+    {
+      "id": "name.aditi",
+      "slug": "aditi",
+      "nameEn": "Aditi",
+      "nameSaDevanagari": "अदिति",
+      "nameIAST": "Aditi",
+      "startingLetter": "A",
+      "genderUsage": "girl",
+      "classification": "VEDIC",
+      "meanings": {
+        "primaryMeaning": "Aditi is a Vedic Sanskrit name meaning “boundless,” “unbroken,” “freedom,” or “infinite cosmic expansion.”",
+        "literalSanskrit": "Boundless, un-bound, or undivided.",
+        "traditionalInterpretation": "The Vedic Mother of the Devas (Adityas) representing the boundless universe and creative nature.",
+        "modernUsageNote": "A beloved, timeless girl's name symbolizing cosmic grace and freedom."
+      },
+      "etymology": {
+        "sanskritRoot": "अ + दो (a + dā)",
+        "rootMeaning": "a (not) + diti (limitation)",
+        "grammaticalNotes": "Prefix a + diti (limitation) -> Aditi (boundless/infinite).",
+        "confidenceLevel": "high"
+      },
+      "primaryScripture": "Rigveda",
+      "citations": [
+        {
+          "scriptureId": "rigveda",
+          "bookOrParva": "Rigveda Mandala 1",
+          "sectionOrVerse": "Hymn 89, Verse 10",
+          "sanskritSnippetSa": "अदितिर्द्यौरदितिरन्तरिक्षम् अदितिर्माता स पिता स पुत्रः।",
+          "translationEn": "Aditi is the sky, Aditi is the atmosphere, Aditi is the mother, father, and son...",
+          "verifiableNote": "Famous Vedic hymn celebrating Aditi as cosmic infinity."
+        }
+      ],
+      "themes": ["boundless", "freedom", "divine-mother", "universe"],
+      "relatedNameIds": ["name.aditya"],
+      "alternateSpellings": ["Aditee"],
+      "verificationStatus": "verified"
+    },
+    {
+      "id": "name.aditya",
+      "slug": "aditya",
+      "nameEn": "Aditya",
+      "nameSaDevanagari": "आदित्य",
+      "nameIAST": "Āditya",
+      "startingLetter": "A",
+      "genderUsage": "boy",
+      "classification": "BHAGAVAD_GITA",
+      "meanings": {
+        "primaryMeaning": "Aditya means “son of Aditi,” “sun deity,” “radiant solar deity,” or “luminous light.”",
+        "literalSanskrit": "Belonging to Aditi; solar.",
+        "traditionalInterpretation": "The Sun God who illuminates the worlds and dispels darkness.",
+        "characterContext": "Invoked in Gita 10.21 where Krishna states 'Among the Adityas, I am Vishnu.'",
+        "modernUsageNote": "One of the most classic and widely chosen names for boys in India."
+      },
+      "etymology": {
+        "sanskritRoot": "अदिति (aditi)",
+        "rootMeaning": "Aditi + ṇya patronymic suffix",
+        "grammaticalNotes": "Patronymic derivative of Aditi -> Āditya.",
+        "confidenceLevel": "high"
+      },
+      "primaryScripture": "Bhagavad Gita & Rigveda",
+      "citations": [
+        {
+          "scriptureId": "bhagavad-gita",
+          "bookOrParva": "Bhagavad Gita",
+          "sectionOrVerse": "BG 10.21",
+          "sanskritSnippetSa": "आदित्यानामहं विष्णुः",
+          "translationEn": "Among the Adityas, I am Vishnu.",
+          "verifiableNote": "Krishna explicitly cites Aditya in Chapter 10 of the Gita."
+        }
+      ],
+      "relatedGitaVerseIds": ["bg.10.21"],
+      "themes": ["sun", "radiance", "light", "deity"],
+      "relatedNameIds": ["name.aditi"],
+      "alternateSpellings": ["Adithya", "Adit"],
+      "verificationStatus": "verified"
+    },
     {
       "id": "name.arjuna",
       "slug": "arjuna",
@@ -10,7 +239,7 @@
       "nameIAST": "Arjuna",
       "startingLetter": "A",
       "genderUsage": "boy",
-      "classification": "SCRIPTURAL_ATTESTED",
+      "classification": "MAHABHARATA",
       "meanings": {
         "primaryMeaning": "Arjuna is a Sanskrit name literally meaning “bright,” “white,” “clear,” or “silver.”",
         "literalSanskrit": "White, bright, silver, or stainless.",
@@ -24,7 +253,7 @@
         "grammaticalNotes": "Derived from Sanskrit root arj + Unadi suffix un.",
         "confidenceLevel": "high"
       },
-      "primaryScripture": "Bhagavad Gita & Mahabharata",
+      "primaryScripture": "Mahabharata & Bhagavad Gita",
       "citations": [
         {
           "scriptureId": "mahabharata",
@@ -50,43 +279,46 @@
       "relatedPersonIds": ["person.kunti", "person.pandu", "person.yudhishthira", "person.bhima"],
       "themes": ["courage", "purity", "wisdom", "dharma"],
       "relatedNameIds": ["name.partha", "name.phalguna"],
-      "alternateSpellings": ["Arjun", "Arjoona"]
+      "alternateSpellings": ["Arjun", "Arjoona"],
+      "verificationStatus": "verified"
     },
     {
-      "id": "name.tanay",
-      "slug": "tanay",
-      "nameEn": "Tanay",
-      "nameSaDevanagari": "तनय",
-      "nameIAST": "Tanaya",
-      "startingLetter": "T",
+      "id": "name.chanakya",
+      "slug": "chanakya",
+      "nameEn": "Chanakya",
+      "nameSaDevanagari": "चाणक्य",
+      "nameIAST": "Cāṇakya",
+      "startingLetter": "C",
       "genderUsage": "boy",
-      "classification": "SANSKRIT_ETYMOLOGICAL",
+      "classification": "PURANIC",
       "meanings": {
-        "primaryMeaning": "Tanay is a modern Indian boy's name derived from the classical Sanskrit word Tanaya (तनय), meaning “son,” “offspring,” or “continuation of the family lineage.”",
-        "literalSanskrit": "Born of oneself; extending the family lineage.",
-        "traditionalInterpretation": "In classical Sanskrit, tanaya refers to a son who extends the family line.",
-        "modernUsageNote": "Tanay is a modern personal name form resulting from Hindi/vernacular schwa-deletion of the classical Sanskrit noun tanaya."
+        "primaryMeaning": "Chanakya is an ancient Indian personal name meaning “son of Chānaka,” “master strategist,” or “renowned scholar.”",
+        "literalSanskrit": "Patronymic derivative of sage Chānaka.",
+        "traditionalInterpretation": "Symbol of supreme political wisdom, statecraft, and intellectual mastery.",
+        "characterContext": "Master strategist and prime minister of Chandragupta Maurya who established the Mauryan Empire.",
+        "modernUsageNote": "A distinguished Indian boy's personal name associated with wisdom and leadership."
       },
       "etymology": {
-        "sanskritRoot": "तन् (tan)",
-        "rootMeaning": "to extend, stretch out, or continue",
-        "grammaticalNotes": "Derived from root tan + suffix as/aya -> Tanaya (masculine noun: son; feminine Tanayā: daughter).",
+        "sanskritRoot": "चणक (caṇaka)",
+        "rootMeaning": "sage Chānaka",
+        "grammaticalNotes": "Patronymic derivative formed with yañ suffix.",
         "confidenceLevel": "high"
       },
-      "primaryScripture": "Vedic & Classical Sanskrit Literature",
+      "primaryScripture": "Vishnu Purana & Arthashastra",
       "citations": [
         {
-          "scriptureId": "rigveda",
-          "bookOrParva": "Rigveda Mandala 1",
-          "sectionOrVerse": "Hymn 92, Verse 13",
-          "sanskritSnippetSa": "तनयाय तोकाय",
-          "translationEn": "For the offspring and child.",
-          "verifiableNote": "Rigveda 1.92.13 attests the common noun tanaya ('offspring/child'), not an ancient hero or personal name called Tanay."
+          "scriptureId": "purana",
+          "bookOrParva": "Vishnu Purana",
+          "sectionOrVerse": "Amsa 4, Adhyaya 24",
+          "sanskritSnippetSa": "ततो नव नन्दान् कौटिल्यः समुद्धरिष्यति",
+          "translationEn": "Kautilya (Chanakya) will uproot the nine Nandas and establish Chandragupta.",
+          "verifiableNote": "Purāṇic text recording Chanakya establishing the Mauryan dynasty."
         }
       ],
-      "themes": ["family", "blessing", "lineage"],
-      "relatedNameIds": ["name.tanuja", "name.tanvi"],
-      "alternateSpellings": ["Tanaye", "Tanai"]
+      "themes": ["wisdom", "strategy", "leadership", "scholar"],
+      "relatedNameIds": ["name.chaitanya"],
+      "alternateSpellings": ["Chanakya"],
+      "verificationStatus": "verified"
     },
     {
       "id": "name.krishna",
@@ -96,7 +328,7 @@
       "nameIAST": "Kṛṣṇa",
       "startingLetter": "K",
       "genderUsage": "boy",
-      "classification": "SCRIPTURAL_ATTESTED",
+      "classification": "DEITY_OR_EPITHET",
       "meanings": {
         "primaryMeaning": "Krishna is a Sanskrit name literally meaning “dark,” “dark-blue,” or “the all-attractive one.”",
         "literalSanskrit": "Dark, dark-complexioned, or black.",
@@ -126,7 +358,8 @@
       "relatedPlaceIds": ["place.dwaraka", "place.mathura"],
       "themes": ["divine", "attraction", "wisdom", "protection"],
       "relatedNameIds": ["name.keshava", "name.madhava"],
-      "alternateSpellings": ["Krsna", "Krish"]
+      "alternateSpellings": ["Krsna", "Krish"],
+      "verificationStatus": "verified"
     },
     {
       "id": "name.rama",
@@ -136,7 +369,7 @@
       "nameIAST": "Rāma",
       "startingLetter": "R",
       "genderUsage": "boy",
-      "classification": "SCRIPTURAL_ATTESTED",
+      "classification": "RAMAYANA",
       "meanings": {
         "primaryMeaning": "Rama is a Sanskrit name literally meaning “pleasing,” “charming,” “delightful,” or “one who brings joy.”",
         "literalSanskrit": "Pleasing, beautiful, or delightful.",
@@ -163,27 +396,66 @@
       ],
       "themes": ["dharma", "righteousness", "joy", "nobility"],
       "relatedNameIds": ["name.ramachandra"],
-      "alternateSpellings": ["Ram", "Raam"]
+      "alternateSpellings": ["Ram", "Raam"],
+      "verificationStatus": "verified"
     },
     {
-      "id": "name.ananya",
-      "slug": "ananya",
-      "nameEn": "Ananya",
-      "nameSaDevanagari": "अनन्या",
-      "nameIAST": "Ananyā",
-      "startingLetter": "A",
-      "genderUsage": "girl",
-      "classification": "SANSKRIT_ETYMOLOGICAL",
+      "id": "name.tanay",
+      "slug": "tanay",
+      "nameEn": "Tanay",
+      "nameSaDevanagari": "तनय",
+      "nameIAST": "Tanaya",
+      "startingLetter": "T",
+      "genderUsage": "boy",
+      "classification": "SANSKRIT_LEXICAL",
       "meanings": {
-        "primaryMeaning": "Ananya is a Sanskrit-derived name meaning “undivided,” “unique,” “incomparable,” or “having no other.”",
-        "literalSanskrit": "Without another; non-different; peerless.",
-        "traditionalInterpretation": "In spiritual contexts, refers to single-minded, undivided devotion.",
-        "modernUsageNote": "Ananya is a popular modern girl's personal name derived from the Sanskrit adjective ananyā."
+        "primaryMeaning": "Tanay is a modern Indian boy's name derived from the classical Sanskrit word Tanaya (तनय), meaning “son,” “offspring,” or “continuation of the family lineage.”",
+        "literalSanskrit": "Born of oneself; extending the family lineage.",
+        "traditionalInterpretation": "In classical Sanskrit, tanaya refers to a son who extends the family line.",
+        "modernUsageNote": "Tanay is a modern personal name form resulting from Hindi/vernacular schwa-deletion of the classical Sanskrit noun tanaya."
       },
       "etymology": {
-        "sanskritRoot": "अन् + अन्य (an + anya)",
-        "rootMeaning": "an (negation) + anya (other)",
-        "grammaticalNotes": "Negative prefix an + adjective anya.",
+        "sanskritRoot": "तन् (tan)",
+        "rootMeaning": "to extend, stretch out, or continue",
+        "grammaticalNotes": "Derived from root tan + suffix as/aya -> Tanaya (masculine noun: son; feminine Tanayā: daughter).",
+        "confidenceLevel": "high"
+      },
+      "primaryScripture": "Vedic & Classical Sanskrit Lexicons",
+      "citations": [
+        {
+          "scriptureId": "rigveda",
+          "bookOrParva": "Rigveda Mandala 1",
+          "sectionOrVerse": "Hymn 92, Verse 13",
+          "sanskritSnippetSa": "तनयाय तोकाय",
+          "translationEn": "For the offspring and child.",
+          "verifiableNote": "Rigveda 1.92.13 attests the common noun tanaya ('offspring/child'), not an ancient hero or personal name called Tanay."
+        }
+      ],
+      "themes": ["family", "blessing", "lineage"],
+      "relatedNameIds": ["name.tanuja", "name.tanvi"],
+      "alternateSpellings": ["Tanaye", "Tanai"],
+      "verificationStatus": "verified"
+    },
+    {
+      "id": "name.vedant",
+      "slug": "vedant",
+      "nameEn": "Vedant",
+      "nameSaDevanagari": "वेदान्त",
+      "nameIAST": "Vedānta",
+      "startingLetter": "V",
+      "genderUsage": "boy",
+      "classification": "BHAGAVAD_GITA",
+      "meanings": {
+        "primaryMeaning": "Vedant is a Sanskrit name meaning “pinnacle of Vedic wisdom,” “end of the Vedas,” or “ultimate spiritual truth.”",
+        "literalSanskrit": "Veda (Vedic knowledge) + anta (end/fulfillment/pinnacle).",
+        "traditionalInterpretation": "The Upanishadic philosophy representing the ultimate goal of Vedic wisdom.",
+        "characterContext": "Invoked in Gita 15.15 where Krishna states 'I am the author of Vedanta and the knower of the Vedas.'",
+        "modernUsageNote": "A very popular modern Indian boy's name."
+      },
+      "etymology": {
+        "sanskritRoot": "विद + अन्त (vid + anta)",
+        "rootMeaning": "vid (to know) -> Veda (knowledge) + anta (end/summit)",
+        "grammaticalNotes": "Compound noun Veda + anta -> Vedānta.",
         "confidenceLevel": "high"
       },
       "primaryScripture": "Bhagavad Gita",
@@ -191,209 +463,17 @@
         {
           "scriptureId": "bhagavad-gita",
           "bookOrParva": "Bhagavad Gita",
-          "sectionOrVerse": "BG 9.22",
-          "sanskritSnippetSa": "अनन्याश्चिन्तयन्तो मां ये जनाः पर्युपासते।",
-          "translationEn": "To those who meditate on Me with undivided devotion...",
-          "verifiableNote": "Bhagavad Gita 9.22 uses the adjective ananyā to describe undivided focus, not as a historical personal name."
+          "sectionOrVerse": "BG 15.15",
+          "sanskritSnippetSa": "वेदान्तकृद्वेदविदेव चाहम्",
+          "translationEn": "I am the compiler of Vedanta and the knower of the Vedas.",
+          "verifiableNote": "Krishna explicitly identifies himself as the author of Vedanta in BG 15.15."
         }
       ],
-      "relatedGitaVerseIds": ["bg.9.22"],
-      "themes": ["uniqueness", "devotion", "purity"],
-      "relatedNameIds": ["name.ananya-boy"],
-      "alternateSpellings": ["Ananyaa"]
-    },
-    {
-      "id": "name.abhimanyu",
-      "slug": "abhimanyu",
-      "nameEn": "Abhimanyu",
-      "nameSaDevanagari": "अभिमन्यु",
-      "nameIAST": "Abhimanyu",
-      "startingLetter": "A",
-      "genderUsage": "boy",
-      "classification": "SCRIPTURAL_ATTESTED",
-      "meanings": {
-        "primaryMeaning": "Abhimanyu is a Sanskrit name literally meaning “heroic,” “passionate,” “courageous,” or “possessing self-respect.”",
-        "literalSanskrit": "Full of spirit, courage, or passion.",
-        "traditionalInterpretation": "A fearless, spirited warrior.",
-        "characterContext": "Son of Arjuna and Subhadra, legendary young hero of the Kurukshetra war in the Mahabharata.",
-        "modernUsageNote": "A classic heroic boy's personal name."
-      },
-      "etymology": {
-        "sanskritRoot": "अभि + मन् (abhi + man)",
-        "rootMeaning": "abhi (towards) + manyu (courage/spirit)",
-        "grammaticalNotes": "Prefix abhi + noun manyu.",
-        "confidenceLevel": "high"
-      },
-      "primaryScripture": "Mahabharata",
-      "citations": [
-        {
-          "scriptureId": "mahabharata",
-          "bookOrParva": "Drona Parva",
-          "sectionOrVerse": "Adhyaya 48",
-          "sanskritSnippetSa": "अभिमन्युर् महाबाहुर् बाल्य एवातिरथिः",
-          "translationEn": "Mighty-armed Abhimanyu was a supreme warrior even in his youth.",
-          "verifiableNote": "Mahabharata Drona Parva recounts Abhimanyu's legendary valor in battle."
-        }
-      ],
-      "associatedEntityId": "person.abhimanyu",
-      "relatedPersonIds": ["person.arjuna", "person.subhadra"],
-      "themes": ["courage", "heroism", "valor"],
-      "relatedNameIds": ["name.arjuna"],
-      "alternateSpellings": ["Abhimanya"]
-    },
-    {
-      "id": "name.karna",
-      "slug": "karna",
-      "nameEn": "Karna",
-      "nameSaDevanagari": "कर्ण",
-      "nameIAST": "Karṇa",
-      "startingLetter": "K",
-      "genderUsage": "boy",
-      "classification": "SCRIPTURAL_ATTESTED",
-      "meanings": {
-        "primaryMeaning": "Karna is a Sanskrit name literally meaning “ear,” “adorned with ear-rings,” or “helmsman.”",
-        "literalSanskrit": "Ear, golden ear-ringed, or guide.",
-        "traditionalInterpretation": "Emblem of incomparable charity (Danaveera) and loyalty.",
-        "characterContext": "Son of Surya and Kunti, King of Anga, formidable archer in the Mahabharata.",
-        "modernUsageNote": "A traditional boy's personal name associated with generosity."
-      },
-      "etymology": {
-        "sanskritRoot": "कर्ण् (karṇ)",
-        "rootMeaning": "ear or ear-shaped golden ornament",
-        "grammaticalNotes": "Named Karna because born with natural golden earrings (kavaca-kundala).",
-        "confidenceLevel": "high"
-      },
-      "primaryScripture": "Mahabharata",
-      "citations": [
-        {
-          "scriptureId": "mahabharata",
-          "bookOrParva": "Adi Parva",
-          "sectionOrVerse": "Adhyaya 111",
-          "sanskritSnippetSa": "सहजेन कवचेन कुण्डलाभ्यां च भूषितः। तेन कर्ण इति ख्यातो लोके स्वेनैव कर्मणा॥",
-          "translationEn": "Adorned with natural armor and golden ear-rings, he became renowned in the world as Karna.",
-          "verifiableNote": "Mahabharata explicitly states Karna received his name from his golden earrings."
-        }
-      ],
-      "associatedEntityId": "person.karna",
-      "relatedPersonIds": ["person.kunti", "person.surya"],
-      "themes": ["generosity", "courage", "loyalty"],
-      "relatedNameIds": ["name.radheya"],
-      "alternateSpellings": ["Karan", "Karn"]
-    },
-    {
-      "id": "name.acyuta",
-      "slug": "acyuta",
-      "nameEn": "Acyuta",
-      "nameSaDevanagari": "अच्युत",
-      "nameIAST": "Acyuta",
-      "startingLetter": "A",
-      "genderUsage": "boy",
-      "classification": "TRADITIONALLY_ATTESTED",
-      "meanings": {
-        "primaryMeaning": "Acyuta is a Sanskrit name literally meaning “infallible,” “imperishable,” or “one who never falls.”",
-        "literalSanskrit": "Not fallen; immovable; imperishable.",
-        "traditionalInterpretation": "An epithet of Sri Krishna in Vishnu Sahasranama indicating unshakeable divine nature.",
-        "characterContext": "Directly invoked by Arjuna in BG 1.21 to position his chariot between the armies.",
-        "modernUsageNote": "A traditional, spiritual boy's personal name."
-      },
-      "etymology": {
-        "sanskritRoot": "अ + च्यु (a + cyu)",
-        "rootMeaning": "a (negation) + cyu (to fall, slip)",
-        "grammaticalNotes": "Negation prefix a + past participle of root cyu.",
-        "confidenceLevel": "high"
-      },
-      "primaryScripture": "Bhagavad Gita",
-      "citations": [
-        {
-          "scriptureId": "bhagavad-gita",
-          "bookOrParva": "Bhagavad Gita",
-          "sectionOrVerse": "BG 1.21",
-          "sanskritSnippetSa": "सेनयोरुभयोर्मध्ये रथं स्थापय मेऽच्युत।",
-          "translationEn": "O Infallible One (Acyuta), please draw my chariot up between the two armies.",
-          "verifiableNote": "Arjuna invokes Krishna as Acyuta in Chapter 1 of the Gita."
-        }
-      ],
-      "associatedDeityId": "deity.krishna",
-      "relatedGitaVerseIds": ["bg.1.21"],
-      "themes": ["infallible", "divine", "steadfast"],
-      "relatedNameIds": ["name.krishna"],
-      "alternateSpellings": ["Achyuta", "Achyut"]
-    },
-    {
-      "id": "name.subhadra",
-      "slug": "subhadra",
-      "nameEn": "Subhadra",
-      "nameSaDevanagari": "सुभद्रा",
-      "nameIAST": "Subhadrā",
-      "startingLetter": "S",
-      "genderUsage": "girl",
-      "classification": "SCRIPTURAL_ATTESTED",
-      "meanings": {
-        "primaryMeaning": "Subhadra is a Sanskrit name literally meaning “very auspicious,” “blessed,” or “glorious.”",
-        "literalSanskrit": "Su (good/very) + bhadra (auspicious/blessed).",
-        "traditionalInterpretation": "One who brings abundant blessings and grace.",
-        "characterContext": "Sister of Krishna and Balarama, wife of Arjuna, mother of Abhimanyu in the Mahabharata.",
-        "modernUsageNote": "A classic, elegant Indian girl's personal name."
-      },
-      "etymology": {
-        "sanskritRoot": "सु + भद्र (su + bhadra)",
-        "rootMeaning": "su (auspicious) + bhadra (blessed/gentle)",
-        "grammaticalNotes": "Feminine compound ending in long ā.",
-        "confidenceLevel": "high"
-      },
-      "primaryScripture": "Mahabharata",
-      "citations": [
-        {
-          "scriptureId": "mahabharata",
-          "bookOrParva": "Adi Parva",
-          "sectionOrVerse": "Adhyaya 221",
-          "sanskritSnippetSa": "सुभद्रा नाम या बह्नी वासुदेवस्य भगिनी",
-          "translationEn": "Subhadra, the beloved sister of Vasudeva (Krishna)...",
-          "verifiableNote": "Mahabharata Adi Parva recounts the marriage of Arjuna and Subhadra."
-        }
-      ],
-      "associatedEntityId": "person.subhadra",
-      "relatedPersonIds": ["person.arjuna", "deity.krishna", "person.abhimanyu"],
-      "themes": ["auspicious", "grace", "blessing"],
-      "relatedNameIds": ["name.bhadra"],
-      "alternateSpellings": ["Subhadraa"]
-    },
-    {
-      "id": "name.arya",
-      "slug": "arya",
-      "nameEn": "Arya",
-      "nameSaDevanagari": "आर्य",
-      "nameIAST": "Ārya",
-      "startingLetter": "A",
-      "genderUsage": "unisex",
-      "classification": "SANSKRIT_ETYMOLOGICAL",
-      "meanings": {
-        "primaryMeaning": "Arya is a Sanskrit-derived name meaning “noble,” “honorable,” “respectable,” or “righteous.”",
-        "literalSanskrit": "Noble, cultivated, or worthy of respect.",
-        "traditionalInterpretation": "An honorific term describing a person of noble character and dharmic conduct.",
-        "modernUsageNote": "A very popular modern unisex personal name in India and internationally."
-      },
-      "etymology": {
-        "sanskritRoot": "ऋ (ṛ)",
-        "rootMeaning": "to move, reach, or cultivate",
-        "grammaticalNotes": "Derived from root ṛ + yat suffix -> Ārya.",
-        "confidenceLevel": "high"
-      },
-      "primaryScripture": "Bhagavad Gita & Vedic Literature",
-      "citations": [
-        {
-          "scriptureId": "bhagavad-gita",
-          "bookOrParva": "Bhagavad Gita",
-          "sectionOrVerse": "BG 2.2",
-          "sanskritSnippetSa": "अनार्यजुष्टमस्वर्ग्यमकीर्तिकरमर्जुन।",
-          "translationEn": "This dejection is un-noble (an-ārya), unworthy of an honorable person...",
-          "verifiableNote": "Krishna uses the term Ārya in BG 2.2 to denote noble conduct, not as an individual hero's name."
-        }
-      ],
-      "relatedGitaVerseIds": ["bg.2.2"],
-      "themes": ["nobility", "dharma", "respect"],
-      "relatedNameIds": ["name.aryan"],
-      "alternateSpellings": ["Aarya", "Aaryan"]
+      "relatedGitaVerseIds": ["bg.15.15"],
+      "themes": ["wisdom", "vedas", "philosophy", "truth"],
+      "relatedNameIds": ["name.ved"],
+      "alternateSpellings": ["Vedanta", "Vedanth"],
+      "verificationStatus": "verified"
     }
   ]
 }

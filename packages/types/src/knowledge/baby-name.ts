@@ -2,18 +2,36 @@ import { z } from "zod";
 
 export const NAME_CLASSIFICATIONS = [
   "SCRIPTURAL_ATTESTED",
-  "TRADITIONALLY_ATTESTED",
-  "SANSKRIT_ETYMOLOGICAL",
-  "MODERN_USAGE",
+  "SANSKRIT_LEXICAL",
+  "VEDIC",
+  "UPANISHADIC",
+  "MAHABHARATA",
+  "RAMAYANA",
+  "BHAGAVAD_GITA",
+  "PURANIC",
+  "DEITY_OR_EPITHET",
+  "SANSKRIT_DERIVED_MODERN",
+  "MODERN_USAGE_WITH_UNCERTAIN_ETYMOLOGY",
+  "NEEDS_REVIEW",
+  "REJECTED",
 ] as const;
 
 export type NameClassification = (typeof NAME_CLASSIFICATIONS)[number];
 
 export const NAME_CLASSIFICATION_LABELS: Record<NameClassification, string> = {
   SCRIPTURAL_ATTESTED: "Scriptural Attested",
-  TRADITIONALLY_ATTESTED: "Traditionally Attested",
-  SANSKRIT_ETYMOLOGICAL: "Sanskrit Etymological",
-  MODERN_USAGE: "Modern Usage & Inspired",
+  SANSKRIT_LEXICAL: "Sanskrit Lexical",
+  VEDIC: "Vedic Literature",
+  UPANISHADIC: "Upanishadic",
+  MAHABHARATA: "Mahabharata",
+  RAMAYANA: "Ramayana",
+  BHAGAVAD_GITA: "Bhagavad Gita",
+  PURANIC: "Puranic",
+  DEITY_OR_EPITHET: "Deity Epithet",
+  SANSKRIT_DERIVED_MODERN: "Sanskrit Derived Modern",
+  MODERN_USAGE_WITH_UNCERTAIN_ETYMOLOGY: "Modern Usage",
+  NEEDS_REVIEW: "Needs Review",
+  REJECTED: "Rejected",
 };
 
 export const NAME_GENDERS = ["boy", "girl", "unisex"] as const;
@@ -60,19 +78,11 @@ export const babyNameEtymologySchema = z.object({
 
 export type BabyNameEtymology = z.infer<typeof babyNameEtymologySchema>;
 
-export const babyNameTranslationSchema = z.object({
-  languageCode: z.string(),
-  nameLocalized: z.string(),
-  primaryMeaningLocalized: z.string(),
-  scriptureContextLocalized: z.string().optional(),
-});
-
-export type BabyNameTranslation = z.infer<typeof babyNameTranslationSchema>;
-
 export const babyNameRecordSchema = z.object({
   id: z.string(),
   slug: z.string(),
   nameEn: z.string(),
+  preferredName: z.string().optional(),
   nameSaDevanagari: z.string(),
   nameIAST: z.string(),
   startingLetter: z.string(),
@@ -81,6 +91,7 @@ export const babyNameRecordSchema = z.object({
   meanings: babyNameMeaningsSchema,
   etymology: babyNameEtymologySchema,
   primaryScripture: z.string(),
+  scriptureSources: z.array(z.string()).optional(),
   citations: z.array(scriptureCitationSchema),
   associatedEntityId: z.string().optional(),
   associatedDeityId: z.string().optional(),
@@ -90,7 +101,7 @@ export const babyNameRecordSchema = z.object({
   themes: z.array(z.string()),
   relatedNameIds: z.array(z.string()),
   alternateSpellings: z.array(z.string()),
-  translations: z.array(babyNameTranslationSchema).optional(),
+  verificationStatus: z.enum(["verified", "needs-review", "rejected"]).default("verified"),
 });
 
 export type BabyNameRecord = z.infer<typeof babyNameRecordSchema>;
@@ -102,3 +113,10 @@ export const babyNameCollectionSchema = z.object({
 });
 
 export type BabyNameCollection = z.infer<typeof babyNameCollectionSchema>;
+
+export interface CandidateNameReview {
+  name: string;
+  candidateMeaning: string;
+  sourceReferences: string[];
+  reasonForReview: string;
+}
