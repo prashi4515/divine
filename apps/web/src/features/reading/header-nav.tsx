@@ -13,6 +13,7 @@ export function HeaderNav() {
 
   const items = [
     { href: localizePath("/bhagavad-gita", lang), label: t.allChapters },
+    { href: localizePath("/baby-names", lang), label: t.navBabyNames },
     { href: localizePath("/atlas", lang), label: t.navAtlas },
     { href: localizePath("/events", lang), label: t.navEvents },
     { href: localizePath("/kingdoms", lang), label: t.navKingdoms },

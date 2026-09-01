@@ -80,11 +80,56 @@ export default async function BabyNameCategoryPage({ params }: PageProps) {
 
         <header className="mb-8 border-b border-border pb-6">
           <h1 className="text-3xl sm:text-4xl font-serif font-bold text-foreground mb-2">
-            {catCap} Ancient Scripture & Sanskrit Baby Names
+            {catCap} Ancient Scripture &amp; Sanskrit Baby Names
           </h1>
-          <p className="text-muted-foreground text-base max-w-3xl leading-relaxed">
+          <p className="text-muted-foreground text-base max-w-3xl leading-relaxed mb-4">
             Explore verified {category} baby names with Sanskrit etymology, literal root meanings, and direct scriptural citations.
           </p>
+
+          <nav aria-label="Other Baby Name Categories" className="flex flex-wrap gap-2 pt-2">
+            <Link
+              href="/baby-names/boy"
+              className={`px-3 py-1 rounded-full border text-xs font-medium transition-colors ${category === "boy" ? "bg-primary text-primary-foreground border-primary" : "bg-card border-border text-foreground hover:border-primary"}`}
+            >
+              Sanskrit Baby Boy Names
+            </Link>
+            <Link
+              href="/baby-names/girl"
+              className={`px-3 py-1 rounded-full border text-xs font-medium transition-colors ${category === "girl" ? "bg-primary text-primary-foreground border-primary" : "bg-card border-border text-foreground hover:border-primary"}`}
+            >
+              Sanskrit Baby Girl Names
+            </Link>
+            <Link
+              href="/baby-names/unisex"
+              className={`px-3 py-1 rounded-full border text-xs font-medium transition-colors ${category === "unisex" ? "bg-primary text-primary-foreground border-primary" : "bg-card border-border text-foreground hover:border-primary"}`}
+            >
+              Sanskrit Unisex Names
+            </Link>
+            <Link
+              href="/baby-names/mahabharata"
+              className={`px-3 py-1 rounded-full border text-xs font-medium transition-colors ${category === "mahabharata" ? "bg-primary text-primary-foreground border-primary" : "bg-card border-border text-foreground hover:border-primary"}`}
+            >
+              Mahabharata Names
+            </Link>
+            <Link
+              href="/baby-names/bhagavad-gita"
+              className={`px-3 py-1 rounded-full border text-xs font-medium transition-colors ${category === "bhagavad-gita" ? "bg-primary text-primary-foreground border-primary" : "bg-card border-border text-foreground hover:border-primary"}`}
+            >
+              Bhagavad Gita Names
+            </Link>
+            <Link
+              href="/baby-names/ramayana"
+              className={`px-3 py-1 rounded-full border text-xs font-medium transition-colors ${category === "ramayana" ? "bg-primary text-primary-foreground border-primary" : "bg-card border-border text-foreground hover:border-primary"}`}
+            >
+              Ramayana Names
+            </Link>
+            <Link
+              href="/baby-names/sanskrit"
+              className={`px-3 py-1 rounded-full border text-xs font-medium transition-colors ${category === "sanskrit" ? "bg-primary text-primary-foreground border-primary" : "bg-card border-border text-foreground hover:border-primary"}`}
+            >
+              Sanskrit Names
+            </Link>
+          </nav>
         </header>
 
         <section className="grid grid-cols-1 sm:grid-cols-2 gap-4">

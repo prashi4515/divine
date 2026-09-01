@@ -26,6 +26,7 @@ export function SiteFooter() {
   const explore = [
     { href: "/", label: t.home },
     { href: "/bhagavad-gita", label: t.allChapters },
+    { href: "/baby-names", label: t.navBabyNames },
     { href: "/atlas", label: t.navAtlas },
     { href: "/events", label: t.navEvents },
     { href: "/kingdoms", label: t.navKingdoms },

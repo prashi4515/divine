@@ -34,6 +34,7 @@ export type Messages = {
   previousChapter: string;
   nextChapter: string;
   allChapters: string;
+  navBabyNames: string;
   navAtlas: string;
   navEvents: string;
   navKingdoms: string;
@@ -169,6 +170,7 @@ const en = build("en", {
   previousChapter: "Previous Chapter",
   nextChapter: "Next Chapter",
   allChapters: "All Chapters",
+  navBabyNames: "Baby Names",
   navAtlas: "Atlas",
   navEvents: "Events",
   navKingdoms: "Kingdoms",
@@ -296,6 +298,7 @@ const hi = build("hi", {
   previousChapter: "पिछला अध्याय",
   nextChapter: "अगला अध्याय",
   allChapters: "सभी अध्याय",
+  navBabyNames: "बेबी नाम",
   navAtlas: "एटलस",
   navEvents: "घटनाएँ",
   navKingdoms: "राज्य",
@@ -423,6 +426,7 @@ const te = build("te", {
   previousChapter: "మునుపటి అధ్యాయం",
   nextChapter: "తర్వాతి అధ్యాయం",
   allChapters: "అన్ని అధ్యాయాలు",
+  navBabyNames: "శిశువు పేర్లు",
   navAtlas: "అట్లాస్",
   navEvents: "సంఘటనలు",
   navKingdoms: "రాజ్యాలు",
@@ -545,6 +549,7 @@ const kn = build("kn", {
   previousChapter: "ಹಿಂದಿನ ಅಧ್ಯಾಯ",
   nextChapter: "ಮುಂದಿನ ಅಧ್ಯಾಯ",
   allChapters: "ಎಲ್ಲಾ ಅಧ್ಯಾಯಗಳು",
+  navBabyNames: "ಮಕ್ಕಳ ಹೆಸರುಗಳು",
   navAtlas: "ಅಟ್ಲಾಸ್",
   navEvents: "ಘಟನೆಗಳು",
   navKingdoms: "ರಾಜ್ಯಗಳು",
@@ -667,6 +672,7 @@ const ta = build("ta", {
   previousChapter: "முந்தைய அத்தியாயம்",
   nextChapter: "அடுத்த அத்தியாயம்",
   allChapters: "அனைத்து அத்தியாயங்கள்",
+  navBabyNames: "குழந்தை பெயர்கள்",
   navAtlas: "அட்லஸ்",
   navEvents: "நிகழ்வுகள்",
   navKingdoms: "அரசுகள்",
@@ -789,6 +795,7 @@ const ml = build("ml", {
   previousChapter: "മുൻ അധ്യായം",
   nextChapter: "അടുത്ത അധ്യായം",
   allChapters: "എല്ലാ അധ്യായങ്ങളും",
+  navBabyNames: "കുഞ്ഞിന്റെ പേരുകൾ",
   navAtlas: "അറ്റ്ലസ്",
   navEvents: "സംഭവങ്ങൾ",
   navKingdoms: "രാജ്യങ്ങൾ",
@@ -911,6 +918,7 @@ const or = build("or", {
   previousChapter: "ପୂର୍ବ ଅଧ୍ୟାୟ",
   nextChapter: "ପରବର୍ତ୍ତୀ ଅଧ୍ୟାୟ",
   allChapters: "ସମସ୍ତ ଅଧ୍ୟାୟ",
+  navBabyNames: "ଶିଶୁ ନାମ",
   navAtlas: "ଆଟଲାସ୍",
   navEvents: "ଘଟଣା",
   navKingdoms: "ରାଜ୍ୟ",
@@ -1028,6 +1036,7 @@ const sa = build("sa", {
   previousChapter: "पूर्वो अध्यायः",
   nextChapter: "अनन्तरो अध्यायः",
   allChapters: "सर्वे अध्यायाः",
+  navBabyNames: "शिशुनामानि",
   navAtlas: "मानचित्रम्",
   navEvents: "घटनाः",
   navKingdoms: "राज्यानि",

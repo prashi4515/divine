@@ -9,6 +9,7 @@ import {
   Crown,
   GitBranch,
   Globe2,
+  Heart,
   Home,
   Library,
   Menu,
@@ -37,6 +38,12 @@ export function MobileNav() {
   const items = [
     { href: "/", label: t.home, icon: Home, match: (p: string) => p === "/" },
     { href: "/bhagavad-gita", label: t.allChapters, icon: BookOpen },
+    {
+      href: "/baby-names",
+      label: t.navBabyNames,
+      icon: Heart,
+      match: (p: string) => p.startsWith("/baby-names"),
+    },
     {
       href: "/atlas",
       label: t.navAtlas,

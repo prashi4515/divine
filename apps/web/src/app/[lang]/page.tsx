@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { FeaturedVerse } from "@/features/reading/featured-verse";
+import { HomeBabyNamesSection } from "@/features/reading/home-baby-names";
 import { HomeBrowseCta } from "@/features/reading/home-browse-cta";
 import { HomeChaptersPreview } from "@/features/reading/home-chapters-preview";
 import { HomeHero } from "@/features/reading/home-hero";
@@ -67,6 +68,7 @@ export default async function LocalizedHomePage({ params }: Props) {
         <HomeHero />
         <FeaturedVerse verse={verseOfTheDay} />
         <HomeChaptersPreview />
+        <HomeBabyNamesSection />
         <HomeLanguages />
         <HomeWisdom />
         <HomeValues />
