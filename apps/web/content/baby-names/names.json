@@ -735,19 +735,19 @@
       "nameSaDevanagari": "अगस्त्य",
       "nameIAST": "Agastya",
       "startingLetter": "A",
-      "genderUsage": "girl",
+      "genderUsage": "boy",
       "classification": "SANSKRIT_LEXICAL",
       "meanings": {
-        "primaryMeaning": "to refine, make sacred, or perfect",
-        "literalSanskrit": "to refine, make sacred, or perfect",
-        "traditionalInterpretation": "to refine, make sacred, or perfect",
-        "characterContext": "Cites Maharshi Agastya as a revered Vedic sage & Ramayana hermit.",
-        "modernUsageNote": "Agastya is a modern personal name derived from or associated with the Sanskrit word Agastya."
+        "primaryMeaning": "He who humbles mountains; revered Vedic sage",
+        "literalSanskrit": "Mountain-humbler (from aga \"mountain\" + styā \"to stop\")",
+        "traditionalInterpretation": "A revered Vedic sage symbolizing spiritual power, wisdom, and mastery over nature.",
+        "characterContext": "Agastya is a celebrated Vedic Rishi who authored Rigvedic hymns, welcomed Rama in the Ramayana, and possessed formidable ascetic power in the Mahabharata.",
+        "modernUsageNote": "Agastya is a traditional scriptural name used for boys in India."
       },
       "etymology": {
-        "sanskritRoot": "अगम + स्था (agama + sthā)",
-        "rootMeaning": "to refine, make sacred, or perfect",
-        "grammaticalNotes": "Agastya is a modern name associated with the Sanskrit word Agastya.",
+        "sanskritRoot": "अग (aga) + स्त्या (styā)",
+        "rootMeaning": "mountain + to stop/humble",
+        "grammaticalNotes": "Compound of aga (uncut mountain) and styā/stbha (to humble or fix).",
         "confidenceLevel": "high"
       },
       "primaryScripture": "Rigveda & Ramayana",
@@ -756,20 +756,12 @@
       ],
       "citations": [
         {
-          "scriptureId": "classical-sanskrit",
-          "bookOrParva": "Cologne Digital Sanskrit Lexicon (Monier-Williams Lexicon 1899)",
-          "sectionOrVerse": "Monier-Williams, Sanskrit-English Dictionary, 1899 (Entry: agastya)",
-          "sanskritSnippetSa": "Agastya",
-          "translationEn": "to refine, make sacred, or perfect",
-          "verifiableNote": "Monier-Williams 1899 Lexicon verifies Sanskrit headword 'agastya' meaning 'to refine, make sacred, or perfect'."
-        },
-        {
           "scriptureId": "rigveda",
-          "bookOrParva": "Rigveda & Ramayana",
-          "sectionOrVerse": "Rigveda 1.165 & Ramayana Aranya Kanda",
-          "sanskritSnippetSa": "Agastya",
-          "translationEn": "to refine, make sacred, or perfect",
-          "verifiableNote": "Cites Maharshi Agastya as a revered Vedic sage & Ramayana hermit."
+          "bookOrParva": "Rigveda",
+          "sectionOrVerse": "Rigveda 1.165",
+          "sanskritSnippetSa": "अगस्त्यः",
+          "translationEn": "Vedic sage Agastya",
+          "verifiableNote": "Verifies Agastya as a principal composer of Rigvedic hymns."
         }
       ],
       "themes": [
@@ -792,19 +784,19 @@
       "nameSaDevanagari": "अग्नि",
       "nameIAST": "Agni",
       "startingLetter": "A",
-      "genderUsage": "girl",
+      "genderUsage": "boy",
       "classification": "DEITY_OR_EPITHET",
       "meanings": {
-        "primaryMeaning": "to refine, make sacred, or perfect",
-        "literalSanskrit": "to refine, make sacred, or perfect",
-        "traditionalInterpretation": "to refine, make sacred, or perfect",
-        "characterContext": "Verifies Agni as the Vedic deity of fire and sacrifice.",
-        "modernUsageNote": "Agni is a modern personal name derived from or associated with the Sanskrit word Agni."
+        "primaryMeaning": "Fire, sacrificial flame, radiance",
+        "literalSanskrit": "Fire, flame, or sacred spark",
+        "traditionalInterpretation": "The divine cosmic element of fire, purity, transformation, and divine illumination.",
+        "characterContext": "Agni is the primary Vedic God of Fire, acceptor of sacrifices, and divine messenger between humans and gods across Vedic literature.",
+        "modernUsageNote": "Agni is an ancient Vedic deity name used for boys symbolizing energy and brilliance."
       },
       "etymology": {
         "sanskritRoot": "अग् (ag)",
-        "rootMeaning": "to refine, make sacred, or perfect",
-        "grammaticalNotes": "Agni is a modern name associated with the Sanskrit word Agni.",
+        "rootMeaning": "to move, burn, or illuminate",
+        "grammaticalNotes": "Derived from Sanskrit root ag (to move forward, ignite, or shine).",
         "confidenceLevel": "high"
       },
       "primaryScripture": "Rigveda",
@@ -813,20 +805,12 @@
       ],
       "citations": [
         {
-          "scriptureId": "classical-sanskrit",
-          "bookOrParva": "Cologne Digital Sanskrit Lexicon (Monier-Williams Lexicon 1899)",
-          "sectionOrVerse": "Monier-Williams, Sanskrit-English Dictionary, 1899 (Entry: agni)",
-          "sanskritSnippetSa": "Agni",
-          "translationEn": "to refine, make sacred, or perfect",
-          "verifiableNote": "Monier-Williams 1899 Lexicon verifies Sanskrit headword 'agni' meaning 'to refine, make sacred, or perfect'."
-        },
-        {
           "scriptureId": "rigveda",
           "bookOrParva": "Rigveda",
           "sectionOrVerse": "Rigveda 1.1.1",
-          "sanskritSnippetSa": "Agni",
-          "translationEn": "to refine, make sacred, or perfect",
-          "verifiableNote": "Verifies Agni as the Vedic deity of fire and sacrifice."
+          "sanskritSnippetSa": "अग्निमीळे पुरोहितं",
+          "translationEn": "I praise Agni, the chosen priest and divine minister of sacrifice.",
+          "verifiableNote": "Verifies Agni as the primary Vedic deity of fire and sacrifice."
         }
       ],
       "themes": [
@@ -2440,29 +2424,29 @@
       "genderUsage": "boy",
       "classification": "SANSKRIT_LEXICAL",
       "meanings": {
-        "primaryMeaning": "to refine, make sacred, or perfect",
-        "literalSanskrit": "to refine, make sacred, or perfect",
-        "traditionalInterpretation": "to refine, make sacred, or perfect",
-        "modernUsageNote": "Arnav is a modern personal name derived from or associated with the Sanskrit word Arnav."
+        "primaryMeaning": "Ocean, sea, surging wave",
+        "literalSanskrit": "Ocean, stream, or body of roaring water",
+        "traditionalInterpretation": "Vastness, depth, and majestic flow like the open ocean.",
+        "modernUsageNote": "Arnav is a popular modern Indian baby boy name derived from the classical Sanskrit word Arṇava (अर्णव)."
       },
       "etymology": {
-        "sanskritRoot": "ऋ (ṛ)",
-        "rootMeaning": "to refine, make sacred, or perfect",
-        "grammaticalNotes": "Arnav is a modern name associated with the Sanskrit word Arṇava.",
+        "sanskritRoot": "अर्णस् (arṇas)",
+        "rootMeaning": "wave, flood, or water stream",
+        "grammaticalNotes": "Derived from arṇas (wave/water) + suffix va, yielding arṇava (ocean).",
         "confidenceLevel": "high"
       },
-      "primaryScripture": "Cologne Digital Sanskrit Lexicon",
+      "primaryScripture": "Classical Sanskrit Literature",
       "scriptureSources": [
         "Cologne Digital Sanskrit Lexicon"
       ],
       "citations": [
         {
           "scriptureId": "classical-sanskrit",
-          "bookOrParva": "Cologne Digital Sanskrit Lexicon (Monier-Williams Lexicon 1899)",
-          "sectionOrVerse": "Monier-Williams, Sanskrit-English Dictionary, 1899 (Entry: arṇava)",
-          "sanskritSnippetSa": "Arnav",
-          "translationEn": "to refine, make sacred, or perfect",
-          "verifiableNote": "Monier-Williams 1899 Lexicon verifies Sanskrit headword 'arṇava' meaning 'to refine, make sacred, or perfect'."
+          "bookOrParva": "Classical Sanskrit Literature",
+          "sectionOrVerse": "Rigveda 10.190.1",
+          "sanskritSnippetSa": "समुद्रो अर्णवः",
+          "translationEn": "From ocean surging waves time was born.",
+          "verifiableNote": "Monier-Williams Lexicon verifies Sanskrit headword arṇava meaning ocean or flood of water."
         }
       ],
       "themes": [
@@ -4893,16 +4877,16 @@
       "genderUsage": "boy",
       "classification": "SANSKRIT_LEXICAL",
       "meanings": {
-        "primaryMeaning": "wooden vessel, trough, royal preceptor Dronacharya",
-        "literalSanskrit": "wooden vessel, trough, royal preceptor Dronacharya",
-        "traditionalInterpretation": "to refine, make sacred, or perfect",
-        "modernUsageNote": "Drona is a modern personal name derived from or associated with the Sanskrit word Drona.",
-        "characterContext": "Cites Dronacharya, royal military preceptor of Kuru princes."
+        "primaryMeaning": "Wooden vessel; sacred preceptor Dronacharya",
+        "literalSanskrit": "Wooden vessel, bucket, or trough",
+        "traditionalInterpretation": "Symbolizes containment of sacred power, strength, and military mastery.",
+        "characterContext": "Dronacharya (Drona) was the royal guru and military preceptor to the Kuru princes (Pandavas and Kauravas) in the Mahabharata.",
+        "modernUsageNote": "Drona is a scriptural name given to boys in honor of the Mahabharata preceptor Dronacharya."
       },
       "etymology": {
-        "sanskritRoot": "द्रोण",
-        "rootMeaning": "to refine, make sacred, or perfect",
-        "grammaticalNotes": "Drona is a modern name associated with the Sanskrit word Drona.",
+        "sanskritRoot": "द्रु (dru)",
+        "rootMeaning": "tree or wood",
+        "grammaticalNotes": "Lexically denotes a wooden vessel; named Drona because he was born in a wooden vessel according to epic tradition.",
         "confidenceLevel": "high"
       },
       "primaryScripture": "Mahabharata",
@@ -4911,19 +4895,11 @@
       ],
       "citations": [
         {
-          "scriptureId": "classical-sanskrit",
-          "bookOrParva": "Cologne Digital Sanskrit Lexicon (Monier-Williams Lexicon 1899)",
-          "sectionOrVerse": "Monier-Williams, Sanskrit-English Dictionary, 1899 (Entry: droṇa)",
-          "sanskritSnippetSa": "Drona",
-          "translationEn": "wooden vessel, trough, royal preceptor Dronacharya",
-          "verifiableNote": "Monier-Williams 1899 Lexicon verifies Sanskrit headword 'droṇa' meaning 'wooden vessel, trough, royal preceptor Dronacharya'."
-        },
-        {
           "scriptureId": "mahabharata",
           "bookOrParva": "Mahabharata",
           "sectionOrVerse": "Mahabharata, Drona Parva",
-          "sanskritSnippetSa": "Drona",
-          "translationEn": "wooden vessel, trough, royal preceptor Dronacharya",
+          "sanskritSnippetSa": "द्रोणः",
+          "translationEn": "Dronacharya, master of arms and preceptor.",
           "verifiableNote": "Cites Dronacharya, royal military preceptor of Kuru princes."
         }
       ],
@@ -10405,22 +10381,22 @@
       "slug": "rahul",
       "nameEn": "Rahul",
       "preferredName": "Rahul",
-      "nameSaDevanagari": "राहुलो",
+      "nameSaDevanagari": "राहुल",
       "nameIAST": "Rāhula",
       "startingLetter": "R",
       "genderUsage": "boy",
       "classification": "SCRIPTURAL_ATTESTED",
       "meanings": {
-        "primaryMeaning": "capable, efficient, son of Gautama Buddha",
-        "literalSanskrit": "capable, efficient, son of Gautama Buddha",
-        "traditionalInterpretation": "to refine, make sacred, or perfect",
-        "modernUsageNote": "Rahul is a modern personal name derived from or associated with the Sanskrit word Rahul.",
-        "characterContext": "Establishes Prince Rahula (5th century BCE) as the son of Siddhartha Gautama."
+        "primaryMeaning": "Capable, efficient, conqueror of obstacles",
+        "literalSanskrit": "Capable, efficient; or bond of affection",
+        "traditionalInterpretation": "One who overcomes obstacles with capability and efficiency.",
+        "characterContext": "Prince Rāhula (5th century BCE) was the son of Siddhartha Gautama (the Buddha) and Yosodharā, who later became an enlightened disciple.",
+        "modernUsageNote": "Rahul is one of the most widely used modern Indian names for boys."
       },
       "etymology": {
-        "sanskritRoot": "राहुलो",
-        "rootMeaning": "to refine, make sacred, or perfect",
-        "grammaticalNotes": "Rahul is a modern name associated with the Sanskrit word Rahul.",
+        "sanskritRoot": "राहु (Rāhu) + ल (la)",
+        "rootMeaning": "capable, conqueror of obstacles",
+        "grammaticalNotes": "Derived from Sanskrit/Pali rāhula denoting capability; traditionally interpreted as bond or conqueror of hardship.",
         "confidenceLevel": "high"
       },
       "primaryScripture": "Pali Buddhist Canon (Maharahulovada Sutta, Majjhima Nikaya 62)",
@@ -10430,18 +10406,10 @@
       "citations": [
         {
           "scriptureId": "classical-sanskrit",
-          "bookOrParva": "Cologne Digital Sanskrit Lexicon (Monier-Williams Lexicon 1899)",
-          "sectionOrVerse": "Monier-Williams, Sanskrit-English Dictionary, 1899 (Entry: rāhula)",
-          "sanskritSnippetSa": "Rahul",
-          "translationEn": "capable, efficient, son of Gautama Buddha",
-          "verifiableNote": "Monier-Williams 1899 Lexicon verifies Sanskrit headword 'rāhula' meaning 'capable, efficient, son of Gautama Buddha'."
-        },
-        {
-          "scriptureId": "classical-sanskrit",
-          "bookOrParva": "Pali Buddhist Canon (Maharahulovada Sutta, Majjhima Nikaya 62)",
-          "sectionOrVerse": "Pali Canon, Majjhima Nikaya (Sutta 62)",
-          "sanskritSnippetSa": "Rahul",
-          "translationEn": "capable, efficient, son of Gautama Buddha",
+          "bookOrParva": "Pali Buddhist Canon",
+          "sectionOrVerse": "Majjhima Nikaya (Sutta 62)",
+          "sanskritSnippetSa": "राहुलो",
+          "translationEn": "Prince Rahula, disciple of Buddha.",
           "verifiableNote": "Establishes Prince Rahula (5th century BCE) as the son of Siddhartha Gautama."
         }
       ],
@@ -11266,28 +11234,28 @@
       "classification": "SANSKRIT_LEXICAL",
       "meanings": {
         "primaryMeaning": "Vedic verse, sacred hymn, Rigveda stanza",
-        "literalSanskrit": "Vedic verse, sacred hymn, Rigveda stanza",
-        "traditionalInterpretation": "to refine, make sacred, or perfect",
-        "modernUsageNote": "Richa is a modern personal name derived from or associated with the Sanskrit word Richa."
+        "literalSanskrit": "Sacred verse of praise or Rigvedic stanza",
+        "traditionalInterpretation": "A sacred verse embodying divine knowledge, sacred resonance, and praise.",
+        "modernUsageNote": "Richa is a popular modern Indian baby girl name derived from the Vedic Sanskrit term Ṛcā (ऋचा)."
       },
       "etymology": {
-        "sanskritRoot": "ऋचा",
-        "rootMeaning": "to refine, make sacred, or perfect",
-        "grammaticalNotes": "Richa is a modern name associated with the Sanskrit word Richa.",
+        "sanskritRoot": "ऋच् (ṛc)",
+        "rootMeaning": "to praise, honor, or recite sacred verse",
+        "grammaticalNotes": "Feminine noun ṛcā derived from root ṛc (to praise or recite).",
         "confidenceLevel": "high"
       },
-      "primaryScripture": "Cologne Digital Sanskrit Lexicon",
+      "primaryScripture": "Rigveda",
       "scriptureSources": [
         "Cologne Digital Sanskrit Lexicon"
       ],
       "citations": [
         {
           "scriptureId": "classical-sanskrit",
-          "bookOrParva": "Cologne Digital Sanskrit Lexicon (Monier-Williams Lexicon 1899)",
-          "sectionOrVerse": "Monier-Williams, Sanskrit-English Dictionary, 1899 (Entry: ṛc)",
-          "sanskritSnippetSa": "Richa",
-          "translationEn": "Vedic verse, sacred hymn, Rigveda stanza",
-          "verifiableNote": "Monier-Williams 1899 Lexicon verifies Sanskrit headword 'ṛc' meaning 'Vedic verse, sacred hymn, Rigveda stanza'."
+          "bookOrParva": "Classical Sanskrit Literature",
+          "sectionOrVerse": "Monier-Williams Lexicon 1899 (Entry: ṛcā)",
+          "sanskritSnippetSa": "ऋचा",
+          "translationEn": "Vedic verse or sacred stanza of praise.",
+          "verifiableNote": "Monier-Williams Lexicon verifies Sanskrit headword ṛcā meaning Vedic verse or sacred hymn."
         }
       ],
       "themes": [

@@ -216,32 +216,44 @@ export function babyNameSeo(
   nameEn: string,
   classification: string,
   primaryMeaning: string,
-  primaryScripture?: string
+  primaryScripture?: string,
+  nameSaDevanagari?: string,
+  nameIAST?: string,
+  genderUsage?: string
 ): PageMetadataInput {
-  let title = `${nameEn} – Meaning & Sanskrit Origin`;
-  if (classification === "SCRIPTURAL_ATTESTED" && primaryScripture) {
-    if (primaryScripture.includes("Mahabharata")) {
-      title = `${nameEn} – Meaning & Mahabharata Origin`;
-    } else if (primaryScripture.includes("Bhagavad Gita")) {
-      title = `${nameEn} – Meaning & Gita Significance`;
-    } else if (primaryScripture.includes("Ramayana")) {
-      title = `${nameEn} – Meaning & Ramayana Origin`;
-    }
-  } else if (classification === "TRADITIONALLY_ATTESTED") {
-    title = `${nameEn} – Meaning & Traditional Origin`;
-  }
+  const title = `${nameEn} Name Meaning, Sanskrit Spelling & Origin`;
 
   const cleanMeaning = primaryMeaning.replace(/^.*meaning\s+“?/i, "").replace(/”\.?$/, "");
 
-  const description = clampDescription(
-    `What does ${nameEn} mean? Discover the Sanskrit etymology, literal root meaning (${cleanMeaning}), scriptural citations, and modern significance of ${nameEn}.`
-  );
+  let desc = `Discover the meaning of ${nameEn} (“${cleanMeaning}”)`;
+
+  if (nameSaDevanagari && nameIAST) {
+    desc += `, Sanskrit spelling (${nameSaDevanagari} / ${nameIAST})`;
+  } else if (nameSaDevanagari) {
+    desc += `, Sanskrit spelling (${nameSaDevanagari})`;
+  }
+
+  if (genderUsage) {
+    const capitalizedGender = genderUsage.charAt(0).toUpperCase() + genderUsage.slice(1);
+    desc += `, ${capitalizedGender} name gender`;
+  }
+
+  const isDictionary = !primaryScripture || /cologne|monier|lexicon|dictionary/i.test(primaryScripture);
+
+  if (!isDictionary && primaryScripture) {
+    desc += `, and verified origin in ${primaryScripture}.`;
+  } else {
+    desc += `, and verified traditional Sanskrit origin.`;
+  }
+
+  const description = clampDescription(desc, 170);
 
   return {
     title,
     description,
     path: `/baby-names/${nameEn.toLowerCase()}`,
     type: "article",
+    absoluteTitle: true,
     image: ogImageFor({
       title: `${nameEn} – Name Meaning`,
       subtitle: primaryMeaning,
