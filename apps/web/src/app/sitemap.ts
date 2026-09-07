@@ -98,6 +98,33 @@ function localizedEntries(
   return entries;
 }
 
+function unlocalizedEntries(
+  path: string,
+  opts: {
+    lastModified?: Date;
+    changeFrequency?: MetadataRoute.Sitemap[number]["changeFrequency"];
+    priority?: number;
+  } = {},
+): MetadataRoute.Sitemap {
+  const norm = normalizeCleanPath(path);
+  const alternates = {
+    languages: {
+      en: absoluteUrl(norm),
+      "x-default": absoluteUrl(norm),
+    },
+  };
+
+  return [
+    {
+      url: absoluteUrl(norm),
+      lastModified: opts.lastModified ?? new Date(),
+      changeFrequency: opts.changeFrequency ?? "monthly",
+      priority: opts.priority ?? 0.5,
+      alternates,
+    },
+  ];
+}
+
 function isValidSitemapUrl(url: unknown): url is string {
   if (typeof url !== "string" || !url.trim()) return false;
   if (url.includes("undefined") || url.includes("null") || url.includes("NaN")) return false;
@@ -516,13 +543,13 @@ export default async function sitemap(props?: Props): Promise<MetadataRoute.Site
 
   const babyNamesList = await safeFetch("baby names", () => getAllBabyNames(), []);
   const babyNameCategoryRoutes = ["boy", "girl", "unisex", "mahabharata", "bhagavad-gita", "ramayana", "sanskrit"].flatMap((cat) =>
-    localizedEntries(`/baby-names/${cat}`, {
+    unlocalizedEntries(`/baby-names/${cat}`, {
       changeFrequency: "weekly",
       priority: 0.8,
     }),
   );
   const babyNameIndividualRoutes = babyNamesList.flatMap((item) =>
-    localizedEntries(`/baby-names/${item.slug}`, {
+    unlocalizedEntries(`/baby-names/${item.slug}`, {
       changeFrequency: "monthly",
       priority: 0.85,
     }),

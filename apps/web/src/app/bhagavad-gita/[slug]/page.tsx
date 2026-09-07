@@ -26,6 +26,7 @@ type ChapterPageProps = {
  * Commentaries load from `/api/gita/commentary/*` (on-disk, ~30–50ms, no Neon).
  */
 export const dynamic = "force-static";
+export const dynamicParams = false;
 export const revalidate = false;
 
 export function generateStaticParams() {

@@ -22,6 +22,7 @@ import {
 import { ENTITY_KIND_LABELS, type EntityKind } from "@/lib/knowledge/types";
 
 export const dynamic = "force-static";
+export const dynamicParams = false;
 export const revalidate = false;
 
 type PageProps = { params: Promise<{ kind: string; slug: string }> };

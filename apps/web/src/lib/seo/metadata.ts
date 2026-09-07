@@ -130,9 +130,10 @@ export function buildPageMetadata(input: PageMetadataInput): Metadata {
 
   const isNoIndex = Boolean(input.noIndex || input.noindex);
 
-  const isScriptureRoute = cleanPath.startsWith("/scriptures");
+  const isUnlocalizedRoute =
+    cleanPath.startsWith("/scriptures") || cleanPath.startsWith("/baby-names");
 
-  const languages = isScriptureRoute
+  const languages = isUnlocalizedRoute
     ? {
         en: absoluteUrl(cleanPath),
         "x-default": absoluteUrl(cleanPath),

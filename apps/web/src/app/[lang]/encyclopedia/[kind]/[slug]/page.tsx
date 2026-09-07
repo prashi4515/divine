@@ -9,6 +9,7 @@ import { buildPageMetadata } from "@/lib/seo";
 type PageProps = { params: Promise<{ lang: string; kind: string; slug: string }> };
 
 export const dynamic = "force-static";
+export const dynamicParams = false;
 export const revalidate = false;
 
 export async function generateStaticParams() {
