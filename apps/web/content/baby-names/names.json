@@ -16791,31 +16791,40 @@
       "genderUsage": "girl",
       "classification": "SANSKRIT_LEXICAL",
       "meanings": {
-        "primaryMeaning": "Auspicious, noble, and sacred",
-        "literalSanskrit": "Sanskrit name signifying auspicious qualities",
-        "traditionalInterpretation": "to refine, make sacred, or perfect",
-        "modernUsageNote": "Vidya is a modern name associated with the Sanskrit word Vidya."
+        "primaryMeaning": "knowledge, learning, or wisdom",
+        "literalSanskrit": "Knowledge, learning, lore, philosophy, or science",
+        "traditionalInterpretation": "Knowledge, spiritual perception, or divine learning; in Sanskrit tradition, vidyā represents the pursuit of truth and sacred or practical wisdom.",
+        "modernUsageNote": "Vidya is a traditional and modern feminine given name across India, derived directly from the classical Sanskrit abstract noun for knowledge and learning."
       },
       "etymology": {
-        "sanskritRoot": "विद्या",
-        "rootMeaning": "to refine, make sacred, or perfect",
-        "grammaticalNotes": "Vidya is a modern name associated with the Sanskrit word Vidya.",
+        "sanskritRoot": "विद्",
+        "rootMeaning": "to know, perceive, understand, or learn",
+        "grammaticalNotes": "Feminine abstract noun formed with the primary suffix -yā (विद्या) from the Sanskrit root vid (विद्, 'to know').",
         "confidenceLevel": "high"
       },
-      "primaryScripture": "Cologne Digital Sanskrit Lexicon",
+      "primaryScripture": "Monier-Williams Sanskrit Lexicon",
       "scriptureSources": [
+        "Monier-Williams Sanskrit Lexicon",
         "Cologne Digital Sanskrit Lexicon"
       ],
-      "citations": [],
+      "citations": [
+        {
+          "scriptureId": "classical-sanskrit",
+          "bookOrParva": "Monier-Williams Sanskrit Lexicon",
+          "sectionOrVerse": "p. 963",
+          "sanskritSnippetSa": "विद्या (vidyā)",
+          "translationEn": "knowledge, learning, lore, science, philosophy",
+          "verifiableNote": "Verified Sanskrit headword 'Vidyā' (विद्या) in Monier-Williams Sanskrit Lexicon (1899) and Cologne Digital Sanskrit Lexicon."
+        }
+      ],
       "themes": [
         "Sanskrit",
-        "Dharma",
-        "Auspicious"
+        "Knowledge & Wisdom",
+        "Dharma"
       ],
       "relatedNameIds": [],
       "alternateSpellings": [
-        "Vidyaa",
-        "Vidyah"
+        "Vidyaa"
       ],
       "verificationStatus": "verified"
     },
