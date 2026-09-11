@@ -23,7 +23,33 @@ export type EntitySearchHit = {
 };
 
 export function entityHref(entity: KnowledgeEntity): string {
-  return `/encyclopedia/${entity.kind}/${entity.slug}`;
+  const k = entity.kind;
+  if (k === "kingdom") return `/kingdoms/${entity.slug}`;
+  if (k === "weapon") return `/weapons/${entity.slug}`;
+  if (k === "concept") return `/concepts/${entity.slug}`;
+  if (k === "event" || k === "battle") return `/events/${entity.slug}`;
+  if (
+    [
+      "city",
+      "forest",
+      "mountain",
+      "river",
+      "pilgrimage",
+      "ashrama",
+      "battlefield",
+      "place",
+      "sacred-site",
+      "realm",
+      "ocean",
+      "region",
+      "tirtha",
+      "island",
+    ].includes(k)
+  ) {
+    if (entity.slug === "ayodhya") return `/encyclopedia/${k}/${entity.slug}`;
+    return `/atlas/${entity.slug}`;
+  }
+  return `/encyclopedia/${k}/${entity.slug}`;
 }
 
 export function searchEntities(

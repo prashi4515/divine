@@ -323,3 +323,16 @@ export function getLocalizedEntityContent<T extends EntityWithTranslations>(
     isLocalized,
   };
 }
+
+export function hasLocalizedEntityContent<T extends EntityWithTranslations>(
+  entity: T,
+  locale: string,
+): boolean {
+  const lang = (locale || "en") as ContentLocale;
+  if (lang === "en") return true;
+  const translation =
+    entity.translations?.[lang] ??
+    (entity.id ? KNOWLEDGE_TRANSLATION_REGISTRY[entity.id]?.[lang] : undefined);
+  return Boolean(translation);
+}
+

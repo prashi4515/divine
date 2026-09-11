@@ -12,7 +12,7 @@ import {
   getModulesForPerson,
   listAllGenealogyPersonIds,
 } from "@/lib/genealogy/store";
-import { resolveEntityId } from "@/lib/knowledge/store";
+import { getAllEntities, resolveEntityId } from "@/lib/knowledge/store";
 import {
   CATEGORY_LABELS,
   CATEGORY_TOKENS,
@@ -37,10 +37,19 @@ export async function generateMetadata({
   if (!person) return { title: "Person not found" };
   const title = `${person.name} (${CATEGORY_LABELS[person.category]}) — Hindu genealogy`;
   const description = person.description.slice(0, 220);
+
+  const resolvedId = await resolveEntityId(person.id);
+  const entities = await getAllEntities();
+  const mappedEntity = resolvedId ? entities.find((e) => e.id === resolvedId) : undefined;
+  const canonicalUrl = mappedEntity
+    ? `/encyclopedia/${mappedEntity.kind}/${mappedEntity.slug}`
+    : `/genealogy/person/${person.id}`;
+
   return buildPageMetadata({
     title,
     description,
     path: `/genealogy/person/${person.id}`,
+    canonicalUrl,
     lang: "en",
     type: "profile",
   });

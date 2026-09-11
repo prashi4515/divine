@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { notFound } from "next/navigation";
+import { notFound, redirect } from "next/navigation";
 import { GenealogyHeader } from "@/features/genealogy/genealogy-header";
 import { CharacterPageBody } from "@/features/encyclopedia/character-page-body";
 import { EntityPageBody } from "@/features/encyclopedia/entity-page-body";
@@ -47,6 +47,33 @@ export default async function EncyclopediaEntityPage({ params }: PageProps) {
   const { kind, slug } = await params;
   const entity = await getEntityByKindSlug(kind, slug);
   if (!entity || entity.status !== "published") notFound();
+
+  // Redirect secondary encyclopedia routes to their primary module surface
+  if (kind === "kingdom") redirect(`/kingdoms/${slug}`);
+  if (kind === "weapon") redirect(`/weapons/${slug}`);
+  if (kind === "concept") redirect(`/concepts/${slug}`);
+  if (kind === "event" || kind === "battle") redirect(`/events/${slug}`);
+  if (
+    [
+      "city",
+      "forest",
+      "mountain",
+      "river",
+      "pilgrimage",
+      "ashrama",
+      "battlefield",
+      "place",
+      "sacred-site",
+      "realm",
+      "ocean",
+      "region",
+      "tirtha",
+      "island",
+    ].includes(kind) &&
+    slug !== "ayodhya"
+  ) {
+    redirect(`/atlas/${slug}`);
+  }
 
   const bundle = await getEntityBundle(entity.id);
   if (!bundle) notFound();

@@ -21,6 +21,7 @@ import { getPublishedChapters } from "@/lib/api/chapters";
 import { publicChapterPath, publicWorkPath } from "@/lib/reading/work-paths";
 import { absoluteUrl } from "@/lib/seo/site";
 import { SUPPORTED_LOCALES, localizePath, normalizeCleanPath } from "@/lib/i18n/locales";
+import { hasLocalizedEntityContent } from "@/lib/knowledge/localize-content";
 
 export type SitemapId =
   | "static"
@@ -69,6 +70,7 @@ function localizedEntries(
     lastModified?: Date;
     changeFrequency?: MetadataRoute.Sitemap[number]["changeFrequency"];
     priority?: number;
+    locales?: readonly string[];
   } = {},
 ): MetadataRoute.Sitemap {
   const norm = normalizeCleanPath(path);
@@ -84,7 +86,10 @@ function localizedEntries(
     },
   ];
 
+  const allowedLocales = opts.locales ?? SUPPORTED_LOCALES;
+
   for (const lang of SUPPORTED_LOCALES) {
+    if (!allowedLocales.includes(lang)) continue;
     const locPath = localizePath(norm, lang);
     entries.push({
       url: absoluteUrl(locPath),
@@ -97,6 +102,7 @@ function localizedEntries(
 
   return entries;
 }
+
 
 function unlocalizedEntries(
   path: string,
@@ -182,6 +188,7 @@ function buildScriptureRoutes(
     localizedEntries(publicWorkPath(w), {
       changeFrequency: "weekly",
       priority: 0.85,
+      locales: [],
     }),
   );
 
@@ -213,6 +220,7 @@ function buildScriptureRoutes(
         {
           changeFrequency: "monthly",
           priority: 0.75,
+          locales: [],
         },
       ),
     );
@@ -228,6 +236,8 @@ export default async function sitemap(props?: Props): Promise<MetadataRoute.Site
   const resolvedId = props?.id ? (typeof props.id === "object" && "then" in props.id ? await props.id : props.id) : undefined;
   const id = resolvedId as SitemapId | undefined;
   const now = new Date();
+
+  const allRoutes: MetadataRoute.Sitemap = [];
 
   // 1. Static landing pages
   if (!id || id === "static") {
@@ -254,6 +264,7 @@ export default async function sitemap(props?: Props): Promise<MetadataRoute.Site
         priority: p.priority,
       }),
     );
+    allRoutes.push(...staticRoutes);
     if (id === "static") return deduplicateAndSort(staticRoutes);
   }
 
@@ -265,8 +276,10 @@ export default async function sitemap(props?: Props): Promise<MetadataRoute.Site
         lastModified: now,
         changeFrequency: "monthly",
         priority: 0.9,
+        locales: ["hi", "te", "or"],
       }),
     );
+    allRoutes.push(...chapterRoutes);
     if (id === "gita") return deduplicateAndSort(chapterRoutes);
   }
 
@@ -278,15 +291,20 @@ export default async function sitemap(props?: Props): Promise<MetadataRoute.Site
       const snap = await safeFetch(`gita chapter ${ch.number}`, () => getStaticGitaChapter(ch.number), null);
       if (!snap) continue;
       for (const v of snap.verses) {
+        const verseLocales = SUPPORTED_LOCALES.filter((lang) =>
+          v.translations.some((t) => t.languageCode === lang),
+        );
         verseRoutes.push(
           ...localizedEntries(`/verse/${ch.number}/${v.number}`, {
             lastModified: now,
             changeFrequency: "monthly",
             priority: 0.75,
+            locales: verseLocales,
           }),
         );
       }
     }
+    allRoutes.push(...verseRoutes);
     if (id === "verses") return deduplicateAndSort(verseRoutes);
   }
 
@@ -313,25 +331,62 @@ export default async function sitemap(props?: Props): Promise<MetadataRoute.Site
           priority: 0.85,
         }),
       );
+
+    const DEDICATED_MODULE_KINDS = new Set([
+      "kingdom",
+      "weapon",
+      "concept",
+      "event",
+      "battle",
+      "city",
+      "forest",
+      "mountain",
+      "river",
+      "pilgrimage",
+      "ashrama",
+      "battlefield",
+      "place",
+      "sacred-site",
+      "realm",
+      "ocean",
+      "region",
+      "tirtha",
+      "island",
+    ]);
+
     const entityRoutes = entities
-      .filter((e) => e.status === "published")
-      .flatMap((e) =>
-        localizedEntries(entityHref(e), {
+      .filter(
+        (e) =>
+          e.status === "published" &&
+          (!DEDICATED_MODULE_KINDS.has(e.kind) || e.slug === "ayodhya"),
+      )
+      .flatMap((e) => {
+        const entityLocales = SUPPORTED_LOCALES.filter((lang) =>
+          hasLocalizedEntityContent(e, lang),
+        );
+        return localizedEntries(`/encyclopedia/${e.kind}/${e.slug}`, {
           priority: Math.min(0.9, 0.5 + e.importance * 0.08),
-        }),
-      );
+          locales: entityLocales,
+        });
+      });
     const encyclopediaRoutes = [...kindRoutes, ...sectionRoutes, ...entityRoutes];
+    allRoutes.push(...encyclopediaRoutes);
     if (id === "encyclopedia") return deduplicateAndSort(encyclopediaRoutes);
   }
 
   // 5. Atlas
   if (!id || id === "atlas") {
     const places = await safeFetch("atlas places", () => getAtlasPlaces(), []);
-    const atlasRoutes = places.flatMap((p) =>
-      localizedEntries(atlasHref(p), {
+    const atlasRoutes = places.flatMap((p) => {
+      const placeLocales = SUPPORTED_LOCALES.filter((lang) =>
+        hasLocalizedEntityContent(p, lang),
+      );
+      return localizedEntries(atlasHref(p), {
         priority: Math.min(0.9, 0.55 + p.importance * 0.07),
-      }),
-    );
+        locales: placeLocales,
+      });
+    });
+    allRoutes.push(...atlasRoutes);
     if (id === "atlas") return deduplicateAndSort(atlasRoutes);
   }
 
@@ -347,48 +402,45 @@ export default async function sitemap(props?: Props): Promise<MetadataRoute.Site
       ...events.flatMap((e) =>
         localizedEntries(eventHref(e), {
           priority: Math.min(0.92, 0.6 + e.importance * 0.06),
+          locales: SUPPORTED_LOCALES.filter((lang) => hasLocalizedEntityContent(e, lang)),
         }),
       ),
       ...kingdoms.flatMap((k) =>
         localizedEntries(kingdomHref(k), {
           priority: Math.min(0.92, 0.55 + k.importance * 0.07),
+          locales: SUPPORTED_LOCALES.filter((lang) => hasLocalizedEntityContent(k, lang)),
         }),
       ),
       ...weapons.flatMap((w) =>
         localizedEntries(weaponHref(w), {
           priority: Math.min(0.92, 0.55 + w.importance * 0.07),
+          locales: SUPPORTED_LOCALES.filter((lang) => hasLocalizedEntityContent(w, lang)),
         }),
       ),
       ...concepts.flatMap((c) =>
         localizedEntries(conceptHref(c), {
           priority: Math.min(0.92, 0.55 + c.importance * 0.07),
+          locales: SUPPORTED_LOCALES.filter((lang) => hasLocalizedEntityContent(c, lang)),
         }),
       ),
     ];
+    allRoutes.push(...knowledgeRoutes);
     if (id === "knowledge") return deduplicateAndSort(knowledgeRoutes);
   }
 
   // 7. Genealogy
   if (!id || id === "genealogy") {
-    const [modules, people] = await Promise.all([
-      safeFetch("genealogy modules", () => getGenealogyModules(), []),
-      safeFetch("genealogy people", () => getAllGenealogyPeople(), []),
-    ]);
-    const genealogyRoutes: MetadataRoute.Sitemap = [
-      ...modules
-        .filter((m) => m.status === "available")
-        .flatMap((m) =>
-          localizedEntries(`/genealogy/${m.slug}`, {
-            changeFrequency: "weekly",
-            priority: 0.85,
-          }),
-        ),
-      ...people.flatMap((p) =>
-        localizedEntries(`/genealogy/person/${p.id}`, {
-          priority: Math.min(0.8, 0.4 + p.importance * 0.08),
+    const modules = await safeFetch("genealogy modules", () => getGenealogyModules(), []);
+    const genealogyRoutes: MetadataRoute.Sitemap = modules
+      .filter((m) => m.status === "available")
+      .flatMap((m) =>
+        localizedEntries(`/genealogy/${m.slug}`, {
+          changeFrequency: "weekly",
+          priority: 0.85,
+          locales: [],
         }),
-      ),
-    ];
+      );
+    allRoutes.push(...genealogyRoutes);
     if (id === "genealogy") return deduplicateAndSort(genealogyRoutes);
   }
 
@@ -399,178 +451,29 @@ export default async function sitemap(props?: Props): Promise<MetadataRoute.Site
       safeFetch("scripture chapters", () => getPublishedChapters(), []),
     ]);
     const scriptureRoutes = buildScriptureRoutes(works, scriptureChapters);
+    allRoutes.push(...scriptureRoutes);
     if (id === "scriptures") return deduplicateAndSort(scriptureRoutes);
   }
 
-  // Fallback: Return all deduplicated and sorted routes if no matching id or if all requested
-  const staticPaths = [
-    { path: "/", changeFrequency: "weekly" as const, priority: 1 },
-    { path: "/bhagavad-gita", changeFrequency: "weekly" as const, priority: 0.98 },
-    { path: "/atlas", changeFrequency: "weekly" as const, priority: 0.95 },
-    { path: "/events", changeFrequency: "weekly" as const, priority: 0.9 },
-    { path: "/kingdoms", changeFrequency: "weekly" as const, priority: 0.9 },
-    { path: "/weapons", changeFrequency: "weekly" as const, priority: 0.9 },
-    { path: "/concepts", changeFrequency: "weekly" as const, priority: 0.9 },
-    { path: "/timeline", changeFrequency: "weekly" as const, priority: 0.9 },
-    { path: "/encyclopedia", changeFrequency: "weekly" as const, priority: 0.9 },
-    { path: "/genealogy", changeFrequency: "weekly" as const, priority: 0.9 },
-    { path: "/about", changeFrequency: "monthly" as const, priority: 0.7 },
-    { path: "/contact", changeFrequency: "monthly" as const, priority: 0.7 },
-    { path: "/privacy", changeFrequency: "monthly" as const, priority: 0.5 },
-    { path: "/terms", changeFrequency: "monthly" as const, priority: 0.5 },
-  ];
-  const staticRoutes = staticPaths.flatMap((p) =>
-    localizedEntries(p.path, {
-      changeFrequency: p.changeFrequency,
-      priority: p.priority,
-    }),
-  );
-
-  const chapters = await safeFetch("gita chapters", () => getStaticGitaChaptersIndex(), []);
-  const chapterRoutes = chapters.flatMap((ch) =>
-    localizedEntries(`/bhagavad-gita/chapter-${ch.number}`, {
-      lastModified: now,
-      changeFrequency: "monthly",
-      priority: 0.9,
-    }),
-  );
-
-  const verseRoutes: MetadataRoute.Sitemap = [];
-  for (const ch of chapters) {
-    const snap = await safeFetch(`gita chapter ${ch.number}`, () => getStaticGitaChapter(ch.number), null);
-    if (!snap) continue;
-    for (const v of snap.verses) {
-      verseRoutes.push(
-        ...localizedEntries(`/verse/${ch.number}/${v.number}`, {
-          lastModified: now,
-          changeFrequency: "monthly",
-          priority: 0.75,
-        }),
-      );
-    }
-  }
-
-  const [entities, collections] = await Promise.all([
-    safeFetch("encyclopedia entities", () => getAllEntities(), []),
-    safeFetch("encyclopedia collections", () => getCollections(), []),
-  ]);
-  const kinds = new Set(
-    entities.filter((e) => e.status === "published").map((e) => e.kind),
-  );
-  const kindRoutes = [...kinds].flatMap((kind) =>
-    localizedEntries(`/encyclopedia/${kind}`, {
-      changeFrequency: "weekly",
-      priority: 0.7,
-    }),
-  );
-  const sectionRoutes = collections
-    .filter((c) => c.kind === "encyclopedia-section")
-    .flatMap((c) =>
-      localizedEntries(`/encyclopedia/section/${c.slug}`, {
+  // 9. Baby Names
+  if (!id || id === "babynames") {
+    const babyNamesList = await safeFetch("baby names", () => getAllBabyNames(), []);
+    const babyNameCategoryRoutes = ["boy", "girl", "unisex", "mahabharata", "bhagavad-gita", "ramayana", "sanskrit"].flatMap((cat) =>
+      unlocalizedEntries(`/baby-names/${cat}`, {
         changeFrequency: "weekly",
+        priority: 0.8,
+      }),
+    );
+    const babyNameIndividualRoutes = babyNamesList.flatMap((item) =>
+      unlocalizedEntries(`/baby-names/${item.slug}`, {
+        changeFrequency: "monthly",
         priority: 0.85,
       }),
     );
-  const entityRoutes = entities
-    .filter((e) => e.status === "published")
-    .flatMap((e) =>
-      localizedEntries(entityHref(e), {
-        priority: Math.min(0.9, 0.5 + e.importance * 0.08),
-      }),
-    );
-
-  const places = await safeFetch("atlas places", () => getAtlasPlaces(), []);
-  const atlasRoutes = places.flatMap((p) =>
-    localizedEntries(atlasHref(p), {
-      priority: Math.min(0.9, 0.55 + p.importance * 0.07),
-    }),
-  );
-
-  const [events, kingdoms, weapons, concepts] = await Promise.all([
-    safeFetch("knowledge events", () => getEvents(), []),
-    safeFetch("knowledge kingdoms", () => getKingdoms(), []),
-    safeFetch("knowledge weapons", () => getWeapons(), []),
-    safeFetch("knowledge concepts", () => getConcepts(), []),
-  ]);
-  const knowledgeRoutes: MetadataRoute.Sitemap = [
-    ...events.flatMap((e) =>
-      localizedEntries(eventHref(e), {
-        priority: Math.min(0.92, 0.6 + e.importance * 0.06),
-      }),
-    ),
-    ...kingdoms.flatMap((k) =>
-      localizedEntries(kingdomHref(k), {
-        priority: Math.min(0.92, 0.55 + k.importance * 0.07),
-      }),
-    ),
-    ...weapons.flatMap((w) =>
-      localizedEntries(weaponHref(w), {
-        priority: Math.min(0.92, 0.55 + w.importance * 0.07),
-      }),
-    ),
-    ...concepts.flatMap((c) =>
-      localizedEntries(conceptHref(c), {
-        priority: Math.min(0.92, 0.55 + c.importance * 0.07),
-      }),
-    ),
-  ];
-
-  const [modules, people] = await Promise.all([
-    safeFetch("genealogy modules", () => getGenealogyModules(), []),
-    safeFetch("genealogy people", () => getAllGenealogyPeople(), []),
-  ]);
-  const genealogyRoutes: MetadataRoute.Sitemap = [
-    ...modules
-      .filter((m) => m.status === "available")
-      .flatMap((m) =>
-        localizedEntries(`/genealogy/${m.slug}`, {
-          changeFrequency: "weekly",
-          priority: 0.85,
-        }),
-      ),
-    ...people.flatMap((p) =>
-      localizedEntries(`/genealogy/person/${p.id}`, {
-        priority: Math.min(0.8, 0.4 + p.importance * 0.08),
-      }),
-    ),
-  ];
-
-  const [works, scriptureChapters] = await Promise.all([
-    safeFetch("scripture works", () => getPublishedWorks(), []),
-    safeFetch("scripture chapters", () => getPublishedChapters(), []),
-  ]);
-  const scriptureRoutes = buildScriptureRoutes(works, scriptureChapters);
-
-  const babyNamesList = await safeFetch("baby names", () => getAllBabyNames(), []);
-  const babyNameCategoryRoutes = ["boy", "girl", "unisex", "mahabharata", "bhagavad-gita", "ramayana", "sanskrit"].flatMap((cat) =>
-    unlocalizedEntries(`/baby-names/${cat}`, {
-      changeFrequency: "weekly",
-      priority: 0.8,
-    }),
-  );
-  const babyNameIndividualRoutes = babyNamesList.flatMap((item) =>
-    unlocalizedEntries(`/baby-names/${item.slug}`, {
-      changeFrequency: "monthly",
-      priority: 0.85,
-    }),
-  );
-  const babyNameRoutes = [...babyNameCategoryRoutes, ...babyNameIndividualRoutes];
-  if (id === "babynames") return deduplicateAndSort(babyNameRoutes);
-
-  const allRoutes = [
-    ...staticRoutes,
-    ...chapterRoutes,
-    ...verseRoutes,
-    ...kindRoutes,
-    ...sectionRoutes,
-    ...entityRoutes,
-    ...atlasRoutes,
-    ...knowledgeRoutes,
-    ...genealogyRoutes,
-    ...scriptureRoutes,
-    ...babyNameRoutes,
-  ];
+    const babyNameRoutes = [...babyNameCategoryRoutes, ...babyNameIndividualRoutes];
+    allRoutes.push(...babyNameRoutes);
+    if (id === "babynames") return deduplicateAndSort(babyNameRoutes);
+  }
 
   return deduplicateAndSort(allRoutes);
-
 }
