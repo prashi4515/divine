@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { notFound, redirect } from "next/navigation";
+import { notFound, permanentRedirect } from "next/navigation";
 import { GenealogyHeader } from "@/features/genealogy/genealogy-header";
 import { CharacterPageBody } from "@/features/encyclopedia/character-page-body";
 import { EntityPageBody } from "@/features/encyclopedia/entity-page-body";
@@ -49,10 +49,10 @@ export default async function EncyclopediaEntityPage({ params }: PageProps) {
   if (!entity || entity.status !== "published") notFound();
 
   // Redirect secondary encyclopedia routes to their primary module surface
-  if (kind === "kingdom") redirect(`/kingdoms/${slug}`);
-  if (kind === "weapon") redirect(`/weapons/${slug}`);
-  if (kind === "concept") redirect(`/concepts/${slug}`);
-  if (kind === "event" || kind === "battle") redirect(`/events/${slug}`);
+  if (kind === "kingdom") permanentRedirect(`/kingdoms/${slug}`);
+  if (kind === "weapon") permanentRedirect(`/weapons/${slug}`);
+  if (kind === "concept") permanentRedirect(`/concepts/${slug}`);
+  if (kind === "event" || kind === "battle") permanentRedirect(`/events/${slug}`);
   if (
     [
       "city",
@@ -72,7 +72,7 @@ export default async function EncyclopediaEntityPage({ params }: PageProps) {
     ].includes(kind) &&
     slug !== "ayodhya"
   ) {
-    redirect(`/atlas/${slug}`);
+    permanentRedirect(`/atlas/${slug}`);
   }
 
   const bundle = await getEntityBundle(entity.id);
