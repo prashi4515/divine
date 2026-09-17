@@ -36,10 +36,20 @@ export function getLocalePathPrefix(lang: ReadingLanguageCode): string {
   return `/${lang}`;
 }
 
+const UNLOCALIZED_ROUTE_PREFIXES = ["/baby-names", "/scriptures"] as const;
+
+export function isUnlocalizedRoutePath(path: string): boolean {
+  const clean = normalizeCleanPath(path);
+  return UNLOCALIZED_ROUTE_PREFIXES.some(
+    (prefix) => clean === prefix || clean.startsWith(`${prefix}/`),
+  );
+}
+
 /** Prepend language prefix to a clean path (e.g. `/bhagavad-gita` -> `/hi/bhagavad-gita`). */
 export function localizePath(path: string, lang: ReadingLanguageCode): string {
   const clean = normalizeCleanPath(path);
   if (lang === "en" || !isSupportedLocale(lang)) return clean;
+  if (isUnlocalizedRoutePath(clean)) return clean;
   return clean === "/" ? `/${lang}` : `/${lang}${clean}`;
 }
 
